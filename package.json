@@ -2,7 +2,7 @@
   "name": "tabler-react",
   "version": "1.0.0",
   "description": "",
-  "author": "jonthomp",
+  "author": "jonthomp and AaronCoplan",
   "license": "MIT",
   "repository": "tabler/tabler-react",
   "main": "dist/index.js",
