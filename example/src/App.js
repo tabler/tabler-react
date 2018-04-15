@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+// @flow
 
-import ExampleComponent from 'tabler-react'
+import * as React from 'react';
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
+function App(props: Props): React.Node {
+  return <div>Hello World</div>;
 }
+
+export default App;
