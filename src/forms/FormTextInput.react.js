@@ -32,11 +32,7 @@ class FormTextInput extends React.PureComponent<Props, State> {
           className="form-control"
           onChange={this._handleChange}
           placeholder={placeHolder}
-          type={
-            isPassword !== null && isPassword !== undefined && isPassword
-              ? "password"
-              : "text"
-          }
+          type={isPassword ? "password" : "text"}
           value={value}
         />
       </div>
