@@ -9,9 +9,9 @@ type Props = {|
   +validators?: Array<(value: string) => boolean>
 |};
 
-type State = {
+type State = {|
   value: string
-};
+|};
 
 class FormTextInput extends React.PureComponent<Props, State> {
   state = {
