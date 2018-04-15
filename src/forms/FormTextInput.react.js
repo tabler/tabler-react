@@ -6,7 +6,6 @@ type Props = {|
   +isPassword?: boolean,
   +label: string,
   +placeHolder: string,
-  +validators?: Array<(value: string) => boolean>
 |};
 
 type State = {|
