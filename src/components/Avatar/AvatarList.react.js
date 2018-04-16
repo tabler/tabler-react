@@ -3,11 +3,11 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {
+type Props = {|
   +children?: React.Node,
   +className?: string,
   +stacked?: boolean
-};
+|};
 
 function AvatarList({
   className,

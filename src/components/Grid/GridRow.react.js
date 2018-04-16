@@ -3,12 +3,12 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {
+type Props = {|
   +children?: React.Node,
   +className?: string,
   +cards?: boolean,
   +gutters?: "xs" | "sm" | "md" | "lg"
-};
+|};
 
 function GridRow({
   className,

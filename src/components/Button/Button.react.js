@@ -5,7 +5,7 @@ import cn from "classnames";
 import { Icon } from "../";
 import ButtonList from "./ButtonList.react";
 
-type Props = {
+type Props = {|
   +size?: "sm" | "lg",
   +outline?: boolean,
   +primary?: boolean,
@@ -27,7 +27,7 @@ type Props = {
   +loading?: boolean,
   +toggle?: boolean,
   +RootComponent?: React.ElementType
-};
+|};
 
 const Button = ({
   size = "",

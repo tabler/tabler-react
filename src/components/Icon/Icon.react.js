@@ -3,12 +3,12 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {
+type Props = {|
   +className?: string,
   +link?: boolean,
   +prefix?: "fa" | "fe",
   +name: string
-};
+|};
 
 function Icon({
   prefix = "fe",

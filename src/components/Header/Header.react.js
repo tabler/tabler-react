@@ -9,12 +9,12 @@ import H3 from "./H3.react";
 import H4 from "./H4.react";
 import H5 from "./H5.react";
 
-type Props = {
+type Props = {|
   +RootComponent?: React.ElementType,
   +children?: React.Node,
   +className?: string,
   +size: 1 | 2 | 3 | 4 | 5
-};
+|};
 
 function Header({
   RootComponent,
