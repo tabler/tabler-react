@@ -17,7 +17,7 @@ function Badge({ className, children, value }: Props): React.Node {
     },
     className
   );
-  return <span className={classes} children={value || children || null} />;
+  return <span className={classes}>{value || children}</span>;
 }
 
 export default Badge;

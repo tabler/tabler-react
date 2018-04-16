@@ -9,12 +9,21 @@ type Props = {|
   +align?: "" | "left" | "center" | "right",
 |};
 
-function ButtonList({ className, align = "", ...props }: Props): React.Node {
+function ButtonList({
+  className,
+  children,
+  align = "",
+  ...props
+}: Props): React.Node {
   const classes = cn(
     { "btn-list": true, [`text-${align}`]: !!align },
     className
   );
-  return <div className={classes} {...props} />;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default ButtonList;

@@ -4,7 +4,6 @@ import * as React from "react";
 import cn from "classnames";
 
 type Props = {|
-  +children?: React.Node,
   +className?: string,
   +color?: string,
   +width?: number,

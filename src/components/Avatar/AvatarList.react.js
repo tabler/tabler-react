@@ -22,7 +22,11 @@ function AvatarList({
     },
     className
   );
-  return <div className={classes} {...props} />;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default AvatarList;

@@ -10,7 +10,7 @@ type Props = {|
   +className?: string,
   +image?: string,
   +style?: Object,
-  +size?: "" | "sm" | "md" | "lg" | "xl" | "xxl",
+  +size?: "sm" | "md" | "lg" | "xl" | "xxl",
   +status?: "grey" | "red" | "yellow" | "green",
   +placeholder?: boolean,
   +icon?: string,

@@ -19,12 +19,17 @@ type Props = {
 function Header({
   RootComponent,
   className,
+  children,
   size = 1,
   ...props
 }: Props): React.Node {
   const classes = cn(`h${size}`, className);
   const Component = RootComponent || "div";
-  return <Component className={classes} {...props} />;
+  return (
+    <Component className={classes} {...props}>
+      {children}
+    </Component>
+  );
 }
 
 Header.H1 = H1;

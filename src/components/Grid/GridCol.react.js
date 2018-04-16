@@ -15,6 +15,7 @@ type Props = {
 
 function GridCol({
   className,
+  children,
   width = 0,
   sm = 0,
   md = 0,
@@ -33,7 +34,11 @@ function GridCol({
     },
     className
   );
-  return <div className={classes} {...props} />;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default GridCol;

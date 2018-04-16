@@ -13,9 +13,18 @@ type Props = {|
   +tabbed?: boolean,
 |};
 
-function Nav({ className, tabbed = true, ...rest }: Props): React.Node {
+function Nav({
+  className,
+  children,
+  tabbed = true,
+  ...rest
+}: Props): React.Node {
   const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
-  return <ul className={classes} {...rest} />;
+  return (
+    <ul className={classes} {...rest}>
+      {children}
+    </ul>
+  );
 }
 
 Nav.Item = NavItem;

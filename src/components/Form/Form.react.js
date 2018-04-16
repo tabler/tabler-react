@@ -20,9 +20,13 @@ type Props = {|
   +className?: string,
 |};
 
-function Form({ className, ...props }: Props): React.Node {
+function Form({ className, children, ...props }: Props): React.Node {
   const classes = cn(className);
-  return <form className={classes} {...props} />;
+  return (
+    <form className={classes} {...props}>
+      {children}
+    </form>
+  );
 }
 
 Form.Group = FormGroup;

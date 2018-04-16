@@ -7,7 +7,11 @@ type Props = {|
 |};
 
 function DropdownItemDivider(props: Props): React.Node {
-  return <div className="dropdown-divider" {...props} />;
+  return (
+    <div className="dropdown-divider" {...props}>
+      {props.children}
+    </div>
+  );
 }
 
 export default DropdownItemDivider;

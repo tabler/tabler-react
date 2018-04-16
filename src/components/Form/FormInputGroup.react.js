@@ -12,6 +12,7 @@ type Props = {|
 
 function FormInputGroup({
   className,
+  children,
   append,
   RootComponent,
   ...props
@@ -21,7 +22,11 @@ function FormInputGroup({
     className
   );
   const Component = RootComponent || "div";
-  return <Component className={classes} {...props} />;
+  return (
+    <Component className={classes} {...props}>
+      {children}
+    </Component>
+  );
 }
 
 export default FormInputGroup;

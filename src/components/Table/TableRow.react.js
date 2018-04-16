@@ -8,9 +8,13 @@ type Props = {|
   +className?: string,
 |};
 
-function TableRow({ className, ...props }: Props): React.Node {
+function TableRow({ className, children, ...props }: Props): React.Node {
   const classes = cn(className);
-  return <tr className={classes} {...props} />;
+  return (
+    <tr className={classes} {...props}>
+      {children}
+    </tr>
+  );
 }
 
 export default TableRow;

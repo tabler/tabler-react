@@ -8,9 +8,13 @@ type Props = {|
   +className?: string,
 |};
 
-function CodeHighlight({ className, ...props }: Props): React.Node {
+function CodeHighlight({ className, children, ...props }: Props): React.Node {
   const classes = cn(`highlight`, className);
-  return <div className={classes} {...props} />;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default CodeHighlight;

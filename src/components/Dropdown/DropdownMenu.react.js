@@ -14,6 +14,7 @@ type Props = {|
 
 function DropdownMenu({
   className,
+  children,
   position = "",
   arrow,
   ...rest
@@ -26,7 +27,11 @@ function DropdownMenu({
     },
     className
   );
-  return <div className={classes} {...rest} />;
+  return (
+    <div className={classes} {...rest}>
+      {children}
+    </div>
+  );
 }
 
 export default DropdownMenu;

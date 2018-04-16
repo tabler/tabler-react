@@ -8,9 +8,13 @@ type Props = {|
   +className?: string,
 |};
 
-function CodeExample({ className, ...props }: Props): React.Node {
+function CodeExample({ className, children, ...props }: Props): React.Node {
   const classes = cn(`example`, className);
-  return <div className={classes} {...props} />;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default CodeExample;

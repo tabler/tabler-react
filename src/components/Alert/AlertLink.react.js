@@ -8,9 +8,13 @@ type Props = {|
   +className?: string,
 |};
 
-function AlertLink({ className, ...props }: Props): React.Node {
+function AlertLink({ children, className, ...props }: Props): React.Node {
   const classes = cn(`alert-link`, className);
-  return <a className={classes} {...props} />;
+  return (
+    <a className={classes} {...props}>
+      {children}
+    </a>
+  );
 }
 
 export default AlertLink;

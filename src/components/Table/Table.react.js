@@ -18,6 +18,7 @@ type Props = {|
 
 function Table({
   className,
+  children,
   cards,
   striped,
   responsive,
@@ -29,10 +30,14 @@ function Table({
     className
   );
   return !responsive ? (
-    <table className={classes} {...props} />
+    <table className={classes} {...props}>
+      {children}
+    </table>
   ) : (
     <div className="table-responsive">
-      <table className={classes} {...props} />
+      <table className={classes} {...props}>
+        {children}
+      </table>
     </div>
   );
 }

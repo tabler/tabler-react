@@ -33,8 +33,8 @@ function DropdownItem({
           <Icon name={icon} className="dropdown-icon" />{" "}
         </React.Fragment>
       )}
-      {value && value}
-      {children && children}
+      {value}
+      {children}
     </a>
   );
 }

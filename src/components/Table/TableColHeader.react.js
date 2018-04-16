@@ -8,9 +8,13 @@ type Props = {|
   +className?: string,
 |};
 
-function TableColHeader({ className, ...props }: Props): React.Node {
+function TableColHeader({ className, children, ...props }: Props): React.Node {
   const classes = cn(className);
-  return <th className={classes} {...props} />;
+  return (
+    <th className={classes} {...props}>
+      {children}
+    </th>
+  );
 }
 
 export default TableColHeader;

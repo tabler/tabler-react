@@ -28,7 +28,7 @@ function NavSubmenuItem({
           <Icon name={icon} />{" "}
         </React.Fragment>
       )}
-      {children && children}
+      {children}
     </Component>
   );
 }

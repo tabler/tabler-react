@@ -7,11 +7,12 @@ type Props = {
   +children?: React.Node,
   +className?: string,
   +cards?: boolean,
-  +gutters?: "" | "xs" | "sm" | "md" | "lg",
+  +gutters?: "xs" | "sm" | "md" | "lg",
 };
 
 function GridRow({
   className,
+  children,
   cards = false,
   gutters = "",
   ...props
@@ -25,7 +26,11 @@ function GridRow({
     },
     className
   );
-  return <div className={classes} {...props} />;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default GridRow;

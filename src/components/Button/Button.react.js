@@ -84,7 +84,9 @@ const Button = ({
   );
   const Component = RootComponent || "button";
   return Component === "input" ? (
-    <Component className={classes} disabled={disabled} {...rest} />
+    <Component className={classes} disabled={disabled} {...rest}>
+      {children}
+    </Component>
   ) : (
     <Component className={classes} disabled={disabled} {...rest}>
       {social ? (

@@ -6,8 +6,12 @@ type Props = {|
   +children?: React.Node,
 |};
 
-const PageMain = (props: Props): React.Node => (
-  <div className={"page-main"} {...props} />
-);
+function PageMain({ children, ...props }: Props): React.Node {
+  return (
+    <div className={"page-main"} {...props}>
+      {children}
+    </div>
+  );
+}
 
 export default PageMain;

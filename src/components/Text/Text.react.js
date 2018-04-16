@@ -14,6 +14,7 @@ type Props = {|
 
 const Text = ({
   className,
+  children,
   RootComponent,
   color = "",
   size = "",
@@ -29,7 +30,11 @@ const Text = ({
     className
   );
   const Component = RootComponent || "div";
-  return <Component className={classes} {...props} />;
+  return (
+    <Component className={classes} {...props}>
+      {children}
+    </Component>
+  );
 };
 
 export default Text;

@@ -5,9 +5,13 @@ import cn from "classnames";
 
 type Props = {| +children?: React.Node, +className?: string |};
 
-function FormStaticText({ className, ...props }: Props): React.Node {
+function FormStaticText({ className, children, ...props }: Props): React.Node {
   const classes = cn("form-control-plaintext", className);
-  return <div className={classes} {...props} />;
+  return (
+    <div className={classes} {...props}>
+      {children}
+    </div>
+  );
 }
 
 export default FormStaticText;
