@@ -6,7 +6,7 @@ type Props = {|
   +children?: React.Node,
   +href: string,
   +src: string,
-  +alt: string
+  +alt: string,
 |};
 
 const SiteLogo = (props: Props): React.Node => (

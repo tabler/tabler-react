@@ -2,26 +2,27 @@
 import * as React from "react";
 
 import cn from "classnames";
-import CardHeader from "./CardHeader";
-import CardTitle from "./CardTitle";
-import CardBody from "./CardBody";
+import CardHeader from "./CardHeader.react";
+import CardTitle from "./CardTitle.react";
+import CardBody from "./CardBody.react";
 
 type Props = {|
   +children?: React.Node,
   +className?: string,
   +title?: string,
   +body?: React.Node,
-  +as: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
-const Card = ({
+function Card({
   className,
-  as: Component,
+  RootComponent,
   title,
   body,
   ...props
-}: Props): React.Node => {
+}: Props): React.Node {
   const classes = cn("card", className);
+  const Component = RootComponent || "div";
   const card_header =
     title === "" ? null : (
       <CardHeader>
@@ -40,12 +41,7 @@ const Card = ({
   } else {
     return <Component className={classes} {...props} />;
   }
-};
-
-Card.defaultProps = {
-  title: "",
-  as: "div"
-};
+}
 
 Card.Header = CardHeader;
 Card.Body = CardBody;

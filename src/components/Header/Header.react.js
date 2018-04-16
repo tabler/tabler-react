@@ -3,34 +3,29 @@
 import * as React from "react";
 import cn from "classnames";
 
-import H1 from "./H1";
-import H2 from "./H2";
-import H3 from "./H3";
-import H4 from "./H4";
-import H5 from "./H5";
+import H1 from "./H1.react";
+import H2 from "./H2.react";
+import H3 from "./H3.react";
+import H4 from "./H4.react";
+import H5 from "./H5.react";
 
 type Props = {
-  +as: React.ElementType,
+  +RootComponent?: React.ElementType,
   +children?: React.Node,
   +className?: string,
-  +size: 1 | 2 | 3 | 4 | 5
+  +size: 1 | 2 | 3 | 4 | 5,
 };
 
-const Header = ({
-  as: Component,
+function Header({
+  RootComponent,
   className,
-  size,
+  size = 1,
   ...props
-}: Props): React.Node => {
+}: Props): React.Node {
   const classes = cn(`h${size}`, className);
+  const Component = RootComponent || "div";
   return <Component className={classes} {...props} />;
-};
-
-Header.defaultProps = {
-  as: "div",
-  className: "",
-  size: 1
-};
+}
 
 Header.H1 = H1;
 Header.H2 = H2;

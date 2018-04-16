@@ -4,7 +4,7 @@ import * as React from "react";
 import { Container } from "../";
 
 type Props = {|
-  +children?: React.Node
+  +children?: React.Node,
 |};
 
 const PageContent = ({ children, ...rest }: Props): React.Node => (

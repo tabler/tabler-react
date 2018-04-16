@@ -4,7 +4,7 @@ import * as React from "react";
 
 type Props = {|
   +children?: React.Node,
-  +value?: React.Node
+  +value?: React.Node,
 |};
 
 const PageHeader = ({ value, children, ...rest }: Props): React.Node => (

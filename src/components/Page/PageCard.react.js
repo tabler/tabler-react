@@ -9,7 +9,7 @@ type Props = {|
   +title?: string,
   +header?: React.Node,
   +footer?: React.Node,
-  +as: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
 const PageCard = ({
@@ -17,14 +17,14 @@ const PageCard = ({
   title,
   header,
   footer,
-  as,
+  RootComponent,
   ...rest
 }: Props): React.Node => (
   <div className="my-3 my-md-5">
     <Container>
       <Grid.Row>
         <Grid.Col width={12}>
-          <Card as={as}>
+          <Card RootComponent={RootComponent}>
             {title && (
               <Card.Header>
                 <Card.Title>{title}</Card.Title>

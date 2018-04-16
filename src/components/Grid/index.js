@@ -1,11 +1,11 @@
 // @flow
 
-import GridRow from "./GridRow";
-import GridCol from "./GridCol";
+import GridRow from "./GridRow.react";
+import GridCol from "./GridCol.react";
 
 const Grid = {
   Row: GridRow,
-  Col: GridCol
+  Col: GridCol,
 };
 
 export { Grid as default };

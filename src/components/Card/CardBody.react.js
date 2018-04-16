@@ -5,12 +5,12 @@ import cn from "classnames";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string
+  +className?: string,
 |};
 
-const CardHeader = ({ className, ...props }: Props): React.Node => {
-  const classes = cn("card-header", className);
+function CardBody({ className, ...props }: Props): React.Node {
+  const classes = cn("card-body", className);
   return <div className={classes} {...props} />;
-};
+}
 
-export default CardHeader;
+export default CardBody;

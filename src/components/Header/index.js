@@ -1,5 +1,5 @@
 // @flow
 
-import Header from "./Header";
+import Header from "./Header.react";
 
 export { Header as default };
