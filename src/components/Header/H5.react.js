@@ -6,7 +6,7 @@ import Header from "./Header.react";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string,
+  +className?: string
 |};
 
 function H5({ className, children, ...props }: Props): React.Node {

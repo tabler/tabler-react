@@ -7,7 +7,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +toggle?: boolean,
-  +value?: string,
+  +value?: string
 |};
 
 function DropdownTrigger({

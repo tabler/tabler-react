@@ -13,7 +13,7 @@ type Props = {|
   +className?: string,
   +cards?: boolean,
   +striped?: boolean,
-  +responsive?: boolean,
+  +responsive?: boolean
 |};
 
 function Table({
@@ -45,7 +45,7 @@ function Table({
 Table.defaultProps = {
   cards: false,
   striped: false,
-  responsive: false,
+  responsive: false
 };
 
 Table.Header = TableHeader;

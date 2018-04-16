@@ -7,7 +7,7 @@ import FormLabel from "./FormLabel.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +label?: React.Node,
+  +label?: React.Node
 |};
 
 function FormGroup({

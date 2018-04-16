@@ -12,7 +12,7 @@ type Props = {|
   +tick?: boolean,
   +invalid?: boolean,
   +cross?: boolean,
-  +feedback?: string,
+  +feedback?: string
 |};
 
 function FormInput({
@@ -32,7 +32,7 @@ function FormInput({
       "is-valid": valid,
       "state-valid": tick,
       "is-invalid": invalid,
-      "state-invalid": cross,
+      "state-invalid": cross
     },
     className
   );

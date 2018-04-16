@@ -6,7 +6,8 @@ type Props = {|
   +action: string,
   +children?: React.Node,
   +method: string,
-  +title: string
+  +title: string,
+  +buttonText: string
 |};
 
 function Form(props: Props): React.Node {
@@ -17,7 +18,7 @@ function Form(props: Props): React.Node {
         {props.children}
         <div className="form-footer">
           <button type="submit" className="btn btn-primary btn-block">
-            Create new account
+            {props.buttonText}
           </button>
         </div>
       </div>

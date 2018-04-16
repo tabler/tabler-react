@@ -5,7 +5,7 @@ import cn from "classnames";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string,
+  +className?: string
 |};
 
 function TableRow({ className, children, ...props }: Props): React.Node {

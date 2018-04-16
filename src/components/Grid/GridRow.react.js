@@ -7,7 +7,7 @@ type Props = {
   +children?: React.Node,
   +className?: string,
   +cards?: boolean,
-  +gutters?: "xs" | "sm" | "md" | "lg",
+  +gutters?: "xs" | "sm" | "md" | "lg"
 };
 
 function GridRow({
@@ -22,7 +22,7 @@ function GridRow({
     {
       row: true,
       "row-cards": cards,
-      [`gutters-${gutters}`]: gutters,
+      [`gutters-${gutters}`]: gutters
     },
     className
   );

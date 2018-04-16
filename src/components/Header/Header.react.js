@@ -13,7 +13,7 @@ type Props = {
   +RootComponent?: React.ElementType,
   +children?: React.Node,
   +className?: string,
-  +size: 1 | 2 | 3 | 4 | 5,
+  +size: 1 | 2 | 3 | 4 | 5
 };
 
 function Header({

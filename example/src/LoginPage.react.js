@@ -6,23 +6,24 @@ import { Form, FormTextInput, StandaloneFormPage } from "tabler-react";
 
 type Props = {||};
 
-function ForgotPasswordPage(props: Props): React.Node {
+function LoginPage(props: Props): React.Node {
   return (
     <StandaloneFormPage>
       <Form
         action=""
-        buttonText="Request Password Change"
+        buttonText="Login"
         method="get"
-        title="Forgot Password"
+        title="Login to your Account"
       >
-        <p className="text-muted">
-          Enter your email address and your password will be reset and emailed
-          to you.
-        </p>
         <FormTextInput label="Email Address" placeHolder="Enter email" />
+        <FormTextInput
+          type="password"
+          label="Password"
+          placeHolder="Password"
+        />
       </Form>
     </StandaloneFormPage>
   );
 }
 
-export default ForgotPasswordPage;
+export default LoginPage;

@@ -6,7 +6,7 @@ import cn from "classnames";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +RootComponent?: React.ElementType,
+  +RootComponent?: React.ElementType
 |};
 
 function CardTitle({

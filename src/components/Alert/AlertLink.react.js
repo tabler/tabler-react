@@ -5,7 +5,7 @@ import cn from "classnames";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string,
+  +className?: string
 |};
 
 function AlertLink({ children, className, ...props }: Props): React.Node {
