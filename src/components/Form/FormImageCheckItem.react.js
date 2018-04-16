@@ -8,7 +8,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +value: string | number,
-  +image: string,
+  +imageURL: string,
   +col?: {
     +width?: number,
     +sm?: number,
@@ -20,7 +20,7 @@ type Props = {|
 function FormImageCheckItem({
   className,
   col: { width = 6, sm = 4, md = 0, lg = 0 } = {},
-  image,
+  imageURL,
   value,
   ...props
 }: Props): React.Node {
@@ -34,7 +34,7 @@ function FormImageCheckItem({
           className="imagecheck-input"
         />
         <figure className="imagecheck-figure">
-          <img src={image} alt="Select" className="imagecheck-image" />
+          <img src={imageURL} alt="Select" className="imagecheck-image" />
         </figure>
       </label>
     </Grid.Col>
