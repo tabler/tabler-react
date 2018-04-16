@@ -5,7 +5,7 @@ import * as React from "react";
 type Props = {|
   +href: string,
   +src: string,
-  +alt: string,
+  +alt: string
 |};
 
 const SiteLogo = (props: Props): React.Node => (

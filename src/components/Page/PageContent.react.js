@@ -6,7 +6,7 @@ import { Container } from "../";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string,
+  +className?: string
 |};
 
 function PageContent({ className, children, ...rest }: Props): React.Node {

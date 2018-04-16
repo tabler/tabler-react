@@ -1,9 +1,9 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
 type Props = {|
-  +children?: React.Node,
+  +children?: React.Node
 |};
 
 function StandaloneFormPage(props: Props): React.Node {

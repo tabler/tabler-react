@@ -6,7 +6,7 @@ import cn from "classnames";
 type Props = {|
   +className?: string,
   +color?: string,
-  +width?: number,
+  +width?: number
 |};
 
 function ProgressBar({

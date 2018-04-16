@@ -9,7 +9,7 @@ type Props = {|
   +title?: string,
   +header?: React.Node,
   +footer?: React.Node,
-  +RootComponent?: React.ElementType,
+  +RootComponent?: React.ElementType
 |};
 
 function PageCard({

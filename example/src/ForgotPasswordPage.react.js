@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Form, FormTextInput, StandaloneFormPage } from 'tabler-react';
+import { Form, FormTextInput, StandaloneFormPage } from "tabler-react";
 
 type Props = {||};
 

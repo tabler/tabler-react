@@ -12,8 +12,8 @@ type Props = {|
     +width?: number,
     +sm?: number,
     +md?: number,
-    +lg?: number,
-  },
+    +lg?: number
+  }
 |};
 
 function FormImageCheckItem({

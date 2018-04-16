@@ -10,7 +10,7 @@ type Props = {
   +sm?: number,
   +md?: number,
   +lg?: number,
-  +auto?: boolean,
+  +auto?: boolean
 };
 
 function GridCol({
@@ -30,7 +30,7 @@ function GridCol({
       [`col-sm-${sm}`]: sm,
       [`col-md-${md}`]: md,
       [`col-lg-${lg}`]: lg,
-      "col-auto": auto,
+      "col-auto": auto
     },
     className
   );
