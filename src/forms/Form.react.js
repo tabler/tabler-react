@@ -4,9 +4,9 @@ import * as React from "react";
 
 type Props = {|
   +action: string,
-  +children?: Array<React.Node>,
+  +children?: React.Node,
   +method: string,
-  +title: string,
+  +title: string
 |};
 
 function Form(props: Props): React.Node {

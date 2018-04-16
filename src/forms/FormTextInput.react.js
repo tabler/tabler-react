@@ -3,9 +3,9 @@
 import * as React from "react";
 
 type Props = {|
-  +isPassword?: boolean,
+  +type?: string,
   +label: string,
-  +placeHolder: string,
+  +placeHolder: string
 |};
 
 type State = {|
@@ -22,7 +22,8 @@ class FormTextInput extends React.PureComponent<Props, State> {
   };
 
   render(): React.Node {
-    const { isPassword, label, placeHolder } = this.props;
+    const type = this.props.type || "text";
+    const { label, placeHolder } = this.props;
     const { value } = this.state;
     return (
       <div className="form-group">
@@ -31,7 +32,7 @@ class FormTextInput extends React.PureComponent<Props, State> {
           className="form-control"
           onChange={this._handleChange}
           placeholder={placeHolder}
-          type={isPassword ? "password" : "text"}
+          type={type}
           value={value}
         />
       </div>
