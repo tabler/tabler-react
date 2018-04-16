@@ -9,10 +9,10 @@ type Props = {|
   +className?: string
 |};
 
-function H4({ className, children, ...props }: Props): React.Node {
+function H4({ className, children }: Props): React.Node {
   const classes: string = cn("mt-0 mb-4", className);
   return (
-    <Header as="h4" className={classes} size={4} {...props}>
+    <Header RootComponent="h4" className={classes} size={4}>
       {children}
     </Header>
   );
