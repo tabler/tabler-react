@@ -5,7 +5,6 @@ import cn from "classnames";
 import Grid from "../Grid";
 
 type Props = {|
-  +children?: React.Node,
   +className?: string,
   +value: string | number,
   +imageURL: string,
