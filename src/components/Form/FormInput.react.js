@@ -5,7 +5,6 @@ import { Icon } from "../";
 import cn from "classnames";
 
 type Props = {|
-  +children?: React.Node,
   +className?: string,
   +icon?: string,
   +position?: "append" | "prepend",
