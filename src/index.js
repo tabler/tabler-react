@@ -1,20 +1,5 @@
-/**
- * @class ExampleComponent
- */
+// @flow
 
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-
-import styles from "./styles.css";
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  };
-
-  render() {
-    const { text } = this.props;
-
-    return <div className={styles.test}>Example Component: {text}</div>;
-  }
-}
+export {default as StandaloneFormPage} from './page_templates/StandaloneFormPage.react';
+export {default as Form} from './forms/Form.react';
+export {default as FormTextInput} from './forms/FormTextInput.react';
