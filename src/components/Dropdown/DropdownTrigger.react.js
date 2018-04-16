@@ -14,12 +14,11 @@ function DropdownTrigger({
   className,
   toggle,
   value,
-  children,
-  ...rest
+  children
 }: Props): React.Node {
   const classes = cn({ "dropdown-toggle": toggle }, className);
   return (
-    <Button className={classes} data-toggle="dropdown" {...rest}>
+    <Button className={classes} data-toggle="dropdown">
       {value}
       {children}
     </Button>
