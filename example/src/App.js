@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import ExampleComponent from 'tabler-react'
+import ExampleComponent from "tabler-react";
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
       <div>
-        <ExampleComponent text='Modern React component module' />
+        <ExampleComponent text="Modern React component module" />
       </div>
-    )
+    );
   }
 }

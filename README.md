@@ -28,4 +28,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [jonthomp](https://github.com/jonthomp)
+MIT © [jonthomp](https://github.com/jonthomp) and [AaronCoplan](https://github.com/AaronCoplan)
