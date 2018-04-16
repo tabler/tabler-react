@@ -20,8 +20,8 @@ function DropdownTrigger({
   const classes = cn({ "dropdown-toggle": toggle }, className);
   return (
     <Button className={classes} data-toggle="dropdown" {...rest}>
-      {value && value}
-      {children && children}
+      {value}
+      {children}
     </Button>
   );
 }
