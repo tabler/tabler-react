@@ -9,9 +9,13 @@ type Props = {|
   +className?: string,
 |};
 
-function H3({ className, ...props }: Props): React.Node {
+function H3({ className, children, ...props }: Props): React.Node {
   const classes: string = cn("mt-0 mb-4", className);
-  return <Header as="h3" className={classes} size={3} {...props} />;
+  return (
+    <Header as="h3" className={classes} size={3} {...props}>
+      {children}
+    </Header>
+  );
 }
 
 export default H3;

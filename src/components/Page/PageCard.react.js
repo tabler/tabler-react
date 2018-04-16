@@ -12,14 +12,14 @@ type Props = {|
   +RootComponent?: React.ElementType,
 |};
 
-const PageCard = ({
+function PageCard({
   children,
   title,
   header,
   footer,
   RootComponent,
   ...rest
-}: Props): React.Node => (
+}: Props): React.Node {
   <div className="my-3 my-md-5">
     <Container>
       <Grid.Row>
@@ -30,14 +30,14 @@ const PageCard = ({
                 <Card.Title>{title}</Card.Title>
               </Card.Header>
             )}
-            {header && header}
+            {header}
             <Card.Body>{children}</Card.Body>
-            {footer && footer}
+            {footer}
           </Card>
         </Grid.Col>
       </Grid.Row>
     </Container>
-  </div>
-);
+  </div>;
+}
 
 export default PageCard;

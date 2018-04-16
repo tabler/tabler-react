@@ -9,9 +9,13 @@ type Props = {|
   +className?: string,
 |};
 
-function H5({ className, ...props }: Props): React.Node {
+function H5({ className, children, ...props }: Props): React.Node {
   const classes: string = cn("mt-0 mb-4", className);
-  return <Header as="h5" className={classes} size={5} {...props} />;
+  return (
+    <Header as="h5" className={classes} size={5} {...props}>
+      {children}
+    </Header>
+  );
 }
 
 export default H5;

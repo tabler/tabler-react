@@ -16,6 +16,7 @@ type Props = {|
 
 function Card({
   className,
+  children,
   RootComponent,
   title,
   body,
@@ -23,13 +24,13 @@ function Card({
 }: Props): React.Node {
   const classes = cn("card", className);
   const Component = RootComponent || "div";
-  const card_header =
-    title === "" ? null : (
-      <CardHeader>
-        <CardTitle>{title}</CardTitle>
-      </CardHeader>
-    );
-  const card_body = body === null ? null : <CardBody>{body}</CardBody>;
+  const card_header = title && (
+    <CardHeader>
+      <CardTitle>{title}</CardTitle>
+    </CardHeader>
+  );
+
+  const card_body = body && <CardBody>{body}</CardBody>;
 
   if (card_header !== null || card_body !== null) {
     return (
@@ -39,7 +40,11 @@ function Card({
       </Component>
     );
   } else {
-    return <Component className={classes} {...props} />;
+    return (
+      <Component className={classes} {...props}>
+        {children}
+      </Component>
+    );
   }
 }
 

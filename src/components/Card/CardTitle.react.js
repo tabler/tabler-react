@@ -9,10 +9,19 @@ type Props = {|
   +RootComponent?: React.ElementType,
 |};
 
-function CardTitle({ className, RootComponent, ...props }: Props): React.Node {
+function CardTitle({
+  className,
+  children,
+  RootComponent,
+  ...props
+}: Props): React.Node {
   const classes = cn("card-title", className);
   const Component = RootComponent || "h3";
-  return <Component className={classes} {...props} />;
+  return (
+    <Component className={classes} {...props}>
+      {children}
+    </Component>
+  );
 }
 
 export default CardTitle;

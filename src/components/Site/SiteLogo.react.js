@@ -3,7 +3,6 @@
 import * as React from "react";
 
 type Props = {|
-  +children?: React.Node,
   +href: string,
   +src: string,
   +alt: string,

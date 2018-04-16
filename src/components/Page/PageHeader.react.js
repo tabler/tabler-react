@@ -7,10 +7,12 @@ type Props = {|
   +value?: React.Node,
 |};
 
-const PageHeader = ({ value, children, ...rest }: Props): React.Node => (
-  <div className="page-header" {...rest}>
-    <h1 className="page-title">{value || children || null}</h1>
-  </div>
-);
+function PageHeader({ value, children, ...rest }: Props): React.Node {
+  return (
+    <div className="page-header" {...rest}>
+      <h1 className="page-title">{value || children}</h1>
+    </div>
+  );
+}
 
 export default PageHeader;
