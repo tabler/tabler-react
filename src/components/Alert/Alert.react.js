@@ -57,7 +57,7 @@ function Alert({
         <button type="button" className="close" data-dismiss="alert" />
       )}
       {avatar && <Avatar image={avatar} />}
-      {icon && <Icon name={icon} className="mr-2" aria-hidden="true" />}
+      {icon && <Icon name={icon} className="mr-2" isAriaHidden={true} />}
       {children}
     </div>
   );

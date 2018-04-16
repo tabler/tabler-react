@@ -26,6 +26,7 @@ type Props = {|
   +social?: string,
   +loading?: boolean,
   +toggle?: boolean,
+  +dataToggle?: string,
   +RootComponent?: React.ElementType
 |};
 
@@ -51,7 +52,7 @@ const Button = ({
   loading,
   toggle,
   RootComponent,
-  ...rest
+  dataToggle
 }: Props): React.Node => {
   const classes = cn(
     {
@@ -83,12 +84,18 @@ const Button = ({
     className
   );
   const Component = RootComponent || "button";
+  const extraProps = dataToggle
+    ? {
+        "data-toggle": "dropdown"
+      }
+    : null;
+
   return Component === "input" ? (
-    <Component className={classes} disabled={disabled} {...rest}>
+    <Component className={classes} disabled={disabled}>
       {children}
     </Component>
   ) : (
-    <Component className={classes} disabled={disabled} {...rest}>
+    <Component className={classes} disabled={disabled} {...extraProps}>
       {social ? (
         <Icon name={social} prefix="fa" className={children ? "mr-2" : ""} />
       ) : icon ? (
