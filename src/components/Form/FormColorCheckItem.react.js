@@ -4,7 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 import Grid from "../Grid";
 
-type Props = {| +children?: React.Node, +className?: string, +color: string |};
+type Props = {| +className?: string, +color: string |};
 
 function FormColorCheckItem({ className, color, ...props }: Props): React.Node {
   const classes = cn(className);
