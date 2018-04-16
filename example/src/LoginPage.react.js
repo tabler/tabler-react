@@ -9,7 +9,12 @@ type Props = {||};
 function LoginPage(props: Props): React.Node {
   return (
     <StandaloneFormPage>
-      <Form action="" method="get" title="Login to your Account">
+      <Form
+        action=""
+        buttonText="Login"
+        method="get"
+        title="Login to your Account"
+      >
         <FormTextInput label="Email Address" placeHolder="Enter email" />
         <FormTextInput
           type="password"

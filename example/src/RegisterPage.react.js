@@ -14,11 +14,16 @@ type Props = {||};
 function RegisterPage(props: Props): React.Node {
   return (
     <StandaloneFormPage>
-      <Form action="" method="get" title="Create New Account">
+      <Form
+        action=""
+        buttonText="Create Account"
+        method="get"
+        title="Create New Account"
+      >
         <FormTextInput label="Name" placeHolder="Enter name" />
         <FormTextInput label="Email Address" placeHolder="Enter email" />
         <FormTextInput
-          isPassword={true}
+          type="password"
           label="Password"
           placeHolder="Password"
         />

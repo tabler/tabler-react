@@ -9,7 +9,12 @@ type Props = {||};
 function ForgotPasswordPage(props: Props): React.Node {
   return (
     <StandaloneFormPage>
-      <Form action="" method="get" title="Forgot Password">
+      <Form
+        action=""
+        buttonText="Request Password Change"
+        method="get"
+        title="Forgot Password"
+      >
         <p className="text-muted">
           Enter your email address and your password will be reset and emailed
           to you.
