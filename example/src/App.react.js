@@ -16,7 +16,8 @@ const {
   Error403,
   Error404,
   Error500,
-  Error503
+  Error503,
+  Empty
 } = Pages;
 
 type Props = {||};
@@ -35,6 +36,7 @@ function App(props: Props): React.Node {
         <Route exact path="/404" component={Error404} />
         <Route exact path="/500" component={Error500} />
         <Route exact path="/503" component={Error503} />
+        <Route exact path="/empty" component={Empty} />
         <Route path="*" exact={true} component={Error404} />
       </React.Fragment>
     </Router>
