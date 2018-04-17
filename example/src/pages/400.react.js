@@ -6,7 +6,7 @@ import { Container, Button, Page } from "tabler-react";
 
 type Props = {||};
 
-function error400(props: Props): React.Node {
+function Error400(props: Props): React.Node {
   return (
     <Page>
       <Container className="text-center">
@@ -27,4 +27,4 @@ function error400(props: Props): React.Node {
   );
 }
 
-export default error400;
+export default Error400;

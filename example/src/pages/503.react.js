@@ -6,17 +6,17 @@ import { Container, Button, Page } from "tabler-react";
 
 type Props = {||};
 
-function Error403(props: Props): React.Node {
+function Error503(props: Props): React.Node {
   return (
     <Page>
       <Container className="text-center">
         <div className="display-1 text-muted mb-5">
-          <i class="si si-exclamation" />403
+          <i class="si si-exclamation" />503
         </div>
         <div className="h2 mb-3">Oops.. You just found an error page...</div>
         <div className="h4 text-muted font-weight-normal mb-7">
-          We are sorry but you do not have permission to access this
-          page&hellip;
+          This page is temporarily unavailable. Please reload your
+          browser.&hellip;
         </div>
         <Button className="btn btn-primary">
           <i class="fe fe-arrow-left mr-2" />
@@ -27,4 +27,4 @@ function Error403(props: Props): React.Node {
   );
 }
 
-export default Error403;
+export default Error503;
