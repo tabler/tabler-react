@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 import cn from "classnames";
-import { Icon, Button } from "../";
+import { Button } from "../";
 
 type Props = {|
   +children?: React.Node,

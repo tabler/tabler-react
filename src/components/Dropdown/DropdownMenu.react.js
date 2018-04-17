@@ -3,8 +3,6 @@
 import * as React from "react";
 import cn from "classnames";
 
-import { Icon } from "../";
-
 type Props = {|
   +children?: React.Node,
   +className?: string,

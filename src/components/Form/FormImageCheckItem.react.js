@@ -1,7 +1,6 @@
 // @flow
 
 import * as React from "react";
-import cn from "classnames";
 import Grid from "../Grid";
 
 type Props = {|
