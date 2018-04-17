@@ -5,7 +5,7 @@ import cn from "classnames";
 import { Icon } from "../";
 import ButtonList from "./ButtonList.react";
 
-type Props = {
+type Props = {|
   +size?: "sm" | "lg",
   +outline?: boolean,
   +primary?: boolean,
@@ -26,8 +26,9 @@ type Props = {
   +social?: string,
   +loading?: boolean,
   +toggle?: boolean,
-  +RootComponent?: React.ElementType
-};
+  +dataToggle?: string,
+  +RootComponent?: React.ElementType,
+|};
 
 const Button = ({
   size = "",
@@ -51,7 +52,7 @@ const Button = ({
   loading,
   toggle,
   RootComponent,
-  ...rest
+  dataToggle,
 }: Props): React.Node => {
   const classes = cn(
     {
@@ -78,17 +79,23 @@ const Button = ({
       "btn-pill": pill,
       "btn-icon": !children,
       "btn-loading": loading,
-      "dropdown-toggle": toggle
+      "dropdown-toggle": toggle,
     },
     className
   );
   const Component = RootComponent || "button";
+  const extraProps = dataToggle
+    ? {
+        "data-toggle": "dropdown",
+      }
+    : null;
+
   return Component === "input" ? (
-    <Component className={classes} disabled={disabled} {...rest}>
+    <Component className={classes} disabled={disabled}>
       {children}
     </Component>
   ) : (
-    <Component className={classes} disabled={disabled} {...rest}>
+    <Component className={classes} disabled={disabled} {...extraProps}>
       {social ? (
         <Icon name={social} prefix="fa" className={children ? "mr-2" : ""} />
       ) : icon ? (

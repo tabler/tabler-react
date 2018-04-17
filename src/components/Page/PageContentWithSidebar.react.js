@@ -6,14 +6,13 @@ import { Page, Grid } from "../";
 type Props = {|
   +children?: React.Node,
   +header?: React.Node,
-  +sidebar?: React.Node
+  +sidebar?: React.Node,
 |};
 
 function PageContentWithSidebar({
   children,
   header,
   sidebar,
-  ...rest
 }: Props): React.Node {
   return (
     <Page.Content>

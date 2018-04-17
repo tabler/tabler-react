@@ -5,16 +5,12 @@ import cn from "classnames";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string
+  +className?: string,
 |};
 
-function AlertLink({ children, className, ...props }: Props): React.Node {
+function AlertLink({ children, className }: Props): React.Node {
   const classes = cn(`alert-link`, className);
-  return (
-    <a className={classes} {...props}>
-      {children}
-    </a>
-  );
+  return <a className={classes}>{children}</a>;
 }
 
 export default AlertLink;

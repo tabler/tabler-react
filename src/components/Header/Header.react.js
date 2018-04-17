@@ -9,27 +9,22 @@ import H3 from "./H3.react";
 import H4 from "./H4.react";
 import H5 from "./H5.react";
 
-type Props = {
+type Props = {|
   +RootComponent?: React.ElementType,
   +children?: React.Node,
   +className?: string,
-  +size: 1 | 2 | 3 | 4 | 5
-};
+  +size: 1 | 2 | 3 | 4 | 5,
+|};
 
 function Header({
   RootComponent,
   className,
   children,
   size = 1,
-  ...props
 }: Props): React.Node {
   const classes = cn(`h${size}`, className);
   const Component = RootComponent || "div";
-  return (
-    <Component className={classes} {...props}>
-      {children}
-    </Component>
-  );
+  return <Component className={classes}>{children}</Component>;
 }
 
 Header.H1 = H1;

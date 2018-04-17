@@ -3,21 +3,21 @@
 import * as React from "react";
 
 type Props = {|
-  +label: string
+  +label: string,
 |};
 
 type State = {
-  value: boolean
+  value: boolean,
 };
 
 class FormCheckboxInput extends React.PureComponent<Props, State> {
   state = {
-    value: false
+    value: false,
   };
 
   _handleChange = (event: SyntheticInputEvent<HTMLInputElement>): void => {
     this.setState((prevState, _) => ({
-      value: !prevState.value
+      value: !prevState.value,
     }));
   };
 

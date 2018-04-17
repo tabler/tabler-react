@@ -10,21 +10,12 @@ import NavSubmenuItem from "./NavSubmenuItem.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +tabbed?: boolean
+  +tabbed?: boolean,
 |};
 
-function Nav({
-  className,
-  children,
-  tabbed = true,
-  ...rest
-}: Props): React.Node {
+function Nav({ className, children, tabbed = true }: Props): React.Node {
   const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
-  return (
-    <ul className={classes} {...rest}>
-      {children}
-    </ul>
-  );
+  return <ul className={classes}>{children}</ul>;
 }
 
 Nav.Item = NavItem;

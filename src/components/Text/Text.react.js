@@ -9,7 +9,7 @@ type Props = {|
   +RootComponent?: React.ElementType,
   +color: string,
   +size: string,
-  +wrap?: boolean
+  +wrap?: boolean,
 |};
 
 const Text = ({
@@ -25,7 +25,7 @@ const Text = ({
     {
       [`text-wrap p-lg-6`]: wrap,
       [`text-${color}`]: color,
-      [`${size}`]: size
+      [`${size}`]: size,
     },
     className
   );

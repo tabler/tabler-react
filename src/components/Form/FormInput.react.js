@@ -12,7 +12,7 @@ type Props = {|
   +tick?: boolean,
   +invalid?: boolean,
   +cross?: boolean,
-  +feedback?: string
+  +feedback?: string,
 |};
 
 function FormInput({
@@ -24,7 +24,6 @@ function FormInput({
   invalid,
   cross,
   feedback,
-  ...props
 }: Props): React.Node {
   const classes = cn(
     "form-control",
@@ -32,13 +31,13 @@ function FormInput({
       "is-valid": valid,
       "state-valid": tick,
       "is-invalid": invalid,
-      "state-invalid": cross
+      "state-invalid": cross,
     },
     className
   );
   return !icon ? (
     <React.Fragment>
-      <input className={classes} {...props} />
+      <input className={classes} />
       {feedback &&
         (invalid || cross) && (
           <span className="invalid-feedback">{feedback}</span>
@@ -51,7 +50,7 @@ function FormInput({
           <Icon name={icon} />
         </span>
       )}
-      <input className={classes} {...props} />
+      <input className={classes} />
       {position === "append" && (
         <span className="input-icon-addon">
           <Icon name={icon} />

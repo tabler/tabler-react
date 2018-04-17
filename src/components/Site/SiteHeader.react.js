@@ -4,11 +4,11 @@ import * as React from "react";
 import { Container } from "../";
 
 type Props = {|
-  +children?: React.Node
+  +children?: React.Node,
 |};
 
-const SiteHeader = ({ children, ...rest }: Props): React.Node => (
-  <div className="header" {...rest}>
+const SiteHeader = ({ children }: Props): React.Node => (
+  <div className="header">
     <Container>{children}</Container>
   </div>
 );

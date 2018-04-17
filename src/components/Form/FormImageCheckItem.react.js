@@ -1,7 +1,6 @@
 // @flow
 
 import * as React from "react";
-import cn from "classnames";
 import Grid from "../Grid";
 
 type Props = {|
@@ -12,8 +11,8 @@ type Props = {|
     +width?: number,
     +sm?: number,
     +md?: number,
-    +lg?: number
-  }
+    +lg?: number,
+  },
 |};
 
 function FormImageCheckItem({
@@ -21,7 +20,6 @@ function FormImageCheckItem({
   col: { width = 6, sm = 4, md = 0, lg = 0 } = {},
   imageURL,
   value,
-  ...props
 }: Props): React.Node {
   return (
     <Grid.Col width={width} sm={sm} md={md} lg={lg}>

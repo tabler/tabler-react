@@ -5,16 +5,12 @@ import cn from "classnames";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string
+  +className?: string,
 |};
 
-function CodeHighlight({ className, children, ...props }: Props): React.Node {
+function CodeHighlight({ className, children }: Props): React.Node {
   const classes = cn(`highlight`, className);
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default CodeHighlight;

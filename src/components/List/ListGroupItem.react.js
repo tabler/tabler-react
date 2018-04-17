@@ -8,7 +8,7 @@ type Props = {|
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
-  +icon?: string
+  +icon?: string,
 |};
 
 function ListGroupItem({
@@ -17,19 +17,18 @@ function ListGroupItem({
   RootComponent,
   active,
   icon,
-  ...props
 }: Props): React.Node {
   const classes = cn(
     "list-group-item",
     "list-group-item-action",
     {
-      active: active
+      active: active,
     },
     className
   );
   const Component = RootComponent || "a";
   return (
-    <Component className={classes} {...props}>
+    <Component className={classes}>
       {icon && (
         <span className="icon mr-3">
           <i className={`fe fe-${icon}`} />{" "}

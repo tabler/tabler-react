@@ -10,24 +10,15 @@ import DropdownItemDivider from "./DropdownItemDivider.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +desktopOnly?: boolean
+  +desktopOnly?: boolean,
 |};
 
-function Dropdown({
-  className,
-  children,
-  desktopOnly,
-  ...rest
-}: Props): React.Node {
+function Dropdown({ className, children, desktopOnly }: Props): React.Node {
   const classes = cn(
     { dropdown: true, "d-none": desktopOnly, "d-md-flex": desktopOnly },
     className
   );
-  return (
-    <div className={classes} {...rest}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 Dropdown.Trigger = DropdownTrigger;

@@ -3,13 +3,11 @@
 import * as React from "react";
 import cn from "classnames";
 
-import { Icon } from "../";
-
 type Props = {|
   +children?: React.Node,
   +className?: string,
   +position?: string,
-  +arrow?: boolean
+  +arrow?: boolean,
 |};
 
 function DropdownMenu({
@@ -17,21 +15,16 @@ function DropdownMenu({
   children,
   position = "",
   arrow,
-  ...rest
 }: Props): React.Node {
   const classes = cn(
     {
       "dropdown-menu": true,
       [`dropdown-menu-${position}`]: position,
-      [`dropdown-menu-arrow`]: arrow
+      [`dropdown-menu-arrow`]: arrow,
     },
     className
   );
-  return (
-    <div className={classes} {...rest}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default DropdownMenu;

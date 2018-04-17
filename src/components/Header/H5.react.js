@@ -6,13 +6,13 @@ import Header from "./Header.react";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string
+  +className?: string,
 |};
 
-function H5({ className, children, ...props }: Props): React.Node {
+function H5({ className, children }: Props): React.Node {
   const classes: string = cn("mt-0 mb-4", className);
   return (
-    <Header as="h5" className={classes} size={5} {...props}>
+    <Header RootComponent="h5" className={classes} size={5}>
       {children}
     </Header>
   );

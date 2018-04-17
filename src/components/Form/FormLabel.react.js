@@ -5,15 +5,10 @@ import cn from "classnames";
 
 type Props = {| +children?: React.Node, +className?: string, +aside?: string |};
 
-function FormLabel({
-  className,
-  aside,
-  children,
-  ...props
-}: Props): React.Node {
+function FormLabel({ className, aside, children }: Props): React.Node {
   const classes = cn("form-label", className);
   return (
-    <label className={classes} {...props}>
+    <label className={classes}>
       {aside && <span className="form-label-small">{aside}</span>}
       {children}
     </label>

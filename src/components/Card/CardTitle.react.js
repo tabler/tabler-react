@@ -6,22 +6,13 @@ import cn from "classnames";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +RootComponent?: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
-function CardTitle({
-  className,
-  children,
-  RootComponent,
-  ...props
-}: Props): React.Node {
+function CardTitle({ className, children, RootComponent }: Props): React.Node {
   const classes = cn("card-title", className);
   const Component = RootComponent || "h3";
-  return (
-    <Component className={classes} {...props}>
-      {children}
-    </Component>
-  );
+  return <Component className={classes}>{children}</Component>;
 }
 
 export default CardTitle;

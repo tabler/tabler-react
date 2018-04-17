@@ -3,15 +3,11 @@
 import * as React from "react";
 
 type Props = {|
-  +children?: React.Node
+  +children?: React.Node,
 |};
 
 function Container(props: Props): React.Node {
-  return (
-    <div className={"container"} {...props}>
-      {props.children}
-    </div>
-  );
+  return <div className={"container"}>{props.children}</div>;
 }
 
 export default Container;

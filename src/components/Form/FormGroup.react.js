@@ -7,18 +7,13 @@ import FormLabel from "./FormLabel.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +label?: React.Node
+  +label?: React.Node,
 |};
 
-function FormGroup({
-  className,
-  children,
-  label,
-  ...props
-}: Props): React.Node {
+function FormGroup({ className, children, label }: Props): React.Node {
   const classes = cn("form-group", className);
   return (
-    <div className={classes} {...props}>
+    <div className={classes}>
       {!label ? null : typeof label === "string" ? (
         <FormLabel>{label}</FormLabel>
       ) : (

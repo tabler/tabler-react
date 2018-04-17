@@ -6,28 +6,19 @@ import cn from "classnames";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +transparent?: boolean
+  +transparent?: boolean,
 |};
 
-function ListGroup({
-  className,
-  children,
-  transparent,
-  ...props
-}: Props): React.Node {
+function ListGroup({ className, children, transparent }: Props): React.Node {
   const classes = cn(
     "list-group",
     "mb-0",
     {
-      "list-group-transparent": transparent
+      "list-group-transparent": transparent,
     },
     className
   );
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default ListGroup;
