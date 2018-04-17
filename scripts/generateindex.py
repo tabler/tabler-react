@@ -21,4 +21,4 @@ def fileNameOperator(filePath, fileName):
 
 imports = []
 repoutils.walkLibFileNames(fileNameOperator, None, None)
-print('// @flow\n{}'.format('\n'.join(imports)))
+print('// @flow\n\n{}'.format('\n'.join(imports)))
