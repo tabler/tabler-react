@@ -7,7 +7,7 @@ type Props = {
   +className?: string,
   +link?: boolean,
   +prefix?: "fa" | "fe",
-  +name: string
+  +name: string,
 };
 
 function Icon({
@@ -20,7 +20,7 @@ function Icon({
   const classes = cn(
     {
       [prefix]: true,
-      [`${prefix}-${name}`]: true
+      [`${prefix}-${name}`]: true,
     },
     className
   );

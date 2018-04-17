@@ -26,7 +26,7 @@ type Props = {
   +social?: string,
   +loading?: boolean,
   +toggle?: boolean,
-  +RootComponent?: React.ElementType
+  +RootComponent?: React.ElementType,
 };
 
 const Button = ({
@@ -78,7 +78,7 @@ const Button = ({
       "btn-pill": pill,
       "btn-icon": !children,
       "btn-loading": loading,
-      "dropdown-toggle": toggle
+      "dropdown-toggle": toggle,
     },
     className
   );

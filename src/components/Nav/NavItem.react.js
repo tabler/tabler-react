@@ -5,7 +5,7 @@ import Nav from "../Nav";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +value?: string
+  +value?: string,
 |};
 
 function NavItem({ children, value, ...rest }: Props): React.Node {
