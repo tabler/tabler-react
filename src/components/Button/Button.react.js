@@ -5,15 +5,23 @@ import cn from "classnames";
 import { Icon } from "../";
 import ButtonList from "./ButtonList.react";
 
+type ButtonType =
+  | "primary"
+  | "secondary"
+  | "success"
+  | "info"
+  | "warning"
+  | "danger"
+  | "outline-primary"
+  | "outline-secondary"
+  | "outline-success"
+  | "outline-info"
+  | "outline-warning"
+  | "outline-danger";
+
 type Props = {|
   +size?: "sm" | "lg",
-  +outline?: boolean,
-  +primary?: boolean,
-  +secondary?: boolean,
-  +success?: boolean,
-  +info?: boolean,
-  +warning?: boolean,
-  +danger?: boolean,
+  +type?: ButtonType,
   +link?: boolean,
   +block?: boolean,
   +className?: string,
@@ -32,13 +40,7 @@ type Props = {|
 
 const Button = ({
   size = "",
-  outline,
-  primary,
-  secondary,
-  success,
-  info,
-  warning,
-  danger,
+  type,
   link,
   block,
   className,
@@ -59,19 +61,8 @@ const Button = ({
       btn: true,
       [`btn-${size}`]: !!size,
       [`btn-block`]: block,
-      [`btn-primary`]: primary && !outline,
-      [`btn-secondary`]: secondary && !outline,
-      [`btn-success`]: success && !outline,
-      [`btn-info`]: info && !outline,
-      [`btn-warning`]: warning && !outline,
-      [`btn-danger`]: danger && !outline,
+      [`btn-${type}`]: type && !color,
       [`btn-link`]: link,
-      [`btn-outline-primary`]: outline && primary,
-      [`btn-outline-secondary`]: outline && secondary,
-      [`btn-outline-success`]: outline && success,
-      [`btn-outline-info`]: outline && info,
-      [`btn-outline-warning`]: outline && warning,
-      [`btn-outline-danger`]: outline && danger,
       disabled: disabled,
       [`btn-${color}`]: !!color,
       [`btn-${social}`]: !!social,
