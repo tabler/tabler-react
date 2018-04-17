@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Container, Button, Page } from "tabler-react";
+import { Container, Button, Page, Icon, Header } from "tabler-react";
 
 type Props = {||};
 
@@ -11,7 +11,7 @@ function Error400(props: Props): React.Node {
     <Page>
       <Container className="text-center">
         <div className="display-1 text-muted mb-5">
-          <i class="si si-exclamation" />400
+          <Icon className="si si-exclamation" />400
         </div>
         <div className="h2 mb-3">Oops.. You just found an error page...</div>
         <div className="h4 text-muted font-weight-normal mb-7">
@@ -19,7 +19,7 @@ function Error400(props: Props): React.Node {
           fulfilled&hellip;
         </div>
         <Button className="btn btn-primary">
-          <i class="fe fe-arrow-left mr-2" />
+          <i className="fe fe-arrow-left mr-2" />
           Go Back
         </Button>
       </Container>
