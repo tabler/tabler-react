@@ -6,7 +6,7 @@ import cn from "classnames";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +transparent?: boolean
+  +transparent?: boolean,
 |};
 
 function ListGroup({
@@ -19,7 +19,7 @@ function ListGroup({
     "list-group",
     "mb-0",
     {
-      "list-group-transparent": transparent
+      "list-group-transparent": transparent,
     },
     className
   );

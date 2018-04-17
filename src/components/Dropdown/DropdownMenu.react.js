@@ -9,7 +9,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +position?: string,
-  +arrow?: boolean
+  +arrow?: boolean,
 |};
 
 function DropdownMenu({
@@ -23,7 +23,7 @@ function DropdownMenu({
     {
       "dropdown-menu": true,
       [`dropdown-menu-${position}`]: position,
-      [`dropdown-menu-arrow`]: arrow
+      [`dropdown-menu-arrow`]: arrow,
     },
     className
   );

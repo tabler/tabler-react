@@ -10,7 +10,7 @@ import DropdownItemDivider from "./DropdownItemDivider.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +desktopOnly?: boolean
+  +desktopOnly?: boolean,
 |};
 
 function Dropdown({

@@ -6,7 +6,7 @@ import {
   Form,
   FormTextInput,
   FormCheckboxInput,
-  StandaloneFormPage
+  StandaloneFormPage,
 } from "tabler-react";
 
 type Props = {||};

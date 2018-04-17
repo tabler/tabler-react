@@ -10,7 +10,7 @@ import PageCard from "./PageCard.react";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string
+  +className?: string,
 |};
 
 function Page({ className, children, ...props }: Props): React.Node {

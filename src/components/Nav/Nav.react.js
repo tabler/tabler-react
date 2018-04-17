@@ -10,7 +10,7 @@ import NavSubmenuItem from "./NavSubmenuItem.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +tabbed?: boolean
+  +tabbed?: boolean,
 |};
 
 function Nav({

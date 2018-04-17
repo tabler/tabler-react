@@ -8,7 +8,7 @@ type Props = {|
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
-  +icon?: string
+  +icon?: string,
 |};
 
 function ListGroupItem({
@@ -23,7 +23,7 @@ function ListGroupItem({
     "list-group-item",
     "list-group-item-action",
     {
-      active: active
+      active: active,
     },
     className
   );

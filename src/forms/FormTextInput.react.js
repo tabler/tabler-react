@@ -5,16 +5,16 @@ import * as React from "react";
 type Props = {|
   +type?: string,
   +label: string,
-  +placeHolder: string
+  +placeHolder: string,
 |};
 
 type State = {|
-  value: string
+  value: string,
 |};
 
 class FormTextInput extends React.PureComponent<Props, State> {
   state = {
-    value: ""
+    value: "",
   };
 
   _handleChange = (event: SyntheticInputEvent<HTMLInputElement>): void => {

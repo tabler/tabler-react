@@ -17,7 +17,7 @@ type Props = {|
   +icon?: string,
   +extraSpace?: boolean,
   +dismissible?: boolean,
-  +avatar?: string
+  +avatar?: string,
 |};
 
 function Alert({
@@ -47,7 +47,7 @@ function Alert({
       "alert-icon": !!icon,
       "mt-5 mb-6": extraSpace,
       "alert-dismissible": dismissible,
-      "alert-avatar": !!avatar
+      "alert-avatar": !!avatar,
     },
     className
   );

@@ -9,7 +9,7 @@ type Props = {|
   +className?: string,
   +icon?: string,
   +value?: string,
-  +badge?: string
+  +badge?: string,
 |};
 
 function DropdownItem({

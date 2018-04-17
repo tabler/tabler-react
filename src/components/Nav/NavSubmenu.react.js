@@ -5,7 +5,7 @@ import cn from "classnames";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string
+  +className?: string,
 |};
 
 function NavSubmenu({ className, children, ...props }: Props): React.Node {

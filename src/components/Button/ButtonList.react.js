@@ -6,7 +6,7 @@ import cn from "classnames";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +align?: "" | "left" | "center" | "right"
+  +align?: "" | "left" | "center" | "right",
 |};
 
 function ButtonList({

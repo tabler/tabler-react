@@ -7,7 +7,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +append?: boolean,
-  +RootComponent?: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
 function FormInputGroup({
