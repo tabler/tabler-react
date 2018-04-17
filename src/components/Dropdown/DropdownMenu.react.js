@@ -16,8 +16,7 @@ function DropdownMenu({
   className,
   children,
   position = "",
-  arrow,
-  ...rest
+  arrow
 }: Props): React.Node {
   const classes = cn(
     {
@@ -27,11 +26,7 @@ function DropdownMenu({
     },
     className
   );
-  return (
-    <div className={classes} {...rest}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default DropdownMenu;

@@ -9,12 +9,7 @@ type Props = {|
   +stacked?: boolean
 |};
 
-function AvatarList({
-  className,
-  children,
-  stacked,
-  ...props
-}: Props): React.Node {
+function AvatarList({ className, children, stacked }: Props): React.Node {
   const classes = cn(
     {
       "avatar-list": true,
@@ -22,11 +17,7 @@ function AvatarList({
     },
     className
   );
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default AvatarList;

@@ -26,8 +26,7 @@ function Avatar({
   status,
   placeholder,
   icon,
-  color = "",
-  ...rest
+  color = ""
 }: Props): React.Node {
   const classes = cn(
     {
@@ -51,7 +50,6 @@ function Avatar({
             )
           : style
       }
-      {...rest}
     >
       {icon && <Icon name={icon} />}
       {status && <span className={`avatar-status bg-${status}`} />}

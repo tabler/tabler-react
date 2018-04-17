@@ -16,13 +16,12 @@ function NavSubmenuItem({
   RootComponent,
   icon,
   children,
-  active = false,
-  ...rest
+  active = false
 }: Props): React.Node {
   const classes = cn({ "nav-item": true, active: active }, className);
   const Component = RootComponent || "a";
   return (
-    <Component className={classes} {...rest}>
+    <Component className={classes}>
       {icon && (
         <React.Fragment>
           <Icon name={icon} />{" "}

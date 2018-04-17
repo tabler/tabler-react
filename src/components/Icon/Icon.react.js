@@ -34,7 +34,7 @@ function Icon({
   return !link ? (
     <i className={classes} />
   ) : (
-    <a className={`icon`} {...extraProps}>
+    <a className="icon" {...extraProps}>
       <i className={classes} />
     </a>
   );

@@ -9,14 +9,9 @@ type Props = {|
   +width?: number
 |};
 
-function ProgressBar({
-  className,
-  color = "",
-  width = 0,
-  ...props
-}: Props): React.Node {
+function ProgressBar({ className, color = "", width = 0 }: Props): React.Node {
   const classes = cn(`progress-bar`, { [`bg-${color}`]: !!color }, className);
-  return <div className={classes} style={{ width: `${width}%` }} {...props} />;
+  return <div className={classes} style={{ width: `${width}%` }} />;
 }
 
 export default ProgressBar;

@@ -13,13 +13,9 @@ type Props = {|
   +className?: string
 |};
 
-function Page({ className, children, ...props }: Props): React.Node {
+function Page({ className, children }: Props): React.Node {
   const classes = cn("page", className);
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 Page.Main = PageMain;

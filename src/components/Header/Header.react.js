@@ -20,16 +20,11 @@ function Header({
   RootComponent,
   className,
   children,
-  size = 1,
-  ...props
+  size = 1
 }: Props): React.Node {
   const classes = cn(`h${size}`, className);
   const Component = RootComponent || "div";
-  return (
-    <Component className={classes} {...props}>
-      {children}
-    </Component>
-  );
+  return <Component className={classes}>{children}</Component>;
 }
 
 Header.H1 = H1;

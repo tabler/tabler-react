@@ -20,8 +20,7 @@ function FormImageCheckItem({
   className,
   col: { width = 6, sm = 4, md = 0, lg = 0 } = {},
   imageURL,
-  value,
-  ...props
+  value
 }: Props): React.Node {
   return (
     <Grid.Col width={width} sm={sm} md={md} lg={lg}>

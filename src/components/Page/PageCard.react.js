@@ -17,8 +17,7 @@ function PageCard({
   title,
   header,
   footer,
-  RootComponent,
-  ...rest
+  RootComponent
 }: Props): React.Node {
   <div className="my-3 my-md-5">
     <Container>

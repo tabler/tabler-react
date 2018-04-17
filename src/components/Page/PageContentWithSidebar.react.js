@@ -12,8 +12,7 @@ type Props = {|
 function PageContentWithSidebar({
   children,
   header,
-  sidebar,
-  ...rest
+  sidebar
 }: Props): React.Node {
   return (
     <Page.Content>

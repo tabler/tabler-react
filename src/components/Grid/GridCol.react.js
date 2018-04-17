@@ -20,8 +20,7 @@ function GridCol({
   sm = 0,
   md = 0,
   lg = 0,
-  auto,
-  ...props
+  auto
 }: Props): React.Node {
   const classes = cn(
     {
@@ -34,11 +33,7 @@ function GridCol({
     },
     className
   );
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default GridCol;

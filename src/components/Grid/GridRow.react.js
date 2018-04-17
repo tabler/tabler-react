@@ -14,8 +14,7 @@ function GridRow({
   className,
   children,
   cards = false,
-  gutters = "",
-  ...props
+  gutters = ""
 }: Props): React.Node {
   const classes: string = cn(
     `row`,
@@ -26,11 +25,7 @@ function GridRow({
     },
     className
   );
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default GridRow;

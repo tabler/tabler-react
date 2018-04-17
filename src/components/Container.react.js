@@ -7,11 +7,7 @@ type Props = {|
 |};
 
 function Container(props: Props): React.Node {
-  return (
-    <div className={"container"} {...props}>
-      {props.children}
-    </div>
-  );
+  return <div className={"container"}>{props.children}</div>;
 }
 
 export default Container;

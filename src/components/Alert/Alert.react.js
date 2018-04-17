@@ -18,8 +18,8 @@ type Props = {|
   +className?: string,
   +type: AlertType,
   +icon?: string,
-  +extraSpace?: boolean,
-  +dismissible?: boolean,
+  +hasExtraSpace?: boolean,
+  +isDismissible?: boolean,
   +avatar?: string
 |};
 
@@ -28,8 +28,8 @@ function Alert({
   children,
   type,
   icon,
-  extraSpace,
-  dismissible,
+  hasExtraSpace,
+  isDismissible,
   avatar
 }: Props): React.Node {
   const alertClassName = "alert-" + type;
@@ -38,15 +38,15 @@ function Alert({
     alertClassName,
     {
       "alert-icon": !!icon,
-      "mt-5 mb-6": extraSpace,
-      "alert-dismissible": dismissible,
+      "mt-5 mb-6": hasExtraSpace,
+      "alert-dismissible": isDismissible,
       "alert-avatar": !!avatar
     },
     className
   );
   return (
     <div className={classes} role="alert">
-      {dismissible && (
+      {isDismissible && (
         <button type="button" className="close" data-dismiss="alert" />
       )}
       {avatar && <Avatar image={avatar} />}

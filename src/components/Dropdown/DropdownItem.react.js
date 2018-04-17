@@ -17,12 +17,11 @@ function DropdownItem({
   icon,
   value,
   children,
-  badge,
-  ...rest
+  badge
 }: Props): React.Node {
   const classes = cn({ "dropdown-item": true }, className);
   return (
-    <a className={classes} href="#" {...rest}>
+    <a className={classes} href="#">
       {badge && (
         <span className="float-right">
           <Badge>{badge}</Badge>

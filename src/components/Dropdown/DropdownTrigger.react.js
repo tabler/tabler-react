@@ -1,4 +1,5 @@
 // @flow
+
 import * as React from "react";
 import cn from "classnames";
 import { Icon, Button } from "../";
@@ -7,7 +8,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +toggle?: boolean,
-  +value?: string
+  +value: string
 |};
 
 function DropdownTrigger({
