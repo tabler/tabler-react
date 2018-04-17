@@ -9,7 +9,7 @@ type Props = {|
   +className?: string,
 |};
 
-function PageContent({ className, children, ...rest }: Props): React.Node {
+function PageContent({ className, children }: Props): React.Node {
   const classes = cn("page-content", className);
   return (
     <div className={classes}>

@@ -8,11 +8,11 @@ type Props = {|
   +value?: string,
 |};
 
-function NavItem({ children, value, ...rest }: Props): React.Node {
+function NavItem({ children, value, className }: Props): React.Node {
   return (
     <li className="nav-item">
       <React.Fragment>
-        <Nav.Link {...rest}>{value}</Nav.Link>
+        <Nav.Link className={className}>{value}</Nav.Link>
         {children}
       </React.Fragment>
     </li>

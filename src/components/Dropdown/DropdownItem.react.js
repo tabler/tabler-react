@@ -18,11 +18,10 @@ function DropdownItem({
   value,
   children,
   badge,
-  ...rest
 }: Props): React.Node {
   const classes = cn({ "dropdown-item": true }, className);
   return (
-    <a className={classes} {...rest}>
+    <a className={classes}>
       {badge && (
         <span className="float-right">
           <Badge>{badge}</Badge>

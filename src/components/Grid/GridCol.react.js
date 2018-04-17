@@ -3,7 +3,7 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {
+type Props = {|
   +children?: React.Node,
   +className?: string,
   +width?: number,
@@ -11,7 +11,7 @@ type Props = {
   +md?: number,
   +lg?: number,
   +auto?: boolean,
-};
+|};
 
 function GridCol({
   className,
@@ -21,7 +21,6 @@ function GridCol({
   md = 0,
   lg = 0,
   auto,
-  ...props
 }: Props): React.Node {
   const classes = cn(
     {
@@ -34,11 +33,7 @@ function GridCol({
     },
     className
   );
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default GridCol;

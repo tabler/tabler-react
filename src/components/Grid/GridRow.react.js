@@ -3,19 +3,18 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {
+type Props = {|
   +children?: React.Node,
   +className?: string,
   +cards?: boolean,
   +gutters?: "xs" | "sm" | "md" | "lg",
-};
+|};
 
 function GridRow({
   className,
   children,
   cards = false,
   gutters = "",
-  ...props
 }: Props): React.Node {
   const classes: string = cn(
     `row`,
@@ -26,11 +25,7 @@ function GridRow({
     },
     className
   );
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default GridRow;

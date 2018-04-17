@@ -10,18 +10,9 @@ type Props = {|
   +size?: string,
 |};
 
-function Progress({
-  className,
-  children,
-  size = "",
-  ...props
-}: Props): React.Node {
+function Progress({ className, children, size = "" }: Props): React.Node {
   const classes = cn(`progress`, { [`progress-${size}`]: !!size }, className);
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 Progress.Bar = ProgressBar;

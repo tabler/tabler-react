@@ -5,9 +5,9 @@ import cn from "classnames";
 
 type Props = {| +className?: string |};
 
-function FormTextarea({ className, ...props }: Props): React.Node {
+function FormTextarea({ className }: Props): React.Node {
   const classes = cn("form-control", className);
-  return <textarea className={classes} {...props} />;
+  return <textarea className={classes} />;
 }
 
 export default FormTextarea;

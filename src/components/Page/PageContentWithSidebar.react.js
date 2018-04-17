@@ -13,7 +13,6 @@ function PageContentWithSidebar({
   children,
   header,
   sidebar,
-  ...rest
 }: Props): React.Node {
   return (
     <Page.Content>

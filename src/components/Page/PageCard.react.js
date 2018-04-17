@@ -18,7 +18,6 @@ function PageCard({
   header,
   footer,
   RootComponent,
-  ...rest
 }: Props): React.Node {
   return (
     <div className="my-3 my-md-5">

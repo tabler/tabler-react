@@ -1,7 +1,13 @@
+// @flow
+
 import * as React from "react";
 import { Container } from "../";
 
-const SiteFooter = ({ children, ...rest }) => (
+type Props = {|
+  +children: React.Node
+|};
+
+const SiteFooter = ({ children }: Props) => (
   <React.Fragment>
     <div className="footer">
       <div className="container">

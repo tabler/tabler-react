@@ -6,10 +6,10 @@ import Grid from "../Grid";
 
 type Props = {| +className?: string, +color: string |};
 
-function FormColorCheckItem({ className, color, ...props }: Props): React.Node {
+function FormColorCheckItem({ className, color }: Props): React.Node {
   const classes = cn(className);
   return (
-    <Grid.Col auto className={classes} {...props}>
+    <Grid.Col auto className={classes}>
       <label className="colorinput">
         <input
           name="color"

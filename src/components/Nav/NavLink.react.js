@@ -3,13 +3,13 @@ import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 
-type Props = {
+type Props = {|
   +children?: React.Node,
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
   +icon?: string,
-};
+|};
 
 function NavLink({
   children,
@@ -17,12 +17,11 @@ function NavLink({
   RootComponent,
   icon,
   active = false,
-  ...rest
 }: Props): React.Node {
   const classes = cn({ "nav-link": true, active: active }, className);
   const Component = RootComponent || "a";
   return (
-    <Component className={classes} {...rest}>
+    <Component className={classes}>
       {icon && (
         <React.Fragment>
           <Icon name={icon} />{" "}

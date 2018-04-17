@@ -10,15 +10,10 @@ type Props = {|
   +label?: React.Node,
 |};
 
-function FormGroup({
-  className,
-  children,
-  label,
-  ...props
-}: Props): React.Node {
+function FormGroup({ className, children, label }: Props): React.Node {
   const classes = cn("form-group", className);
   return (
-    <div className={classes} {...props}>
+    <div className={classes}>
       {!label ? null : typeof label === "string" ? (
         <FormLabel>{label}</FormLabel>
       ) : (

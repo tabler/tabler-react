@@ -17,7 +17,7 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "precommit": "pretty-quick --staged && lint-staged",
-    "format": "prettier --write \"+(src|example)/**/*.js\""
+    "format": "prettier --write \"+(src|example)/**/*.js\"",
     "lint": "eslint --ext .js src/**/*"
   },
   "lint-staged": {

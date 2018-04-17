@@ -8,13 +8,9 @@ type Props = {|
   +className?: string,
 |};
 
-function CardHeader({ className, children, ...props }: Props): React.Node {
+function CardHeader({ className, children }: Props): React.Node {
   const classes = cn("card-header", className);
-  return (
-    <div className={classes} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 export default CardHeader;

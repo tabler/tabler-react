@@ -15,18 +15,13 @@ function FormInputGroup({
   children,
   append,
   RootComponent,
-  ...props
 }: Props): React.Node {
   const classes = cn(
     { "input-group": !append, "input-group-append": append },
     className
   );
   const Component = RootComponent || "div";
-  return (
-    <Component className={classes} {...props}>
-      {children}
-    </Component>
-  );
+  return <Component className={classes}>{children}</Component>;
 }
 
 export default FormInputGroup;
