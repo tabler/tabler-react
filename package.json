@@ -17,7 +17,7 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "precommit": "pretty-quick --staged",
-    "format": "prettier --write \"**/*.js\""
+    "format": "prettier --write \"+(src|example)/**/*.js\""
   },
   "dependencies": {
     "classnames": "^2.2.5"
