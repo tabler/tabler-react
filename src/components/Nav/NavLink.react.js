@@ -8,7 +8,7 @@ type Props = {
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
-  +icon?: string
+  +icon?: string,
 };
 
 function NavLink({

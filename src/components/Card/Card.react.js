@@ -11,7 +11,7 @@ type Props = {|
   +className?: string,
   +title?: string,
   +body?: React.Node,
-  +RootComponent?: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
 function Card({

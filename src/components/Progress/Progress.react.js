@@ -7,7 +7,7 @@ import ProgressBar from "./ProgressBar.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +size?: string
+  +size?: string,
 |};
 
 function Progress({
