@@ -7,14 +7,14 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +append?: boolean,
-  +RootComponent?: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
 function FormInputGroup({
   className,
   children,
   append,
-  RootComponent
+  RootComponent,
 }: Props): React.Node {
   const classes = cn(
     { "input-group": !append, "input-group-append": append },

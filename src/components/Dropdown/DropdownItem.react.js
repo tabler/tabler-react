@@ -9,7 +9,7 @@ type Props = {|
   +className?: string,
   +icon?: string,
   +value?: string,
-  +badge?: string
+  +badge?: string,
 |};
 
 function DropdownItem({
@@ -17,11 +17,11 @@ function DropdownItem({
   icon,
   value,
   children,
-  badge
+  badge,
 }: Props): React.Node {
   const classes = cn({ "dropdown-item": true }, className);
   return (
-    <a className={classes} href="#">
+    <a className={classes}>
       {badge && (
         <span className="float-right">
           <Badge>{badge}</Badge>

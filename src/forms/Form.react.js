@@ -7,7 +7,7 @@ type Props = {|
   +children?: React.Node,
   +method: string,
   +title: string,
-  +buttonText: string
+  +buttonText: string,
 |};
 
 function Form(props: Props): React.Node {

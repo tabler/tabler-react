@@ -11,7 +11,7 @@ type Props = {|
   +className?: string,
   +title?: string,
   +body?: React.Node,
-  +RootComponent?: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
 function Card({
@@ -19,7 +19,7 @@ function Card({
   children,
   RootComponent,
   title,
-  body
+  body,
 }: Props): React.Node {
   const classes = cn("card", className);
   const Component = RootComponent || "div";

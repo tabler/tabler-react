@@ -17,7 +17,7 @@ import FormSelect from "./FormSelect.react";
 
 type Props = {|
   +children?: React.Node,
-  +className?: string
+  +className?: string,
 |};
 
 function Form({ className, children }: Props): React.Node {

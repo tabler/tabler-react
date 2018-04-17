@@ -8,7 +8,7 @@ type Props = {|
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
-  +icon?: string
+  +icon?: string,
 |};
 
 function NavLink({
@@ -16,7 +16,7 @@ function NavLink({
   className,
   RootComponent,
   icon,
-  active = false
+  active = false,
 }: Props): React.Node {
   const classes = cn({ "nav-link": true, active: active }, className);
   const Component = RootComponent || "a";

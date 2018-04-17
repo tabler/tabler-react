@@ -2,20 +2,20 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Icon, Button } from "../";
+import { Button } from "../";
 
 type Props = {|
   +children?: React.Node,
   +className?: string,
   +toggle?: boolean,
-  +value: string
+  +value?: string,
 |};
 
 function DropdownTrigger({
   className,
   toggle,
   value,
-  children
+  children,
 }: Props): React.Node {
   const classes = cn({ "dropdown-toggle": toggle }, className);
   return (

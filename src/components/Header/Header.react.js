@@ -13,14 +13,14 @@ type Props = {|
   +RootComponent?: React.ElementType,
   +children?: React.Node,
   +className?: string,
-  +size: 1 | 2 | 3 | 4 | 5
+  +size: 1 | 2 | 3 | 4 | 5,
 |};
 
 function Header({
   RootComponent,
   className,
   children,
-  size = 1
+  size = 1,
 }: Props): React.Node {
   const classes = cn(`h${size}`, className);
   const Component = RootComponent || "div";

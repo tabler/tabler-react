@@ -12,7 +12,7 @@ type Props = {|
   +tick?: boolean,
   +invalid?: boolean,
   +cross?: boolean,
-  +feedback?: string
+  +feedback?: string,
 |};
 
 function FormInput({
@@ -23,7 +23,7 @@ function FormInput({
   tick,
   invalid,
   cross,
-  feedback
+  feedback,
 }: Props): React.Node {
   const classes = cn(
     "form-control",
@@ -31,7 +31,7 @@ function FormInput({
       "is-valid": valid,
       "state-valid": tick,
       "is-invalid": invalid,
-      "state-invalid": cross
+      "state-invalid": cross,
     },
     className
   );

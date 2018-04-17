@@ -5,7 +5,7 @@ import GridCol from "./GridCol.react";
 
 const Grid = {
   Row: GridRow,
-  Col: GridCol
+  Col: GridCol,
 };
 
 export { Grid as default };

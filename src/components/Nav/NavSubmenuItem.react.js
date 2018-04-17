@@ -8,7 +8,7 @@ type Props = {|
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
-  +icon?: string
+  +icon?: string,
 |};
 
 function NavSubmenuItem({
@@ -16,7 +16,7 @@ function NavSubmenuItem({
   RootComponent,
   icon,
   children,
-  active = false
+  active = false,
 }: Props): React.Node {
   const classes = cn({ "nav-item": true, active: active }, className);
   const Component = RootComponent || "a";

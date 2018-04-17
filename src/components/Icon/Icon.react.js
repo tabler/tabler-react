@@ -8,7 +8,7 @@ type Props = {|
   +link?: boolean,
   +prefix?: "fa" | "fe",
   +name: string,
-  +isAriaHidden?: boolean
+  +isAriaHidden?: boolean,
 |};
 
 function Icon({
@@ -16,18 +16,18 @@ function Icon({
   name,
   className,
   link,
-  isAriaHidden
+  isAriaHidden,
 }: Props): React.Node {
   const classes = cn(
     {
       [prefix]: true,
-      [`${prefix}-${name}`]: true
+      [`${prefix}-${name}`]: true,
     },
     className
   );
   const extraProps = isAriaHidden
     ? {
-        "aria-hidden": "true"
+        "aria-hidden": "true",
       }
     : null;
 

@@ -27,7 +27,7 @@ type Props = {|
   +loading?: boolean,
   +toggle?: boolean,
   +dataToggle?: string,
-  +RootComponent?: React.ElementType
+  +RootComponent?: React.ElementType,
 |};
 
 const Button = ({
@@ -52,7 +52,7 @@ const Button = ({
   loading,
   toggle,
   RootComponent,
-  dataToggle
+  dataToggle,
 }: Props): React.Node => {
   const classes = cn(
     {
@@ -79,14 +79,14 @@ const Button = ({
       "btn-pill": pill,
       "btn-icon": !children,
       "btn-loading": loading,
-      "dropdown-toggle": toggle
+      "dropdown-toggle": toggle,
     },
     className
   );
   const Component = RootComponent || "button";
   const extraProps = dataToggle
     ? {
-        "data-toggle": "dropdown"
+        "data-toggle": "dropdown",
       }
     : null;
 
