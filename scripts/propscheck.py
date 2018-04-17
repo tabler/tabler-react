@@ -21,6 +21,8 @@ def propsValidator(filePath, contents):
         return False
 
     props = [x.strip() for x in props.replace('{|', '').replace('|}', '').split(',')]
+    props = [x for x in props if x != '']
+
     for prop in props:
         if not prop.startswith('+'):
             return False
@@ -35,5 +37,8 @@ def failureCallback(filePath):
 
 invalidPropFiles = []
 repoutils.walkFileContents(propsValidator, successCallback, failureCallback)
-print('The following files had invalid declarations of type Props:\n')
-print('\n'.join(invalidPropFiles))
+if len(invalidPropFiles) > 0:
+    print('The following files had invalid declarations of type Props:\n')
+    print('\n'.join(invalidPropFiles))
+else:
+    print('All files checked!')
