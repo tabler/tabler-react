@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { Container, Header } from "../";
+import { Container } from "../";
 
 type Props = {|
   +children?: React.Node

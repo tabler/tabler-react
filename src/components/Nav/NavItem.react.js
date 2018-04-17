@@ -9,12 +9,14 @@ type Props = {|
 |};
 
 function NavItem({ children, value, ...rest }: Props): React.Node {
-  <li className="nav-item">
-    <React.Fragment>
-      <Nav.Link {...rest}>{value}</Nav.Link>
-      {children}
-    </React.Fragment>
-  </li>;
+  return (
+    <li className="nav-item">
+      <React.Fragment>
+        <Nav.Link {...rest}>{value}</Nav.Link>
+        {children}
+      </React.Fragment>
+    </li>
+  );
 }
 
 export default NavItem;
