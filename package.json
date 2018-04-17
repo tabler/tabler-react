@@ -17,7 +17,8 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "precommit": "pretty-quick --staged",
-    "format": "prettier --write \"**/*.js\""
+    "format": "prettier --write \"**/*.js\"",
+    "lint": "eslint --ext .jsx,.js src/"
   },
   "dependencies": {
     "classnames": "^2.2.5"
@@ -28,7 +29,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-eslint": "^7.2.3",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
