@@ -26,7 +26,7 @@ function DropdownTrigger({
   const classes = cn({ "dropdown-toggle": toggle }, className);
   const Component = RootComponent || Button;
   return (
-    <Component className={classes} dataToggle="dropdown" icon={icon}>
+    <Component className={classes} isDropdownToggle icon={icon}>
       {value}
       {children}
     </Component>

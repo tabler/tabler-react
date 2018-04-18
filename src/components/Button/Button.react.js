@@ -25,11 +25,10 @@ type Props = {|
   +icon?: string,
   +social?: string,
   +loading?: boolean,
-  +toggle?: boolean,
-  +dataToggle?: string,
   +RootComponent?: React.ElementType,
   +href?: string,
   +target?: string,
+  +isDropdownToggle?: boolean,
 |};
 
 const Button = ({
@@ -52,9 +51,8 @@ const Button = ({
   icon,
   social = "",
   loading,
-  toggle,
+  isDropdownToggle,
   RootComponent,
-  dataToggle,
   href,
   target,
 }: Props): React.Node => {
@@ -83,44 +81,23 @@ const Button = ({
       "btn-pill": pill,
       "btn-icon": !children,
       "btn-loading": loading,
-      "dropdown-toggle": toggle,
+      "dropdown-toggle": isDropdownToggle,
     },
     className
   );
   const Component = RootComponent || "button";
-  const extraProps = dataToggle
-    ? {
-        "data-toggle": "dropdown",
-      }
-    : null;
-
-  // function propsIfNotEmpty (props) {
-  //   const p = {};
-  //   Object.keys(props).forEach((k) => {
-  //     if(!props[k]) p[k] = props[k];
-  //   }, this);
-  //   return p;
-  // };
-
-  function propsIfNotEmpty2(props: Props) {
-    return Object.keys(props)
-      .filter(k => !!props[k])
-      .reduce((acc, cur) => Object.assign(acc, { [cur]: props[cur] }), {});
-  }
-
-  const notEmptyProps = propsIfNotEmpty2({ href, target });
+  const extraProps = {
+    href,
+    target,
+    "data-toggle": isDropdownToggle && "dropdown",
+  };
 
   return Component === "input" ? (
-    <Component className={classes} disabled={disabled}>
+    <Component className={classes} disabled={disabled} {...extraProps}>
       {children}
     </Component>
   ) : (
-    <Component
-      className={classes}
-      disabled={disabled}
-      {...notEmptyProps}
-      {...extraProps}
-    >
+    <Component className={classes} disabled={disabled} {...extraProps}>
       {social ? (
         <Icon name={social} prefix="fa" className={children ? "mr-2" : ""} />
       ) : icon ? (
