@@ -7,6 +7,8 @@ import ForgotPasswordPage from "./ForgotPasswordPage.react";
 import LoginPage from "./LoginPage.react";
 import RegisterPage from "./RegisterPage.react";
 
+import "bootstrap";
+
 import "./App.css";
 
 type Props = {||};
