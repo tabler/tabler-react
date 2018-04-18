@@ -13,6 +13,12 @@ type Props = {|
   +invalid?: boolean,
   +cross?: boolean,
   +feedback?: string,
+  +type?: string,
+  +placeholder?: string,
+  +name?: string,
+  +value?: string | number,
+  +disabled?: boolean,
+  +readOnly?: boolean,
 |};
 
 function FormInput({
@@ -24,6 +30,12 @@ function FormInput({
   invalid,
   cross,
   feedback,
+  type,
+  placeholder,
+  name,
+  value,
+  disabled,
+  readOnly,
 }: Props): React.Node {
   const classes = cn(
     "form-control",
@@ -37,7 +49,15 @@ function FormInput({
   );
   return !icon ? (
     <React.Fragment>
-      <input className={classes} />
+      <input
+        type={type}
+        className={classes}
+        placeholder={placeholder}
+        name={name}
+        value={value}
+        disabled={disabled}
+        readOnly={readOnly}
+      />
       {feedback &&
         (invalid || cross) && (
           <span className="invalid-feedback">{feedback}</span>
