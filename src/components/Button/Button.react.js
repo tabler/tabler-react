@@ -50,7 +50,7 @@ const Button = ({
       [`btn-outline-${color}`]: outline && !!color,
       [`btn-link`]: link,
       disabled: disabled,
-      [`btn-${color}`]: !!color,
+      [`btn-${color}`]: !!color && !outline,
       [`btn-${social}`]: !!social,
       "btn-square": square,
       "btn-pill": pill,
