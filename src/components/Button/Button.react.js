@@ -5,23 +5,9 @@ import cn from "classnames";
 import { Icon } from "../";
 import ButtonList from "./ButtonList.react";
 
-type ButtonType =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "info"
-  | "warning"
-  | "danger"
-  | "outline-primary"
-  | "outline-secondary"
-  | "outline-success"
-  | "outline-info"
-  | "outline-warning"
-  | "outline-danger";
-
 type Props = {|
   +size?: "sm" | "lg",
-  +type?: ButtonType,
+  +outline?: boolean,
   +link?: boolean,
   +block?: boolean,
   +className?: string,
@@ -40,7 +26,7 @@ type Props = {|
 
 const Button = ({
   size = "",
-  type,
+  outline,
   link,
   block,
   className,
@@ -61,7 +47,7 @@ const Button = ({
       btn: true,
       [`btn-${size}`]: !!size,
       [`btn-block`]: block,
-      [`btn-${type}`]: type && !color,
+      [`btn-outline-${color}`]: outline && !!color,
       [`btn-link`]: link,
       disabled: disabled,
       [`btn-${color}`]: !!color,
