@@ -28,6 +28,8 @@ type Props = {|
   +toggle?: boolean,
   +dataToggle?: string,
   +RootComponent?: React.ElementType,
+  +href?: string,
+  +target?: string,
 |};
 
 const Button = ({
@@ -53,6 +55,8 @@ const Button = ({
   toggle,
   RootComponent,
   dataToggle,
+  href,
+  target,
 }: Props): React.Node => {
   const classes = cn(
     {
@@ -90,12 +94,33 @@ const Button = ({
       }
     : null;
 
+  // function propsIfNotEmpty (props) {
+  //   const p = {};
+  //   Object.keys(props).forEach((k) => {
+  //     if(!props[k]) p[k] = props[k];
+  //   }, this);
+  //   return p;
+  // };
+
+  function propsIfNotEmpty2(props: Props) {
+    return Object.keys(props)
+      .filter(k => !!props[k])
+      .reduce((acc, cur) => Object.assign(acc, { [cur]: props[cur] }), {});
+  }
+
+  const notEmptyProps = propsIfNotEmpty2({ href, target });
+
   return Component === "input" ? (
     <Component className={classes} disabled={disabled}>
       {children}
     </Component>
   ) : (
-    <Component className={classes} disabled={disabled} {...extraProps}>
+    <Component
+      className={classes}
+      disabled={disabled}
+      {...notEmptyProps}
+      {...extraProps}
+    >
       {social ? (
         <Icon name={social} prefix="fa" className={children ? "mr-2" : ""} />
       ) : icon ? (
