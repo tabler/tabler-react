@@ -8,19 +8,20 @@ type Props = {||};
 
 function Error400(props: Props): React.Node {
   return (
-    <Page>
-      <Container className="text-center">
-        <div className="display-1 text-muted mb-5">
-          <Icon className="si si-exclamation" />400
-        </div>
-        <div className="h2 mb-3">Oops.. You just found an error page...</div>
-        <div className="h4 text-muted font-weight-normal mb-7">
+    <Page className="text-center">
+      <Container>
+        <Header.H1 className="display-1 text-muted mb-5">
+          <Icon className="si si-exclamation" />
+          400
+        </Header.H1>
+        <Header.H2>Oops.. You just found an error page..</Header.H2>
+        <Header.H4 className="text-muted font-weight-normal mb-7">
           We are sorry but your request contains bad syntax and cannot be
           fulfilled&hellip;
-        </div>
-        <Button className="btn btn-primary">
-          <i className="fe fe-arrow-left mr-2" />
-          Go Back
+        </Header.H4>
+        <Button className="btn-primary">
+          <Icon className="fe fe-arrow-left mr-2" />
+          Go back
         </Button>
       </Container>
     </Page>
