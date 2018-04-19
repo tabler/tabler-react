@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ForgotPasswordPage,
   LoginPage,
@@ -26,7 +26,7 @@ type Props = {||};
 function App(props: Props): React.Node {
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <React.Fragment>
+      <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/form-elements" component={FormElementsPage} />
         <Route exact path="/forgot-password" component={ForgotPasswordPage} />
@@ -38,8 +38,8 @@ function App(props: Props): React.Node {
         <Route exact path="/404" component={Error404} />
         <Route exact path="/500" component={Error500} />
         <Route exact path="/503" component={Error503} />
-        <Route path="*" exact={true} component={Error404} />
-      </React.Fragment>
+        <Route component={Error404} />
+      </Switch>
     </Router>
   );
 }
