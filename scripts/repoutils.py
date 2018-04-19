@@ -37,7 +37,7 @@ def _readFile(filePath):
 def _walk(path, isContents, booleanOperator, successCallback, failureCallback):
     for root, _, files in os.walk(path):
         path = os.path.relpath(root, os.getcwd())
-        files = [f for f in files if f.endswith('.js')]
+        files = [f for f in files if f.endswith('.react.js')]
         for fileName in files:
             filePath = '{}{}{}'.format(path, os.sep, fileName)
             stringArg = _readFile(filePath) if isContents else fileName
