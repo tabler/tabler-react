@@ -17,11 +17,16 @@ def docChecker(filePath, contents):
         return False
 
     docstring = match.group(1).replace('*', '', 1).strip()
-    print(docstring)
-
-    return True
+    return len(docstring) > 0
 
 def failureCallback(filePath):
-    pass
+    invalidDocFiles.append(filePath)
 
+invalidDocFiles = []
 repoutils.walkFileContents(docChecker, None, failureCallback)
+if len(invalidDocFiles) > 0:
+    print('The following files were missing Docstrings:\n')
+    print('\n'.join(invalidDocFiles))
+    sys.exit(1)
+else:
+    print('All files checked!')
