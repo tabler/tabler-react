@@ -37,5 +37,6 @@ repoutils.walkFileContents(propsValidator, None, failureCallback)
 if len(invalidPropFiles) > 0:
     print('The following files had invalid declarations of type Props:\n')
     print('\n'.join(invalidPropFiles))
+    sys.exit(1)
 else:
     print('All files checked!')

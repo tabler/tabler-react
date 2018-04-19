@@ -42,7 +42,9 @@ def _walk(path, isContents, booleanOperator, successCallback, failureCallback):
             filePath = '{}{}{}'.format(path, os.sep, fileName)
             stringArg = _readFile(filePath) if isContents else fileName
             didSucceed = booleanOperator(filePath, stringArg)
-            if didSucceed and successCallback is not None:
-                successCallback(filePath)
-            elif failureCallback is not None:
-                failureCallback(filePath)
+            if didSucceed:
+                if successCallback is not None:
+                    successCallback(filePath)
+            else:
+                if failureCallback is not None:
+                    failureCallback(filePath)
