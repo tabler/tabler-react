@@ -7,12 +7,12 @@ type Props = {|
   +className?: string,
   +value: string | number,
   +imageURL: string,
-  +col?: {
+  +col?: {|
     +width?: number,
     +sm?: number,
     +md?: number,
     +lg?: number,
-  },
+  |},
 |};
 
 function FormImageCheckItem({
