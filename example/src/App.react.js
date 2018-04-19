@@ -14,7 +14,8 @@ import {
   Error503,
 } from "./pages";
 
-import FormElements from "./FormElements.react";
+import HomePage from "./HomePage.react";
+import FormElementsPage from "./FormElementsPage.react";
 
 import "bootstrap";
 
@@ -26,7 +27,8 @@ function App(props: Props): React.Node {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <React.Fragment>
-        <Route exact path="/form-elements" component={FormElements} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/form-elements" component={FormElementsPage} />
         <Route exact path="/forgot-password" component={ForgotPasswordPage} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPage} />
