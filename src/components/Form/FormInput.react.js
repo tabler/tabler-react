@@ -15,6 +15,9 @@ type Props = {|
   +feedback?: string,
 |};
 
+/* [DOC]
+ * This component acts as an input for a form.
+ */
 function FormInput({
   className,
   icon,
