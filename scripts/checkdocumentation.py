@@ -11,6 +11,14 @@ if not os.getcwd().endswith('/scripts'):
     sys.exit(1)
 
 def docChecker(filePath, contents):
+    regex = re.compile('.*/*\s?\[DOC\]\s*\n(.*?)\*/.*', re.DOTALL)
+    match = regex.match(contents)
+    if match is None:
+        return False
+
+    docstring = match.group(1).replace('*', '', 1).strip()
+    print(docstring)
+
     return True
 
 def failureCallback(filePath):
