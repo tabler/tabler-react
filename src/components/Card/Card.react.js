@@ -35,7 +35,7 @@ function Card({
     return (
       <Component className={classes}>
         {card_header}
-        {card_body}
+        {card_body || children}
       </Component>
     );
   } else {

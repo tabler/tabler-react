@@ -9,6 +9,7 @@ type Props = {|
   +RootComponent?: React.ElementType,
   +active?: boolean,
   +icon?: string,
+  +to?: string, // this is so you can easily use with React router Link/NavLink
 |};
 
 function NavSubmenuItem({
@@ -17,11 +18,12 @@ function NavSubmenuItem({
   icon,
   children,
   active = false,
+  to,
 }: Props): React.Node {
   const classes = cn({ "nav-item": true, active: active }, className);
   const Component = RootComponent || "a";
   return (
-    <Component className={classes}>
+    <Component className={classes} to={to}>
       {icon && (
         <React.Fragment>
           <Icon name={icon} />{" "}

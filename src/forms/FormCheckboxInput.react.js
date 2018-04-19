@@ -2,6 +2,8 @@
 
 import * as React from "react";
 
+import Form from "../components/Form";
+
 type Props = {|
   +label: string,
 |};
@@ -25,17 +27,16 @@ class FormCheckboxInput extends React.PureComponent<Props, State> {
     const { label } = this.props;
     const { value } = this.state;
     return (
-      <div className="form-group">
+      <Form.Group>
         <label className="custom-control custom-checkbox">
-          <input
+          <Form.Input
             type="checkbox"
-            className="custom-control-input"
             onChange={this._handleChange}
-            checked={value}
+            value={value}
           />
           <span className="custom-control-label">{label}</span>
         </label>
-      </div>
+      </Form.Group>
     );
   }
 }
