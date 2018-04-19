@@ -29,14 +29,11 @@ def propsValidator(filePath, contents):
 
     return True
 
-def successCallback(filePath):
-    pass
-
 def failureCallback(filePath):
     invalidPropFiles.append(filePath)
 
 invalidPropFiles = []
-repoutils.walkFileContents(propsValidator, successCallback, failureCallback)
+repoutils.walkFileContents(propsValidator, None, failureCallback)
 if len(invalidPropFiles) > 0:
     print('The following files had invalid declarations of type Props:\n')
     print('\n'.join(invalidPropFiles))
