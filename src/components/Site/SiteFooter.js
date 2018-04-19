@@ -1,10 +1,9 @@
 // @flow
 
 import * as React from "react";
-import { Container } from "../";
 
 type Props = {|
-  +children: React.Node
+  +children: React.Node,
 |};
 
 const SiteFooter = ({ children }: Props) => (
@@ -17,40 +16,40 @@ const SiteFooter = ({ children }: Props) => (
               <div className="col-6 col-md-3">
                 <ul className="list-unstyled mb-0">
                   <li>
-                    <a href="#">First link</a>
+                    <a>First link</a>
                   </li>
                   <li>
-                    <a href="#">Second link</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-6 col-md-3">
-                <ul className="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Third link</a>
-                  </li>
-                  <li>
-                    <a href="#">Fourth link</a>
+                    <a>Second link</a>
                   </li>
                 </ul>
               </div>
               <div className="col-6 col-md-3">
                 <ul className="list-unstyled mb-0">
                   <li>
-                    <a href="#">Fifth link</a>
+                    <a>Third link</a>
                   </li>
                   <li>
-                    <a href="#">Sixth link</a>
+                    <a>Fourth link</a>
                   </li>
                 </ul>
               </div>
               <div className="col-6 col-md-3">
                 <ul className="list-unstyled mb-0">
                   <li>
-                    <a href="#">Other link</a>
+                    <a>Fifth link</a>
                   </li>
                   <li>
-                    <a href="#">Last link</a>
+                    <a>Sixth link</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-6 col-md-3">
+                <ul className="list-unstyled mb-0">
+                  <li>
+                    <a>Other link</a>
+                  </li>
+                  <li>
+                    <a>Last link</a>
                   </li>
                 </ul>
               </div>
@@ -91,7 +90,11 @@ const SiteFooter = ({ children }: Props) => (
           <div className="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
             Copyright © 2018
             <a href=".">Tabler</a>. Theme by
-            <a href="https://codecalm.net" target="_blank">
+            <a
+              href="https://codecalm.net"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               codecalm.net
             </a>{" "}
             All rights reserved.
