@@ -19,9 +19,10 @@ type Props = {|
   +icon?: string,
   +social?: string,
   +loading?: boolean,
-  +toggle?: boolean,
-  +dataToggle?: string,
   +RootComponent?: React.ElementType,
+  +href?: string,
+  +target?: string,
+  +isDropdownToggle?: boolean,
 |};
 
 const Button = ({
@@ -38,9 +39,10 @@ const Button = ({
   icon,
   social = "",
   loading,
-  toggle,
+  isDropdownToggle,
   RootComponent,
-  dataToggle,
+  href,
+  target,
 }: Props): React.Node => {
   const classes = cn(
     {
@@ -56,19 +58,19 @@ const Button = ({
       "btn-pill": pill,
       "btn-icon": !children,
       "btn-loading": loading,
-      "dropdown-toggle": toggle,
+      "dropdown-toggle": isDropdownToggle,
     },
     className
   );
   const Component = RootComponent || "button";
-  const extraProps = dataToggle
-    ? {
-        "data-toggle": "dropdown",
-      }
-    : null;
+  const extraProps = {
+    href,
+    target,
+    "data-toggle": isDropdownToggle && "dropdown",
+  };
 
   return Component === "input" ? (
-    <Component className={classes} disabled={disabled}>
+    <Component className={classes} disabled={disabled} {...extraProps}>
       {children}
     </Component>
   ) : (

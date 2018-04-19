@@ -13,7 +13,14 @@ type FormStyle = {|
   +invalid?: boolean,
   +cross?: boolean,
   +feedback?: string,
+  +type?: string,
+  +placeholder?: string,
+  +name?: string,
+  +value?: string | number,
+  +disabled?: boolean,
+  +readOnly?: boolean,
 |};
+
 
 type Props = {|
   ...FormStyle,
@@ -36,6 +43,8 @@ function FormInput(props: Props): React.Node {
     placeholder,
     value,
     onChange,
+    disabled,
+    readOnly,
   } = props;
   const type = props.type || "text";
 
@@ -59,6 +68,8 @@ function FormInput(props: Props): React.Node {
           placeholder={placeholder}
           checked={value}
           value={value}
+          disabled={disabled}
+          readOnly={readOnly}
           onChange={onChange}
         />
       ) : (
@@ -67,6 +78,8 @@ function FormInput(props: Props): React.Node {
           type={type}
           placeholder={placeholder}
           value={value}
+          disabled={disabled}
+          readOnly={readOnly}
           onChange={onChange}
         />
       )}

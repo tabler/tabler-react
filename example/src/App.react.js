@@ -14,6 +14,10 @@ import {
   Error503,
 } from "./pages";
 
+import FormElements from "./FormElements.react";
+
+import "bootstrap";
+
 import "./App.css";
 
 type Props = {||};
@@ -32,6 +36,7 @@ function App(props: Props): React.Node {
         <Route exact path="/500" component={Error500} />
         <Route exact path="/503" component={Error503} />
         <Route path="*" exact={true} component={Error404} />
+        <Route exact path="/form-elements" component={FormElements} />
       </React.Fragment>
     </Router>
   );
