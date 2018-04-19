@@ -4,7 +4,7 @@ import * as React from "react";
 import { Icon } from "../";
 import cn from "classnames";
 
-type Props = {|
+type FormStyle = {|
   +className?: string,
   +icon?: string,
   +position?: "append" | "prepend",
@@ -15,19 +15,34 @@ type Props = {|
   +feedback?: string,
 |};
 
-function FormInput({
-  className,
-  icon,
-  position = "prepend",
-  valid,
-  tick,
-  invalid,
-  cross,
-  feedback,
-}: Props): React.Node {
+type Props = {|
+  ...FormStyle,
+  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +placeholder?: string,
+  +type?: "checkbox" | "text" | "email" | "password",
+  +value?: string | number | boolean,
+|};
+
+function FormInput(props: Props): React.Node {
+  const {
+    className,
+    icon,
+    position = "prepend",
+    valid,
+    tick,
+    invalid,
+    cross,
+    feedback,
+    placeholder,
+    value,
+    onChange,
+  } = props;
+  const type = props.type || "text";
+
   const classes = cn(
     "form-control",
     {
+      "custom-control-input": type === "checkbox",
       "is-valid": valid,
       "state-valid": tick,
       "is-invalid": invalid,
@@ -37,7 +52,24 @@ function FormInput({
   );
   return !icon ? (
     <React.Fragment>
-      <input className={classes} />
+      {type === "checkbox" ? (
+        <input
+          className={classes}
+          type={type}
+          placeholder={placeholder}
+          checked={value}
+          value={value}
+          onChange={onChange}
+        />
+      ) : (
+        <input
+          className={classes}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+      )}
       {feedback &&
         (invalid || cross) && (
           <span className="invalid-feedback">{feedback}</span>
