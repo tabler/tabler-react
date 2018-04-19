@@ -6,6 +6,7 @@ export { default as Header } from "./Header";
 export { default as Site } from "./Site";
 export { default as Card } from "./Card";
 export { default as Page } from "./Page";
+export { default as Form } from "./Form";
 export { default as Nav } from "./Nav";
 export { default as Alert } from "./Alert";
 export { default as Icon } from "./Icon";

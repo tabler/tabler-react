@@ -2,14 +2,14 @@
 
 import * as React from "react";
 
-import { Form, FormTextInput, StandaloneFormPage } from "tabler-react";
+import { FormCard, FormTextInput, StandaloneFormPage } from "tabler-react";
 
 type Props = {||};
 
 function ForgotPasswordPage(props: Props): React.Node {
   return (
     <StandaloneFormPage>
-      <Form
+      <FormCard
         action=""
         buttonText="Request Password Change"
         method="get"
@@ -20,7 +20,7 @@ function ForgotPasswordPage(props: Props): React.Node {
           to you.
         </p>
         <FormTextInput label="Email Address" placeHolder="Enter email" />
-      </Form>
+      </FormCard>
     </StandaloneFormPage>
   );
 }
