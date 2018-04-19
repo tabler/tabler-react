@@ -7,8 +7,8 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +RootComponent?: React.ElementType,
-  +color: string,
-  +size: string,
+  +color?: string,
+  +size?: string,
   +wrap?: boolean,
 |};
 
