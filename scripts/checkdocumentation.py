@@ -23,7 +23,7 @@ def failureCallback(filePath):
     invalidDocFiles.append(filePath)
 
 invalidDocFiles = []
-repoutils.walkFileContents(docChecker, None, failureCallback)
+repoutils.walkLibFileContents(docChecker, None, failureCallback)
 if len(invalidDocFiles) > 0:
     print('The following files were missing Docstrings:\n')
     print('\n'.join(invalidDocFiles))
