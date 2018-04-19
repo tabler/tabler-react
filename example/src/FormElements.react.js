@@ -118,7 +118,7 @@ class FormElements extends React.PureComponent<Props, void> {
                 <Form.InputGroup>
                   <Form.Input placeholder="Search for..." />
                   <Form.InputGroup append>
-                    <Button primary href="http://www.google.com">
+                    <Button color="primary" href="http://www.google.com">
                       Go!
                     </Button>
                   </Form.InputGroup>
@@ -129,8 +129,8 @@ class FormElements extends React.PureComponent<Props, void> {
                 <Form.InputGroup>
                   <Form.Input />
                   <Form.InputGroup append>
-                    <Button primary>Actions</Button>
-                    <Button primary isDropdownToggle />
+                    <Button color="primary">Actions</Button>
+                    <Button color="primary" isDropdownToggle />
                     <Dropdown.Menu position="right">
                       <Dropdown.Item>News</Dropdown.Item>
                       <Dropdown.Item>Messages</Dropdown.Item>
@@ -163,7 +163,7 @@ class FormElements extends React.PureComponent<Props, void> {
                     <Form.Input placeholder="Search for..." />
                   </Grid.Col>
                   <Grid.Col auto>
-                    <Button secondary icon="search" />
+                    <Button color="secondary" icon="search" />
                   </Grid.Col>
                 </Grid.Row>
               </Form.Group>

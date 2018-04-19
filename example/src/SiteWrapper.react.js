@@ -34,7 +34,7 @@ class SiteWrapper extends React.Component<Props, void> {
                     outline
                     size="sm"
                     RootComponent="a"
-                    primary
+                    color="primary"
                   >
                     Source code
                   </Button>
