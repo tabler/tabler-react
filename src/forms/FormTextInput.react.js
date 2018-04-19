@@ -2,14 +2,16 @@
 
 import * as React from "react";
 
+import Form from "../components/Form";
+
 type Props = {|
-  +type?: string,
+  +type?: "checkbox" | "text" | "email" | "password",
   +label: string,
   +placeHolder: string,
 |};
 
 type State = {|
-  value: string,
+  value: string | number,
 |};
 
 class FormTextInput extends React.PureComponent<Props, State> {
@@ -26,18 +28,28 @@ class FormTextInput extends React.PureComponent<Props, State> {
     const { label, placeHolder } = this.props;
     const { value } = this.state;
     return (
-      <div className="form-group">
-        <label className="form-label">{label}</label>
-        <input
-          className="form-control"
+      <Form.Group label={label}>
+        <Form.Input
           onChange={this._handleChange}
           placeholder={placeHolder}
           type={type}
           value={value}
         />
-      </div>
+      </Form.Group>
     );
   }
 }
+
+/*
+
+<input
+  className="form-control"
+  onChange={this._handleChange}
+  placeholder={placeHolder}
+  type={type}
+  value={value}
+/>
+
+*/
 
 export default FormTextInput;
