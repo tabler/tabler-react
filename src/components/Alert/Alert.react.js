@@ -20,7 +20,7 @@ type Props = {|
   +icon?: string,
   +hasExtraSpace?: boolean,
   +isDismissible?: boolean,
-  +avatar?: string
+  +avatar?: string,
 |};
 
 function Alert({
@@ -30,7 +30,7 @@ function Alert({
   icon,
   hasExtraSpace,
   isDismissible,
-  avatar
+  avatar,
 }: Props): React.Node {
   const alertClassName = "alert-" + type;
   const classes = cn(
@@ -40,7 +40,7 @@ function Alert({
       "alert-icon": !!icon,
       "mt-5 mb-6": hasExtraSpace,
       "alert-dismissible": isDismissible,
-      "alert-avatar": !!avatar
+      "alert-avatar": !!avatar,
     },
     className
   );

@@ -2,14 +2,14 @@
 
 import * as React from "react";
 
-import { Form, FormTextInput, StandaloneFormPage } from "tabler-react";
+import { FormCard, FormTextInput, StandaloneFormPage } from "tabler-react";
 
 type Props = {||};
 
 function LoginPage(props: Props): React.Node {
   return (
     <StandaloneFormPage>
-      <Form
+      <FormCard
         action=""
         buttonText="Login"
         method="get"
@@ -21,7 +21,7 @@ function LoginPage(props: Props): React.Node {
           label="Password"
           placeHolder="Password"
         />
-      </Form>
+      </FormCard>
     </StandaloneFormPage>
   );
 }

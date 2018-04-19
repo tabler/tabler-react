@@ -14,6 +14,7 @@ import FormColorCheckItem from "./FormColorCheckItem.react";
 import FormInputGroup from "./FormInputGroup.react";
 import FormHelp from "./FormHelp.react";
 import FormSelect from "./FormSelect.react";
+import FormFooter from "./FormFooter.react";
 
 type Props = {|
   +children?: React.Node,
@@ -37,5 +38,6 @@ Form.ColorCheckItem = FormColorCheckItem;
 Form.InputGroup = FormInputGroup;
 Form.Help = FormHelp;
 Form.Select = FormSelect;
+Form.Footer = FormFooter;
 
 export default Form;
