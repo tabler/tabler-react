@@ -4,7 +4,7 @@ import * as React from "react";
 import { Icon } from "../";
 import cn from "classnames";
 
-type Props = {|
+type FormStyle = {|
   +className?: string,
   +icon?: string,
   +position?: "append" | "prepend",
@@ -21,25 +21,37 @@ type Props = {|
   +readOnly?: boolean,
 |};
 
-function FormInput({
-  className,
-  icon,
-  position = "prepend",
-  valid,
-  tick,
-  invalid,
-  cross,
-  feedback,
-  type,
-  placeholder,
-  name,
-  value,
-  disabled,
-  readOnly,
-}: Props): React.Node {
+
+type Props = {|
+  ...FormStyle,
+  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +placeholder?: string,
+  +type?: "checkbox" | "text" | "email" | "password",
+  +value?: string | number | boolean,
+|};
+
+function FormInput(props: Props): React.Node {
+  const {
+    className,
+    icon,
+    position = "prepend",
+    valid,
+    tick,
+    invalid,
+    cross,
+    feedback,
+    placeholder,
+    value,
+    onChange,
+    disabled,
+    readOnly,
+  } = props;
+  const type = props.type || "text";
+
   const classes = cn(
     "form-control",
     {
+      "custom-control-input": type === "checkbox",
       "is-valid": valid,
       "state-valid": tick,
       "is-invalid": invalid,
@@ -49,15 +61,28 @@ function FormInput({
   );
   return !icon ? (
     <React.Fragment>
-      <input
-        type={type}
-        className={classes}
-        placeholder={placeholder}
-        name={name}
-        value={value}
-        disabled={disabled}
-        readOnly={readOnly}
-      />
+      {type === "checkbox" ? (
+        <input
+          className={classes}
+          type={type}
+          placeholder={placeholder}
+          checked={value}
+          value={value}
+          disabled={disabled}
+          readOnly={readOnly}
+          onChange={onChange}
+        />
+      ) : (
+        <input
+          className={classes}
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          disabled={disabled}
+          readOnly={readOnly}
+          onChange={onChange}
+        />
+      )}
       {feedback &&
         (invalid || cross) && (
           <span className="invalid-feedback">{feedback}</span>
