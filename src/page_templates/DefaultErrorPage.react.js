@@ -15,6 +15,14 @@ type Props = {|
 |};
 
 function DefaultErrorPage(props: Props): React.Node {
+  const _onBackClick = (
+    event: SyntheticMouseEvent<HTMLLinkElement>
+  ): boolean => {
+    window.history.back();
+    event.preventDefault();
+    return true;
+  };
+
   const { title, subtitle, details } = props;
   return (
     <Page className="text-center">
@@ -26,7 +34,7 @@ function DefaultErrorPage(props: Props): React.Node {
             {details}
           </Header.H4>
         )}
-        <Button className="btn-primary">
+        <Button onClick={_onBackClick} className="btn-primary">
           <Icon className="mr-2" name="arrow-left" />
           Go back
         </Button>
