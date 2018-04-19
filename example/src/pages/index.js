@@ -8,7 +8,7 @@ import Error404 from "./404.react";
 import Error500 from "./500.react";
 import Error503 from "./503.react";
 
-export default {
+export {
   ForgotPasswordPage,
   LoginPage,
   RegisterPage,

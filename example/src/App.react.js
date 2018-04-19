@@ -2,11 +2,7 @@
 
 import * as React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Pages from "./pages";
-
-import "./App.css";
-
-const {
+import {
   ForgotPasswordPage,
   LoginPage,
   RegisterPage,
@@ -16,7 +12,9 @@ const {
   Error404,
   Error500,
   Error503,
-} = Pages;
+} from "./pages";
+
+import "./App.css";
 
 type Props = {||};
 
