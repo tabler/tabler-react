@@ -16,7 +16,8 @@
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "precommit": "pretty-quick --staged && lint-staged",
+    "precommit":
+      "pretty-quick --staged && lint-staged && cd scripts && python propscheck.py",
     "format": "prettier --write \"+(src|example)/**/*.js\"",
     "lint": "eslint --ext .js src/**/*"
   },
