@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import {
-  Form,
+  FormCard,
   FormTextInput,
   FormCheckboxInput,
   StandaloneFormPage,
@@ -14,7 +14,7 @@ type Props = {||};
 function RegisterPage(props: Props): React.Node {
   return (
     <StandaloneFormPage>
-      <Form
+      <FormCard
         action=""
         buttonText="Create Account"
         method="get"
@@ -28,7 +28,7 @@ function RegisterPage(props: Props): React.Node {
           placeHolder="Password"
         />
         <FormCheckboxInput label="Agree to the terms and policy" />
-      </Form>
+      </FormCard>
     </StandaloneFormPage>
   );
 }
