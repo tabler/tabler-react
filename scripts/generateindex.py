@@ -2,12 +2,7 @@
 
 import os
 import sys
-
 import repoutils
-
-if not os.getcwd().endswith('/scripts'):
-    print('[Error] Please run this script from the scripts dir!')
-    sys.exit(1)
 
 def fileNameOperator(filePath, fileName):
     if not fileName.endswith('.react.js'):
@@ -19,6 +14,7 @@ def fileNameOperator(filePath, fileName):
     imports.append(statement)
     return True
 
+repoutils.dirCheck()
 imports = []
 repoutils.walkLibFileNames(fileNameOperator, None, None)
 print('// @flow\n\n{}'.format('\n'.join(imports)))

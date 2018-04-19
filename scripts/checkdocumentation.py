@@ -1,14 +1,7 @@
 #!/usr/bin/env python
 
-import os
 import re
-import sys
-
 import repoutils
-
-if not os.getcwd().endswith('/scripts'):
-    print('[Error] Please run this script from the scripts dir!')
-    sys.exit(1)
 
 def docChecker(filePath, contents):
     regex = re.compile('.*/*\s?\[DOC\]\s*\n(.*?)\*/.*', re.DOTALL)
@@ -22,11 +15,11 @@ def docChecker(filePath, contents):
 def failureCallback(filePath):
     invalidDocFiles.append(filePath)
 
+repoutils.dirCheck()
 invalidDocFiles = []
 repoutils.walkLibFileContents(docChecker, None, failureCallback)
 if len(invalidDocFiles) > 0:
-    print('The following files were missing Docstrings:\n')
-    print('\n'.join(invalidDocFiles))
-    sys.exit(1)
+    errorMsg = 'The following files were missing Docstrings:\n' + '\n'.join(invalidDocFiles)
+    repoutils.exitFatal(errorMsg)
 else:
-    print('All files checked!')
+    repoutils.exitOk('All files checked!')

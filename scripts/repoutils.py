@@ -1,5 +1,6 @@
 import os
 import os.path
+import sys
 
 libDir = '../src/'
 exampleDir = '../example/src/'
@@ -28,7 +29,22 @@ def walkLibFileContents(booleanOperator, successCallback, failureCallback):
 def walkExampleFileContents(booleanOperator, successCallback, failureCallback):
     _walk(exampleDir, True, booleanOperator, successCallback, failureCallback)
 
-# Helper Functions
+# Public Helper Functions
+
+def dirCheck():
+    if not os.getcwd().endswith('/scripts'):
+        print('[Error] Please run this script from the scripts dir!')
+        sys.exit(1)
+
+def exitOk(msg):
+    print(msg)
+    sys.exit(0)
+
+def exitFatal(msg):
+    print(msg)
+    sys.exit(1)
+
+# Private Helper Functions
 
 def _readFile(filePath):
     with open(filePath, 'r') as file:
