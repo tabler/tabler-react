@@ -49,7 +49,7 @@ function Alert({
       {isDismissible && (
         <button type="button" className="close" data-dismiss="alert" />
       )}
-      {avatar && <Avatar image={avatar} />}
+      {avatar && <Avatar imageURL={avatar} />}
       {icon && <Icon name={icon} className="mr-2" isAriaHidden={true} />}
       {children}
     </div>

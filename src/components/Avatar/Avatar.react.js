@@ -8,7 +8,7 @@ import AvatarList from "./AvatarList.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +image?: string,
+  +imageURL?: string,
   +style?: Object,
   +size?: "sm" | "md" | "lg" | "xl" | "xxl",
   +status?: "grey" | "red" | "yellow" | "green",
@@ -20,7 +20,7 @@ type Props = {|
 function Avatar({
   className,
   children,
-  image,
+  imageURL,
   style,
   size = "",
   status,
@@ -41,10 +41,10 @@ function Avatar({
     <span
       className={classes}
       style={
-        image
+        imageURL
           ? Object.assign(
               {
-                backgroundImage: `url(${image})`,
+                backgroundImage: `url(${imageURL})`,
               },
               style
             )
