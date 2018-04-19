@@ -42,6 +42,7 @@ function FormInput(props: Props): React.Node {
   const classes = cn(
     "form-control",
     {
+      "custom-control-input": type === "checkbox",
       "is-valid": valid,
       "state-valid": tick,
       "is-invalid": invalid,
@@ -57,6 +58,7 @@ function FormInput(props: Props): React.Node {
           type={type}
           placeholder={placeholder}
           checked={value}
+          value={value}
           onChange={onChange}
         />
       ) : (

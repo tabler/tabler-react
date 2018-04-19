@@ -31,7 +31,6 @@ class FormCheckboxInput extends React.PureComponent<Props, State> {
         <label className="custom-control custom-checkbox">
           <Form.Input
             type="checkbox"
-            className="custom-control-input"
             onChange={this._handleChange}
             value={value}
           />
