@@ -15,7 +15,7 @@ import {
   Progress,
 } from "tabler-react";
 
-import SiteWrapper from "../SiteWrapper";
+import SiteWrapper from "./SiteWrapper.react";
 
 class Home extends React.Component<void, void> {
   render() {
