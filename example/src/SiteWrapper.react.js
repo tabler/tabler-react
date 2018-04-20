@@ -29,7 +29,7 @@ class SiteWrapper extends React.Component<Props, void> {
               <div className="ml-auto d-flex order-lg-2">
                 <Nav.Item RootComponent="div" className="d-none d-md-flex">
                   <Button
-                    href="https://github.com/jonthomp/react-tabler-components"
+                    href="https://github.com/tabler/tabler-react"
                     target="_blank"
                     outline
                     size="sm"
