@@ -9,7 +9,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +included?: boolean,
-  // FIXME: I'm not sure this prop is suitable for this case, It might be better.
+  // FIXME: I'm not sure this prop is suitable for this case, It might be better .
   +optional?: boolean,
 |};
 
