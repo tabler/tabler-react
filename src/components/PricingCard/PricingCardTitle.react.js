@@ -1,4 +1,0 @@
-// @flow
-/*
-Pricing Card component
-*/
