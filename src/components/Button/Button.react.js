@@ -23,6 +23,7 @@ type Props = {|
   +href?: string,
   +target?: string,
   +isDropdownToggle?: boolean,
+  +onClick?: (SyntheticMouseEvent<HTMLLinkElement>) => boolean,
 |};
 
 const Button = ({
@@ -43,7 +44,10 @@ const Button = ({
   RootComponent,
   href,
   target,
+  onClick,
 }: Props): React.Node => {
+  const onClickHandler =
+    onClick || ((event: SyntheticMouseEvent<HTMLLinkElement>) => true);
   const classes = cn(
     {
       btn: true,
@@ -66,6 +70,7 @@ const Button = ({
   const extraProps = {
     href,
     target,
+    onClick: onClickHandler,
     "data-toggle": isDropdownToggle && "dropdown",
   };
 
