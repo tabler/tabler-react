@@ -4,7 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 
 import Icon from "../Icon";
-
+// TODO: Add RootComponent prop
 type Props = {|
   +children?: React.Node,
   +className?: string,
