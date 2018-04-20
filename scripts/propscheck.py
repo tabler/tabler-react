@@ -6,9 +6,15 @@ import sys
 
 import repoutils
 
-if not os.getcwd().endswith('/scripts'):
-    print('[Error] Please run this script from the scripts dir!')
-    sys.exit(1)
+if not sys.platform.startswith('win32'):
+    if not os.getcwd().endswith('/scripts'):
+        print('[Error] Please run this script from the scripts dir!')
+        sys.exit(1)
+else:
+    if not os.getcwd().endswith('\scripts'):
+        print('[Error] Please run this script from the scripts dir!')
+        sys.exit(1)
+
 
 def propsValidator(filePath, contents):
     regex = re.compile('.*type Props\s?=\s?({.*?});.*', re.DOTALL)
@@ -20,7 +26,8 @@ def propsValidator(filePath, contents):
     if not (props.startswith('{|') and props.endswith('|}')):
         return False
 
-    props = [x.strip() for x in props.replace('{|', '').replace('|}', '').split(',')]
+    props = [x.strip() for x in props.replace(
+        '{|', '').replace('|}', '').split(',')]
     props = [x for x in props if x != '']
 
     for prop in props:
@@ -29,11 +36,14 @@ def propsValidator(filePath, contents):
 
     return True
 
+
 def successCallback(filePath):
     pass
 
+
 def failureCallback(filePath):
     invalidPropFiles.append(filePath)
+
 
 invalidPropFiles = []
 repoutils.walkFileContents(propsValidator, successCallback, failureCallback)
