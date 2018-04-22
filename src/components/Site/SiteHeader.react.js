@@ -8,8 +8,10 @@ type Props = {|
 |};
 
 const SiteHeader = ({ children }: Props): React.Node => (
-  <div className="header">
-    <Container>{children}</Container>
+  <div className="header py-4">
+    <Container>
+      <div className="d-flex">{children}</div>
+    </Container>
   </div>
 );
 

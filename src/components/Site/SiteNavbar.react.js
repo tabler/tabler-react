@@ -8,7 +8,7 @@ type Props = {|
 |};
 
 const SiteNav = (props: Props): React.Node => (
-  <div className="header-nav d-none d-lg-flex">
+  <div className="header collapse d-lg-flex p-0" id="headerMenuCollapse">
     <Container>{props.children}</Container>
   </div>
 );
