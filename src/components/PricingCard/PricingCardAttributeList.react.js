@@ -12,11 +12,7 @@ type Props = {|
   +className?: string,
 |};
 
-function PricingCardAttributeList({
-  className,
-  children,
-  transparent,
-}: Props): React.Node {
+function PricingCardAttributeList({ className, children }: Props): React.Node {
   const classes = cn("list-unstyled", "leading-loose");
   return <ul className={classes}>{children}</ul>;
 }
