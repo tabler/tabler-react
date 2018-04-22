@@ -2,34 +2,47 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Button } from "../";
+import { Button, Icon } from "../";
 
 type Props = {|
   +children?: React.Node,
   +className?: string,
   +toggle?: boolean,
   +value?: string,
-  +RootComponent?: React.ElementType,
+  +type?: "link" | "button",
   +icon?: string,
 |};
-// I cant pass in props for RootComponent so if I want to pass an icon down to a Button used as the Component I again have to
-// specify it in these props, provide logic to determine whether or not to add the prop etc
 
 function DropdownTrigger({
   className,
   toggle,
   value,
   children,
-  RootComponent,
+  type = "link",
   icon,
 }: Props): React.Node {
   const classes = cn({ "dropdown-toggle": toggle }, className);
-  const Component = RootComponent || Button;
-  return (
-    <Component className={classes} isDropdownToggle icon={icon}>
+
+  const childrenFragment = (
+    <React.Fragment>
+      {icon && (
+        <React.Fragment>
+          <Icon name={icon} />{" "}
+        </React.Fragment>
+      )}
       {value}
       {children}
-    </Component>
+    </React.Fragment>
+  );
+
+  return type === "link" ? (
+    <a className={classes} data-toggle="dropdown">
+      {childrenFragment}
+    </a>
+  ) : (
+    <Button className={classes} isDropdownToggle>
+      {childrenFragment}
+    </Button>
   );
 }
 
