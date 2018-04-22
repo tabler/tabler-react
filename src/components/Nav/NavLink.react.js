@@ -9,6 +9,8 @@ type Props = {|
   +RootComponent?: React.ElementType,
   +active?: boolean,
   +icon?: string,
+  +to?: string,
+  +hasSubNav?: boolean,
 |};
 
 function NavLink({
@@ -17,18 +19,34 @@ function NavLink({
   RootComponent,
   icon,
   active = false,
+  to,
+  hasSubNav,
 }: Props): React.Node {
   const classes = cn({ "nav-link": true, active: active }, className);
-  const Component = RootComponent || "a";
-  return (
-    <Component className={classes}>
+
+  const childrenForAll = (
+    <React.Fragment>
       {icon && (
         <React.Fragment>
           <Icon name={icon} />{" "}
         </React.Fragment>
       )}
       {children}
-    </Component>
+    </React.Fragment>
+  );
+
+  return RootComponent ? (
+    <RootComponent
+      className={classes}
+      to={to}
+      data-toggle={hasSubNav && "dropdown"}
+    >
+      {childrenForAll}
+    </RootComponent>
+  ) : (
+    <a className={classes} href={to} data-toggle={hasSubNav && "dropdown"}>
+      {childrenForAll}
+    </a>
   );
 }
 
