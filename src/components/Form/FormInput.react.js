@@ -21,7 +21,6 @@ type FormStyle = {|
   +readOnly?: boolean,
 |};
 
-
 type Props = {|
   ...FormStyle,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,

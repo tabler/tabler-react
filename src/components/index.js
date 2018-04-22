@@ -15,3 +15,6 @@ export { default as Badge } from "./Badge";
 export { default as Dropdown } from "./Dropdown";
 export { default as Button } from "./Button";
 export { default as Text } from "./Text";
+export { default as Progress } from "./Progress";
+export { default as Table } from "./Table";
+export { default as List } from "./List";

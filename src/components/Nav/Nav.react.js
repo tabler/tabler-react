@@ -4,6 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 import NavItem from "./NavItem.react";
 import NavLink from "./NavLink.react";
+import NavSubItem from "./NavSubItem.react";
 import NavSubmenu from "./NavSubmenu.react";
 import NavSubmenuItem from "./NavSubmenuItem.react";
 
@@ -19,6 +20,7 @@ function Nav({ className, children, tabbed = true }: Props): React.Node {
 }
 
 Nav.Item = NavItem;
+Nav.SubItem = NavSubItem;
 Nav.Link = NavLink;
 Nav.Submenu = NavSubmenu;
 Nav.SubmenuItem = NavSubmenuItem;
