@@ -10,6 +10,8 @@ type Props = {|
   +icon?: string,
   +value?: string,
   +badge?: string,
+  +to?: string,
+  +RootComponent?: React.ElementType,
 |};
 
 function DropdownItem({
@@ -18,10 +20,12 @@ function DropdownItem({
   value,
   children,
   badge,
+  to,
+  RootComponent,
 }: Props): React.Node {
   const classes = cn({ "dropdown-item": true }, className);
-  return (
-    <a className={classes}>
+  const childrenForAll = (
+    <React.Fragment>
       {badge && (
         <span className="float-right">
           <Badge>{badge}</Badge>
@@ -34,6 +38,15 @@ function DropdownItem({
       )}
       {value}
       {children}
+    </React.Fragment>
+  );
+  return RootComponent ? (
+    <RootComponent className={classes} to={to}>
+      {childrenForAll}
+    </RootComponent>
+  ) : (
+    <a className={classes} href={to}>
+      {childrenForAll}
     </a>
   );
 }
