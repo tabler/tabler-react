@@ -9,8 +9,8 @@ type Props = {|
 |};
 
 const SiteLogo = (props: Props): React.Node => (
-  <a className="navbar-brand" href={props.href}>
-    <img src={props.src} className="navbar-brand-img" alt={props.alt} />
+  <a className="header-brand" href={props.href}>
+    <img src={props.src} className="header-brand-img" alt={props.alt} />
   </a>
 );
 
