@@ -94,7 +94,11 @@ class SiteWrapper extends React.Component<Props, void> {
       <Page>
         <Page.Main>
           <Site.Header>
-            <Site.Logo href={"/"} alt="ALT" src="#" />
+            <Site.Logo
+              href={"/"}
+              alt="Tabler React"
+              src="./demo/brand/tabler.svg"
+            />
             <div className="d-flex order-lg-2 ml-auto">
               <Nav.Item type="div" className="d-none d-md-flex">
                 <Button
