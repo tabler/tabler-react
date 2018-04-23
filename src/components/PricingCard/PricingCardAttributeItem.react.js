@@ -7,28 +7,25 @@ import Icon from "../Icon";
 // TODO: Add RootComponent prop
 type Props = {|
   +children?: React.Node,
-  +className?: string,
-  +included?: boolean,
-  // FIXME: I'm not sure this prop is suitable for this case, It might be better .
-  +optional?: boolean,
+  +available?: boolean,
+  +hasIcon?: boolean,
 |};
 
 function PricingCardAttributeItem({
-  className,
   children,
-  included,
-  optional,
+  available,
+  hasIcon,
 }: Props): React.Node {
-  const iconClasses = included
+  const iconClasses = available
     ? cn("text-success", "mr-2")
     : cn("text-danger", "mr-2");
 
-  return optional ? (
+  return hasIcon ? (
     <li>
       {" "}
       <Icon
         prefix="fe"
-        name={included ? "check" : "x"}
+        name={available ? "check" : "x"}
         className={iconClasses}
         isAriaHidden
       />
