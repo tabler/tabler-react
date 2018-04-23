@@ -23,7 +23,7 @@ type Props = {|
   +href?: string,
   +target?: string,
   +isDropdownToggle?: boolean,
-  +onClick?: (SyntheticMouseEvent<HTMLLinkElement>) => boolean,
+  +onClick?: (SyntheticMouseEvent<HTMLLinkElement>) => mixed,
 |};
 
 const Button = ({
