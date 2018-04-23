@@ -14,6 +14,8 @@ import {
   Text,
 } from "tabler-react";
 
+const SiteFooter = Site.SiteFooter;
+
 type Props = {|
   +children: React.Node,
 |};
@@ -240,6 +242,7 @@ class SiteWrapper extends React.Component<Props, void> {
           </Site.Navbar>
           {this.props.children}
         </Page.Main>
+        <SiteFooter />
       </Page>
     );
   }
