@@ -9,7 +9,7 @@ const Site = {
   Header: SiteHeader,
   Navbar: SiteNavbar,
   Logo: SiteLogo,
-  SiteFooter: SiteFooter,
+  Footer: SiteFooter,
 };
 
 export { Site as default };
