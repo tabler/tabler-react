@@ -18,4 +18,6 @@ function PageContent({ className, children }: Props): React.Node {
   );
 }
 
+PageContent.displayName = "Page.Content";
+
 export default PageContent;

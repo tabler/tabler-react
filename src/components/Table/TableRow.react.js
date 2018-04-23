@@ -17,4 +17,6 @@ function TableRow({ className, children, ...props }: Props): React.Node {
   );
 }
 
+TableRow.displayName = "Table.Row";
+
 export default TableRow;

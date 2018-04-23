@@ -24,4 +24,6 @@ function FormGroup({ className, children, label }: Props): React.Node {
   );
 }
 
+FormGroup.displayName = "Form.Group";
+
 export default FormGroup;

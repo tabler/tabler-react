@@ -18,4 +18,6 @@ function H5({ className, children }: Props): React.Node {
   );
 }
 
+H5.displayName = "Header.H5";
+
 export default H5;

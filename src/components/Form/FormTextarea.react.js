@@ -36,4 +36,6 @@ function FormTextarea({
   );
 }
 
+FormTextarea.displayName = "Form.Textarea";
+
 export default FormTextarea;

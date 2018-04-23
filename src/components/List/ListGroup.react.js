@@ -21,4 +21,6 @@ function ListGroup({ className, children, transparent }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
+ListGroup.displayName = "List.Group";
+
 export default ListGroup;

@@ -26,4 +26,6 @@ function ButtonList({
   );
 }
 
+ButtonList.displayName = "Button.List";
+
 export default ButtonList;

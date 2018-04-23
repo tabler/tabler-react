@@ -28,4 +28,6 @@ function GridRow({
   return <div className={classes}>{children}</div>;
 }
 
+GridRow.displayName = "Grid.Row";
+
 export default GridRow;

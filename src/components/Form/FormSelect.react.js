@@ -13,4 +13,6 @@ function FormSelect({ className, children }: Props): React.Node {
   return <select className={classes}>{children}</select>;
 }
 
+FormSelect.displayName = "Form.Select";
+
 export default FormSelect;

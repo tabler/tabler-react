@@ -14,4 +14,6 @@ const SiteLogo = (props: Props): React.Node => (
   </a>
 );
 
+SiteLogo.displayName = "Site.Logo";
+
 export default SiteLogo;

@@ -27,4 +27,6 @@ function PageContentWithSidebar({
   );
 }
 
+PageContentWithSidebar.displayName = "Page.ContentWithSidebar";
+
 export default PageContentWithSidebar;

@@ -41,4 +41,6 @@ function PageCard({
   );
 }
 
+PageCard.displayName = "Page.Card";
+
 export default PageCard;

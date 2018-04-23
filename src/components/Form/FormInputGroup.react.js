@@ -24,4 +24,6 @@ function FormInputGroup({
   return <Component className={classes}>{children}</Component>;
 }
 
+FormInputGroup.displayName = "Form.InputGroup";
+
 export default FormInputGroup;

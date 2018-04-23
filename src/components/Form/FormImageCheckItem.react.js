@@ -38,4 +38,6 @@ function FormImageCheckItem({
   );
 }
 
+FormImageCheckItem.displayName = "Form.ImageCheckItem";
+
 export default FormImageCheckItem;

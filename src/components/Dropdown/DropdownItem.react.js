@@ -51,4 +51,6 @@ function DropdownItem({
   );
 }
 
+DropdownItem.displayName = "Dropdown.Item";
+
 export default DropdownItem;

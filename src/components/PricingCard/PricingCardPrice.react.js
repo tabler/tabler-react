@@ -13,4 +13,6 @@ function PricingCardPrice({ className, children }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
+PricingCardPrice.displayName = "PricingCard.Price";
+
 export default PricingCardPrice;

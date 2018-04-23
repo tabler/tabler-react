@@ -13,4 +13,6 @@ function FormFooter(props: Props): React.Node {
   return <div className={classes}>{props.children}</div>;
 }
 
+FormFooter.displayName = "Form.Footer";
+
 export default FormFooter;

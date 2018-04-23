@@ -18,4 +18,6 @@ function AlertLink({ children, className, href }: Props): React.Node {
   );
 }
 
+AlertLink.displayName = "Alert.Link";
+
 export default AlertLink;
