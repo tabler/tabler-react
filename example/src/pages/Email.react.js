@@ -105,14 +105,10 @@ function Email() {
                         </Grid.Col>
                       </Grid.Row>
                     </Form.Group>
-                    <Form.Textarea rows={11} />
+                    <Form.Textarea rows={10} />
                     <Button.List className="mt-4" align="right">
-                      <Button className="btn-space" color="secondary">
-                        Cancel
-                      </Button>
-                      <Button className="btn-space" color="primary">
-                        Send message
-                      </Button>
+                      <Button color="secondary">Cancel</Button>
+                      <Button color="primary">Send message</Button>
                     </Button.List>
                   </Form>
                 </Card.Body>
