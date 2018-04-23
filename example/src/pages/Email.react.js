@@ -25,21 +25,21 @@ function Email() {
                 <List.Group transparent={true}>
                   <List.GroupItem
                     className="d-flex align-items-center"
-                    href="/email"
+                    to="/email"
                     icon="inbox"
-                    active={true}
+                    active
                   >
                     Inbox<Badge className="ml-auto">14</Badge>
                   </List.GroupItem>
                   <List.GroupItem
-                    href="/email"
+                    to="/email"
                     className="d-flex align-items-center"
                     icon="send"
                   >
                     Sent Mail
                   </List.GroupItem>
                   <List.GroupItem
-                    href="/email"
+                    to="/email"
                     className="d-flex align-items-center"
                     icon="alert-circle"
                   >
@@ -47,28 +47,28 @@ function Email() {
                     <Badge className="ml-auto badge badge-secondary">3</Badge>
                   </List.GroupItem>
                   <List.GroupItem
-                    href="/email"
+                    to="/email"
                     className="d-flex align-items-center"
                     icon="star"
                   >
                     Starred
                   </List.GroupItem>
                   <List.GroupItem
-                    href="/email"
+                    to="/email"
                     className="d-flex align-items-center"
                     icon="file"
                   >
                     Drafts
                   </List.GroupItem>
                   <List.GroupItem
-                    href="/email"
+                    to="/email"
                     className="d-flex align-items-center"
                     icon="tag"
                   >
                     Tags
                   </List.GroupItem>
                   <List.GroupItem
-                    href="/email"
+                    to="/email"
                     className="d-flex align-items-center"
                     icon="trash-2"
                   >
