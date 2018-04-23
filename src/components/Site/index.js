@@ -3,7 +3,7 @@
 import SiteHeader from "./SiteHeader.react";
 import SiteNavbar from "./SiteNavbar.react";
 import SiteLogo from "./SiteLogo.react";
-import SiteFooter from "./SiteFooter";
+import SiteFooter from "./SiteFooter.react";
 
 const Site = {
   Header: SiteHeader,
