@@ -8,6 +8,7 @@ import Error403 from "./403.react";
 import Error404 from "./404.react";
 import Error500 from "./500.react";
 import Error503 from "./503.react";
+import Email from "./Email.react";
 
 export {
   ForgotPasswordPage,
@@ -20,4 +21,5 @@ export {
   Error500,
   Error503,
   Empty,
+  Email,
 };
