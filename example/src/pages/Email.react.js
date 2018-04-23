@@ -76,7 +76,7 @@ function Email() {
                   </List.GroupItem>
                 </List.Group>
                 <div className="mt-6">
-                  <Button href="/email" block={true} className="btn-secondary">
+                  <Button href="/email" block={true} color="secondary">
                     Compose new Email
                   </Button>
                 </div>
@@ -107,10 +107,10 @@ function Email() {
                     </Form.Group>
                     <Form.Textarea rows={11} />
                     <Button.List className="mt-4" align="right">
-                      <Button className="btn-secondary btn-space">
+                      <Button className="btn-space" color="secondary">
                         Cancel
                       </Button>
-                      <Button className="btn-primary btn-space">
+                      <Button className="btn-space" color="primary">
                         Send message
                       </Button>
                     </Button.List>
