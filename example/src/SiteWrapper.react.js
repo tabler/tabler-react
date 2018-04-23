@@ -240,6 +240,7 @@ class SiteWrapper extends React.Component<Props, void> {
           </Site.Navbar>
           {this.props.children}
         </Page.Main>
+        <Site.Footer />
       </Page>
     );
   }

@@ -79,7 +79,7 @@ const SiteFooter = ({ children }: Props) => (
               </div>
               <div className="col-auto">
                 <a
-                  href="https://github.com/tabler/tabler"
+                  href="https://github.com/tabler/tabler-react"
                   className="btn btn-outline-primary btn-sm"
                 >
                   Source code
@@ -89,12 +89,13 @@ const SiteFooter = ({ children }: Props) => (
           </div>
           <div className="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
             Copyright © 2018
-            <a href=".">Tabler</a>. Theme by
+            <a href="."> Tabler-react</a>. Theme by
             <a
               href="https://codecalm.net"
               target="_blank"
               rel="noopener noreferrer"
             >
+              {" "}
               codecalm.net
             </a>{" "}
             All rights reserved.

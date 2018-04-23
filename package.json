@@ -25,7 +25,8 @@
     "src/**/*.js": "eslint --max-warnings=0"
   },
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "npm": "^5.8.0"
   },
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
