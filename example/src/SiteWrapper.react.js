@@ -12,6 +12,7 @@ import {
   Avatar,
   Grid,
   Text,
+  Icon,
 } from "tabler-react";
 
 type Props = {|
@@ -207,7 +208,7 @@ class SiteWrapper extends React.Component<Props, void> {
                     tabIndex="1"
                   />
                   <div className="input-icon-addon">
-                    <i className="fe fe-search" />
+                    <Icon prefix="fe" name="search" />
                   </div>
                 </form>
               </Grid.Col>
