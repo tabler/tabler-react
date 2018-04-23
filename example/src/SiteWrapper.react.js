@@ -236,7 +236,7 @@ class SiteWrapper extends React.Component<Props, void> {
                   ))}
                 </Nav>
               </Grid.Col>
-            </Grid.Row>r
+            </Grid.Row>
           </Site.Navbar>
           {this.props.children}
         </Page.Main>
