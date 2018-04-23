@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Package Requirement
+
+Make sure you have [Node.js](https://nodejs.org/) 8+ and [npm](https://npmjs.com/) installed.
+
 ## Install
 
 ```bash
