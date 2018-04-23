@@ -216,6 +216,10 @@ function FormElements() {
                 <option>Germany</option>
               </Form.Select>
             </Form.Group>
+
+            <Form.Group label="Ratios">
+              <Form.Ratio step={5} min={0} max={50} defaultValue={15} />
+            </Form.Group>
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
             3
