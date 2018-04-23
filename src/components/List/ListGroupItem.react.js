@@ -3,12 +3,15 @@
 import * as React from "react";
 import cn from "classnames";
 
+import { Icon } from "../../components";
+
 type Props = {|
   +children?: React.Node,
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
   +icon?: string,
+  +to?: string,
 |};
 
 function ListGroupItem({
@@ -17,6 +20,7 @@ function ListGroupItem({
   RootComponent,
   active,
   icon,
+  to,
 }: Props): React.Node {
   const classes = cn(
     "list-group-item",
@@ -26,16 +30,25 @@ function ListGroupItem({
     },
     className
   );
-  const Component = RootComponent || "a";
-  return (
-    <Component className={classes}>
+  // const Component = RootComponent || "a";
+  return RootComponent ? (
+    <RootComponent to={to} className={classes}>
       {icon && (
-        <span className="icon mr-3">
-          <i className={`fe fe-${icon}`} />{" "}
+        <span className="mr-3 icon">
+          <Icon prefix="fe" name={icon} />{" "}
         </span>
       )}
       {children}
-    </Component>
+    </RootComponent>
+  ) : (
+    <a className={classes} href={to}>
+      {icon && (
+        <span className="mr-3 icon">
+          <Icon prefix="fe" name={icon} />{" "}
+        </span>
+      )}
+      {children}
+    </a>
   );
 }
 

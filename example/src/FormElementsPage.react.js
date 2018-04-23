@@ -9,7 +9,7 @@ import SiteWrapper from "./SiteWrapper.react";
 function FormElements() {
   return (
     <SiteWrapper>
-      <Page.Card title="Forms" RootComponent={Form}>
+      <Page.Card title="Form elements" RootComponent={Form}>
         <Grid.Row>
           <Grid.Col md={6} lg={4}>
             <Form.Group label="Static">
@@ -32,7 +32,7 @@ function FormElements() {
               <Form.Input
                 readOnly
                 name="example-readonly-text-input"
-                value="Well, howd you become king, then?"
+                value="Well, how'd you become king, then?"
               />
             </Form.Group>
 
@@ -43,7 +43,7 @@ function FormElements() {
                 name="example-textarea"
                 rows={6}
                 placeholder="Content.."
-                defaultValue=" Oh! Come and see the violence inherent in the system! Help,
+                defaultValue="Oh! Come and see the violence inherent in the system! Help,
                   help, I'm being repressed! We shall say 'Ni' again to you, if
                   you do not appease us. I'm not a witch. I'm not a witch.
                   Camelot!"
@@ -222,7 +222,7 @@ function FormElements() {
             </Form.Group>
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
-            3
+            {" "}
           </Grid.Col>
         </Grid.Row>
       </Page.Card>
