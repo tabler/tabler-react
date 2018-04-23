@@ -1,8 +1,4 @@
 // @flow
-/*
-Pricing Card Attribute List component
-*/
-// IDEA: Adding ArrayOf<String | any> instead of children
 
 import * as React from "react";
 import cn from "classnames";
@@ -13,7 +9,7 @@ type Props = {|
 |};
 
 function PricingCardAttributeList({ className, children }: Props): React.Node {
-  const classes = cn("list-unstyled", "leading-loose");
+  const classes = cn("list-unstyled", "leading-loose", className);
   return <ul className={classes}>{children}</ul>;
 }
 
