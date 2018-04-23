@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from "react";
+import PageTitle from "./PageTitle.react";
 
 type Props = {|
   +children?: React.Node,
@@ -9,7 +10,7 @@ type Props = {|
 function PageHeader({ children }: Props): React.Node {
   return (
     <div className="page-header">
-      <h1 className="page-title">{children}</h1>
+      <PageTitle>{children}</PageTitle>
     </div>
   );
 }
