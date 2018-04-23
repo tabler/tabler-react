@@ -3,8 +3,8 @@
 import * as React from "react";
 import cn from "classnames";
 
-// TODO: Add color for active button from main PricingCard component
-// TODO: Refactoring
+// TODO: Add onClick Event Handler
+// TODO : Add  color prop
 type Props = {|
   +children?: React.Node,
   +className?: string,
@@ -18,19 +18,17 @@ function PricingCardButton({
   RootComponent,
   active,
 }: Props): React.Node {
-  const classes = cn("text-center", "mt-6", className);
+  const classes = cn("text-center", "mt-6");
   const Component = RootComponent || "a";
-  return active ? (
+  const componentClasses = cn(
+    "btn",
+    active ? "btn-green" : "btn-secondary",
+    "btn-block",
+    className
+  );
+  return (
     <div className={classes}>
-      <Component className={cn("btn", "btn-green", "btn-block", className)}>
-        {children}
-      </Component>
-    </div>
-  ) : (
-    <div className={classes}>
-      <Component className={cn("btn", "btn-secondary", "btn-block", className)}>
-        {children}
-      </Component>
+      <Component className={componentClasses}>{children}</Component>
     </div>
   );
 }
