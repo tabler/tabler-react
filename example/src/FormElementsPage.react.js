@@ -4,7 +4,7 @@ import * as React from "react";
 
 import { Page, Grid, Form, Button, Dropdown } from "tabler-react";
 
-import ComponentDemo from "./ComponentDemo.react";
+import ComponentDemo from "./ComponentDemo";
 import SiteWrapper from "./SiteWrapper.react";
 
 function FormElements() {

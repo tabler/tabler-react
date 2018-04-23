@@ -3,6 +3,7 @@
 import * as React from "react";
 import cn from "classnames";
 import { Button } from "tabler-react";
+import "./ComponentDemo.css";
 import SyntaxHighlighter from "react-syntax-highlighter/prism";
 import { prism } from "react-syntax-highlighter/styles/prism";
 import jsxToString from "jsx-to-string";
@@ -30,20 +31,13 @@ class ComponentDemo extends React.PureComponent<Props, State> {
     const { codeOpen } = this.state;
     const classes = cn(`highlight`, className);
     return (
-      <div style={{ position: "relative", marginBottom: 20 }}>
-        <style>
-          {`.positionTopRight{
-            position: absolute;
-            bottom:0;
-            right:0;
-          }`}
-        </style>
+      <div className="ComponentDemo">
         <Button
           onClick={this.handleSourceButtonOnClick}
           size="sm"
           color="primary"
           outline
-          className="positionTopRight"
+          className="viewSourceBtn"
         >
           {codeOpen ? "Close" : "Source"}
         </Button>
