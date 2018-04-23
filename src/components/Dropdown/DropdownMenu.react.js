@@ -27,4 +27,6 @@ function DropdownMenu({
   return <div className={classes}>{children}</div>;
 }
 
+DropdownMenu.displayName = "Dropdown.Menu";
+
 export default DropdownMenu;

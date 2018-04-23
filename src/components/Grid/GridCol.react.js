@@ -45,4 +45,6 @@ function GridCol({
   return <div className={classes}>{children}</div>;
 }
 
+GridCol.displayName = "Grid.Col";
+
 export default GridCol;

@@ -13,4 +13,6 @@ function PricingCardCategory({ className, children }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
+PricingCardCategory.displayName = "PricingCard.Category";
+
 export default PricingCardCategory;

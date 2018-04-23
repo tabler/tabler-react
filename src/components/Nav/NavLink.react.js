@@ -50,4 +50,6 @@ function NavLink({
   );
 }
 
+NavLink.displayName = "Nav.Link";
+
 export default NavLink;

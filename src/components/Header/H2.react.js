@@ -18,4 +18,6 @@ function H2({ className, children }: Props): React.Node {
   );
 }
 
+H2.displayName = "Header.H2";
+
 export default H2;

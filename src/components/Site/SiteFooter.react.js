@@ -106,4 +106,6 @@ const SiteFooter = () => (
   </React.Fragment>
 );
 
+SiteFooter.displayName = "Site.Footer";
+
 export default SiteFooter;

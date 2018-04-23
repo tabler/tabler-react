@@ -15,4 +15,6 @@ function CardTitle({ className, children, RootComponent }: Props): React.Node {
   return <Component className={classes}>{children}</Component>;
 }
 
+CardTitle.displayName = "Card.Title";
+
 export default CardTitle;

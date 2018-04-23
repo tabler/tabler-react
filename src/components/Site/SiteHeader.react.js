@@ -15,4 +15,6 @@ const SiteHeader = ({ children }: Props): React.Node => (
   </div>
 );
 
+SiteHeader.displayName = "Site.Header";
+
 export default SiteHeader;

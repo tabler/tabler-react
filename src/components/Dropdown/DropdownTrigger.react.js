@@ -46,4 +46,6 @@ function DropdownTrigger({
   );
 }
 
+DropdownTrigger.displayName = "Dropdown.Trigger";
+
 export default DropdownTrigger;

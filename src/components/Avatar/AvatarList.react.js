@@ -20,4 +20,6 @@ function AvatarList({ className, children, stacked }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
+AvatarList.displayName = "Avatar.List";
+
 export default AvatarList;

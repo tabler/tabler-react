@@ -23,4 +23,6 @@ function FormColorCheckItem({ className, color }: Props): React.Node {
   );
 }
 
+FormColorCheckItem.displayName = "Form.ColorCheckItem";
+
 export default FormColorCheckItem;

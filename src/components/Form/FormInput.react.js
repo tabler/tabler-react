@@ -104,4 +104,6 @@ function FormInput(props: Props): React.Node {
   );
 }
 
+FormInput.displayName = "Form.Input";
+
 export default FormInput;

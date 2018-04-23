@@ -13,4 +13,6 @@ function PageTitle({ className, children }: Props): React.Node {
   return <h1 className={classes}>{children}</h1>;
 }
 
+PageTitle.displayName = "Page.Title";
+
 export default PageTitle;

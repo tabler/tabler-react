@@ -12,4 +12,7 @@ const SiteNav = (props: Props): React.Node => (
     <Container>{props.children}</Container>
   </div>
 );
+
+SiteNav.displayName = "Site.Nav";
+
 export default SiteNav;

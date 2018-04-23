@@ -15,4 +15,6 @@ function PageHeader({ children }: Props): React.Node {
   );
 }
 
+PageHeader.displayName = "Page.Header";
+
 export default PageHeader;

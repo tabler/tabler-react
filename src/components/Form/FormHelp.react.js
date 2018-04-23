@@ -29,4 +29,6 @@ function FormHelp({
   );
 }
 
+FormHelp.displayName = "Form.Help";
+
 export default FormHelp;

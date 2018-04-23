@@ -13,4 +13,6 @@ function CardHeader({ className, children }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
+CardHeader.displayName = "Card.Header";
+
 export default CardHeader;
