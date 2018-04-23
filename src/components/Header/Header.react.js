@@ -8,7 +8,6 @@ import H2 from "./H2.react";
 import H3 from "./H3.react";
 import H4 from "./H4.react";
 import H5 from "./H5.react";
-import PageTitle from "./PageTitle.react";
 
 type Props = {|
   +RootComponent?: React.ElementType,
@@ -33,6 +32,5 @@ Header.H2 = H2;
 Header.H3 = H3;
 Header.H4 = H4;
 Header.H5 = H5;
-Header.PageTitle = PageTitle;
 
 export default Header;
