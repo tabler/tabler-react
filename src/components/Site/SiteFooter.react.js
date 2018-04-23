@@ -3,11 +3,7 @@
 import * as React from "react";
 import { Container, Grid, List, Button } from "../../components";
 
-type Props = {|
-  +children: React.Node,
-|};
-
-const SiteFooter = ({ children }: Props) => (
+const SiteFooter = () => (
   <React.Fragment>
     <div className="footer">
       <Container>
@@ -91,7 +87,7 @@ const SiteFooter = ({ children }: Props) => (
               </Grid.Col>
             </Grid.Row>
           </Grid.Col>
-          <Grid.Col width={12} lg="auto" className="mt-3 mt-lg-0 text-center">
+          <Grid.Col width={12} lgAuto className="mt-3 mt-lg-0 text-center">
             Copyright © 2018
             <a href="."> Tabler-react</a>. Theme by
             <a
