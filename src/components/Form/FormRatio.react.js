@@ -16,37 +16,43 @@ type Props = {|
 
 type State = {|
   internalValue: number,
-  hasChanged: boolean,
 |};
 
 class FormRatio extends React.PureComponent<Props, State> {
   constructor(props: Props) {
     super(props);
+    if (props.defaultValue && (props.value || props.onChange)) {
+      console.error(
+        `Warning Form.Ratio: You should not use defaultValue with value
+         and onChange if you want to control the input yourself`
+      );
+    }
+
     this.state = {
       internalValue: props.defaultValue || props.value || 0,
-      hasChanged: false,
     };
   }
+
   handleOnChange = (e: SyntheticInputEvent<EventTarget>) => {
-    const { onChange = false } = this.props;
-    const value: number = Number(e.target.value);
-    if (onChange) {
-      onChange(e);
-      this.setState({ hasChanged: true });
+    const { defaultValue, onChange } = this.props;
+    const value = Number(e.target.value);
+    if (typeof defaultValue !== "number") {
+      if (onChange) onChange(e);
     } else {
-      this.setState({ internalValue: value, hasChanged: true });
+      this.setState({ internalValue: value });
     }
   };
-  render() {
+
+  render(): React.Node {
     const {
       className,
       step = 1,
       min = 0,
       max = 0,
+      defaultValue,
       value,
-      onChange,
     } = this.props;
-    const { internalValue, hasChanged } = this.state;
+    const { internalValue } = this.state;
     const classes = cn(className);
     return (
       <Grid.Row className={classes} alignItems="center">
@@ -58,18 +64,14 @@ class FormRatio extends React.PureComponent<Props, State> {
             min={min}
             max={max}
             onChange={this.handleOnChange}
-            value={
-              !hasChanged ? internalValue : onChange ? value : internalValue
-            }
+            value={typeof defaultValue === "number" ? internalValue : value}
           />
         </Grid.Col>
         <Grid.Col auto>
           <input
             type="number"
             className="form-control w-8"
-            value={
-              !hasChanged ? internalValue : onChange ? value : internalValue
-            }
+            value={typeof defaultValue === "number" ? internalValue : value}
             readOnly
           />
         </Grid.Col>
