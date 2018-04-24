@@ -17,6 +17,7 @@ type Props = {|
   +options?: React.Node,
   +collapse?: boolean,
   +close?: boolean,
+  +statusColor?: string,
 |};
 
 function Card({
@@ -28,6 +29,7 @@ function Card({
   options,
   collapse,
   close,
+  statusColor,
 }: Props): React.Node {
   const classes = cn("card", className);
   const Component = RootComponent || "div";
@@ -38,6 +40,10 @@ function Card({
       {close && <Card.OptionsItem type="close" />}
       {options}
     </Card.Options>
+  );
+
+  const card_status = statusColor && (
+    <div className={`card-status bg-${statusColor}`} />
   );
 
   const card_header = title && (
@@ -52,6 +58,7 @@ function Card({
   if (card_header !== null || card_body !== null) {
     return (
       <Component className={classes}>
+        {card_status}
         {card_header}
         {card_body || children}
       </Component>
