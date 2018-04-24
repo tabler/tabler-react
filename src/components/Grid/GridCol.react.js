@@ -13,6 +13,8 @@ type Props = {|
   +mdAuto?: boolean,
   +lg?: number,
   +lgAuto?: boolean,
+  +xl?: number,
+  +xlAuto?: boolean,
   +auto?: boolean,
 |};
 
@@ -23,9 +25,11 @@ function GridCol({
   sm = 0,
   md = 0,
   lg = 0,
+  xl = 0,
   smAuto,
   mdAuto,
   lgAuto,
+  xlAuto,
   auto,
 }: Props): React.Node {
   const classes = cn(
@@ -38,6 +42,8 @@ function GridCol({
       [`col-md-auto`]: mdAuto,
       [`col-lg-${lg}`]: lg,
       [`col-lg-auto`]: lgAuto,
+      [`col-xl-${xl}`]: xl,
+      [`col-xl-auto`]: xlAuto,
       "col-auto": auto,
     },
     className
