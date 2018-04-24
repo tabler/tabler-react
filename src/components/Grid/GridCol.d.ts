@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 declare namespace GridCol {
-    export interface GridColProps extends React.Props<GridCol> {
+    export interface IGridColProps<T> extends React.HTMLProps<T> {
       className?: string;
       width?: number;
       sm?: number;
@@ -12,6 +12,7 @@ declare namespace GridCol {
       lgAuto?: boolean;
       auto?: boolean;
     }
+    export type GridColProps = IGridColProps<HTMLDivElement>;
 }
 declare class GridCol extends React.Component<GridCol.GridColProps> { }
 export = GridCol;

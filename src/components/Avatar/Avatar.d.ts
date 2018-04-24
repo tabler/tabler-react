@@ -1,8 +1,8 @@
 import * as React from 'react';
-
+import { Omit } from '../../index';
 
 declare namespace Avatar {
-    export interface AvatarProps extends React.Props<Avatar> {
+    export interface IAvatarProps<T> extends Omit<React.HTMLProps<T>, 'placeholder' | 'size'> {
       className?: string;
       imageURL?: string;
       style?: Object;
@@ -12,6 +12,7 @@ declare namespace Avatar {
       icon?: string;
       color?: string;
     }
+    export type AvatarProps = IAvatarProps<HTMLDivElement>;
 }
 declare class Avatar extends React.Component<Avatar.AvatarProps> { }
 export = Avatar;

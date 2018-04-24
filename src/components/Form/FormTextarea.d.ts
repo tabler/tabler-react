@@ -1,7 +1,9 @@
 import * as React from 'react';
 
+import { Omit } from '../../index';
+
 declare namespace FormTextArea {
-    export interface FormTextAreaProps extends React.Props<FormTextArea> {
+    export interface IFormTextAreaProps<T> extends Omit<React.HTMLProps<T>, 'value' | 'defaultValue'> {
       className?: string;
       placeholder?: string;
       name?: string;
@@ -10,6 +12,7 @@ declare namespace FormTextArea {
       disabled?: boolean;
       rows?: number;
     }
+    export type FormTextAreaProps = IFormTextAreaProps<HTMLDivElement>;
 }
 declare class FormTextArea extends React.Component<FormTextArea.FormTextAreaProps> { }
 export = FormTextArea;

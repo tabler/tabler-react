@@ -9,7 +9,7 @@ declare type AlertType =
 | "danger";
 
 declare namespace Alert {
-    export interface AlertProps extends React.Props<Alert> {
+    export interface IAlertProps<T> extends React.HTMLProps<T> {
       className?: string;
       type: AlertType;
       icon?: string;
@@ -17,6 +17,7 @@ declare namespace Alert {
       isDismissible?: boolean;
       avatar?: string;
     }
+    export type AlertProps = IAlertProps<HTMLDivElement>;
 }
 declare class Alert extends React.Component<Alert.AlertProps> { }
 export = Alert;

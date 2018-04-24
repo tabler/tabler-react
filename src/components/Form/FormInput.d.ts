@@ -1,9 +1,8 @@
 import * as React from 'react';
-
-
+import { Omit } from '../../index';
 
 declare namespace FormInput {
-    export interface FormInputProps extends React.Props<FormInput> {
+    export interface IFormInputProps<T> extends Omit<React.HTMLProps<T>, 'value' | 'onChange'> {
       className?: string;
       icon?: string;
       position?: "append" | "prepend";
@@ -20,6 +19,7 @@ declare namespace FormInput {
       type?: "checkbox" | "text" | "email" | "password";
       value?: string | number | boolean;
     }
+    export type FormInputProps = IFormInputProps<HTMLDivElement>;
 }
 declare class FormInput extends React.Component<FormInput.FormInputProps> { }
 export = FormInput;

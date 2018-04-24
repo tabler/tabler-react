@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 declare namespace NavLink {
-    export interface NavLinkProps extends React.Props<NavLink> {
+    export interface INavLinkProps<T> extends React.HTMLProps<T> {
       className?: string;
       value?: string;
       RootComponent?: React.ReactElement<any>;
@@ -10,6 +10,7 @@ declare namespace NavLink {
       to?: string;
       hasSubNav?: boolean;
     }
+    export type NavLinkProps = INavLinkProps<HTMLDivElement>;
 }
 declare class NavLink extends React.Component<NavLink.NavLinkProps> { }
 export = NavLink;
