@@ -247,6 +247,11 @@ function FormElements() {
                 </Form.Select>
               </Form.Group>
             </ComponentDemo>
+            <ComponentDemo>
+              <Form.Group label="Ratios">
+                <Form.Ratio step={5} min={0} max={50} defaultValue={15} />
+              </Form.Group>
+            </ComponentDemo>
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
             3

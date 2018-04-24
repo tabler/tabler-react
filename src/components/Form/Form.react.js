@@ -15,6 +15,7 @@ import FormInputGroup from "./FormInputGroup.react";
 import FormHelp from "./FormHelp.react";
 import FormSelect from "./FormSelect.react";
 import FormFooter from "./FormFooter.react";
+import FormRatio from "./FormRatio.react";
 
 type Props = {|
   +children?: React.Node,
@@ -39,5 +40,6 @@ Form.InputGroup = FormInputGroup;
 Form.Help = FormHelp;
 Form.Select = FormSelect;
 Form.Footer = FormFooter;
+Form.Ratio = FormRatio;
 
 export default Form;
