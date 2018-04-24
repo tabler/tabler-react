@@ -18,6 +18,7 @@ import {
 
 import HomePage from "./HomePage.react";
 import FormElementsPage from "./FormElementsPage.react";
+import PricingCardsPage from "./interface/PricingCardsPage.react";
 
 import "bootstrap";
 
@@ -30,6 +31,7 @@ function App(props: Props): React.Node {
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/pricing-cards" component={PricingCardsPage} />
         <Route exact path="/form-elements" component={FormElementsPage} />
         <Route exact path="/forgot-password" component={ForgotPasswordPage} />
         <Route exact path="/login" component={LoginPage} />
