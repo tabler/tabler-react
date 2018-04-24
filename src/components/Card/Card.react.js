@@ -19,6 +19,7 @@ type Props = {|
   +collapse?: boolean,
   +close?: boolean,
   +statusColor?: string,
+  +statusSide?: boolean,
 |};
 
 function Card({
@@ -31,6 +32,7 @@ function Card({
   collapse,
   close,
   statusColor,
+  statusSide,
 }: Props): React.Node {
   const classes = cn("card", className);
   const Component = RootComponent || "div";
@@ -44,7 +46,7 @@ function Card({
   );
 
   const card_status = statusColor && (
-    <div className={`card-status bg-${statusColor}`} />
+    <Card.Status color={statusColor} side={statusSide} />
   );
 
   const card_header = title && (

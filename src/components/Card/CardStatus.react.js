@@ -7,10 +7,18 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +color: string,
+  +side?: boolean,
 |};
 
-function CardStatus({ className, children, color }: Props): React.Node {
-  const classes = cn({ "card-status": true, [`bg-${color}`]: true }, className);
+function CardStatus({ className, children, color, side }: Props): React.Node {
+  const classes = cn(
+    {
+      "card-status": true,
+      [`bg-${color}`]: true,
+      [`card-status-left`]: side,
+    },
+    className
+  );
   return <div className={classes}>{children}</div>;
 }
 
