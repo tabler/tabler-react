@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 declare namespace FormImageCheckItem {
-    export interface FormImageCheckItemProps extends React.Props<FormImageCheckItem> {
+    export interface IFormImageCheckItemProps<T> extends React.HTMLProps<T> {
       className?: string;
       value: string | number,
       imageURL: string,
@@ -12,6 +12,7 @@ declare namespace FormImageCheckItem {
         lg?: number,
       },
     }
+    export type FormImageCheckItemProps = IFormImageCheckItemProps<HTMLDivElement>;
 }
 declare class FormImageCheckItem extends React.Component<FormImageCheckItem.FormImageCheckItemProps> { }
 export = FormImageCheckItem;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 declare namespace NavItem {
-    export interface NavItemProps extends React.Props<NavItem> {
+    export interface INavItemProps<T> extends React.HTMLProps<T> {
       className?: string;
       value?: string;
       LinkComponent?: React.ReactElement<any>;
@@ -11,6 +11,7 @@ declare namespace NavItem {
       type?: "li" | "div";
       hasSubNavItem?: boolean;
     }
+    export type NavItemProps = INavItemProps<HTMLDivElement>;
 }
 declare class NavItem extends React.Component<NavItem.NavItemProps> { }
 export = NavItem;

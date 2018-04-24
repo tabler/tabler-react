@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 declare namespace DropdownItem {
-    export interface DropdownItemProps extends React.Props<DropdownItem> {
+    export interface IDropdownItemProps<T> extends React.HTMLProps<T> {
       className?: string;
       icon?: string;
       value?: string;
@@ -9,6 +9,7 @@ declare namespace DropdownItem {
       to?: string;
       RootComponent?: React.ReactElement<any>;
     }
+    export type DropdownItemProps = IDropdownItemProps<HTMLDivElement>;
 }
 declare class DropdownItem extends React.Component<DropdownItem.DropdownItemProps> { }
 export = DropdownItem;

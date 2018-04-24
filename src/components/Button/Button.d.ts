@@ -1,7 +1,8 @@
 import * as React from 'react';
+import { Omit } from '../../index';
 
 declare namespace Button {
-    export interface ButtonProps extends React.Props<Button> {
+    export interface IButtonProps<T> extends Omit<React.HTMLProps<T>, 'size' | 'onClick'> {
       className?: string;
       size?: "sm" | "lg";
       outline?: boolean;
@@ -21,6 +22,7 @@ declare namespace Button {
       isDropdownToggle?: boolean;
       onClick?: (ev: React.SyntheticEvent<HTMLLinkElement>) => any;
     }
+    export type ButtonProps = IButtonProps<HTMLDivElement>;
 }
 declare class Button extends React.Component<Button.ButtonProps> { }
 export = Button;
