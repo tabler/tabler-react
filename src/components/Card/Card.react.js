@@ -16,8 +16,8 @@ type Props = {|
   +body?: React.Node,
   +RootComponent?: React.ElementType,
   +options?: React.Node,
-  +collapse?: boolean,
-  +close?: boolean,
+  +isCollapsible?: boolean,
+  +isClosable?: boolean,
   +statusColor?: string,
   +statusSide?: boolean,
 |};
@@ -29,18 +29,18 @@ function Card({
   title,
   body,
   options,
-  collapse,
-  close,
+  isCollapsible,
+  isClosable,
   statusColor,
   statusSide,
 }: Props): React.Node {
   const classes = cn("card", className);
   const Component = RootComponent || "div";
 
-  const card_options = (options || collapse || close) && (
+  const card_options = (options || isCollapsible || isClosable) && (
     <Card.Options>
-      {collapse && <Card.OptionsItem type="collapse" />}
-      {close && <Card.OptionsItem type="close" />}
+      {isCollapsible && <Card.OptionsItem type="collapse" />}
+      {isClosable && <Card.OptionsItem type="close" />}
       {options}
     </Card.Options>
   );
