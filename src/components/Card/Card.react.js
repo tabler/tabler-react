@@ -7,6 +7,7 @@ import CardTitle from "./CardTitle.react";
 import CardBody from "./CardBody.react";
 import CardOptions from "./CardOptions.react";
 import CardOptionsItem from "./CardOptionsItem.react";
+import CardStatus from "./CardStatus.react";
 
 type Props = {|
   +children?: React.Node,
@@ -73,5 +74,6 @@ Card.Body = CardBody;
 Card.Title = CardTitle;
 Card.Options = CardOptions;
 Card.OptionsItem = CardOptionsItem;
+Card.Status = CardStatus;
 
 export default Card;
