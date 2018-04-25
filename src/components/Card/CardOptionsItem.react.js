@@ -8,7 +8,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +icon?: string,
-  +type?: "collapse" | "close",
+  +type?: "collapse" | "close" | "fullscreen",
   +onClick?: () => mixed,
 |};
 
@@ -23,6 +23,7 @@ function CardOptionsItem({
     {
       "card-options-collapse": type === "collapse",
       "card-options-remove": type === "close",
+      "card-options-fullscreen": type === "fullscreen",
     },
     className
   );
@@ -32,6 +33,8 @@ function CardOptionsItem({
       case "collapse":
         return "card-collapse";
       case "close":
+        return "card-remove";
+      case "fullscreen":
         return "card-remove";
       default:
         return "";
@@ -47,6 +50,8 @@ function CardOptionsItem({
         return "chevron-up";
       case "close":
         return "x";
+      case "fullscreen":
+        return "maximize";
       default:
         return "";
     }

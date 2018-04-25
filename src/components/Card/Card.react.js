@@ -19,15 +19,17 @@ type Props = {|
   +isCollapsible?: boolean,
   +isCollapsed?: boolean,
   +isClosable?: boolean,
+  +isFullscreenable?: boolean,
   +statusColor?: string,
   +statusSide?: boolean,
 |};
 
-type State = {| isCollapsed: boolean |};
+type State = {| isCollapsed: boolean, isFullscreen: boolean |};
 
 class Card extends React.PureComponent<Props, State> {
   state = {
     isCollapsed: this.props.isCollapsed || false,
+    isFullscreen: false,
   };
 
   static Header = CardHeader;
@@ -43,6 +45,12 @@ class Card extends React.PureComponent<Props, State> {
     }));
   };
 
+  handleFullscreenOnClick = () => {
+    this.setState(s => ({
+      isFullscreen: !s.isFullscreen,
+    }));
+  };
+
   render() {
     const {
       className,
@@ -53,13 +61,18 @@ class Card extends React.PureComponent<Props, State> {
       options,
       isCollapsible,
       isClosable,
+      isFullscreenable,
       statusColor,
       statusSide,
     } = this.props;
-    const { isCollapsed } = this.state;
+    const { isCollapsed, isFullscreen } = this.state;
 
     const classes = cn(
-      { card: true, "card-collapsed": isCollapsed },
+      {
+        card: true,
+        "card-collapsed": isCollapsed,
+        "card-fullscreen": isFullscreen,
+      },
       className
     );
     const Component = RootComponent || "div";
@@ -70,6 +83,12 @@ class Card extends React.PureComponent<Props, State> {
           <Card.OptionsItem
             onClick={this.handleCollapseOnClick}
             type="collapse"
+          />
+        )}
+        {isFullscreenable && (
+          <Card.OptionsItem
+            type="fullscreen"
+            onClick={this.handleFullscreenOnClick}
           />
         )}
         {isClosable && <Card.OptionsItem type="close" />}
