@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 declare namespace FormInputGroup {
-    export interface IFormInputGroupProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormInputGroupProps<T> extends React.HTMLProps<T> {
       append?: boolean;
-      RootComponent?: React.ReactElement<any>;
+      RootComponent?: React.ReactType;
     }
-    export type FormInputGroupProps = IFormInputGroupProps<HTMLDivElement>;
+    type Props = IFormInputGroupProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormInputGroup extends React.Component<FormInputGroup.FormInputGroupProps> { }
+declare const FormInputGroup: FormInputGroup.Component;
 export = FormInputGroup;

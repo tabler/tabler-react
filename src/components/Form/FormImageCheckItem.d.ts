@@ -1,8 +1,7 @@
 import * as React from 'react';
 
 declare namespace FormImageCheckItem {
-    export interface IFormImageCheckItemProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormImageCheckItemProps<T> extends React.HTMLProps<T> {
       value: string | number,
       imageURL: string,
       col?: {
@@ -12,7 +11,8 @@ declare namespace FormImageCheckItem {
         lg?: number,
       },
     }
-    export type FormImageCheckItemProps = IFormImageCheckItemProps<HTMLDivElement>;
+    type Props = IFormImageCheckItemProps<HTMLElement>; // TODO: not sure if `Grid.Row`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormImageCheckItem extends React.Component<FormImageCheckItem.FormImageCheckItemProps> { }
+declare const FormImageCheckItem: FormImageCheckItem.Component;
 export = FormImageCheckItem;

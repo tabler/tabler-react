@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 declare namespace PageContentWithSidebar {
-    export interface IPageContentWithSidebarProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPageContentWithSidebarProps<T> extends React.HTMLProps<T> {
       header?: React.ReactNode;
       sidebar?: React.ReactNode;
     }
-    export type PageContentWithSidebarProps = IPageContentWithSidebarProps<HTMLDivElement>;
+    type Props = IPageContentWithSidebarProps<HTMLElement>; // TODO: not sure if `Page.Content`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PageContentWithSidebar extends React.Component<PageContentWithSidebar.PageContentWithSidebarProps> { }
+declare const PageContentWithSidebar: PageContentWithSidebar.Component;
 export = PageContentWithSidebar;

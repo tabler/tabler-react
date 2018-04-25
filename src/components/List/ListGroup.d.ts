@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 declare namespace ListGroup {
-    export interface IListGroupProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IListGroupProps<T> extends React.HTMLProps<T> {
       transparent?: boolean;
     }
-    export type ListGroupProps = IListGroupProps<HTMLDivElement>;
+    type Props = IListGroupProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class ListGroup extends React.Component<ListGroup.ListGroupProps> { }
+declare const ListGroup: ListGroup.Component;
 export = ListGroup;

@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 declare namespace FormLabel {
-    export interface IFormLabelProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormLabelProps<T> extends React.HTMLProps<T> {
       aside?: string;
     }
-    export type FormLabelProps = IFormLabelProps<HTMLDivElement>;
+    type Props = IFormLabelProps<HTMLLabelElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormLabel extends React.Component<FormLabel.FormLabelProps> { }
+declare const FormLabel: FormLabel.Component;
 export = FormLabel;

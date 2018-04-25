@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace PricingCardAttributeList {
-    export interface IPricingCardAttributeListProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPricingCardAttributeListProps<T> extends React.HTMLProps<T> {
     }
-    export type PricingCardAttributeListProps = IPricingCardAttributeListProps<HTMLDivElement>;
+    type Props = IPricingCardAttributeListProps<HTMLUListElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PricingCardAttributeList extends React.Component<PricingCardAttributeList.PricingCardAttributeListProps> { }
+declare const PricingCardAttributeList: PricingCardAttributeList.Component;
 export = PricingCardAttributeList;

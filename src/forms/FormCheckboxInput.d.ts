@@ -1,15 +1,15 @@
 import * as React from 'react';
 
 declare namespace FormCheckboxInput {
-    export interface IFormCheckboxInputProps<T> extends React.HTMLProps<FormCheckboxInput> {
+    interface IFormCheckboxInputProps<T> extends React.HTMLProps<T> {
       label: string;
     }
-    export type FormCheckboxInputProps = IFormCheckboxInputProps<HTMLDivElement>;
-    export interface IFormCheckboxInputState {
+    type Props = IFormCheckboxInputProps<HTMLElement>; // TODO: not sure if `Form.Group`
+    interface IFormCheckboxInputState {
       value: boolean;
     }
-    export type FormCheckboxInputState = IFormCheckboxInputState;
-
+    type State = IFormCheckboxInputState;
+    type Component = React.Component<Props, State>;
 }
-declare class FormCheckboxInput extends React.Component<FormCheckboxInput.FormCheckboxInputProps, FormCheckboxInput.FormCheckboxInputState> { }
+declare const FormCheckboxInput: FormCheckboxInput.Component; // TODO: Should this be a class?
 export = FormCheckboxInput;

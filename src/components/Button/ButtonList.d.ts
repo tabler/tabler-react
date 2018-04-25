@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 declare namespace ButtonList {
-    export interface IButtonListProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IButtonListProps<T> extends React.HTMLProps<T> {
       align?: "" | "left" | "center" | "right";
     }
-    export type ButtonListProps = IButtonListProps<HTMLDivElement>;
+    type Props = IButtonListProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class ButtonList extends React.Component<ButtonList.ButtonListProps> { }
+declare const ButtonList: ButtonList.Component;
 export = ButtonList;

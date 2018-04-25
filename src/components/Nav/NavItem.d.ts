@@ -1,17 +1,17 @@
 import * as React from 'react';
 
 declare namespace NavItem {
-    export interface INavItemProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface INavItemProps<T> extends React.HTMLProps<T> {
       value?: string;
-      LinkComponent?: React.ReactElement<any>;
+      LinkComponent?: React.ReactType;
       href?: string;
       to?: string; // this is so you can easily use with React router Link/NavItemLink
       icon?: string; // so you can pass an icon down to the RootComponent
       type?: "li" | "div";
       hasSubNavItem?: boolean;
     }
-    export type NavItemProps = INavItemProps<HTMLDivElement>;
+    type Props = INavItemProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class NavItem extends React.Component<NavItem.NavItemProps> { }
+declare const NavItem: NavItem.Component;
 export = NavItem;

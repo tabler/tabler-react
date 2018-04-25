@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace CodeExample {
-    export interface ICodeExampleProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface ICodeExampleProps<T> extends React.HTMLProps<T> {
     }
-    export type CodeExampleProps = ICodeExampleProps<HTMLDivElement>;
+    type Props = ICodeExampleProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class CodeExample extends React.Component<CodeExample.CodeExampleProps> { }
+declare const CodeExample: CodeExample.Component;
 export = CodeExample;

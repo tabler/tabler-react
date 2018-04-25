@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Omit } from '../../index';
+import ButtonList from './ButtonList';
 
 declare namespace Button {
-    export interface IButtonProps<T> extends Omit<React.HTMLProps<T>, 'size' | 'onClick'> {
-      className?: string;
+    interface IButtonProps<T> extends Omit<React.HTMLProps<T>, 'size' | 'onClick'> {
       size?: "sm" | "lg";
       outline?: boolean;
       link?: boolean;
@@ -16,13 +16,17 @@ declare namespace Button {
       icon?: string;
       social?: string;
       loading?: boolean;
-      RootComponent?: React.ReactElement<any>;
+      RootComponent?: React.ReactType;
       href?: string;
       target?: string;
       isDropdownToggle?: boolean;
       onClick?: (ev: React.SyntheticEvent<HTMLLinkElement>) => any;
     }
-    export type ButtonProps = IButtonProps<HTMLDivElement>;
+    type Props = IButtonProps<HTMLElement>; // TODO: not sure if `HTMLButtonElement`
+    type Component = React.StatelessComponent<Props>;
+    interface NestedComponents {1
+      List: ButtonList.Component;
+    }
 }
-declare class Button extends React.Component<Button.ButtonProps> { }
+declare const Button: Button.Component & Button.NestedComponents;
 export = Button;

@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace FormStaticText {
-    export interface IFormStaticTextProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormStaticTextProps<T> extends React.HTMLProps<T> {
     }
-    export type FormStaticTextProps = IFormStaticTextProps<HTMLDivElement>;
+    type Props = IFormStaticTextProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormStaticText extends React.Component<FormStaticText.FormStaticTextProps> { }
+declare const FormStaticText: FormStaticText.Component;
 export = FormStaticText;

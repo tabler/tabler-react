@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Omit } from '../../index';
+import AvatarList from './AvatarList';
 
 declare namespace Avatar {
-    export interface IAvatarProps<T> extends Omit<React.HTMLProps<T>, 'placeholder' | 'size'> {
-      className?: string;
+    interface IAvatarProps<T> extends Omit<React.HTMLProps<T>, 'placeholder' | 'size'> {
       imageURL?: string;
       style?: Object;
       size?: "sm" | "md" | "lg" | "xl" | "xxl";
@@ -12,7 +12,11 @@ declare namespace Avatar {
       icon?: string;
       color?: string;
     }
-    export type AvatarProps = IAvatarProps<HTMLDivElement>;
+    type Props = IAvatarProps<HTMLSpanElement>;
+    type Component = React.StatelessComponent<Props>;
+    interface NestedComponents {
+      List: AvatarList.Component;
+    }
 }
-declare class Avatar extends React.Component<Avatar.AvatarProps> { }
+declare const Avatar: Avatar.Component & Avatar.NestedComponents;
 export = Avatar;

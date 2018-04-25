@@ -2,8 +2,7 @@ import * as React from 'react';
 import { Omit } from '../../index';
 
 declare namespace FormInput {
-    export interface IFormInputProps<T> extends Omit<React.HTMLProps<T>, 'value' | 'onChange'> {
-      className?: string;
+    interface IFormInputProps<T> extends Omit<React.HTMLProps<T>, 'value' | 'onChange'> {
       icon?: string;
       position?: "append" | "prepend";
       valid?: boolean;
@@ -19,7 +18,8 @@ declare namespace FormInput {
       type?: "checkbox" | "text" | "email" | "password";
       value?: string | number | boolean;
     }
-    export type FormInputProps = IFormInputProps<HTMLDivElement>;
+    type Props = IFormInputProps<HTMLElement>; // TODO: not sure if `React.Fragment or div`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormInput extends React.Component<FormInput.FormInputProps> { }
+declare const FormInput: FormInput.Component;
 export = FormInput;

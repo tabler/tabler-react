@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 declare namespace StandaloneFormPage {
-    export interface IStandaloneFormPageProps<T> extends React.HTMLProps<T> {
+    interface IStandaloneFormPageProps<T> extends React.HTMLProps<T> {
     }
-    export type StandaloneFormPageProps = IStandaloneFormPageProps<HTMLDivElement>;
+    type Props = IStandaloneFormPageProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class StandaloneFormPage extends React.Component<StandaloneFormPage.StandaloneFormPageProps> { }
+declare const StandaloneFormPage: StandaloneFormPage.Component;
 export = StandaloneFormPage;

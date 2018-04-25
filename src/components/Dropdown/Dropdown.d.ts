@@ -1,11 +1,22 @@
 import * as React from 'react';
 
+import DropdownTrigger from './DropdownTrigger';
+import DropdownMenu from './DropdownMenu';
+import DropdownItem from './DropdownItem';
+import DropdownItemDivider from './DropdownItemDivider';
+
 declare namespace Dropdown {
-    export interface IDropdownProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IDropdownProps<T> extends React.HTMLProps<T> {
       desktopOnly?: boolean;
     }
-    export type DropdownProps = IDropdownProps<HTMLDivElement>;
+    type Props = IDropdownProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
+    interface NestedComponents {
+      Trigger: DropdownTrigger.Component;
+      Menu: DropdownMenu.Component;
+      Item: DropdownItem.Component;
+      ItemDivider: DropdownItemDivider.Component;
+    }
 }
-declare class Dropdown extends React.Component<Dropdown.DropdownProps> { }
+declare const Dropdown: Dropdown.Component & Dropdown.NestedComponents;
 export = Dropdown;

@@ -1,13 +1,14 @@
 import * as React from 'react';
 
 declare namespace FormCard {
-    export interface IFormCardProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormCardProps<T> extends React.HTMLProps<T> {
+      action: string,
       method: string;
       title: string;
       buttonText: string;
     }
-    export type FormCardProps = IFormCardProps<HTMLDivElement>;
+    type Props = IFormCardProps<HTMLElement>; // TODO: not sure if `Form`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormCard extends React.Component<FormCard.FormCardProps> { }
+declare const FormCard: FormCard.Component;
 export = FormCard;

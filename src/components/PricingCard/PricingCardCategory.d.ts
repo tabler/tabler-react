@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 declare namespace PricingCardCategory {
-    export interface IPricingCardCategoryProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPricingCardCategoryProps<T> extends React.HTMLProps<T> {
+
     }
-    export type PricingCardCategoryProps = IPricingCardCategoryProps<HTMLDivElement>;
+    type Props = IPricingCardCategoryProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PricingCardCategory extends React.Component<PricingCardCategory.PricingCardCategoryProps> { }
+declare const PricingCardCategory: PricingCardCategory.Component;
 export = PricingCardCategory;

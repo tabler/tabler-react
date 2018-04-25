@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace PageTitle {
-    export interface IPageTitleProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPageTitleProps<T> extends React.HTMLProps<T> {
     }
-    export type PageTitleProps = IPageTitleProps<HTMLDivElement>;
+    type Props = IPageTitleProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PageTitle extends React.Component<PageTitle.PageTitleProps> { }
+declare const PageTitle: PageTitle.Component;
 export = PageTitle;

@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 declare namespace FormHelp {
-    export interface IFormHelpProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormHelpProps<T> extends React.HTMLProps<T> {
       position?: "top" | "bottom";
       message?: React.ReactNode;
     }
-    export type FormHelpProps = IFormHelpProps<HTMLDivElement>
+    type Props = IFormHelpProps<HTMLSpanElement>
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormHelp extends React.Component<FormHelp.FormHelpProps> { }
+declare const FormHelp: FormHelp.Component;
 export = FormHelp;

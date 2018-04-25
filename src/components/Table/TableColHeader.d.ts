@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 declare namespace TableColHeader {
-    export interface ITableColHeaderProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface ITableColHeaderProps<T> extends React.HTMLProps<T> {
       colSpan?: number;
     }
-    export type TableColHeaderProps = ITableColHeaderProps<HTMLDivElement>;
+    type Props = ITableColHeaderProps<HTMLTableHeaderCellElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class TableColHeader extends React.Component<TableColHeader.TableColHeaderProps> { }
+declare const TableColHeader: TableColHeader.Component;
 export = TableColHeader;

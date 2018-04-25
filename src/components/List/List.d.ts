@@ -1,11 +1,20 @@
 import * as React from 'react';
 
+import ListItem from './ListItem';
+import ListGroup from './ListGroup';
+import ListGroupItem from './ListGroupItem';
+
 declare namespace List {
-    export interface IListProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IListProps<T> extends React.HTMLProps<T> {
       unstyled?: boolean;
     }
-    export type ListProps = IListProps<HTMLDivElement>;
+    type Props = IListProps<HTMLUListElement>;
+    type Component = React.StatelessComponent<Props>;
+    interface NestedComponents {
+      Item: ListItem.Component;
+      Group: ListGroup.Component;
+      GroupItem: ListGroupItem.Component;
+    }
 }
-declare class List extends React.Component<List.ListProps> { }
+declare const List: List.Component & List.NestedComponents;
 export = List;

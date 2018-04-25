@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 declare namespace SiteHeader {
-    export interface ISiteHeaderProps<T> extends React.HTMLProps<T> {
+    interface ISiteHeaderProps<T> extends React.HTMLProps<T> {
     }
-    export type SiteHeaderProps = ISiteHeaderProps<HTMLDivElement>;
+    type Props = ISiteHeaderProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class SiteHeader extends React.Component<SiteHeader.SiteHeaderProps> { }
+declare const SiteHeader: SiteHeader.Component;
 export = SiteHeader;

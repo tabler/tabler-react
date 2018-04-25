@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace FormImageCheck {
-    export interface IFormImageCheckProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormImageCheckProps<T> extends React.HTMLProps<T> {
     }
-    export type FormImageCheckProps = IFormImageCheckProps<HTMLDivElement>;
+    type Props = IFormImageCheckProps<HTMLElement>; // TODO: not sure if `Grid.Row`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormImageCheck extends React.Component<FormImageCheck.FormImageCheckProps> { }
+declare const FormImageCheck: FormImageCheck.Component;
 export = FormImageCheck;

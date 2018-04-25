@@ -1,8 +1,9 @@
 import * as React from 'react';
 
 declare namespace PageMain {
-    export interface IPageMainProps<T> extends React.HTMLProps<T> {}
-    export type PageMainProps = IPageMainProps<HTMLDivElement>;
+    interface IPageMainProps<T> extends React.HTMLProps<T> {}
+    type Props = IPageMainProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PageMain extends React.Component<PageMain.PageMainProps> { }
+declare const PageMain: PageMain.Component;
 export = PageMain;

@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 declare namespace H2 {
-    export interface IH2Props<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IH2Props<T> extends React.HTMLProps<T> {
+
     }
-    export type H2Props = IH2Props<HTMLDivElement>
+    type Props = IH2Props<HTMLElement>
+    type Component = React.StatelessComponent<Props>;
 }
-declare class H2 extends React.Component<H2.H2Props> { }
+declare const H2: H2.Component;
 export = H2;

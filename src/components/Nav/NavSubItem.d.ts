@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 declare namespace NavSubItem {
-    export interface INavSubItemProps<T> extends React.HTMLProps<T> {
-      className?: string;
-      LinkComponent?: React.ReactElement<any>;
+    interface INavSubItemProps<T> extends React.HTMLProps<T> {
+      LinkComponent?: React.ReactType;
       to?: string;
       icon?: string;
       value?: string;
     }
-    export type NavSubItemProps = INavSubItemProps<HTMLDivElement>;
+    type Props = INavSubItemProps<HTMLDivElement>; // TODO: not sure if `Dropdown.Item`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class NavSubItem extends React.Component<NavSubItem.NavSubItemProps> { }
+declare const NavSubItem: NavSubItem.Component;
 export = NavSubItem;

@@ -3,11 +3,11 @@ import * as React from 'react';
 import { Omit } from '../../index';
 
 declare namespace FormGroup {
-    export interface IFormGroupProps<T> extends Omit<React.HTMLProps<T>, 'label'> {
-      className?: string;
+    interface IFormGroupProps<T> extends Omit<React.HTMLProps<T>, 'label'> {
       label?: React.ReactNode,
     }
-    export type FormGroupProps = IFormGroupProps<HTMLDivElement>;
+    type Props = IFormGroupProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormGroup extends React.Component<FormGroup.FormGroupProps> { }
+declare const FormGroup: FormGroup.Component;
 export = FormGroup;

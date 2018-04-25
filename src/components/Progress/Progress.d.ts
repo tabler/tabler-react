@@ -1,13 +1,18 @@
 import * as React from 'react';
 import { Omit } from '../../index';
 
+import ProgressBar from './ProgressBar';
+
 declare namespace Progress {
-    export interface IProgressProps<T> extends Omit<React.HTMLProps<T>, 'size'> {
-      className?: string;
+    interface IProgressProps<T> extends Omit<React.HTMLProps<T>, 'size'> {
       active?: boolean;
       size?: string;
     }
-    export type ProgressProps = IProgressProps<HTMLDivElement>;
+    type Props = IProgressProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
+    interface NestedComponents {
+      Bar: ProgressBar.Component;
+    }
 }
-declare class Progress extends React.Component<Progress.ProgressProps> { }
+declare const Progress: Progress.Component & Progress.NestedComponents;
 export = Progress;

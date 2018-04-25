@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 declare namespace Icon {
-    export interface IIconProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IIconProps<T> extends React.HTMLProps<T> {
       link?: boolean;
       prefix?: "fa" | "fe";
       name: string;
       isAriaHidden?: boolean;
     }
-    export type IconProps = IIconProps<HTMLDivElement>;
+    type Props = IIconProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class Icon extends React.Component<Icon.IconProps> { }
+declare const Icon: Icon.Component;
 export = Icon;

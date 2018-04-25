@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace CodeHighlight {
-    export interface ICodeHighlightProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface ICodeHighlightProps<T> extends React.HTMLProps<T> {
     }
-    export type CodeHighlightProps = ICodeHighlightProps<HTMLDivElement>;
+    type Props = ICodeHighlightProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class CodeHighlight extends React.Component<CodeHighlight.CodeHighlightProps> { }
+declare const CodeHighlight: CodeHighlight.Component;
 export = CodeHighlight;

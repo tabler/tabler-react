@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 declare namespace ProgressBar {
-    export interface IProgressBarProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IProgressBarProps<T> extends React.HTMLProps<T> {
+
       color?: string;
       width?: number;
     }
-    export type ProgressBarProps = IProgressBarProps<HTMLDivElement>;
+    type Props = IProgressBarProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class ProgressBar extends React.Component<ProgressBar.ProgressBarProps> { }
+declare const ProgressBar: ProgressBar.Component;
 export = ProgressBar;
