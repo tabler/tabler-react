@@ -19,15 +19,21 @@ type Props = {|
   +isCollapsible?: boolean,
   +isCollapsed?: boolean,
   +isClosable?: boolean,
+  +isClosed?: boolean,
   +isFullscreenable?: boolean,
   +statusColor?: string,
   +statusSide?: boolean,
 |};
 
-type State = {| isCollapsed: boolean, isFullscreen: boolean |};
+type State = {|
+  isClosed: boolean,
+  isCollapsed: boolean,
+  isFullscreen: boolean,
+|};
 
 class Card extends React.PureComponent<Props, State> {
   state = {
+    isClosed: this.props.isClosed || false,
     isCollapsed: this.props.isCollapsed || false,
     isFullscreen: false,
   };
@@ -38,6 +44,12 @@ class Card extends React.PureComponent<Props, State> {
   static Options = CardOptions;
   static OptionsItem = CardOptionsItem;
   static Status = CardStatus;
+
+  handleCloseOnClick = () => {
+    this.setState(s => ({
+      isClosed: !s.isClosed,
+    }));
+  };
 
   handleCollapseOnClick = () => {
     this.setState(s => ({
@@ -65,8 +77,10 @@ class Card extends React.PureComponent<Props, State> {
       statusColor,
       statusSide,
     } = this.props;
-    const { isCollapsed, isFullscreen } = this.state;
-
+    const { isClosed, isCollapsed, isFullscreen } = this.state;
+    if (isClosed) {
+      return null;
+    }
     const classes = cn(
       {
         card: true,
@@ -79,6 +93,7 @@ class Card extends React.PureComponent<Props, State> {
 
     const card_options = (options || isCollapsible || isClosable) && (
       <Card.Options>
+        {options}
         {isCollapsible && (
           <Card.OptionsItem
             onClick={this.handleCollapseOnClick}
@@ -91,8 +106,9 @@ class Card extends React.PureComponent<Props, State> {
             onClick={this.handleFullscreenOnClick}
           />
         )}
-        {isClosable && <Card.OptionsItem type="close" />}
-        {options}
+        {isClosable && (
+          <Card.OptionsItem type="close" onClick={this.handleCloseOnClick} />
+        )}
       </Card.Options>
     );
 
