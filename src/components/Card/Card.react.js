@@ -17,65 +17,91 @@ type Props = {|
   +RootComponent?: React.ElementType,
   +options?: React.Node,
   +isCollapsible?: boolean,
+  +isCollapsed?: boolean,
   +isClosable?: boolean,
   +statusColor?: string,
   +statusSide?: boolean,
 |};
 
-function Card({
-  className,
-  children,
-  RootComponent,
-  title,
-  body,
-  options,
-  isCollapsible,
-  isClosable,
-  statusColor,
-  statusSide,
-}: Props): React.Node {
-  const classes = cn("card", className);
-  const Component = RootComponent || "div";
+type State = {| isCollapsed: boolean |};
 
-  const card_options = (options || isCollapsible || isClosable) && (
-    <Card.Options>
-      {isCollapsible && <Card.OptionsItem type="collapse" />}
-      {isClosable && <Card.OptionsItem type="close" />}
-      {options}
-    </Card.Options>
-  );
+class Card extends React.PureComponent<Props, State> {
+  state = {
+    isCollapsed: this.props.isCollapsed || false,
+  };
 
-  const card_status = statusColor && (
-    <Card.Status color={statusColor} side={statusSide} />
-  );
+  static Header = CardHeader;
+  static Body = CardBody;
+  static Title = CardTitle;
+  static Options = CardOptions;
+  static OptionsItem = CardOptionsItem;
+  static Status = CardStatus;
 
-  const card_header = title && (
-    <Card.Header>
-      <Card.Title>{title}</Card.Title>
-      {card_options}
-    </Card.Header>
-  );
+  handleCollapseOnClick = () => {
+    this.setState(s => ({
+      isCollapsed: !s.isCollapsed,
+    }));
+  };
 
-  const card_body = body && <Card.Body>{body}</Card.Body>;
+  render() {
+    const {
+      className,
+      children,
+      RootComponent,
+      title,
+      body,
+      options,
+      isCollapsible,
+      isClosable,
+      statusColor,
+      statusSide,
+    } = this.props;
+    const { isCollapsed } = this.state;
 
-  if (card_header !== null || card_body !== null) {
-    return (
-      <Component className={classes}>
-        {card_status}
-        {card_header}
-        {card_body || children}
-      </Component>
+    const classes = cn(
+      { card: true, "card-collapsed": isCollapsed },
+      className
     );
-  } else {
-    return <Component className={classes}>{children}</Component>;
+    const Component = RootComponent || "div";
+
+    const card_options = (options || isCollapsible || isClosable) && (
+      <Card.Options>
+        {isCollapsible && (
+          <Card.OptionsItem
+            onClick={this.handleCollapseOnClick}
+            type="collapse"
+          />
+        )}
+        {isClosable && <Card.OptionsItem type="close" />}
+        {options}
+      </Card.Options>
+    );
+
+    const card_status = statusColor && (
+      <Card.Status color={statusColor} side={statusSide} />
+    );
+
+    const card_header = title && (
+      <Card.Header>
+        <Card.Title>{title}</Card.Title>
+        {card_options}
+      </Card.Header>
+    );
+
+    const card_body = body && <Card.Body>{body}</Card.Body>;
+
+    if (card_header !== null || card_body !== null) {
+      return (
+        <Component className={classes}>
+          {card_status}
+          {card_header}
+          {card_body || children}
+        </Component>
+      );
+    } else {
+      return <Component className={classes}>{children}</Component>;
+    }
   }
 }
-
-Card.Header = CardHeader;
-Card.Body = CardBody;
-Card.Title = CardTitle;
-Card.Options = CardOptions;
-Card.OptionsItem = CardOptionsItem;
-Card.Status = CardStatus;
 
 export default Card;
