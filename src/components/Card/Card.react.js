@@ -8,6 +8,7 @@ import CardBody from "./CardBody.react";
 import CardOptions from "./CardOptions.react";
 import CardOptionsItem from "./CardOptionsItem.react";
 import CardStatus from "./CardStatus.react";
+import CardAlert from "./CardAlert.react";
 
 type Props = {|
   +children?: React.Node,
@@ -23,6 +24,8 @@ type Props = {|
   +isFullscreenable?: boolean,
   +statusColor?: string,
   +statusSide?: boolean,
+  +alert?: React.Node,
+  +alertColor?: string,
 |};
 
 type State = {|
@@ -44,6 +47,7 @@ class Card extends React.PureComponent<Props, State> {
   static Options = CardOptions;
   static OptionsItem = CardOptionsItem;
   static Status = CardStatus;
+  static Alert = CardAlert;
 
   handleCloseOnClick = () => {
     this.setState(s => ({
@@ -76,6 +80,8 @@ class Card extends React.PureComponent<Props, State> {
       isFullscreenable,
       statusColor,
       statusSide,
+      alert,
+      alertColor,
     } = this.props;
     const { isClosed, isCollapsed, isFullscreen } = this.state;
     if (isClosed) {
@@ -116,6 +122,9 @@ class Card extends React.PureComponent<Props, State> {
       <Card.Status color={statusColor} side={statusSide} />
     );
 
+    const card_alert = alert &&
+      alertColor && <Card.Alert color={alertColor}>{alert}</Card.Alert>;
+
     const card_header = title && (
       <Card.Header>
         <Card.Title>{title}</Card.Title>
@@ -130,6 +139,7 @@ class Card extends React.PureComponent<Props, State> {
         <Component className={classes}>
           {card_status}
           {card_header}
+          {card_alert}
           {card_body || children}
         </Component>
       );
