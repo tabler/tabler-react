@@ -13,9 +13,13 @@ declare namespace Dropdown {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       Trigger: DropdownTrigger.Component;
+      TriggerProps: DropdownTrigger.Props;
       Menu: DropdownMenu.Component;
+      MenuProps: DropdownMenu.Props;
       Item: DropdownItem.Component;
+      ItemProps: DropdownItem.Props;
       ItemDivider: DropdownItemDivider.Component;
+      ItemDividerProps: DropdownItemDivider.Props;
     }
 }
 declare const Dropdown: Dropdown.Component & Dropdown.NestedComponents;

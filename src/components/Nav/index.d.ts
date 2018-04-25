@@ -1,2 +1,2 @@
-import Nav from "./Nav";
-export { Nav as default };
+import Nav, { Props } from "./Nav";
+export { Nav as default, Props };

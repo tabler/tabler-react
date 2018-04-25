@@ -1,9 +1,14 @@
 import GridRow from "./GridRow";
 import GridCol from "./GridCol";
 
-const Grid = {
-  Row: GridRow,
-  Col: GridCol,
-};
+declare namespace Grid {
+  interface NestedComponents {
+    Row: GridRow.Component;
+    RowProps: GridRow.Props;
+    Col: GridCol.Component;
+    ColProps: GridCol.Props;
+  }
+}
 
-export { Grid as default };
+declare const Grid: Grid.NestedComponents;
+export = Grid;

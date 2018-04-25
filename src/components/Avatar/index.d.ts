@@ -1,3 +1,3 @@
-import Avatar from "./Avatar";
+import Avatar, { Props } from "./Avatar";
 
-export { Avatar as default };
+export { Avatar as default, Props };

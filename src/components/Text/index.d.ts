@@ -1,2 +1,2 @@
-import Text from "./Text";
-export { Text as default };
+import Text, { Props } from "./Text";
+export { Text as default, Props };

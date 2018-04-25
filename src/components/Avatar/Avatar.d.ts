@@ -16,6 +16,7 @@ declare namespace Avatar {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       List: AvatarList.Component;
+      ListProps: AvatarList.Props;
     }
 }
 declare const Avatar: Avatar.Component & Avatar.NestedComponents;

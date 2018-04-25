@@ -12,8 +12,11 @@ declare namespace List {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       Item: ListItem.Component;
+      ItemProps: ListItem.Props;
       Group: ListGroup.Component;
+      GroupProps: ListGroup.Props;
       GroupItem: ListGroupItem.Component;
+      GroupItemProps: ListGroupItem.Props;
     }
 }
 declare const List: List.Component & List.NestedComponents;
