@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 declare namespace CardTitle {
-    export interface ICardTitleProps<T> extends React.HTMLProps<T> {
-      className?: string;
-      RootComponent?: React.ReactElement<any>;
+    interface ICardTitleProps<T> extends React.HTMLProps<T> {
+      RootComponent?: React.ReactType;
     }
-    export type CardTitleProps = ICardTitleProps<HTMLDivElement>;
-}
-declare class CardTitle extends React.Component<CardTitle.CardTitleProps> { }
+    type Props = ICardTitleProps<HTMLElement>; // TODO: not sure if `HTMLHeadingElement`
+    type Component = React.StatelessComponent<Props>;
+  }
+declare const CardTitle: CardTitle.Component;
 export = CardTitle;

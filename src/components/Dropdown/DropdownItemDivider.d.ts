@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 declare namespace DropdownItemDivider {
-    export interface IDropdownItemDividerProps<T> extends React.HTMLProps<T> {
+    interface IDropdownItemDividerProps<T> extends React.HTMLProps<T> {
     }
-    export type DropdownItemDividerProps = IDropdownItemDividerProps<HTMLDivElement>;
+    type Props = IDropdownItemDividerProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class DropdownItemDivider extends React.Component<DropdownItemDivider.DropdownItemDividerProps> { }
+declare const DropdownItemDivider: DropdownItemDivider.Component;
 export = DropdownItemDivider;

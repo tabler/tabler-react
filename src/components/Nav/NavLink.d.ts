@@ -1,16 +1,16 @@
 import * as React from 'react';
 
 declare namespace NavLink {
-    export interface INavLinkProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface INavLinkProps<T> extends React.HTMLProps<T> {
       value?: string;
-      RootComponent?: React.ReactElement<any>;
+      RootComponent?: React.ReactType;
       active?: boolean;
       icon?: string;
       to?: string;
       hasSubNav?: boolean;
     }
-    export type NavLinkProps = INavLinkProps<HTMLDivElement>;
+    type Props = INavLinkProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class NavLink extends React.Component<NavLink.NavLinkProps> { }
+declare const NavLink: NavLink.Component;
 export = NavLink;

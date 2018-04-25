@@ -1,13 +1,21 @@
 import * as React from 'react';
+import CardHeader from './CardHeader';
+import CardBody from './CardBody';
+import CardTitle from './CardTitle';
 
 declare namespace Card {
-    export interface ICardProps<T> extends React.HTMLProps<T> {
-      className?: string,
+    interface ICardProps<T> extends React.HTMLProps<T> {
       title?: string,
       body?: React.ReactNode,
-      RootComponent?: React.ReactElement<any>,
+      RootComponent?: React.ReactType,
     }
-    export type CardProps = ICardProps<HTMLDivElement>;
+    type Props = ICardProps<HTMLElement>; // TODO: not sure if `HTMLDivElement`
+    type Component = React.StatelessComponent<Props>;
+    interface NestedComponents {
+      Header: CardHeader.Component;
+      Body: CardBody.Component;
+      Title: CardTitle.Component;
+    }
 }
-declare class Card extends React.Component<Card.CardProps> { }
+declare const Card: Card.Component & Card.NestedComponents;
 export = Card;

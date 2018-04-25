@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 declare namespace SiteFooter {
-    export interface ISiteFooterProps<T> extends React.HTMLProps<T> {
+    interface ISiteFooterProps<T> extends React.HTMLProps<T> {
     }
-    export type SiteFooterProps = ISiteFooterProps<HTMLDivElement>;
+    type Props = ISiteFooterProps<HTMLElement>; // TODO: not sure if `React.Fragment`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class SiteFooter extends React.Component<SiteFooter.SiteFooterProps> { }
+declare const SiteFooter: SiteFooter.Component;
 export = SiteFooter;

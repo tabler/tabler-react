@@ -1,16 +1,17 @@
 import * as React from 'react';
 
 declare namespace FormTextInput {
-    export interface IFormTextInputProps<T> extends React.HTMLProps<T> {
+    interface IFormTextInputProps<T> extends React.HTMLProps<T> {
       type?: "checkbox" | "text" | "email" | "password";
       label: string;
       placeHolder: string;
     }
-    export type FormTextInputProps = IFormTextInputProps<HTMLDivElement>;
-    export interface IFormTextInputState {
+    type Props = IFormTextInputProps<HTMLElement>; // TODO: not sure if `Form.Group`
+    interface IFormTextInputState {
       value: string | number;
     }
-    export type FormTextInputState = IFormTextInputState;
+    type State = IFormTextInputState;
+    type Component = React.Component<Props, State>;
 }
-declare class FormTextInput extends React.Component<FormTextInput.FormTextInputProps, FormTextInput.FormTextInputState> { }
+declare const FormTextInput: FormTextInput.Component; // TODO: Should this be a class?
 export = FormTextInput;

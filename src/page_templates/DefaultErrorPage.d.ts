@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 declare namespace DefaultErrorPage {
-    export interface IDefaultErrorPageProps<T> extends React.HTMLProps<T> {
+    interface IDefaultErrorPageProps<T> extends React.HTMLProps<T> {
       title: string;
       subtitle: string;
       details?: string;
     }
-    export type DefaultErrorPageProps = IDefaultErrorPageProps<HTMLDivElement>;
+    type Props = IDefaultErrorPageProps<HTMLElement>; // TODO: not sure if `Page`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class DefaultErrorPage extends React.Component<DefaultErrorPage.DefaultErrorPageProps> { }
+declare const DefaultErrorPage: DefaultErrorPage.Component;
 export = DefaultErrorPage;

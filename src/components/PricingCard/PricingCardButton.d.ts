@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 declare namespace PricingCardButton {
-    export interface IPricingCardButtonProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPricingCardButtonProps<T> extends React.HTMLProps<T> {
       active?: boolean;
-      RootComponent?: React.ReactElement<any>;
+      RootComponent?: React.ReactType;
     }
-    export type PricingCardButtonProps = IPricingCardButtonProps<HTMLDivElement>;
+    type Props = IPricingCardButtonProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PricingCardButton extends React.Component<PricingCardButton.PricingCardButtonProps> { }
+declare const PricingCardButton: PricingCardButton.Component;
 export = PricingCardButton;

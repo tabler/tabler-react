@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 declare namespace PageHeader {
-    export interface IPageHeaderProps<T> extends React.HTMLProps<T> {
+    interface IPageHeaderProps<T> extends React.HTMLProps<T> {
     }
-    export type PageHeaderProps = IPageHeaderProps<HTMLDivElement>;
+    type Props = IPageHeaderProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PageHeader extends React.Component<PageHeader.PageHeaderProps> { }
+declare const PageHeader: PageHeader.Component;
 export = PageHeader;

@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace TableRow {
-    export interface ITableRowProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface ITableRowProps<T> extends React.HTMLProps<T> {
     }
-    export type TableRowProps = ITableRowProps<HTMLDivElement>;
+    type Props = ITableRowProps<HTMLTableRowElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class TableRow extends React.Component<TableRow.TableRowProps> { }
+declare const TableRow: TableRow.Component;
 export = TableRow;

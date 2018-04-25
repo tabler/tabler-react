@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 declare namespace Container {
-    export interface IContainerProps<T> extends React.HTMLProps<T> {
+    interface IContainerProps<T> extends React.HTMLProps<T> {
     }
-    export type ContainerProps = IContainerProps<HTMLDivElement>;
+    type Props = IContainerProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class Container extends React.Component<Container.ContainerProps> { }
+declare const Container: Container.Component;
 export = Container;

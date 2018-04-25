@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 declare namespace DropdownMenu {
-    export interface IDropdownMenuProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IDropdownMenuProps<T> extends React.HTMLProps<T> {
+
       position?: string;
       arrow?: boolean;
     }
-    export type DropdownMenuProps = IDropdownMenuProps<HTMLDivElement>;
+    type Props = IDropdownMenuProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class DropdownMenu extends React.Component<DropdownMenu.DropdownMenuProps> { }
+declare const DropdownMenu: DropdownMenu.Component;
 export = DropdownMenu;

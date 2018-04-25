@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace PageContent {
-    export interface IPageContentProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPageContentProps<T> extends React.HTMLProps<T> {
     }
-    export type PageContentProps = IPageContentProps<HTMLDivElement>;
+    type Props = IPageContentProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PageContent extends React.Component<PageContent.PageContentProps> { }
+declare const PageContent: PageContent.Component;
 export = PageContent;

@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 declare namespace NavSubmenuItem {
-    export interface INavSubmenuItemProps<T> extends React.HTMLProps<T> {
-      className?: string;
-      RootComponent?: React.ReactElement<any>;
+    interface INavSubmenuItemProps<T> extends React.HTMLProps<T> {
+      RootComponent?: React.ReactType;
       active?: boolean;
       icon?: string;
       to?: string; // this is so you can easily use with React router Link/NavLink
     }
-    export type NavSubmenuItemProps = INavSubmenuItemProps<HTMLDivElement>;
+    type Props = INavSubmenuItemProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class NavSubmenuItem extends React.Component<NavSubmenuItem.NavSubmenuItemProps> { }
+declare const NavSubmenuItem: NavSubmenuItem.Component;
 export = NavSubmenuItem;

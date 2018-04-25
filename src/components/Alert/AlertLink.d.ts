@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 declare namespace AlertLink {
-    export interface IAlertLinkProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IAlertLinkProps<T> extends React.HTMLProps<T> {
       href?: string;
     }
-    export type AlertLinkProps = IAlertLinkProps<HTMLDivElement>;
+    type Props = IAlertLinkProps<HTMLAnchorElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class AlertLink extends React.Component<AlertLink.AlertLinkProps> { }
+declare const AlertLink: AlertLink.Component;
 export = AlertLink;

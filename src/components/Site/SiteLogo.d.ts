@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 declare namespace SiteLogo {
-    export interface ISiteLogoProps<T> extends React.HTMLProps<T> {
+    interface ISiteLogoProps<T> extends React.HTMLProps<T> {
       href: string;
       src: string;
       alt: string;
     }
-    export type SiteLogoProps = ISiteLogoProps<HTMLDivElement>;
+    type Props = ISiteLogoProps<HTMLAnchorElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class SiteLogo extends React.Component<SiteLogo.SiteLogoProps> { }
+declare const SiteLogo: SiteLogo.Component;
 export = SiteLogo;

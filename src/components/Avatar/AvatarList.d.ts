@@ -2,11 +2,11 @@ import * as React from 'react';
 
 
 declare namespace AvatarList {
-    export interface IAvatarListProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IAvatarListProps<T> extends React.HTMLProps<T> {
       stacked?: boolean;
     }
-    export type AvatarListProps = IAvatarListProps<HTMLDivElement>;
+    type Props = IAvatarListProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class AvatarList extends React.Component<AvatarList.AvatarListProps> { }
+declare const AvatarList: AvatarList.Component;
 export = AvatarList;

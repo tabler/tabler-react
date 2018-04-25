@@ -1,15 +1,15 @@
 import * as React from 'react';
 
 declare namespace DropdownItem {
-    export interface IDropdownItemProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IDropdownItemProps<T> extends React.HTMLProps<T> {
       icon?: string;
       value?: string;
       badge?: string;
       to?: string;
-      RootComponent?: React.ReactElement<any>;
+      RootComponent?: React.ReactType;
     }
-    export type DropdownItemProps = IDropdownItemProps<HTMLDivElement>;
+    type Props = IDropdownItemProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class DropdownItem extends React.Component<DropdownItem.DropdownItemProps> { }
+declare const DropdownItem: DropdownItem.Component;
 export = DropdownItem;

@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace FormSelect {
-    export interface IFormSelectProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormSelectProps<T> extends React.HTMLProps<T> {
     }
-    export type FormSelectProps = IFormSelectProps<HTMLDivElement>;
+    type Props = IFormSelectProps<HTMLSelectElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormSelect extends React.Component<FormSelect.FormSelectProps> { }
+declare const FormSelect: FormSelect.Component;
 export = FormSelect;

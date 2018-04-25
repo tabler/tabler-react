@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace Badge {
-    export interface IBadgeProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IBadgeProps<T> extends React.HTMLProps<T> {
     }
-    export type BadgeProps = IBadgeProps<HTMLDivElement>;
+    type Props = IBadgeProps<HTMLSpanElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class Badge extends React.Component<Badge.BadgeProps> { }
+declare const Badge: Badge.Component;
 export = Badge;

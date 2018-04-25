@@ -2,8 +2,7 @@ import * as React from 'react';
 import { Omit } from '../../index';
 
 declare namespace FormRatio {
-    export interface IFormRatioProps<T> extends Omit<React.HTMLProps<T>, 'value' | 'onChange' | 'defaultValue'> {
-      className?: string;
+    interface IFormRatioProps<T> extends Omit<React.HTMLProps<T>, 'value' | 'onChange' | 'defaultValue'> {
       step?: number;
       min?: number;
       max?: number;
@@ -11,11 +10,12 @@ declare namespace FormRatio {
       onChange: (event: React.SyntheticEvent<EventTarget>) => any;
       defaultValue: number
     }
-    export type FormRatioProps = IFormRatioProps<HTMLDivElement>;
-    export interface IFormRatioState {
+    type Props = IFormRatioProps<HTMLElement>; // TODO: not sure if `Grid.Row`
+    interface IFormRatioState {
       internalValue: number;
     }
-    export type FormRatioState = IFormRatioState;
+    type State = IFormRatioState;
+    type Component = React.Component<Props, State>;
 }
-declare class FormRatio extends React.Component<FormRatio.FormRatioProps, FormRatio.FormRatioState> { }
+declare const FormRatio: FormRatio.Component; // TODO: Should this be a class?
 export = FormRatio;

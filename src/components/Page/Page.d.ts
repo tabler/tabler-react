@@ -1,10 +1,25 @@
 import * as React from 'react';
 
+import PageMain from './PageMain';
+import PageContent from './PageContent';
+import PageHeader from './PageHeader';
+import PageContentWithSidebar from './PageContentWithSidebar';
+import PageCard from './PageCard';
+import PageTitle from './PageTitle';
+
 declare namespace Page {
-    export interface IPageProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPageProps<T> extends React.HTMLProps<T> {
     }
-    export type PageProps = IPageProps<HTMLDivElement>;
+    type Props = IPageProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
+    interface NestedComponents {
+      Main: PageMain.Component;
+      Content: PageContent.Component;
+      Header: PageHeader.Component;
+      ContentWithSidebar: PageContentWithSidebar.Component;
+      Card: PageCard.Component;
+      Title: PageTitle.Component;
+    }
 }
-declare class Page extends React.Component<Page.PageProps> { }
+declare const Page: Page.Component & Page.NestedComponents;
 export = Page;

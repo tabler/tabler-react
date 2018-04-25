@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace ListItem {
-    export interface IListItemProps<T> extends React.HTMLProps<ListItem> {
-      className?: string;
+    interface IListItemProps<T> extends React.HTMLProps<T> {
     }
-    export type ListItemProps = IListItemProps<HTMLDivElement>;
+    type Props = IListItemProps<HTMLLIElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class ListItem extends React.Component<ListItem.ListItemProps> { }
+declare const ListItem: ListItem.Component;
 export = ListItem;

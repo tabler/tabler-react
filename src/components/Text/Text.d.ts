@@ -2,14 +2,14 @@ import * as React from 'react';
 import { Omit } from '../../index';
 
 declare namespace Text {
-    export interface ITextProps<T> extends Omit<React.HTMLProps<T>, 'size' | 'wrap'> {
-      className?: string;
-      RootComponent?: React.ReactElement<any>;
+    interface ITextProps<T> extends Omit<React.HTMLProps<T>, 'size' | 'wrap'> {
+      RootComponent?: React.ReactType;
       color?: string;
       size?: string;
       wrap?: boolean;
     }
-    export type TextProps = ITextProps<HTMLDivElement>;
+    type Props = ITextProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class Text extends React.Component<Text.TextProps> { }
+declare const Text: Text.Component;
 export = Text;

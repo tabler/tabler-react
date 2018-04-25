@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace FormFooter {
-    export interface IFormFooterProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormFooterProps<T> extends React.HTMLProps<T> {
     }
-    export type FormFooterProps = IFormFooterProps<HTMLDivElement>;
+    type Props = IFormFooterProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormFooter extends React.Component<FormFooter.FormFooterProps> { }
+declare const FormFooter: FormFooter.Component;
 export = FormFooter;

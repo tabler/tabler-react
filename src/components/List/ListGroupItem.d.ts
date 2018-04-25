@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 declare namespace ListGroupItem {
-    export interface IListGroupItemProps<T> extends React.HTMLProps<T> {
-      className?: string;
-      RootComponent?: React.ReactElement<any>;
+    interface IListGroupItemProps<T> extends React.HTMLProps<T> {
+      RootComponent?: React.ReactType;
       active?: boolean;
       icon?: string;
       to?: string;
     }
-    export type ListGroupItemProps = IListGroupItemProps<HTMLDivElement>;
+    type Props = IListGroupItemProps<HTMLElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class ListGroupItem extends React.Component<ListGroupItem.ListGroupItemProps> { }
+declare const ListGroupItem: ListGroupItem.Component;
 export = ListGroupItem;

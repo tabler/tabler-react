@@ -1,14 +1,14 @@
 import * as React from 'react';
 
 declare namespace PageCard {
-    export interface IPageCardProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IPageCardProps<T> extends React.HTMLProps<T> {
       title?: string;
       header?: React.ReactNode;
       footer?: React.ReactNode;
-      RootComponent?: React.ReactElement<any>;
+      RootComponent?: React.ReactType;
     }
-    export type PageCardProps = IPageCardProps<HTMLDivElement>;
+    type Props = IPageCardProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class PageCard extends React.Component<PageCard.PageCardProps> { }
+declare const PageCard: PageCard.Component;
 export = PageCard;

@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace NavSubmenu {
-    export interface INavSubmenuProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface INavSubmenuProps<T> extends React.HTMLProps<T> {
     }
-    export type NavSubmenuProps = INavSubmenuProps<HTMLDivElement>;
+    type Props = INavSubmenuProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class NavSubmenu extends React.Component<NavSubmenu.NavSubmenuProps> { }
+declare const NavSubmenu: NavSubmenu.Component;
 export = NavSubmenu;

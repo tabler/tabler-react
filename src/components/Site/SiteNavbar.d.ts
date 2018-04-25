@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 declare namespace SideNavbar {
-    export interface ISideNavbarProps<T> extends React.HTMLProps<T> {
+    interface ISideNavbarProps<T> extends React.HTMLProps<T> {
     }
-    export type SideNavbarProps = ISideNavbarProps<HTMLDivElement>;
+    type Props = ISideNavbarProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class SideNavbar extends React.Component<SideNavbar.SideNavbarProps> { }
+declare const SideNavbar: SideNavbar.Component;
 export = SideNavbar;

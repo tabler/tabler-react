@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 declare namespace CardHeader {
-    export interface ICardHeaderProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface ICardHeaderProps<T> extends React.HTMLProps<T> {
     }
-    export type CardHeaderProps = ICardHeaderProps<HTMLDivElement>;
+    type Props = ICardHeaderProps<HTMLDivElement>;
+    type Component = React.StatelessComponent<Props>;
 }
-declare class CardHeader extends React.Component<CardHeader.CardHeaderProps> { }
+declare const CardHeader: CardHeader.Component;
 export = CardHeader;

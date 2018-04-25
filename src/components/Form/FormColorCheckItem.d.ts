@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 declare namespace FormColorCheckItem {
-    export interface IFormColorCheckItemProps<T> extends React.HTMLProps<T> {
-      className?: string;
+    interface IFormColorCheckItemProps<T> extends React.HTMLProps<T> {
       color: string;
     }
-    export type FormColorCheckItemProps = IFormColorCheckItemProps<HTMLDivElement>;
+    type Props = IFormColorCheckItemProps<HTMLElement>; // TODO: not sure if `Grid.Col`
+    type Component = React.StatelessComponent<Props>;
 }
-declare class FormColorCheckItem extends React.Component<FormColorCheckItem.FormColorCheckItemProps> { }
+declare const FormColorCheckItem: FormColorCheckItem.Component;
 export = FormColorCheckItem;
