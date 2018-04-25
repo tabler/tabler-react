@@ -9,6 +9,7 @@ type Props = {|
   +className?: string,
   +icon?: string,
   +type?: "collapse" | "close",
+  +onClick?: () => mixed,
 |};
 
 function CardOptionsItem({
@@ -16,6 +17,7 @@ function CardOptionsItem({
   children,
   icon,
   type,
+  onClick,
 }: Props): React.Node {
   const classes = cn(
     {
@@ -51,7 +53,7 @@ function CardOptionsItem({
   })();
 
   return (
-    <a className={classes} data-toggle={dataToggle}>
+    <a className={classes} data-toggle={dataToggle} onClick={onClick}>
       <Icon name={iconName} />
     </a>
   );
