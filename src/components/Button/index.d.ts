@@ -1,3 +1,3 @@
-import Button from "./Button";
+import Button, { Props } from "./Button";
 
-export { Button as default };
+export { Button as default, Props };

@@ -1,2 +1,2 @@
-import List from "./List";
-export { List as default };
+import List, { Props } from "./List";
+export { List as default, Props };

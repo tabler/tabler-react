@@ -1,3 +1,3 @@
-import Alert from "./Alert";
+import Alert, { Props } from "./Alert";
 
-export { Alert as default };
+export { Alert as default, Props };

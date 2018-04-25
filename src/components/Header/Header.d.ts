@@ -15,10 +15,15 @@ declare namespace Header {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       H1: H1.Component;
+      H1Props: H1.Props;
       H2: H2.Component;
+      H2Props: H2.Props;
       H3: H3.Component;
+      H3Props: H3.Props;
       H4: H4.Component;
+      H4Props: H4.Props;
       H5: H5.Component;
+      H5Props: H5.Props;
     }
 }
 declare const Header: Header.Component & Header.NestedComponents;

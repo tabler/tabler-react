@@ -21,6 +21,7 @@ declare namespace Alert {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       Link: AlertLink.Component;
+      LinkProps: AlertLink.Props;
     }
 
 }

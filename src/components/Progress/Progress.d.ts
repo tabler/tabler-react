@@ -12,6 +12,7 @@ declare namespace Progress {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       Bar: ProgressBar.Component;
+      BarProps: ProgressBar.Props;
     }
 }
 declare const Progress: Progress.Component & Progress.NestedComponents;

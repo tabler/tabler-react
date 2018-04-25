@@ -2,7 +2,6 @@ import * as React from 'react';
 
 declare namespace GridRow {
     interface IGridRowProps<T> extends React.HTMLProps<T> {
-
       cards?: boolean;
       gutters?: "xs" | "sm" | "md" | "lg";
     }

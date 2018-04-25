@@ -22,19 +22,33 @@ declare namespace Form {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       Group: FormGroup.Component;
+      GroupProps: FormGroup.Props;
       Label: FormLabel.Component;
+      LabelProps: FormLabel.Props;
       Input: FormInput.Component;
+      InputProps: FormInput.Props;
       StaticText: FormStaticText.Component;
+      StaticTextProps: FormStaticText.Props;
       Textarea: FormTextarea.Component;
+      TextareaProps: FormTextarea.Props;
       ImageCheck: FormImageCheck.Component;
+      ImageCheckProps: FormImageCheck.Props;
       ImageCheckItem: FormImageCheckItem.Component;
+      ImageCheckItemProps: FormImageCheckItem.Props;
       ColorCheck: FormColorCheck.Component;
+      ColorCheckProps: FormColorCheck.Props;
       ColorCheckItem: FormColorCheckItem.Component;
+      ColorCheckItemProps: FormColorCheckItem.Props;
       InputGroup: FormInputGroup.Component;
+      InputGroupProps: FormInputGroup.Props;
       Help: FormHelp.Component;
+      HelpProps: FormHelp.Props;
       Select: FormSelect.Component;
+      SelectProps: FormSelect.Props;
       Footer: FormFooter.Component;
+      FooterProps: FormFooter.Props;
       Ratio: FormRatio.Component;
+      RatioProps: FormRatio.Props;
     }
 }
 declare const Form: Form.Component & Form.NestedComponents;

@@ -1,3 +1,3 @@
-import Dropdown from "./Dropdown";
+import Dropdown, { Props } from "./Dropdown";
 
-export { Dropdown as default };
+export { Dropdown as default, Props };

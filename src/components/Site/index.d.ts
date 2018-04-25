@@ -3,11 +3,18 @@ import SiteNavbar from "./SiteNavbar";
 import SiteLogo from "./SiteLogo";
 import SiteFooter from "./SiteFooter";
 
-const Site = {
-  Header: SiteHeader,
-  Navbar: SiteNavbar,
-  Logo: SiteLogo,
-  Footer: SiteFooter,
-};
+declare namespace Site {
+  interface NestedComponents {
+    Header: SiteHeader.Component,
+    HeaderProps: SiteHeader.Props,
+    Navbar: SiteNavbar.Component,
+    NavbarProps: SiteNavbar.Props,
+    Logo: SiteLogo.Component,
+    LogoProps: SiteLogo.Props,
+    Footer: SiteFooter.Component,
+    FooterProps: SiteFooter.Props,
+  }
+}
 
-export { Site as default };
+declare const Site: Site.NestedComponents;
+export = Site;

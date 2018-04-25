@@ -1,2 +1,2 @@
-import Progress from "./Progress";
-export { Progress as default };
+import Progress, { Props } from "./Progress";
+export { Progress as default, Props };

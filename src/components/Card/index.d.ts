@@ -1,3 +1,3 @@
-import Card from "./Card";
+import Card, { Props } from "./Card";
 
-export { Card as default };
+export { Card as default, Props };

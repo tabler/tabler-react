@@ -24,8 +24,9 @@ declare namespace Button {
     }
     type Props = IButtonProps<HTMLElement>; // TODO: not sure if `HTMLButtonElement`
     type Component = React.StatelessComponent<Props>;
-    interface NestedComponents {1
+    interface NestedComponents {
       List: ButtonList.Component;
+      ListProps: ButtonList.Props;
     }
 }
 declare const Button: Button.Component & Button.NestedComponents;

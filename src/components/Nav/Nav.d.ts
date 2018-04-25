@@ -14,10 +14,15 @@ declare namespace Nav {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       Item: NavItem.Component;
+      ItemProps: NavItem.Props;
       SubItem: NavSubItem.Component;
+      SubItemProps: NavSubItem.Props;
       Link: NavLink.Component;
+      LinkProps: NavLink.Props;
       Submenu: NavSubmenu.Component;
+      SubmenuProps: NavSubmenu.Props;
       SubmenuItem: NavSubmenuItem.Component;
+      SubmenuItemProps: NavSubmenuItem.Props;
     }
 }
 declare const Nav: Nav.Component & Nav.NestedComponents;

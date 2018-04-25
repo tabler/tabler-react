@@ -1,3 +1,3 @@
-import Badge from "./Badge";
+import Badge, { Props } from "./Badge";
 
-export { Badge as default };
+export { Badge as default, Props };

@@ -13,8 +13,11 @@ declare namespace Card {
     type Component = React.StatelessComponent<Props>;
     interface NestedComponents {
       Header: CardHeader.Component;
+      HeaderProps: CardHeader.Props;
       Body: CardBody.Component;
+      BodyProps: CardBody.Props;
       Title: CardTitle.Component;
+      TitleProps: CardTitle.Props;
     }
 }
 declare const Card: Card.Component & Card.NestedComponents;

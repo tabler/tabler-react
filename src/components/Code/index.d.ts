@@ -1,9 +1,14 @@
 import CodeExample from "./CodeExample";
 import CodeHighlight from "./CodeHighlight";
 
-const Code = {
-  Example: CodeExample,
-  Highlight: CodeHighlight,
-};
+declare namespace Code {
+  interface NestedComponents {
+    Example: CodeExample.Component,
+    ExampleProps: CodeExample.Props;
+    Highlight: CodeHighlight.Component,
+    HighlightProps: CodeHighlight.Props;
+  }
+}
 
-export { Code as default };
+declare const Code: Code.NestedComponents;
+export = Code;

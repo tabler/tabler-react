@@ -1,3 +1,3 @@
-import Page from "./Page";
+import Page, { Props } from "./Page";
 
-export { Page as default };
+export { Page as default, Props };
