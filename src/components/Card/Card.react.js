@@ -49,25 +49,25 @@ class Card extends React.PureComponent<Props, State> {
   static Status = CardStatus;
   static Alert = CardAlert;
 
-  handleCloseOnClick = () => {
+  handleCloseOnClick = (): void => {
     this.setState(s => ({
       isClosed: !s.isClosed,
     }));
   };
 
-  handleCollapseOnClick = () => {
+  handleCollapseOnClick = (): void => {
     this.setState(s => ({
       isCollapsed: !s.isCollapsed,
     }));
   };
 
-  handleFullscreenOnClick = () => {
+  handleFullscreenOnClick = (): void => {
     this.setState(s => ({
       isFullscreen: !s.isFullscreen,
     }));
   };
 
-  render() {
+  render(): React.Node {
     const {
       className,
       children,
