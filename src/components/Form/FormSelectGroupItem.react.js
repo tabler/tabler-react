@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Form, Icon } from "../";
+import { Icon } from "../";
 
 type Props = {|
   +className?: string,
@@ -31,14 +31,16 @@ function FormSelectGroupItem({
   return (
     <label className={classes}>
       {type === "checkbox" ? (
-        <Form.Checkbox
+        <input
+          type="checkbox"
           name={name}
           value={value}
           className="selectgroup-input"
           checked={checked}
         />
       ) : (
-        <Form.Radio
+        <input
+          type="radio"
           name={name}
           value={value}
           className="selectgroup-input"
