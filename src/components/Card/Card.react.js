@@ -9,6 +9,7 @@ import CardOptions from "./CardOptions.react";
 import CardOptionsItem from "./CardOptionsItem.react";
 import CardStatus from "./CardStatus.react";
 import CardAlert from "./CardAlert.react";
+import CardFooter from "./CardFooter.react";
 
 type Props = {|
   +children?: React.Node,
@@ -148,5 +149,9 @@ class Card extends React.PureComponent<Props, State> {
     }
   }
 }
+
+Card.Header = CardHeader;
+Card.Body = CardBody;
+Card.Title = CardTitle;
 
 export default Card;
