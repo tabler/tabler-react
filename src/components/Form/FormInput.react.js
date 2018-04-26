@@ -33,6 +33,7 @@ type Props = {|
 function FormInput(props: Props): React.Node {
   const {
     className,
+    name,
     icon,
     position = "prepend",
     valid,
@@ -64,6 +65,7 @@ function FormInput(props: Props): React.Node {
     <React.Fragment>
       {type === "checkbox" || type === "radio" ? (
         <input
+          name={name}
           className={classes}
           type={type}
           placeholder={placeholder}
@@ -75,6 +77,7 @@ function FormInput(props: Props): React.Node {
         />
       ) : (
         <input
+          name={name}
           className={classes}
           type={type}
           placeholder={placeholder}
