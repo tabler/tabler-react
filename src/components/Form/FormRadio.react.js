@@ -13,6 +13,7 @@ type Props = {|
   +disabled?: boolean,
   +readOnly?: boolean,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +isInline?: boolean,
 |};
 
 function FormRadio({
@@ -24,10 +25,15 @@ function FormRadio({
   disabled,
   readOnly,
   onChange,
+  isInline,
 }: Props): React.Node {
-  const classes = cn(className);
+  const classes = cn(
+    "custom-control custom-radio",
+    { "custom-control-inline": isInline },
+    className
+  );
   return (
-    <label className="custom-control custom-radio">
+    <label className={classes}>
       <Form.Input
         type="radio"
         name={name}

@@ -13,6 +13,7 @@ type Props = {|
   +disabled?: boolean,
   +readOnly?: boolean,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +isInline?: boolean,
 |};
 
 function FormCheckbox({
@@ -24,10 +25,15 @@ function FormCheckbox({
   disabled,
   readOnly,
   onChange,
+  isInline,
 }: Props): React.Node {
-  const classes = cn(className);
+  const classes = cn(
+    "custom-control custom-checkbox",
+    { "custom-control-inline": isInline },
+    className
+  );
   return (
-    <label className="custom-control custom-checkbox">
+    <label className={classes}>
       <Form.Input
         type="checkbox"
         name={name}
