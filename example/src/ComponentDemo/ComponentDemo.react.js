@@ -9,7 +9,7 @@ import { prism } from "react-syntax-highlighter/styles/prism";
 import reactElementToJSXString from "react-element-to-jsx-string";
 
 type Props = {|
-  +children?: React.Node,
+  +children: React.Element<any>,
   +className?: string,
 |};
 
