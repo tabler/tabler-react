@@ -348,7 +348,11 @@ function FormElements() {
             </ComponentDemo>
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
-            3
+            <ComponentDemo>
+              <Form.Group label="File input">
+                <Form.FileInput />
+              </Form.Group>
+            </ComponentDemo>
           </Grid.Col>
         </Grid.Row>
       </Page.Card>
