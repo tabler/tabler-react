@@ -73,19 +73,8 @@ const navBarItems: Array<navItem> = Array(
   { value: "Gallery", to: "/gallery", icon: "image" },
   {
     value: "Documentation",
-    to: "/docs/intro",
+    to: "/docs",
     icon: "file-text",
-    subItems: [
-      { value: "Alerts", to: "/docs/alerts" },
-      { value: "Avatars", to: "/docs/avatars" },
-      { value: "Buttons", to: "/docs/store" },
-      { value: "Cards", to: "/docs/blog" },
-      { value: "Charts", to: "/docs/maps" },
-      { value: "Colors", to: "/docs/icons" },
-      { value: "Form Components", to: "/docs/form-components" },
-      { value: "Tags", to: "/docs/tags" },
-      { value: "Typography", to: "/docs/typography" },
-    ],
   }
 );
 
