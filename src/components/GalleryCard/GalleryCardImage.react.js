@@ -11,7 +11,13 @@ type Props = {|
   +className?: string,
 |};
 
-function GalleryCardImage({ src, alt, href, rounded, className }: Props) {
+function GalleryCardImage({
+  src,
+  alt,
+  href,
+  rounded = true,
+  className,
+}: Props) {
   const aClasses = cn("mb-3");
 
   const imageClasses = cn(
