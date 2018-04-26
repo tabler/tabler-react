@@ -16,6 +16,7 @@ import FormHelp from "./FormHelp.react";
 import FormSelect from "./FormSelect.react";
 import FormFooter from "./FormFooter.react";
 import FormRatio from "./FormRatio.react";
+import FormRadio from "./FormRadio.react";
 
 type Props = {|
   +children?: React.Node,
@@ -41,5 +42,7 @@ Form.Help = FormHelp;
 Form.Select = FormSelect;
 Form.Footer = FormFooter;
 Form.Ratio = FormRatio;
+
+Form.Radio = FormRadio;
 
 export default Form;
