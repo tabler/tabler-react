@@ -6,7 +6,7 @@ import { Button } from "tabler-react";
 import "./ComponentDemo.css";
 import SyntaxHighlighter from "react-syntax-highlighter/prism";
 import { prism } from "react-syntax-highlighter/styles/prism";
-import jsxToString from "jsx-to-string";
+import reactElementToJSXString from "react-element-to-jsx-string";
 
 type Props = {|
   +children?: React.Node,
@@ -29,9 +29,9 @@ class ComponentDemo extends React.PureComponent<Props, State> {
   render() {
     const { className, children } = this.props;
     const { codeOpen } = this.state;
-    const classes = cn(`highlight`, className);
+    const classes = cn("ComponentDemo", className);
     return (
-      <div className="ComponentDemo">
+      <div className={classes}>
         <Button
           onClick={this.handleSourceButtonOnClick}
           size="sm"
@@ -45,7 +45,7 @@ class ComponentDemo extends React.PureComponent<Props, State> {
         {codeOpen && (
           <div className="highlight">
             <SyntaxHighlighter language="jsx" style={prism}>
-              {jsxToString(children)}
+              {reactElementToJSXString(children)}
             </SyntaxHighlighter>
           </div>
         )}
