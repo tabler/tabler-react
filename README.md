@@ -2,7 +2,7 @@
 
 > Work in progress React implementation of the [Tabler Dashboard UI Kit](https://github.com/tabler/tabler)
 
-[![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg) ![Mini size](https://img.shields.io/bundlephobia/min/react.svg)(https://www.npmjs.com/package/tabler-react) ![Mini gzipped size](https://img.shields.io/bundlephobia/minzip/react.svg)(https://www.npmjs.com/package/tabler-react)
+[![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg) ![Mini size](https://img.shields.io/bundlephobia/min/react.svg) ![Mini gzipped size](https://img.shields.io/bundlephobia/minzip/react.svg)
 
 **[View a demo](https://tabler.github.io/tabler-react/)**, **[track our progress towards version 1](https://github.com/tabler/tabler-react/projects/1)**, **[get involved](https://github.com/tabler/tabler-react/issues)** and **[chat to us on Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
 
