@@ -19,13 +19,14 @@ type FormStyle = {|
   +value?: string | number,
   +disabled?: boolean,
   +readOnly?: boolean,
+  +checked?: boolean,
 |};
 
 type Props = {|
   ...FormStyle,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +placeholder?: string,
-  +type?: "checkbox" | "text" | "email" | "password",
+  +type?: "checkbox" | "radio" | "text" | "email" | "password",
   +value?: string | number | boolean,
 |};
 
@@ -41,6 +42,7 @@ function FormInput(props: Props): React.Node {
     feedback,
     placeholder,
     value,
+    checked,
     onChange,
     disabled,
     readOnly,
@@ -48,9 +50,9 @@ function FormInput(props: Props): React.Node {
   const type = props.type || "text";
 
   const classes = cn(
-    "form-control",
     {
-      "custom-control-input": type === "checkbox",
+      "form-control": type !== "checkbox" && type !== "radio",
+      "custom-control-input": type === "checkbox" || type === "radio",
       "is-valid": valid,
       "state-valid": tick,
       "is-invalid": invalid,
@@ -60,12 +62,12 @@ function FormInput(props: Props): React.Node {
   );
   return !icon ? (
     <React.Fragment>
-      {type === "checkbox" ? (
+      {type === "checkbox" || type === "radio" ? (
         <input
           className={classes}
           type={type}
           placeholder={placeholder}
-          checked={value}
+          checked={checked}
           value={value}
           disabled={disabled}
           readOnly={readOnly}
