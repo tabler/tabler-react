@@ -1,5 +1,6 @@
-import DocsIntroPage from "./DocsIntroPage.react";
 import DocsPageWrapper from "./DocsPageWrapper.react";
 import DocsSidebar from "./DocsSidebar.react";
+import DocsIntroPage from "./DocsIntroPage.react";
+import DocsAlertsPage from "./DocsAlertsPage.react";
 
-export { DocsIntroPage, DocsPageWrapper, DocsSidebar };
+export { DocsPageWrapper, DocsSidebar, DocsIntroPage, DocsAlertsPage };
