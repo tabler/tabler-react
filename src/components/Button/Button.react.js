@@ -24,6 +24,7 @@ type Props = {|
   +target?: string,
   +isDropdownToggle?: boolean,
   +onClick?: (SyntheticMouseEvent<HTMLLinkElement>) => mixed,
+  +type?: "button" | "submit" | "reset",
 |};
 
 const Button = ({
@@ -45,6 +46,7 @@ const Button = ({
   href,
   target,
   onClick,
+  type,
 }: Props): React.Node => {
   const onClickHandler =
     onClick || ((event: SyntheticMouseEvent<HTMLLinkElement>) => true);
@@ -68,6 +70,7 @@ const Button = ({
   );
   const Component = RootComponent || "button";
   const extraProps = {
+    type,
     href,
     target,
     onClick: onClickHandler,
