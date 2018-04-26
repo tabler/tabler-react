@@ -22,7 +22,7 @@ function FormFileInput({
   readOnly,
   onChange,
 }: Props): React.Node {
-  const classes = cn(className);
+  const classes = cn("custom-file", className);
   return (
     <div className={classes}>
       <input
