@@ -252,6 +252,100 @@ function FormElements() {
                 <Form.Ratio step={5} min={0} max={50} defaultValue={15} />
               </Form.Group>
             </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Size">
+                <Form.SelectGroup>
+                  <Form.SelectGroupItem name="size" label="S" value="50" />
+                  <Form.SelectGroupItem name="size" label="M" value="100" />
+                  <Form.SelectGroupItem name="size" label="L" value="150" />
+                  <Form.SelectGroupItem name="size" label="XL" value="200" />
+                </Form.SelectGroup>
+              </Form.Group>
+            </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Icons input">
+                <Form.SelectGroup>
+                  <Form.SelectGroupItem
+                    name="device"
+                    icon="smartphone"
+                    value="smartphone"
+                  />
+                  <Form.SelectGroupItem
+                    name="device"
+                    icon="tablet"
+                    value="tablet"
+                  />
+                  <Form.SelectGroupItem
+                    name="device"
+                    icon="monitor"
+                    value="monitor"
+                  />
+                  <Form.SelectGroupItem name="device" icon="x" value="x" />
+                </Form.SelectGroup>
+              </Form.Group>
+            </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Icon input">
+                <Form.SelectGroup pills>
+                  <Form.SelectGroupItem name="weather" icon="sun" value="sun" />
+                  <Form.SelectGroupItem
+                    name="weather"
+                    icon="moon"
+                    value="moon"
+                  />
+                  <Form.SelectGroupItem
+                    name="weather"
+                    icon="cloud-rain"
+                    value="rain"
+                  />
+                  <Form.SelectGroupItem
+                    name="weather"
+                    icon="cloud"
+                    value="cloud"
+                  />
+                </Form.SelectGroup>
+              </Form.Group>
+            </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Your skills">
+                <Form.SelectGroup pills canSelectMultiple>
+                  <Form.SelectGroupItem
+                    name="language"
+                    label="HTML"
+                    value="HTML"
+                  />
+                  <Form.SelectGroupItem
+                    name="language"
+                    label="CSS"
+                    value="CSS"
+                  />
+                  <Form.SelectGroupItem
+                    name="language"
+                    label="JavaScript"
+                    value="JavaScript"
+                  />
+                  <Form.SelectGroupItem
+                    name="language"
+                    label="Ruby"
+                    value="Ruby"
+                  />
+                  <Form.SelectGroupItem
+                    name="language"
+                    label="Python"
+                    value="Python"
+                  />
+                  <Form.SelectGroupItem
+                    name="language"
+                    label="C++"
+                    value="C++"
+                  />
+                </Form.SelectGroup>
+              </Form.Group>
+            </ComponentDemo>
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
             3
