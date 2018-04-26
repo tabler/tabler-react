@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from "react";
+import * as React from "react";
 
 import { Text, Header, Card, Icon } from "tabler-react";
 
@@ -9,7 +9,7 @@ import { prism } from "react-syntax-highlighter/styles/prism";
 import DocsPageWrapper from "./DocsPageWrapper.react";
 import ComponentDemo from "../ComponentDemo";
 
-function DocsIntroPage() {
+function DocsIntroPage(): React.Node {
   return (
     <DocsPageWrapper>
       <Header.H2>Introduction</Header.H2>
