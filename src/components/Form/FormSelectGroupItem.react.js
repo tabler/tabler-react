@@ -11,6 +11,7 @@ type Props = {|
   +name: string,
   +checked?: boolean,
   +icon?: string,
+  +type?: "radio" | "checkbox",
 |};
 
 function FormSelectGroupItem({
@@ -20,6 +21,7 @@ function FormSelectGroupItem({
   value,
   checked,
   icon,
+  type,
 }: Props): React.Node {
   const classes = cn({ "selectgroup-item": true }, className);
   const btnClasses = cn("selectgroup-button", {
@@ -28,12 +30,21 @@ function FormSelectGroupItem({
   const outputLabel = icon ? <Icon name={icon} /> : label;
   return (
     <label className={classes}>
-      <Form.Radio
-        name={name}
-        value={value}
-        className="selectgroup-input"
-        checked={checked}
-      />
+      {type === "checkbox" ? (
+        <Form.Checkbox
+          name={name}
+          value={value}
+          className="selectgroup-input"
+          checked={checked}
+        />
+      ) : (
+        <Form.Radio
+          name={name}
+          value={value}
+          className="selectgroup-input"
+          checked={checked}
+        />
+      )}
       <span className={btnClasses}>{outputLabel}</span>
     </label>
   );
