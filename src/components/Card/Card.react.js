@@ -27,6 +27,7 @@ type Props = {|
   +statusSide?: boolean,
   +alert?: React.Node,
   +alertColor?: string,
+  +footer?: string,
 |};
 
 type State = {|
@@ -49,6 +50,7 @@ class Card extends React.PureComponent<Props, State> {
   static OptionsItem = CardOptionsItem;
   static Status = CardStatus;
   static Alert = CardAlert;
+  static Footer = CardFooter;
 
   handleCloseOnClick = (): void => {
     this.setState(s => ({
@@ -83,6 +85,7 @@ class Card extends React.PureComponent<Props, State> {
       statusSide,
       alert,
       alertColor,
+      footer,
     } = this.props;
     const { isClosed, isCollapsed, isFullscreen } = this.state;
     if (isClosed) {
@@ -135,6 +138,8 @@ class Card extends React.PureComponent<Props, State> {
 
     const card_body = body && <Card.Body>{body}</Card.Body>;
 
+    const card_footer = footer && <Card.Footer>{footer}</Card.Footer>;
+
     if (card_header !== null || card_body !== null) {
       return (
         <Component className={classes}>
@@ -142,6 +147,7 @@ class Card extends React.PureComponent<Props, State> {
           {card_header}
           {card_alert}
           {card_body || children}
+          {card_footer}
         </Component>
       );
     } else {
@@ -149,9 +155,5 @@ class Card extends React.PureComponent<Props, State> {
     }
   }
 }
-
-Card.Header = CardHeader;
-Card.Body = CardBody;
-Card.Title = CardTitle;
 
 export default Card;
