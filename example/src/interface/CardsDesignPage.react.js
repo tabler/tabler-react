@@ -12,15 +12,16 @@ function CardsDesignPage(): React.Node {
       <Page.Content>
         <Grid.Row>
           <Grid.Col md={6} xl={4}>
-            <Card title="This is a standard card" isCollapsible isClosable>
-              <Card.Body>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aperiam deleniti fugit incidunt, iste, itaque minima neque
-                pariatur perferendis sed suscipit velit vitae voluptatem. A
-                consequuntur, deserunt eaque error nulla temporibus!
-              </Card.Body>
-              <div className="card-footer">This is standard card footer</div>
-            </Card>
+            <Card
+              title="This is a standard card"
+              isCollapsible
+              isClosable
+              body="Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aperiam deleniti fugit incidunt, iste, itaque minima neque
+            pariatur perferendis sed suscipit velit vitae voluptatem. A
+            consequuntur, deserunt eaque error nulla temporibus!"
+              footer="This is standard card footer"
+            />
           </Grid.Col>
           <Grid.Col md={6} xl={4}>
             <Card

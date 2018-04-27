@@ -16,10 +16,12 @@ import FormHelp from "./FormHelp.react";
 import FormSelect from "./FormSelect.react";
 import FormFooter from "./FormFooter.react";
 import FormRatio from "./FormRatio.react";
+import FormFieldSet from "./FormFieldSet.react";
 import FormRadio from "./FormRadio.react";
 import FormCheckbox from "./FormCheckbox.react";
 import FormSelectGroup from "./FormSelectGroup.react";
 import FormSelectGroupItem from "./FormSelectGroupItem.react";
+import FormFileInput from "./FormFileInput.react";
 
 type Props = {|
   +children?: React.Node,
@@ -45,9 +47,11 @@ Form.Help = FormHelp;
 Form.Select = FormSelect;
 Form.Footer = FormFooter;
 Form.Ratio = FormRatio;
+Form.FieldSet = FormFieldSet;
 Form.SelectGroup = FormSelectGroup;
 Form.SelectGroupItem = FormSelectGroupItem;
 Form.Radio = FormRadio;
 Form.Checkbox = FormCheckbox;
+Form.FileInput = FormFileInput;
 
 export default Form;
