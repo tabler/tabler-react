@@ -21,7 +21,7 @@ function GalleryCardDetails({
   imagePostDateString,
 }: Props) {
   //classes
-  const classes = cn("d-flex", "align-items-center", "px-2");
+
   const avatarClasses = cn("mr-3");
   const imagePostDateClasses = cn("d-block text-muted");
 
@@ -44,11 +44,11 @@ function GalleryCardDetails({
   );
 
   return (
-    <div className={classes}>
+    <React.Fragment>
       {avatarURL && avatar}
       {hasOtherDetails && otherDetails}
       {children}
-    </div>
+    </React.Fragment>
   );
 }
 
