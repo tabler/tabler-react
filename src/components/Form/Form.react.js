@@ -21,6 +21,7 @@ import FormRadio from "./FormRadio.react";
 import FormCheckbox from "./FormCheckbox.react";
 import FormSelectGroup from "./FormSelectGroup.react";
 import FormSelectGroupItem from "./FormSelectGroupItem.react";
+import FormFileInput from "./FormFileInput.react";
 
 type Props = {|
   +children?: React.Node,
@@ -51,5 +52,6 @@ Form.SelectGroup = FormSelectGroup;
 Form.SelectGroupItem = FormSelectGroupItem;
 Form.Radio = FormRadio;
 Form.Checkbox = FormCheckbox;
+Form.FileInput = FormFileInput;
 
 export default Form;
