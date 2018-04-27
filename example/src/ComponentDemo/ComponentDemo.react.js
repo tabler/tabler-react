@@ -6,7 +6,7 @@ import { Button } from "tabler-react";
 import "./ComponentDemo.css";
 import SyntaxHighlighter from "react-syntax-highlighter/prism";
 import { prism } from "react-syntax-highlighter/styles/prism";
-import reactElementToJSXString from "react-element-to-jsx-string";
+import reactElementToJSXString from "./react-element-to-jsx-string";
 
 type Props = {|
   +children: React.Element<any>,
