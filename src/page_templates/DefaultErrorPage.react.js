@@ -16,7 +16,7 @@ type Props = {|
 
 function DefaultErrorPage(props: Props): React.Node {
   const _onBackClick = (
-    event: SyntheticMouseEvent<HTMLLinkElement>
+    event: SyntheticMouseEvent<HTMLInputElement>
   ): boolean => {
     window.history.back();
     event.preventDefault();

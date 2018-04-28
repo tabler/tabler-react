@@ -21,7 +21,7 @@ class ComponentDemo extends React.PureComponent<Props, State> {
   state = {
     codeOpen: false,
   };
-  handleSourceButtonOnClick = (e: SyntheticMouseEvent<HTMLLinkElement>) => {
+  handleSourceButtonOnClick = (e: SyntheticMouseEvent<HTMLInputElement>) => {
     e.preventDefault();
     this.setState(s => ({ codeOpen: !s.codeOpen }));
   };

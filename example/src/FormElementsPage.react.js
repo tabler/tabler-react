@@ -129,7 +129,11 @@ function FormElements() {
                 <Form.InputGroup>
                   <Form.Input placeholder="Search for..." />
                   <Form.InputGroup append>
-                    <Button color="primary" href="http://www.google.com">
+                    <Button
+                      RootComponent="a"
+                      color="primary"
+                      href="http://www.google.com"
+                    >
                       Go!
                     </Button>
                   </Form.InputGroup>
