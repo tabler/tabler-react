@@ -2,7 +2,16 @@
 
 import React from "react";
 
-import { Container, Grid, Card, Header, Button, Icon } from "tabler-react";
+import {
+  Container,
+  Grid,
+  Card,
+  Header,
+  Button,
+  Icon,
+  Form,
+  Avatar,
+} from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
 
@@ -34,43 +43,45 @@ function Profile() {
                   />
                 </Card.Body>
               </Card>
-              {/* <div className="card">
-              <div className="card-header">
-                <h3 className="card-title">My Profile</h3>
-              </div>
-              <div className="card-body">
-                <form>
-                  <div className="row">
-                    <div className="col-auto">
-                      <span className="avatar avatar-xl"
-                        // style="background-image: url(demo/faces/female/9.jpg)"
-                        ></span>
-                    </div>
-                    <div className="col">
-                      <div className="form-group">
-                        <label className="form-label">Email-Address</label>
-                        <input className="form-control" placeholder="your-email@domain.com"/>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Bio</label>
-                    <textarea className="form-control" rows="5">Big belly rude boy, million dollar hustler. Unemployed.</textarea>
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Email-Address</label>
-                    <input className="form-control" placeholder="your-email@domain.com"/>
-                  </div>
-                  <div className="form-group">
-                    <label className="form-label">Password</label>
-                    <input type="password" className="form-control" value="password"/>
-                  </div>
-                  <div className="form-footer">
-                    <button className="btn btn-primary btn-block">Save</button>
-                  </div>
-                </form>
-              </div>
-            </div> */}
+              <Card>
+                <Card.Header>
+                  <Card.Title>My Profile</Card.Title>
+                </Card.Header>
+                <Card.Body>
+                  <Form>
+                    <Grid.Row>
+                      <Grid.Col auto>
+                        <Avatar size="xl" imageURL="demo/faces/female/9.jpg" />
+                      </Grid.Col>
+                      <Grid.Col>
+                        <Form.Group>
+                          <Form.Label>Email-Address</Form.Label>
+                          <Form.Input placeholder="your-email@domain.com" />
+                        </Form.Group>
+                      </Grid.Col>
+                    </Grid.Row>
+                    <Form.Group>
+                      <Form.Label>Bio</Form.Label>
+                      <Form.Textarea rows="5">
+                        Big belly rude boy, million dollar hustler. Unemployed.
+                      </Form.Textarea>
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label>Email-Address</Form.Label>
+                      <Form.Input placeholder="your-email@domain.com" />
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label>Password</Form.Label>
+                      <Form.Input type="password" value="Password" />
+                    </Form.Group>
+                    <Form.Footer>
+                      <Button color="primary" block>
+                        Save
+                      </Button>
+                    </Form.Footer>
+                  </Form>
+                </Card.Body>
+              </Card>
             </Grid.Col>
             {/* <div className="col-lg-8">
             <div className="card">
