@@ -5,7 +5,7 @@ import cn from "classnames";
 import { Icon } from "../";
 import ButtonList from "./ButtonList.react";
 
-type Props = {|
+type PropsForAll = {|
   +size?: "sm" | "lg",
   +outline?: boolean,
   +link?: boolean,
@@ -19,37 +19,54 @@ type Props = {|
   +icon?: string,
   +social?: string,
   +loading?: boolean,
-  +RootComponent?: React.ElementType,
-  +href?: string,
-  +target?: string,
   +isDropdownToggle?: boolean,
-  +onClick?: (SyntheticMouseEvent<HTMLLinkElement>) => mixed,
-  +type?: "button" | "submit" | "reset",
+  +to?: string,
 |};
 
-const Button = ({
-  size = "",
-  outline,
-  link,
-  block,
-  className,
-  children,
-  disabled,
-  color = "",
-  square,
-  pill,
-  icon,
-  social = "",
-  loading,
-  isDropdownToggle,
-  RootComponent,
-  href,
-  target,
-  onClick,
-  type,
-}: Props): React.Node => {
-  const onClickHandler =
-    onClick || ((event: SyntheticMouseEvent<HTMLLinkElement>) => true);
+type DefaultButtonComponent = {|
+  ...PropsForAll,
+  +RootComponent?: "button",
+  +type?: "button" | "submit" | "reset",
+  +value?: string,
+  +onClick?: (event: SyntheticMouseEvent<HTMLInputElement>) => mixed,
+|};
+
+type BtnAComponent = {|
+  ...PropsForAll,
+  +RootComponent: "a",
+  +href?: string,
+  +target?: string,
+  +onClick?: (SyntheticMouseEvent<HTMLLinkElement>) => mixed,
+|};
+
+type BtnInputComponent = {|
+  ...PropsForAll,
+  +RootComponent: "input",
+  +type?: "button" | "submit" | "reset",
+  +value?: string,
+  +onClick?: (SyntheticMouseEvent<HTMLInputElement>) => mixed,
+|};
+
+type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
+
+const Button = (props: Props): React.Node => {
+  const {
+    size = "",
+    outline,
+    link,
+    block,
+    className,
+    children,
+    disabled,
+    color = "",
+    square,
+    pill,
+    icon,
+    social = "",
+    loading,
+    isDropdownToggle,
+  } = props;
+
   const classes = cn(
     {
       btn: true,
@@ -68,29 +85,58 @@ const Button = ({
     },
     className
   );
-  const Component = RootComponent || "button";
-  const extraProps = {
-    type,
-    href,
-    target,
-    onClick: onClickHandler,
+
+  const propsForAll = {
+    className: classes,
+    disabled: disabled,
     "data-toggle": isDropdownToggle && "dropdown",
   };
 
-  return Component === "input" ? (
-    <Component className={classes} disabled={disabled} {...extraProps}>
-      {children}
-    </Component>
-  ) : (
-    <Component className={classes} disabled={disabled} {...extraProps}>
+  const childrenForAll = (
+    <React.Fragment>
       {social ? (
         <Icon name={social} prefix="fa" className={children ? "mr-2" : ""} />
       ) : icon ? (
         <Icon name={icon} className={children ? "mr-2" : ""} />
       ) : null}
       {children}
-    </Component>
+    </React.Fragment>
   );
+
+  if (!props.RootComponent || props.RootComponent === "button") {
+    const { type, value, onClick } = props;
+    return (
+      <button {...propsForAll} type={type} value={value} onClick={onClick}>
+        {childrenForAll}
+      </button>
+    );
+  } else if (props.RootComponent === "input") {
+    const { type, value, onClick } = props;
+
+    return (
+      <input {...propsForAll} type={type} value={value} onClick={onClick}>
+        {childrenForAll}
+      </input>
+    );
+  } else if (props.RootComponent === "a") {
+    const { href, target, onClick } = props;
+
+    return (
+      <a {...propsForAll} href={href} target={target} onClick={onClick}>
+        {childrenForAll}
+      </a>
+    );
+  } else {
+    const { onClick, to } = props;
+
+    const Component: React.ElementType = props.RootComponent;
+
+    return (
+      <Component {...propsForAll} to={to} onClick={onClick}>
+        {childrenForAll}
+      </Component>
+    );
+  }
 };
 
 Button.List = ButtonList;
