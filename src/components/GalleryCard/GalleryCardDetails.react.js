@@ -10,7 +10,7 @@ type Props = {|
   +children?: React.Node,
   +avatarURL?: string,
   +fullName?: string,
-  +imagePostDateString?: string,
+  +dateString?: string,
 |};
 
 function GalleryCardDetails({
@@ -19,7 +19,7 @@ function GalleryCardDetails({
   avatarURL,
   fullName,
   imagePostDateString,
-}: Props) {
+}: Props):React.Node {
   //classes
 
   const avatarClasses = cn("mr-3");
@@ -51,5 +51,7 @@ function GalleryCardDetails({
     </React.Fragment>
   );
 }
+
+GalleryCardDetails.displayName="GalleryCard.Details";
 
 export default GalleryCardDetails;
