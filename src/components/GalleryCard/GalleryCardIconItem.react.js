@@ -10,27 +10,50 @@ type Props = {
   +name: string,
   +href?: string,
   +right?: boolean,
+  +to?: string,
+  +RootComponent?: React.ElementType,
 };
 
-function GalleryCardIconItem({ className, label, name, href, right }: Props) {
-  const iconRightClass = "d-none d-md-inline-block ml-3";
-  const aClasses = !right
+function GalleryCardIconItem({
+  className,
+  label,
+  name,
+  href,
+  right,
+  to,
+  RootComponent,
+}: Props): React.Node {
+  const positionRightClasses = "d-none d-md-inline-block ml-3";
+  const componentClasses = !right
     ? cn("icon", className)
-    : cn("icon", iconRightClass, className);
+    : cn("icon", positionRightClasses, className);
 
   const iconClasses = cn("mr-1");
+
+  const childrenForAll = (
+    <React.Fragment>
+      <Icon name={name} className={iconClasses} />
+      {label}
+    </React.Fragment>
+  );
+
   const extraProps = {};
 
   if (href) {
     extraProps.href = href;
   }
 
-  return (
-    <a className={aClasses} {...extraProps}>
-      <Icon name={name} className={iconClasses} />
-      {label}
+  return RootComponent ? (
+    <RootComponent className={componentClasses} to={to}>
+      {childrenForAll}
+    </RootComponent>
+  ) : (
+    <a className={componentClasses} {...extraProps}>
+      {childrenForAll}
     </a>
   );
 }
+
+GalleryCardIconItem.displayName = "GalleryCard.IconItem";
 
 export default GalleryCardIconItem;
