@@ -5,6 +5,7 @@ import DocsAlertsPage from "./DocsAlertsPage.react";
 import DocsButtonsPage from "./DocsButtonsPage.react";
 import DocsAvatarsPage from "./DocsAvatarsPage.react";
 import DocsCardsPage from "./DocsCardsPage.react";
+import DocsFormComponentsPage from "./DocsFormComponentsPage.react";
 
 export {
   DocsPageWrapper,
@@ -13,5 +14,6 @@ export {
   DocsAlertsPage,
   DocsButtonsPage,
   DocsAvatarsPage,
-  DocsCardsPage
+  DocsCardsPage,
+  DocsFormComponentsPage,
 };
