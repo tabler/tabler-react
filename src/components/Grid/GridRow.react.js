@@ -7,6 +7,7 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +cards?: boolean,
+  +deck?: boolean,
   +gutters?: "xs" | "sm" | "md" | "lg",
   +alignItems?: string,
 |};
@@ -14,7 +15,8 @@ type Props = {|
 function GridRow({
   className,
   children,
-  cards = false,
+  cards,
+  deck,
   gutters = "",
   alignItems = "",
 }: Props): React.Node {
@@ -23,6 +25,7 @@ function GridRow({
     {
       row: true,
       "row-cards": cards,
+      "row-deck": deck,
       [`gutters-${gutters}`]: gutters,
       [`align-items-${alignItems}`]: alignItems,
     },
