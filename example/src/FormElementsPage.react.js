@@ -255,7 +255,6 @@ function FormElements() {
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
             <ComponentDemo>
-
               <Form.Group label="Radios">
                 <Form.Radio
                   name="example-radios"
@@ -280,7 +279,9 @@ function FormElements() {
                   label="Option 4 disabled checked"
                   value="option4"
                 />
-
+              </Form.Group>
+            </ComponentDemo>
+            <ComponentDemo>
               <Form.FieldSet>
                 <Form.Group label="Full name" isRequired>
                   <Form.Input name="example-text-input" />
@@ -295,7 +296,8 @@ function FormElements() {
                   <Form.Input name="example-text-input" />
                 </Form.Group>
               </Form.FieldSet>
-    
+            </ComponentDemo>
+            <ComponentDemo>
               <Form.Group label="Size">
                 <Form.SelectGroup>
                   <Form.SelectGroupItem name="size" label="S" value="50" />
@@ -303,7 +305,6 @@ function FormElements() {
                   <Form.SelectGroupItem name="size" label="L" value="150" />
                   <Form.SelectGroupItem name="size" label="XL" value="200" />
                 </Form.SelectGroup>
-
               </Form.Group>
             </ComponentDemo>
             <ComponentDemo>
