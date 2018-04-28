@@ -22,34 +22,9 @@ type Props = {|
   +avatarSize?: string,
 |};
 
-function Media({
-  className,
-  children,
-  name,
-  workTitle,
-  avatarURL,
-  facebook = "",
-  twitter = "",
-  phone = "",
-  skype = "",
-  avatarSize = "xxl",
-}: Props): React.Node {
+function Media({ className, children }: Props): React.Node {
   const classes = cn("media", className);
-  return (
-    <div className={classes}>
-      <Avatar size={avatarSize} className="mr-5" imageURL={avatarURL} />
-      <MediaBody
-        name={name}
-        workTitle={workTitle}
-        facebook={facebook}
-        twitter={twitter}
-        phone={phone}
-        skype={skype}
-      >
-        {children}
-      </MediaBody>
-    </div>
-  );
+  return <div className={classes}>{children}</div>;
 }
 
 Media.Body = MediaBody;
