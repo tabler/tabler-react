@@ -5,6 +5,10 @@ import cn from "classnames";
 import CardHeader from "./CardHeader.react";
 import CardTitle from "./CardTitle.react";
 import CardBody from "./CardBody.react";
+import CardProfile from "./CardProfile.react";
+import CardMedia from "./CardMedia.react";
+import CardMediaBody from "./CardMediaBody.react";
+import CardProfileImage from "./CardProfileImage.react";
 
 type Props = {|
   +children?: React.Node,
@@ -46,5 +50,9 @@ function Card({
 Card.Header = CardHeader;
 Card.Body = CardBody;
 Card.Title = CardTitle;
+Card.Profile = CardProfile;
+Card.ProfileImage = CardProfileImage;
+Card.Media = CardMedia;
+Card.MediaBody = CardMediaBody;
 
 export default Card;
