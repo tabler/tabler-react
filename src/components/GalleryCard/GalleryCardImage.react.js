@@ -9,6 +9,8 @@ type Props = {|
   +href?: string,
   +rounded?: boolean,
   +className?: string,
+  +to?: string,
+  +RootComponent?: React.ElementType,
 |};
 
 function GalleryCardImage({
@@ -17,8 +19,10 @@ function GalleryCardImage({
   href,
   rounded = true,
   className,
-}: Props) {
-  const aClasses = cn("mb-3");
+  to,
+  RootComponent,
+}: Props): React.Node {
+  const componentClasses = cn("mb-3");
 
   const imageClasses = cn(
     {
@@ -27,17 +31,24 @@ function GalleryCardImage({
     className
   );
 
-  const aOptionalProps = {};
+  const componentOptionalProps = {};
 
   if (href) {
-    aOptionalProps.href = href;
+    componentOptionalProps.href = href;
   }
 
-  return (
-    <a className={aClasses} {...aOptionalProps}>
-      <img src={src} alt={alt} className={imageClasses} />
+  const image = <img src={src} alt={alt} className={imageClasses} />;
+  return RootComponent ? (
+    <RootComponent className={componentClasses} to={to}>
+      {image}
+    </RootComponent>
+  ) : (
+    <a className={componentClasses} {...componentOptionalProps}>
+      {image}
     </a>
   );
 }
+
+GalleryCardImage.displayName = "GalleryCard.Image";
 
 export default GalleryCardImage;
