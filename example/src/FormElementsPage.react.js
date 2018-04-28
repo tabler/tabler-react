@@ -256,31 +256,31 @@ function FormElements() {
           <Grid.Col md={6} lg={4}>
             <ComponentDemo>
               <Form.Group label="Toggle switches">
-                <Form.ToggleStack>
-                  <Form.Toggle
+                <Form.SwitchStack>
+                  <Form.Switch
                     type="radio"
                     name="toggle"
                     value="option1"
                     label="Option 1"
                   />
-                  <Form.Toggle
+                  <Form.Switch
                     type="radio"
                     name="toggle"
                     value="option2"
                     label="Option 2"
                   />
-                  <Form.Toggle
+                  <Form.Switch
                     type="radio"
                     name="toggle"
                     value="option3"
                     label="Option 3"
                   />
-                </Form.ToggleStack>
+                </Form.SwitchStack>
               </Form.Group>
             </ComponentDemo>
             <ComponentDemo>
               <Form.Group label="Toggle switch single">
-                <Form.Toggle
+                <Form.Switch
                   name="tandcs"
                   value="tandcs"
                   label="I agree with terms and conditions"

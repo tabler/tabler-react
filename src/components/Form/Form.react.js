@@ -22,8 +22,8 @@ import FormCheckbox from "./FormCheckbox.react";
 import FormSelectGroup from "./FormSelectGroup.react";
 import FormSelectGroupItem from "./FormSelectGroupItem.react";
 import FormFileInput from "./FormFileInput.react";
-import FormToggleStack from "./FornToggleStack.react";
-import FormToggle from "./FormToggle.react";
+import FormSwitchStack from "./FormSwitchStack.react";
+import FormSwitch from "./FormSwitch.react";
 
 type Props = {|
   +children?: React.Node,
@@ -55,7 +55,7 @@ Form.SelectGroupItem = FormSelectGroupItem;
 Form.Radio = FormRadio;
 Form.Checkbox = FormCheckbox;
 Form.FileInput = FormFileInput;
-Form.ToggleStack = FormToggleStack;
-Form.Toggle = FormToggle;
+Form.SwitchStack = FormSwitchStack;
+Form.Switch = FormSwitch;
 
 export default Form;
