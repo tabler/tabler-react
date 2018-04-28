@@ -19,7 +19,7 @@ function GalleryCardDetails({
   avatarURL,
   fullName,
   imagePostDateString,
-}: Props):React.Node {
+}: Props): React.Node {
   //classes
 
   const avatarClasses = cn("mr-3");
@@ -32,7 +32,7 @@ function GalleryCardDetails({
   const avatar = (
     <Avatar imageURL={avatarURL} size="md" className={avatarClasses} />
   );
-
+  // TODO: The following could be a seperate component
   const otherDetails = (
     <div>
       <div>{fullName}</div>
@@ -52,6 +52,6 @@ function GalleryCardDetails({
   );
 }
 
-GalleryCardDetails.displayName="GalleryCard.Details";
+GalleryCardDetails.displayName = "GalleryCard.Details";
 
 export default GalleryCardDetails;
