@@ -10,7 +10,7 @@ type Props = {|
 
 function MediaList({ className, children }: Props): React.Node {
   const classes = cn("media-list", className);
-  return <div className={classes}>{children}</div>;
+  return <ul className={classes}>{children}</ul>;
 }
 
 export default MediaList;
