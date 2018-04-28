@@ -355,24 +355,6 @@ function FormElements() {
             </ComponentDemo>
 
             <ComponentDemo>
-              <Form.FieldSet>
-                <Form.Group label="Full name" isRequired>
-                  <Form.Input name="example-text-input" />
-                </Form.Group>
-                <Form.Group label="Company" isRequired>
-                  <Form.Input name="example-text-input" />
-                </Form.Group>
-                <Form.Group label="Email" isRequired>
-                  <Form.Input name="example-text-input" />
-                </Form.Group>
-                <Form.Group label="Phone number" className="mb-0">
-                  <Form.Input name="example-text-input" />
-                </Form.Group>
-              </Form.FieldSet>
-            </ComponentDemo>
-          </Grid.Col>
-          <Grid.Col md={6} lg={4}>
-            <ComponentDemo>
               <Form.Group label="Toggle switches">
                 <Form.SwitchStack>
                   <Form.Switch
@@ -405,6 +387,25 @@ function FormElements() {
                 />
               </Form.Group>
             </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.FieldSet>
+                <Form.Group label="Full name" isRequired>
+                  <Form.Input name="example-text-input" />
+                </Form.Group>
+                <Form.Group label="Company" isRequired>
+                  <Form.Input name="example-text-input" />
+                </Form.Group>
+                <Form.Group label="Email" isRequired>
+                  <Form.Input name="example-text-input" />
+                </Form.Group>
+                <Form.Group label="Phone number" className="mb-0">
+                  <Form.Input name="example-text-input" />
+                </Form.Group>
+              </Form.FieldSet>
+            </ComponentDemo>
+          </Grid.Col>
+          <Grid.Col md={6} lg={4}>
             <ComponentDemo>
               <Form.Group label="Radios">
                 <Form.Radio
