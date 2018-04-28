@@ -2,8 +2,12 @@
 
 import * as React from "react";
 import cn from "classnames";
-import ProfileMediaBody from "./ProfileMediaBody.react";
 import { Avatar } from "../../components";
+
+import MediaBody from "./MediaBody.react";
+import MediaHeading from "./MediaHeading.react";
+import MediaList from "./MediaList.react";
+import MediaObject from "./MediaObject.react";
 
 type Props = {|
   +children?: React.Node,
@@ -15,9 +19,10 @@ type Props = {|
   +twitter?: string,
   +phone?: string,
   +skype?: string,
+  +avatarSize?: string,
 |};
 
-function ProfileMedia({
+function Media({
   className,
   children,
   name,
@@ -27,12 +32,13 @@ function ProfileMedia({
   twitter = "",
   phone = "",
   skype = "",
+  avatarSize = "xxl",
 }: Props): React.Node {
   const classes = cn("media", className);
   return (
     <div className={classes}>
-      <Avatar size="xxl" className="mr-5" imageURL={avatarURL} />
-      <ProfileMediaBody
+      <Avatar size={avatarSize} className="mr-5" imageURL={avatarURL} />
+      <MediaBody
         name={name}
         workTitle={workTitle}
         facebook={facebook}
@@ -41,9 +47,14 @@ function ProfileMedia({
         skype={skype}
       >
         {children}
-      </ProfileMediaBody>
+      </MediaBody>
     </div>
   );
 }
 
-export default ProfileMedia;
+Media.Body = MediaBody;
+Media.Heading = MediaHeading;
+Media.List = MediaList;
+Media.Object = MediaObject;
+
+export default Media;

@@ -5,7 +5,6 @@ import cn from "classnames";
 
 import { Card, Header, Button, Icon } from "../../components";
 
-import ProfileMedia from "./ProfileMedia.react";
 import ProfileImage from "./ProfileImage.react";
 
 type Props = {|
@@ -41,7 +40,6 @@ function Profile({
   );
 }
 
-Profile.Media = ProfileMedia;
 Profile.Image = ProfileImage;
 
 export default Profile;

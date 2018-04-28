@@ -15,7 +15,7 @@ type Props = {|
   +skype?: string,
 |};
 
-function ProfileMediaBody({
+function MediaBody({
   className,
   children,
   name,
@@ -93,4 +93,4 @@ function ProfileMediaBody({
   );
 }
 
-export default ProfileMediaBody;
+export default MediaBody;
