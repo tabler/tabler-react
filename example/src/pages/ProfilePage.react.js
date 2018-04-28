@@ -6,9 +6,7 @@ import {
   Container,
   Grid,
   Card,
-  Header,
   Button,
-  Icon,
   Form,
   Avatar,
   Profile,
@@ -105,9 +103,11 @@ function ProfilePage() {
                 <List.Group className="card-list-group">
                   <List.GroupItem className="py-5">
                     <Media>
-                      <div
-                        className="media-object avatar avatar-md mr-4"
-                        // style="background-image: url(demo/faces/male/16.jpg)"
+                      <Media.Object
+                        avatar
+                        objectURL="demo/faces/male/16.jpg"
+                        size="md"
+                        className="mr-4"
                       />
                       <div className="media-body">
                         <div className="media-heading">
