@@ -18,4 +18,6 @@ function TableColHeader({ className, children, colSpan }: Props): React.Node {
   );
 }
 
+TableColHeader.displayName = "Table.ColHeader";
+
 export default TableColHeader;

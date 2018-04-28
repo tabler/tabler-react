@@ -13,4 +13,6 @@ function ListItem({ className, children }: Props): React.Node {
   return <li className={classes}>{children}</li>;
 }
 
+ListItem.displayName = "List.Item";
+
 export default ListItem;

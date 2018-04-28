@@ -52,4 +52,6 @@ function ListGroupItem({
   );
 }
 
+ListGroupItem.displayName = "List.GroupItem";
+
 export default ListGroupItem;

@@ -8,14 +8,23 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +label?: React.Node,
+  +isRequired?: boolean,
 |};
 
-function FormGroup({ className, children, label }: Props): React.Node {
+function FormGroup({
+  className,
+  children,
+  label,
+  isRequired,
+}: Props): React.Node {
   const classes = cn("form-group", className);
   return (
     <div className={classes}>
       {!label ? null : typeof label === "string" ? (
-        <FormLabel>{label}</FormLabel>
+        <FormLabel>
+          {label}
+          {isRequired && <span class="form-required">*</span>}
+        </FormLabel>
       ) : (
         label
       )}
@@ -23,5 +32,7 @@ function FormGroup({ className, children, label }: Props): React.Node {
     </div>
   );
 }
+
+FormGroup.displayName = "Form.Group";
 
 export default FormGroup;

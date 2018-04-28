@@ -17,4 +17,6 @@ function TableHeader({ className, children, ...props }: Props): React.Node {
   );
 }
 
+TableHeader.displayName = "Table.Header";
+
 export default TableHeader;

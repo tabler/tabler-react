@@ -11,4 +11,6 @@ function FormImageCheck({ className, children }: Props): React.Node {
   return <Grid.Row className={classes}>{children}</Grid.Row>;
 }
 
+FormImageCheck.displayName = "Form.ImageCheck";
+
 export default FormImageCheck;

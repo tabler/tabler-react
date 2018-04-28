@@ -13,4 +13,6 @@ function TableBody({ className, children, ...props }: Props): React.Node {
   );
 }
 
+TableBody.displayName = "Table.Body";
+
 export default TableBody;

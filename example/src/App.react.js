@@ -19,6 +19,16 @@ import {
 
 import HomePage from "./HomePage.react";
 import FormElementsPage from "./FormElementsPage.react";
+import PricingCardsPage from "./interface/PricingCardsPage.react";
+import CardsDesignPage from "./interface/CardsDesignPage.react";
+
+import {
+  DocsIntroPage,
+  DocsAlertsPage,
+  DocsButtonsPage,
+  DocsCardsPage,
+  DocsAvatarsPage,
+} from "./documentation";
 
 import "bootstrap";
 
@@ -31,6 +41,8 @@ function App(props: Props): React.Node {
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/cards" component={CardsDesignPage} />
+        <Route exact path="/pricing-cards" component={PricingCardsPage} />
         <Route exact path="/form-elements" component={FormElementsPage} />
         <Route exact path="/forgot-password" component={ForgotPasswordPage} />
         <Route exact path="/login" component={LoginPage} />
@@ -44,6 +56,11 @@ function App(props: Props): React.Node {
         <Route exact path="/empty-page" component={Empty} />
         <Route exact path="/email" component={Email} />
         <Route exact path="/profile" component={Profile} />
+        <Route exact path="/docs" component={DocsIntroPage} />
+        <Route exact path="/docs/alerts" component={DocsAlertsPage} />
+        <Route exact path="/docs/buttons" component={DocsButtonsPage} />
+        <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
+        <Route exact path="/docs/cards" component={DocsCardsPage} />
         <Route component={Error404} />
       </Switch>
     </Router>

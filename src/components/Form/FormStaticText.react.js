@@ -10,4 +10,6 @@ function FormStaticText({ className, children }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
+FormStaticText.displayName = "Form.StaticText";
+
 export default FormStaticText;

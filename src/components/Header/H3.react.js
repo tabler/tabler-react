@@ -18,4 +18,6 @@ function H3({ className, children }: Props): React.Node {
   );
 }
 
+H3.displayName = "Header.H3";
+
 export default H3;

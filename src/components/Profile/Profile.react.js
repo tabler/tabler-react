@@ -5,6 +5,9 @@ import cn from "classnames";
 
 import { Card, Header, Button, Icon } from "../../components";
 
+import ProfileMedia from "./ProfileMedia.react";
+import ProfileImage from "./ProfileImage.react";
+
 type Props = {|
   +children?: React.Node,
   +className?: string,
@@ -14,7 +17,7 @@ type Props = {|
   +backgroundURL?: string,
 |};
 
-function CardProfile({
+function Profile({
   className,
   children,
   name,
@@ -27,7 +30,7 @@ function CardProfile({
     <div className={classes}>
       <Card.Header backgroundURL={backgroundURL} />
       <Card.Body className="text-center">
-        <Card.ProfileImage avatarURL={avatarURL} />
+        <ProfileImage avatarURL={avatarURL} />
         <Header.H3 className="mb-3">{name}</Header.H3>
         <p className="mb-4">{children}</p>
         <Button outline color="primary" size="sm">
@@ -38,4 +41,7 @@ function CardProfile({
   );
 }
 
-export default CardProfile;
+Profile.Media = ProfileMedia;
+Profile.Image = ProfileImage;
+
+export default Profile;

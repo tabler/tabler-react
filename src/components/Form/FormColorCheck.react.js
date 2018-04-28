@@ -11,4 +11,6 @@ function FormColorCheck({ className, children }: Props): React.Node {
   return <Grid.Row className={classes}>{children}</Grid.Row>;
 }
 
+FormColorCheck.displayName = "Form.ColorCheck";
+
 export default FormColorCheck;

@@ -76,7 +76,12 @@ function Email() {
                   </List.GroupItem>
                 </List.Group>
                 <div className="mt-6">
-                  <Button href="/email" block={true} color="secondary">
+                  <Button
+                    RootComponent="a"
+                    href="/email"
+                    block={true}
+                    color="secondary"
+                  >
                     Compose new Email
                   </Button>
                 </div>

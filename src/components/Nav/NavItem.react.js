@@ -47,4 +47,6 @@ function NavItem({
   );
 }
 
+NavItem.displayName = "Nav.Item";
+
 export default NavItem;

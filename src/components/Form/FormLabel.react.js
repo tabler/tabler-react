@@ -15,4 +15,6 @@ function FormLabel({ className, aside, children }: Props): React.Node {
   );
 }
 
+FormLabel.displayName = "Form.Label";
+
 export default FormLabel;

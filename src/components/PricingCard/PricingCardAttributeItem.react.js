@@ -36,4 +36,6 @@ function PricingCardAttributeItem({
   );
 }
 
+PricingCardAttributeItem.displayName = "PricingCard.AttributeItem";
+
 export default PricingCardAttributeItem;

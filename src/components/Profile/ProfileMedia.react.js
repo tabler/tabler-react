@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
-import CardMediaBody from "./CardMediaBody.react";
+import ProfileMediaBody from "./ProfileMediaBody.react";
 import { Avatar } from "../../components";
 
 type Props = {|
@@ -17,7 +17,7 @@ type Props = {|
   +skype?: string,
 |};
 
-function CardMedia({
+function ProfileMedia({
   className,
   children,
   name,
@@ -46,4 +46,4 @@ function CardMedia({
   );
 }
 
-export default CardMedia;
+export default ProfileMedia;

@@ -13,4 +13,6 @@ function PricingCardAttributeList({ className, children }: Props): React.Node {
   return <ul className={classes}>{children}</ul>;
 }
 
+PricingCardAttributeList.displayName = "PricingCard.AttributeList";
+
 export default PricingCardAttributeList;

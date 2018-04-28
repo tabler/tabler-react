@@ -32,4 +32,6 @@ function CardHeader({
   );
 }
 
+CardHeader.displayName = "Card.Header";
+
 export default CardHeader;

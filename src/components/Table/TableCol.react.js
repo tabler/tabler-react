@@ -14,4 +14,6 @@ function TableCol({ className, children, ...props }: Props): React.Node {
   );
 }
 
+TableCol.displayName = "Table.Col";
+
 export default TableCol;
