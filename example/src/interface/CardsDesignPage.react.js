@@ -244,15 +244,7 @@ function CardsDesignPage(): React.Node {
               <Card.Header>
                 <Card.Title>Card with switch</Card.Title>
                 <Card.Options>
-                  <label className="custom-switch m-0">
-                    <input
-                      type="checkbox"
-                      value="1"
-                      className="custom-switch-input"
-                      checked
-                    />
-                    <span className="custom-switch-indicator" />
-                  </label>
+                  <Form.Switch value="1" className="m-0" />
                 </Card.Options>
               </Card.Header>
               <Card.Body>
