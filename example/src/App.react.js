@@ -24,6 +24,7 @@ import CardsDesignPage from "./interface/CardsDesignPage.react";
 import {
   DocsIntroPage,
   DocsAlertsPage,
+  DocsCardsPage,
   DocsAvatarsPage,
 } from "./documentation";
 
@@ -55,6 +56,7 @@ function App(props: Props): React.Node {
         <Route exact path="/docs" component={DocsIntroPage} />
         <Route exact path="/docs/alerts" component={DocsAlertsPage} />
         <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
+        <Route exact path="/docs/cards" component={DocsCardsPage} />
         <Route component={Error404} />
       </Switch>
     </Router>

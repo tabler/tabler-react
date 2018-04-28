@@ -3,6 +3,7 @@ import DocsSidebar from "./DocsSidebar.react";
 import DocsIntroPage from "./DocsIntroPage.react";
 import DocsAlertsPage from "./DocsAlertsPage.react";
 import DocsAvatarsPage from "./DocsAvatarsPage.react";
+import DocsCardsPage from "./DocsCardsPage.react";
 
 export {
   DocsPageWrapper,
@@ -10,4 +11,5 @@ export {
   DocsIntroPage,
   DocsAlertsPage,
   DocsAvatarsPage,
+  DocsCardsPage
 };
