@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Avatar } from "../../components";
 
 import MediaBody from "./MediaBody.react";
 import MediaHeading from "./MediaHeading.react";
