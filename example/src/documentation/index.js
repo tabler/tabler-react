@@ -2,6 +2,7 @@ import DocsPageWrapper from "./DocsPageWrapper.react";
 import DocsSidebar from "./DocsSidebar.react";
 import DocsIntroPage from "./DocsIntroPage.react";
 import DocsAlertsPage from "./DocsAlertsPage.react";
+import DocsAvatarsPage from "./DocsAvatarsPage.react";
 import DocsCardsPage from "./DocsCardsPage.react";
 
 export {
@@ -9,5 +10,6 @@ export {
   DocsSidebar,
   DocsIntroPage,
   DocsAlertsPage,
-  DocsCardsPage,
+  DocsAvatarsPage,
+  DocsCardsPage
 };
