@@ -21,7 +21,13 @@ import FormElementsPage from "./FormElementsPage.react";
 import PricingCardsPage from "./interface/PricingCardsPage.react";
 import CardsDesignPage from "./interface/CardsDesignPage.react";
 
-import { DocsIntroPage, DocsAlertsPage } from "./documentation";
+import {
+  DocsIntroPage,
+  DocsAlertsPage,
+  DocsButtonsPage,
+  DocsCardsPage,
+  DocsAvatarsPage,
+} from "./documentation";
 
 import "bootstrap";
 
@@ -50,6 +56,9 @@ function App(props: Props): React.Node {
         <Route exact path="/email" component={Email} />
         <Route exact path="/docs" component={DocsIntroPage} />
         <Route exact path="/docs/alerts" component={DocsAlertsPage} />
+        <Route exact path="/docs/buttons" component={DocsButtonsPage} />
+        <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
+        <Route exact path="/docs/cards" component={DocsCardsPage} />
         <Route component={Error404} />
       </Switch>
     </Router>

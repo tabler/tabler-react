@@ -10,6 +10,7 @@ type Props = {|
   +toggle?: boolean,
   +value?: string,
   +type?: "link" | "button",
+  +color?: string,
   +icon?: string,
 |};
 
@@ -20,6 +21,7 @@ function DropdownTrigger({
   children,
   type = "link",
   icon,
+  color,
 }: Props): React.Node {
   const classes = cn({ "dropdown-toggle": toggle }, className);
 
@@ -40,7 +42,7 @@ function DropdownTrigger({
       {childrenFragment}
     </a>
   ) : (
-    <Button className={classes} isDropdownToggle>
+    <Button className={classes} color={color} isDropdownToggle>
       {childrenFragment}
     </Button>
   );
