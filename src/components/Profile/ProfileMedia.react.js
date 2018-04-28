@@ -32,7 +32,7 @@ function ProfileMedia({
   return (
     <div className={classes}>
       <Avatar size="xxl" className="mr-5" imageURL={avatarURL} />
-      <CardMediaBody
+      <ProfileMediaBody
         name={name}
         workTitle={workTitle}
         facebook={facebook}
@@ -41,7 +41,7 @@ function ProfileMedia({
         skype={skype}
       >
         {children}
-      </CardMediaBody>
+      </ProfileMediaBody>
     </div>
   );
 }

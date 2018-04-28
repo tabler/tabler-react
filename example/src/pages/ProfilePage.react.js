@@ -11,28 +11,29 @@ import {
   Icon,
   Form,
   Avatar,
+  Profile,
 } from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
 
-function Profile() {
+function ProfilePage() {
   return (
     <SiteWrapper>
       <div className="my-3 my-md-5">
         <Container>
           <Grid.Row>
             <Grid.Col lg={4}>
-              <Card.Profile
+              <Profile
                 name="Peter Richards"
                 backgroundURL="demo/photos/eberhard-grossgasteiger-311213-500.jpg"
                 avatarURL="demo/faces/male/16.jpg"
                 twitterURL="test"
               >
                 Big belly rude boy, million dollar hustler. Unemployed.
-              </Card.Profile>
+              </Profile>
               <Card>
                 <Card.Body>
-                  <Card.Media
+                  <Profile.Media
                     name="Juan Hernandez"
                     workTitle="Webdeveloper"
                     avatarURL="demo/faces/male/21.jpg"
@@ -267,4 +268,4 @@ But that's the difference in our opinions.</textarea>
   );
 }
 
-export default Profile;
+export default ProfilePage;
