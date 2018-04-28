@@ -48,7 +48,12 @@ function Tag(props: Props): React.Node {
     addOnColor,
   } = props;
   const classes = cn(
-    { tag: true, "tag-rounded": rounded, [`tag-${color}`]: color },
+    {
+      tag: true,
+      expanded: true,
+      "tag-rounded": rounded,
+      [`tag-${color}`]: color,
+    },
     className
   );
   const childrenForAll = (
@@ -56,7 +61,7 @@ function Tag(props: Props): React.Node {
       {avatar && (
         <span
           class="tag-avatar avatar"
-          style={`background-image: url(${avatar})`}
+          style={{ backgroundImage: `url(${avatar})` }}
         />
       )}
       {children}
