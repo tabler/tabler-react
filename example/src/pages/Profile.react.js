@@ -15,11 +15,12 @@ function Profile() {
             <Grid.Col lg={4}>
               <Card.Profile
                 name="Peter Richards"
-                description="Big belly rude boy, million dollar hustler. Unemployed."
                 backgroundURL="demo/photos/eberhard-grossgasteiger-311213-500.jpg"
                 avatarURL="demo/faces/male/16.jpg"
                 twitterURL="test"
-              />
+              >
+                Big belly rude boy, million dollar hustler. Unemployed.
+              </Card.Profile>
               <Card>
                 <Card.Body>
                   <Card.Media

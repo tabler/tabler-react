@@ -9,7 +9,6 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +name: string,
-  +description?: string,
   +avatarURL?: string,
   +twitterURL?: string,
   +backgroundURL?: string,
@@ -19,7 +18,6 @@ function CardProfile({
   className,
   children,
   name,
-  description = "",
   avatarURL = "",
   twitterURL = "",
   backgroundURL = "",
@@ -31,11 +29,10 @@ function CardProfile({
       <Card.Body className="text-center">
         <Card.ProfileImage avatarURL={avatarURL} />
         <Header.H3 className="mb-3">{name}</Header.H3>
-        <p className="mb-4">{description}</p>
+        <p className="mb-4">{children}</p>
         <Button outline color="primary" size="sm">
           <Icon name="twitter" prefix="fa" /> Follow
         </Button>
-        {children}
       </Card.Body>
     </div>
   );
