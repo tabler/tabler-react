@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { List, Tooltip } from "../../components";
 
 type Props = {|
   +children?: React.Node,

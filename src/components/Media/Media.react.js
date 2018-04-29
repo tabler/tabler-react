@@ -7,6 +7,8 @@ import MediaBody from "./MediaBody.react";
 import MediaHeading from "./MediaHeading.react";
 import MediaList from "./MediaList.react";
 import MediaObject from "./MediaObject.react";
+import MediaBodySocial from "./MediaBodySocial.react";
+import MediaListItem from "./MediaListItem.react";
 
 type Props = {|
   +children?: React.Node,
@@ -27,8 +29,10 @@ function Media({ className, children }: Props): React.Node {
 }
 
 Media.Body = MediaBody;
+Media.BodySocial = MediaBodySocial;
 Media.Heading = MediaHeading;
 Media.List = MediaList;
+Media.ListItem = MediaListItem;
 Media.Object = MediaObject;
 
 export default Media;
