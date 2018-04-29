@@ -21,7 +21,16 @@ type WithTriggerProps = {|
   +type?: "link" | "button",
 |};
 
-type Props = DefaultProps | WithTriggerProps;
+type WithMenuProps = {|
+  ...DefaultProps,
+  ...WithTriggerProps,
+  +trigger?: React.Node,
+  +items: [React.Node],
+  +position?: string,
+  +arrow?: boolean,
+|};
+
+type Props = DefaultProps | WithTriggerProps | WithMenuProps;
 
 function Dropdown(props: Props): React.Node {
   const { className, children, desktopOnly } = props;
@@ -30,6 +39,7 @@ function Dropdown(props: Props): React.Node {
     { dropdown: true, "d-none": desktopOnly, "d-md-flex": desktopOnly },
     className
   );
+
   const trigger = props.trigger && (
     <DropdownTrigger
       isNavLink={props.isNavLink}
@@ -40,10 +50,16 @@ function Dropdown(props: Props): React.Node {
     </DropdownTrigger>
   );
 
+  const menu = props.items && (
+    <DropdownMenu position={props.position} arrow={props.arrow}>
+      {props.items}
+    </DropdownMenu>
+  );
+
   return (
     <div className={classes}>
       {trigger}
-      {children}
+      {menu || children}
     </div>
   );
 }
