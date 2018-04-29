@@ -18,7 +18,7 @@ function MediaObject({
   children,
   avatar,
   objectURL,
-  size = "xxl",
+  size,
 }: Props): React.Node {
   const classes = cn("media-object", className);
   return avatar ? (
