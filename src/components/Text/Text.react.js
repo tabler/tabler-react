@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
+import TextSmall from "./TextSmall.react";
 
 type Props = {|
   +children?: React.Node,
@@ -36,5 +37,9 @@ const Text = ({
     </Component>
   );
 };
+
+Text.displayName = "Text";
+
+Text.Small = TextSmall;
 
 export default Text;
