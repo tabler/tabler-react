@@ -12,6 +12,7 @@ import {
   Profile,
   List,
   Media,
+  Text,
 } from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
@@ -39,7 +40,7 @@ function ProfilePage() {
                       className="mr-5"
                       imageURL="demo/faces/male/21.jpg"
                     />
-                    <Media.Body
+                    <Media.BodySocial
                       name="Juan Hernandez"
                       workTitle="Webdeveloper"
                       facebook="Facebook"
@@ -109,14 +110,14 @@ function ProfilePage() {
                         size="md"
                         className="mr-4"
                       />
-                      <div className="media-body">
-                        <div className="media-heading">
+                      <Media.Body>
+                        <Media.Heading>
                           <small className="float-right text-muted">
                             4 min
                           </small>
                           <h5>Peter Richards</h5>
-                        </div>
-                        <div>
+                        </Media.Heading>
+                        <Text>
                           Aenean lacinia bibendum nulla sed consectetur.
                           Vestibulum id ligula porta felis euismod semper. Morbi
                           leo risus, porta ac consectetur ac, vestibulum at
@@ -124,14 +125,15 @@ function ProfilePage() {
                           egestas eget quam. Vestibulum id ligula porta felis
                           euismod semper. Cum sociis natoque penatibus et magnis
                           dis parturient montes, nascetur ridiculus mus.
-                        </div>
-                        <ul className="media-list">
-                          <li className="media mt-4">
-                            <div
-                              className="media-object avatar mr-4"
-                              // style="background-image:url(demo/faces/female/17.jpg)"
+                        </Text>
+                        <Media.List>
+                          <Media.ListItem>
+                            <Media.Object
+                              avatar
+                              objectURL="demo/faces/female/17.jpg"
+                              className="mr-4"
                             />
-                            <div className="media-body">
+                            <Media.Body>
                               <strong>Debra Beck: </strong>
                               Donec id elit non mi porta gravida at eget metus.
                               Vivamus sagittis lacus vel augue laoreet rutrum
@@ -139,39 +141,42 @@ function ProfilePage() {
                               metus auctor fringilla. Praesent commodo cursus
                               magna, vel scelerisque nisl consectetur et. Sed
                               posuere consectetur est at lobortis.
-                            </div>
-                          </li>
-                          <li className="media mt-4">
-                            <div
-                              className="media-object avatar mr-4"
-                              // style="background-image: url(demo/faces/male/32.jpg)"
+                            </Media.Body>
+                          </Media.ListItem>
+                          <Media.ListItem>
+                            <Media.Object
+                              avatar
+                              objectURL="demo/faces/male/32.jpg"
+                              className="mr-4"
                             />
-                            <div className="media-body">
+                            <Media.Body>
                               <strong>Jack Ruiz: </strong>
                               Lorem ipsum dolor sit amet, consectetur adipiscing
                               elit. Fusce dapibus, tellus ac cursus commodo,
                               tortor mauris condimentum nibh, ut fermentum massa
                               justo sit amet risus.
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+                            </Media.Body>
+                          </Media.ListItem>
+                        </Media.List>
+                      </Media.Body>
                     </Media>
                   </List.GroupItem>
-                  <li className="list-group-item py-5">
-                    <div className="media">
-                      <div
-                        className="media-object avatar avatar-md mr-4"
-                        // style="background-image: url(demo/faces/male/16.jpg)"
+                  <List.GroupItem className="py-5">
+                    <Media>
+                      <Media.Object
+                        avatar
+                        size="md"
+                        objectURL="demo/faces/male/16.jpg"
+                        className="mr-4"
                       />
-                      <div className="media-body">
-                        <div className="media-heading">
+                      <Media.Body>
+                        <Media.Heading>
                           <small className="float-right text-muted">
                             12 min
                           </small>
                           <h5>Peter Richards</h5>
-                        </div>
-                        <div>
+                        </Media.Heading>
+                        <Text>
                           Donec id elit non mi porta gravida at eget metus.
                           Integer posuere erat a ante venenatis dapibus posuere
                           velit aliquet. Cum sociis natoque penatibus et magnis
@@ -179,37 +184,40 @@ function ProfilePage() {
                           leo risus, porta ac consectetur ac, vestibulum at
                           eros. Lorem ipsum dolor sit amet, consectetur
                           adipiscing elit.
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="list-group-item py-5">
-                    <div className="media">
-                      <div
-                        className="media-object avatar avatar-md mr-4"
-                        // style="background-image: url(demo/faces/male/16.jpg)"
+                        </Text>
+                      </Media.Body>
+                    </Media>
+                  </List.GroupItem>
+                  <List.GroupItem className="py-5">
+                    <Media>
+                      <Media.Object
+                        avatar
+                        size="md"
+                        objectURL="demo/faces/male/16.jpg"
+                        className="mr-4"
                       />
-                      <div className="media-body">
-                        <div className="media-heading">
+                      <Media.Body>
+                        <Media.Heading>
                           <small className="float-right text-muted">
                             34 min
                           </small>
                           <h5>Peter Richards</h5>
-                        </div>
-                        <div>
+                        </Media.Heading>
+                        <Text>
                           Donec ullamcorper nulla non metus auctor fringilla.
                           Vestibulum id ligula porta felis euismod semper.
                           Aenean eu leo quam. Pellentesque ornare sem lacinia
                           quam venenatis vestibulum. Etiam porta sem malesuada
                           magna mollis euismod. Donec sed odio dui.
-                        </div>
-                        <ul className="media-list">
-                          <li className="media mt-4">
-                            <div
-                              className="media-object avatar mr-4"
-                              // style="background-image: url(demo/faces/male/26.jpg)"
+                        </Text>
+                        <Media.List>
+                          <Media.ListItem>
+                            <Media.Object
+                              avatar
+                              objectURL="demo/faces/male/26.jpg"
+                              className="mr-4"
                             />
-                            <div className="media-body">
+                            <Media.Body>
                               <strong>Wayne Holland: </strong>
                               Donec id elit non mi porta gravida at eget metus.
                               Vivamus sagittis lacus vel augue laoreet rutrum
@@ -217,89 +225,119 @@ function ProfilePage() {
                               metus auctor fringilla. Praesent commodo cursus
                               magna, vel scelerisque nisl consectetur et. Sed
                               posuere consectetur est at lobortis.
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
+                            </Media.Body>
+                          </Media.ListItem>
+                        </Media.List>
+                      </Media.Body>
+                    </Media>
+                  </List.GroupItem>
                 </List.Group>
               </Card>
-              {/* <form className="card">
-                <div className="card-body">
-                  <h3 className="card-title">Edit Profile</h3>
-                  <div className="row">
-                    <div className="col-md-5">
-                      <div className="form-group">
-                        <label className="form-label">Company</label>
-                        <input type="text" className="form-control" disabled="" placeholder="Company" value="Creative Code Inc." />
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-3">
-                      <div className="form-group">
-                        <label className="form-label">Username</label>
-                        <input type="text" className="form-control" placeholder="Username" value="michael23" />
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                      <div className="form-group">
-                        <label className="form-label">Email address</label>
-                        <input type="email" className="form-control" placeholder="Email" />
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-6">
-                      <div className="form-group">
-                        <label className="form-label">First Name</label>
-                        <input type="text" className="form-control" placeholder="Company" value="Chet" />
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-6">
-                      <div className="form-group">
-                        <label className="form-label">Last Name</label>
-                        <input type="text" className="form-control" placeholder="Last Name" value="Faker" />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <label className="form-label">Address</label>
-                        <input type="text" className="form-control" placeholder="Home Address" value="Melbourne, Australia" />
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                      <div className="form-group">
-                        <label className="form-label">City</label>
-                        <input type="text" className="form-control" placeholder="City" value="Melbourne" />
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-3">
-                      <div className="form-group">
-                        <label className="form-label">Postal Code</label>
-                        <input type="number" className="form-control" placeholder="ZIP Code" />
-                      </div>
-                    </div>
-                    <div className="col-md-5">
-                      <div className="form-group">
-                        <label className="form-label">Country</label>
-                        <select className="form-control custom-select">
-                          <option value="">Germany</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group mb-0">
-                        <label className="form-label">About Me</label>
-                        <textarea rows="5" className="form-control" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
-  You doubt I'll bother, reading into it
-  I'll probably won't, left to my own devices
-  But that's the difference in our opinions.</textarea>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-footer text-right">
-                  <button type="submit" className="btn btn-primary">Update Profile</button>
-                </div>
-              </form> */}
+              <Form className="card">
+                <Card.Body>
+                  <Card.Title>Edit Profile</Card.Title>
+                  <Grid.Row>
+                    <Grid.Col md={5}>
+                      <Form.Group>
+                        <Form.Label>Company</Form.Label>
+                        <Form.Input
+                          type="text"
+                          disabled
+                          placeholder="Company"
+                          value="Creative Code Inc."
+                        />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col sm={6} md={3}>
+                      <Form.Group>
+                        <Form.Label>Username</Form.Label>
+                        <Form.Input
+                          type="text"
+                          placeholder="Username"
+                          value="michael23"
+                        />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col sm={6} md={4}>
+                      <Form.Group>
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Input type="email" placeholder="Email" />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col sm={6} md={6}>
+                      <Form.Group>
+                        <Form.Label>First Name</Form.Label>
+                        <Form.Input
+                          type="text"
+                          placeholder="First Name"
+                          value="Chet"
+                        />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col sm={6} md={6}>
+                      <Form.Group>
+                        <Form.Label>Last Name</Form.Label>
+                        <Form.Input
+                          type="text"
+                          placeholder="Last Name"
+                          value="Faker"
+                        />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col md={12}>
+                      <Form.Group>
+                        <Form.Label>Address</Form.Label>
+                        <Form.Input
+                          type="text"
+                          placeholder="Home Address"
+                          value="Melbourne, Australia"
+                        />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col sm={6} md={4}>
+                      <Form.Group>
+                        <Form.Label>City</Form.Label>
+                        <Form.Input
+                          type="text"
+                          placeholder="City"
+                          value="Melbourne"
+                        />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col sm={6} md={3}>
+                      <Form.Group>
+                        <Form.Label>Postal Code</Form.Label>
+                        <Form.Input type="number" placeholder="ZIP Code" />
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col md={5}>
+                      <Form.Group>
+                        <Form.Label>Country</Form.Label>
+                        <Form.Select>
+                          <option>Germany</option>
+                        </Form.Select>
+                      </Form.Group>
+                    </Grid.Col>
+                    <Grid.Col md={12}>
+                      <Form.Group className="mb=0" label="About Me">
+                        <Form.Textarea
+                          rows={5}
+                          placeholder="Here can be your description"
+                        >
+                          Oh so, your weak rhyme You doubt I'll bother, reading
+                          into it I'll probably won't, left to my own devices
+                          But that's the difference in our opinions.
+                        </Form.Textarea>
+                      </Form.Group>
+                    </Grid.Col>
+                  </Grid.Row>
+                </Card.Body>
+                <Card.Footer className="text-right">
+                  <Button type="submit" color="primary">
+                    Update Profile
+                  </Button>
+                </Card.Footer>
+              </Form>
             </Grid.Col>
           </Grid.Row>
         </Container>
