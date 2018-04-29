@@ -14,6 +14,9 @@ type Props = {|
   +cards?: boolean,
   +striped?: boolean,
   +responsive?: boolean,
+  +highlightRowOnHover?: boolean,
+  +hasOutline?: boolean,
+  +verticalAlign?: "center",
 |};
 
 function Table({
@@ -22,11 +25,20 @@ function Table({
   cards,
   striped,
   responsive,
+  highlightRowOnHover,
+  hasOutline,
+  verticalAlign,
   ...props
 }: Props): React.Node {
   const classes = cn(
     "table",
-    { "card-table": !!cards, "table-striped": !!striped },
+    {
+      "card-table": cards,
+      "table-striped": striped,
+      "table-hover": highlightRowOnHover,
+      "table-outline": hasOutline,
+      "table-vcenter": verticalAlign === "center",
+    },
     className
   );
   return !responsive ? (
