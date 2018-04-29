@@ -20,6 +20,7 @@ import HomePage from "./HomePage.react";
 import FormElementsPage from "./FormElementsPage.react";
 import PricingCardsPage from "./interface/PricingCardsPage.react";
 import CardsDesignPage from "./interface/CardsDesignPage.react";
+import ChartsPage from "./interface/ChartsPage.react";
 
 import {
   DocsIntroPage,
@@ -41,6 +42,7 @@ function App(props: Props): React.Node {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/cards" component={CardsDesignPage} />
+        <Route exact path="/charts" component={ChartsPage} />
         <Route exact path="/pricing-cards" component={PricingCardsPage} />
         <Route exact path="/form-elements" component={FormElementsPage} />
         <Route exact path="/forgot-password" component={ForgotPasswordPage} />
