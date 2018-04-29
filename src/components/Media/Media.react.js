@@ -13,14 +13,6 @@ import MediaListItem from "./MediaListItem.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +name: string,
-  +workTitle: string,
-  +avatarURL: string,
-  +facebook?: string,
-  +twitter?: string,
-  +phone?: string,
-  +skype?: string,
-  +avatarSize?: string,
 |};
 
 function Media({ className, children }: Props): React.Node {
