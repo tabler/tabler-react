@@ -70,7 +70,7 @@ function ProfilePage() {
                     </Grid.Row>
                     <Form.Group>
                       <Form.Label>Bio</Form.Label>
-                      <Form.Textarea rows="5">
+                      <Form.Textarea rows={5}>
                         Big belly rude boy, million dollar hustler. Unemployed.
                       </Form.Textarea>
                     </Form.Group>
