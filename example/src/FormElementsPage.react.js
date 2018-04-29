@@ -513,6 +513,64 @@ function FormElements() {
                 <Form.FileInput />
               </Form.Group>
             </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Username">
+                <Form.InputGroup>
+                  <Form.InputGroupPrepend>@</Form.InputGroupPrepend>
+                  <Form.Input placeholder="Username" />
+                </Form.InputGroup>
+              </Form.Group>
+            </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Subdomain">
+                <Form.InputGroup>
+                  <Form.Input placeholder="Your subdomain" />
+                  <Form.InputGroupAppend>.example.com</Form.InputGroupAppend>
+                </Form.InputGroup>
+              </Form.Group>
+            </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Your vanity URL">
+                <Form.InputGroup>
+                  <Form.InputGroupPrepend>
+                    https://example.com/users/
+                  </Form.InputGroupPrepend>
+                  <Form.Input />
+                </Form.InputGroup>
+              </Form.Group>
+            </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Price">
+                <Form.InputGroup>
+                  <Form.InputGroupPrepend>$</Form.InputGroupPrepend>
+                  <Form.Input />
+                  <Form.InputGroupAppend>.00</Form.InputGroupAppend>
+                </Form.InputGroup>
+              </Form.Group>
+            </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Price">
+                <Form.InputGroup>
+                  <Form.InputGroup prepend>
+                    <Button color="secondary" isDropdownToggle>
+                      Action
+                    </Button>
+                    <Dropdown.Menu position="right">
+                      <Dropdown.Item>News</Dropdown.Item>
+                      <Dropdown.Item>Messages</Dropdown.Item>
+                      <Dropdown.ItemDivider />
+                      <Dropdown.Item>Edit Profile</Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Form.InputGroup>
+                  <Form.Input />
+                </Form.InputGroup>
+              </Form.Group>
+            </ComponentDemo>
           </Grid.Col>
         </Grid.Row>
       </Page.Card>
