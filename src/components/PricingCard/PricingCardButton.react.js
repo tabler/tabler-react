@@ -10,6 +10,9 @@ type Props = {|
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
+  +href?: string,
+  +to?: string,
+  +onClick?: (event: SyntheticMouseEvent<HTMLInputElement>) => mixed,
 |};
 
 function PricingCardButton({
@@ -17,6 +20,9 @@ function PricingCardButton({
   children,
   RootComponent,
   active,
+  href,
+  to,
+  onClick,
 }: Props): React.Node {
   const classes = cn("text-center", "mt-6");
   const Component = RootComponent || "a";
@@ -26,9 +32,27 @@ function PricingCardButton({
     "btn-block",
     className
   );
+
+  const otherProps = {};
+
+  if (href) {
+    otherProps.href = href;
+  }
+
+  if (to) {
+    otherProps.to = to;
+  }
+
+  if (onClick) {
+    otherProps.role = "button";
+    otherProps.onClick = onClick;
+  }
+
   return (
     <div className={classes}>
-      <Component className={componentClasses}>{children}</Component>
+      <Component className={componentClasses} {...otherProps}>
+        {children}
+      </Component>
     </div>
   );
 }
