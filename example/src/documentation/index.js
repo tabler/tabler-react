@@ -5,6 +5,7 @@ import DocsAlertsPage from "./DocsAlertsPage.react";
 import DocsButtonsPage from "./DocsButtonsPage.react";
 import DocsAvatarsPage from "./DocsAvatarsPage.react";
 import DocsCardsPage from "./DocsCardsPage.react";
+import DocsChartsPage from "./DocsChartsPage.react";
 import DocsTagsPage from "./DocsTagsPage.react";
 
 export {
@@ -15,5 +16,6 @@ export {
   DocsButtonsPage,
   DocsAvatarsPage,
   DocsCardsPage,
+  DocsChartsPage,
   DocsTagsPage,
 };
