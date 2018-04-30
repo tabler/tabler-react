@@ -13,14 +13,16 @@ import {
   Table,
   Alert,
   Progress,
+  colors,
   Dropdown,
   Button,
   Stamp,
   StampCard,
   StatsCard,
-  Badge,
-  ProgressCard,
+  colors,
 } from "tabler-react";
+
+import C3Chart from "react-c3js";
 
 import SiteWrapper from "./SiteWrapper.react";
 
@@ -68,9 +70,93 @@ function Home() {
               <Card.Header>
                 <Card.Title>Development Activity</Card.Title>
               </Card.Header>
-              <div
-                id="chart-development-activity"
+              <C3Chart
                 style={{ height: "10rem" }}
+                data={{
+                  columns: [
+                    // each columns data
+                    [
+                      "data1",
+                      0,
+                      5,
+                      1,
+                      2,
+                      7,
+                      5,
+                      6,
+                      8,
+                      24,
+                      7,
+                      12,
+                      5,
+                      6,
+                      3,
+                      2,
+                      2,
+                      6,
+                      30,
+                      10,
+                      10,
+                      15,
+                      14,
+                      47,
+                      65,
+                      55,
+                    ],
+                  ],
+                  type: "area", // default type of chart
+                  groups: [["data1", "data2", "data3"]],
+                  colors: {
+                    data1: colors["blue"],
+                  },
+                  names: {
+                    // name of each serie
+                    data1: "Purchases",
+                  },
+                }}
+                axis={{
+                  y: {
+                    padding: {
+                      bottom: 0,
+                    },
+                    show: false,
+                    tick: {
+                      outer: false,
+                    },
+                  },
+                  x: {
+                    padding: {
+                      left: 0,
+                      right: 0,
+                    },
+                    show: false,
+                  },
+                }}
+                legend={{
+                  position: "inset",
+                  padding: 0,
+                  inset: {
+                    anchor: "top-left",
+                    x: 20,
+                    y: 8,
+                    step: 10,
+                  },
+                }}
+                tooltip={{
+                  format: {
+                    title: function(x) {
+                      return "";
+                    },
+                  },
+                }}
+                padding={{
+                  bottom: 0,
+                  left: -1,
+                  right: -1,
+                }}
+                point={{
+                  show: false,
+                }}
               />
               <Table
                 cards={true}
@@ -164,7 +250,33 @@ function Home() {
                     <Card.Title>Chart title</Card.Title>
                   </Card.Header>
                   <Card.Body>
-                    <div id="chart-donut" style={{ height: "12rem" }} />
+                    <C3Chart
+                      style={{ height: "12rem" }}
+                      data={{
+                        columns: [
+                          // each columns data
+                          ["data1", 63],
+                          ["data2", 37],
+                        ],
+                        type: "donut", // default type of chart
+                        colors: {
+                          data1: colors["green"],
+                          data2: colors["green-light"],
+                        },
+                        names: {
+                          // name of each serie
+                          data1: "Maximum",
+                          data2: "Minimum",
+                        },
+                      }}
+                      legend={{
+                        show: false, //hide legend
+                      }}
+                      padding={{
+                        bottom: 0,
+                        top: 0,
+                      }}
+                    />
                   </Card.Body>
                 </Card>
               </Grid.Col>
@@ -174,7 +286,39 @@ function Home() {
                     <Card.Title>Chart title</Card.Title>
                   </Card.Header>
                   <Card.Body>
-                    <div id="chart-pie" style={{ height: "12rem" }} />
+                    <C3Chart
+                      style={{ height: "12rem" }}
+                      data={{
+                        columns: [
+                          // each columns data
+                          ["data1", 63],
+                          ["data2", 44],
+                          ["data3", 12],
+                          ["data4", 14],
+                        ],
+                        type: "pie", // default type of chart
+                        colors: {
+                          data1: colors["blue-darker"],
+                          data2: colors["blue"],
+                          data3: colors["blue-light"],
+                          data4: colors["blue-lighter"],
+                        },
+                        names: {
+                          // name of each serie
+                          data1: "A",
+                          data2: "B",
+                          data3: "C",
+                          data4: "D",
+                        },
+                      }}
+                      legend={{
+                        show: false, //hide legend
+                      }}
+                      padding={{
+                        bottom: 0,
+                        top: 0,
+                      }}
+                    />
                   </Card.Body>
                 </Card>
               </Grid.Col>
