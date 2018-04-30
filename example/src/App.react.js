@@ -20,7 +20,7 @@ import HomePage from "./HomePage.react";
 import FormElementsPage from "./FormElementsPage.react";
 import PricingCardsPage from "./interface/PricingCardsPage.react";
 import CardsDesignPage from "./interface/CardsDesignPage.react";
-import StoreCardsPage from "./components/StorePage.react.js";
+import StoreCardsPage from "./components/StoreCardsPage.react.js";
 
 import {
   DocsIntroPage,

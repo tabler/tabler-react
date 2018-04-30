@@ -20,7 +20,6 @@ function StoreCard({
   imgUrl,
   imgAlt,
 }: Props): React.Node {
-  // TODO: Add component logic.
   return (
     <Card>
       <Card.Body>
