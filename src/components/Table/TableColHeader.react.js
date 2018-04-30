@@ -7,10 +7,16 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +colSpan?: number,
+  +alignContent?: "left" | "center" | "right",
 |};
 
-function TableColHeader({ className, children, colSpan }: Props): React.Node {
-  const classes = cn(className);
+function TableColHeader({
+  className,
+  children,
+  colSpan,
+  alignContent = "",
+}: Props): React.Node {
+  const classes = cn({ [`text-${alignContent}`]: alignContent }, className);
   return (
     <th className={classes} colSpan={colSpan}>
       {children}
