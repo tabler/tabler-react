@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Page, Grid, Card, Button, Form } from "tabler-react";
+import { Page, Grid, Card, Button, Form, Dimmer } from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
 
@@ -258,15 +258,12 @@ function CardsDesignPage(): React.Node {
           <Grid.Col lg={6} xl={4}>
             <Card title="Card with loader" isClosable isCollapsible>
               <Card.Body>
-                <div className="dimmer active">
-                  <div className="loader" />
-                  <div className="dimmer-content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Aperiam deleniti fugit incidunt, iste, itaque minima neque
-                    pariatur perferendis sed suscipit velit vitae voluptatem. A
-                    consequuntur, deserunt eaque error nulla temporibus!
-                  </div>
-                </div>
+                <Dimmer active loader>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aperiam deleniti fugit incidunt, iste, itaque minima neque
+                  pariatur perferendis sed suscipit velit vitae voluptatem. A
+                  consequuntur, deserunt eaque error nulla temporibus!
+                </Dimmer>
               </Card.Body>
             </Card>
           </Grid.Col>

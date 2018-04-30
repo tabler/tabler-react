@@ -6,6 +6,9 @@ import DocsButtonsPage from "./DocsButtonsPage.react";
 import DocsAvatarsPage from "./DocsAvatarsPage.react";
 import DocsCardsPage from "./DocsCardsPage.react";
 import DocsColorsPage from "./DocsColorsPage.react";
+import DocsFormComponentsPage from "./DocsFormComponentsPage.react";
+import DocsChartsPage from "./DocsChartsPage.react";
+import DocsTagsPage from "./DocsTagsPage.react";
 
 export {
   DocsPageWrapper,
@@ -16,4 +19,7 @@ export {
   DocsAvatarsPage,
   DocsCardsPage,
   DocsColorsPage,
+  DocsFormComponentsPage,
+  DocsChartsPage,
+  DocsTagsPage,
 };
