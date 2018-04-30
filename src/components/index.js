@@ -19,4 +19,6 @@ export { default as Progress } from "./Progress";
 export { default as Table } from "./Table";
 export { default as List } from "./List";
 export { default as PricingCard } from "./PricingCard";
+export { default as Dimmer } from "./Dimmer";
+export { default as Loader } from "./Loader";
 export { default as Tag } from "./Tag";
