@@ -99,7 +99,16 @@ function FormInput(props: Props): React.Node {
           <Icon name={icon} />
         </span>
       )}
-      <input className={classes} />
+      <input
+        name={name}
+        className={classes}
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        disabled={disabled}
+        readOnly={readOnly}
+        onChange={onChange}
+      />
       {position === "append" && (
         <span className="input-icon-addon">
           <Icon name={icon} />
