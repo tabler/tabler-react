@@ -11,13 +11,15 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +unstyled?: boolean,
+  +seperated?: boolean,
 |};
 
-function List({ className, children, unstyled }: Props): React.Node {
+function List({ className, children, unstyled, seperated }: Props): React.Node {
   const classes = cn(
     {
       list: !unstyled,
       "list-unstyled": unstyled,
+      "list-seperated": seperated,
     },
     className
   );
