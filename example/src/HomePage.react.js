@@ -19,7 +19,8 @@ import {
   Stamp,
   StampCard,
   StatsCard,
-  colors,
+  ProgressCard,
+  Badge,
 } from "tabler-react";
 
 import C3Chart from "react-c3js";
@@ -470,16 +471,7 @@ function Home() {
                       </Text>
                       <div>4 minutes ago</div>
                     </Table.Col>
-                    <Table.Col alignContent="center">
-                      <div
-                        className="mx-auto chart-circle chart-circle-xs"
-                        data-value="0.42"
-                        data-thickness="3"
-                        data-color="blue"
-                      >
-                        <div className="chart-circle-value">42%</div>
-                      </div>
-                    </Table.Col>
+                    <Table.Col alignContent="center">42%</Table.Col>
                     <Table.Col alignContent="center">
                       <Dropdown>
                         <Dropdown.Trigger icon="more-vertical" />
@@ -594,7 +586,58 @@ function Home() {
                   total="423"
                   label="Users online"
                   chart={
-                    <div id="chart-bg-users-1" style={{ height: "100%" }} />
+                    <C3Chart
+                      style={{ height: "100%" }}
+                      padding={{
+                        bottom: -10,
+                        left: -1,
+                        right: -1,
+                      }}
+                      data={{
+                        names: {
+                          data1: "Users online",
+                        },
+                        columns: [["data1", 30, 40, 10, 40, 12, 22, 40]],
+                        type: "area",
+                      }}
+                      legend={{
+                        show: false,
+                      }}
+                      transition={{
+                        duration: 0,
+                      }}
+                      point={{
+                        show: false,
+                      }}
+                      tooltip={{
+                        format: {
+                          title: function(x) {
+                            return "";
+                          },
+                        },
+                      }}
+                      axis={{
+                        y: {
+                          padding: {
+                            bottom: 0,
+                          },
+                          show: false,
+                          tick: {
+                            outer: false,
+                          },
+                        },
+                        x: {
+                          padding: {
+                            left: 0,
+                            right: 0,
+                          },
+                          show: false,
+                        },
+                      }}
+                      color={{
+                        pattern: ["#467fcf"],
+                      }}
+                    />
                   }
                 />
               </Grid.Col>
@@ -605,7 +648,58 @@ function Home() {
                   total="423"
                   label="Users online"
                   chart={
-                    <div id="chart-bg-users-2" style={{ height: "100%" }} />
+                    <C3Chart
+                      style={{ height: "100%" }}
+                      padding={{
+                        bottom: -10,
+                        left: -1,
+                        right: -1,
+                      }}
+                      data={{
+                        names: {
+                          data1: "Users online",
+                        },
+                        columns: [["data1", 30, 40, 10, 40, 12, 22, 40]],
+                        type: "area",
+                      }}
+                      legend={{
+                        show: false,
+                      }}
+                      transition={{
+                        duration: 0,
+                      }}
+                      point={{
+                        show: false,
+                      }}
+                      tooltip={{
+                        format: {
+                          title: function(x) {
+                            return "";
+                          },
+                        },
+                      }}
+                      axis={{
+                        y: {
+                          padding: {
+                            bottom: 0,
+                          },
+                          show: false,
+                          tick: {
+                            outer: false,
+                          },
+                        },
+                        x: {
+                          padding: {
+                            left: 0,
+                            right: 0,
+                          },
+                          show: false,
+                        },
+                      }}
+                      color={{
+                        pattern: ["#e74c3c"],
+                      }}
+                    />
                   }
                 />
               </Grid.Col>
@@ -616,7 +710,58 @@ function Home() {
                   total="423"
                   label="Users online"
                   chart={
-                    <div id="chart-bg-users-3" style={{ height: "100%" }} />
+                    <C3Chart
+                      style={{ height: "100%" }}
+                      padding={{
+                        bottom: -10,
+                        left: -1,
+                        right: -1,
+                      }}
+                      data={{
+                        names: {
+                          data1: "Users online",
+                        },
+                        columns: [["data1", 30, 40, 10, 40, 12, 22, 40]],
+                        type: "area",
+                      }}
+                      legend={{
+                        show: false,
+                      }}
+                      transition={{
+                        duration: 0,
+                      }}
+                      point={{
+                        show: false,
+                      }}
+                      tooltip={{
+                        format: {
+                          title: function(x) {
+                            return "";
+                          },
+                        },
+                      }}
+                      axis={{
+                        y: {
+                          padding: {
+                            bottom: 0,
+                          },
+                          show: false,
+                          tick: {
+                            outer: false,
+                          },
+                        },
+                        x: {
+                          padding: {
+                            left: 0,
+                            right: 0,
+                          },
+                          show: false,
+                        },
+                      }}
+                      color={{
+                        pattern: ["#5eba00"],
+                      }}
+                    />
                   }
                 />
               </Grid.Col>
@@ -627,7 +772,58 @@ function Home() {
                   total="423"
                   label="Users online"
                   chart={
-                    <div id="chart-bg-users-4" style={{ height: "100%" }} />
+                    <C3Chart
+                      style={{ height: "100%" }}
+                      padding={{
+                        bottom: -10,
+                        left: -1,
+                        right: -1,
+                      }}
+                      data={{
+                        names: {
+                          data1: "Users online",
+                        },
+                        columns: [["data1", 30, 40, 10, 40, 12, 22, 40]],
+                        type: "area",
+                      }}
+                      legend={{
+                        show: false,
+                      }}
+                      transition={{
+                        duration: 0,
+                      }}
+                      point={{
+                        show: false,
+                      }}
+                      tooltip={{
+                        format: {
+                          title: function(x) {
+                            return "";
+                          },
+                        },
+                      }}
+                      axis={{
+                        y: {
+                          padding: {
+                            bottom: 0,
+                          },
+                          show: false,
+                          tick: {
+                            outer: false,
+                          },
+                        },
+                        x: {
+                          padding: {
+                            left: 0,
+                            right: 0,
+                          },
+                          show: false,
+                        },
+                      }}
+                      color={{
+                        pattern: ["#f1c40f"],
+                      }}
+                    />
                   }
                 />
               </Grid.Col>
