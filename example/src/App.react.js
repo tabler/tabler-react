@@ -20,6 +20,7 @@ import HomePage from "./HomePage.react";
 import FormElementsPage from "./FormElementsPage.react";
 import PricingCardsPage from "./interface/PricingCardsPage.react";
 import CardsDesignPage from "./interface/CardsDesignPage.react";
+import ChartsPage from "./interface/ChartsPage.react";
 
 import {
   DocsIntroPage,
@@ -28,6 +29,8 @@ import {
   DocsCardsPage,
   DocsAvatarsPage,
   DocsFormComponentsPage,
+  DocsChartsPage,
+  DocsTagsPage,
 } from "./documentation";
 
 import "bootstrap";
@@ -42,6 +45,7 @@ function App(props: Props): React.Node {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/cards" component={CardsDesignPage} />
+        <Route exact path="/charts" component={ChartsPage} />
         <Route exact path="/pricing-cards" component={PricingCardsPage} />
         <Route exact path="/form-elements" component={FormElementsPage} />
         <Route exact path="/forgot-password" component={ForgotPasswordPage} />
@@ -65,6 +69,8 @@ function App(props: Props): React.Node {
           path="/docs/form-components"
           component={DocsFormComponentsPage}
         />
+        <Route exact path="/docs/charts" component={DocsChartsPage} />
+        <Route exact path="/docs/tags" component={DocsTagsPage} />
         <Route component={Error404} />
       </Switch>
     </Router>

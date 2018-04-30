@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
+import TextSmall from "./TextSmall.react";
 
 type Props = {|
   +children?: React.Node,
@@ -10,6 +11,7 @@ type Props = {|
   +color?: string,
   +size?: string,
   +wrap?: boolean,
+  +muted?: boolean,
 |};
 
 const Text = ({
@@ -19,6 +21,7 @@ const Text = ({
   color = "",
   size = "",
   wrap,
+  muted,
   ...props
 }: Props): React.Node => {
   const classes = cn(
@@ -26,6 +29,7 @@ const Text = ({
       [`text-wrap p-lg-6`]: wrap,
       [`text-${color}`]: color,
       [`${size}`]: size,
+      "text-muted": muted,
     },
     className
   );
@@ -36,5 +40,9 @@ const Text = ({
     </Component>
   );
 };
+
+Text.displayName = "Text";
+
+Text.Small = TextSmall;
 
 export default Text;
