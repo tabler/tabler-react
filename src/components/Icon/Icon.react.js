@@ -9,15 +9,18 @@ type Props = {|
   +prefix?: "fa" | "fe",
   +name: string,
   +isAriaHidden?: boolean,
+  +payment?: boolean,
 |};
 
 function Icon({
-  prefix = "fe",
+  prefix: prefixFromProps = "fe",
   name,
   className,
   link,
   isAriaHidden,
+  payment,
 }: Props): React.Node {
+  const prefix = payment ? "payment" : prefixFromProps;
   const classes = cn(
     {
       [prefix]: true,
@@ -39,5 +42,7 @@ function Icon({
     </a>
   );
 }
+
+Icon.displayName = "Icon";
 
 export default Icon;

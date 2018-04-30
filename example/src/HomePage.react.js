@@ -14,6 +14,12 @@ import {
   Alert,
   Progress,
   colors,
+  Dropdown,
+  Button,
+  Stamp,
+  StampCard,
+  StatsCard,
+  colors,
 } from "tabler-react";
 
 import C3Chart from "react-c3js";
@@ -27,88 +33,37 @@ function Home() {
         <Page.Header>Dashboard</Page.Header>
         <Grid.Row cards={true}>
           <Grid.Col width={6} sm={4} lg={2}>
-            <Card>
-              <Card.Body className="p-3 text-center">
-                <Text color="green" className="text-right">
-                  6%
-                  <Icon name="chevron-up" />
-                </Text>
-                <Header className="m-0">43</Header>
-                <Text color="muted" className=" mb-4">
-                  New Tickets
-                </Text>
-              </Card.Body>
-            </Card>
+            <StatsCard layout={1} movement={6} total="43" label="New Tickets" />
           </Grid.Col>
           <Grid.Col width={6} sm={4} lg={2}>
-            <Card>
-              <Card.Body className="p-3 text-center">
-                <Text color="red" className="text-right">
-                  -3%
-                  <Icon name="chevron-down" />
-                </Text>
-                <Header className="m-0">17</Header>
-                <Text color="muted" className="mb-4">
-                  Closed Today
-                </Text>
-              </Card.Body>
-            </Card>
+            <StatsCard
+              layout={1}
+              movement={-3}
+              total="17"
+              label="Closed Today"
+            />
           </Grid.Col>
           <Grid.Col width={6} sm={4} lg={2}>
-            <Card>
-              <Card.Body className=" p-3 text-center">
-                <Text color="green" className="text-right">
-                  9%
-                  <Icon name="chevron-up" />
-                </Text>
-                <Header className="m-0">7</Header>
-                <Text color="muted" className=" mb-4">
-                  New Replies
-                </Text>
-              </Card.Body>
-            </Card>
+            <StatsCard layout={1} movement={9} total="7" label="New Replies" />
           </Grid.Col>
           <Grid.Col width={6} sm={4} lg={2}>
-            <Card>
-              <Card.Body className="p-3 text-center">
-                <Text color="green" className="text-right">
-                  3%
-                  <Icon name="chevron-up" />
-                </Text>
-                <Header className="m-0">27.3K</Header>
-                <Text color="muted" className="mb-4">
-                  Followers
-                </Text>
-              </Card.Body>
-            </Card>
+            <StatsCard
+              layout={1}
+              movement={3}
+              total="27.3k"
+              label="Followers"
+            />
           </Grid.Col>
           <Grid.Col width={6} sm={4} lg={2}>
-            <Card>
-              <Card.Body className="p-3 text-center">
-                <Text color="red" className="text-right ">
-                  -2%
-                  <Icon name="chevron-down" />
-                </Text>
-                <Header className="m-0">$95</Header>
-                <Text color="muted" className="mb-4">
-                  Daily Earnings
-                </Text>
-              </Card.Body>
-            </Card>
+            <StatsCard
+              layout={1}
+              movement={-2}
+              total="$95"
+              label="Daily earnings"
+            />
           </Grid.Col>
           <Grid.Col width={6} sm={4} lg={2}>
-            <Card>
-              <Card.Body className=" p-3 text-center">
-                <Text color="red" className="text-right ">
-                  -1%
-                  <Icon name="chevron-down" />
-                </Text>
-                <Header className="m-0">621</Header>
-                <Text color="muted" className="mb-4">
-                  Products
-                </Text>
-              </Card.Body>
-            </Card>
+            <StatsCard layout={1} movement={-1} total="621" label="Products" />
           </Grid.Col>
           <Grid.Col lg={6}>
             <Card>
@@ -285,9 +240,7 @@ function Home() {
           <Grid.Col md={6}>
             <Alert type="primary">
               Are you in trouble?{" "}
-              <Alert.Link href="./docs/index.html">
-                Read our documentation
-              </Alert.Link>{" "}
+              <Alert.Link href="/docs/index">Read our documentation</Alert.Link>{" "}
               with code samples.
             </Alert>
             <Grid.Row>
@@ -370,110 +323,370 @@ function Home() {
                 </Card>
               </Grid.Col>
               <Grid.Col sm={4}>
-                <Card>
-                  <Card.Body className="text-center">
-                    <Header size={5}>New feedback</Header>
-                    <div className="display-4 font-weight-bold mb-4">62</div>
-                    <Progress size="sm">
-                      <Progress.Bar color="red" width={28} />
-                    </Progress>
-                  </Card.Body>
-                </Card>
+                <ProgressCard
+                  header="New feedback"
+                  content="62"
+                  progressColor="red"
+                  progressWidth={28}
+                />
               </Grid.Col>
               <Grid.Col sm={4}>
-                <Card>
-                  <Card.Body className="text-center">
-                    <Header size={5}>Today profit</Header>
-                    <div className="display-4 font-weight-bold mb-4">$652</div>
-                    <Progress size="sm">
-                      <Progress.Bar color="green" width={84} />
-                    </Progress>
-                  </Card.Body>
-                </Card>
+                <ProgressCard
+                  header="Today profit"
+                  content="$652"
+                  progressColor="green"
+                  progressWidth={84}
+                />
               </Grid.Col>
               <Grid.Col sm={4}>
-                <Card>
-                  <Card.Body className="text-center">
-                    <Header size={5}>Users online</Header>
-                    <div className="display-4 font-weight-bold mb-4">76</div>
-                    <Progress size="sm">
-                      <Progress.Bar color="yellow" width={34} />
-                    </Progress>
-                  </Card.Body>
-                </Card>
+                <ProgressCard
+                  header="Users online"
+                  content="76"
+                  progressColor="yellow"
+                  progressWidth={34}
+                />
               </Grid.Col>
             </Grid.Row>
           </Grid.Col>
           <Grid.Col sm={6} lg={3}>
-            <Card className="p-3">
-              <div className="d-flex align-items-center">
-                <span className="stamp stamp-md bg-blue mr-3">
-                  <Icon name="dollar-sign" />
-                </span>
-                <div>
-                  <h4 className="m-0">
-                    <a>
-                      132
-                      <small>Sales</small>
-                    </a>
-                  </h4>
-                  <small className="text-muted">12 waiting payments</small>
-                </div>
-              </div>
-            </Card>
+            <StampCard
+              color="blue"
+              icon="dollar-sign"
+              header={
+                <a>
+                  132
+                  <small>Sales</small>
+                </a>
+              }
+              footer={"12 waiting payments"}
+            />
           </Grid.Col>
           <Grid.Col sm={6} lg={3}>
-            <Card className="p-3">
-              <div className="d-flex align-items-center">
-                <span className="stamp stamp-md bg-green mr-3">
-                  <Icon name="shopping-cart" />
-                </span>
-                <div>
-                  <h4 className="m-0">
-                    <a>
-                      78
-                      <small>Orders</small>
-                    </a>
-                  </h4>
-                  <small className="text-muted">32 shipped</small>
-                </div>
-              </div>
-            </Card>
+            <StampCard
+              color="green"
+              icon="shopping-cart"
+              header={
+                <a>
+                  78
+                  <small>Orders</small>
+                </a>
+              }
+              footer={"32 shipped"}
+            />
           </Grid.Col>
           <Grid.Col sm={6} lg={3}>
-            <Card className="p-3">
-              <div className="d-flex align-items-center">
-                <span className="stamp stamp-md bg-red mr-3">
-                  <Icon name="users" />
-                </span>
-                <div>
-                  <h4 className="m-0">
-                    <a>
-                      1,352
-                      <small>Members</small>
-                    </a>
-                  </h4>
-                  <small className="text-muted">163 registered today</small>
-                </div>
-              </div>
-            </Card>
+            <StampCard
+              color="red"
+              icon="users"
+              header={
+                <a>
+                  1,352
+                  <small>Members</small>
+                </a>
+              }
+              footer={"163 registered today"}
+            />
           </Grid.Col>
           <Grid.Col sm={6} lg={3}>
-            <Card className="p-3">
-              <div className="d-flex align-items-center">
-                <span className="stamp stamp-md bg-yellow mr-3">
-                  <i className="fe fe-message-square" />
-                </span>
-                <div>
-                  <h4 className="m-0">
-                    <a>
-                      132
-                      <small>Comments</small>
-                    </a>
-                  </h4>
-                  <small className="text-muted">16 waiting</small>
-                </div>
-              </div>
+            <StampCard
+              color="yellow"
+              icon="message-square"
+              header={
+                <a>
+                  132
+                  <small>Comments</small>
+                </a>
+              }
+              footer={"16 waiting"}
+            />
+          </Grid.Col>
+        </Grid.Row>
+        <Grid.Row cards deck>
+          <Grid.Col width={12}>
+            <Card>
+              <Table
+                responsive
+                highlightRowOnHover
+                hasOutline
+                verticalAlign
+                cards
+                className="text-nowrap"
+              >
+                <Table.Header>
+                  <Table.Row>
+                    <Table.ColHeader alignContent="center" className="w-1">
+                      <i className="icon-people" />
+                    </Table.ColHeader>
+                    <Table.ColHeader>User</Table.ColHeader>
+                    <Table.ColHeader>Usage</Table.ColHeader>
+                    <Table.ColHeader alignContent="center">
+                      Payment
+                    </Table.ColHeader>
+                    <Table.ColHeader>Activity</Table.ColHeader>
+                    <Table.ColHeader alignContent="center">
+                      Satisfaction
+                    </Table.ColHeader>
+                    <Table.ColHeader alignContent="center">
+                      <i className="icon-settings" />
+                    </Table.ColHeader>
+                  </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                  <Table.Row>
+                    <Table.Col alignContent="center">
+                      <Avatar
+                        imageURL="demo/faces/female/26.jpg"
+                        className="d-block"
+                        status="green"
+                      />
+                    </Table.Col>
+                    <Table.Col>
+                      <div>Elizabeth Martin</div>
+                      <Text size="sm" muted>
+                        Registered: Mar 19, 2018
+                      </Text>
+                    </Table.Col>
+                    <Table.Col>
+                      <div className="clearfix">
+                        <div className="float-left">
+                          <strong>42%</strong>
+                        </div>
+                        <div className="float-right">
+                          <Text.Small muted>
+                            Jun 11, 2015 - Jul 10, 2015
+                          </Text.Small>
+                        </div>
+                      </div>
+                      <Progress size="xs">
+                        <Progress.Bar color="yellow" width={42} />
+                      </Progress>
+                    </Table.Col>
+                    <Table.Col alignContent="center">
+                      <Icon payment name="visa" />
+                    </Table.Col>
+                    <Table.Col>
+                      <Text size="sm" muted>
+                        Last login
+                      </Text>
+                      <div>4 minutes ago</div>
+                    </Table.Col>
+                    <Table.Col alignContent="center">
+                      <div
+                        className="mx-auto chart-circle chart-circle-xs"
+                        data-value="0.42"
+                        data-thickness="3"
+                        data-color="blue"
+                      >
+                        <div className="chart-circle-value">42%</div>
+                      </div>
+                    </Table.Col>
+                    <Table.Col alignContent="center">
+                      <Dropdown>
+                        <Dropdown.Trigger icon="more-vertical" />
+                        <Dropdown.Menu position="right">
+                          <Dropdown.Item icon="tag">Action </Dropdown.Item>
+                          <Dropdown.Item icon="edit-2">
+                            Another action{" "}
+                          </Dropdown.Item>
+                          <Dropdown.Item icon="message-square">
+                            Something else here
+                          </Dropdown.Item>
+                          <Dropdown.ItemDivider />
+                          <Dropdown.Item icon="link">
+                            {" "}
+                            Separated link
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </Table.Col>
+                  </Table.Row>
+                </Table.Body>
+              </Table>
+            </Card>
+          </Grid.Col>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Col sm={6} lg={4}>
+            <Card title="Browser Stats">
+              <Table className="card-table">
+                <Table.Row>
+                  <Table.Col>
+                    <Icon prefix="fa" name="chrome" className="text-muted" />
+                  </Table.Col>
+                  <Table.Col>Google Chrome</Table.Col>
+                  <Table.Col className="text-right">
+                    <Text RootComponent="span" muted>
+                      23%
+                    </Text>
+                  </Table.Col>
+                </Table.Row>
+              </Table>
+            </Card>
+          </Grid.Col>
+          <Grid.Col sm={6} lg={4}>
+            <Card title="Projects">
+              <Table cards>
+                <Table.Row>
+                  <Table.Col>Admin Template</Table.Col>
+                  <Table.Col alignContent="right">
+                    <Badge color="default">65%</Badge>
+                  </Table.Col>
+                </Table.Row>
+              </Table>
+            </Card>
+          </Grid.Col>
+          <Grid.Col md={6} lg={4}>
+            <Card title="Members">
+              <Card.Body className="o-auto" style={{ height: "15rem" }}>
+                <ul className="list-unstyled list-separated">
+                  <li className="list-separated-item">
+                    <Grid.Row className="align-items-center">
+                      <Grid.Col auto>
+                        <Avatar
+                          size="md"
+                          className="d-block"
+                          imageURL="demo/faces/female/12.jpg"
+                        />
+                      </Grid.Col>
+                      <Grid.Col>
+                        <div>
+                          <a href="javascript:void(0)" className="text-inherit">
+                            Amanda Hunt
+                          </a>
+                        </div>
+                        <Text.Small muted className="d-block item-except h-1x">
+                          amanda_hunt@example.com
+                        </Text.Small>
+                      </Grid.Col>
+                      <Grid.Col auto>
+                        <Dropdown>
+                          <Dropdown.Trigger icon="more-vertical" />
+                          <Dropdown.Menu position="right">
+                            <Dropdown.Item icon="tag">Action </Dropdown.Item>
+                            <Dropdown.Item icon="edit-2">
+                              {" "}
+                              Another action{" "}
+                            </Dropdown.Item>
+                            <Dropdown.Item icon="message-square">
+                              {" "}
+                              Something else here
+                            </Dropdown.Item>
+                            <Dropdown.ItemDivider />
+                            <Dropdown.Item icon="link">
+                              {" "}
+                              Separated link
+                            </Dropdown.Item>
+                          </Dropdown.Menu>
+                        </Dropdown>
+                      </Grid.Col>
+                    </Grid.Row>
+                  </li>
+                </ul>
+              </Card.Body>
+            </Card>
+          </Grid.Col>
+          <Grid.Col md={6} lg={12}>
+            <Grid.Row>
+              <Grid.Col sm={6} lg={3}>
+                <StatsCard
+                  layout={2}
+                  movement={5}
+                  total="423"
+                  label="Users online"
+                  chart={
+                    <div id="chart-bg-users-1" style={{ height: "100%" }} />
+                  }
+                />
+              </Grid.Col>
+              <Grid.Col sm={6} lg={3}>
+                <StatsCard
+                  layout={2}
+                  movement={-3}
+                  total="423"
+                  label="Users online"
+                  chart={
+                    <div id="chart-bg-users-2" style={{ height: "100%" }} />
+                  }
+                />
+              </Grid.Col>
+              <Grid.Col sm={6} lg={3}>
+                <StatsCard
+                  layout={2}
+                  movement={-3}
+                  total="423"
+                  label="Users online"
+                  chart={
+                    <div id="chart-bg-users-3" style={{ height: "100%" }} />
+                  }
+                />
+              </Grid.Col>
+              <Grid.Col sm={6} lg={3}>
+                <StatsCard
+                  layout={2}
+                  movement={9}
+                  total="423"
+                  label="Users online"
+                  chart={
+                    <div id="chart-bg-users-4" style={{ height: "100%" }} />
+                  }
+                />
+              </Grid.Col>
+            </Grid.Row>
+          </Grid.Col>
+          <Grid.Col width={12}>
+            <Card title="Invoices">
+              <Table
+                responsive
+                className="card-table table-vcenter text-nowrap"
+              >
+                <Table.Header>
+                  <Table.Row>
+                    <Table.ColHeader className="w-1">No.</Table.ColHeader>
+                    <Table.ColHeader>Invoice Subject</Table.ColHeader>
+                    <Table.ColHeader>Client</Table.ColHeader>
+                    <Table.ColHeader>VAT No.</Table.ColHeader>
+                    <Table.ColHeader>Created</Table.ColHeader>
+                    <Table.ColHeader>Status</Table.ColHeader>
+                    <Table.ColHeader>Price</Table.ColHeader>
+                    <Table.ColHeader />
+                    <Table.ColHeader />
+                  </Table.Row>
+                </Table.Header>
+                <Table.Body>
+                  <Table.Row>
+                    <Table.Col>
+                      <Text RootComponent="span" muted>
+                        001401
+                      </Text>
+                    </Table.Col>
+                    <Table.Col>
+                      <a href="invoice.html" className="text-inherit">
+                        Design Works
+                      </a>
+                    </Table.Col>
+                    <Table.Col>Carlson Limited</Table.Col>
+                    <Table.Col>87956621</Table.Col>
+                    <Table.Col>15 Dec 2017</Table.Col>
+                    <Table.Col>
+                      <span className="status-icon bg-success" /> Paid
+                    </Table.Col>
+                    <Table.Col>$887</Table.Col>
+                    <Table.Col alignContent="right">
+                      <Button size="sm" color="secondary">
+                        Manage
+                      </Button>
+                      <div className="dropdown">
+                        <Button color="secondary" size="sm" isDropdownToggle>
+                          Actions
+                        </Button>
+                      </div>
+                    </Table.Col>
+                    <Table.Col>
+                      <Icon link name="edit" />
+                    </Table.Col>
+                  </Table.Row>
+                </Table.Body>
+              </Table>
             </Card>
           </Grid.Col>
         </Grid.Row>
