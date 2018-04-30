@@ -18,6 +18,8 @@ import {
   Stamp,
   StampCard,
   StatsCard,
+  Badge,
+  ProgressCard,
 } from "tabler-react";
 
 import SiteWrapper from "./SiteWrapper.react";
@@ -262,7 +264,7 @@ function Home() {
                 responsive
                 highlightRowOnHover
                 hasOutline
-                verticalAlign
+                verticalAlign="center"
                 cards
                 className="text-nowrap"
               >
