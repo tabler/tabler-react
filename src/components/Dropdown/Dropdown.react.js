@@ -11,26 +11,48 @@ type DefaultProps = {|
   +children?: React.Node,
   +className?: string,
   +desktopOnly?: boolean,
+  +trigger?: React.Node,
 |};
 
-type WithTriggerProps = {|
+type WithTriggerContentProps = {|
   ...DefaultProps,
-  +trigger: React.Node,
+  +triggerContent: React.Node,
+  +triggerClassName?: string,
   +icon?: string,
   +isNavLink?: boolean,
   +type?: "link" | "button",
 |};
 
-type WithMenuProps = {|
+type WithItemsProps = {|
   ...DefaultProps,
-  ...WithTriggerProps,
-  +trigger?: React.Node,
-  +items: [React.Node],
+  ...WithTriggerContentProps,
+  +triggerContent?: React.Node,
+  +items: React.Node,
+  +dropdownMenuClassName?: string,
   +position?: string,
   +arrow?: boolean,
 |};
 
-type Props = DefaultProps | WithTriggerProps | WithMenuProps;
+type WithItemsObjectProp = {|
+  ...DefaultProps,
+  ...WithTriggerContentProps,
+  +items?: React.Node,
+  +itemsObject: Array<{
+    +icon?: string,
+    +badge?: string,
+    +value?: string,
+    +isDivider?: boolean,
+  }>,
+  +dropdownMenuClassName?: string,
+  +position?: string,
+  +arrow?: boolean,
+|};
+
+type Props =
+  | DefaultProps
+  | WithTriggerContentProps
+  | WithItemsProps
+  | WithItemsObjectProp;
 
 function Dropdown(props: Props): React.Node {
   const { className, children, desktopOnly } = props;
@@ -40,19 +62,42 @@ function Dropdown(props: Props): React.Node {
     className
   );
 
-  const trigger = props.trigger && (
-    <DropdownTrigger
-      isNavLink={props.isNavLink}
-      icon={props.icon}
-      type={props.type}
-    >
-      {props.trigger}
-    </DropdownTrigger>
-  );
+  const trigger =
+    props.trigger ||
+    (props.triggerContent && (
+      <DropdownTrigger
+        isNavLink={props.isNavLink}
+        icon={props.icon}
+        type={props.type}
+        className={props.triggerClassName}
+      >
+        {props.triggerContent}
+      </DropdownTrigger>
+    ));
 
-  const menu = props.items && (
-    <DropdownMenu position={props.position} arrow={props.arrow}>
-      {props.items}
+  const items =
+    props.items ||
+    (props.itemsObject &&
+      props.itemsObject.map(
+        item =>
+          item.isDivider ? (
+            <Dropdown.ItemDivider />
+          ) : (
+            <Dropdown.Item
+              icon={item.icon}
+              badge={item.badge}
+              value={item.value}
+            />
+          )
+      ));
+
+  const menu = (props.items || props.itemsObject) && (
+    <DropdownMenu
+      position={props.position}
+      arrow={props.arrow}
+      className={props.dropdownMenuClassName}
+    >
+      {items}
     </DropdownMenu>
   );
 
