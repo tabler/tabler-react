@@ -408,7 +408,7 @@ function Home() {
                 responsive
                 highlightRowOnHover
                 hasOutline
-                verticalAlign
+                verticalAlign="center"
                 cards
                 className="text-nowrap"
               >

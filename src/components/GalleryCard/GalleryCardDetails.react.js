@@ -23,7 +23,7 @@ function GalleryCardDetails({
   //classes
 
   const avatarClasses = cn("mr-3");
-  const imagePostDateClasses = cn("d-block text-muted");
+  const dateStringClasses = cn("d-block text-muted");
 
   //conditions
   const hasOtherDetails = fullName !== null || dateString !== null;
@@ -36,7 +36,7 @@ function GalleryCardDetails({
   const otherDetails = (
     <div>
       <div>{fullName}</div>
-      <small className={imagePostDateClasses}> {dateString}</small>{" "}
+      <small className={dateStringClasses}> {dateString}</small>{" "}
     </div>
   );
 
