@@ -28,6 +28,7 @@ import {
   DocsButtonsPage,
   DocsCardsPage,
   DocsAvatarsPage,
+  DocsColorsPage,
   DocsFormComponentsPage,
   DocsChartsPage,
   DocsTagsPage,
@@ -64,6 +65,7 @@ function App(props: Props): React.Node {
         <Route exact path="/docs/buttons" component={DocsButtonsPage} />
         <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
         <Route exact path="/docs/cards" component={DocsCardsPage} />
+        <Route exact path="/docs/colors" component={DocsColorsPage} />
         <Route
           exact
           path="/docs/form-components"
