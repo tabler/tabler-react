@@ -18,7 +18,7 @@ function GalleryCardDetails({
   children,
   avatarURL,
   fullName,
-  imagePostDateString,
+  dateString,
 }: Props): React.Node {
   //classes
 
@@ -26,7 +26,7 @@ function GalleryCardDetails({
   const imagePostDateClasses = cn("d-block text-muted");
 
   //conditions
-  const hasOtherDetails = fullName !== null || imagePostDateString !== null;
+  const hasOtherDetails = fullName !== null || dateString !== null;
 
   //components
   const avatar = (
@@ -36,10 +36,7 @@ function GalleryCardDetails({
   const otherDetails = (
     <div>
       <div>{fullName}</div>
-      <small className={imagePostDateClasses}>
-        {" "}
-        {imagePostDateString}
-      </small>{" "}
+      <small className={imagePostDateClasses}> {dateString}</small>{" "}
     </div>
   );
 

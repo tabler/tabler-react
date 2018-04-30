@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import { Header, Card, Button, Grid } from "tabler-react";
+import { Header, Card, Button, Grid, Dimmer } from "tabler-react";
 
 import ComponentDemo from "../ComponentDemo";
 import { DocsPageWrapper } from "./";
@@ -96,6 +96,20 @@ function DocsCardsPage(): React.Node {
             </Card>
           </Grid.Col>
         </Grid.Row>
+      </ComponentDemo>
+
+      <Header.H3>Card with loader</Header.H3>
+      <ComponentDemo>
+        <Card title="Card with loader" isClosable isCollapsible>
+          <Card.Body>
+            <Dimmer active loader>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+              deleniti fugit incidunt, iste, itaque minima neque pariatur
+              perferendis sed suscipit velit vitae voluptatem. A consequuntur,
+              deserunt eaque error nulla temporibus!
+            </Dimmer>
+          </Card.Body>
+        </Card>
       </ComponentDemo>
     </DocsPageWrapper>
   );
