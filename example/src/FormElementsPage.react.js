@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Page, Grid, Form, Button, Dropdown } from "tabler-react";
+import { Page, Card, Grid, Form, Button, Dropdown } from "tabler-react";
 
 import ComponentDemo from "./ComponentDemo";
 import SiteWrapper from "./SiteWrapper.react";
@@ -10,7 +10,20 @@ import SiteWrapper from "./SiteWrapper.react";
 function FormElements() {
   return (
     <SiteWrapper>
-      <Page.Card title="Forms" RootComponent={Form}>
+      <Page.Card
+        title="Form elements"
+        RootComponent={Form}
+        footer={
+          <Card.Footer>
+            <div class="d-flex">
+              <Button link>Cancel</Button>
+              <Button type="submit" color="primary" className="ml-auto">
+                Send data
+              </Button>
+            </div>
+          </Card.Footer>
+        }
+      >
         <Grid.Row>
           <Grid.Col md={6} lg={4}>
             <ComponentDemo>

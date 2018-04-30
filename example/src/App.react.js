@@ -28,6 +28,7 @@ import {
   DocsButtonsPage,
   DocsCardsPage,
   DocsAvatarsPage,
+  DocsFormComponentsPage,
   DocsChartsPage,
   DocsTagsPage,
 } from "./documentation";
@@ -63,6 +64,11 @@ function App(props: Props): React.Node {
         <Route exact path="/docs/buttons" component={DocsButtonsPage} />
         <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
         <Route exact path="/docs/cards" component={DocsCardsPage} />
+        <Route
+          exact
+          path="/docs/form-components"
+          component={DocsFormComponentsPage}
+        />
         <Route exact path="/docs/charts" component={DocsChartsPage} />
         <Route exact path="/docs/tags" component={DocsTagsPage} />
         <Route component={Error404} />
