@@ -10,6 +10,7 @@ type Props = {|
   +color?: string,
   +size?: string,
   +wrap?: boolean,
+  +muted?: boolean,
 |};
 
 const Text = ({
@@ -19,6 +20,7 @@ const Text = ({
   color = "",
   size = "",
   wrap,
+  muted,
   ...props
 }: Props): React.Node => {
   const classes = cn(
@@ -26,6 +28,7 @@ const Text = ({
       [`text-wrap p-lg-6`]: wrap,
       [`text-${color}`]: color,
       [`${size}`]: size,
+      "text-muted": muted,
     },
     className
   );
