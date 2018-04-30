@@ -20,6 +20,7 @@ import HomePage from "./HomePage.react";
 import FormElementsPage from "./FormElementsPage.react";
 import PricingCardsPage from "./interface/PricingCardsPage.react";
 import CardsDesignPage from "./interface/CardsDesignPage.react";
+import StoreCardsPage from "./components/StoreCardsPage.react.js";
 import ChartsPage from "./interface/ChartsPage.react";
 
 import {
@@ -65,6 +66,7 @@ function App(props: Props): React.Node {
         <Route exact path="/docs/buttons" component={DocsButtonsPage} />
         <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
         <Route exact path="/docs/cards" component={DocsCardsPage} />
+        <Route exact path="/store" component={StoreCardsPage} />
         <Route exact path="/docs/colors" component={DocsColorsPage} />
         <Route
           exact

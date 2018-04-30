@@ -34,7 +34,7 @@ function PricingCardsPage(): React.Node {
                   {"Twitter API"}
                 </PricingCard.AttributeItem>
               </PricingCard.AttributeList>
-              <PricingCard.Button>{"Choose plan"} </PricingCard.Button>
+              <PricingCard.Button> {"Choose plan"} </PricingCard.Button>
             </PricingCard>
           </Grid.Col>
 
