@@ -241,7 +241,7 @@ function Home() {
           <Grid.Col md={6}>
             <Alert type="primary">
               Are you in trouble?{" "}
-              <Alert.Link href="/docs/index">Read our documentation</Alert.Link>{" "}
+              <Alert.Link href="/docs">Read our documentation</Alert.Link>{" "}
               with code samples.
             </Alert>
             <Grid.Row>
