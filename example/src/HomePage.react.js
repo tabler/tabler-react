@@ -241,8 +241,8 @@ function Home() {
           <Grid.Col md={6}>
             <Alert type="primary">
               Are you in trouble?{" "}
-              <Alert.Link href="/docs">Read our documentation</Alert.Link>{" "}
-              with code samples.
+              <Alert.Link href="/docs">Read our documentation</Alert.Link> with
+              code samples.
             </Alert>
             <Grid.Row>
               <Grid.Col sm={6}>
@@ -834,20 +834,18 @@ function Home() {
               <Table
                 responsive
                 className="card-table table-vcenter text-nowrap"
+                headerItems={[
+                  { content: "No.", className: "w-1" },
+                  { content: "Invoice Subject" },
+                  { content: "Client" },
+                  { content: "VAT No." },
+                  { content: "Created" },
+                  { content: "Status" },
+                  { content: "Price" },
+                  { content: null },
+                  { content: null },
+                ]}
               >
-                <Table.Header>
-                  <Table.Row>
-                    <Table.ColHeader className="w-1">No.</Table.ColHeader>
-                    <Table.ColHeader>Invoice Subject</Table.ColHeader>
-                    <Table.ColHeader>Client</Table.ColHeader>
-                    <Table.ColHeader>VAT No.</Table.ColHeader>
-                    <Table.ColHeader>Created</Table.ColHeader>
-                    <Table.ColHeader>Status</Table.ColHeader>
-                    <Table.ColHeader>Price</Table.ColHeader>
-                    <Table.ColHeader />
-                    <Table.ColHeader />
-                  </Table.Row>
-                </Table.Header>
                 <Table.Body>
                   <Table.Row>
                     <Table.Col>
