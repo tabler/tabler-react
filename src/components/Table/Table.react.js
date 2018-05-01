@@ -17,6 +17,7 @@ type Props = {|
   +highlightRowOnHover?: boolean,
   +hasOutline?: boolean,
   +verticalAlign?: "center",
+  +headerItems?: Array<{ +content?: React.Node, className: string }>,
 |};
 
 function Table({
@@ -41,17 +42,27 @@ function Table({
     },
     className
   );
-  return !responsive ? (
+
+  const header = props.headerItems && (
+    <Table.Header>
+      <Table.Row>
+        {props.headerItems.map((item, i) => (
+          <Table.ColHeader key={i} className={item.className}>
+            {item.content}
+          </Table.ColHeader>
+        ))}
+      </Table.Row>
+    </Table.Header>
+  );
+
+  const table = (
     <table className={classes} {...props}>
+      {header}
       {children}
     </table>
-  ) : (
-    <div className="table-responsive">
-      <table className={classes} {...props}>
-        {children}
-      </table>
-    </div>
   );
+
+  return !responsive ? table : <div className="table-responsive">{table}</div>;
 }
 
 Table.defaultProps = {
