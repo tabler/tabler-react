@@ -1,10 +1,12 @@
 # Tabler React
 
-> Work in progress React implementation of the [Tabler Dashboard UI Kit](https://github.com/tabler/tabler)
+> React implementation of the [Tabler Dashboard UI Kit](https://github.com/tabler/tabler)
 
 [![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg)
 
-**[View the demo](https://tabler.github.io/tabler-react/)** | **[track our progress towards version 1](https://github.com/tabler/tabler-react/projects/1)** | **[get involved](https://github.com/tabler/tabler-react/issues)** | **[chat to us on Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
+**[Demo](https://tabler.github.io/tabler-react/)** | **[Documentation](https://tabler.github.io/tabler-react/)** | **[Issues](https://github.com/tabler/tabler-react/issues)** | **[Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
+
+> Please note: we're working fast towards [version 1.0](https://github.com/tabler/tabler-react/milestone/1) and until then all releases should be considered unstable and potentially breaking
 
 ## Install
 
@@ -12,7 +14,7 @@ Make sure you have [Node.js](https://nodejs.org/) 8+ and [npm](https://npmjs.com
 
 `npm install --save tabler-react` or `yarn add tabler-react`
 
-## Usage
+## Example
 
 ```jsx
 import React, { Component } from "react";
@@ -35,7 +37,7 @@ class MyCard extends Component {
 }
 ```
 
-For more examples see the [demo website](https://tabler.github.io/tabler-react/)
+For more examples and documentation see the [demo website](https://tabler.github.io/tabler-react/)
 
 ## Contributing
 
