@@ -9,8 +9,7 @@ import SiteWrapper from "../SiteWrapper.react";
 function StoreCardsPage(): React.Node {
   return (
     <SiteWrapper>
-      <Page.Content>
-        <Page.Header>Store Components</Page.Header>
+      <Page.Content title="Store Components">
         <Grid.Row>
           <Grid.Col lg={3}>
             <StoreCard
