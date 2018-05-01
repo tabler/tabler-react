@@ -13,9 +13,7 @@ import json from "./data/Gallery.Items";
 function GalleryPage(): React.Node {
   return (
     <SiteWrapper>
-      <Page.Content>
-        <Page.Header title="Gallery" />
-
+      <Page.Content title="Gallery">
         <Grid.Row className="row-cards">
           {json.items.map(item => (
             <Grid.Col sm={6} lg={4}>
