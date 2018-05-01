@@ -22,6 +22,7 @@ import PricingCardsPage from "./interface/PricingCardsPage.react";
 import CardsDesignPage from "./interface/CardsDesignPage.react";
 import StoreCardsPage from "./components/StoreCardsPage.react.js";
 import ChartsPage from "./interface/ChartsPage.react";
+import GalleryPage from "./GalleryPage.react";
 
 import {
   DocsIntroPage,
@@ -73,6 +74,7 @@ function App(props: Props): React.Node {
           path="/docs/form-components"
           component={DocsFormComponentsPage}
         />
+        <Route exact path="/gallery" component={GalleryPage} />
         <Route exact path="/docs/charts" component={DocsChartsPage} />
         <Route exact path="/docs/tags" component={DocsTagsPage} />
         <Route component={Error404} />
