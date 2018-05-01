@@ -19,6 +19,7 @@ export { default as Progress } from "./Progress";
 export { default as ProgressCard } from "./ProgressCard";
 export { default as Table } from "./Table";
 export { default as List } from "./List";
+export { default as GalleryCard } from "./GalleryCard";
 export { default as PricingCard } from "./PricingCard";
 export { default as StoreCard } from "./StoreCard";
 export { default as StatsCard } from "./StatsCard";
