@@ -241,8 +241,8 @@ function Home() {
           <Grid.Col md={6}>
             <Alert type="primary">
               Are you in trouble?{" "}
-              <Alert.Link href="/docs">Read our documentation</Alert.Link>{" "}
-              with code samples.
+              <Alert.Link href="/docs">Read our documentation</Alert.Link> with
+              code samples.
             </Alert>
             <Grid.Row>
               <Grid.Col sm={6}>
@@ -834,55 +834,67 @@ function Home() {
               <Table
                 responsive
                 className="card-table table-vcenter text-nowrap"
-              >
-                <Table.Header>
-                  <Table.Row>
-                    <Table.ColHeader className="w-1">No.</Table.ColHeader>
-                    <Table.ColHeader>Invoice Subject</Table.ColHeader>
-                    <Table.ColHeader>Client</Table.ColHeader>
-                    <Table.ColHeader>VAT No.</Table.ColHeader>
-                    <Table.ColHeader>Created</Table.ColHeader>
-                    <Table.ColHeader>Status</Table.ColHeader>
-                    <Table.ColHeader>Price</Table.ColHeader>
-                    <Table.ColHeader />
-                    <Table.ColHeader />
-                  </Table.Row>
-                </Table.Header>
-                <Table.Body>
-                  <Table.Row>
-                    <Table.Col>
-                      <Text RootComponent="span" muted>
-                        001401
-                      </Text>
-                    </Table.Col>
-                    <Table.Col>
-                      <a href="invoice.html" className="text-inherit">
-                        Design Works
-                      </a>
-                    </Table.Col>
-                    <Table.Col>Carlson Limited</Table.Col>
-                    <Table.Col>87956621</Table.Col>
-                    <Table.Col>15 Dec 2017</Table.Col>
-                    <Table.Col>
-                      <span className="status-icon bg-success" /> Paid
-                    </Table.Col>
-                    <Table.Col>$887</Table.Col>
-                    <Table.Col alignContent="right">
-                      <Button size="sm" color="secondary">
-                        Manage
-                      </Button>
-                      <div className="dropdown">
-                        <Button color="secondary" size="sm" isDropdownToggle>
-                          Actions
-                        </Button>
-                      </div>
-                    </Table.Col>
-                    <Table.Col>
-                      <Icon link name="edit" />
-                    </Table.Col>
-                  </Table.Row>
-                </Table.Body>
-              </Table>
+                headerItems={[
+                  { content: "No.", className: "w-1" },
+                  { content: "Invoice Subject" },
+                  { content: "Client" },
+                  { content: "VAT No." },
+                  { content: "Created" },
+                  { content: "Status" },
+                  { content: "Price" },
+                  { content: null },
+                  { content: null },
+                ]}
+                bodyItems={[
+                  [
+                    {
+                      content: (
+                        <Text RootComponent="span" muted>
+                          001401
+                        </Text>
+                      ),
+                    },
+                    {
+                      content: (
+                        <a href="invoice.html" className="text-inherit">
+                          Design Works
+                        </a>
+                      ),
+                    },
+                    { content: "Carlson Limited" },
+                    { content: "87956621" },
+                    { content: "15 Dec 2017" },
+                    {
+                      content: (
+                        <React.Fragment>
+                          <span className="status-icon bg-success" /> Paid
+                        </React.Fragment>
+                      ),
+                    },
+                    { content: "$887" },
+                    {
+                      alignContent: "right",
+                      content: (
+                        <React.Fragment>
+                          <Button size="sm" color="secondary">
+                            Manage
+                          </Button>
+                          <div className="dropdown">
+                            <Button
+                              color="secondary"
+                              size="sm"
+                              isDropdownToggle
+                            >
+                              Actions
+                            </Button>
+                          </div>
+                        </React.Fragment>
+                      ),
+                    },
+                    { content: <Icon link name="edit" /> },
+                  ],
+                ]}
+              />
             </Card>
           </Grid.Col>
         </Grid.Row>
