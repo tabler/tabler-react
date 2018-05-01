@@ -845,42 +845,56 @@ function Home() {
                   { content: null },
                   { content: null },
                 ]}
-              >
-                <Table.Body>
-                  <Table.Row>
-                    <Table.Col>
-                      <Text RootComponent="span" muted>
-                        001401
-                      </Text>
-                    </Table.Col>
-                    <Table.Col>
-                      <a href="invoice.html" className="text-inherit">
-                        Design Works
-                      </a>
-                    </Table.Col>
-                    <Table.Col>Carlson Limited</Table.Col>
-                    <Table.Col>87956621</Table.Col>
-                    <Table.Col>15 Dec 2017</Table.Col>
-                    <Table.Col>
-                      <span className="status-icon bg-success" /> Paid
-                    </Table.Col>
-                    <Table.Col>$887</Table.Col>
-                    <Table.Col alignContent="right">
-                      <Button size="sm" color="secondary">
-                        Manage
-                      </Button>
-                      <div className="dropdown">
-                        <Button color="secondary" size="sm" isDropdownToggle>
-                          Actions
-                        </Button>
-                      </div>
-                    </Table.Col>
-                    <Table.Col>
-                      <Icon link name="edit" />
-                    </Table.Col>
-                  </Table.Row>
-                </Table.Body>
-              </Table>
+                bodyItems={[
+                  [
+                    {
+                      content: (
+                        <Text RootComponent="span" muted>
+                          001401
+                        </Text>
+                      ),
+                    },
+                    {
+                      content: (
+                        <a href="invoice.html" className="text-inherit">
+                          Design Works
+                        </a>
+                      ),
+                    },
+                    { content: "Carlson Limited" },
+                    { content: "87956621" },
+                    { content: "15 Dec 2017" },
+                    {
+                      content: (
+                        <React.Fragment>
+                          <span className="status-icon bg-success" /> Paid
+                        </React.Fragment>
+                      ),
+                    },
+                    { content: "$887" },
+                    {
+                      alignContent: "right",
+                      content: (
+                        <React.Fragment>
+                          <Button size="sm" color="secondary">
+                            Manage
+                          </Button>
+                          <div className="dropdown">
+                            <Button
+                              color="secondary"
+                              size="sm"
+                              isDropdownToggle
+                            >
+                              Actions
+                            </Button>
+                          </div>
+                        </React.Fragment>
+                      ),
+                    },
+                    { content: <Icon link name="edit" /> },
+                  ],
+                ]}
+              />
             </Card>
           </Grid.Col>
         </Grid.Row>
