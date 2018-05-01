@@ -10,7 +10,7 @@ function StoreCardsPage(): React.Node {
   return (
     <SiteWrapper>
       <Page.Content>
-        <Page.Header>Store Components</Page.Header>
+        <Page.Header title="Store Components" />
         <Grid.Row>
           <Grid.Col lg={3}>
             <StoreCard

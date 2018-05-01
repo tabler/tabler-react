@@ -14,7 +14,7 @@ function GalleryPage(): React.Node {
   return (
     <SiteWrapper>
       <Page.Content>
-        <Page.Header>Gallery</Page.Header>
+        <Page.Header title="Gallery" />
 
         <Grid.Row className="row-cards">
           {json.items.map(item => (

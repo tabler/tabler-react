@@ -31,7 +31,7 @@ function Home() {
   return (
     <SiteWrapper>
       <Page.Content>
-        <Page.Header>Dashboard</Page.Header>
+        <Page.Header title="Dashboard" />
         <Grid.Row cards={true}>
           <Grid.Col width={6} sm={4} lg={2}>
             <StatsCard layout={1} movement={6} total="43" label="New Tickets" />
