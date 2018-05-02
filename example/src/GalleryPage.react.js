@@ -13,10 +13,11 @@ import json from "./data/Gallery.Items";
 function GalleryPage(): React.Node {
   const options = (
     <React.Fragment>
-      <Form.Select className="mr-2">
+      <Form.Select className="w-auto mr-2">
         <option value="asc">Newest</option>
         <option value="desc">Oldest</option>
       </Form.Select>
+      <Form.Input icon="search" placeholder="Search photo" />
     </React.Fragment>
   );
   return (
@@ -26,9 +27,8 @@ function GalleryPage(): React.Node {
           title="Gallery"
           subTitle="1 - 12 of 1713 photos"
           options={options}
-        >
-          <Form.Input icon="search" placeholder="Search photo" />
-        </Page.Header>
+        />
+
         <Grid.Row className="row-cards">
           {json.items.map(item => (
             <Grid.Col sm={6} lg={4}>
