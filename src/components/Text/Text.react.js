@@ -12,6 +12,11 @@ type Props = {|
   +size?: string,
   +wrap?: boolean,
   +muted?: boolean,
+  +align?: "left" | "center" | "right" | "justify",
+  +left?: boolean,
+  +center?: boolean,
+  +right?: boolean,
+  +justify?: boolean,
 |};
 
 const Text = ({
@@ -22,14 +27,26 @@ const Text = ({
   size = "",
   wrap,
   muted,
+  align: alignFromProps = "",
+  left,
+  center,
+  right,
+  justify,
   ...props
 }: Props): React.Node => {
+  const align =
+    alignFromProps ||
+    (left && "left") ||
+    (center && "center") ||
+    (right && "right") ||
+    (justify && "justify");
   const classes = cn(
     {
       [`text-wrap p-lg-6`]: wrap,
       [`text-${color}`]: color,
       [`${size}`]: size,
       "text-muted": muted,
+      [`text-${align}`]: align,
     },
     className
   );
