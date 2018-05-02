@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Page, Grid, GalleryCard } from "tabler-react";
+import { Page, Grid, GalleryCard, Form } from "tabler-react";
 
 import SiteWrapper from "./SiteWrapper.react";
 
@@ -11,9 +11,22 @@ import json from "./data/Gallery.Items";
 // TODO:Update Page.Header to additional components
 
 function GalleryPage(): React.Node {
+  const options = (
+    <Form.Select className="mr-2">
+      <option value="asc">Newest</option>
+      <option value="desc">Oldest</option>
+    </Form.Select>
+  );
   return (
     <SiteWrapper>
-      <Page.Content title="Gallery">
+      <Page.Content>
+        <Page.Header
+          title="Gallery"
+          subTitle="1 - 12 of 1713 photos"
+          options={options}
+        >
+          <Form.Input icon="search" placeholder="Search photo" />
+        </Page.Header>
         <Grid.Row className="row-cards">
           {json.items.map(item => (
             <Grid.Col sm={6} lg={4}>
