@@ -21,9 +21,17 @@ type TransformProps = {|
 
 type TrackingProps = {|
   +tracking?: "tight" | "normal" | "wide",
-  +tight?: boolean,
-  +normal?: boolean,
-  +wide?: boolean,
+  +trackingTight?: boolean,
+  +trackingNormal?: boolean,
+  +trackingWide?: boolean,
+|};
+
+type LeadingProps = {|
+  +leading?: "none" | "tight" | "normal" | "loose",
+  +leadingNone?: boolean,
+  +leadingTight?: boolean,
+  +leadingNormal?: boolean,
+  +leadingLoose?: boolean,
 |};
 
 type TextProps = {|
@@ -37,6 +45,7 @@ type TextProps = {|
   ...AlignProps,
   ...TransformProps,
   ...TrackingProps,
+  ...LeadingProps,
 |};
 
 const Text = ({
@@ -71,12 +80,32 @@ const Text = ({
     (capitalize && "capitalize") ||
     "";
 
-  const { tracking: trackingFromProps, tight, normal, wide } = props;
+  const {
+    tracking: trackingFromProps,
+    trackingTight,
+    trackingNormal,
+    trackingWide,
+  } = props;
   const tracking =
     trackingFromProps ||
-    (tight && "tight") ||
-    (normal && "normal") ||
-    (wide && "wide") ||
+    (trackingTight && "tight") ||
+    (trackingNormal && "normal") ||
+    (trackingWide && "wide") ||
+    "";
+
+  const {
+    leading: leadingFromProps,
+    leadingNone,
+    leadingTight,
+    leadingNormal,
+    leadingLoose,
+  } = props;
+  const leading =
+    leadingFromProps ||
+    (leadingNone && "none") ||
+    (leadingTight && "tight") ||
+    (leadingNormal && "normal") ||
+    (leadingLoose && "loose") ||
     "";
 
   const classes = cn(
@@ -88,6 +117,7 @@ const Text = ({
       [`text-${align}`]: align,
       [`text-${transform}`]: transform,
       [`tracking-${tracking}`]: tracking,
+      [`leading-${leading}`]: leading,
     },
     className
   );
