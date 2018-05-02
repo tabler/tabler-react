@@ -9,6 +9,7 @@ import DocsColorsPage from "./DocsColorsPage.react";
 import DocsFormComponentsPage from "./DocsFormComponentsPage.react";
 import DocsChartsPage from "./DocsChartsPage.react";
 import DocsTagsPage from "./DocsTagsPage.react";
+import DocsTypographyPage from "./DocsTypographyPage.react";
 
 export {
   DocsPageWrapper,
@@ -22,4 +23,5 @@ export {
   DocsFormComponentsPage,
   DocsChartsPage,
   DocsTagsPage,
+  DocsTypographyPage,
 };
