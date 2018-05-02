@@ -19,6 +19,13 @@ type TransformProps = {|
   +capitalize?: boolean,
 |};
 
+type TrackingProps = {|
+  +tracking?: "tight" | "normal" | "wide",
+  +tight?: boolean,
+  +normal?: boolean,
+  +wide?: boolean,
+|};
+
 type TextProps = {|
   +children?: React.Node,
   +className?: string,
@@ -29,6 +36,7 @@ type TextProps = {|
   +muted?: boolean,
   ...AlignProps,
   ...TransformProps,
+  ...TrackingProps,
 |};
 
 const Text = ({
@@ -50,8 +58,6 @@ const Text = ({
     (justify && "justify") ||
     "";
 
-  console.log(align);
-
   const {
     transform: transformFromProps,
     lowercase,
@@ -65,6 +71,14 @@ const Text = ({
     (capitalize && "capitalize") ||
     "";
 
+  const { tracking: trackingFromProps, tight, normal, wide } = props;
+  const tracking =
+    trackingFromProps ||
+    (tight && "tight") ||
+    (normal && "normal") ||
+    (wide && "wide") ||
+    "";
+
   const classes = cn(
     {
       [`text-wrap p-lg-6`]: wrap,
@@ -73,6 +87,7 @@ const Text = ({
       "text-muted": muted,
       [`text-${align}`]: align,
       [`text-${transform}`]: transform,
+      [`tracking-${tracking}`]: tracking,
     },
     className
   );
