@@ -31,10 +31,7 @@ yarn add react-tabler-components`}
             <Card.Title>Card Title</Card.Title>
           </Card.Header>
           <Card.Body>
-            <Text color="red">
-              Some Red text next to an icon
-              <Icon name="user" />
-            </Text>
+            <Text color="blue">Some blue text</Text>
           </Card.Body>
         </Card>
       </ComponentDemo>
