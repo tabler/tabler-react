@@ -12,10 +12,12 @@ import json from "./data/Gallery.Items";
 
 function GalleryPage(): React.Node {
   const options = (
-    <Form.Select className="mr-2">
-      <option value="asc">Newest</option>
-      <option value="desc">Oldest</option>
-    </Form.Select>
+    <React.Fragment>
+      <Form.Select className="mr-2">
+        <option value="asc">Newest</option>
+        <option value="desc">Oldest</option>
+      </Form.Select>
+    </React.Fragment>
   );
   return (
     <SiteWrapper>
