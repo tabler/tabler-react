@@ -1,7 +1,5 @@
 ## Gallery Card Component
 
-
-
 ### Usage
 
 ```jsx
@@ -15,7 +13,7 @@ import { GalleryCard } from 'tabler-react'
         <GalleryCard.Details
             avatarURL="https://tabler.github.io/tabler/demo/faces/male/41.jpg"
             fullName="Nathar Guerrero"
-            imagePostDateString="12 days ago"
+            dateString="12 days ago"
         />
         <GalleryCard.IconGroup>
             <GalleryCard.IconItem name="eye" label="112" />
