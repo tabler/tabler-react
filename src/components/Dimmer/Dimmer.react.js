@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Loader } from "../";
+import Loader from "../Loader";
 
 import DimmerContent from "./DimmerContent.react";
 

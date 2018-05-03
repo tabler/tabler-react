@@ -10,7 +10,7 @@ import GalleryCardIconItem from "./GalleryCardIconItem.react";
 import GalleryCardImage from "./GalleryCardImage.react";
 
 type Props = {|
-  +children?: string,
+  +children?: React.Node,
   +className?: string,
 |};
 

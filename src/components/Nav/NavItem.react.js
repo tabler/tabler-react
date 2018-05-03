@@ -9,8 +9,8 @@ type Props = {|
   +value?: string,
   +LinkComponent?: React.ElementType,
   +href?: string,
-  +to?: string, // this is so you can easily use with React router Link/NavLink
-  +icon?: string, // so you can pass an icon down to the RootComponent
+  +to?: string,
+  +icon?: string,
   +type?: "li" | "div",
   +hasSubNav?: boolean,
 |};
