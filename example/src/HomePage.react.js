@@ -1,6 +1,6 @@
 // @flow
 
-import React from "react";
+import * as React from "react";
 
 import {
   Page,
@@ -9,14 +9,12 @@ import {
   Grid,
   Card,
   Text,
-  Header,
   Table,
   Alert,
   Progress,
   colors,
   Dropdown,
   Button,
-  Stamp,
   StampCard,
   StatsCard,
   ProgressCard,
@@ -528,7 +526,7 @@ function Home() {
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
             <Card title="Members">
-              <Card.Body className="o-auto" style={{ height: "15rem" }}>
+              <Card.Body className="o-auto">
                 <ul className="list-unstyled list-separated">
                   <li className="list-separated-item">
                     <Grid.Row className="align-items-center">
@@ -541,9 +539,7 @@ function Home() {
                       </Grid.Col>
                       <Grid.Col>
                         <div>
-                          <a href="javascript:void(0)" className="text-inherit">
-                            Amanda Hunt
-                          </a>
+                          <a className="text-inherit">Amanda Hunt</a>
                         </div>
                         <Text.Small muted className="d-block item-except h-1x">
                           amanda_hunt@example.com

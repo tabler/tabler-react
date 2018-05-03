@@ -9,7 +9,7 @@ type Props = {|
   +RootComponent?: React.ElementType,
   +active?: boolean,
   +icon?: string,
-  +to?: string, // this is so you can easily use with React router Link/NavLink
+  +to?: string,
 |};
 
 function NavSubmenuItem({
