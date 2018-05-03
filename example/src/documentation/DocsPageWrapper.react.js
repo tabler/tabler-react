@@ -13,7 +13,7 @@ function DocsPageWrapper(props: Props) {
   return (
     <SiteWrapper>
       <Page.ContentWithSidebar
-        header={<Page.Header>Documentation</Page.Header>}
+        header={<Page.Header title="Documentation" />}
         sidebar={<Sidebar />}
       >
         <Card>

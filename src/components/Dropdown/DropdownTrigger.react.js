@@ -12,6 +12,7 @@ type Props = {|
   +type?: "link" | "button",
   +color?: string,
   +icon?: string,
+  +isNavLink?: boolean,
 |};
 
 function DropdownTrigger({
@@ -22,8 +23,12 @@ function DropdownTrigger({
   type = "link",
   icon,
   color,
+  isNavLink,
 }: Props): React.Node {
-  const classes = cn({ "dropdown-toggle": toggle }, className);
+  const classes = cn(
+    { "dropdown-toggle": toggle, "nav-link": isNavLink },
+    className
+  );
 
   const childrenFragment = (
     <React.Fragment>
