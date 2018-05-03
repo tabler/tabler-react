@@ -32,7 +32,10 @@ def propsValidator(filePath, contents):
 
     for prop in props:
         if not prop.startswith('+'):
-            return False
+            if "<" in prop or ">" in prop or "//" in prop:
+                return True
+            else:
+                return False
 
     return True
 
