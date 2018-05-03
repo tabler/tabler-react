@@ -4,7 +4,7 @@ import cn from "classnames";
 
 import Icon from "../Icon";
 
-type Props = {
+type Props = {|
   +className?: string,
   +label?: string,
   +name: string,
@@ -12,7 +12,7 @@ type Props = {
   +right?: boolean,
   +to?: string,
   +RootComponent?: React.ElementType,
-};
+|};
 
 function GalleryCardIconItem({
   className,
