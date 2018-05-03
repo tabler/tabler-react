@@ -9521,13 +9521,6 @@ function IconPage(): React.Node {
             <Grid.Row>
               <Grid.Col lg={3}>
                 <p>
-                  {" "}
-                  For more info{" "}
-                  <a href="" target="_blank" rel="noopener noreferrer">
-                    click here
-                  </a>.
-                </p>
-                <p>
                   <code>&lt;Icon prefix="flat" name="ICON_NAME"/&gt;</code>
                 </p>
               </Grid.Col>
@@ -11843,13 +11836,6 @@ function IconPage(): React.Node {
           <Card.Body>
             <Grid.Row>
               <Grid.Col lg={3}>
-                <p>
-                  {" "}
-                  For more info{" "}
-                  <a href="" target="_blank" rel="noopener noreferrer">
-                    click here
-                  </a>.
-                </p>
                 <p>
                   <code>&lt;Icon prefix="payment" name="ICON_NAME"/&gt;</code>
                 </p>
