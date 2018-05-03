@@ -31,12 +31,10 @@ function FormTextarea({
       name={name}
       placeholder={placeholder}
       defaultValue={defaultValue}
-      value={value}
+      value={value || children}
       disabled={disabled}
       rows={rows}
-    >
-      {children}
-    </textarea>
+    />
   );
 }
 
