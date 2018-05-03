@@ -10,133 +10,74 @@ import flagIcons from "../data/icons/flag";
 import paymentIcons from "../data/icons/payment";
 import SiteWrapper from "../SiteWrapper.react";
 
+const iconSets = [
+  {
+    prefix: "fe",
+    title: "Feather Icons",
+    icons: feIcons,
+    description: "Simply beautiful open source icons.",
+    link: "https://feathericons.com",
+  },
+  {
+    prefix: "fa",
+    title: "Font Awesome",
+    icons: faIcons,
+    description: "Powered by Font Awesome set.",
+    link: "http://fontawesome.io",
+  },
+  { prefix: "flag", title: "Flags", icons: flagIcons },
+  { prefix: "payment", title: "Payments", icons: paymentIcons },
+];
+
 function IconPage(): React.Node {
   return (
     <SiteWrapper>
       <Page.Content title="Icons">
-        <Card>
-          <Card.Header>
-            <Card.Title>Feather Icons</Card.Title>
-          </Card.Header>
-          <Card.Body>
-            <Grid.Row>
-              <Grid.Col lg={3}>
-                <p>
-                  Simply beautiful open source icons. For more info{" "}
-                  <a
-                    href="https://feathericons.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    click here
-                  </a>.
-                </p>
-                <p>
-                  <code>&lt;Icon prefix="fe" name="ICON_NAME"/&gt;</code>
-                </p>
-              </Grid.Col>
-              <Grid.Col lg={9}>
-                <div className="icons-list-wrap">
-                  <ul className="icons-list">
-                    {feIcons.map(icon => (
-                      <li className="icons-list-item">
-                        <Icon prefix="fe" name={icon} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Grid.Col>
-            </Grid.Row>
-          </Card.Body>
-        </Card>
-
-        <Card>
-          <Card.Header>
-            <Card.Title>Font Awesome</Card.Title>
-          </Card.Header>
-          <Card.Body>
-            <Grid.Row>
-              <Grid.Col lg={3}>
-                <p>
-                  Powered by Font Awesome set. For more info{" "}
-                  <a
-                    href="http://fontawesome.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    click here
-                  </a>.
-                </p>
-                <p>
-                  <code>&lt;Icon prefix="fa" name="ICON_NAME"/&gt;</code>
-                </p>
-              </Grid.Col>
-              <Grid.Col lg={9}>
-                <div className="icons-list-wrap">
-                  <ul className="icons-list">
-                    {faIcons.map(icon => (
-                      <li className="icons-list-item">
-                        <Icon prefix="fa" name={icon} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Grid.Col>
-            </Grid.Row>
-          </Card.Body>
-        </Card>
-
-        <Card>
-          <Card.Header>
-            <Card.Title>Flags</Card.Title>
-          </Card.Header>
-          <Card.Body>
-            <Grid.Row>
-              <Grid.Col lg={3}>
-                <p>
-                  <code>&lt;Icon prefix="flag" name="ICON_NAME"/&gt;</code>
-                </p>
-              </Grid.Col>
-              <Grid.Col lg={9}>
-                <div className="icons-list-wrap">
-                  <ul className="icons-list">
-                    {flagIcons.map(icon => (
-                      <li className="icons-list-item">
-                        <Icon prefix="flag" name={icon} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Grid.Col>
-            </Grid.Row>
-          </Card.Body>
-        </Card>
-
-        <Card>
-          <Card.Header>
-            <Card.Title>Payments</Card.Title>
-          </Card.Header>
-          <Card.Body>
-            <Grid.Row>
-              <Grid.Col lg={3}>
-                <p>
-                  <code>&lt;Icon payment name="ICON_NAME"/&gt;</code>
-                </p>
-              </Grid.Col>
-              <Grid.Col lg={9}>
-                <div className="icons-list-wrap">
-                  <ul className="icons-list">
-                    {paymentIcons.map(icon => (
-                      <li className="icons-list-item">
-                        <Icon payment name={icon} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Grid.Col>
-            </Grid.Row>
-          </Card.Body>
-        </Card>
+        {iconSets.map(iconSet => (
+          <Card key={iconSet.prefix}>
+            <Card.Header>
+              <Card.Title>Feather Icons</Card.Title>
+            </Card.Header>
+            <Card.Body>
+              <Grid.Row>
+                <Grid.Col lg={3}>
+                  <p>
+                    {iconSet.description}
+                    {iconSet.link && (
+                      <span>
+                        {" "}
+                        For more info{" "}
+                        <a
+                          href={iconSet.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          click here
+                        </a>.
+                      </span>
+                    )}
+                  </p>
+                  <p>
+                    <code>{`&lt;Icon prefix="${
+                      iconSet.prefix
+                    }" name="ICON_NAME"/&gt;`}</code>
+                  </p>
+                </Grid.Col>
+                <Grid.Col lg={9}>
+                  <div className="icons-list-wrap">
+                    <ul className="icons-list">
+                      {iconSet.icons.map(icon => (
+                        <li className="icons-list-item" key={icon}>
+                          <Icon prefix={iconSet.prefix} name={icon} />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Grid.Col>
+              </Grid.Row>
+            </Card.Body>
+          </Card>
+        ))}
       </Page.Content>
     </SiteWrapper>
   );
