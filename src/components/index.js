@@ -5,6 +5,7 @@ export { default as Avatar } from "./Avatar";
 export { default as Badge } from "./Badge";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
+export { default as ContactCard } from "./ContactCard";
 export { default as Container } from "./Container.react";
 export { default as Dimmer } from "./Dimmer";
 export { default as Dropdown } from "./Dropdown";
