@@ -255,7 +255,6 @@ function ProfilePage() {
                           type="text"
                           placeholder="Username"
                           value="michael23"
-                          onChange
                         />
                       </Form.Group>
                     </Grid.Col>
