@@ -10,7 +10,13 @@ import flagIcons from "../data/icons/flag";
 import paymentIcons from "../data/icons/payment";
 import SiteWrapper from "../SiteWrapper.react";
 
-const iconSets = [
+const iconSets: Array<{
+  prefix: "fa" | "fe" | "flag" | "payment",
+  title: string,
+  icons: Array<string>,
+  description?: string,
+  link?: string,
+}> = [
   {
     prefix: "fe",
     title: "Feather Icons",
