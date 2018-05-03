@@ -8,6 +8,7 @@ import PageHeader from "./PageHeader.react";
 import PageContentWithSidebar from "./PageContentWithSidebar.react";
 import PageCard from "./PageCard.react";
 import PageTitle from "./PageTitle.react";
+import PageMapHeader from "./PageMapHeader.react";
 
 type Props = {|
   +children?: React.Node,
@@ -25,5 +26,6 @@ Page.Header = PageHeader;
 Page.ContentWithSidebar = PageContentWithSidebar;
 Page.Card = PageCard;
 Page.Title = PageTitle;
+Page.MapHeader = PageMapHeader;
 
 export default Page;
