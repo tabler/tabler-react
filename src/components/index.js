@@ -21,4 +21,3 @@ export { default as Progress } from "./Progress";
 export { default as Site } from "./Site";
 export { default as Table } from "./Table";
 export { default as Text } from "./Text";
-export { default as Tooltip } from "./Tooltip";
