@@ -36,7 +36,7 @@ function IconPage(): React.Node {
         {iconSets.map(iconSet => (
           <Card key={iconSet.prefix}>
             <Card.Header>
-              <Card.Title>Feather Icons</Card.Title>
+              <Card.Title>{iconSet.title}</Card.Title>
             </Card.Header>
             <Card.Body>
               <Grid.Row>
