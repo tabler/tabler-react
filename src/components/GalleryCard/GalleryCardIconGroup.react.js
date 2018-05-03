@@ -8,12 +8,12 @@ type Props = {|
   +className?: string,
 |};
 
-function GalleryCardIconGroup({ children, className }: Props):React.Node {
+function GalleryCardIconGroup({ children, className }: Props): React.Node {
   const classes = cn("ml-auto", "text-muted", className);
 
   return <div className={classes}>{children}</div>;
 }
 
-GalleryCardIconGroup.displayName="GalleryCard.IconGroup";
+GalleryCardIconGroup.displayName = "GalleryCard.IconGroup";
 
 export default GalleryCardIconGroup;

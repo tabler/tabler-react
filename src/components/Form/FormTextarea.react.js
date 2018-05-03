@@ -11,6 +11,7 @@ type Props = {|
   +defaultValue?: string | number,
   +disabled?: boolean,
   +rows?: number,
+  +children?: string,
 |};
 
 function FormTextarea({
@@ -21,6 +22,7 @@ function FormTextarea({
   value,
   disabled,
   rows,
+  children,
 }: Props): React.Node {
   const classes = cn("form-control", className);
   return (
@@ -29,7 +31,7 @@ function FormTextarea({
       name={name}
       placeholder={placeholder}
       defaultValue={defaultValue}
-      value={value}
+      value={value || children}
       disabled={disabled}
       rows={rows}
     />

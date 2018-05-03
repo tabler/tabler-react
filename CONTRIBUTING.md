@@ -26,5 +26,5 @@ During precommit all .js files are run through prettier and eslint so you might 
 
 ## Submitting Changes
 
-Please send a [GitHub Pull Request to tabler-react](https://github.com/tabler/tabler-react/pull/new/master) with 
+Please send a [GitHub Pull Request to tabler-react](https://github.com/tabler/tabler-react/pull/new/master) with
 a list of what you've done and a screenshot if making visible changes to components.

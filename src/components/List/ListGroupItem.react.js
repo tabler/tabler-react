@@ -10,6 +10,7 @@ type Props = {|
   +className?: string,
   +RootComponent?: React.ElementType,
   +active?: boolean,
+  +action?: boolean,
   +icon?: string,
   +to?: string,
 |};
@@ -19,12 +20,15 @@ function ListGroupItem({
   children,
   RootComponent,
   active,
+  action,
   icon,
   to,
 }: Props): React.Node {
   const classes = cn(
     "list-group-item",
-    "list-group-item-action",
+    {
+      "list-group-item-action": action,
+    },
     {
       active: active,
     },

@@ -10,6 +10,8 @@ type Props = {|
   +title?: string,
   +price?: string,
   +subtitle?: string,
+  +imgUrl?: string,
+  +imgAlt?: string,
 |};
 
 function StoreCard({
@@ -34,8 +36,8 @@ function StoreCard({
             <strong>{price}</strong>
           </div>
           <div className="ml-auto">
-            <Button className="btn-primary">
-              <Icon className="fe-plus" />
+            <Button color="primary">
+              <Icon prefix="fe" name="plus" />
               Add to cart
             </Button>
           </div>

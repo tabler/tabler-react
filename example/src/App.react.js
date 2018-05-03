@@ -14,6 +14,7 @@ import {
   Error503,
   Empty,
   Email,
+  ProfilePage,
 } from "./pages";
 
 import HomePage from "./HomePage.react";
@@ -63,6 +64,7 @@ function App(props: Props): React.Node {
         <Route exact path="/503" component={Error503} />
         <Route exact path="/empty-page" component={Empty} />
         <Route exact path="/email" component={Email} />
+        <Route exact path="/profile" component={ProfilePage} />
         <Route exact path="/docs" component={DocsIntroPage} />
         <Route exact path="/docs/alerts" component={DocsAlertsPage} />
         <Route exact path="/docs/buttons" component={DocsButtonsPage} />
