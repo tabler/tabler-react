@@ -6,7 +6,7 @@ import cn from "classnames";
 type Props = {|
   +className?: string,
   +link?: boolean,
-  +prefix?: "fa" | "fe",
+  +prefix?: "fa" | "fe" | "flag" | "payment",
   +name: string,
   +isAriaHidden?: boolean,
   +payment?: boolean,

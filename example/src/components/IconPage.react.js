@@ -35,2371 +35,793 @@ function IconPage(): React.Node {
                 <div className="icons-list-wrap">
                   <ul className="icons-list">
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="activity"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-activity"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="airplay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-airplay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="alert-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-alert-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="alert-octagon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-alert-octagon"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="alert-triangle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-alert-triangle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="align-center"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-align-center"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="align-justify"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-align-justify"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="align-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-align-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="align-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-align-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="anchor"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-anchor"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="aperture"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-aperture"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-down"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-down-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-down-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-down-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-down-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-down-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-down-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-left-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-left-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-right-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-right-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-up"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-up-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-up-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-up-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-up-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="arrow-up-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-arrow-up-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="at-sign"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-at-sign"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="award"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-award"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="bar-chart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-bar-chart"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="bar-chart-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-bar-chart-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="battery"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-battery"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="battery-charging"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-battery-charging"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="bell"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-bell"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="bell-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-bell-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="bluetooth"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-bluetooth"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="bold"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-bold"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="book"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-book"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="book-open"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-book-open"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="bookmark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-bookmark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="box"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-box"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="briefcase"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-briefcase"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="calendar"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-calendar"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="camera"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-camera"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="camera-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-camera-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cast"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cast"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="check"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-check"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="check-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-check-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="check-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-check-square"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevron-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevron-down"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevron-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevron-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevron-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevron-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevron-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevron-up"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevrons-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevrons-down"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevrons-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevrons-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevrons-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevrons-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chevrons-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chevrons-up"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="chrome"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-chrome"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="clipboard"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-clipboard"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="clock"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-clock"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cloud"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cloud"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cloud-drizzle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cloud-drizzle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cloud-lightning"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cloud-lightning"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cloud-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cloud-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cloud-rain"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cloud-rain"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cloud-snow"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cloud-snow"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="code"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-code"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="codepen"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-codepen"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="command"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-command"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="compass"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-compass"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="copy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-copy"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-down-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-down-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-down-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-down-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-left-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-left-down"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-left-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-left-up"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-right-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-right-down"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-right-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-right-up"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-up-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-up-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="corner-up-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-corner-up-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="cpu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-cpu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="credit-card"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-credit-card"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="crop"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-crop"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="crosshair"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-crosshair"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="database"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-database"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="delete"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-delete"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="disc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-disc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="dollar-sign"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-dollar-sign"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="download"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-download"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="download-cloud"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-download-cloud"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="droplet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-droplet"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="edit"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-edit"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="edit-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-edit-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="edit-3"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-edit-3"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="external-link"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-external-link"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="eye"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-eye"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="eye-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-eye-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="facebook"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-facebook"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="fast-forward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-fast-forward"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="feather"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-feather"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="file"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-file"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="file-minus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-file-minus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="file-plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-file-plus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="file-text"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-file-text"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="film"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-film"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="filter"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-filter"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="flag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-flag"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="folder"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-folder"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="folder-minus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-folder-minus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="folder-plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-folder-plus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="git-branch"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-git-branch"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="git-commit"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-git-commit"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="git-merge"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-git-merge"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="git-pull-request"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-git-pull-request"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="github"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-github"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="gitlab"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-gitlab"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="globe"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-globe"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="grid"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-grid"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="hard-drive"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-hard-drive"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="hash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-hash"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="headphones"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-headphones"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="heart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-heart"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="help-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-help-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="home"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-home"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="image"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-image"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="inbox"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-inbox"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="info"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-info"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="instagram"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-instagram"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="italic"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-italic"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="layers"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-layers"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="layout"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-layout"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="life-buoy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-life-buoy"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="link"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-link"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="link-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-link-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="linkedin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-linkedin"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="list"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-list"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="loader"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-loader"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="lock"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-lock"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="log-in"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-log-in"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="log-out"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-log-out"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="mail"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-mail"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="map"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-map"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="map-pin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-map-pin"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="maximize"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-maximize"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="maximize-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-maximize-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="menu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-menu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="message-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-message-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="message-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-message-square"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="mic"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-mic"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="mic-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-mic-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="minimize"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-minimize"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="minimize-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-minimize-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="minus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-minus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="minus-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-minus-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="minus-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-minus-square"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="monitor"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-monitor"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="moon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-moon"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="more-horizontal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-more-horizontal"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="more-vertical"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-more-vertical"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="move"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-move"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="music"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-music"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="navigation"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-navigation"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="navigation-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-navigation-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="octagon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-octagon"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="package"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-package"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="paperclip"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-paperclip"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="pause"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-pause"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="pause-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-pause-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="percent"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-percent"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="phone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-phone"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="phone-call"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-phone-call"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="phone-forwarded"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-phone-forwarded"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="phone-incoming"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-phone-incoming"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="phone-missed"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-phone-missed"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="phone-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-phone-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="phone-outgoing"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-phone-outgoing"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="pie-chart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-pie-chart"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="play"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-play"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="play-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-play-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-plus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="plus-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-plus-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="plus-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-plus-square"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="pocket"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-pocket"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="power"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-power"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="printer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-printer"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="radio"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-radio"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="refresh-ccw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-refresh-ccw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="refresh-cw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-refresh-cw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="repeat"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-repeat"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="rewind"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-rewind"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="rotate-ccw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-rotate-ccw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="rotate-cw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-rotate-cw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="rss"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-rss"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="save"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-save"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="scissors"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-scissors"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="search"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-search"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="send"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-send"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="server"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-server"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="settings"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-settings"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="share"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-share"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="share-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-share-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="shield"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-shield"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="shield-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-shield-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="shopping-bag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-shopping-bag"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="shopping-cart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-shopping-cart"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="shuffle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-shuffle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="sidebar"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-sidebar"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="skip-back"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-skip-back"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="skip-forward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-skip-forward"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="slack"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-slack"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="slash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-slash"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="sliders"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-sliders"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="smartphone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-smartphone"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="speaker"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-speaker"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-square"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="star"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-star"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="stop-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-stop-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="sun"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-sun"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="sunrise"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-sunrise"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="sunset"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-sunset"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="tablet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-tablet"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="tag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-tag"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="target"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-target"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="terminal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-terminal"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="thermometer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-thermometer"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="thumbs-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-thumbs-down"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="thumbs-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-thumbs-up"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="toggle-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-toggle-left"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="toggle-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-toggle-right"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="trash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-trash"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="trash-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-trash-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="trending-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-trending-down"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="trending-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-trending-up"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="triangle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-triangle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="truck"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-truck"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="tv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-tv"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="twitter"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-twitter"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="type"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-type"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="umbrella"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-umbrella"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="underline"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-underline"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="unlock"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-unlock"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="upload"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-upload"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="upload-cloud"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-upload-cloud"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="user"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-user"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="user-check"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-user-check"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="user-minus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-user-minus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="user-plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-user-plus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="user-x"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-user-x"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="users"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-users"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="video"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-video"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="video-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-video-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="voicemail"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-voicemail"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="volume"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-volume"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="volume-1"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-volume-1"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="volume-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-volume-2"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="volume-x"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-volume-x"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="watch"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-watch"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="wifi"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-wifi"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="wifi-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-wifi-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="wind"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-wind"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="x"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-x"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="x-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-x-circle"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="x-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-x-square"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="zap"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-zap"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="zap-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-zap-off"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="zoom-in"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-zoom-in"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="fe"
-                        name="zoom-out"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fe fe-zoom-out"
-                      />
+                      <Icon prefix="fe" name="activity" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="airplay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="alert-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="alert-octagon" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="alert-triangle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="align-center" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="align-justify" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="align-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="align-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="anchor" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="aperture" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-down" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-down-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-down-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-down-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-left-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-right-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-up" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-up-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-up-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="arrow-up-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="at-sign" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="award" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="bar-chart" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="bar-chart-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="battery" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="battery-charging" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="bell" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="bell-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="bluetooth" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="bold" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="book" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="book-open" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="bookmark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="box" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="briefcase" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="calendar" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="camera" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="camera-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cast" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="check" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="check-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="check-square" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevron-down" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevron-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevron-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevron-up" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevrons-down" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevrons-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevrons-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chevrons-up" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="chrome" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="clipboard" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="clock" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cloud" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cloud-drizzle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cloud-lightning" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cloud-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cloud-rain" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cloud-snow" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="code" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="codepen" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="command" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="compass" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="copy" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-down-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-down-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-left-down" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-left-up" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-right-down" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-right-up" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-up-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="corner-up-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="cpu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="credit-card" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="crop" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="crosshair" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="database" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="delete" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="disc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="dollar-sign" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="download" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="download-cloud" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="droplet" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="edit" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="edit-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="edit-3" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="external-link" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="eye" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="eye-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="facebook" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="fast-forward" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="feather" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="file" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="file-minus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="file-plus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="file-text" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="film" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="filter" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="flag" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="folder" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="folder-minus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="folder-plus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="git-branch" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="git-commit" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="git-merge" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="git-pull-request" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="github" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="gitlab" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="globe" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="grid" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="hard-drive" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="hash" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="headphones" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="heart" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="help-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="home" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="image" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="inbox" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="info" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="instagram" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="italic" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="layers" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="layout" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="life-buoy" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="link" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="link-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="linkedin" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="list" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="loader" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="lock" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="log-in" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="log-out" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="mail" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="map" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="map-pin" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="maximize" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="maximize-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="menu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="message-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="message-square" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="mic" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="mic-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="minimize" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="minimize-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="minus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="minus-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="minus-square" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="monitor" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="moon" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="more-horizontal" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="more-vertical" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="move" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="music" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="navigation" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="navigation-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="octagon" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="package" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="paperclip" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="pause" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="pause-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="percent" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="phone" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="phone-call" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="phone-forwarded" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="phone-incoming" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="phone-missed" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="phone-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="phone-outgoing" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="pie-chart" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="play" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="play-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="plus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="plus-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="plus-square" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="pocket" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="power" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="printer" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="radio" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="refresh-ccw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="refresh-cw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="repeat" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="rewind" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="rotate-ccw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="rotate-cw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="rss" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="save" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="scissors" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="search" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="send" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="server" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="settings" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="share" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="share-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="shield" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="shield-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="shopping-bag" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="shopping-cart" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="shuffle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="sidebar" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="skip-back" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="skip-forward" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="slack" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="slash" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="sliders" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="smartphone" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="speaker" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="square" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="star" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="stop-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="sun" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="sunrise" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="sunset" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="tablet" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="tag" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="target" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="terminal" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="thermometer" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="thumbs-down" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="thumbs-up" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="toggle-left" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="toggle-right" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="trash" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="trash-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="trending-down" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="trending-up" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="triangle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="truck" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="tv" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="twitter" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="type" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="umbrella" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="underline" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="unlock" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="upload" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="upload-cloud" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="user" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="user-check" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="user-minus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="user-plus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="user-x" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="users" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="video" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="video-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="voicemail" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="volume" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="volume-1" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="volume-2" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="volume-x" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="watch" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="wifi" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="wifi-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="wind" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="x" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="x-circle" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="x-square" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="zap" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="zap-off" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="zoom-in" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="fe" name="zoom-out" />
                     </li>
                   </ul>
                 </div>
@@ -2433,7078 +855,2365 @@ function IconPage(): React.Node {
                 <div className="icons-list-wrap">
                   <ul className="icons-list">
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="500px"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-500px"
-                      />
+                      <Icon prefix="fa" name="500px" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="address-book"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-address-book"
-                      />
+                      <Icon prefix="fa" name="address-book" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="address-book-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-address-book-o"
-                      />
+                      <Icon prefix="fa" name="address-book-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="address-card"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-address-card"
-                      />
+                      <Icon prefix="fa" name="address-card" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="address-card-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-address-card-o"
-                      />
+                      <Icon prefix="fa" name="address-card-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="adjust"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-adjust"
-                      />
+                      <Icon prefix="fa" name="adjust" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="adn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-adn"
-                      />
+                      <Icon prefix="fa" name="adn" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="align-center"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-align-center"
-                      />
+                      <Icon prefix="fa" name="align-center" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="align-justify"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-align-justify"
-                      />
+                      <Icon prefix="fa" name="align-justify" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="align-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-align-left"
-                      />
+                      <Icon prefix="fa" name="align-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="align-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-align-right"
-                      />
+                      <Icon prefix="fa" name="align-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="amazon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-amazon"
-                      />
+                      <Icon prefix="fa" name="amazon" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ambulance"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ambulance"
-                      />
+                      <Icon prefix="fa" name="ambulance" />
                     </li>
                     <li className="icons-list-item">
                       <Icon
                         prefix="fa"
                         name="american-sign-language-interpreting"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-american-sign-language-interpreting"
                       />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="anchor"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-anchor"
-                      />
+                      <Icon prefix="fa" name="anchor" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="android"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-android"
-                      />
+                      <Icon prefix="fa" name="android" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angellist"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angellist"
-                      />
+                      <Icon prefix="fa" name="angellist" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-double-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-double-down"
-                      />
+                      <Icon prefix="fa" name="angle-double-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-double-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-double-left"
-                      />
+                      <Icon prefix="fa" name="angle-double-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-double-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-double-right"
-                      />
+                      <Icon prefix="fa" name="angle-double-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-double-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-double-up"
-                      />
+                      <Icon prefix="fa" name="angle-double-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-down"
-                      />
+                      <Icon prefix="fa" name="angle-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-left"
-                      />
+                      <Icon prefix="fa" name="angle-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-right"
-                      />
+                      <Icon prefix="fa" name="angle-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="angle-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-angle-up"
-                      />
+                      <Icon prefix="fa" name="angle-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="apple"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-apple"
-                      />
+                      <Icon prefix="fa" name="apple" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="archive"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-archive"
-                      />
+                      <Icon prefix="fa" name="archive" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="area-chart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-area-chart"
-                      />
+                      <Icon prefix="fa" name="area-chart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-down"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-left"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-o-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-o-down"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-o-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-o-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-o-left"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-o-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-o-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-o-right"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-o-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-o-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-o-up"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-o-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-right"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-circle-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-circle-up"
-                      />
+                      <Icon prefix="fa" name="arrow-circle-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-down"
-                      />
+                      <Icon prefix="fa" name="arrow-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-left"
-                      />
+                      <Icon prefix="fa" name="arrow-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-right"
-                      />
+                      <Icon prefix="fa" name="arrow-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrow-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrow-up"
-                      />
+                      <Icon prefix="fa" name="arrow-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrows"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrows"
-                      />
+                      <Icon prefix="fa" name="arrows" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrows-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrows-alt"
-                      />
+                      <Icon prefix="fa" name="arrows-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrows-h"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrows-h"
-                      />
+                      <Icon prefix="fa" name="arrows-h" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="arrows-v"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-arrows-v"
-                      />
+                      <Icon prefix="fa" name="arrows-v" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="asl-interpreting"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-asl-interpreting"
-                      />
+                      <Icon prefix="fa" name="asl-interpreting" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="assistive-listening-systems"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-assistive-listening-systems"
-                      />
+                      <Icon prefix="fa" name="assistive-listening-systems" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="asterisk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-asterisk"
-                      />
+                      <Icon prefix="fa" name="asterisk" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="at"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-at"
-                      />
+                      <Icon prefix="fa" name="at" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="audio-description"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-audio-description"
-                      />
+                      <Icon prefix="fa" name="audio-description" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="automobile"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-automobile"
-                      />
+                      <Icon prefix="fa" name="automobile" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="backward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-backward"
-                      />
+                      <Icon prefix="fa" name="backward" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="balance-scale"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-balance-scale"
-                      />
+                      <Icon prefix="fa" name="balance-scale" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ban"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ban"
-                      />
+                      <Icon prefix="fa" name="ban" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bandcamp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bandcamp"
-                      />
+                      <Icon prefix="fa" name="bandcamp" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bank"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bank"
-                      />
+                      <Icon prefix="fa" name="bank" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bar-chart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bar-chart"
-                      />
+                      <Icon prefix="fa" name="bar-chart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bar-chart-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bar-chart-o"
-                      />
+                      <Icon prefix="fa" name="bar-chart-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="barcode"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-barcode"
-                      />
+                      <Icon prefix="fa" name="barcode" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bars"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bars"
-                      />
+                      <Icon prefix="fa" name="bars" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bath"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bath"
-                      />
+                      <Icon prefix="fa" name="bath" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bathtub"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bathtub"
-                      />
+                      <Icon prefix="fa" name="bathtub" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery"
-                      />
+                      <Icon prefix="fa" name="battery" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-0"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-0"
-                      />
+                      <Icon prefix="fa" name="battery-0" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-1"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-1"
-                      />
+                      <Icon prefix="fa" name="battery-1" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-2"
-                      />
+                      <Icon prefix="fa" name="battery-2" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-3"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-3"
-                      />
+                      <Icon prefix="fa" name="battery-3" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-4"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-4"
-                      />
+                      <Icon prefix="fa" name="battery-4" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-empty"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-empty"
-                      />
+                      <Icon prefix="fa" name="battery-empty" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-full"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-full"
-                      />
+                      <Icon prefix="fa" name="battery-full" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-half"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-half"
-                      />
+                      <Icon prefix="fa" name="battery-half" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-quarter"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-quarter"
-                      />
+                      <Icon prefix="fa" name="battery-quarter" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="battery-three-quarters"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-battery-three-quarters"
-                      />
+                      <Icon prefix="fa" name="battery-three-quarters" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bed"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bed"
-                      />
+                      <Icon prefix="fa" name="bed" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="beer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-beer"
-                      />
+                      <Icon prefix="fa" name="beer" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="behance"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-behance"
-                      />
+                      <Icon prefix="fa" name="behance" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="behance-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-behance-square"
-                      />
+                      <Icon prefix="fa" name="behance-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bell"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bell"
-                      />
+                      <Icon prefix="fa" name="bell" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bell-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bell-o"
-                      />
+                      <Icon prefix="fa" name="bell-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bell-slash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bell-slash"
-                      />
+                      <Icon prefix="fa" name="bell-slash" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bell-slash-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bell-slash-o"
-                      />
+                      <Icon prefix="fa" name="bell-slash-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bicycle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bicycle"
-                      />
+                      <Icon prefix="fa" name="bicycle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="binoculars"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-binoculars"
-                      />
+                      <Icon prefix="fa" name="binoculars" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="birthday-cake"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-birthday-cake"
-                      />
+                      <Icon prefix="fa" name="birthday-cake" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bitbucket"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bitbucket"
-                      />
+                      <Icon prefix="fa" name="bitbucket" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bitbucket-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bitbucket-square"
-                      />
+                      <Icon prefix="fa" name="bitbucket-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bitcoin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bitcoin"
-                      />
+                      <Icon prefix="fa" name="bitcoin" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="black-tie"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-black-tie"
-                      />
+                      <Icon prefix="fa" name="black-tie" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="blind"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-blind"
-                      />
+                      <Icon prefix="fa" name="blind" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bluetooth"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bluetooth"
-                      />
+                      <Icon prefix="fa" name="bluetooth" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bluetooth-b"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bluetooth-b"
-                      />
+                      <Icon prefix="fa" name="bluetooth-b" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bold"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bold"
-                      />
+                      <Icon prefix="fa" name="bold" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bolt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bolt"
-                      />
+                      <Icon prefix="fa" name="bolt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bomb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bomb"
-                      />
+                      <Icon prefix="fa" name="bomb" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="book"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-book"
-                      />
+                      <Icon prefix="fa" name="book" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bookmark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bookmark"
-                      />
+                      <Icon prefix="fa" name="bookmark" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bookmark-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bookmark-o"
-                      />
+                      <Icon prefix="fa" name="bookmark-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="braille"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-braille"
-                      />
+                      <Icon prefix="fa" name="braille" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="briefcase"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-briefcase"
-                      />
+                      <Icon prefix="fa" name="briefcase" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="btc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-btc"
-                      />
+                      <Icon prefix="fa" name="btc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bug"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bug"
-                      />
+                      <Icon prefix="fa" name="bug" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="building"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-building"
-                      />
+                      <Icon prefix="fa" name="building" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="building-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-building-o"
-                      />
+                      <Icon prefix="fa" name="building-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bullhorn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bullhorn"
-                      />
+                      <Icon prefix="fa" name="bullhorn" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bullseye"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bullseye"
-                      />
+                      <Icon prefix="fa" name="bullseye" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="bus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-bus"
-                      />
+                      <Icon prefix="fa" name="bus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="buysellads"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-buysellads"
-                      />
+                      <Icon prefix="fa" name="buysellads" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cab"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cab"
-                      />
+                      <Icon prefix="fa" name="cab" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="calculator"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-calculator"
-                      />
+                      <Icon prefix="fa" name="calculator" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="calendar"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-calendar"
-                      />
+                      <Icon prefix="fa" name="calendar" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="calendar-check-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-calendar-check-o"
-                      />
+                      <Icon prefix="fa" name="calendar-check-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="calendar-minus-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-calendar-minus-o"
-                      />
+                      <Icon prefix="fa" name="calendar-minus-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="calendar-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-calendar-o"
-                      />
+                      <Icon prefix="fa" name="calendar-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="calendar-plus-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-calendar-plus-o"
-                      />
+                      <Icon prefix="fa" name="calendar-plus-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="calendar-times-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-calendar-times-o"
-                      />
+                      <Icon prefix="fa" name="calendar-times-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="camera"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-camera"
-                      />
+                      <Icon prefix="fa" name="camera" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="camera-retro"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-camera-retro"
-                      />
+                      <Icon prefix="fa" name="camera-retro" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="car"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-car"
-                      />
+                      <Icon prefix="fa" name="car" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-down"
-                      />
+                      <Icon prefix="fa" name="caret-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-left"
-                      />
+                      <Icon prefix="fa" name="caret-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-right"
-                      />
+                      <Icon prefix="fa" name="caret-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-square-o-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-square-o-down"
-                      />
+                      <Icon prefix="fa" name="caret-square-o-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-square-o-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-square-o-left"
-                      />
+                      <Icon prefix="fa" name="caret-square-o-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-square-o-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-square-o-right"
-                      />
+                      <Icon prefix="fa" name="caret-square-o-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-square-o-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-square-o-up"
-                      />
+                      <Icon prefix="fa" name="caret-square-o-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="caret-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-caret-up"
-                      />
+                      <Icon prefix="fa" name="caret-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cart-arrow-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cart-arrow-down"
-                      />
+                      <Icon prefix="fa" name="cart-arrow-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cart-plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cart-plus"
-                      />
+                      <Icon prefix="fa" name="cart-plus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc"
-                      />
+                      <Icon prefix="fa" name="cc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-amex"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-amex"
-                      />
+                      <Icon prefix="fa" name="cc-amex" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-diners-club"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-diners-club"
-                      />
+                      <Icon prefix="fa" name="cc-diners-club" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-discover"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-discover"
-                      />
+                      <Icon prefix="fa" name="cc-discover" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-jcb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-jcb"
-                      />
+                      <Icon prefix="fa" name="cc-jcb" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-mastercard"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-mastercard"
-                      />
+                      <Icon prefix="fa" name="cc-mastercard" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-paypal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-paypal"
-                      />
+                      <Icon prefix="fa" name="cc-paypal" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-stripe"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-stripe"
-                      />
+                      <Icon prefix="fa" name="cc-stripe" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cc-visa"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cc-visa"
-                      />
+                      <Icon prefix="fa" name="cc-visa" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="certificate"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-certificate"
-                      />
+                      <Icon prefix="fa" name="certificate" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chain"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chain"
-                      />
+                      <Icon prefix="fa" name="chain" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chain-broken"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chain-broken"
-                      />
+                      <Icon prefix="fa" name="chain-broken" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="check"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-check"
-                      />
+                      <Icon prefix="fa" name="check" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="check-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-check-circle"
-                      />
+                      <Icon prefix="fa" name="check-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="check-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-check-circle-o"
-                      />
+                      <Icon prefix="fa" name="check-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="check-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-check-square"
-                      />
+                      <Icon prefix="fa" name="check-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="check-square-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-check-square-o"
-                      />
+                      <Icon prefix="fa" name="check-square-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-circle-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-circle-down"
-                      />
+                      <Icon prefix="fa" name="chevron-circle-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-circle-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-circle-left"
-                      />
+                      <Icon prefix="fa" name="chevron-circle-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-circle-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-circle-right"
-                      />
+                      <Icon prefix="fa" name="chevron-circle-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-circle-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-circle-up"
-                      />
+                      <Icon prefix="fa" name="chevron-circle-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-down"
-                      />
+                      <Icon prefix="fa" name="chevron-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-left"
-                      />
+                      <Icon prefix="fa" name="chevron-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-right"
-                      />
+                      <Icon prefix="fa" name="chevron-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chevron-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chevron-up"
-                      />
+                      <Icon prefix="fa" name="chevron-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="child"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-child"
-                      />
+                      <Icon prefix="fa" name="child" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="chrome"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-chrome"
-                      />
+                      <Icon prefix="fa" name="chrome" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-circle"
-                      />
+                      <Icon prefix="fa" name="circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-circle-o"
-                      />
+                      <Icon prefix="fa" name="circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="circle-o-notch"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-circle-o-notch"
-                      />
+                      <Icon prefix="fa" name="circle-o-notch" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="circle-thin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-circle-thin"
-                      />
+                      <Icon prefix="fa" name="circle-thin" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="clipboard"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-clipboard"
-                      />
+                      <Icon prefix="fa" name="clipboard" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="clock-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-clock-o"
-                      />
+                      <Icon prefix="fa" name="clock-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="clone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-clone"
-                      />
+                      <Icon prefix="fa" name="clone" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="close"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-close"
-                      />
+                      <Icon prefix="fa" name="close" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cloud"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cloud"
-                      />
+                      <Icon prefix="fa" name="cloud" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cloud-download"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cloud-download"
-                      />
+                      <Icon prefix="fa" name="cloud-download" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cloud-upload"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cloud-upload"
-                      />
+                      <Icon prefix="fa" name="cloud-upload" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cny"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cny"
-                      />
+                      <Icon prefix="fa" name="cny" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="code"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-code"
-                      />
+                      <Icon prefix="fa" name="code" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="code-fork"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-code-fork"
-                      />
+                      <Icon prefix="fa" name="code-fork" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="codepen"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-codepen"
-                      />
+                      <Icon prefix="fa" name="codepen" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="codiepie"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-codiepie"
-                      />
+                      <Icon prefix="fa" name="codiepie" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="coffee"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-coffee"
-                      />
+                      <Icon prefix="fa" name="coffee" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cog"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cog"
-                      />
+                      <Icon prefix="fa" name="cog" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cogs"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cogs"
-                      />
+                      <Icon prefix="fa" name="cogs" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="columns"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-columns"
-                      />
+                      <Icon prefix="fa" name="columns" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="comment"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-comment"
-                      />
+                      <Icon prefix="fa" name="comment" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="comment-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-comment-o"
-                      />
+                      <Icon prefix="fa" name="comment-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="commenting"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-commenting"
-                      />
+                      <Icon prefix="fa" name="commenting" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="commenting-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-commenting-o"
-                      />
+                      <Icon prefix="fa" name="commenting-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="comments"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-comments"
-                      />
+                      <Icon prefix="fa" name="comments" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="comments-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-comments-o"
-                      />
+                      <Icon prefix="fa" name="comments-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="compass"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-compass"
-                      />
+                      <Icon prefix="fa" name="compass" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="compress"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-compress"
-                      />
+                      <Icon prefix="fa" name="compress" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="connectdevelop"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-connectdevelop"
-                      />
+                      <Icon prefix="fa" name="connectdevelop" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="contao"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-contao"
-                      />
+                      <Icon prefix="fa" name="contao" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="copy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-copy"
-                      />
+                      <Icon prefix="fa" name="copy" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="copyright"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-copyright"
-                      />
+                      <Icon prefix="fa" name="copyright" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="creative-commons"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-creative-commons"
-                      />
+                      <Icon prefix="fa" name="creative-commons" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="credit-card"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-credit-card"
-                      />
+                      <Icon prefix="fa" name="credit-card" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="credit-card-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-credit-card-alt"
-                      />
+                      <Icon prefix="fa" name="credit-card-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="crop"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-crop"
-                      />
+                      <Icon prefix="fa" name="crop" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="crosshairs"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-crosshairs"
-                      />
+                      <Icon prefix="fa" name="crosshairs" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="css3"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-css3"
-                      />
+                      <Icon prefix="fa" name="css3" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cube"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cube"
-                      />
+                      <Icon prefix="fa" name="cube" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cubes"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cubes"
-                      />
+                      <Icon prefix="fa" name="cubes" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cut"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cut"
-                      />
+                      <Icon prefix="fa" name="cut" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="cutlery"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-cutlery"
-                      />
+                      <Icon prefix="fa" name="cutlery" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="dashboard"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-dashboard"
-                      />
+                      <Icon prefix="fa" name="dashboard" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="dashcube"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-dashcube"
-                      />
+                      <Icon prefix="fa" name="dashcube" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="database"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-database"
-                      />
+                      <Icon prefix="fa" name="database" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="deaf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-deaf"
-                      />
+                      <Icon prefix="fa" name="deaf" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="deafness"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-deafness"
-                      />
+                      <Icon prefix="fa" name="deafness" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="dedent"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-dedent"
-                      />
+                      <Icon prefix="fa" name="dedent" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="delicious"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-delicious"
-                      />
+                      <Icon prefix="fa" name="delicious" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="desktop"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-desktop"
-                      />
+                      <Icon prefix="fa" name="desktop" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="deviantart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-deviantart"
-                      />
+                      <Icon prefix="fa" name="deviantart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="diamond"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-diamond"
-                      />
+                      <Icon prefix="fa" name="diamond" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="digg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-digg"
-                      />
+                      <Icon prefix="fa" name="digg" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="dollar"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-dollar"
-                      />
+                      <Icon prefix="fa" name="dollar" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="dot-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-dot-circle-o"
-                      />
+                      <Icon prefix="fa" name="dot-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="download"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-download"
-                      />
+                      <Icon prefix="fa" name="download" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="dribbble"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-dribbble"
-                      />
+                      <Icon prefix="fa" name="dribbble" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="drivers-license"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-drivers-license"
-                      />
+                      <Icon prefix="fa" name="drivers-license" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="drivers-license-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-drivers-license-o"
-                      />
+                      <Icon prefix="fa" name="drivers-license-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="dropbox"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-dropbox"
-                      />
+                      <Icon prefix="fa" name="dropbox" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="drupal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-drupal"
-                      />
+                      <Icon prefix="fa" name="drupal" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="edge"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-edge"
-                      />
+                      <Icon prefix="fa" name="edge" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="edit"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-edit"
-                      />
+                      <Icon prefix="fa" name="edit" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="eercast"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-eercast"
-                      />
+                      <Icon prefix="fa" name="eercast" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="eject"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-eject"
-                      />
+                      <Icon prefix="fa" name="eject" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ellipsis-h"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ellipsis-h"
-                      />
+                      <Icon prefix="fa" name="ellipsis-h" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ellipsis-v"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ellipsis-v"
-                      />
+                      <Icon prefix="fa" name="ellipsis-v" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="empire"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-empire"
-                      />
+                      <Icon prefix="fa" name="empire" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="envelope"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-envelope"
-                      />
+                      <Icon prefix="fa" name="envelope" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="envelope-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-envelope-o"
-                      />
+                      <Icon prefix="fa" name="envelope-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="envelope-open"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-envelope-open"
-                      />
+                      <Icon prefix="fa" name="envelope-open" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="envelope-open-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-envelope-open-o"
-                      />
+                      <Icon prefix="fa" name="envelope-open-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="envelope-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-envelope-square"
-                      />
+                      <Icon prefix="fa" name="envelope-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="envira"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-envira"
-                      />
+                      <Icon prefix="fa" name="envira" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="eraser"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-eraser"
-                      />
+                      <Icon prefix="fa" name="eraser" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="etsy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-etsy"
-                      />
+                      <Icon prefix="fa" name="etsy" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="eur"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-eur"
-                      />
+                      <Icon prefix="fa" name="eur" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="euro"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-euro"
-                      />
+                      <Icon prefix="fa" name="euro" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="exchange"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-exchange"
-                      />
+                      <Icon prefix="fa" name="exchange" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="exclamation"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-exclamation"
-                      />
+                      <Icon prefix="fa" name="exclamation" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="exclamation-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-exclamation-circle"
-                      />
+                      <Icon prefix="fa" name="exclamation-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="exclamation-triangle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-exclamation-triangle"
-                      />
+                      <Icon prefix="fa" name="exclamation-triangle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="expand"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-expand"
-                      />
+                      <Icon prefix="fa" name="expand" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="expeditedssl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-expeditedssl"
-                      />
+                      <Icon prefix="fa" name="expeditedssl" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="external-link"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-external-link"
-                      />
+                      <Icon prefix="fa" name="external-link" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="external-link-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-external-link-square"
-                      />
+                      <Icon prefix="fa" name="external-link-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="eye"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-eye"
-                      />
+                      <Icon prefix="fa" name="eye" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="eye-slash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-eye-slash"
-                      />
+                      <Icon prefix="fa" name="eye-slash" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="eyedropper"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-eyedropper"
-                      />
+                      <Icon prefix="fa" name="eyedropper" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fa"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fa"
-                      />
+                      <Icon prefix="fa" name="fa" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="facebook"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-facebook"
-                      />
+                      <Icon prefix="fa" name="facebook" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="facebook-f"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-facebook-f"
-                      />
+                      <Icon prefix="fa" name="facebook-f" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="facebook-official"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-facebook-official"
-                      />
+                      <Icon prefix="fa" name="facebook-official" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="facebook-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-facebook-square"
-                      />
+                      <Icon prefix="fa" name="facebook-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fast-backward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fast-backward"
-                      />
+                      <Icon prefix="fa" name="fast-backward" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fast-forward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fast-forward"
-                      />
+                      <Icon prefix="fa" name="fast-forward" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fax"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fax"
-                      />
+                      <Icon prefix="fa" name="fax" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="feed"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-feed"
-                      />
+                      <Icon prefix="fa" name="feed" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="female"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-female"
-                      />
+                      <Icon prefix="fa" name="female" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fighter-jet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fighter-jet"
-                      />
+                      <Icon prefix="fa" name="fighter-jet" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file"
-                      />
+                      <Icon prefix="fa" name="file" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-archive-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-archive-o"
-                      />
+                      <Icon prefix="fa" name="file-archive-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-audio-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-audio-o"
-                      />
+                      <Icon prefix="fa" name="file-audio-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-code-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-code-o"
-                      />
+                      <Icon prefix="fa" name="file-code-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-excel-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-excel-o"
-                      />
+                      <Icon prefix="fa" name="file-excel-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-image-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-image-o"
-                      />
+                      <Icon prefix="fa" name="file-image-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-movie-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-movie-o"
-                      />
+                      <Icon prefix="fa" name="file-movie-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-o"
-                      />
+                      <Icon prefix="fa" name="file-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-pdf-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-pdf-o"
-                      />
+                      <Icon prefix="fa" name="file-pdf-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-photo-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-photo-o"
-                      />
+                      <Icon prefix="fa" name="file-photo-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-picture-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-picture-o"
-                      />
+                      <Icon prefix="fa" name="file-picture-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-powerpoint-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-powerpoint-o"
-                      />
+                      <Icon prefix="fa" name="file-powerpoint-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-sound-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-sound-o"
-                      />
+                      <Icon prefix="fa" name="file-sound-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-text"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-text"
-                      />
+                      <Icon prefix="fa" name="file-text" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-text-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-text-o"
-                      />
+                      <Icon prefix="fa" name="file-text-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-video-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-video-o"
-                      />
+                      <Icon prefix="fa" name="file-video-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-word-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-word-o"
-                      />
+                      <Icon prefix="fa" name="file-word-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="file-zip-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-file-zip-o"
-                      />
+                      <Icon prefix="fa" name="file-zip-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="files-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-files-o"
-                      />
+                      <Icon prefix="fa" name="files-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="film"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-film"
-                      />
+                      <Icon prefix="fa" name="film" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="filter"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-filter"
-                      />
+                      <Icon prefix="fa" name="filter" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fire"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fire"
-                      />
+                      <Icon prefix="fa" name="fire" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fire-extinguisher"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fire-extinguisher"
-                      />
+                      <Icon prefix="fa" name="fire-extinguisher" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="firefox"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-firefox"
-                      />
+                      <Icon prefix="fa" name="firefox" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="first-order"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-first-order"
-                      />
+                      <Icon prefix="fa" name="first-order" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="flag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-flag"
-                      />
+                      <Icon prefix="fa" name="flag" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="flag-checkered"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-flag-checkered"
-                      />
+                      <Icon prefix="fa" name="flag-checkered" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="flag-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-flag-o"
-                      />
+                      <Icon prefix="fa" name="flag-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="flash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-flash"
-                      />
+                      <Icon prefix="fa" name="flash" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="flask"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-flask"
-                      />
+                      <Icon prefix="fa" name="flask" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="flickr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-flickr"
-                      />
+                      <Icon prefix="fa" name="flickr" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="floppy-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-floppy-o"
-                      />
+                      <Icon prefix="fa" name="floppy-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="folder"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-folder"
-                      />
+                      <Icon prefix="fa" name="folder" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="folder-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-folder-o"
-                      />
+                      <Icon prefix="fa" name="folder-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="folder-open"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-folder-open"
-                      />
+                      <Icon prefix="fa" name="folder-open" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="folder-open-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-folder-open-o"
-                      />
+                      <Icon prefix="fa" name="folder-open-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="font"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-font"
-                      />
+                      <Icon prefix="fa" name="font" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="font-awesome"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-font-awesome"
-                      />
+                      <Icon prefix="fa" name="font-awesome" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fonticons"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fonticons"
-                      />
+                      <Icon prefix="fa" name="fonticons" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="fort-awesome"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-fort-awesome"
-                      />
+                      <Icon prefix="fa" name="fort-awesome" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="forumbee"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-forumbee"
-                      />
+                      <Icon prefix="fa" name="forumbee" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="forward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-forward"
-                      />
+                      <Icon prefix="fa" name="forward" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="foursquare"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-foursquare"
-                      />
+                      <Icon prefix="fa" name="foursquare" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="free-code-camp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-free-code-camp"
-                      />
+                      <Icon prefix="fa" name="free-code-camp" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="frown-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-frown-o"
-                      />
+                      <Icon prefix="fa" name="frown-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="futbol-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-futbol-o"
-                      />
+                      <Icon prefix="fa" name="futbol-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gamepad"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gamepad"
-                      />
+                      <Icon prefix="fa" name="gamepad" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gavel"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gavel"
-                      />
+                      <Icon prefix="fa" name="gavel" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gbp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gbp"
-                      />
+                      <Icon prefix="fa" name="gbp" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ge"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ge"
-                      />
+                      <Icon prefix="fa" name="ge" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gear"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gear"
-                      />
+                      <Icon prefix="fa" name="gear" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gears"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gears"
-                      />
+                      <Icon prefix="fa" name="gears" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="genderless"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-genderless"
-                      />
+                      <Icon prefix="fa" name="genderless" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="get-pocket"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-get-pocket"
-                      />
+                      <Icon prefix="fa" name="get-pocket" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gg"
-                      />
+                      <Icon prefix="fa" name="gg" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gg-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gg-circle"
-                      />
+                      <Icon prefix="fa" name="gg-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gift"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gift"
-                      />
+                      <Icon prefix="fa" name="gift" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="git"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-git"
-                      />
+                      <Icon prefix="fa" name="git" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="git-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-git-square"
-                      />
+                      <Icon prefix="fa" name="git-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="github"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-github"
-                      />
+                      <Icon prefix="fa" name="github" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="github-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-github-alt"
-                      />
+                      <Icon prefix="fa" name="github-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="github-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-github-square"
-                      />
+                      <Icon prefix="fa" name="github-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gitlab"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gitlab"
-                      />
+                      <Icon prefix="fa" name="gitlab" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gittip"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gittip"
-                      />
+                      <Icon prefix="fa" name="gittip" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="glass"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-glass"
-                      />
+                      <Icon prefix="fa" name="glass" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="glide"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-glide"
-                      />
+                      <Icon prefix="fa" name="glide" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="glide-g"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-glide-g"
-                      />
+                      <Icon prefix="fa" name="glide-g" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="globe"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-globe"
-                      />
+                      <Icon prefix="fa" name="globe" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="google"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-google"
-                      />
+                      <Icon prefix="fa" name="google" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="google-plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-google-plus"
-                      />
+                      <Icon prefix="fa" name="google-plus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="google-plus-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-google-plus-circle"
-                      />
+                      <Icon prefix="fa" name="google-plus-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="google-plus-official"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-google-plus-official"
-                      />
+                      <Icon prefix="fa" name="google-plus-official" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="google-plus-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-google-plus-square"
-                      />
+                      <Icon prefix="fa" name="google-plus-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="google-wallet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-google-wallet"
-                      />
+                      <Icon prefix="fa" name="google-wallet" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="graduation-cap"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-graduation-cap"
-                      />
+                      <Icon prefix="fa" name="graduation-cap" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="gratipay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-gratipay"
-                      />
+                      <Icon prefix="fa" name="gratipay" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="grav"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-grav"
-                      />
+                      <Icon prefix="fa" name="grav" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="group"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-group"
-                      />
+                      <Icon prefix="fa" name="group" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="h-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-h-square"
-                      />
+                      <Icon prefix="fa" name="h-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hacker-news"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hacker-news"
-                      />
+                      <Icon prefix="fa" name="hacker-news" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-grab-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-grab-o"
-                      />
+                      <Icon prefix="fa" name="hand-grab-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-lizard-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-lizard-o"
-                      />
+                      <Icon prefix="fa" name="hand-lizard-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-o-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-o-down"
-                      />
+                      <Icon prefix="fa" name="hand-o-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-o-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-o-left"
-                      />
+                      <Icon prefix="fa" name="hand-o-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-o-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-o-right"
-                      />
+                      <Icon prefix="fa" name="hand-o-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-o-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-o-up"
-                      />
+                      <Icon prefix="fa" name="hand-o-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-paper-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-paper-o"
-                      />
+                      <Icon prefix="fa" name="hand-paper-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-peace-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-peace-o"
-                      />
+                      <Icon prefix="fa" name="hand-peace-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-pointer-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-pointer-o"
-                      />
+                      <Icon prefix="fa" name="hand-pointer-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-rock-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-rock-o"
-                      />
+                      <Icon prefix="fa" name="hand-rock-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-scissors-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-scissors-o"
-                      />
+                      <Icon prefix="fa" name="hand-scissors-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-spock-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-spock-o"
-                      />
+                      <Icon prefix="fa" name="hand-spock-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hand-stop-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hand-stop-o"
-                      />
+                      <Icon prefix="fa" name="hand-stop-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="handshake-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-handshake-o"
-                      />
+                      <Icon prefix="fa" name="handshake-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hard-of-hearing"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hard-of-hearing"
-                      />
+                      <Icon prefix="fa" name="hard-of-hearing" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hashtag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hashtag"
-                      />
+                      <Icon prefix="fa" name="hashtag" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hdd-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hdd-o"
-                      />
+                      <Icon prefix="fa" name="hdd-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="header"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-header"
-                      />
+                      <Icon prefix="fa" name="header" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="headphones"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-headphones"
-                      />
+                      <Icon prefix="fa" name="headphones" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="heart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-heart"
-                      />
+                      <Icon prefix="fa" name="heart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="heart-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-heart-o"
-                      />
+                      <Icon prefix="fa" name="heart-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="heartbeat"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-heartbeat"
-                      />
+                      <Icon prefix="fa" name="heartbeat" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="history"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-history"
-                      />
+                      <Icon prefix="fa" name="history" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="home"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-home"
-                      />
+                      <Icon prefix="fa" name="home" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hospital-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hospital-o"
-                      />
+                      <Icon prefix="fa" name="hospital-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hotel"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hotel"
-                      />
+                      <Icon prefix="fa" name="hotel" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass"
-                      />
+                      <Icon prefix="fa" name="hourglass" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass-1"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass-1"
-                      />
+                      <Icon prefix="fa" name="hourglass-1" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass-2"
-                      />
+                      <Icon prefix="fa" name="hourglass-2" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass-3"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass-3"
-                      />
+                      <Icon prefix="fa" name="hourglass-3" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass-end"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass-end"
-                      />
+                      <Icon prefix="fa" name="hourglass-end" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass-half"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass-half"
-                      />
+                      <Icon prefix="fa" name="hourglass-half" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass-o"
-                      />
+                      <Icon prefix="fa" name="hourglass-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="hourglass-start"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-hourglass-start"
-                      />
+                      <Icon prefix="fa" name="hourglass-start" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="houzz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-houzz"
-                      />
+                      <Icon prefix="fa" name="houzz" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="html5"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-html5"
-                      />
+                      <Icon prefix="fa" name="html5" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="i-cursor"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-i-cursor"
-                      />
+                      <Icon prefix="fa" name="i-cursor" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="id-badge"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-id-badge"
-                      />
+                      <Icon prefix="fa" name="id-badge" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="id-card"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-id-card"
-                      />
+                      <Icon prefix="fa" name="id-card" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="id-card-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-id-card-o"
-                      />
+                      <Icon prefix="fa" name="id-card-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ils"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ils"
-                      />
+                      <Icon prefix="fa" name="ils" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="image"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-image"
-                      />
+                      <Icon prefix="fa" name="image" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="imdb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-imdb"
-                      />
+                      <Icon prefix="fa" name="imdb" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="inbox"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-inbox"
-                      />
+                      <Icon prefix="fa" name="inbox" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="indent"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-indent"
-                      />
+                      <Icon prefix="fa" name="indent" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="industry"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-industry"
-                      />
+                      <Icon prefix="fa" name="industry" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="info"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-info"
-                      />
+                      <Icon prefix="fa" name="info" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="info-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-info-circle"
-                      />
+                      <Icon prefix="fa" name="info-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="inr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-inr"
-                      />
+                      <Icon prefix="fa" name="inr" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="instagram"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-instagram"
-                      />
+                      <Icon prefix="fa" name="instagram" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="institution"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-institution"
-                      />
+                      <Icon prefix="fa" name="institution" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="internet-explorer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-internet-explorer"
-                      />
+                      <Icon prefix="fa" name="internet-explorer" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="intersex"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-intersex"
-                      />
+                      <Icon prefix="fa" name="intersex" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ioxhost"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ioxhost"
-                      />
+                      <Icon prefix="fa" name="ioxhost" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="italic"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-italic"
-                      />
+                      <Icon prefix="fa" name="italic" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="joomla"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-joomla"
-                      />
+                      <Icon prefix="fa" name="joomla" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="jpy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-jpy"
-                      />
+                      <Icon prefix="fa" name="jpy" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="jsfiddle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-jsfiddle"
-                      />
+                      <Icon prefix="fa" name="jsfiddle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="key"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-key"
-                      />
+                      <Icon prefix="fa" name="key" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="keyboard-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-keyboard-o"
-                      />
+                      <Icon prefix="fa" name="keyboard-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="krw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-krw"
-                      />
+                      <Icon prefix="fa" name="krw" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="language"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-language"
-                      />
+                      <Icon prefix="fa" name="language" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="laptop"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-laptop"
-                      />
+                      <Icon prefix="fa" name="laptop" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="lastfm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-lastfm"
-                      />
+                      <Icon prefix="fa" name="lastfm" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="lastfm-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-lastfm-square"
-                      />
+                      <Icon prefix="fa" name="lastfm-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="leaf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-leaf"
-                      />
+                      <Icon prefix="fa" name="leaf" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="leanpub"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-leanpub"
-                      />
+                      <Icon prefix="fa" name="leanpub" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="legal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-legal"
-                      />
+                      <Icon prefix="fa" name="legal" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="lemon-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-lemon-o"
-                      />
+                      <Icon prefix="fa" name="lemon-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="level-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-level-down"
-                      />
+                      <Icon prefix="fa" name="level-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="level-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-level-up"
-                      />
+                      <Icon prefix="fa" name="level-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="life-bouy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-life-bouy"
-                      />
+                      <Icon prefix="fa" name="life-bouy" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="life-buoy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-life-buoy"
-                      />
+                      <Icon prefix="fa" name="life-buoy" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="life-ring"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-life-ring"
-                      />
+                      <Icon prefix="fa" name="life-ring" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="life-saver"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-life-saver"
-                      />
+                      <Icon prefix="fa" name="life-saver" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="lightbulb-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-lightbulb-o"
-                      />
+                      <Icon prefix="fa" name="lightbulb-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="line-chart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-line-chart"
-                      />
+                      <Icon prefix="fa" name="line-chart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="link"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-link"
-                      />
+                      <Icon prefix="fa" name="link" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="linkedin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-linkedin"
-                      />
+                      <Icon prefix="fa" name="linkedin" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="linkedin-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-linkedin-square"
-                      />
+                      <Icon prefix="fa" name="linkedin-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="linode"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-linode"
-                      />
+                      <Icon prefix="fa" name="linode" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="linux"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-linux"
-                      />
+                      <Icon prefix="fa" name="linux" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="list"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-list"
-                      />
+                      <Icon prefix="fa" name="list" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="list-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-list-alt"
-                      />
+                      <Icon prefix="fa" name="list-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="list-ol"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-list-ol"
-                      />
+                      <Icon prefix="fa" name="list-ol" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="list-ul"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-list-ul"
-                      />
+                      <Icon prefix="fa" name="list-ul" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="location-arrow"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-location-arrow"
-                      />
+                      <Icon prefix="fa" name="location-arrow" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="lock"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-lock"
-                      />
+                      <Icon prefix="fa" name="lock" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="long-arrow-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-long-arrow-down"
-                      />
+                      <Icon prefix="fa" name="long-arrow-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="long-arrow-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-long-arrow-left"
-                      />
+                      <Icon prefix="fa" name="long-arrow-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="long-arrow-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-long-arrow-right"
-                      />
+                      <Icon prefix="fa" name="long-arrow-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="long-arrow-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-long-arrow-up"
-                      />
+                      <Icon prefix="fa" name="long-arrow-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="low-vision"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-low-vision"
-                      />
+                      <Icon prefix="fa" name="low-vision" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="magic"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-magic"
-                      />
+                      <Icon prefix="fa" name="magic" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="magnet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-magnet"
-                      />
+                      <Icon prefix="fa" name="magnet" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mail-forward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mail-forward"
-                      />
+                      <Icon prefix="fa" name="mail-forward" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mail-reply"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mail-reply"
-                      />
+                      <Icon prefix="fa" name="mail-reply" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mail-reply-all"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mail-reply-all"
-                      />
+                      <Icon prefix="fa" name="mail-reply-all" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="male"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-male"
-                      />
+                      <Icon prefix="fa" name="male" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="map"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-map"
-                      />
+                      <Icon prefix="fa" name="map" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="map-marker"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-map-marker"
-                      />
+                      <Icon prefix="fa" name="map-marker" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="map-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-map-o"
-                      />
+                      <Icon prefix="fa" name="map-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="map-pin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-map-pin"
-                      />
+                      <Icon prefix="fa" name="map-pin" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="map-signs"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-map-signs"
-                      />
+                      <Icon prefix="fa" name="map-signs" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mars"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mars"
-                      />
+                      <Icon prefix="fa" name="mars" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mars-double"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mars-double"
-                      />
+                      <Icon prefix="fa" name="mars-double" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mars-stroke"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mars-stroke"
-                      />
+                      <Icon prefix="fa" name="mars-stroke" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mars-stroke-h"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mars-stroke-h"
-                      />
+                      <Icon prefix="fa" name="mars-stroke-h" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mars-stroke-v"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mars-stroke-v"
-                      />
+                      <Icon prefix="fa" name="mars-stroke-v" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="maxcdn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-maxcdn"
-                      />
+                      <Icon prefix="fa" name="maxcdn" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="meanpath"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-meanpath"
-                      />
+                      <Icon prefix="fa" name="meanpath" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="medium"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-medium"
-                      />
+                      <Icon prefix="fa" name="medium" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="medkit"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-medkit"
-                      />
+                      <Icon prefix="fa" name="medkit" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="meetup"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-meetup"
-                      />
+                      <Icon prefix="fa" name="meetup" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="meh-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-meh-o"
-                      />
+                      <Icon prefix="fa" name="meh-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mercury"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mercury"
-                      />
+                      <Icon prefix="fa" name="mercury" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="microchip"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-microchip"
-                      />
+                      <Icon prefix="fa" name="microchip" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="microphone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-microphone"
-                      />
+                      <Icon prefix="fa" name="microphone" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="microphone-slash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-microphone-slash"
-                      />
+                      <Icon prefix="fa" name="microphone-slash" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="minus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-minus"
-                      />
+                      <Icon prefix="fa" name="minus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="minus-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-minus-circle"
-                      />
+                      <Icon prefix="fa" name="minus-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="minus-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-minus-square"
-                      />
+                      <Icon prefix="fa" name="minus-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="minus-square-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-minus-square-o"
-                      />
+                      <Icon prefix="fa" name="minus-square-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mixcloud"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mixcloud"
-                      />
+                      <Icon prefix="fa" name="mixcloud" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mobile"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mobile"
-                      />
+                      <Icon prefix="fa" name="mobile" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mobile-phone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mobile-phone"
-                      />
+                      <Icon prefix="fa" name="mobile-phone" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="modx"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-modx"
-                      />
+                      <Icon prefix="fa" name="modx" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="money"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-money"
-                      />
+                      <Icon prefix="fa" name="money" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="moon-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-moon-o"
-                      />
+                      <Icon prefix="fa" name="moon-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mortar-board"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mortar-board"
-                      />
+                      <Icon prefix="fa" name="mortar-board" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="motorcycle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-motorcycle"
-                      />
+                      <Icon prefix="fa" name="motorcycle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="mouse-pointer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-mouse-pointer"
-                      />
+                      <Icon prefix="fa" name="mouse-pointer" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="music"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-music"
-                      />
+                      <Icon prefix="fa" name="music" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="navicon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-navicon"
-                      />
+                      <Icon prefix="fa" name="navicon" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="neuter"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-neuter"
-                      />
+                      <Icon prefix="fa" name="neuter" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="newspaper-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-newspaper-o"
-                      />
+                      <Icon prefix="fa" name="newspaper-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="object-group"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-object-group"
-                      />
+                      <Icon prefix="fa" name="object-group" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="object-ungroup"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-object-ungroup"
-                      />
+                      <Icon prefix="fa" name="object-ungroup" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="odnoklassniki"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-odnoklassniki"
-                      />
+                      <Icon prefix="fa" name="odnoklassniki" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="odnoklassniki-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-odnoklassniki-square"
-                      />
+                      <Icon prefix="fa" name="odnoklassniki-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="opencart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-opencart"
-                      />
+                      <Icon prefix="fa" name="opencart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="openid"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-openid"
-                      />
+                      <Icon prefix="fa" name="openid" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="opera"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-opera"
-                      />
+                      <Icon prefix="fa" name="opera" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="optin-monster"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-optin-monster"
-                      />
+                      <Icon prefix="fa" name="optin-monster" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="outdent"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-outdent"
-                      />
+                      <Icon prefix="fa" name="outdent" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pagelines"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pagelines"
-                      />
+                      <Icon prefix="fa" name="pagelines" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paint-brush"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paint-brush"
-                      />
+                      <Icon prefix="fa" name="paint-brush" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paper-plane"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paper-plane"
-                      />
+                      <Icon prefix="fa" name="paper-plane" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paper-plane-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paper-plane-o"
-                      />
+                      <Icon prefix="fa" name="paper-plane-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paperclip"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paperclip"
-                      />
+                      <Icon prefix="fa" name="paperclip" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paragraph"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paragraph"
-                      />
+                      <Icon prefix="fa" name="paragraph" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paste"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paste"
-                      />
+                      <Icon prefix="fa" name="paste" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pause"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pause"
-                      />
+                      <Icon prefix="fa" name="pause" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pause-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pause-circle"
-                      />
+                      <Icon prefix="fa" name="pause-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pause-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pause-circle-o"
-                      />
+                      <Icon prefix="fa" name="pause-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paw"
-                      />
+                      <Icon prefix="fa" name="paw" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="paypal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-paypal"
-                      />
+                      <Icon prefix="fa" name="paypal" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pencil"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pencil"
-                      />
+                      <Icon prefix="fa" name="pencil" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pencil-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pencil-square"
-                      />
+                      <Icon prefix="fa" name="pencil-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pencil-square-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pencil-square-o"
-                      />
+                      <Icon prefix="fa" name="pencil-square-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="percent"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-percent"
-                      />
+                      <Icon prefix="fa" name="percent" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="phone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-phone"
-                      />
+                      <Icon prefix="fa" name="phone" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="phone-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-phone-square"
-                      />
+                      <Icon prefix="fa" name="phone-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="photo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-photo"
-                      />
+                      <Icon prefix="fa" name="photo" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="picture-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-picture-o"
-                      />
+                      <Icon prefix="fa" name="picture-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pie-chart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pie-chart"
-                      />
+                      <Icon prefix="fa" name="pie-chart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pied-piper"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pied-piper"
-                      />
+                      <Icon prefix="fa" name="pied-piper" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pied-piper-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pied-piper-alt"
-                      />
+                      <Icon prefix="fa" name="pied-piper-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pied-piper-pp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pied-piper-pp"
-                      />
+                      <Icon prefix="fa" name="pied-piper-pp" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pinterest"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pinterest"
-                      />
+                      <Icon prefix="fa" name="pinterest" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pinterest-p"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pinterest-p"
-                      />
+                      <Icon prefix="fa" name="pinterest-p" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="pinterest-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-pinterest-square"
-                      />
+                      <Icon prefix="fa" name="pinterest-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="plane"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-plane"
-                      />
+                      <Icon prefix="fa" name="plane" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="play"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-play"
-                      />
+                      <Icon prefix="fa" name="play" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="play-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-play-circle"
-                      />
+                      <Icon prefix="fa" name="play-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="play-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-play-circle-o"
-                      />
+                      <Icon prefix="fa" name="play-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="plug"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-plug"
-                      />
+                      <Icon prefix="fa" name="plug" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-plus"
-                      />
+                      <Icon prefix="fa" name="plus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="plus-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-plus-circle"
-                      />
+                      <Icon prefix="fa" name="plus-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="plus-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-plus-square"
-                      />
+                      <Icon prefix="fa" name="plus-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="plus-square-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-plus-square-o"
-                      />
+                      <Icon prefix="fa" name="plus-square-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="podcast"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-podcast"
-                      />
+                      <Icon prefix="fa" name="podcast" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="power-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-power-off"
-                      />
+                      <Icon prefix="fa" name="power-off" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="print"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-print"
-                      />
+                      <Icon prefix="fa" name="print" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="product-hunt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-product-hunt"
-                      />
+                      <Icon prefix="fa" name="product-hunt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="puzzle-piece"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-puzzle-piece"
-                      />
+                      <Icon prefix="fa" name="puzzle-piece" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="qq"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-qq"
-                      />
+                      <Icon prefix="fa" name="qq" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="qrcode"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-qrcode"
-                      />
+                      <Icon prefix="fa" name="qrcode" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="question"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-question"
-                      />
+                      <Icon prefix="fa" name="question" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="question-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-question-circle"
-                      />
+                      <Icon prefix="fa" name="question-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="question-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-question-circle-o"
-                      />
+                      <Icon prefix="fa" name="question-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="quora"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-quora"
-                      />
+                      <Icon prefix="fa" name="quora" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="quote-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-quote-left"
-                      />
+                      <Icon prefix="fa" name="quote-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="quote-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-quote-right"
-                      />
+                      <Icon prefix="fa" name="quote-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ra"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ra"
-                      />
+                      <Icon prefix="fa" name="ra" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="random"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-random"
-                      />
+                      <Icon prefix="fa" name="random" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ravelry"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ravelry"
-                      />
+                      <Icon prefix="fa" name="ravelry" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rebel"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rebel"
-                      />
+                      <Icon prefix="fa" name="rebel" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="recycle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-recycle"
-                      />
+                      <Icon prefix="fa" name="recycle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="reddit"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-reddit"
-                      />
+                      <Icon prefix="fa" name="reddit" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="reddit-alien"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-reddit-alien"
-                      />
+                      <Icon prefix="fa" name="reddit-alien" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="reddit-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-reddit-square"
-                      />
+                      <Icon prefix="fa" name="reddit-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="refresh"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-refresh"
-                      />
+                      <Icon prefix="fa" name="refresh" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="registered"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-registered"
-                      />
+                      <Icon prefix="fa" name="registered" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="remove"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-remove"
-                      />
+                      <Icon prefix="fa" name="remove" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="renren"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-renren"
-                      />
+                      <Icon prefix="fa" name="renren" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="reorder"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-reorder"
-                      />
+                      <Icon prefix="fa" name="reorder" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="repeat"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-repeat"
-                      />
+                      <Icon prefix="fa" name="repeat" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="reply"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-reply"
-                      />
+                      <Icon prefix="fa" name="reply" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="reply-all"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-reply-all"
-                      />
+                      <Icon prefix="fa" name="reply-all" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="resistance"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-resistance"
-                      />
+                      <Icon prefix="fa" name="resistance" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="retweet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-retweet"
-                      />
+                      <Icon prefix="fa" name="retweet" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rmb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rmb"
-                      />
+                      <Icon prefix="fa" name="rmb" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="road"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-road"
-                      />
+                      <Icon prefix="fa" name="road" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rocket"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rocket"
-                      />
+                      <Icon prefix="fa" name="rocket" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rotate-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rotate-left"
-                      />
+                      <Icon prefix="fa" name="rotate-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rotate-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rotate-right"
-                      />
+                      <Icon prefix="fa" name="rotate-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rouble"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rouble"
-                      />
+                      <Icon prefix="fa" name="rouble" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rss"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rss"
-                      />
+                      <Icon prefix="fa" name="rss" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rss-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rss-square"
-                      />
+                      <Icon prefix="fa" name="rss-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rub"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rub"
-                      />
+                      <Icon prefix="fa" name="rub" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ruble"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ruble"
-                      />
+                      <Icon prefix="fa" name="ruble" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="rupee"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-rupee"
-                      />
+                      <Icon prefix="fa" name="rupee" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="s15"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-s15"
-                      />
+                      <Icon prefix="fa" name="s15" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="safari"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-safari"
-                      />
+                      <Icon prefix="fa" name="safari" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="save"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-save"
-                      />
+                      <Icon prefix="fa" name="save" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="scissors"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-scissors"
-                      />
+                      <Icon prefix="fa" name="scissors" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="scribd"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-scribd"
-                      />
+                      <Icon prefix="fa" name="scribd" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="search"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-search"
-                      />
+                      <Icon prefix="fa" name="search" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="search-minus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-search-minus"
-                      />
+                      <Icon prefix="fa" name="search-minus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="search-plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-search-plus"
-                      />
+                      <Icon prefix="fa" name="search-plus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sellsy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sellsy"
-                      />
+                      <Icon prefix="fa" name="sellsy" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="send"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-send"
-                      />
+                      <Icon prefix="fa" name="send" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="send-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-send-o"
-                      />
+                      <Icon prefix="fa" name="send-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="server"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-server"
-                      />
+                      <Icon prefix="fa" name="server" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="share"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-share"
-                      />
+                      <Icon prefix="fa" name="share" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="share-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-share-alt"
-                      />
+                      <Icon prefix="fa" name="share-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="share-alt-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-share-alt-square"
-                      />
+                      <Icon prefix="fa" name="share-alt-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="share-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-share-square"
-                      />
+                      <Icon prefix="fa" name="share-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="share-square-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-share-square-o"
-                      />
+                      <Icon prefix="fa" name="share-square-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="shekel"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-shekel"
-                      />
+                      <Icon prefix="fa" name="shekel" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sheqel"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sheqel"
-                      />
+                      <Icon prefix="fa" name="sheqel" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="shield"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-shield"
-                      />
+                      <Icon prefix="fa" name="shield" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ship"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ship"
-                      />
+                      <Icon prefix="fa" name="ship" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="shirtsinbulk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-shirtsinbulk"
-                      />
+                      <Icon prefix="fa" name="shirtsinbulk" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="shopping-bag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-shopping-bag"
-                      />
+                      <Icon prefix="fa" name="shopping-bag" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="shopping-basket"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-shopping-basket"
-                      />
+                      <Icon prefix="fa" name="shopping-basket" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="shopping-cart"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-shopping-cart"
-                      />
+                      <Icon prefix="fa" name="shopping-cart" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="shower"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-shower"
-                      />
+                      <Icon prefix="fa" name="shower" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sign-in"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sign-in"
-                      />
+                      <Icon prefix="fa" name="sign-in" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sign-language"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sign-language"
-                      />
+                      <Icon prefix="fa" name="sign-language" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sign-out"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sign-out"
-                      />
+                      <Icon prefix="fa" name="sign-out" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="signal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-signal"
-                      />
+                      <Icon prefix="fa" name="signal" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="signing"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-signing"
-                      />
+                      <Icon prefix="fa" name="signing" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="simplybuilt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-simplybuilt"
-                      />
+                      <Icon prefix="fa" name="simplybuilt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sitemap"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sitemap"
-                      />
+                      <Icon prefix="fa" name="sitemap" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="skyatlas"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-skyatlas"
-                      />
+                      <Icon prefix="fa" name="skyatlas" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="skype"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-skype"
-                      />
+                      <Icon prefix="fa" name="skype" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="slack"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-slack"
-                      />
+                      <Icon prefix="fa" name="slack" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sliders"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sliders"
-                      />
+                      <Icon prefix="fa" name="sliders" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="slideshare"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-slideshare"
-                      />
+                      <Icon prefix="fa" name="slideshare" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="smile-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-smile-o"
-                      />
+                      <Icon prefix="fa" name="smile-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="snapchat"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-snapchat"
-                      />
+                      <Icon prefix="fa" name="snapchat" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="snapchat-ghost"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-snapchat-ghost"
-                      />
+                      <Icon prefix="fa" name="snapchat-ghost" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="snapchat-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-snapchat-square"
-                      />
+                      <Icon prefix="fa" name="snapchat-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="snowflake-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-snowflake-o"
-                      />
+                      <Icon prefix="fa" name="snowflake-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="soccer-ball-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-soccer-ball-o"
-                      />
+                      <Icon prefix="fa" name="soccer-ball-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort"
-                      />
+                      <Icon prefix="fa" name="sort" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-alpha-asc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-alpha-asc"
-                      />
+                      <Icon prefix="fa" name="sort-alpha-asc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-alpha-desc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-alpha-desc"
-                      />
+                      <Icon prefix="fa" name="sort-alpha-desc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-amount-asc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-amount-asc"
-                      />
+                      <Icon prefix="fa" name="sort-amount-asc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-amount-desc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-amount-desc"
-                      />
+                      <Icon prefix="fa" name="sort-amount-desc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-asc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-asc"
-                      />
+                      <Icon prefix="fa" name="sort-asc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-desc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-desc"
-                      />
+                      <Icon prefix="fa" name="sort-desc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-down"
-                      />
+                      <Icon prefix="fa" name="sort-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-numeric-asc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-numeric-asc"
-                      />
+                      <Icon prefix="fa" name="sort-numeric-asc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-numeric-desc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-numeric-desc"
-                      />
+                      <Icon prefix="fa" name="sort-numeric-desc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sort-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sort-up"
-                      />
+                      <Icon prefix="fa" name="sort-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="soundcloud"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-soundcloud"
-                      />
+                      <Icon prefix="fa" name="soundcloud" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="space-shuttle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-space-shuttle"
-                      />
+                      <Icon prefix="fa" name="space-shuttle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="spinner"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-spinner"
-                      />
+                      <Icon prefix="fa" name="spinner" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="spoon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-spoon"
-                      />
+                      <Icon prefix="fa" name="spoon" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="spotify"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-spotify"
-                      />
+                      <Icon prefix="fa" name="spotify" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-square"
-                      />
+                      <Icon prefix="fa" name="square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="square-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-square-o"
-                      />
+                      <Icon prefix="fa" name="square-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stack-exchange"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stack-exchange"
-                      />
+                      <Icon prefix="fa" name="stack-exchange" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stack-overflow"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stack-overflow"
-                      />
+                      <Icon prefix="fa" name="stack-overflow" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="star"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-star"
-                      />
+                      <Icon prefix="fa" name="star" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="star-half"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-star-half"
-                      />
+                      <Icon prefix="fa" name="star-half" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="star-half-empty"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-star-half-empty"
-                      />
+                      <Icon prefix="fa" name="star-half-empty" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="star-half-full"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-star-half-full"
-                      />
+                      <Icon prefix="fa" name="star-half-full" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="star-half-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-star-half-o"
-                      />
+                      <Icon prefix="fa" name="star-half-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="star-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-star-o"
-                      />
+                      <Icon prefix="fa" name="star-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="steam"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-steam"
-                      />
+                      <Icon prefix="fa" name="steam" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="steam-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-steam-square"
-                      />
+                      <Icon prefix="fa" name="steam-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="step-backward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-step-backward"
-                      />
+                      <Icon prefix="fa" name="step-backward" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="step-forward"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-step-forward"
-                      />
+                      <Icon prefix="fa" name="step-forward" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stethoscope"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stethoscope"
-                      />
+                      <Icon prefix="fa" name="stethoscope" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sticky-note"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sticky-note"
-                      />
+                      <Icon prefix="fa" name="sticky-note" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sticky-note-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sticky-note-o"
-                      />
+                      <Icon prefix="fa" name="sticky-note-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stop"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stop"
-                      />
+                      <Icon prefix="fa" name="stop" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stop-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stop-circle"
-                      />
+                      <Icon prefix="fa" name="stop-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stop-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stop-circle-o"
-                      />
+                      <Icon prefix="fa" name="stop-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="street-view"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-street-view"
-                      />
+                      <Icon prefix="fa" name="street-view" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="strikethrough"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-strikethrough"
-                      />
+                      <Icon prefix="fa" name="strikethrough" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stumbleupon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stumbleupon"
-                      />
+                      <Icon prefix="fa" name="stumbleupon" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="stumbleupon-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-stumbleupon-circle"
-                      />
+                      <Icon prefix="fa" name="stumbleupon-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="subscript"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-subscript"
-                      />
+                      <Icon prefix="fa" name="subscript" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="subway"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-subway"
-                      />
+                      <Icon prefix="fa" name="subway" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="suitcase"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-suitcase"
-                      />
+                      <Icon prefix="fa" name="suitcase" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="sun-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-sun-o"
-                      />
+                      <Icon prefix="fa" name="sun-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="superpowers"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-superpowers"
-                      />
+                      <Icon prefix="fa" name="superpowers" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="superscript"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-superscript"
-                      />
+                      <Icon prefix="fa" name="superscript" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="support"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-support"
-                      />
+                      <Icon prefix="fa" name="support" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="table"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-table"
-                      />
+                      <Icon prefix="fa" name="table" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tablet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tablet"
-                      />
+                      <Icon prefix="fa" name="tablet" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tachometer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tachometer"
-                      />
+                      <Icon prefix="fa" name="tachometer" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tag"
-                      />
+                      <Icon prefix="fa" name="tag" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tags"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tags"
-                      />
+                      <Icon prefix="fa" name="tags" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tasks"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tasks"
-                      />
+                      <Icon prefix="fa" name="tasks" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="taxi"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-taxi"
-                      />
+                      <Icon prefix="fa" name="taxi" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="telegram"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-telegram"
-                      />
+                      <Icon prefix="fa" name="telegram" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="television"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-television"
-                      />
+                      <Icon prefix="fa" name="television" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tencent-weibo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tencent-weibo"
-                      />
+                      <Icon prefix="fa" name="tencent-weibo" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="terminal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-terminal"
-                      />
+                      <Icon prefix="fa" name="terminal" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="text-height"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-text-height"
-                      />
+                      <Icon prefix="fa" name="text-height" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="text-width"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-text-width"
-                      />
+                      <Icon prefix="fa" name="text-width" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="th"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-th"
-                      />
+                      <Icon prefix="fa" name="th" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="th-large"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-th-large"
-                      />
+                      <Icon prefix="fa" name="th-large" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="th-list"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-th-list"
-                      />
+                      <Icon prefix="fa" name="th-list" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="themeisle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-themeisle"
-                      />
+                      <Icon prefix="fa" name="themeisle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer"
-                      />
+                      <Icon prefix="fa" name="thermometer" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-0"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-0"
-                      />
+                      <Icon prefix="fa" name="thermometer-0" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-1"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-1"
-                      />
+                      <Icon prefix="fa" name="thermometer-1" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-2"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-2"
-                      />
+                      <Icon prefix="fa" name="thermometer-2" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-3"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-3"
-                      />
+                      <Icon prefix="fa" name="thermometer-3" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-4"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-4"
-                      />
+                      <Icon prefix="fa" name="thermometer-4" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-empty"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-empty"
-                      />
+                      <Icon prefix="fa" name="thermometer-empty" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-full"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-full"
-                      />
+                      <Icon prefix="fa" name="thermometer-full" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-half"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-half"
-                      />
+                      <Icon prefix="fa" name="thermometer-half" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-quarter"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-quarter"
-                      />
+                      <Icon prefix="fa" name="thermometer-quarter" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thermometer-three-quarters"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thermometer-three-quarters"
-                      />
+                      <Icon prefix="fa" name="thermometer-three-quarters" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thumb-tack"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thumb-tack"
-                      />
+                      <Icon prefix="fa" name="thumb-tack" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thumbs-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thumbs-down"
-                      />
+                      <Icon prefix="fa" name="thumbs-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thumbs-o-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thumbs-o-down"
-                      />
+                      <Icon prefix="fa" name="thumbs-o-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thumbs-o-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thumbs-o-up"
-                      />
+                      <Icon prefix="fa" name="thumbs-o-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="thumbs-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-thumbs-up"
-                      />
+                      <Icon prefix="fa" name="thumbs-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="ticket"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-ticket"
-                      />
+                      <Icon prefix="fa" name="ticket" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="times"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-times"
-                      />
+                      <Icon prefix="fa" name="times" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="times-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-times-circle"
-                      />
+                      <Icon prefix="fa" name="times-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="times-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-times-circle-o"
-                      />
+                      <Icon prefix="fa" name="times-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="times-rectangle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-times-rectangle"
-                      />
+                      <Icon prefix="fa" name="times-rectangle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="times-rectangle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-times-rectangle-o"
-                      />
+                      <Icon prefix="fa" name="times-rectangle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tint"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tint"
-                      />
+                      <Icon prefix="fa" name="tint" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="toggle-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-toggle-down"
-                      />
+                      <Icon prefix="fa" name="toggle-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="toggle-left"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-toggle-left"
-                      />
+                      <Icon prefix="fa" name="toggle-left" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="toggle-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-toggle-off"
-                      />
+                      <Icon prefix="fa" name="toggle-off" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="toggle-on"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-toggle-on"
-                      />
+                      <Icon prefix="fa" name="toggle-on" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="toggle-right"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-toggle-right"
-                      />
+                      <Icon prefix="fa" name="toggle-right" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="toggle-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-toggle-up"
-                      />
+                      <Icon prefix="fa" name="toggle-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="trademark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-trademark"
-                      />
+                      <Icon prefix="fa" name="trademark" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="train"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-train"
-                      />
+                      <Icon prefix="fa" name="train" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="transgender"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-transgender"
-                      />
+                      <Icon prefix="fa" name="transgender" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="transgender-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-transgender-alt"
-                      />
+                      <Icon prefix="fa" name="transgender-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="trash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-trash"
-                      />
+                      <Icon prefix="fa" name="trash" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="trash-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-trash-o"
-                      />
+                      <Icon prefix="fa" name="trash-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tree"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tree"
-                      />
+                      <Icon prefix="fa" name="tree" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="trello"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-trello"
-                      />
+                      <Icon prefix="fa" name="trello" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tripadvisor"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tripadvisor"
-                      />
+                      <Icon prefix="fa" name="tripadvisor" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="trophy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-trophy"
-                      />
+                      <Icon prefix="fa" name="trophy" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="truck"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-truck"
-                      />
+                      <Icon prefix="fa" name="truck" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="try"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-try"
-                      />
+                      <Icon prefix="fa" name="try" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tty"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tty"
-                      />
+                      <Icon prefix="fa" name="tty" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tumblr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tumblr"
-                      />
+                      <Icon prefix="fa" name="tumblr" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tumblr-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tumblr-square"
-                      />
+                      <Icon prefix="fa" name="tumblr-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="turkish-lira"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-turkish-lira"
-                      />
+                      <Icon prefix="fa" name="turkish-lira" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="tv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-tv"
-                      />
+                      <Icon prefix="fa" name="tv" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="twitch"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-twitch"
-                      />
+                      <Icon prefix="fa" name="twitch" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="twitter"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-twitter"
-                      />
+                      <Icon prefix="fa" name="twitter" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="twitter-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-twitter-square"
-                      />
+                      <Icon prefix="fa" name="twitter-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="umbrella"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-umbrella"
-                      />
+                      <Icon prefix="fa" name="umbrella" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="underline"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-underline"
-                      />
+                      <Icon prefix="fa" name="underline" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="undo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-undo"
-                      />
+                      <Icon prefix="fa" name="undo" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="universal-access"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-universal-access"
-                      />
+                      <Icon prefix="fa" name="universal-access" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="university"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-university"
-                      />
+                      <Icon prefix="fa" name="university" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="unlink"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-unlink"
-                      />
+                      <Icon prefix="fa" name="unlink" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="unlock"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-unlock"
-                      />
+                      <Icon prefix="fa" name="unlock" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="unlock-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-unlock-alt"
-                      />
+                      <Icon prefix="fa" name="unlock-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="unsorted"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-unsorted"
-                      />
+                      <Icon prefix="fa" name="unsorted" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="upload"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-upload"
-                      />
+                      <Icon prefix="fa" name="upload" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="usb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-usb"
-                      />
+                      <Icon prefix="fa" name="usb" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="usd"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-usd"
-                      />
+                      <Icon prefix="fa" name="usd" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user"
-                      />
+                      <Icon prefix="fa" name="user" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user-circle"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user-circle"
-                      />
+                      <Icon prefix="fa" name="user-circle" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user-circle-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user-circle-o"
-                      />
+                      <Icon prefix="fa" name="user-circle-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user-md"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user-md"
-                      />
+                      <Icon prefix="fa" name="user-md" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user-o"
-                      />
+                      <Icon prefix="fa" name="user-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user-plus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user-plus"
-                      />
+                      <Icon prefix="fa" name="user-plus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user-secret"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user-secret"
-                      />
+                      <Icon prefix="fa" name="user-secret" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="user-times"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-user-times"
-                      />
+                      <Icon prefix="fa" name="user-times" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="users"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-users"
-                      />
+                      <Icon prefix="fa" name="users" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="vcard"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-vcard"
-                      />
+                      <Icon prefix="fa" name="vcard" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="vcard-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-vcard-o"
-                      />
+                      <Icon prefix="fa" name="vcard-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="venus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-venus"
-                      />
+                      <Icon prefix="fa" name="venus" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="venus-double"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-venus-double"
-                      />
+                      <Icon prefix="fa" name="venus-double" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="venus-mars"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-venus-mars"
-                      />
+                      <Icon prefix="fa" name="venus-mars" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="viacoin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-viacoin"
-                      />
+                      <Icon prefix="fa" name="viacoin" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="viadeo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-viadeo"
-                      />
+                      <Icon prefix="fa" name="viadeo" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="viadeo-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-viadeo-square"
-                      />
+                      <Icon prefix="fa" name="viadeo-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="video-camera"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-video-camera"
-                      />
+                      <Icon prefix="fa" name="video-camera" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="vimeo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-vimeo"
-                      />
+                      <Icon prefix="fa" name="vimeo" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="vimeo-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-vimeo-square"
-                      />
+                      <Icon prefix="fa" name="vimeo-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="vine"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-vine"
-                      />
+                      <Icon prefix="fa" name="vine" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="vk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-vk"
-                      />
+                      <Icon prefix="fa" name="vk" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="volume-control-phone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-volume-control-phone"
-                      />
+                      <Icon prefix="fa" name="volume-control-phone" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="volume-down"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-volume-down"
-                      />
+                      <Icon prefix="fa" name="volume-down" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="volume-off"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-volume-off"
-                      />
+                      <Icon prefix="fa" name="volume-off" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="volume-up"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-volume-up"
-                      />
+                      <Icon prefix="fa" name="volume-up" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="warning"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-warning"
-                      />
+                      <Icon prefix="fa" name="warning" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wechat"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wechat"
-                      />
+                      <Icon prefix="fa" name="wechat" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="weibo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-weibo"
-                      />
+                      <Icon prefix="fa" name="weibo" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="weixin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-weixin"
-                      />
+                      <Icon prefix="fa" name="weixin" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="whatsapp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-whatsapp"
-                      />
+                      <Icon prefix="fa" name="whatsapp" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wheelchair"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wheelchair"
-                      />
+                      <Icon prefix="fa" name="wheelchair" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wheelchair-alt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wheelchair-alt"
-                      />
+                      <Icon prefix="fa" name="wheelchair-alt" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wifi"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wifi"
-                      />
+                      <Icon prefix="fa" name="wifi" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wikipedia-w"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wikipedia-w"
-                      />
+                      <Icon prefix="fa" name="wikipedia-w" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="window-close"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-window-close"
-                      />
+                      <Icon prefix="fa" name="window-close" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="window-close-o"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-window-close-o"
-                      />
+                      <Icon prefix="fa" name="window-close-o" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="window-maximize"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-window-maximize"
-                      />
+                      <Icon prefix="fa" name="window-maximize" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="window-minimize"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-window-minimize"
-                      />
+                      <Icon prefix="fa" name="window-minimize" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="window-restore"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-window-restore"
-                      />
+                      <Icon prefix="fa" name="window-restore" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="windows"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-windows"
-                      />
+                      <Icon prefix="fa" name="windows" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="won"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-won"
-                      />
+                      <Icon prefix="fa" name="won" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wordpress"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wordpress"
-                      />
+                      <Icon prefix="fa" name="wordpress" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wpbeginner"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wpbeginner"
-                      />
+                      <Icon prefix="fa" name="wpbeginner" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wpexplorer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wpexplorer"
-                      />
+                      <Icon prefix="fa" name="wpexplorer" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wpforms"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wpforms"
-                      />
+                      <Icon prefix="fa" name="wpforms" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="wrench"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-wrench"
-                      />
+                      <Icon prefix="fa" name="wrench" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="xing"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-xing"
-                      />
+                      <Icon prefix="fa" name="xing" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="xing-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-xing-square"
-                      />
+                      <Icon prefix="fa" name="xing-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="y-combinator"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-y-combinator"
-                      />
+                      <Icon prefix="fa" name="y-combinator" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="y-combinator-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-y-combinator-square"
-                      />
+                      <Icon prefix="fa" name="y-combinator-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="yahoo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-yahoo"
-                      />
+                      <Icon prefix="fa" name="yahoo" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="yc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-yc"
-                      />
+                      <Icon prefix="fa" name="yc" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="yc-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-yc-square"
-                      />
+                      <Icon prefix="fa" name="yc-square" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="yelp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-yelp"
-                      />
+                      <Icon prefix="fa" name="yelp" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="yen"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-yen"
-                      />
+                      <Icon prefix="fa" name="yen" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="yoast"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-yoast"
-                      />
+                      <Icon prefix="fa" name="yoast" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="youtube"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-youtube"
-                      />
+                      <Icon prefix="fa" name="youtube" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="youtube-play"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-youtube-play"
-                      />
+                      <Icon prefix="fa" name="youtube-play" />
                     </li>
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="fa"
-                        name="youtube-square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="fa fa-youtube-square"
-                      />
+                      <Icon prefix="fa" name="youtube-square" />
                     </li>
                   </ul>
                 </div>
@@ -9521,2306 +3230,776 @@ function IconPage(): React.Node {
             <Grid.Row>
               <Grid.Col lg={3}>
                 <p>
-                  <code>&lt;Icon prefix="flat" name="ICON_NAME"/&gt;</code>
+                  <code>&lt;Icon prefix="flag" name="ICON_NAME"/&gt;</code>
                 </p>
               </Grid.Col>
               <Grid.Col lg={9}>
                 <div className="icons-list-wrap">
                   <ul className="icons-list">
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ad"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ad"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ae"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ae"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="af"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-af"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ag"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ag"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ai"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ai"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="al"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-al"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="am"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-am"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ao"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ao"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="aq"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-aq"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ar"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ar"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="as"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-as"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="at"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-at"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="au"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-au"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="aw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-aw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ax"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ax"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="az"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-az"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ba"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ba"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bb"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bd"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bd"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="be"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-be"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bh"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bh"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bi"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bi"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bj"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bj"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bl"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bo"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bq"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bq"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="br"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-br"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bs"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bs"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bt"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bv"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="by"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-by"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="bz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-bz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ca"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ca"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cd"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cd"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ch"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ch"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ci"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ci"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ck"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ck"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cl"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="co"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-co"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cv"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cx"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cx"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cy"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="cz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-cz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="de"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-de"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="dj"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-dj"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="dk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-dk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="dm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-dm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="do"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-do"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="dz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-dz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ec"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ec"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ee"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ee"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="eg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-eg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="eh"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-eh"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="er"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-er"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="es"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-es"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="et"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-et"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="eu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-eu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="fi"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-fi"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="fj"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-fj"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="fk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-fk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="fm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-fm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="fo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-fo"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="fr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-fr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ga"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ga"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gb"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gb-eng"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gb-eng"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gb-nir"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gb-nir"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gb-sct"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gb-sct"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gb-wls"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gb-wls"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gd"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gd"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ge"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ge"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gh"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gh"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gi"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gi"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gl"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gp"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gq"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gq"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gs"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gs"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gt"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="gy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-gy"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="hk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-hk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="hm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-hm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="hn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-hn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="hr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-hr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ht"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ht"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="hu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-hu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="id"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-id"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ie"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ie"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="il"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-il"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="im"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-im"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="in"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-in"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="io"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-io"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="iq"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-iq"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ir"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ir"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="is"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-is"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="it"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-it"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="je"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-je"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="jm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-jm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="jo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-jo"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="jp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-jp"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ke"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ke"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="kg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-kg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="kh"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-kh"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ki"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ki"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="km"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-km"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="kn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-kn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="kp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-kp"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="kr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-kr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="kw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-kw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ky"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ky"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="kz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-kz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="la"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-la"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="lb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-lb"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="lc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-lc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="li"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-li"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="lk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-lk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="lr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-lr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ls"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ls"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="lt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-lt"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="lu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-lu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="lv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-lv"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ly"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ly"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ma"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ma"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="md"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-md"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="me"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-me"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mh"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mh"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ml"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ml"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mo"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mp"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mp"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mq"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mq"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ms"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ms"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mt"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mv"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mx"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mx"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="my"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-my"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="mz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-mz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="na"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-na"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="nc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-nc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ne"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ne"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="nf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-nf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ng"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ng"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ni"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ni"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="nl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-nl"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="no"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-no"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="np"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-np"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="nr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-nr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="nu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-nu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="nz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-nz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="om"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-om"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pa"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pa"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pe"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pe"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ph"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ph"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pl"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ps"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ps"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pt"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="pw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-pw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="py"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-py"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="qa"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-qa"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="re"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-re"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ro"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ro"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="rs"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-rs"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ru"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ru"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="rw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-rw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sa"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sa"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sb"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sd"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sd"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="se"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-se"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sh"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sh"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="si"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-si"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sj"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sj"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sl"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="so"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-so"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ss"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ss"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="st"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-st"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sv"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sx"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sx"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sy"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="sz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-sz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="td"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-td"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="th"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-th"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tj"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tj"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tk"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tk"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tl"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tl"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="to"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-to"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tr"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tr"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tt"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tv"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tv"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tw"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="tz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-tz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ua"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ua"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ug"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ug"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="um"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-um"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="un"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-un"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="us"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-us"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="uy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-uy"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="uz"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-uz"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="va"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-va"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="vc"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-vc"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ve"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ve"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="vg"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-vg"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="vi"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-vi"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="vn"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-vn"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="vu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-vu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="wf"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-wf"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ws"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ws"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="ye"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-ye"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="yt"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-yt"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="za"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-za"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="zm"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-zm"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="flag"
-                        name="zw"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="flag flag-zw"
-                      />
+                      <Icon prefix="flag" name="ad" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ae" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="af" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ag" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ai" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="al" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="am" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ao" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="aq" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ar" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="as" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="at" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="au" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="aw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ax" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="az" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ba" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bb" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bd" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="be" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bh" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bi" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bj" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bl" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bo" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bq" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="br" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bs" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bt" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bv" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="by" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="bz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ca" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cd" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ch" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ci" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ck" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cl" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="co" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cv" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cx" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cy" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="cz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="de" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="dj" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="dk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="dm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="do" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="dz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ec" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ee" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="eg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="eh" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="er" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="es" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="et" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="eu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="fi" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="fj" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="fk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="fm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="fo" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="fr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ga" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gb" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gb-eng" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gb-nir" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gb-sct" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gb-wls" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gd" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ge" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gh" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gi" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gl" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gp" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gq" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gs" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gt" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="gy" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="hk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="hm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="hn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="hr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ht" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="hu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="id" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ie" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="il" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="im" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="in" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="io" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="iq" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ir" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="is" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="it" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="je" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="jm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="jo" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="jp" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ke" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="kg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="kh" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ki" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="km" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="kn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="kp" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="kr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="kw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ky" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="kz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="la" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="lb" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="lc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="li" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="lk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="lr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ls" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="lt" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="lu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="lv" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ly" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ma" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="md" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="me" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mh" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ml" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mo" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mp" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mq" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ms" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mt" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mv" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mx" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="my" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="mz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="na" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="nc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ne" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="nf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ng" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ni" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="nl" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="no" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="np" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="nr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="nu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="nz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="om" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pa" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pe" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ph" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pl" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ps" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pt" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="pw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="py" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="qa" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="re" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ro" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="rs" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ru" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="rw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sa" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sb" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sd" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="se" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sh" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="si" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sj" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sl" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="so" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ss" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="st" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sv" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sx" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sy" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="sz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="td" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="th" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tj" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tk" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tl" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="to" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tr" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tt" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tv" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tw" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="tz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ua" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ug" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="um" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="un" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="us" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="uy" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="uz" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="va" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="vc" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ve" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="vg" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="vi" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="vn" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="vu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="wf" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ws" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="ye" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="yt" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="za" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="zm" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon prefix="flag" name="zw" />
                     </li>
                   </ul>
                 </div>
@@ -11837,983 +4016,335 @@ function IconPage(): React.Node {
             <Grid.Row>
               <Grid.Col lg={3}>
                 <p>
-                  <code>&lt;Icon prefix="payment" name="ICON_NAME"/&gt;</code>
+                  <code>&lt;Icon payment name="ICON_NAME"/&gt;</code>
                 </p>
               </Grid.Col>
               <Grid.Col lg={9}>
                 <div className="icons-list-wrap">
                   <ul className="icons-list">
                     <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="2checkout"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-2checkout"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="alipay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-alipay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="amazon"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-amazon"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="americanexpress"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-americanexpress"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="applepay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-applepay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="bancontact"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-bancontact"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="bitcoin"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-bitcoin"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="bitpay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-bitpay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="cirrus"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-cirrus"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="clickandbuy"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-clickandbuy"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="coinkite"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-coinkite"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="dinersclub"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-dinersclub"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="directdebit"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-directdebit"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="discover"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-discover"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="dwolla"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-dwolla"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ebay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ebay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="eway"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-eway"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="giropay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-giropay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="googlewallet"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-googlewallet"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ingenico"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ingenico"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="jcb"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-jcb"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="klarna"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-klarna"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="laser"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-laser"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="maestro"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-maestro"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="mastercard"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-mastercard"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="monero"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-monero"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="neteller"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-neteller"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ogone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ogone"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="okpay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-okpay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paybox"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paybox"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paymill"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paymill"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payone"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payoneer"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payoneer"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paypal"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paypal"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paysafecard"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paysafecard"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payu"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payu"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payza"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payza"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ripple"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ripple"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="sage"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-sage"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="sepa"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-sepa"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="shopify"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-shopify"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="skrill"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-skrill"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="solo"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-solo"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="square"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-square"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="stripe"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-stripe"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="switch"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-switch"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ukash"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ukash"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="unionpay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-unionpay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="verifone"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-verifone"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="verisign"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-verisign"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="visa"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-visa"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="webmoney"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-webmoney"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="westernunion"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-westernunion"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="worldpay"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-worldpay"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="2checkout-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-2checkout-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="alipay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-alipay-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="amazon-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-amazon-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="americanexpress-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-americanexpress-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="applepay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-applepay-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="bancontact-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-bancontact-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="bitcoin-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-bitcoin-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="bitpay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-bitpay-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="cirrus-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-cirrus-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="clickandbuy-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-clickandbuy-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="coinkite-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-coinkite-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="dinersclub-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-dinersclub-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="directdebit-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-directdebit-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="discover-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-discover-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="dwolla-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-dwolla-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ebay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ebay-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="eway-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-eway-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="giropay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-giropay-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="googlewallet-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-googlewallet-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ingenico-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ingenico-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="jcb-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-jcb-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="klarna-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-klarna-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="laser-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-laser-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="maestro-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-maestro-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="mastercard-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-mastercard-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="monero-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-monero-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="neteller-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-neteller-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ogone-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ogone-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="okpay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-okpay-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paybox-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paybox-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paymill-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paymill-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payone-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payone-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payoneer-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payoneer-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paypal-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paypal-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="paysafecard-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-paysafecard-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payu-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payu-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="payza-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-payza-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ripple-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ripple-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="sage-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-sage-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="sepa-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-sepa-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="shopify-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-shopify-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="skrill-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-skrill-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="solo-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-solo-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="square-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-square-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="stripe-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-stripe-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="switch-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-switch-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="ukash-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-ukash-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="unionpay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-unionpay-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="verifone-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-verifone-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="verisign-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-verisign-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="visa-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-visa-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="webmoney-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-webmoney-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="westernunion-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-westernunion-dark"
-                      />
-                    </li>
-                    <li className="icons-list-item">
-                      <Icon
-                        prefix="payment"
-                        name="worldpay-dark"
-                        data-toggle="tooltip"
-                        title=""
-                        data-original-title="payment payment-worldpay-dark"
-                      />
+                      <Icon payment name="2checkout" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="alipay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="amazon" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="americanexpress" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="applepay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="bancontact" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="bitcoin" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="bitpay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="cirrus" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="clickandbuy" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="coinkite" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="dinersclub" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="directdebit" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="discover" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="dwolla" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ebay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="eway" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="giropay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="googlewallet" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ingenico" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="jcb" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="klarna" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="laser" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="maestro" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="mastercard" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="monero" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="neteller" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ogone" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="okpay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paybox" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paymill" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payone" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payoneer" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paypal" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paysafecard" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payu" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payza" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ripple" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="sage" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="sepa" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="shopify" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="skrill" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="solo" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="square" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="stripe" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="switch" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ukash" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="unionpay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="verifone" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="verisign" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="visa" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="webmoney" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="westernunion" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="worldpay" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="2checkout-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="alipay-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="amazon-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="americanexpress-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="applepay-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="bancontact-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="bitcoin-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="bitpay-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="cirrus-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="clickandbuy-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="coinkite-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="dinersclub-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="directdebit-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="discover-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="dwolla-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ebay-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="eway-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="giropay-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="googlewallet-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ingenico-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="jcb-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="klarna-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="laser-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="maestro-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="mastercard-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="monero-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="neteller-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ogone-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="okpay-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paybox-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paymill-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payone-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payoneer-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paypal-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="paysafecard-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payu-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="payza-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ripple-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="sage-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="sepa-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="shopify-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="skrill-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="solo-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="square-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="stripe-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="switch-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="ukash-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="unionpay-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="verifone-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="verisign-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="visa-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="webmoney-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="westernunion-dark" />
+                    </li>
+                    <li className="icons-list-item">
+                      <Icon payment name="worldpay-dark" />
                     </li>
                   </ul>
                 </div>
