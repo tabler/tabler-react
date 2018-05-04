@@ -6,7 +6,7 @@ import { Card, Media, Grid, Header } from "../";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +title?: string,
+  +cardTitle?: string,
   +map?: React.Node,
   +mapPlaceholder?: string,
   +rounded?: boolean,
@@ -22,7 +22,7 @@ type Props = {|
 function ContactCard({
   children,
   className,
-  title,
+  cardTitle,
   map,
   mapPlaceholder,
   rounded,
@@ -36,7 +36,7 @@ function ContactCard({
 }: Props) {
   const cardClassName = cn(className);
   return (
-    <Card className={cardClassName} title={title}>
+    <Card className={cardClassName} title={cardTitle}>
       {(mapPlaceholder || map) && (
         <Card.Map placeholder={mapPlaceholder}>{map}</Card.Map>
       )}
