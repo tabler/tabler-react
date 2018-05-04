@@ -110,7 +110,7 @@ function DocsButtonsPage(): React.Node {
             disabled
             RootComponent="input"
             type="button"
-            // value="Input"
+            value="Input"
           />
         </Button.List>
       </ComponentDemo>

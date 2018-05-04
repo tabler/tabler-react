@@ -98,14 +98,15 @@ function Dropdown(props: Props): React.Node {
     props.items ||
     (props.itemsObject &&
       props.itemsObject.map(
-        item =>
+        (item, i) =>
           item.isDivider ? (
-            <Dropdown.ItemDivider />
+            <Dropdown.ItemDivider key={i} />
           ) : (
             <Dropdown.Item
               icon={item.icon}
               badge={item.badge}
               value={item.value}
+              key={i}
             />
           )
       ));

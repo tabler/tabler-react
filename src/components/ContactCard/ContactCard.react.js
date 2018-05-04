@@ -74,7 +74,11 @@ function ContactCard({
         )}
         {description && (
           <React.Fragment>
-            <Header.H6>{description.title || "Description"}</Header.H6>
+            <Header.H6>
+              {typeof description === "string"
+                ? "Description"
+                : description.title}
+            </Header.H6>
             <p>
               {typeof description === "string"
                 ? description
