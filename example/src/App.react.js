@@ -40,6 +40,7 @@ import {
   DocsTypographyPage,
   DocsTablePage,
   DocsBadgePage,
+  DocsStampPage,
 } from "./documentation";
 
 import "bootstrap";
@@ -86,6 +87,7 @@ function App(props: Props): React.Node {
         />
         <Route exact path="/gallery" component={GalleryPage} />
         <Route exact path="/docs/charts" component={DocsChartsPage} />
+        <Route exact path="/docs/stamps" component={DocsStampPage} />
         <Route exact path="/docs/tags" component={DocsTagsPage} />
         <Route exact path="/docs/tables" component={DocsTablePage} />
         <Route exact path="/docs/typography" component={DocsTypographyPage} />
