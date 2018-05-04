@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import { Text, Header, Card, Icon } from "tabler-react";
+import { Text, Header, Card } from "tabler-react";
 
 import SyntaxHighlighter from "react-syntax-highlighter/prism";
 import { prism } from "react-syntax-highlighter/styles/prism";

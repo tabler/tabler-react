@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import { Header, Card, Button, Grid, Form } from "tabler-react";
+import { Header, Form } from "tabler-react";
 
 import ComponentDemo from "../ComponentDemo";
 import { DocsPageWrapper } from "./";
