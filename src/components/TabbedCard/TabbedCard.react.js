@@ -27,18 +27,9 @@ class TabbedCard extends React.PureComponent<Props, State> {
           <ul className="nav nav-tabs TabbedCard_header_tabs">
             {tabs.map(tab => (
               <li className="nav-item">
-                <a className="nav-link active">Active</a>
+                <a className="nav-link active">{tab.props.title}</a>
               </li>
             ))}
-            <li className="nav-item">
-              <a className="nav-link active">Active</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link">Disabled</a>
-            </li>
           </ul>
         </div>
         <Card.Body>{children}</Card.Body>

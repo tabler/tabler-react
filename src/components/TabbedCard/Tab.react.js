@@ -10,9 +10,6 @@ type Props = {|
 type State = {||};
 
 class Tab extends React.PureComponent<Props, State> {
-  getTitle(): string {
-    return this.props.title;
-  }
   render(): React.Node {
     return this.props.children;
   }
