@@ -5,21 +5,22 @@ import Tab from "./Tab.react";
 import Card from "../Card/Card.react";
 
 type Props = {|
+  +initialTab: string,
   +children: React.ChildrenArray<React.Element<typeof Tab>>,
 |};
 
-type State = {||};
+type State = {|
+  selectedTitle: string,
+|};
 
 class TabbedCard extends React.PureComponent<Props, State> {
+  state = {
+    selectedTitle: this.props.initialTab,
+  };
+
   render(): React.Node {
     const { children } = this.props;
     const tabs = React.Children.toArray(children);
-
-    //const num1 = tabs[0];
-    //const abc = num1.props;
-
-    //const a = tabs[0];
-    //a.getTitle();
 
     return (
       <Card>

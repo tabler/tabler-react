@@ -56,7 +56,7 @@ function DocsCardsPage(): React.Node {
 
       <Header.H3>Tabbed Card</Header.H3>
       <ComponentDemo>
-        <TabbedCard>
+        <TabbedCard initialTab="Hello">
           <Tab title="Hello">Hello World</Tab>
           <Tab title="Goodbye">Goodbye</Tab>
         </TabbedCard>
