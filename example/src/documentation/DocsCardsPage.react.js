@@ -1,7 +1,15 @@
 // @flow
 import * as React from "react";
 
-import { Header, Card, Button, Grid, Dimmer } from "tabler-react";
+import {
+  Header,
+  Card,
+  Button,
+  Grid,
+  Dimmer,
+  Timeline,
+  Stamp,
+} from "tabler-react";
 
 import ComponentDemo from "../ComponentDemo";
 import { DocsPageWrapper } from "./";
@@ -108,6 +116,38 @@ function DocsCardsPage(): React.Node {
               perferendis sed suscipit velit vitae voluptatem. A consequuntur,
               deserunt eaque error nulla temporibus!
             </Dimmer>
+          </Card.Body>
+        </Card>
+      </ComponentDemo>
+
+      <Header.H3>Card with timeline</Header.H3>
+      <ComponentDemo>
+        <Card
+          title="Card with timeline"
+          options={<Stamp color="red">L2</Stamp>}
+        >
+          <Card.Body>
+            <Timeline>
+              <Timeline.Item
+                title="Rondo Daszyńskiego"
+                badgeColor="red"
+                time="2 min. ago"
+              />
+              <Timeline.Item title="Rondo ONZ" badge time="1 min. ago" />
+              <Timeline.Item
+                title="Świętokrzyska"
+                badgeColor="blue"
+                time="now"
+                active
+                description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+              />
+              <Timeline.Item title="Stadion Narodowy" badge time="5 min." />
+              <Timeline.Item
+                title="Dworzec Wileński"
+                badgeColor="green"
+                time="7 min."
+              />
+            </Timeline>
           </Card.Body>
         </Card>
       </ComponentDemo>
