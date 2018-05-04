@@ -2,16 +2,7 @@
 
 import * as React from "react";
 
-import {
-  Container,
-  Page,
-  Grid,
-  Card,
-  Stamp,
-  Header,
-  Media,
-  ContactCard,
-} from "tabler-react";
+import { Container, Page, Grid, Card, Stamp, ContactCard } from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
 
