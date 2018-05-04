@@ -9,7 +9,7 @@ type Props = {|
   +active?: boolean,
 |};
 
-function TimelineTime({ className, children, active }: Props): React.Node {
+function TimelineItemTime({ className, children, active }: Props): React.Node {
   const classes = cn(
     {
       "timeline-time": true,
@@ -20,4 +20,4 @@ function TimelineTime({ className, children, active }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
-export default TimelineTime;
+export default TimelineItemTime;

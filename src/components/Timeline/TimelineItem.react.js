@@ -3,8 +3,8 @@
 import * as React from "react";
 import cn from "classnames";
 
-import TimelineBadge from "./TimelineBadge.react";
-import TimelineTime from "./TimelineTime.react";
+import TimelineItemBadge from "./TimelineItemBadge.react";
+import TimelineItemTime from "./TimelineItemTime.react";
 import TimelineItemTitle from "./TimelineItemTitle.react";
 import TimelineItemDescription from "./TimelineItemDescription.react";
 
@@ -54,10 +54,10 @@ function TimelineItem({
 
   return (
     <li className={classes}>
-      {(badge || badgeColor) && <TimelineBadge color={badgeColor} />}
+      {(badge || badgeColor) && <TimelineItemBadge color={badgeColor} />}
       {active ? <div>{titleAndDescription}</div> : titleAndDescription}
       {children}
-      {time && <TimelineTime active={active}>{time}</TimelineTime>}
+      {time && <TimelineItemTime active={active}>{time}</TimelineItemTime>}
     </li>
   );
 }

@@ -9,7 +9,11 @@ type Props = {|
   +color?: string,
 |};
 
-function TimelineBadge({ className, children, color = "" }: Props): React.Node {
+function TimelineItemBadge({
+  className,
+  children,
+  color = "",
+}: Props): React.Node {
   const classes = cn(
     {
       "timeline-badge": true,
@@ -20,4 +24,4 @@ function TimelineBadge({ className, children, color = "" }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
-export default TimelineBadge;
+export default TimelineItemBadge;

@@ -4,8 +4,8 @@ import * as React from "react";
 import cn from "classnames";
 
 import TimelineItem from "./TimelineItem.react";
-import TimelineTime from "./TimelineTime.react";
-import TimelineBadge from "./TimelineBadge.react";
+import TimelineItemTime from "./TimelineItemTime.react";
+import TimelineItemBadge from "./TimelineItemBadge.react";
 import TimelineItemTitle from "./TimelineItemTitle.react";
 import TimelineItemDescription from "./TimelineItemDescription.react";
 
@@ -25,8 +25,8 @@ function Timeline({ className, children }: Props): React.Node {
 }
 
 Timeline.Item = TimelineItem;
-Timeline.Time = TimelineTime;
-Timeline.Badge = TimelineBadge;
+Timeline.ItemTime = TimelineItemTime;
+Timeline.ItemBadge = TimelineItemBadge;
 Timeline.ItemTitle = TimelineItemTitle;
 Timeline.ItemDescription = TimelineItemDescription;
 
