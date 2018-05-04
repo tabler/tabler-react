@@ -6,12 +6,14 @@ import cn from "classnames";
 type Props = {|
   +children?: React.Node,
   +className?: string,
+  +active?: boolean,
 |};
 
-function TimelineTime({ className, children }: Props): React.Node {
+function TimelineTime({ className, children, active }: Props): React.Node {
   const classes = cn(
     {
       "timeline-time": true,
+      "text-muted-black": active,
     },
     className
   );

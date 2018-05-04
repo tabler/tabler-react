@@ -6,6 +6,8 @@ import cn from "classnames";
 import TimelineItem from "./TimelineItem.react";
 import TimelineTime from "./TimelineTime.react";
 import TimelineBadge from "./TimelineBadge.react";
+import TimelineItemTitle from "./TimelineItemTitle.react";
+import TimelineItemDescription from "./TimelineItemDescription.react";
 
 type Props = {|
   +children?: React.Node,
@@ -25,5 +27,7 @@ function Timeline({ className, children }: Props): React.Node {
 Timeline.Item = TimelineItem;
 Timeline.Time = TimelineTime;
 Timeline.Badge = TimelineBadge;
+Timeline.ItemTitle = TimelineItemTitle;
+Timeline.ItemDescription = TimelineItemDescription;
 
 export default Timeline;

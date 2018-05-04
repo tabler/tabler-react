@@ -2,7 +2,15 @@
 
 import * as React from "react";
 
-import { Container, Page, Grid, Card, Stamp, ContactCard } from "tabler-react";
+import {
+  Container,
+  Page,
+  Grid,
+  Card,
+  Stamp,
+  ContactCard,
+  Timeline,
+} from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
 
@@ -54,6 +62,47 @@ function MapCardsPage(): React.Node {
                   <Card
                     title="Map of Warsaw metro"
                     options={<Stamp color="red">L2</Stamp>}
+                    body={
+                      <Timeline>
+                        <Timeline.Item
+                          title="Rondo Daszyńskiego"
+                          badgeColor="red"
+                          time="2 min. ago"
+                        />
+                        <Timeline.Item
+                          title="Rondo ONZ"
+                          badge
+                          time="1 min. ago"
+                        />
+                        <Timeline.Item
+                          title="Świętokrzyska"
+                          badgeColor="blue"
+                          time="now"
+                          active
+                          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+                        />
+                        <Timeline.Item
+                          title="Nowy Świat-Uniwersytet"
+                          badge
+                          time="2 min."
+                        />
+                        <Timeline.Item
+                          title="Centrum Nauki Kopernik"
+                          badge
+                          time="3 min."
+                        />
+                        <Timeline.Item
+                          title="Stadion Narodowy"
+                          badge
+                          time="5 min."
+                        />
+                        <Timeline.Item
+                          title="Dworzec Wileński"
+                          badgeColor="green"
+                          time="7 min."
+                        />
+                      </Timeline>
+                    }
                   />
                 </Grid.Col>
               </Grid.Row>
