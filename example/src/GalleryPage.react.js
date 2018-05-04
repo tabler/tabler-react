@@ -30,8 +30,8 @@ function GalleryPage(): React.Node {
         />
 
         <Grid.Row className="row-cards">
-          {json.items.map(item => (
-            <Grid.Col sm={6} lg={4}>
+          {json.items.map((item, key) => (
+            <Grid.Col sm={6} lg={4} key={key}>
               <GalleryCard>
                 <GalleryCard.Image
                   src={item.imageURL}
