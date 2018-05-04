@@ -2,17 +2,7 @@
 
 import * as React from "react";
 
-import {
-  Page,
-  Grid,
-  StoreCard,
-  Table,
-  Card,
-  Text,
-  Button,
-  Icon,
-  Badge,
-} from "tabler-react";
+import { Page, Grid, StoreCard, Table, Card, Badge } from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
 
