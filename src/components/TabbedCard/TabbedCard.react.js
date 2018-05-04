@@ -26,11 +26,18 @@ class TabbedCard extends React.PureComponent<Props, State> {
       <Card>
         <div className="card-header">
           <ul className="nav nav-tabs TabbedCard_header_tabs">
-            {tabs.map(tab => (
-              <li className="nav-item">
-                <a className="nav-link active">{tab.props.title}</a>
-              </li>
-            ))}
+            {tabs.map(tab => {
+              const title = tab.props.title;
+              const classes =
+                title === this.state.selectedTitle
+                  ? "nav-link active"
+                  : "nav-link";
+              return (
+                <li className="nav-item">
+                  <a className={classes}>{title}</a>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <Card.Body>{children}</Card.Body>
