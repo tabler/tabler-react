@@ -10,6 +10,7 @@ import DocsFormComponentsPage from "./DocsFormComponentsPage.react";
 import DocsChartsPage from "./DocsChartsPage.react";
 import DocsTagsPage from "./DocsTagsPage.react";
 import DocsTypographyPage from "./DocsTypographyPage.react";
+import DocsTablePage from "./DocsTablePage.react";
 
 export {
   DocsPageWrapper,
@@ -24,4 +25,5 @@ export {
   DocsChartsPage,
   DocsTagsPage,
   DocsTypographyPage,
+  DocsTablePage,
 };

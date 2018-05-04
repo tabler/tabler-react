@@ -69,6 +69,13 @@ function Sidebar(): React.Node {
         >
           Form components
         </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
+          to={"/docs/tables"}
+          icon="table"
+        >
+          Tables
+        </List.GroupItem>
         <List.GroupItem RootComponent={NavLink} to={"/docs/tags"} icon="tag">
           Tags
         </List.GroupItem>
