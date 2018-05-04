@@ -1,12 +1,11 @@
 // @flow
 
 import * as React from "react";
-
-import "./TabbedCard.css";
-
 import Card from "../Card/Card.react";
 
-type Props = {||};
+type Props = {|
+  +tabs: CardTabs,
+|};
 
 type State = {||};
 
