@@ -32,6 +32,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/apple-iphone7-special.jpg"
                         className="h-8"
                       />
@@ -52,6 +53,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/apple-macbook-pro.jpg"
                         className="h-8"
                       />
@@ -73,6 +75,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/apple-iphone7.jpg"
                         className="h-8"
                       />
@@ -91,6 +94,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/gopro-hero.jpg"
                         className="h-8"
                       />
@@ -111,6 +115,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/msi.jpg"
                         className="h-8"
                       />
@@ -131,6 +136,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/xiaomi-mi.jpg"
                         className="h-8"
                       />
@@ -154,6 +160,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/huawei-mate.jpg"
                         className="h-8"
                       />
@@ -172,6 +179,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/sony-kd.jpg"
                         className="h-8"
                       />
@@ -192,6 +200,7 @@ function StoreCardsPage(): React.Node {
                   <Table.Row>
                     <Table.Col>
                       <img
+                        alt=""
                         src="https://tabler.github.io/tabler/demo/products/samsung-galaxy.jpg"
                         className="h-8"
                       />
