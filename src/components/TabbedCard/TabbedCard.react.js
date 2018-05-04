@@ -19,9 +19,7 @@ class TabbedCard extends React.PureComponent<Props, State> {
   };
 
   render(): React.Node {
-    const { children } = this.props;
-    const tabs = React.Children.toArray(children);
-
+    const tabs = React.Children.toArray(this.props.children);
     return (
       <Card>
         <div className="card-header">
@@ -34,13 +32,20 @@ class TabbedCard extends React.PureComponent<Props, State> {
                   : "nav-link";
               return (
                 <li className="nav-item">
-                  <a className={classes}>{title}</a>
+                  <a
+                    className={classes}
+                    onClick={() => this.setState({ selectedTitle: title })}
+                  >
+                    {title}
+                  </a>
                 </li>
               );
             })}
           </ul>
         </div>
-        <Card.Body>{children}</Card.Body>
+        <Card.Body>
+          {tabs.filter(tab => tab.props.title === this.state.selectedTitle)}
+        </Card.Body>
       </Card>
     );
   }
