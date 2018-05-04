@@ -22,7 +22,7 @@ class TabbedCard extends React.PureComponent<Props, State> {
     const tabs = React.Children.toArray(this.props.children);
     return (
       <Card>
-        <div className="card-header">
+        <Card.Header>
           <ul className="nav nav-tabs TabbedCard_header_tabs">
             {tabs.map(tab => {
               const title = tab.props.title;
@@ -42,7 +42,7 @@ class TabbedCard extends React.PureComponent<Props, State> {
               );
             })}
           </ul>
-        </div>
+        </Card.Header>
         <Card.Body>
           {tabs.filter(tab => tab.props.title === this.state.selectedTitle)}
         </Card.Body>
