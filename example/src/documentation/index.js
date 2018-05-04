@@ -11,6 +11,7 @@ import DocsChartsPage from "./DocsChartsPage.react";
 import DocsTagsPage from "./DocsTagsPage.react";
 import DocsTypographyPage from "./DocsTypographyPage.react";
 import DocsTablePage from "./DocsTablePage.react";
+import DocsBadgePage from "./DocsBadgePage.react";
 
 export {
   DocsPageWrapper,
@@ -26,4 +27,5 @@ export {
   DocsTagsPage,
   DocsTypographyPage,
   DocsTablePage,
+  DocsBadgePage,
 };

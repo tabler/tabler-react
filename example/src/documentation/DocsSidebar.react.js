@@ -40,6 +40,13 @@ function Sidebar(): React.Node {
         </List.GroupItem>
         <List.GroupItem
           RootComponent={NavLink}
+          to={"/docs/badges"}
+          icon="plus-square"
+        >
+          Badges
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
           to={"/docs/buttons"}
           icon="plus-square"
         >
