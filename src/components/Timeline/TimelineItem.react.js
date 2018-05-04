@@ -62,4 +62,6 @@ function TimelineItem({
   );
 }
 
+TimelineItem.displayName = "Timeline.Item";
+
 export default TimelineItem;

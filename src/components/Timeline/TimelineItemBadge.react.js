@@ -24,4 +24,6 @@ function TimelineItemBadge({
   return <div className={classes}>{children}</div>;
 }
 
+TimelineItemBadge.displayName = "Timeline.ItemBadge";
+
 export default TimelineItemBadge;

@@ -20,4 +20,6 @@ function TimelineItemTime({ className, children, active }: Props): React.Node {
   return <div className={classes}>{children}</div>;
 }
 
+TimelineItemTime.displayName = "Timeline.ItemTime";
+
 export default TimelineItemTime;
