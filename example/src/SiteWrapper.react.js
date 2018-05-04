@@ -26,7 +26,7 @@ type navItem = {|
   +subItems?: Array<navItem>,
 |};
 
-const navBarItems: Array<navItem> = Array(
+const navBarItems: Array<navItem> = [
   { value: "Home", to: "/", icon: "home" },
   {
     value: "Interface",
@@ -75,8 +75,8 @@ const navBarItems: Array<navItem> = Array(
     value: "Documentation",
     to: "/docs",
     icon: "file-text",
-  }
-);
+  },
+];
 
 class SiteWrapper extends React.Component<Props, void> {
   render(): React.Node {
