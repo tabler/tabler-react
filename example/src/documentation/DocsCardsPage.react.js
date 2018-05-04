@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-import { Header, Card, Button, Grid, Dimmer } from "tabler-react";
+import { Header, Card, TabbedCard, Button, Grid, Dimmer } from "tabler-react";
 
 import ComponentDemo from "../ComponentDemo";
 import { DocsPageWrapper } from "./";
@@ -44,6 +44,11 @@ function DocsCardsPage(): React.Node {
           </Card.Body>
           <Card.Footer>This is standard card footer</Card.Footer>
         </Card>
+      </ComponentDemo>
+
+      <Header.H3>Tabbed Card</Header.H3>
+      <ComponentDemo>
+        <TabbedCard />
       </ComponentDemo>
 
       <Header.H3>Row Deck</Header.H3>
