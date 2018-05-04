@@ -114,9 +114,7 @@ const Button = (props: Props): React.Node => {
     const { type, value, onClick } = props;
 
     return (
-      <input {...propsForAll} type={type} value={value} onClick={onClick}>
-        {childrenForAll}
-      </input>
+      <input {...propsForAll} type={type} value={value} onClick={onClick} />
     );
   } else if (props.RootComponent === "a") {
     const { href, target, onClick } = props;
