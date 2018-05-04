@@ -1,7 +1,15 @@
 // @flow
 import * as React from "react";
 
-import { Header, Card, TabbedCard, Button, Grid, Dimmer } from "tabler-react";
+import {
+  Header,
+  Card,
+  TabbedCard,
+  Tab,
+  Button,
+  Grid,
+  Dimmer,
+} from "tabler-react";
 
 import ComponentDemo from "../ComponentDemo";
 import { DocsPageWrapper } from "./";
