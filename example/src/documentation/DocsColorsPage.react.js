@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Header, Card, Button, Grid } from "tabler-react";
+import { Header, Button, Grid } from "tabler-react";
 import ComponentDemo from "../ComponentDemo";
 import { DocsPageWrapper } from "./";
 
