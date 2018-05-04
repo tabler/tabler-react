@@ -21,12 +21,12 @@ type Props = {|
 
 type navItem = {|
   +value: string,
-  +to: string,
+  +to?: string,
   +icon?: string,
   +subItems?: Array<navItem>,
 |};
 
-const navBarItems: Array<navItem> = [
+const navBarItems: Array<navItem> = Array(
   { value: "Home", to: "/", icon: "home" },
   {
     value: "Interface",
@@ -75,8 +75,8 @@ const navBarItems: Array<navItem> = [
     value: "Documentation",
     to: "/docs",
     icon: "file-text",
-  },
-];
+  }
+);
 
 class SiteWrapper extends React.Component<Props, void> {
   render(): React.Node {
