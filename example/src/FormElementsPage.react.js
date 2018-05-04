@@ -15,7 +15,7 @@ function FormElements() {
         RootComponent={Form}
         footer={
           <Card.Footer>
-            <div class="d-flex">
+            <div className="d-flex">
               <Button link>Cancel</Button>
               <Button type="submit" color="primary" className="ml-auto">
                 Send data
