@@ -25,6 +25,7 @@ import StoreCardsPage from "./components/StoreCardsPage.react.js";
 import IconPage from "./components/IconPage.react.js";
 import ChartsPage from "./interface/ChartsPage.react";
 import GalleryPage from "./GalleryPage.react";
+import MapCardsPage from "./components/MapCardsPage.react";
 
 import {
   DocsIntroPage,
@@ -74,6 +75,7 @@ function App(props: Props): React.Node {
         <Route exact path="/store" component={StoreCardsPage} />
         <Route exact path="/icons" component={IconPage} />
         <Route exact path="/docs/colors" component={DocsColorsPage} />
+        <Route exact path="/maps" component={MapCardsPage} />
         <Route
           exact
           path="/docs/form-components"

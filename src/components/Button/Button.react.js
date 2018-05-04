@@ -21,6 +21,7 @@ type PropsForAll = {|
   +loading?: boolean,
   +isDropdownToggle?: boolean,
   +to?: string,
+  +isOption?: boolean,
 |};
 
 type DefaultButtonComponent = {|
@@ -65,6 +66,7 @@ const Button = (props: Props): React.Node => {
     social = "",
     loading,
     isDropdownToggle,
+    isOption,
   } = props;
 
   const classes = cn(
@@ -82,6 +84,7 @@ const Button = (props: Props): React.Node => {
       "btn-icon": !children,
       "btn-loading": loading,
       "dropdown-toggle": isDropdownToggle,
+      "btn-option": isOption,
     },
     className
   );

@@ -8,12 +8,13 @@ import H2 from "./H2.react";
 import H3 from "./H3.react";
 import H4 from "./H4.react";
 import H5 from "./H5.react";
+import H6 from "./H6.react";
 
 type Props = {|
   +RootComponent?: React.ElementType,
   +children?: React.Node,
   +className?: string,
-  +size?: 1 | 2 | 3 | 4 | 5,
+  +size?: 1 | 2 | 3 | 4 | 5 | 6,
 |};
 
 function Header({
@@ -32,5 +33,6 @@ Header.H2 = H2;
 Header.H3 = H3;
 Header.H4 = H4;
 Header.H5 = H5;
+Header.H6 = H6;
 
 export default Header;

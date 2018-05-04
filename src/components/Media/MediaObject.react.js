@@ -11,6 +11,8 @@ type Props = {|
   +avatar?: boolean,
   +objectURL?: string,
   +size?: "sm" | "md" | "lg" | "xl" | "xxl",
+  +rounded?: boolean,
+  +alt?: string,
 |};
 
 function MediaObject({
@@ -19,15 +21,23 @@ function MediaObject({
   avatar,
   objectURL,
   size,
+  rounded,
+  alt,
 }: Props): React.Node {
   const classes = cn("media-object", className);
-  return avatar ? (
+  const imageClasses = cn({ "d-flex": true, rounded });
+
+  const mediaImage = avatar ? (
+    <Avatar size={size} imageURL={objectURL} />
+  ) : objectURL ? (
+    <img className={imageClasses} src={objectURL} alt={alt} />
+  ) : null;
+
+  return (
     <div className={classes}>
-      <Avatar size={size} imageURL={objectURL} />
+      {mediaImage}
       {children}
     </div>
-  ) : (
-    <div className={classes}>{children}</div>
   );
 }
 
