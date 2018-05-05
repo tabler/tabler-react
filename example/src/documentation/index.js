@@ -14,6 +14,7 @@ import DocsTablePage from "./DocsTablePage.react";
 import DocsBadgePage from "./DocsBadgePage.react";
 import DocsStampPage from "./DocsStampPage.react";
 import DocsDropdownPage from "./DocsDropdownPage.react";
+import DocsGridPage from "./DocsGridPage.react";
 
 export {
   DocsPageWrapper,
@@ -32,4 +33,5 @@ export {
   DocsBadgePage,
   DocsStampPage,
   DocsDropdownPage,
+  DocsGridPage,
 };
