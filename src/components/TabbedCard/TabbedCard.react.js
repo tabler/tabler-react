@@ -1,10 +1,8 @@
 // @flow
 
 import * as React from "react";
-import Nav from "../Nav/Nav.react";
-import { Tab } from "../Tabs";
 import Card from "../Card/Card.react";
-import { TabbedContainer } from "../Tabs";
+import { TabbedContainer, TabbedHeader, Tab } from "../Tabs";
 
 type Props = {|
   +initialTab: string,
@@ -22,27 +20,21 @@ class TabbedCard extends React.PureComponent<Props, State> {
 
   render(): React.Node {
     const { children } = this.props;
-    const tabs = React.Children.toArray(children);
+    const { selectedTitle } = this.state;
     return (
       <Card>
         <Card.Header>
-          <ul className="nav nav-tabs Tab_header_tabs">
-            {tabs.map(tab => {
-              const title = tab.props.title;
-              const classes =
-                title === this.state.selectedTitle ? "active" : "";
-              return (
-                <Nav.Item
-                  value={title}
-                  className={classes}
-                  onClick={() => this.setState({ selectedTitle: title })}
-                />
-              );
-            })}
-          </ul>
+          <TabbedHeader
+            selectedTitle={selectedTitle}
+            stateCallback={newTitle =>
+              this.setState({ selectedTitle: newTitle })
+            }
+          >
+            {children}
+          </TabbedHeader>
         </Card.Header>
         <Card.Body>
-          <TabbedContainer selectedTitle={this.state.selectedTitle}>
+          <TabbedContainer selectedTitle={selectedTitle}>
             {children}
           </TabbedContainer>
         </Card.Body>
