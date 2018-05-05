@@ -1,8 +1,10 @@
 // @flow
 
 import * as React from "react";
+import Nav from "../Nav/Nav.react";
 import { Tab } from "../Tabs";
 import Card from "../Card/Card.react";
+import { TabbedContainer } from "../Tabs";
 
 type Props = {|
   +initialTab: string,
@@ -19,32 +21,30 @@ class TabbedCard extends React.PureComponent<Props, State> {
   };
 
   render(): React.Node {
-    const tabs = React.Children.toArray(this.props.children);
+    const { children } = this.props;
+    const tabs = React.Children.toArray(children);
     return (
       <Card>
         <Card.Header>
-          <ul className="nav nav-tabs TabbedCard_header_tabs">
+          <ul className="nav nav-tabs Tab_header_tabs">
             {tabs.map(tab => {
               const title = tab.props.title;
               const classes =
-                title === this.state.selectedTitle
-                  ? "nav-link active"
-                  : "nav-link";
+                title === this.state.selectedTitle ? "active" : "";
               return (
-                <li className="nav-item">
-                  <a
-                    className={classes}
-                    onClick={() => this.setState({ selectedTitle: title })}
-                  >
-                    {title}
-                  </a>
-                </li>
+                <Nav.Item
+                  value={title}
+                  className={classes}
+                  onClick={() => this.setState({ selectedTitle: title })}
+                />
               );
             })}
           </ul>
         </Card.Header>
         <Card.Body>
-          {tabs.filter(tab => tab.props.title === this.state.selectedTitle)}
+          <TabbedContainer selectedTitle={this.state.selectedTitle}>
+            {children}
+          </TabbedContainer>
         </Card.Body>
       </Card>
     );

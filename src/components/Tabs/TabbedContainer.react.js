@@ -2,10 +2,16 @@
 
 import * as React from "react";
 
-type Props = {||};
+import Tab from "./Tab.react";
+
+type Props = {|
+  +children: React.ChildrenArray<React.Element<typeof Tab>>,
+  +selectedTitle: string,
+|};
 
 function TabbedContainer(props: Props): React.Node {
-  return <div />;
+  const tabs = React.Children.toArray(props.children);
+  return tabs.filter(tab => tab.props.title === props.selectedTitle);
 }
 
 export default TabbedContainer;
