@@ -22,6 +22,7 @@ type WithAnyTriggerProps = {|
   +type?: "link" | "button",
   +icon?: string,
   +triggerContent?: React.Node,
+  +color?: string,
 |};
 
 type WithTriggerContentProps = {|
@@ -53,6 +54,7 @@ type WithItemsObjectProp = {|
   +itemsObject: Array<{
     +icon?: string,
     +badge?: string,
+    +badgeType?: string,
     +value?: string,
     +isDivider?: boolean,
   }>,
@@ -89,6 +91,7 @@ function Dropdown(props: Props): React.Node {
         type={props.type}
         className={props.triggerClassName}
         isOption={isOption}
+        color={props.color}
       >
         {props.triggerContent}
       </DropdownTrigger>
@@ -105,6 +108,7 @@ function Dropdown(props: Props): React.Node {
             <Dropdown.Item
               icon={item.icon}
               badge={item.badge}
+              badgeType={item.badgeType}
               value={item.value}
               key={i}
             />
