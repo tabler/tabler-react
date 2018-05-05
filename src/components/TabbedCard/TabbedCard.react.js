@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import Tab from "./Tab.react";
+import { Tab } from "../Tabs";
 import Card from "../Card/Card.react";
 
 type Props = {|
