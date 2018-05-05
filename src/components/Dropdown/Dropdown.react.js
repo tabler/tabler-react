@@ -23,6 +23,7 @@ type WithAnyTriggerProps = {|
   +icon?: string,
   +triggerContent?: React.Node,
   +color?: string,
+  +toggle?: boolean,
 |};
 
 type WithTriggerContentProps = {|
@@ -92,6 +93,7 @@ function Dropdown(props: Props): React.Node {
         className={props.triggerClassName}
         isOption={isOption}
         color={props.color}
+        toggle={props.toggle}
       >
         {props.triggerContent}
       </DropdownTrigger>

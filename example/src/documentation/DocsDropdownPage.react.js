@@ -55,6 +55,7 @@ function DocsDropdownPage(): React.Node {
         <React.Fragment>
           <Dropdown
             type="button"
+            toggle={false}
             color="primary"
             arrow
             icon="globe"
