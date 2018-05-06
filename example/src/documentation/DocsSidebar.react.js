@@ -99,6 +99,13 @@ function Sidebar(): React.Node {
         </List.GroupItem>
         <List.GroupItem
           RootComponent={NavLink}
+          to={"/docs/navs"}
+          icon="pie-chart"
+        >
+          Navs
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
           to={"/docs/stamps"}
           icon="pie-chart"
         >

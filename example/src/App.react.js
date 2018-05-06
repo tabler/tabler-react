@@ -44,6 +44,7 @@ import {
   DocsDropdownPage,
   DocsGridPage,
   DocsListPage,
+  DocsNavPage,
 } from "./documentation";
 
 import "bootstrap";
@@ -82,6 +83,7 @@ function App(props: Props): React.Node {
         <Route exact path="/docs/dropdowns" component={DocsDropdownPage} />
         <Route exact path="/docs/grids" component={DocsGridPage} />
         <Route exact path="/docs/lists" component={DocsListPage} />
+        <Route exact path="/docs/navs" component={DocsNavPage} />
         <Route exact path="/store" component={StoreCardsPage} />
         <Route exact path="/icons" component={IconPage} />
         <Route exact path="/docs/colors" component={DocsColorsPage} />
