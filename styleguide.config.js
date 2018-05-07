@@ -5,6 +5,7 @@ module.exports = {
     return componentPath.replace(/\.react.js?$/, ".examples.md");
   },
   require: ["./example/src/App.css"],
+  styleguideDir: "./example/public/documentation",
   sections: [
     {
       name: "Introduction",
