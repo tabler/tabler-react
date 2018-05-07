@@ -1,5 +1,5 @@
 ```jsx
 <Alert type="success" hasExtraSpace>
-  <strong>Success!</strong> <Alert.Link>Click here to find out more</Alert.Link>
+  <a>A normal link</a> <Alert.Link>An Alert.Link</Alert.Link>
 </Alert>
 ```

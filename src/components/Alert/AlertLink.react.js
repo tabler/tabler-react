@@ -9,6 +9,9 @@ type Props = {|
   +href?: string,
 |};
 
+/**
+ * Renders a link that stands out more within Alerts
+ */
 function AlertLink({ children, className, href }: Props): React.Node {
   const classes = cn(`alert-link`, className);
   return (
