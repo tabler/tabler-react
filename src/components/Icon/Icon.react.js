@@ -45,4 +45,5 @@ function Icon({
 
 Icon.displayName = "Icon";
 
+/** @component */
 export default Icon;

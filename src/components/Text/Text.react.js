@@ -133,4 +133,5 @@ Text.displayName = "Text";
 
 Text.Small = TextSmall;
 
+/** @component */
 export default Text;

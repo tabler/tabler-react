@@ -158,4 +158,5 @@ class Card extends React.PureComponent<Props, State> {
   }
 }
 
+/** @component */
 export default Card;

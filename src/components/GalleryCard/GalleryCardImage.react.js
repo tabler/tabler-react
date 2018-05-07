@@ -51,4 +51,5 @@ function GalleryCardImage({
 
 GalleryCardImage.displayName = "GalleryCard.Image";
 
+/** @component */
 export default GalleryCardImage;
