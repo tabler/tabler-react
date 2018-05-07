@@ -9,7 +9,7 @@ module.exports = {
   sections: [
     {
       name: "Introduction",
-      content: "README.md",
+      content: "docs/Introduction.md",
     },
     {
       name: "Components",
