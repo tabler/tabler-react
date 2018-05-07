@@ -8,15 +8,33 @@ import AvatarList from "./AvatarList.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
+  /**
+   * The URL of the image to be displayed
+   */
   +imageURL?: string,
   +style?: Object,
   +size?: "sm" | "md" | "lg" | "xl" | "xxl",
+  /**
+   * Display a colored status dot with the avatar
+   */
   +status?: "grey" | "red" | "yellow" | "green",
+  /**
+   * Displays the user icon as a placeholder
+   */
   +placeholder?: boolean,
+  /**
+   * Render an icon instead of an imageURL
+   */
   +icon?: string,
+  /**
+   * The background and font color of the circle
+   */
   +color?: string,
 |};
 
+/**
+ * Renders a single circular avatar
+ */
 function Avatar({
   className,
   children,
