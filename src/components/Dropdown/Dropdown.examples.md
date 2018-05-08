@@ -11,28 +11,6 @@
 </Dropdown>
 ```
 
-### Trigger and Items from Props
-
-```jsx
-  <Dropdown
-    trigger={<Dropdown.Trigger>Menu</Dropdown.Trigger>}
-    items={
-      <Dropdown.Item>An Item</Dropdown.Item>
-    }
-    className="mr-4"
-  />
-  <Dropdown
-    triggerContent="Menu"
-    itemsObject={[
-      {
-        value: "Profile",
-      },
-      { isDivider: true },
-      { value: "Logout" },
-    ]}
-  />
-```
-
 ### Dropdown Variations
 
 ```jsx

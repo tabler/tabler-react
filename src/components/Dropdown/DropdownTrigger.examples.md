@@ -1,5 +1,3 @@
-A component that when clicked triggers the Dropdown
-
 ```jsx
 <Dropdown>
   <Dropdown.Trigger>Menu</Dropdown.Trigger>
