@@ -9,5 +9,6 @@
 [lints]
 
 [options]
+module.name_mapper='.*\(.css\)' -> 'empty/object'
 
 [strict]
