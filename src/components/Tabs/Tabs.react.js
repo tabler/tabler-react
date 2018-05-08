@@ -31,6 +31,7 @@ class Tabs extends React.PureComponent<Props, State> {
         >
           {children}
         </TabbedHeader>
+        <div style={{ marginTop: "24px" }} />
         <TabbedContainer selectedTitle={selectedTitle}>
           {children}
         </TabbedContainer>
