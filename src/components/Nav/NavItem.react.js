@@ -14,6 +14,7 @@ type Props = {|
   +type?: "li" | "div",
   +hasSubNav?: boolean,
   +onClick?: () => void,
+  +active?: boolean,
 |};
 
 function NavItem({
@@ -26,19 +27,26 @@ function NavItem({
   icon,
   hasSubNav,
   onClick,
+  active,
 }: Props): React.Node {
+  const navLink = (typeof children === "string" || value) && (
+    <Nav.Link
+      className={className}
+      to={to}
+      icon={icon}
+      RootComponent={LinkComponent}
+      hasSubNav={hasSubNav}
+      active={active}
+    >
+      {!hasSubNav && typeof children === "string" ? children : value}
+    </Nav.Link>
+  );
+
   const childrenForAll = (
     <React.Fragment>
-      <Nav.Link
-        className={className}
-        to={to}
-        icon={icon}
-        RootComponent={LinkComponent}
-        hasSubNav={hasSubNav}
-      >
-        {value}
-      </Nav.Link>
-      {hasSubNav ? <Dropdown.Menu arrow>{children}</Dropdown.Menu> : children}
+      {navLink}
+      {typeof children !== "string" && !hasSubNav && children}
+      {hasSubNav && <Dropdown.Menu arrow>{children}</Dropdown.Menu>}
     </React.Fragment>
   );
 
@@ -55,4 +63,5 @@ function NavItem({
 
 NavItem.displayName = "Nav.Item";
 
+/** @component */
 export default NavItem;

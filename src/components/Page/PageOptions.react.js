@@ -7,7 +7,7 @@ type Props = {|
 |};
 
 function PageOptions({ children }: Props): React.Node {
-  return <div class="page-options d-flex">{children}</div>;
+  return <div className="page-options d-flex">{children}</div>;
 }
 
 PageOptions.displayName = "Page.Options";

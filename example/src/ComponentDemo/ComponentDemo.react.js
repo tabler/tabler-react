@@ -11,6 +11,7 @@ import reactElementToJSXString from "./react-element-to-jsx-string";
 type Props = {|
   +children: React.Element<any>,
   +className?: string,
+  +asString?: string,
 |};
 
 type State = {|
@@ -27,7 +28,7 @@ class ComponentDemo extends React.PureComponent<Props, State> {
   };
 
   render() {
-    const { className, children } = this.props;
+    const { className, children, asString } = this.props;
     const { codeOpen } = this.state;
     const classes = cn("ComponentDemo", className);
     return (
@@ -45,7 +46,7 @@ class ComponentDemo extends React.PureComponent<Props, State> {
         {codeOpen && (
           <div className="highlight">
             <SyntaxHighlighter language="jsx" style={prism}>
-              {reactElementToJSXString(children)}
+              {asString || reactElementToJSXString(children)}
             </SyntaxHighlighter>
           </div>
         )}

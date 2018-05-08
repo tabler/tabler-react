@@ -25,6 +25,7 @@ import StoreCardsPage from "./components/StoreCardsPage.react.js";
 import IconPage from "./components/IconPage.react.js";
 import ChartsPage from "./interface/ChartsPage.react";
 import GalleryPage from "./GalleryPage.react";
+import MapCardsPage from "./components/MapCardsPage.react";
 
 import {
   DocsIntroPage,
@@ -37,6 +38,13 @@ import {
   DocsChartsPage,
   DocsTagsPage,
   DocsTypographyPage,
+  DocsTablePage,
+  DocsBadgePage,
+  DocsStampPage,
+  DocsDropdownPage,
+  DocsGridPage,
+  DocsListPage,
+  DocsNavPage,
 } from "./documentation";
 
 import "bootstrap";
@@ -70,10 +78,16 @@ function App(props: Props): React.Node {
         <Route exact path="/docs/alerts" component={DocsAlertsPage} />
         <Route exact path="/docs/buttons" component={DocsButtonsPage} />
         <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
+        <Route exact path="/docs/badges" component={DocsBadgePage} />
         <Route exact path="/docs/cards" component={DocsCardsPage} />
+        <Route exact path="/docs/dropdowns" component={DocsDropdownPage} />
+        <Route exact path="/docs/grids" component={DocsGridPage} />
+        <Route exact path="/docs/lists" component={DocsListPage} />
+        <Route exact path="/docs/navs" component={DocsNavPage} />
         <Route exact path="/store" component={StoreCardsPage} />
         <Route exact path="/icons" component={IconPage} />
         <Route exact path="/docs/colors" component={DocsColorsPage} />
+        <Route exact path="/maps" component={MapCardsPage} />
         <Route
           exact
           path="/docs/form-components"
@@ -81,7 +95,9 @@ function App(props: Props): React.Node {
         />
         <Route exact path="/gallery" component={GalleryPage} />
         <Route exact path="/docs/charts" component={DocsChartsPage} />
+        <Route exact path="/docs/stamps" component={DocsStampPage} />
         <Route exact path="/docs/tags" component={DocsTagsPage} />
+        <Route exact path="/docs/tables" component={DocsTablePage} />
         <Route exact path="/docs/typography" component={DocsTypographyPage} />
         <Route component={Error404} />
       </Switch>

@@ -12,20 +12,35 @@ type DefaultProps = {|
   +className?: string,
   +desktopOnly?: boolean,
   +trigger?: React.Node,
+  +isOption?: boolean,
+|};
+
+type WithAnyTriggerProps = {|
+  ...DefaultProps,
+  +triggerClassName?: string,
+  +isNavLink?: boolean,
+  +type?: "link" | "button",
+  +icon?: string,
+  +triggerContent?: React.Node,
+  +color?: string,
+  +toggle?: boolean,
 |};
 
 type WithTriggerContentProps = {|
-  ...DefaultProps,
+  ...WithAnyTriggerProps,
   +triggerContent: React.Node,
-  +triggerClassName?: string,
-  +icon?: string,
-  +isNavLink?: boolean,
-  +type?: "link" | "button",
 |};
+
+type WithIconProps = {|
+  ...WithAnyTriggerProps,
+  +icon: string,
+|};
+
+type AllTriggerProps = WithTriggerContentProps | WithIconProps;
 
 type WithItemsProps = {|
   ...DefaultProps,
-  ...WithTriggerContentProps,
+  ...WithAnyTriggerProps,
   +triggerContent?: React.Node,
   +items: React.Node,
   +dropdownMenuClassName?: string,
@@ -35,11 +50,12 @@ type WithItemsProps = {|
 
 type WithItemsObjectProp = {|
   ...DefaultProps,
-  ...WithTriggerContentProps,
+  ...WithAnyTriggerProps,
   +items?: React.Node,
   +itemsObject: Array<{
     +icon?: string,
     +badge?: string,
+    +badgeType?: string,
     +value?: string,
     +isDivider?: boolean,
   }>,
@@ -50,26 +66,34 @@ type WithItemsObjectProp = {|
 
 type Props =
   | DefaultProps
-  | WithTriggerContentProps
+  | AllTriggerProps
   | WithItemsProps
   | WithItemsObjectProp;
 
 function Dropdown(props: Props): React.Node {
-  const { className, children, desktopOnly } = props;
+  const { className, children, desktopOnly, isOption } = props;
 
   const classes = cn(
-    { dropdown: true, "d-none": desktopOnly, "d-md-flex": desktopOnly },
+    {
+      dropdown: true,
+      "d-none": desktopOnly,
+      "d-md-flex": desktopOnly,
+      "card-options-dropdown": isOption,
+    },
     className
   );
 
   const trigger =
     props.trigger ||
-    (props.triggerContent && (
+    ((props.icon || props.triggerContent) && (
       <DropdownTrigger
         isNavLink={props.isNavLink}
         icon={props.icon}
         type={props.type}
         className={props.triggerClassName}
+        isOption={isOption}
+        color={props.color}
+        toggle={props.toggle}
       >
         {props.triggerContent}
       </DropdownTrigger>
@@ -79,14 +103,16 @@ function Dropdown(props: Props): React.Node {
     props.items ||
     (props.itemsObject &&
       props.itemsObject.map(
-        item =>
+        (item, i) =>
           item.isDivider ? (
-            <Dropdown.ItemDivider />
+            <Dropdown.ItemDivider key={i} />
           ) : (
             <Dropdown.Item
               icon={item.icon}
               badge={item.badge}
+              badgeType={item.badgeType}
               value={item.value}
+              key={i}
             />
           )
       ));

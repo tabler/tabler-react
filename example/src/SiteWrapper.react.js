@@ -21,26 +21,24 @@ type Props = {|
 
 type navItem = {|
   +value: string,
-  +to: string,
+  +to?: string,
   +icon?: string,
   +subItems?: Array<navItem>,
 |};
 
-const navBarItems: Array<navItem> = Array(
+const navBarItems: Array<navItem> = [
   { value: "Home", to: "/", icon: "home" },
   {
     value: "Interface",
-    to: null,
     icon: "box",
     subItems: [
-      { value: "Cards Design", to: "/cards", icon: null },
-      { value: "Charts", to: "/charts", icon: null },
-      { value: "Pricing Cards", to: "/pricing-cards", icon: null },
+      { value: "Cards Design", to: "/cards" },
+      { value: "Charts", to: "/charts" },
+      { value: "Pricing Cards", to: "/pricing-cards" },
     ],
   },
   {
     value: "Components",
-    to: null,
     icon: "calendar",
     subItems: [
       { value: "Maps", to: "/maps" },
@@ -51,7 +49,6 @@ const navBarItems: Array<navItem> = Array(
   },
   {
     value: "Pages",
-    to: null,
     icon: "file",
     subItems: [
       { value: "Profile", to: "/profile" },
@@ -71,12 +68,7 @@ const navBarItems: Array<navItem> = Array(
   },
   { value: "Forms", to: "/form-elements", icon: "check-square" },
   { value: "Gallery", to: "/gallery", icon: "image" },
-  {
-    value: "Documentation",
-    to: "/docs",
-    icon: "file-text",
-  }
-);
+];
 
 class SiteWrapper extends React.Component<Props, void> {
   render(): React.Node {
@@ -106,6 +98,7 @@ class SiteWrapper extends React.Component<Props, void> {
               <Dropdown
                 triggerContent={<span className="nav-unread" />}
                 isNavLink={true}
+                toggle={false}
                 icon="bell"
                 desktopOnly
                 items={
@@ -175,6 +168,7 @@ class SiteWrapper extends React.Component<Props, void> {
                 }
                 position="right"
                 arrow={true}
+                toggle={false}
                 itemsObject={[
                   { icon: "user", value: "Profile" },
                   { icon: "settings", value: "Settings" },
@@ -232,6 +226,11 @@ class SiteWrapper extends React.Component<Props, void> {
                         ))}
                     </Nav.Item>
                   ))}
+                  <Nav.Item
+                    icon="file-text"
+                    value="Documentation"
+                    to="https://tabler.github.io/tabler-react/documentation/"
+                  />
                 </Nav>
               </Grid.Col>
             </Grid.Row>

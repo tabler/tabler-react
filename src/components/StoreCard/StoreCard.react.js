@@ -5,6 +5,7 @@ import Card from "../Card/Card.react";
 import Text from "../Text/Text.react";
 import Button from "../Button/Button.react";
 import Icon from "../Icon/Icon.react";
+
 type Props = {|
   +children?: React.Node,
   +title?: string,

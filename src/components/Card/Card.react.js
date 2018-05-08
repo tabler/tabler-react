@@ -10,6 +10,7 @@ import CardOptionsItem from "./CardOptionsItem.react";
 import CardStatus from "./CardStatus.react";
 import CardAlert from "./CardAlert.react";
 import CardFooter from "./CardFooter.react";
+import CardMap from "./CardMap.react";
 
 type Props = {|
   +children?: React.Node,
@@ -51,6 +52,7 @@ class Card extends React.PureComponent<Props, State> {
   static Status = CardStatus;
   static Alert = CardAlert;
   static Footer = CardFooter;
+  static Map = CardMap;
 
   handleCloseOnClick = (): void => {
     this.setState(s => ({
@@ -156,4 +158,5 @@ class Card extends React.PureComponent<Props, State> {
   }
 }
 
+/** @component */
 export default Card;

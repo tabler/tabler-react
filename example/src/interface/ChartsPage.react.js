@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Page, Grid, Card, Button, Form, colors } from "tabler-react";
+import { Page, Grid, Card, colors } from "tabler-react";
 
 import C3Chart from "react-c3js";
 

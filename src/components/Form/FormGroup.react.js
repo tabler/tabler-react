@@ -23,7 +23,7 @@ function FormGroup({
       {!label ? null : typeof label === "string" ? (
         <FormLabel>
           {label}
-          {isRequired && <span class="form-required">*</span>}
+          {isRequired && <span className="form-required">*</span>}
         </FormLabel>
       ) : (
         label

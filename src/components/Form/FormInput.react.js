@@ -120,4 +120,5 @@ function FormInput(props: Props): React.Node {
 
 FormInput.displayName = "Form.Input";
 
+/** @component */
 export default FormInput;

@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg)
 
-**[Demo](https://tabler.github.io/tabler-react/)** | **[Documentation](https://tabler.github.io/tabler-react/)** | **[Issues](https://github.com/tabler/tabler-react/issues)** | **[Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
+**[Demo](https://tabler.github.io/tabler-react/)** | **[Documentation](https://tabler.github.io/tabler-react/documentation/)** | **[Issues](https://github.com/tabler/tabler-react/issues)** | **[Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
 
 > Please note: we're working fast towards [version 1.0](https://github.com/tabler/tabler-react/milestone/1) and until then all releases should be considered unstable and potentially breaking
 

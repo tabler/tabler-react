@@ -7,7 +7,7 @@ type Props = {|
 |};
 
 function PageSubTitle({ children }: Props): React.Node {
-  return <div class="page-subtitle">{children}</div>;
+  return <div className="page-subtitle">{children}</div>;
 }
 
 PageSubTitle.displayName = "Page.SubTitle";

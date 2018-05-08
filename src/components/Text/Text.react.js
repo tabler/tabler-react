@@ -121,7 +121,7 @@ const Text = ({
     },
     className
   );
-  const Component = RootComponent || "p";
+  const Component = RootComponent || "div";
   return (
     <Component className={classes} {...props}>
       {children}
@@ -133,4 +133,5 @@ Text.displayName = "Text";
 
 Text.Small = TextSmall;
 
+/** @component */
 export default Text;
