@@ -6,6 +6,8 @@ import Tab from "./Tab.react";
 import TabbedContainer from "./TabbedContainer.react";
 import TabbedHeader from "./TabbedHeader.react";
 
+import styles from "./Tabs.css";
+
 type Props = {|
   +initialTab: string,
   +children: React.ChildrenArray<React.Element<typeof Tab>>,
@@ -31,7 +33,7 @@ class Tabs extends React.PureComponent<Props, State> {
         >
           {children}
         </TabbedHeader>
-        <div style={{ marginTop: "24px" }} />
+        <div className={`${styles["margin-bottom-24"]}`} />
         <TabbedContainer selectedTitle={selectedTitle}>
           {children}
         </TabbedContainer>
