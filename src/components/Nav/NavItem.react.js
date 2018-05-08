@@ -13,6 +13,7 @@ type Props = {|
   +icon?: string,
   +type?: "li" | "div",
   +hasSubNav?: boolean,
+  +onClick?: () => void,
   +active?: boolean,
 |};
 
@@ -25,6 +26,7 @@ function NavItem({
   type = "li",
   icon,
   hasSubNav,
+  onClick,
   active,
 }: Props): React.Node {
   const navLink = (typeof children === "string" || value) && (
@@ -49,9 +51,13 @@ function NavItem({
   );
 
   return type === "div" ? (
-    <div className="nav-item">{childrenForAll}</div>
+    <div className="nav-item" onClick={onClick}>
+      {childrenForAll}
+    </div>
   ) : (
-    <li className="nav-item">{childrenForAll}</li>
+    <li className="nav-item" onClick={onClick}>
+      {childrenForAll}
+    </li>
   );
 }
 
