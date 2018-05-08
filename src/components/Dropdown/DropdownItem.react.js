@@ -53,4 +53,5 @@ function DropdownItem({
 
 DropdownItem.displayName = "Dropdown.Item";
 
+/** @component */
 export default DropdownItem;

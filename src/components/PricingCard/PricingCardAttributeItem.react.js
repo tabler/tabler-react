@@ -38,4 +38,5 @@ function PricingCardAttributeItem({
 
 PricingCardAttributeItem.displayName = "PricingCard.AttributeItem";
 
+/** @component */
 export default PricingCardAttributeItem;

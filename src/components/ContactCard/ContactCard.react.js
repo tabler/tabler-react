@@ -6,19 +6,55 @@ import { Card, Media, Grid, Header } from "../";
 type Props = {|
   +children?: React.Node,
   +className?: string,
+  /**
+   * The Card title
+   */
   +cardTitle?: string,
+  /**
+   * Render a map at the top of the Card
+   */
   +map?: React.Node,
+  /**
+   * Render a map placeholder at the top of the Card
+   */
   +mapPlaceholder?: string,
+  /**
+   * Add rounded corners to the Media.Object rendered by objectURL
+   */
   +rounded?: boolean,
+  /**
+   * Display an Avatar in place of the Media.Object rendered by objectURL
+   */
   +avatar?: boolean,
+  /**
+   * The URL of a contact image to displayed alongside thier name
+   */
   +objectURL?: string,
+  /**
+   * The alt value for the objectURL image
+   */
   +alt?: string,
+  /**
+   * The contacts name
+   */
   +name?: string,
+  /**
+   * The contacts address
+   */
   +address?: {| +line1?: string, +line2?: string |},
+  /**
+   * An array of contacts details displayed in a 2 column Grid
+   */
   +details?: Array<{| +title: string, +content?: React.Node |}>,
+  /**
+   * An additional block of text below the details
+   */
   +description?: string | {| +title: string, +content?: string |},
 |};
 
+/**
+ * Renders a Card designed for displaying details of a person or business
+ */
 function ContactCard({
   children,
   className,

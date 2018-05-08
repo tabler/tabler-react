@@ -68,11 +68,6 @@ const navBarItems: Array<navItem> = [
   },
   { value: "Forms", to: "/form-elements", icon: "check-square" },
   { value: "Gallery", to: "/gallery", icon: "image" },
-  {
-    value: "Documentation",
-    to: "/docs",
-    icon: "file-text",
-  },
 ];
 
 class SiteWrapper extends React.Component<Props, void> {
@@ -229,6 +224,11 @@ class SiteWrapper extends React.Component<Props, void> {
                         ))}
                     </Nav.Item>
                   ))}
+                  <Nav.Item
+                    icon="file-text"
+                    value="Documentation"
+                    to="https://tabler.github.io/tabler-react/documentation/"
+                  />
                 </Nav>
               </Grid.Col>
             </Grid.Row>

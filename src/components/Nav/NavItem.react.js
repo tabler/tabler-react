@@ -49,4 +49,5 @@ function NavItem({
 
 NavItem.displayName = "Nav.Item";
 
+/** @component */
 export default NavItem;

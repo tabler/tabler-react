@@ -101,4 +101,5 @@ Table.Row = TableRow;
 Table.Col = TableCol;
 Table.ColHeader = TableColHeader;
 
+/** @component */
 export default Table;
