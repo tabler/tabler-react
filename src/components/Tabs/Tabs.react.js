@@ -15,6 +15,14 @@ type State = {|
   selectedTitle: string,
 |};
 
-class Tabs extends React.PureComponent<Props, State> {}
+class Tabs extends React.PureComponent<Props, State> {
+  state = {
+    selectedTitle: this.props.initialTab,
+  };
+
+  render(): React.Node {
+    return <div />;
+  }
+}
 
 export default Tabs;
