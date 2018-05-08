@@ -526,7 +526,7 @@ function Home() {
           </Grid.Col>
           <Grid.Col md={6} lg={4}>
             <Card title="Members">
-              <Card.Body className="o-auto">
+              <Card.Body>
                 <ul className="list-unstyled list-separated">
                   <li className="list-separated-item">
                     <Grid.Row className="align-items-center">
@@ -547,7 +547,10 @@ function Home() {
                       </Grid.Col>
                       <Grid.Col auto>
                         <Dropdown>
-                          <Dropdown.Trigger icon="more-vertical" />
+                          <Dropdown.Trigger
+                            icon="more-vertical"
+                            toggle={false}
+                          />
                           <Dropdown.Menu position="right">
                             <Dropdown.Item icon="tag">Action </Dropdown.Item>
                             <Dropdown.Item icon="edit-2">
