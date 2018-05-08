@@ -471,7 +471,7 @@ function Home() {
                     <Table.Col alignContent="center">42%</Table.Col>
                     <Table.Col alignContent="center">
                       <Dropdown>
-                        <Dropdown.Trigger icon="more-vertical" />
+                        <Dropdown.Trigger icon="more-vertical" toggle={false} />
                         <Dropdown.Menu position="right">
                           <Dropdown.Item icon="tag">Action </Dropdown.Item>
                           <Dropdown.Item icon="edit-2">

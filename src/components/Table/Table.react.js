@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
+import "./Table.css";
 import TableHeader from "./TableHeader.react";
 import TableBody from "./TableBody.react";
 import TableRow from "./TableRow.react";
@@ -86,7 +87,11 @@ function Table({
     </table>
   );
 
-  return !responsive ? table : <div className="table-responsive">{table}</div>;
+  return !responsive ? (
+    table
+  ) : (
+    <div className="Table.table-responsive">{table}</div>
+  );
 }
 
 Table.defaultProps = {
