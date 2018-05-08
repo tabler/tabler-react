@@ -3,8 +3,8 @@
 import * as React from "react";
 
 import Tab from "./Tab.react";
-//import TabbedContainer from "./TabbedContainer.react";
-//import TabbedHeader from "./TabbedHeader.react";
+import TabbedContainer from "./TabbedContainer.react";
+import TabbedHeader from "./TabbedHeader.react";
 
 type Props = {|
   +initialTab: string,
@@ -21,7 +21,21 @@ class Tabs extends React.PureComponent<Props, State> {
   };
 
   render(): React.Node {
-    return <div />;
+    const { children } = this.props;
+    const { selectedTitle } = this.state;
+    return (
+      <React.Fragment>
+        <TabbedHeader
+          selectedTitle={selectedTitle}
+          stateCallback={newTitle => this.setState({ selectedTitle: newTitle })}
+        >
+          {children}
+        </TabbedHeader>
+        <TabbedContainer selectedTitle={selectedTitle}>
+          {children}
+        </TabbedContainer>
+      </React.Fragment>
+    );
   }
 }
 
