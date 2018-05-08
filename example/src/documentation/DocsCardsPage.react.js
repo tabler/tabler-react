@@ -6,6 +6,7 @@ import {
   Card,
   TabbedCard,
   Tab,
+  Tabs,
   Button,
   Grid,
   Dimmer,
@@ -78,6 +79,30 @@ function DocsCardsPage(): React.Node {
             </Grid.Row>
           </Tab>
         </TabbedCard>
+      </ComponentDemo>
+
+      <Header.H3>Tabs Component Alone</Header.H3>
+      <ComponentDemo>
+        <Tabs initialTab="Hello">
+          <Tab title="Hello">Hello World</Tab>
+          <Tab title="Goodbye">Goodbye</Tab>
+          <Tab title="Complex">
+            <Grid.Row cards deck>
+              <Grid.Col md={4}>
+                <Card body="Short content" />
+              </Grid.Col>
+              <Grid.Col md={4}>
+                <Card
+                  body="Extra long content of card. Lorem ipsum dolor sit amet,
+                  consetetur sadipscing elitr"
+                />
+              </Grid.Col>
+              <Grid.Col md={4}>
+                <Card body="Short content" />
+              </Grid.Col>
+            </Grid.Row>
+          </Tab>
+        </Tabs>
       </ComponentDemo>
 
       <Header.H3>Row Deck</Header.H3>
