@@ -36,4 +36,5 @@ function GridRow({
 
 GridRow.displayName = "Grid.Row";
 
+/** @component */
 export default GridRow;
