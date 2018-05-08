@@ -3,7 +3,7 @@
 import * as React from "react";
 import SiteHeader from "./SiteHeader.react";
 import SiteFooter from "./SiteFooter.react";
-import SiteNav from "./SiteNavbar.react";
+import SiteNav from "./SiteNav.react";
 import SiteLogo from "./SiteLogo.react";
 
 type Props = {|

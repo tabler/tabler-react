@@ -188,7 +188,7 @@ class SiteWrapper extends React.Component<Props, void> {
               <span className="header-toggler-icon" />
             </a>
           </Site.Header>
-          <Site.Navbar>
+          <Site.Nav>
             <Grid.Row className="align-items-center">
               <Grid.Col lg={3} className="ml-auto">
                 <form className="input-icon my-3 my-lg-0">
@@ -234,7 +234,7 @@ class SiteWrapper extends React.Component<Props, void> {
                 </Nav>
               </Grid.Col>
             </Grid.Row>
-          </Site.Navbar>
+          </Site.Nav>
           {this.props.children}
         </Page.Main>
         <Site.Footer />
