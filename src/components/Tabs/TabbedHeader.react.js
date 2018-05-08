@@ -17,13 +17,12 @@ function TabbedHeader(props: Props): React.Node {
     <ul className="nav nav-tabs Tab_header_tabs">
       {tabs.map((tab, index) => {
         const title = tab.props.title;
-        const classes = title === props.selectedTitle ? "active" : "";
         return (
           <Nav.Item
             key={index}
             value={title}
-            className={classes}
             onClick={() => stateCallback(title)}
+            active={title === props.selectedTitle}
           />
         );
       })}
