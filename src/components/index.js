@@ -32,5 +32,5 @@ export { default as Table } from "./Table";
 export { default as Tag } from "./Tag";
 export { default as Text } from "./Text";
 export { default as TabbedCard } from "./TabbedCard";
-export { Tab, TabbedContainer, TabbedHeader } from "./Tabs";
+export { Tab, Tabs, TabbedContainer, TabbedHeader } from "./Tabs";
 export { default as Timeline } from "./Timeline";
