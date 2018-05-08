@@ -98,6 +98,7 @@ class SiteWrapper extends React.Component<Props, void> {
               <Dropdown
                 triggerContent={<span className="nav-unread" />}
                 isNavLink={true}
+                toggle={false}
                 icon="bell"
                 desktopOnly
                 items={
@@ -167,6 +168,7 @@ class SiteWrapper extends React.Component<Props, void> {
                 }
                 position="right"
                 arrow={true}
+                toggle={false}
                 itemsObject={[
                   { icon: "user", value: "Profile" },
                   { icon: "settings", value: "Settings" },

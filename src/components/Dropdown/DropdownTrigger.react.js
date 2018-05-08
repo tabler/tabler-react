@@ -18,7 +18,7 @@ type Props = {|
 
 function DropdownTrigger({
   className,
-  toggle,
+  toggle = true,
   value,
   children,
   type = "link",

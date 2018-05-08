@@ -40,6 +40,13 @@ function Sidebar(): React.Node {
         </List.GroupItem>
         <List.GroupItem
           RootComponent={NavLink}
+          to={"/docs/badges"}
+          icon="plus-square"
+        >
+          Badges
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
           to={"/docs/buttons"}
           icon="plus-square"
         >
@@ -64,10 +71,52 @@ function Sidebar(): React.Node {
         </List.GroupItem>
         <List.GroupItem
           RootComponent={NavLink}
+          to={"/docs/dropdowns"}
+          icon="pie-chart"
+        >
+          Dropdowns
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
           to={"/docs/form-components"}
           icon="check-square"
         >
           Form components
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
+          to={"/docs/grids"}
+          icon="pie-chart"
+        >
+          Grids
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
+          to={"/docs/lists"}
+          icon="pie-chart"
+        >
+          Lists
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
+          to={"/docs/navs"}
+          icon="pie-chart"
+        >
+          Navs
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
+          to={"/docs/stamps"}
+          icon="pie-chart"
+        >
+          Stamps
+        </List.GroupItem>
+        <List.GroupItem
+          RootComponent={NavLink}
+          to={"/docs/tables"}
+          icon="table"
+        >
+          Tables
         </List.GroupItem>
         <List.GroupItem RootComponent={NavLink} to={"/docs/tags"} icon="tag">
           Tags

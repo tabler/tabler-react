@@ -10,6 +10,7 @@ type Props = {|
   +icon?: string,
   +value?: string,
   +badge?: string,
+  +badgeType?: string,
   +to?: string,
   +RootComponent?: React.ElementType,
 |};
@@ -20,6 +21,7 @@ function DropdownItem({
   value,
   children,
   badge,
+  badgeType,
   to,
   RootComponent,
 }: Props): React.Node {
@@ -28,7 +30,7 @@ function DropdownItem({
     <React.Fragment>
       {badge && (
         <span className="float-right">
-          <Badge>{badge}</Badge>
+          <Badge color={badgeType}>{badge}</Badge>
         </span>
       )}
       {icon && (
