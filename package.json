@@ -1,6 +1,6 @@
 {
   "name": "tabler-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "author": "jonthomp and AaronCoplan",
   "license": "MIT",
@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "empty": "^0.10.1",
     "react-styleguidist": "^7.0.9",
     "webpack": "3.8.1"
   },
