@@ -5,6 +5,9 @@ import cn from "classnames";
 
 type Props = {|
   +className?: string,
+  /**
+   * Should this icon be rendered within an <a> tag
+   */
   +link?: boolean,
   +prefix?: "fa" | "fe" | "flag" | "payment",
   +name: string,
