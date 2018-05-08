@@ -9,6 +9,9 @@ type Props = {|
   +color?: string,
 |};
 
+/**
+ * A small colored rectangle with rounded corners.
+ */
 function Badge({ className, children, color = "primary" }: Props): React.Node {
   const classes = cn(
     {
