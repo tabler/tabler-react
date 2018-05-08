@@ -53,4 +53,5 @@ function GridCol({
 
 GridCol.displayName = "Grid.Col";
 
+/** @component */
 export default GridCol;
