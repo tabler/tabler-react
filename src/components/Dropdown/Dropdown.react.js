@@ -70,74 +70,105 @@ type Props =
   | WithItemsProps
   | WithItemsObjectProp;
 
-function Dropdown(props: Props): React.Node {
-  const { className, children, desktopOnly, isOption } = props;
+type State = {
+  isOpen: boolean,
+};
 
-  const classes = cn(
-    {
-      dropdown: true,
-      "d-none": desktopOnly,
-      "d-md-flex": desktopOnly,
-      "card-options-dropdown": isOption,
-    },
-    className
-  );
+class Dropdown extends React.Component<Props, State> {
+  state = { isOpen: false };
 
-  const trigger =
-    props.trigger ||
-    ((props.icon || props.triggerContent) && (
-      <DropdownTrigger
-        isNavLink={props.isNavLink}
-        icon={props.icon}
-        type={props.type}
-        className={props.triggerClassName}
-        isOption={isOption}
-        color={props.color}
-        toggle={props.toggle}
-      >
-        {props.triggerContent}
-      </DropdownTrigger>
-    ));
+  static Trigger = DropdownTrigger;
+  static Menu = DropdownMenu;
+  static Item = DropdownItem;
+  static ItemDivider = DropdownItemDivider;
 
-  const items =
-    props.items ||
-    (props.itemsObject &&
-      props.itemsObject.map(
-        (item, i) =>
-          item.isDivider ? (
-            <Dropdown.ItemDivider key={i} />
-          ) : (
-            <Dropdown.Item
-              icon={item.icon}
-              badge={item.badge}
-              badgeType={item.badgeType}
-              value={item.value}
-              key={i}
-            />
-          )
-      ));
+  render(): React.Node {
+    const { className, children, desktopOnly, isOption }: Props = this.props;
 
-  const menu = (props.items || props.itemsObject) && (
-    <DropdownMenu
-      position={props.position}
-      arrow={props.arrow}
-      className={props.dropdownMenuClassName}
-    >
-      {items}
-    </DropdownMenu>
-  );
+    const classes = cn(
+      {
+        dropdown: true,
+        "d-none": desktopOnly,
+        "d-md-flex": desktopOnly,
+        "card-options-dropdown": isOption,
+      },
+      className
+    );
 
-  return (
-    <div className={classes}>
-      {trigger}
-      {menu || children}
-    </div>
-  );
+    const trigger = (() => {
+      if (this.props.trigger) return this.props.trigger;
+      if (this.props.icon || this.props.triggerContent) {
+        const {
+          icon,
+          triggerContent,
+          isNavLink,
+          type,
+          triggerClassName,
+          color,
+          toggle,
+        } = this.props;
+
+        return (
+          <DropdownTrigger
+            isNavLink={isNavLink}
+            icon={icon}
+            type={type}
+            className={triggerClassName}
+            isOption={isOption}
+            color={color}
+            toggle={toggle}
+          >
+            {triggerContent}
+          </DropdownTrigger>
+        );
+      }
+      return null;
+    })();
+
+    const items = (() => {
+      if (this.props.items) return this.props.items;
+      if (this.props.itemsObject) {
+        return this.props.itemsObject.map(
+          (item, i) =>
+            item.isDivider ? (
+              <Dropdown.ItemDivider key={i} />
+            ) : (
+              <Dropdown.Item
+                icon={item.icon}
+                badge={item.badge}
+                badgeType={item.badgeType}
+                value={item.value}
+                key={i}
+              />
+            )
+        );
+      }
+      return null;
+    })();
+
+    const menu = (() => {
+      if (this.props.items || this.props.itemsObject) {
+        const { position, arrow, dropdownMenuClassName } = this.props;
+        return (
+          <DropdownMenu
+            position={position}
+            arrow={arrow}
+            className={dropdownMenuClassName}
+          >
+            {items}
+          </DropdownMenu>
+        );
+      }
+      return null;
+    })();
+
+    return (
+      <div className={classes}>
+        {trigger}
+        {menu || children}
+      </div>
+    );
+  }
 }
-
-Dropdown.Trigger = DropdownTrigger;
-Dropdown.Menu = DropdownMenu;
-Dropdown.Item = DropdownItem;
-Dropdown.ItemDivider = DropdownItemDivider;
 
 export default Dropdown;
