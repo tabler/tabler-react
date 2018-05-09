@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "react-popper": "^0.10.4",
     "react-styleguidist": "^7.0.9",
     "webpack": "3.8.1"
   },
