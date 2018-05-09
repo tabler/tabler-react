@@ -229,7 +229,11 @@ class SiteWrapper extends React.Component<Props, void> {
                   <Nav.Item
                     icon="file-text"
                     value="Documentation"
-                    to="https://tabler.github.io/tabler-react/documentation"
+                    to={
+                      process.env.NODE_ENV === "production"
+                        ? "https://tabler.github.io/tabler-react/documentation"
+                        : "/documentation"
+                    }
                   />
                 </Nav>
               </Grid.Col>

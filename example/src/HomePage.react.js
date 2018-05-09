@@ -237,7 +237,13 @@ function Home() {
 
           <Grid.Col md={6}>
             <Alert type="primary">
-              <Alert.Link href="https://tabler.github.io/tabler-react/documentation">
+              <Alert.Link
+                href={
+                  process.env.NODE_ENV === "production"
+                    ? "https://tabler.github.io/tabler-react/documentation"
+                    : "/documentation"
+                }
+              >
                 Read our documentation
               </Alert.Link>{" "}
               with code samples.
