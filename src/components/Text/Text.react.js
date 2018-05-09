@@ -35,6 +35,10 @@ type LeadingProps = {|
 |};
 
 type TextProps = {|
+  ...AlignProps,
+  ...TransformProps,
+  ...TrackingProps,
+  ...LeadingProps,
   +children?: React.Node,
   +className?: string,
   +RootComponent?: React.ElementType,
@@ -42,10 +46,6 @@ type TextProps = {|
   +size?: string,
   +wrap?: boolean,
   +muted?: boolean,
-  ...AlignProps,
-  ...TransformProps,
-  ...TrackingProps,
-  ...LeadingProps,
 |};
 
 const Text = ({

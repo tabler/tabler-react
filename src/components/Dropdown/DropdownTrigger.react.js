@@ -7,15 +7,39 @@ import { Button, Icon } from "../";
 type Props = {|
   +children?: React.Node,
   +className?: string,
+  /**
+   * Display an arrow alongside the trigger content
+   */
   +toggle?: boolean,
+  /**
+   * The value to be displayed within the trigger if children is not included
+   */
   +value?: string,
+  /**
+   * Render the trigger as an <a> tag or a Button
+   */
   +type?: "link" | "button",
+  /**
+   * The background color for a Button trigger
+   */
   +color?: string,
+  /**
+   * An Icon displayed to the left of the trigger content
+   */
   +icon?: string,
+  /**
+   * Is this trigger being used as a NavLink
+   */
   +isNavLink?: boolean,
+  /**
+   * Is this trigger beind used as a Card.Header option
+   */
   +isOption?: boolean,
 |};
 
+/**
+ * Provides the trigger element for a Dropdown
+ */
 function DropdownTrigger({
   className,
   toggle = true,

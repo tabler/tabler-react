@@ -7,14 +7,37 @@ import { Icon, Badge } from "../";
 type Props = {|
   +children?: React.Node,
   +className?: string,
+  /**
+   * Display an Icon to the left of DropdownItem content
+   */
   +icon?: string,
+  /**
+   * The content of the DropdownItem if children is not used
+   */
   +value?: string,
+  /**
+   * Display a badge with this content to the right of DropdownItem content
+   */
   +badge?: string,
+  /**
+   * The type/color of Badge to be displayed
+   */
   +badgeType?: string,
+  /**
+   * Where the user should be taken on click.
+   * By default this will be passed as the 'href' prop to the <a> tag,
+   * but to the RootComponent it will be a 'to' prop instead
+   */
   +to?: string,
+  /**
+   * A component to be used instead of an <a> tag
+   */
   +RootComponent?: React.ElementType,
 |};
 
+/**
+ * An individual item that should be contained within a Dropdown.Menu
+ */
 function DropdownItem({
   className,
   icon,

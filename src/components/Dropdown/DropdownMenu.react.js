@@ -7,9 +7,15 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +position?: string,
+  /**
+   * Display an arrow poiting towards the trigger
+   */
   +arrow?: boolean,
 |};
 
+/**
+ * The wrapper element for a Dropdowns Items
+ */
 function DropdownMenu({
   className,
   children,

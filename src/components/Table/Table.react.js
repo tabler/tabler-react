@@ -12,8 +12,17 @@ import TableColHeader from "./TableColHeader.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
+  /**
+   * Should this Table be optimized to contain Cards
+   */
   +cards?: boolean,
+  /**
+   * Give the table striped rows
+   */
   +striped?: boolean,
+  /**
+   * Make the table responsive
+   */
   +responsive?: boolean,
   +highlightRowOnHover?: boolean,
   +hasOutline?: boolean,
