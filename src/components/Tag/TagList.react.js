@@ -8,6 +8,9 @@ type Props = {|
   +className?: string,
 |};
 
+/**
+ * Adds a space between its child Tags
+ */
 function TagList(props: Props): React.Node {
   const { children, className } = props;
   const classes = cn("tags", className);

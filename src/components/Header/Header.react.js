@@ -11,12 +11,21 @@ import H5 from "./H5.react";
 import H6 from "./H6.react";
 
 type Props = {|
+  /**
+   * A component to use instead of a <div> as the root component
+   */
   +RootComponent?: React.ElementType,
   +children?: React.Node,
   +className?: string,
+  /**
+   * The size of the header
+   */
   +size?: 1 | 2 | 3 | 4 | 5 | 6,
 |};
 
+/**
+ * A header
+ */
 function Header({
   RootComponent,
   className,
