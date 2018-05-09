@@ -64,9 +64,9 @@ function IconPage(): React.Node {
                     )}
                   </p>
                   <p>
-                    <code>{`&lt;Icon prefix="${
+                    <code>{`<Icon prefix="${
                       iconSet.prefix
-                    }" name="ICON_NAME"/&gt;`}</code>
+                    }" name="ICON_NAME" />`}</code>
                   </p>
                 </Grid.Col>
                 <Grid.Col lg={9}>
