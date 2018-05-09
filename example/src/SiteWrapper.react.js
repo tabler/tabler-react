@@ -229,7 +229,7 @@ class SiteWrapper extends React.Component<Props, void> {
                   <Nav.Item
                     icon="file-text"
                     value="Documentation"
-                    to="/documentation"
+                    to="https://tabler.github.io/tabler-react/documentation"
                   />
                 </Nav>
               </Grid.Col>

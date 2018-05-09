@@ -237,7 +237,7 @@ function Home() {
 
           <Grid.Col md={6}>
             <Alert type="primary">
-              <Alert.Link href="/documentation">
+              <Alert.Link href="https://tabler.github.io/tabler-react/documentation">
                 Read our documentation
               </Alert.Link>{" "}
               with code samples.
