@@ -7,13 +7,31 @@ import { Card, Text, Header, Icon } from "../";
 
 type Props = {|
   +className?: string,
+  /**
+   * The % amount by which your total has increased
+   */
   +movement: number,
+  /**
+   * The main number displayed within the Card
+   */
   +total: string,
+  /**
+   * The text label displayed within the Card
+   */
   +label: string,
+  /**
+   * The layout to render
+   */
   +layout?: 1 | 2,
+  /**
+   * A Chart to be included at the bottom of layout 2
+   */
   +chart?: React.Node,
 |};
 
+/**
+ * Used for dispaying an individual statistic/number with 2 potential layouts
+ */
 function StatsCard({
   className,
   movement,
