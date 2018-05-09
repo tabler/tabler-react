@@ -82,6 +82,10 @@ class Dropdown extends React.Component<Props, State> {
   static Item = DropdownItem;
   static ItemDivider = DropdownItemDivider;
 
+  _handleTriggerOnClick = () => {
+    this.setState(s => ({ isOpen: !s.isOpen }));
+  };
+
   render(): React.Node {
     const { className, children, desktopOnly, isOption }: Props = this.props;
 
