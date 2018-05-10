@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-
     "react-styleguidist": "^7.0.9",
     "webpack": "3.8.1"
   },
