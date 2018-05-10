@@ -58,6 +58,8 @@ type WithItemsObjectProp = {|
     +badgeType?: string,
     +value?: string,
     +isDivider?: boolean,
+    +to?: string,
+    +RootComponent?: React.ElementType,
   }>,
   +dropdownMenuClassName?: string,
   +position?: string,
@@ -113,6 +115,8 @@ function Dropdown(props: Props): React.Node {
               badgeType={item.badgeType}
               value={item.value}
               key={i}
+              to={item.to}
+              RootComponent={item.RootComponent}
             />
           )
       ));
