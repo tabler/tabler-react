@@ -39,6 +39,7 @@ type Props = {|
    * Handle the onClick of this trigger
    */
   +onClick?: () => void,
+  +rootRef?: Function,
 |};
 
 /**
@@ -55,6 +56,7 @@ function DropdownTrigger({
   isNavLink,
   isOption,
   onClick,
+  rootRef,
 }: Props): React.Node {
   const classes = cn(
     { "dropdown-toggle": toggle, "nav-link": isNavLink },
@@ -74,7 +76,7 @@ function DropdownTrigger({
   );
 
   return type === "link" ? (
-    <a className={classes} data-toggle="dropdown" onClick={onClick}>
+    <a className={classes} onClick={onClick} ref={rootRef}>
       {childrenFragment}
     </a>
   ) : (
@@ -84,6 +86,7 @@ function DropdownTrigger({
       isDropdownToggle
       isOption={isOption}
       onClick={onClick}
+      rootRef={rootRef}
     >
       {childrenFragment}
     </Button>
