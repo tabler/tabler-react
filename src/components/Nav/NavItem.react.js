@@ -16,6 +16,13 @@ type Props = {|
   +hasSubNav?: boolean,
   +onClick?: () => void,
   +active?: boolean,
+  +subItems?: React.ChildrenArray<React.Element<typeof Nav.SubItem>>,
+  +subItemsObjects?: Array<{|
+    +value: string,
+    +to?: string,
+    +icon?: string,
+    +LinkComponent?: React.ElementType,
+  |}>,
 |};
 
 type State = {
@@ -47,6 +54,8 @@ class NavItem extends React.Component<Props, State> {
       icon,
       hasSubNav,
       active,
+      subItems,
+      subItemsObjects,
     }: Props = this.props;
     const navLink = (typeof children === "string" || value) && (
       <Nav.Link
@@ -67,7 +76,18 @@ class NavItem extends React.Component<Props, State> {
         {typeof children !== "string" && !hasSubNav && children}
         {hasSubNav && (
           <Dropdown.Menu arrow show={this.state.isOpen}>
-            {children}
+            {subItems ||
+              (subItemsObjects &&
+                subItemsObjects.map((a, i) => (
+                  <Nav.SubItem
+                    key={i}
+                    value={a.value}
+                    to={a.to}
+                    icon={a.icon}
+                    LinkComponent={a.LinkComponent}
+                  />
+                ))) ||
+              children}
           </Dropdown.Menu>
         )}
       </React.Fragment>
