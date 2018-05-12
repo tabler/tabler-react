@@ -7,6 +7,14 @@ import DropdownMenu from "./DropdownMenu.react";
 import DropdownItem from "./DropdownItem.react";
 import DropdownItemDivider from "./DropdownItemDivider.react";
 
+import { Manager, Reference, Popper } from "react-popper";
+
+import type {
+  PopperChildrenProps,
+  Placement,
+  ReferenceChildrenProps,
+} from "react-popper";
+
 type DefaultProps = {|
   +children?: React.Node,
   +className?: string,
@@ -44,7 +52,7 @@ type WithItemsProps = {|
   +triggerContent?: React.Node,
   +items: React.Node,
   +dropdownMenuClassName?: string,
-  +position?: string,
+  +position?: Placement,
   +arrow?: boolean,
 |};
 
@@ -60,7 +68,7 @@ type WithItemsObjectProp = {|
     +isDivider?: boolean,
   }>,
   +dropdownMenuClassName?: string,
-  +position?: string,
+  +position?: Placement,
   +arrow?: boolean,
 |};
 
@@ -113,17 +121,23 @@ class Dropdown extends React.Component<Props, State> {
         } = this.props;
 
         return (
-          <DropdownTrigger
-            isNavLink={isNavLink}
-            icon={icon}
-            type={type}
-            className={triggerClassName}
-            isOption={isOption}
-            color={color}
-            toggle={toggle}
-          >
-            {triggerContent}
-          </DropdownTrigger>
+          <Reference>
+            {({ ref }: ReferenceChildrenProps) => (
+              <DropdownTrigger
+                rootRef={ref}
+                isNavLink={isNavLink}
+                icon={icon}
+                type={type}
+                className={triggerClassName}
+                isOption={isOption}
+                color={color}
+                toggle={toggle}
+                onClick={this._handleTriggerOnClick}
+              >
+                {triggerContent}
+              </DropdownTrigger>
+            )}
+          </Reference>
         );
       }
       return null;
@@ -154,23 +168,32 @@ class Dropdown extends React.Component<Props, State> {
       if (this.props.items || this.props.itemsObject) {
         const { position, arrow, dropdownMenuClassName } = this.props;
         return (
-          <DropdownMenu
-            position={position}
-            arrow={arrow}
-            className={dropdownMenuClassName}
-          >
-            {items}
-          </DropdownMenu>
+          <Popper placement={position}>
+            {({ ref, style, placement, arrowProps }: PopperChildrenProps) => (
+              <DropdownMenu
+                position={placement}
+                arrow={arrow}
+                className={dropdownMenuClassName}
+                rootRef={ref}
+                style={style}
+                show={this.state.isOpen}
+              >
+                {items}
+              </DropdownMenu>
+            )}
+          </Popper>
         );
       }
       return null;
     })();
 
     return (
-      <div className={classes}>
-        {trigger}
-        {menu || children}
-      </div>
+      <Manager>
+        <div className={classes}>
+          {trigger}
+          {menu || children}
+        </div>
+      </Manager>
     );
   }
 }
