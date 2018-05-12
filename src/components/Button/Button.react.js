@@ -22,6 +22,7 @@ type PropsForAll = {|
   +isDropdownToggle?: boolean,
   +to?: string,
   +isOption?: boolean,
+  +rootRef?: Function,
 |};
 
 type DefaultButtonComponent = {|
@@ -67,6 +68,7 @@ const Button = (props: Props): React.Node => {
     loading,
     isDropdownToggle,
     isOption,
+    rootRef,
   } = props;
 
   const classes = cn(
@@ -92,7 +94,7 @@ const Button = (props: Props): React.Node => {
   const propsForAll = {
     className: classes,
     disabled: disabled,
-    "data-toggle": isDropdownToggle && "dropdown",
+    ref: rootRef,
   };
 
   const childrenForAll = (
