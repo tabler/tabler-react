@@ -103,6 +103,7 @@ class Dropdown extends React.Component<Props, State> {
         "d-none": desktopOnly,
         "d-md-flex": desktopOnly,
         "card-options-dropdown": isOption,
+        show: this.state.isOpen,
       },
       className
     );
