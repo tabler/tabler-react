@@ -11,6 +11,7 @@ type Props = {|
    * Display an arrow poiting towards the trigger
    */
   +arrow?: boolean,
+  +show?: boolean,
 |};
 
 /**
@@ -21,12 +22,14 @@ function DropdownMenu({
   children,
   position = "",
   arrow,
+  show,
 }: Props): React.Node {
   const classes = cn(
     {
       "dropdown-menu": true,
       [`dropdown-menu-${position}`]: position,
       [`dropdown-menu-arrow`]: arrow,
+      show: show,
     },
     className
   );
