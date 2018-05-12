@@ -1,5 +1,6 @@
 // @flow
 import * as React from "react";
+import cn from "classnames";
 import Nav from "../Nav";
 import Dropdown from "../Dropdown";
 
@@ -17,51 +18,77 @@ type Props = {|
   +active?: boolean,
 |};
 
-function NavItem({
-  children,
-  LinkComponent,
-  value,
-  className,
-  to,
-  type = "li",
-  icon,
-  hasSubNav,
-  onClick,
-  active,
-}: Props): React.Node {
-  const navLink = (typeof children === "string" || value) && (
-    <Nav.Link
-      className={className}
-      to={to}
-      icon={icon}
-      RootComponent={LinkComponent}
-      hasSubNav={hasSubNav}
-      active={active}
-    >
-      {!hasSubNav && typeof children === "string" ? children : value}
-    </Nav.Link>
-  );
+type State = {
+  isOpen: boolean,
+};
 
-  const childrenForAll = (
-    <React.Fragment>
-      {navLink}
-      {typeof children !== "string" && !hasSubNav && children}
-      {hasSubNav && <Dropdown.Menu arrow>{children}</Dropdown.Menu>}
-    </React.Fragment>
-  );
+class NavItem extends React.Component<Props, State> {
+  displayName = "Nav.Item";
 
-  return type === "div" ? (
-    <div className="nav-item" onClick={onClick}>
-      {childrenForAll}
-    </div>
-  ) : (
-    <li className="nav-item" onClick={onClick}>
-      {childrenForAll}
-    </li>
-  );
+  state = {
+    isOpen: false,
+  };
+
+  _handleOnClick = () => {
+    if (this.props.hasSubNav) {
+      this.setState(s => ({ isOpen: !s.isOpen }));
+    }
+    if (this.props.onClick) this.props.onClick();
+  };
+
+  render(): React.Node {
+    const {
+      children,
+      LinkComponent,
+      value,
+      className,
+      to,
+      type = "li",
+      icon,
+      hasSubNav,
+      active,
+    }: Props = this.props;
+    const navLink = (typeof children === "string" || value) && (
+      <Nav.Link
+        className={className}
+        to={to}
+        icon={icon}
+        RootComponent={LinkComponent}
+        hasSubNav={hasSubNav}
+        active={active}
+      >
+        {!hasSubNav && typeof children === "string" ? children : value}
+      </Nav.Link>
+    );
+
+    const childrenForAll = (
+      <React.Fragment>
+        {navLink}
+        {typeof children !== "string" && !hasSubNav && children}
+        {hasSubNav && (
+          <Dropdown.Menu arrow show={this.state.isOpen}>
+            {children}
+          </Dropdown.Menu>
+        )}
+      </React.Fragment>
+    );
+
+    const wrapperClasses = cn({
+      "nav-item": true,
+      show: this.state.isOpen,
+    });
+
+    return type === "div" ? (
+      <div className={wrapperClasses} onClick={this._handleOnClick}>
+        {childrenForAll}
+      </div>
+    ) : (
+      <li className={wrapperClasses} onClick={this._handleOnClick}>
+        {childrenForAll}
+      </li>
+    );
+  }
 }
-
-NavItem.displayName = "Nav.Item";
 
 /** @component */
 export default NavItem;
