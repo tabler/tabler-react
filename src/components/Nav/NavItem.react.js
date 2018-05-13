@@ -3,6 +3,7 @@ import * as React from "react";
 import cn from "classnames";
 import Nav from "../Nav";
 import Dropdown from "../Dropdown";
+import type { subNavItem } from "./Nav.react";
 
 type Props = {|
   +children?: React.Node,
@@ -17,12 +18,7 @@ type Props = {|
   +onClick?: () => void,
   +active?: boolean,
   +subItems?: React.ChildrenArray<React.Element<typeof Nav.SubItem>>,
-  +subItemsObjects?: Array<{|
-    +value: string,
-    +to?: string,
-    +icon?: string,
-    +LinkComponent?: React.ElementType,
-  |}>,
+  +subItemsObjects?: Array<subNavItem>,
 |};
 
 type State = {

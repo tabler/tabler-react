@@ -8,7 +8,7 @@ import NavSubItem from "./NavSubItem.react";
 import NavSubmenu from "./NavSubmenu.react";
 import NavSubmenuItem from "./NavSubmenuItem.react";
 
-type subNavItem = {|
+export type subNavItem = {|
   +value: string,
   +to?: string,
   +icon?: string,
