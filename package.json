@@ -28,8 +28,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-
     "react-styleguidist": "^7.0.9",
+    "react-text-mask": "^5.4.1",
     "webpack": "3.8.1"
   },
   "peerDependencies": {
