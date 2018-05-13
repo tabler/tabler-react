@@ -22,7 +22,7 @@ type Props = {|
    */
   +arrowPosition?: "left" | "right",
   +style?: Style & StyleOffsets & StylePosition,
-  +rootRef?: Function,
+  +rootRef?: (?HTMLElement) => void,
   /**
    * Show the DropdownMenu
    */

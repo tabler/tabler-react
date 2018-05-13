@@ -39,7 +39,7 @@ type Props = {|
    * Handle the onClick of this trigger
    */
   +onClick?: () => void,
-  +rootRef?: Function,
+  +rootRef?: (?HTMLElement) => void,
 |};
 
 /**
