@@ -174,8 +174,9 @@ class SiteWrapper extends React.Component<Props, void> {
                     </Dropdown.Item>
                   </React.Fragment>
                 }
-                position="right"
+                position="bottom-end"
                 arrow={true}
+                arrowPosition="right"
               />
 
               <Dropdown
@@ -192,8 +193,9 @@ class SiteWrapper extends React.Component<Props, void> {
                     </span>
                   </React.Fragment>
                 }
-                position="right"
+                position="bottom-end"
                 arrow={true}
+                arrowPosition="right"
                 toggle={false}
                 itemsObject={[
                   { icon: "user", value: "Profile" },
