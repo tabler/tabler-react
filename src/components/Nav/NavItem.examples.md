@@ -8,7 +8,7 @@
 </Nav>
 ```
 
-#### With sub-item from component based prop
+#### With sub-items from component based prop
 
 ```jsx
 <Nav>
