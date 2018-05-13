@@ -36,7 +36,7 @@ class NavItem extends React.PureComponent<Props, State> {
     isOpen: false,
   };
 
-  _handleOnClick = () => {
+  _handleOnClick = (): void => {
     if (this.props.hasSubNav) {
       this.setState(s => ({ isOpen: !s.isOpen }));
     }
