@@ -51,7 +51,7 @@ class Alert extends React.Component<Props, State> {
     isDismissed: false,
   };
 
-  _handleOnDismissClick = () => {
+  _handleOnDismissClick = (): void => {
     if (this.props.onDismissClick) this.props.onDismissClick();
     this.setState({ isDismissed: true });
   };
@@ -69,10 +69,9 @@ class Alert extends React.Component<Props, State> {
       isDismissible,
       avatar,
     }: Props = this.props;
-    const alertClassName = "alert-" + type;
     const classes = cn(
-      `alert`,
-      alertClassName,
+      "alert",
+      `alert-${type}`,
       {
         "alert-icon": !!icon,
         "mt-5 mb-6": hasExtraSpace,
