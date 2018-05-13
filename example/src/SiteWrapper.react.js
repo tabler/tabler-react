@@ -150,6 +150,7 @@ class SiteWrapper extends React.Component<Props, void> {
                 }
                 position="bottom-end"
                 arrow={true}
+                arrowPosition="right"
               />
 
               <Dropdown
@@ -168,6 +169,7 @@ class SiteWrapper extends React.Component<Props, void> {
                 }
                 position="bottom-end"
                 arrow={true}
+                arrowPosition="right"
                 toggle={false}
                 itemsObject={[
                   { icon: "user", value: "Profile" },

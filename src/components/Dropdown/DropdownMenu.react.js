@@ -17,6 +17,10 @@ type Props = {|
    * Display an arrow poiting towards the trigger
    */
   +arrow?: boolean,
+  /**
+   *
+   */
+  +arrowPosition?: "left" | "right",
   +style?: Style & StyleOffsets & StylePosition,
   +rootRef?: Function,
   +show?: boolean,
@@ -28,8 +32,9 @@ type Props = {|
 function DropdownMenu({
   className,
   children,
-  position = "auto",
+  position = "bottom",
   arrow,
+  arrowPosition = "left",
   style,
   rootRef,
   show,
@@ -37,7 +42,7 @@ function DropdownMenu({
   const classes = cn(
     {
       "dropdown-menu": true,
-      [`dropdown-menu-${position}`]: position,
+      [`dropdown-menu-${arrowPosition}`]: arrowPosition,
       [`dropdown-menu-arrow`]: arrow,
       show: show,
     },

@@ -54,6 +54,7 @@ type WithItemsProps = {|
   +dropdownMenuClassName?: string,
   +position?: Placement,
   +arrow?: boolean,
+  +arrowPosition?: "left" | "right",
 |};
 
 type WithItemsObjectProp = {|
@@ -72,6 +73,7 @@ type WithItemsObjectProp = {|
   +dropdownMenuClassName?: string,
   +position?: Placement,
   +arrow?: boolean,
+  +arrowPosition?: "left" | "right",
 |};
 
 type Props =
@@ -171,7 +173,12 @@ class Dropdown extends React.Component<Props, State> {
 
     const menu = (() => {
       if (this.props.items || this.props.itemsObject) {
-        const { position, arrow, dropdownMenuClassName } = this.props;
+        const {
+          position,
+          arrow,
+          arrowPosition,
+          dropdownMenuClassName,
+        } = this.props;
         return (
           <Popper
             placement={position}
@@ -194,6 +201,7 @@ class Dropdown extends React.Component<Props, State> {
                 <DropdownMenu
                   position={placement}
                   arrow={arrow}
+                  arrowPosition={arrowPosition}
                   className={dropdownMenuClassName}
                   rootRef={ref}
                   style={style}
