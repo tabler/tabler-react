@@ -36,15 +36,11 @@ function NavLink({
   );
 
   return RootComponent ? (
-    <RootComponent
-      className={classes}
-      to={to}
-      data-toggle={hasSubNav && "dropdown"}
-    >
+    <RootComponent className={classes} to={to}>
       {childrenForAll}
     </RootComponent>
   ) : (
-    <a className={classes} href={to} data-toggle={hasSubNav && "dropdown"}>
+    <a className={classes} href={to}>
       {childrenForAll}
     </a>
   );
