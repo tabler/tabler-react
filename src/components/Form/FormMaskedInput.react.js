@@ -4,18 +4,20 @@ import cn from "classnames";
 import MaskedInput from "react-text-mask";
 
 type Props = {|
-  +mask: Array<string>,
+  +mask: ({ [string]: string }) => {} | Array<string>,
   +className?: string,
   +placeholder?: string,
   +guide?: boolean,
   +id?: string,
   +onBlur?: () => {},
   +onChange?: () => {},
+  +value?: string,
   +valid?: boolean,
   +tick?: boolean,
   +invalid?: boolean,
   +cross?: boolean,
   +feedback?: string,
+  +placeholderChar?: string,
 |};
 
 function FormMaskedInput(props: Props): React.Node {
