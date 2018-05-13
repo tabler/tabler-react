@@ -18,29 +18,65 @@ import type {
 type DefaultProps = {|
   +children?: React.Node,
   +className?: string,
+  /**
+   * This dropdown should only be displayed on desktop
+   */
   +desktopOnly?: boolean,
+  /**
+   * The trigger component for this Dropdown
+   */
   +trigger?: React.Node,
+  /**
+   * Is this Dropdown a Card option?
+   */
   +isOption?: boolean,
 |};
 
 type WithAnyTriggerProps = {|
   ...DefaultProps,
+  /**
+   * Any additional classNames for the trigger component
+   */
   +triggerClassName?: string,
+  /**
+   * Is this Dropdown being used as a Nav Link?
+   */
   +isNavLink?: boolean,
+  /**
+   * Should the trigger render a link or a buttton
+   */
   +type?: "link" | "button",
+  /**
+   * An Icon to be displayed within the trigger
+   */
   +icon?: string,
+  /**
+   * The trigger content
+   */
   +triggerContent?: React.Node,
+  /**
+   * The triggers background color
+   */
   +color?: string,
+  /**
+   * Should the trigger display an arrow toggler?
+   */
   +toggle?: boolean,
 |};
 
 type WithTriggerContentProps = {|
   ...WithAnyTriggerProps,
+  /**
+   * The trigger content
+   */
   +triggerContent: React.Node,
 |};
 
 type WithIconProps = {|
   ...WithAnyTriggerProps,
+  /**
+   * For a trigger to contain only an Icon
+   */
   +icon: string,
 |};
 
@@ -52,15 +88,30 @@ type WithItemsProps = {|
   +triggerContent?: React.Node,
   +items: React.Node,
   +dropdownMenuClassName?: string,
+  /**
+   * The DropdownMenu position
+   */
   +position?: Placement,
+  /**
+   * Display an arrow between the trigger and menu?
+   */
   +arrow?: boolean,
+  /**
+   * The position of the arrow between the trigger and menu
+   */
   +arrowPosition?: "left" | "right",
 |};
 
 type WithItemsObjectProp = {|
   ...DefaultProps,
   ...WithAnyTriggerProps,
+  /**
+   * The items for this Dropdowns menu
+   */
   +items?: React.Node,
+  /**
+   * The items for this Dropdowns menu in object form
+   */
   +itemsObject: Array<{
     +icon?: string,
     +badge?: string,
@@ -70,6 +121,9 @@ type WithItemsObjectProp = {|
     +to?: string,
     +RootComponent?: React.ElementType,
   }>,
+  /**
+   * Any additional classNames for the DropdownMenu
+   */
   +dropdownMenuClassName?: string,
   +position?: Placement,
   +arrow?: boolean,
@@ -182,10 +236,6 @@ class Dropdown extends React.Component<Props, State> {
         return (
           <Popper
             placement={position}
-            modifiers={{
-              preventOverflow: { enabled: true },
-              flip: { boundariesElement: "window" },
-            }}
             eventsEnabled={true}
             positionFixed={false}
           >

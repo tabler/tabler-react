@@ -14,15 +14,18 @@ type Props = {|
   +className?: string,
   +position?: Placement,
   /**
-   * Display an arrow poiting towards the trigger
+   * Display an arrow pointing towards the trigger
    */
   +arrow?: boolean,
   /**
-   *
+   * The position of the arrow pointing towards the trigger
    */
   +arrowPosition?: "left" | "right",
   +style?: Style & StyleOffsets & StylePosition,
   +rootRef?: Function,
+  /**
+   * Show the DropdownMenu
+   */
   +show?: boolean,
 |};
 
