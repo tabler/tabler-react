@@ -29,7 +29,7 @@ type State = {
   isOpen: boolean,
 };
 
-class NavItem extends React.Component<Props, State> {
+class NavItem extends React.PureComponent<Props, State> {
   displayName = "Nav.Item";
 
   state = {
