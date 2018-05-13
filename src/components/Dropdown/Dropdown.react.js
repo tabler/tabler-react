@@ -173,19 +173,36 @@ class Dropdown extends React.Component<Props, State> {
       if (this.props.items || this.props.itemsObject) {
         const { position, arrow, dropdownMenuClassName } = this.props;
         return (
-          <Popper placement={position}>
-            {({ ref, style, placement, arrowProps }: PopperChildrenProps) => (
-              <DropdownMenu
-                position={placement}
-                arrow={arrow}
-                className={dropdownMenuClassName}
-                rootRef={ref}
-                style={style}
-                show={this.state.isOpen}
-              >
-                {items}
-              </DropdownMenu>
-            )}
+          <Popper
+            placement={position}
+            modifiers={{
+              preventOverflow: { enabled: true },
+              flip: { boundariesElement: "window" },
+            }}
+            eventsEnabled={true}
+            positionFixed={false}
+          >
+            {({
+              ref,
+              style,
+              placement,
+              arrowProps,
+              scheduleUpdate,
+            }: PopperChildrenProps) => {
+              scheduleUpdate();
+              return (
+                <DropdownMenu
+                  position={placement}
+                  arrow={arrow}
+                  className={dropdownMenuClassName}
+                  rootRef={ref}
+                  style={style}
+                  show={this.state.isOpen}
+                >
+                  {items}
+                </DropdownMenu>
+              );
+            }}
           </Popper>
         );
       }
