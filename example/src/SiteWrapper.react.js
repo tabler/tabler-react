@@ -19,55 +19,81 @@ type Props = {|
   +children: React.Node,
 |};
 
+type subNavItem = {|
+  +value: string,
+  +to?: string,
+  +icon?: string,
+  +LinkComponent?: React.ElementType,
+|};
+
 type navItem = {|
   +value: string,
   +to?: string,
   +icon?: string,
-  +subItems?: Array<navItem>,
+  +active?: boolean,
+  +LinkComponent?: React.ElementType,
+  +subItems?: Array<subNavItem>,
 |};
 
 const navBarItems: Array<navItem> = [
-  { value: "Home", to: "/", icon: "home" },
+  { value: "Home", to: "/", icon: "home", LinkComponent: NavLink },
   {
     value: "Interface",
     icon: "box",
     subItems: [
-      { value: "Cards Design", to: "/cards" },
-      { value: "Charts", to: "/charts" },
-      { value: "Pricing Cards", to: "/pricing-cards" },
+      { value: "Cards Design", to: "/cards", LinkComponent: NavLink },
+      { value: "Charts", to: "/charts", LinkComponent: NavLink },
+      { value: "Pricing Cards", to: "/pricing-cards", LinkComponent: NavLink },
     ],
   },
   {
     value: "Components",
     icon: "calendar",
     subItems: [
-      { value: "Maps", to: "/maps" },
-      { value: "Icons", to: "/icons" },
-      { value: "Store", to: "/store" },
-      { value: "Blog", to: "/blog" },
+      { value: "Maps", to: "/maps", LinkComponent: NavLink },
+      { value: "Icons", to: "/icons", LinkComponent: NavLink },
+      { value: "Store", to: "/store", LinkComponent: NavLink },
+      { value: "Blog", to: "/blog", LinkComponent: NavLink },
     ],
   },
   {
     value: "Pages",
     icon: "file",
     subItems: [
-      { value: "Profile", to: "/profile" },
-      { value: "Login", to: "/login" },
-      { value: "Register", to: "/register" },
-      { value: "Forgot password", to: "/forgot-password" },
-      { value: "400 error", to: "/400" },
-      { value: "401 error", to: "/401" },
-      { value: "403 error", to: "/403" },
-      { value: "404 error", to: "/404" },
-      { value: "500 error", to: "/500" },
-      { value: "503 error", to: "/503" },
-      { value: "Email", to: "/email" },
-      { value: "Empty page", to: "/empty-page" },
-      { value: "RTL", to: "/rtl" },
+      { value: "Profile", to: "/profile", LinkComponent: NavLink },
+      { value: "Login", to: "/login", LinkComponent: NavLink },
+      { value: "Register", to: "/register", LinkComponent: NavLink },
+      {
+        value: "Forgot password",
+        to: "/forgot-password",
+        LinkComponent: NavLink,
+      },
+      { value: "400 error", to: "/400", LinkComponent: NavLink },
+      { value: "401 error", to: "/401", LinkComponent: NavLink },
+      { value: "403 error", to: "/403", LinkComponent: NavLink },
+      { value: "404 error", to: "/404", LinkComponent: NavLink },
+      { value: "500 error", to: "/500", LinkComponent: NavLink },
+      { value: "503 error", to: "/503", LinkComponent: NavLink },
+      { value: "Email", to: "/email", LinkComponent: NavLink },
+      { value: "Empty page", to: "/empty-page", LinkComponent: NavLink },
+      { value: "RTL", to: "/rtl", LinkComponent: NavLink },
     ],
   },
-  { value: "Forms", to: "/form-elements", icon: "check-square" },
-  { value: "Gallery", to: "/gallery", icon: "image" },
+  {
+    value: "Forms",
+    to: "/form-elements",
+    icon: "check-square",
+    LinkComponent: NavLink,
+  },
+  { value: "Gallery", to: "/gallery", icon: "image", LinkComponent: NavLink },
+  {
+    icon: "file-text",
+    value: "Documentation",
+    to:
+      process.env.NODE_ENV === "production"
+        ? "https://tabler.github.io/tabler-react/documentation"
+        : "/documentation",
+  },
 ];
 
 class SiteWrapper extends React.Component<Props, void> {
@@ -204,38 +230,11 @@ class SiteWrapper extends React.Component<Props, void> {
                 </form>
               </Grid.Col>
               <Grid.Col className="col-lg order-lg-first">
-                <Nav tabbed className="border-0 flex-column flex-lg-row">
-                  {navBarItems.map((a, ai) => (
-                    <Nav.Item
-                      key={ai}
-                      icon={a.icon}
-                      value={a.value}
-                      to={a.to}
-                      hasSubNav={!!a.subItems}
-                      LinkComponent={a.to && NavLink}
-                    >
-                      {a.subItems &&
-                        a.subItems.map((b, bi) => (
-                          <Nav.SubItem
-                            key={bi}
-                            value={b.value}
-                            to={b.to}
-                            icon={b.icon}
-                            LinkComponent={NavLink}
-                          />
-                        ))}
-                    </Nav.Item>
-                  ))}
-                  <Nav.Item
-                    icon="file-text"
-                    value="Documentation"
-                    to={
-                      process.env.NODE_ENV === "production"
-                        ? "https://tabler.github.io/tabler-react/documentation"
-                        : "/documentation"
-                    }
-                  />
-                </Nav>
+                <Nav
+                  tabbed
+                  className="border-0 flex-column flex-lg-row"
+                  itemsObjects={navBarItems}
+                />
               </Grid.Col>
             </Grid.Row>
           </Site.Nav>
