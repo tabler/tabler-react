@@ -35,6 +35,11 @@ type Props = {|
    * Is this trigger beind used as a Card.Header option
    */
   +isOption?: boolean,
+  /**
+   * Handle the onClick of this trigger
+   */
+  +onClick?: () => void,
+  +rootRef?: (?HTMLElement) => void,
 |};
 
 /**
@@ -50,6 +55,8 @@ function DropdownTrigger({
   color,
   isNavLink,
   isOption,
+  onClick,
+  rootRef,
 }: Props): React.Node {
   const classes = cn(
     { "dropdown-toggle": toggle, "nav-link": isNavLink },
@@ -69,7 +76,7 @@ function DropdownTrigger({
   );
 
   return type === "link" ? (
-    <a className={classes} data-toggle="dropdown">
+    <a className={classes} onClick={onClick} ref={rootRef}>
       {childrenFragment}
     </a>
   ) : (
@@ -78,6 +85,8 @@ function DropdownTrigger({
       color={color}
       isDropdownToggle
       isOption={isOption}
+      onClick={onClick}
+      rootRef={rootRef}
     >
       {childrenFragment}
     </Button>

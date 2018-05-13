@@ -22,6 +22,7 @@ type PropsForAll = {|
   +isDropdownToggle?: boolean,
   +to?: string,
   +isOption?: boolean,
+  +rootRef?: (?HTMLElement) => void,
 |};
 
 type DefaultButtonComponent = {|
@@ -67,6 +68,7 @@ const Button = (props: Props): React.Node => {
     loading,
     isDropdownToggle,
     isOption,
+    rootRef,
   } = props;
 
   const classes = cn(
@@ -92,7 +94,6 @@ const Button = (props: Props): React.Node => {
   const propsForAll = {
     className: classes,
     disabled: disabled,
-    "data-toggle": isDropdownToggle && "dropdown",
   };
 
   const childrenForAll = (
@@ -109,7 +110,13 @@ const Button = (props: Props): React.Node => {
   if (!props.RootComponent || props.RootComponent === "button") {
     const { type, value, onClick } = props;
     return (
-      <button {...propsForAll} type={type} value={value} onClick={onClick}>
+      <button
+        {...propsForAll}
+        type={type}
+        value={value}
+        onClick={onClick}
+        ref={rootRef}
+      >
         {childrenForAll}
       </button>
     );
@@ -117,13 +124,25 @@ const Button = (props: Props): React.Node => {
     const { type, value, onClick } = props;
 
     return (
-      <input {...propsForAll} type={type} value={value} onClick={onClick} />
+      <input
+        {...propsForAll}
+        type={type}
+        value={value}
+        onClick={onClick}
+        ref={rootRef}
+      />
     );
   } else if (props.RootComponent === "a") {
     const { href, target, onClick } = props;
 
     return (
-      <a {...propsForAll} href={href} target={target} onClick={onClick}>
+      <a
+        {...propsForAll}
+        href={href}
+        target={target}
+        onClick={onClick}
+        ref={rootRef}
+      >
         {childrenForAll}
       </a>
     );
