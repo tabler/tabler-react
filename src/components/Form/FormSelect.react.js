@@ -6,7 +6,7 @@ import cn from "classnames";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +onChange?: Function,
+  +onChange?: (SyntheticInputEvent<EventTarget>) => mixed,
 |};
 
 function FormSelect({ className, children, onChange }: Props): React.Node {
