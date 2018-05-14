@@ -20,6 +20,9 @@ type Props = {|
   +placeholderChar?: string,
 |};
 
+/**
+ * A masked input field using react-text-mask
+ */
 function FormMaskedInput(props: Props): React.Node {
   const { valid, tick, invalid, cross, feedback } = props;
   const classes = cn(
