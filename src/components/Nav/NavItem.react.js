@@ -5,6 +5,8 @@ import Nav from "../Nav";
 import Dropdown from "../Dropdown";
 import type { subNavItem } from "./Nav.react";
 
+import { Manager, Reference } from "react-popper";
+import type { Placement, ReferenceChildrenProps } from "react-popper";
 type Props = {|
   +children?: React.Node,
   +className?: string,
@@ -14,17 +16,30 @@ type Props = {|
   +to?: string,
   +icon?: string,
   +type?: "li" | "div",
+  /**
+   * Make this item behave like it has a subNav even if you dont use subItems or subItemsObjects
+   */
   +hasSubNav?: boolean,
   +onClick?: () => void,
+  /**
+   * Display this item in an active, or currently viewing, state
+   */
   +active?: boolean,
   +subItems?: React.ChildrenArray<React.Element<typeof Nav.SubItem>>,
   +subItemsObjects?: Array<subNavItem>,
+  /**
+   * Position of the subnav Dropdown
+   */
+  +position?: Placement,
 |};
 
 type State = {
   isOpen: boolean,
 };
 
+/**
+ * A NavItem with react-popper powered subIems Dropdowns
+ */
 class NavItem extends React.PureComponent<Props, State> {
   displayName = "Nav.Item";
 
@@ -48,30 +63,52 @@ class NavItem extends React.PureComponent<Props, State> {
       to,
       type = "li",
       icon,
-      hasSubNav,
+      hasSubNav: forcedHasSubNav,
       active,
       subItems,
       subItemsObjects,
+      position = "bottom-start",
     }: Props = this.props;
-    const navLink = (typeof children === "string" || value) && (
-      <Nav.Link
-        className={className}
-        to={to}
-        icon={icon}
-        RootComponent={LinkComponent}
-        hasSubNav={hasSubNav}
-        active={active}
-      >
-        {!hasSubNav && typeof children === "string" ? children : value}
-      </Nav.Link>
-    );
+
+    const hasSubNav: boolean =
+      forcedHasSubNav || !!subItems || !!subItemsObjects;
+
+    const navLink =
+      (typeof children === "string" || value) && hasSubNav ? (
+        <Reference>
+          {({ ref }: ReferenceChildrenProps) => (
+            <Nav.Link
+              className={className}
+              to={to}
+              icon={icon}
+              RootComponent={LinkComponent}
+              hasSubNav={hasSubNav}
+              active={active}
+              rootRef={ref}
+            >
+              {!hasSubNav && typeof children === "string" ? children : value}
+            </Nav.Link>
+          )}
+        </Reference>
+      ) : (
+        <Nav.Link
+          className={className}
+          to={to}
+          icon={icon}
+          RootComponent={LinkComponent}
+          hasSubNav={hasSubNav}
+          active={active}
+        >
+          {!hasSubNav && typeof children === "string" ? children : value}
+        </Nav.Link>
+      );
 
     const childrenForAll = (
       <React.Fragment>
         {navLink}
         {typeof children !== "string" && !hasSubNav && children}
         {hasSubNav && (
-          <Dropdown.Menu arrow show={this.state.isOpen}>
+          <Dropdown.Menu arrow show={this.state.isOpen} position={position}>
             {subItems ||
               (subItemsObjects &&
                 subItemsObjects.map((a, i) => (
@@ -94,15 +131,18 @@ class NavItem extends React.PureComponent<Props, State> {
       show: this.state.isOpen,
     });
 
-    return type === "div" ? (
-      <div className={wrapperClasses} onClick={this._handleOnClick}>
-        {childrenForAll}
-      </div>
-    ) : (
-      <li className={wrapperClasses} onClick={this._handleOnClick}>
-        {childrenForAll}
-      </li>
-    );
+    const wrappedChildren =
+      type === "div" ? (
+        <div className={wrapperClasses} onClick={this._handleOnClick}>
+          {childrenForAll}
+        </div>
+      ) : (
+        <li className={wrapperClasses} onClick={this._handleOnClick}>
+          {childrenForAll}
+        </li>
+      );
+
+    return hasSubNav ? <Manager>{wrappedChildren}</Manager> : wrappedChildren;
   }
 }
 
