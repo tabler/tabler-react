@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { Container, Grid, Nav, InlineSearchForm } from "../../";
+import { Container, Grid, Nav } from "../../";
 
 type subNavItem = {|
   +value: string,
@@ -47,7 +47,9 @@ const SiteNav = ({
       {children || (
         <Grid.Row className="align-items-center">
           <Grid.Col lg={3} className="ml-auto">
-            {rightColumnComponent || (withSearchForm && <InlineSearchForm />)}
+            {/* @TODO: add InlineSearchForm  */}
+            {/* {rightColumnComponent || (withSearchForm && <InlineSearchForm />)} */}
+            {rightColumnComponent}
           </Grid.Col>
           <Grid.Col className="col-lg order-lg-first">
             <Nav
