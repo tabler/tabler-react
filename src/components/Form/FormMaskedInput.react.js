@@ -46,6 +46,6 @@ function FormMaskedInput(props: Props): React.Node {
   );
 }
 
-FormMaskedInput.displatName = "Form.MaskedInput";
+FormMaskedInput.displayName = "Form.MaskedInput";
 
 export default FormMaskedInput;
