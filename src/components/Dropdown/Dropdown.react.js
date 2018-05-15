@@ -98,6 +98,16 @@ type WithItemsProps = {|
   +arrowPosition?: "left" | "right",
 |};
 
+export type itemObject = {|
+  +icon?: string,
+  +badge?: string,
+  +badgeType?: string,
+  +value?: string,
+  +isDivider?: boolean,
+  +to?: string,
+  +RootComponent?: React.ElementType,
+|};
+
 type WithItemsObjectProp = {|
   ...DefaultProps,
   ...WithAnyTriggerProps,
@@ -108,15 +118,7 @@ type WithItemsObjectProp = {|
   /**
    * The items for this Dropdowns menu in object form
    */
-  +itemsObject: Array<{
-    +icon?: string,
-    +badge?: string,
-    +badgeType?: string,
-    +value?: string,
-    +isDivider?: boolean,
-    +to?: string,
-    +RootComponent?: React.ElementType,
-  }>,
+  +itemsObject: Array<itemObject>,
   /**
    * Any additional classNames for the DropdownMenu
    */
@@ -124,6 +126,11 @@ type WithItemsObjectProp = {|
   +position?: Placement,
   +arrow?: boolean,
   +arrowPosition?: "left" | "right",
+  /**
+   * The default RootComponent for all itemsObjects.
+   * itemsObjects[x].RootComponent takes priority
+   */
+  +itemsRootComponent?: React.ElementType,
 |};
 
 type Props =
@@ -196,7 +203,8 @@ class Dropdown extends React.Component<Props, State> {
     const items = (() => {
       if (this.props.items) return this.props.items;
       if (this.props.itemsObject) {
-        return this.props.itemsObject.map(
+        const { itemsObject, itemsRootComponent } = this.props;
+        return itemsObject.map(
           (item, i) =>
             item.isDivider ? (
               <Dropdown.ItemDivider key={i} />
@@ -208,7 +216,7 @@ class Dropdown extends React.Component<Props, State> {
                 value={item.value}
                 key={i}
                 to={item.to}
-                RootComponent={item.RootComponent}
+                RootComponent={item.RootComponent || itemsRootComponent}
               />
             )
         );
