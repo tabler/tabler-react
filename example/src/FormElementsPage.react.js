@@ -585,6 +585,130 @@ function FormElements() {
               </Form.Group>
             </ComponentDemo>
           </Grid.Col>
+          <Grid.Col lg={4}>
+            <Card title="Input Mask">
+              <Card.Body>
+                <Form.Group label="Date">
+                  <Form.MaskedInput
+                    placeholder="00/00/0000"
+                    mask={[
+                      /\d/,
+                      /\d/,
+                      "/",
+                      /\d/,
+                      /\d/,
+                      "/",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                    ]}
+                  />
+                </Form.Group>
+                <Form.Group label="Time">
+                  <Form.MaskedInput
+                    placeholder="00:00:00"
+                    mask={[/\d/, /\d/, ":", /\d/, /\d/, ":", /\d/, /\d/]}
+                  />
+                </Form.Group>
+                <Form.Group label="Date & Time">
+                  <Form.MaskedInput
+                    placeholder="00/00/0000 00:00:00"
+                    mask={[
+                      /\d/,
+                      /\d/,
+                      "/",
+                      /\d/,
+                      /\d/,
+                      "/",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      " ",
+                      /\d/,
+                      /\d/,
+                      ":",
+                      /\d/,
+                      /\d/,
+                      ":",
+                      /\d/,
+                      /\d/,
+                    ]}
+                  />
+                </Form.Group>
+                <Form.Group label="Zipcode">
+                  <Form.MaskedInput
+                    placeholder="91210"
+                    mask={[/\d/, /\d/, /\d/, /\d/, /\d/]}
+                  />
+                </Form.Group>
+                <Form.Group label="Telephone">
+                  <Form.MaskedInput
+                    placeholder="+1 (555) 495-3947"
+                    mask={[
+                      "(",
+                      /[1-9]/,
+                      /\d/,
+                      /\d/,
+                      ")",
+                      " ",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      "-",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                    ]}
+                  />
+                </Form.Group>
+                <Form.Group label="Telephone with Area Code">
+                  <Form.MaskedInput
+                    placeholder="+1 (555) 495-3947"
+                    mask={[
+                      "+",
+                      "1",
+                      " ",
+                      "(",
+                      /[1-9]/,
+                      /\d/,
+                      /\d/,
+                      ")",
+                      " ",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      "-",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                    ]}
+                  />
+                </Form.Group>
+                <Form.Group label="IP Address">
+                  <Form.MaskedInput
+                    placeholder="127.0.0.1"
+                    mask={[
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      ".",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                      ".",
+                      /\d/,
+                      /\d/,
+                      /\d/,
+                    ]}
+                  />
+                </Form.Group>
+              </Card.Body>
+            </Card>
+          </Grid.Col>
         </Grid.Row>
       </Page.Card>
     </SiteWrapper>
