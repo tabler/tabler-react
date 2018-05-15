@@ -11,3 +11,4 @@ export { default as FormCard } from "./forms/FormCard.react";
 export { default as FormTextInput } from "./forms/FormTextInput.react";
 export { default as FormCheckboxInput } from "./forms/FormCheckboxInput.react";
 export { default as colors } from "./colors";
+export * from "./forms";
