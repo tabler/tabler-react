@@ -21,13 +21,21 @@ type Props = {|
   +avatarURL?: string,
   +name?: string,
   +description?: string,
+  /**
+   * An array of the option items within the Dropdown
+   */
   +options?: optionsType,
+  /**
+   * The default RootComponent for all options.
+   * optionsObjects[x].RootComponent takes priority
+   */
+  +optionsRootComponent?: React.ElementType,
 |};
 
 const defaultOptions: defaultOptionsType = {
   profile: { icon: "user", value: "Profile", to: "/profile" },
   settings: { icon: "settings", value: "Settings", to: "/settings" },
-  mail: { icon: "mail", value: "Inbox", badge: "6", to: "/mail" },
+  mail: { icon: "mail", value: "Inbox", to: "/mail" },
   message: { icon: "send", value: "Message", to: "/message" },
   help: { icon: "help-circle", value: "Need help?", to: "/help" },
   logout: { icon: "log-out", value: "Sign out", to: "/logout" },
@@ -37,13 +45,17 @@ const defaultOptions: defaultOptionsType = {
 const itemsFromDefaultOptions = (options: optionsType) =>
   options.map(opt => (typeof opt === "string" ? defaultOptions[opt] : opt));
 
+/**
+ * A component for fast creation of an account centric dropdown
+ */
 function AccountDropdown({
   avatarURL,
   name,
   description,
-  options,
+  options = [],
+  optionsRootComponent,
 }: Props): React.Node {
-  const itemsObjects = itemsFromDefaultOptions(defaultOptions);
+  const itemsObjects = itemsFromDefaultOptions(options);
 
   return (
     <Dropdown
@@ -63,6 +75,7 @@ function AccountDropdown({
       arrowPosition="right"
       toggle={false}
       itemsObject={itemsObjects}
+      itemsRootComponent={optionsRootComponent}
     />
   );
 }

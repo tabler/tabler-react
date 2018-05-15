@@ -5,7 +5,7 @@
   description="Administrator"
   options={[
     "profile",
-    "settings",
+    { icon: "settings", value: "Settings", to: "/settings" },
     "mail",
     "message",
     "divider",
