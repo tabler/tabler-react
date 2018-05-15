@@ -102,6 +102,16 @@ type WithItemsProps = {|
   +arrowPosition?: "left" | "right",
 |};
 
+export type itemObject = {|
+  +icon?: string,
+  +badge?: string,
+  +badgeType?: string,
+  +value?: string,
+  +isDivider?: boolean,
+  +to?: string,
+  +RootComponent?: React.ElementType,
+|};
+
 type WithItemsObjectProp = {|
   ...DefaultProps,
   ...WithAnyTriggerProps,
@@ -112,15 +122,7 @@ type WithItemsObjectProp = {|
   /**
    * The items for this Dropdowns menu in object form
    */
-  +itemsObject: Array<{
-    +icon?: string,
-    +badge?: string,
-    +badgeType?: string,
-    +value?: string,
-    +isDivider?: boolean,
-    +to?: string,
-    +RootComponent?: React.ElementType,
-  }>,
+  +itemsObject: Array<itemObject>,
   /**
    * Any additional classNames for the DropdownMenu
    */
