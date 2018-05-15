@@ -3,7 +3,7 @@ import * as React from "react";
 import { Avatar, Text } from "../";
 import NotificationTray from "./NotificationTray.react";
 
-type Props = {|
+export type Props = {|
   /**
    * The  avatar image URL
    */

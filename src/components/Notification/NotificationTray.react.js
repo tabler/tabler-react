@@ -1,6 +1,7 @@
 // @flow
 import * as React from "react";
 import { Notification, Dropdown } from "../";
+import type { Props as NotificationProps } from "./Notification.react";
 
 type Props = {|
   /**
@@ -10,11 +11,7 @@ type Props = {|
   /**
    * An array containing objects of notification data
    */
-  +notificationsObjects?: Array<{|
-    +avatarURL?: string,
-    +message: React.Node,
-    +time?: string,
-  |}>,
+  +notificationsObjects?: Array<NotificationProps>,
   /**
    * Display a small red circle to symbolize that there are unread notifications
    */
