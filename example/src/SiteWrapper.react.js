@@ -117,16 +117,33 @@ const notificationsObjects = [
   },
 ];
 
+const accountDropdownProps = {
+  avatarURL: "./demo/faces/female/25.jpg",
+  name: "Jane Pearson",
+  description: "Administrator",
+  options: [
+    { icon: "user", value: "Profile" },
+    { icon: "settings", value: "Settings" },
+    { icon: "mail", value: "Inbox", badge: "6" },
+    { icon: "send", value: "Message" },
+    { isDivider: true },
+    { icon: "help-circle", value: "Need help?" },
+    { icon: "log-out", value: "Sign out" },
+  ],
+};
+
 class SiteWrapper extends React.Component<Props, void> {
   render(): React.Node {
     return (
       <Site.Wrapper
-        href={"/"}
-        alt="Tabler React"
-        imageURL="./demo/brand/tabler.svg"
-        withNotifications={true}
-        notificationsObjects={notificationsObjects}
-        itemsObjects={navBarItems}
+        headerProps={{
+          href: "/",
+          alt: "Tabler React",
+          imageURL: "./demo/brand/tabler.svg",
+          notificationsTray: { notificationsObjects },
+          accountDropdown: accountDropdownProps,
+        }}
+        navProps={{ itemsObjects: navBarItems }}
       >
         {this.props.children}
       </Site.Wrapper>

@@ -6,40 +6,24 @@ import { Page, Site } from "../";
 import type { Props as SiteHeaderProps } from "./SiteHeader.react";
 import type { Props as SiteNavProps } from "./SiteNav.react";
 
-type Props = SiteHeaderProps &
-  SiteNavProps & {|
-    +children: React.Node,
-  |};
+type Props = {|
+  +headerProps: SiteHeaderProps,
+  +navProps: SiteNavProps,
+  +children: React.Node,
+|};
 
 function SiteWrapper(props: Props): React.Node {
-  const {
-    href,
-    alt,
-    imageURL,
-    withNotifications,
-    notificationsObjects,
-    items: navItems,
-    itemsObjects: navItemsObjects,
-    withSearchForm,
-    rightColumnComponent,
-  } = props;
+  const { headerProps, navProps, children } = props;
+
+  const header = React.createElement(Site.Header, headerProps);
+  const nav = React.createElement(Site.Nav, navProps);
+
   return (
     <Page>
       <Page.Main>
-        <Site.Header
-          href={href}
-          alt={alt}
-          imageURL={imageURL}
-          withNotifications={withNotifications}
-          notificationsObjects={notificationsObjects}
-        />
-        <Site.Nav
-          items={navItems}
-          itemsObjects={navItemsObjects}
-          withSearchForm={withSearchForm}
-          rightColumnComponent={rightColumnComponent}
-        />
-        {props.children}
+        {header}
+        {nav}
+        {children}
       </Page.Main>
       <Site.Footer />
     </Page>
