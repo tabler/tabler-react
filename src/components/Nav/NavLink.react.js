@@ -11,6 +11,7 @@ type Props = {|
   +icon?: string,
   +to?: string,
   +hasSubNav?: boolean,
+  +rootRef?: (?HTMLElement) => void,
 |};
 
 function NavLink({
@@ -21,6 +22,7 @@ function NavLink({
   active = false,
   to,
   hasSubNav,
+  rootRef,
 }: Props): React.Node {
   const classes = cn({ "nav-link": true, active: active }, className);
 
@@ -40,7 +42,7 @@ function NavLink({
       {childrenForAll}
     </RootComponent>
   ) : (
-    <a className={classes} href={to}>
+    <a className={classes} href={to} ref={rootRef}>
       {childrenForAll}
     </a>
   );

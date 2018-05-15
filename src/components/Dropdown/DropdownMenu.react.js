@@ -2,8 +2,9 @@
 
 import * as React from "react";
 import cn from "classnames";
+import { Popper } from "react-popper";
 
-import type { Placement } from "react-popper";
+import type { Placement, PopperChildrenProps } from "react-popper";
 
 import type { Style } from "typed-styles";
 type StyleOffsets = { top: number, left: number };
@@ -52,14 +53,21 @@ function DropdownMenu({
     className
   );
   return (
-    <div
-      className={classes}
-      data-placement={position}
-      style={style}
-      ref={rootRef}
-    >
-      {children}
-    </div>
+    <Popper placement={position} eventsEnabled={true} positionFixed={false}>
+      {({ ref, style, placement, scheduleUpdate }: PopperChildrenProps) => {
+        scheduleUpdate();
+        return (
+          <div
+            className={classes}
+            data-placement={placement}
+            style={style}
+            ref={ref}
+          >
+            {children}
+          </div>
+        );
+      }}
+    </Popper>
   );
 }
 
