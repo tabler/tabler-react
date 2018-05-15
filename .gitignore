@@ -25,3 +25,7 @@ yarn-error.log*
 
 #IntellijIDEA
 .idea
+
+
+# VSCode
+.vscode

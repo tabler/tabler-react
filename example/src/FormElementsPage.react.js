@@ -584,6 +584,12 @@ function FormElements() {
                 </Form.InputGroup>
               </Form.Group>
             </ComponentDemo>
+
+            <ComponentDemo>
+              <Form.Group label="Date Picker">
+                <Form.DatePicker />
+              </Form.Group>
+            </ComponentDemo>
           </Grid.Col>
           <Grid.Col lg={4}>
             <Card title="Input Mask">
