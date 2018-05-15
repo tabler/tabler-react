@@ -49,11 +49,9 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     defaultDate: new Date(),
   };
 
-  // Set the default date from props
-  componentWillMount(): void {
-    const { defaultDate } = this.props;
-    this.setState({ currentDate: defaultDate });
-  }
+  state = {
+    currentDate: this.props.defaultDate,
+  };
 
   // Handle date changes
   _handleOnChange = (type: ChangeTypes, value: number): void => {
