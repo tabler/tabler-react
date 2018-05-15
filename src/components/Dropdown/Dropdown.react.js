@@ -126,6 +126,11 @@ type WithItemsObjectProp = {|
   +position?: Placement,
   +arrow?: boolean,
   +arrowPosition?: "left" | "right",
+  /**
+   * The default RootComponent for all itemsObjects.
+   * itemsObjects[x].RootComponent takes priority
+   */
+  +itemsRootComponent?: React.ElementType,
 |};
 
 type Props =
@@ -198,7 +203,8 @@ class Dropdown extends React.Component<Props, State> {
     const items = (() => {
       if (this.props.items) return this.props.items;
       if (this.props.itemsObject) {
-        return this.props.itemsObject.map(
+        const { itemsObject, itemsRootComponent } = this.props;
+        return itemsObject.map(
           (item, i) =>
             item.isDivider ? (
               <Dropdown.ItemDivider key={i} />
@@ -210,7 +216,7 @@ class Dropdown extends React.Component<Props, State> {
                 value={item.value}
                 key={i}
                 to={item.to}
-                RootComponent={item.RootComponent}
+                RootComponent={item.RootComponent || itemsRootComponent}
               />
             )
         );
