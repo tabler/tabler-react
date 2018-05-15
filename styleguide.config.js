@@ -91,6 +91,10 @@ module.exports = {
           components: "src/components/Nav/**/*.react.{js,jsx}",
         },
         {
+          name: "Notification",
+          components: "src/components/Notification/**/*.react.{js,jsx}",
+        },
+        {
           name: "Page",
           components: "src/components/Page/**/*.react.{js,jsx}",
         },

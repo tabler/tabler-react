@@ -7,13 +7,9 @@ import DropdownMenu from "./DropdownMenu.react";
 import DropdownItem from "./DropdownItem.react";
 import DropdownItemDivider from "./DropdownItemDivider.react";
 
-import { Manager, Reference, Popper } from "react-popper";
+import { Manager } from "react-popper";
 
-import type {
-  PopperChildrenProps,
-  Placement,
-  ReferenceChildrenProps,
-} from "react-popper";
+import type { Placement } from "react-popper";
 
 type DefaultProps = {|
   +children?: React.Node,
@@ -182,23 +178,18 @@ class Dropdown extends React.Component<Props, State> {
         } = this.props;
 
         return (
-          <Reference>
-            {({ ref }: ReferenceChildrenProps) => (
-              <DropdownTrigger
-                rootRef={ref}
-                isNavLink={isNavLink}
-                icon={icon}
-                type={type}
-                className={triggerClassName}
-                isOption={isOption}
-                color={color}
-                toggle={toggle}
-                onClick={this._handleTriggerOnClick}
-              >
-                {triggerContent}
-              </DropdownTrigger>
-            )}
-          </Reference>
+          <DropdownTrigger
+            isNavLink={isNavLink}
+            icon={icon}
+            type={type}
+            className={triggerClassName}
+            isOption={isOption}
+            color={color}
+            toggle={toggle}
+            onClick={this._handleTriggerOnClick}
+          >
+            {triggerContent}
+          </DropdownTrigger>
         );
       }
       return null;
@@ -236,34 +227,15 @@ class Dropdown extends React.Component<Props, State> {
           dropdownMenuClassName,
         } = this.props;
         return (
-          <Popper
-            placement={position}
-            eventsEnabled={true}
-            positionFixed={false}
+          <DropdownMenu
+            position={position}
+            arrow={arrow}
+            arrowPosition={arrowPosition}
+            className={dropdownMenuClassName}
+            show={this.state.isOpen}
           >
-            {({
-              ref,
-              style,
-              placement,
-              arrowProps,
-              scheduleUpdate,
-            }: PopperChildrenProps) => {
-              scheduleUpdate();
-              return (
-                <DropdownMenu
-                  position={placement}
-                  arrow={arrow}
-                  arrowPosition={arrowPosition}
-                  className={dropdownMenuClassName}
-                  rootRef={ref}
-                  style={style}
-                  show={this.state.isOpen}
-                >
-                  {items}
-                </DropdownMenu>
-              );
-            }}
-          </Popper>
+            {items}
+          </DropdownMenu>
         );
       }
       return null;
