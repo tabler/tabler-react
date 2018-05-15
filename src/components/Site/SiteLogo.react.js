@@ -3,9 +3,9 @@
 import * as React from "react";
 
 type Props = {|
-  +href: string,
-  +src: string,
-  +alt: string,
+  +href?: string,
+  +src?: string,
+  +alt?: string,
 |};
 
 const SiteLogo = (props: Props): React.Node => (
