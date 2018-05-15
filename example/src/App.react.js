@@ -49,7 +49,7 @@ import {
 
 import "bootstrap";
 
-import "./App.css";
+import "./App.rtl.css";
 
 type Props = {||};
 
