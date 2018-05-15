@@ -54,13 +54,7 @@ function DropdownMenu({
   );
   return (
     <Popper placement={position} eventsEnabled={true} positionFixed={false}>
-      {({
-        ref,
-        style,
-        placement,
-        arrowProps,
-        scheduleUpdate,
-      }: PopperChildrenProps) => {
+      {({ ref, style, placement, scheduleUpdate }: PopperChildrenProps) => {
         scheduleUpdate();
         return (
           <div

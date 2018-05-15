@@ -70,8 +70,7 @@ class NavItem extends React.PureComponent<Props, State> {
       position = "bottom-start",
     }: Props = this.props;
 
-    const hasSubNav: boolean =
-      forcedHasSubNav || !!subItems || !!subItemsObjects;
+    const hasSubNav = forcedHasSubNav || !!subItems || !!subItemsObjects;
 
     const navLink =
       (typeof children === "string" || value) && hasSubNav ? (
