@@ -15,6 +15,10 @@ module.exports = {
       name: "Components",
       sections: [
         {
+          name: "Account Dropdown",
+          components: "src/components/AccountDropdown/**/*.react.{js,jsx}",
+        },
+        {
           name: "Alert",
           components: "src/components/Alert/**/*.react.{js,jsx}",
         },
