@@ -27,7 +27,7 @@ export type Props = {|
   /**
    * Show the DropdownMenu
    */
-  +show?: boolean,
+  show?: boolean,
 |};
 
 /**
