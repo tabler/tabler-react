@@ -148,7 +148,8 @@ class Dropdown extends React.Component<Props, State> {
   static Item = DropdownItem;
   static ItemDivider = DropdownItemDivider;
 
-  _handleTriggerOnClick = () => {
+  _handleTriggerOnClick = (e: SyntheticMouseEvent<HTMLElement>) => {
+    e.preventDefault();
     this.setState(s => ({ isOpen: !s.isOpen }));
   };
 

@@ -38,7 +38,9 @@ type Props = {|
   /**
    * Handle the onClick of this trigger
    */
-  +onClick?: () => void,
+  +onClick?: (
+    e: SyntheticMouseEvent<HTMLInputElement> | SyntheticMouseEvent<HTMLElement>
+  ) => void,
   +rootRef?: (?HTMLElement) => void,
 |};
 
