@@ -228,31 +228,34 @@ By default a Button will render a <button>, you can change this with the RootCom
 
 ```jsx
 <Button.List>
-  <Dropdown>
-    <Dropdown.Trigger toggle color="secondary" icon="calendar" />
-    <Dropdown.Menu>
-      <Dropdown.Item>Dropdown Link</Dropdown.Item>
-      <Dropdown.Item>Dropdown Link</Dropdown.Item>
-    </Dropdown.Menu>
-  </Dropdown>
-  <Dropdown>
-    <Dropdown.Trigger color="secondary" icon="calendar">
-      Show Calendar
-    </Dropdown.Trigger>
-    <Dropdown.Menu>
-      <Dropdown.Item>Dropdown Link</Dropdown.Item>
-      <Dropdown.Item>Dropdown Link</Dropdown.Item>
-    </Dropdown.Menu>
-  </Dropdown>
-  <Dropdown>
-    <Dropdown.Trigger color="primary" toggle>
-      Show Calendar
-    </Dropdown.Trigger>
-    <Dropdown.Menu>
-      <Dropdown.Item>Dropdown Link</Dropdown.Item>
-      <Dropdown.Item>Dropdown Link</Dropdown.Item>
-    </Dropdown.Menu>
-  </Dropdown>
+  <Dropdown
+    type="button"
+    toggle
+    color="secondary"
+    icon="calendar"
+    items={[
+      <Dropdown.Item>Dropdown Link</Dropdown.Item>,
+      <Dropdown.Item>Dropdown Link</Dropdown.Item>,
+    ]}
+  />
+  <Dropdown
+    value="Show Calendar"
+    color="secondary"
+    icon="calendar"
+    items={[
+      <Dropdown.Item>Dropdown Link</Dropdown.Item>,
+      <Dropdown.Item>Dropdown Link</Dropdown.Item>,
+    ]}
+  />
+  <Dropdown
+    value="Show Calendar"
+    color="primary"
+    toggle
+    items={[
+      <Dropdown.Item>Dropdown Link</Dropdown.Item>,
+      <Dropdown.Item>Dropdown Link</Dropdown.Item>,
+    ]}
+  />
 </Button.List>
 ```
 
