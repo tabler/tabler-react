@@ -169,7 +169,7 @@ class Dropdown extends React.Component<Props, State> {
 
     const trigger = (() => {
       if (this.props.trigger) return this.props.trigger;
-      if (this.props.icon || this.props.triggerContent) {
+      if (this.props.icon || this.props.triggerContent || this.props.toggle) {
         const {
           icon,
           triggerContent,
