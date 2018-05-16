@@ -15,6 +15,10 @@ module.exports = {
       name: "Components",
       sections: [
         {
+          name: "Account Dropdown",
+          components: "src/components/AccountDropdown/**/*.react.{js,jsx}",
+        },
+        {
           name: "Alert",
           components: "src/components/Alert/**/*.react.{js,jsx}",
         },
@@ -85,6 +89,10 @@ module.exports = {
         {
           name: "Nav",
           components: "src/components/Nav/**/*.react.{js,jsx}",
+        },
+        {
+          name: "Notification",
+          components: "src/components/Notification/**/*.react.{js,jsx}",
         },
         {
           name: "Page",

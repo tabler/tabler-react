@@ -1,5 +1,6 @@
 // @flow
 
+export { default as AccountDropdown } from "./AccountDropdown";
 export { default as Alert } from "./Alert";
 export { default as Avatar } from "./Avatar";
 export { default as Badge } from "./Badge";
@@ -18,6 +19,7 @@ export { default as Loader } from "./Loader";
 export { default as List } from "./List";
 export { default as Media } from "./Media";
 export { default as Nav } from "./Nav";
+export { default as Notification } from "./Notification";
 export { default as Page } from "./Page";
 export { default as PricingCard } from "./PricingCard";
 export { default as Profile } from "./Profile";

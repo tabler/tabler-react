@@ -4,6 +4,9 @@ import * as React from "react";
 import cn from "classnames";
 import { Button, Icon } from "../";
 
+import { Reference } from "react-popper";
+import type { ReferenceChildrenProps } from "react-popper";
+
 type Props = {|
   +children?: React.Node,
   +className?: string,
@@ -78,20 +81,28 @@ function DropdownTrigger({
   );
 
   return type === "link" ? (
-    <a className={classes} onClick={onClick} ref={rootRef}>
-      {childrenFragment}
-    </a>
+    <Reference>
+      {({ ref }: ReferenceChildrenProps) => (
+        <a className={classes} onClick={onClick} ref={ref}>
+          {childrenFragment}
+        </a>
+      )}
+    </Reference>
   ) : (
-    <Button
-      className={classes}
-      color={color}
-      isDropdownToggle
-      isOption={isOption}
-      onClick={onClick}
-      rootRef={rootRef}
-    >
-      {childrenFragment}
-    </Button>
+    <Reference>
+      {({ ref }: ReferenceChildrenProps) => (
+        <Button
+          className={classes}
+          color={color}
+          isDropdownToggle
+          isOption={isOption}
+          onClick={onClick}
+          rootRef={ref}
+        >
+          {childrenFragment}
+        </Button>
+      )}
+    </Reference>
   );
 }
 
