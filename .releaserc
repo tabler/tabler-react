@@ -1,0 +1,10 @@
+{
+  "release": {
+  "verifyConditions": ["@semantic-release/changelog", "@semantic-release/npm", "@semantic-release/git"],
+  "prepare": ["@semantic-release/changelog", "@semantic-release/npm", {
+    "path": "@semantic-release/git",
+    "message": "chore(release): ${nextRelease.version} --skip \n\n${nextRelease.notes}"
+  }],
+  "publish": ["@semantic-release/github"]
+  }
+}
