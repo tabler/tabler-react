@@ -49,7 +49,7 @@ type BtnInputComponent = {|
   +onClick?: (SyntheticMouseEvent<HTMLInputElement>) => mixed,
 |};
 
-type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
+export type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
 
 const Button = (props: Props): React.Node => {
   const {
