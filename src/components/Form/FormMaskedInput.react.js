@@ -4,7 +4,7 @@ import cn from "classnames";
 import MaskedInput from "react-text-mask";
 
 type Props = {|
-  +mask: ({ [string]: string }) => {} | Array<string>,
+  +mask: Array<string | RegExp>,
   +className?: string,
   +placeholder?: string,
   +guide?: boolean,

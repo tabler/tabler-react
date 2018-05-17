@@ -17,7 +17,7 @@ type optionsType = Array<defaultOptionType | itemObject>;
 
 type defaultOptionsType = { [defaultOptionType]: itemObject };
 
-type Props = {|
+export type Props = {|
   +avatarURL?: string,
   +name?: string,
   +description?: string,
