@@ -1,5 +1,7 @@
 # Tabler React
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tabler/tabler-react.svg)](https://greenkeeper.io/)
+
 > React implementation of the [Tabler Dashboard UI Kit](https://github.com/tabler/tabler)
 
 [![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg)
