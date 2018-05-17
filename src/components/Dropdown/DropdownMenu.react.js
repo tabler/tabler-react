@@ -10,7 +10,7 @@ import type { Style } from "typed-styles";
 type StyleOffsets = { top: number, left: number };
 type StylePosition = { position: "absolute" | "fixed" };
 
-type Props = {|
+export type Props = {|
   +children?: React.Node,
   +className?: string,
   +position?: Placement,
@@ -27,7 +27,7 @@ type Props = {|
   /**
    * Show the DropdownMenu
    */
-  +show?: boolean,
+  show?: boolean,
 |};
 
 /**

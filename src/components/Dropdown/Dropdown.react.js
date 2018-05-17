@@ -151,12 +151,13 @@ class Dropdown extends React.Component<Props, State> {
   static Item = DropdownItem;
   static ItemDivider = DropdownItemDivider;
 
-  _handleTriggerOnClick = () => {
+  _handleTriggerOnClick = (e: SyntheticMouseEvent<HTMLElement>) => {
+    e.preventDefault();
     this.setState(s => ({ isOpen: !s.isOpen }));
   };
 
   render(): React.Node {
-    const { className, children, desktopOnly, isOption }: Props = this.props;
+    const { className, children, desktopOnly, isOption, ...props } = this.props;
 
     const classes = cn(
       {
@@ -170,8 +171,8 @@ class Dropdown extends React.Component<Props, State> {
     );
 
     const trigger = (() => {
-      if (this.props.trigger) return this.props.trigger;
-      if (this.props.icon || this.props.triggerContent) {
+      if (props.trigger) return props.trigger;
+      if (props.icon || props.triggerContent || props.toggle) {
         const {
           icon,
           triggerContent,
@@ -180,7 +181,7 @@ class Dropdown extends React.Component<Props, State> {
           triggerClassName,
           color,
           toggle,
-        } = this.props;
+        } = props;
 
         return (
           <DropdownTrigger
@@ -201,9 +202,9 @@ class Dropdown extends React.Component<Props, State> {
     })();
 
     const items = (() => {
-      if (this.props.items) return this.props.items;
-      if (this.props.itemsObject) {
-        const { itemsObject, itemsRootComponent } = this.props;
+      if (props.items) return props.items;
+      if (props.itemsObject) {
+        const { itemsObject, itemsRootComponent } = props;
         return itemsObject.map(
           (item, i) =>
             item.isDivider ? (
@@ -225,13 +226,8 @@ class Dropdown extends React.Component<Props, State> {
     })();
 
     const menu = (() => {
-      if (this.props.items || this.props.itemsObject) {
-        const {
-          position,
-          arrow,
-          arrowPosition,
-          dropdownMenuClassName,
-        } = this.props;
+      if (props.items || props.itemsObject) {
+        const { position, arrow, arrowPosition, dropdownMenuClassName } = props;
         return (
           <DropdownMenu
             position={position}
