@@ -13,7 +13,8 @@
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c && flow-copy-source -v src dist",
     "start": "rollup -c -w",
-    "prepare": "yarn run build",
+    "prepare":
+      "yarn run build && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "precommit":

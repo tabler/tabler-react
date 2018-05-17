@@ -4,12 +4,20 @@ module.exports = {
   getExampleFilename(componentPath) {
     return componentPath.replace(/\.react.js?$/, ".examples.md");
   },
-  require: ["./example/src/App.css"],
+  require: ["./src/Tabler.css"],
   styleguideDir: "./example/public/documentation",
   sections: [
     {
       name: "Introduction",
       content: "docs/Introduction.md",
+    },
+    {
+      name: "Styles",
+      content: "docs/Styles.md",
+    },
+    {
+      name: "RTL",
+      content: "docs/RTL.md",
     },
     {
       name: "Components",

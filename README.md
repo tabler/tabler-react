@@ -19,6 +19,8 @@ Make sure you have [Node.js](https://nodejs.org/) 8+ and [npm](https://npmjs.com
 ```jsx
 import React, { Component } from "react";
 
+import "tabler-react/dist/Tabler.css";
+
 import { Card, Button } from "tabler-react";
 
 class MyCard extends Component {
