@@ -12,6 +12,7 @@ type Props = {|
   +disabled?: boolean,
   +rows?: number,
   +children?: string,
+  +onChange?: (event: SyntheticInputEvent<HTMLTextAreaElement>) => void,
 |};
 
 function FormTextarea({
@@ -23,6 +24,7 @@ function FormTextarea({
   disabled,
   rows,
   children,
+  onChange,
 }: Props): React.Node {
   const classes = cn("form-control", className);
   return (
@@ -34,6 +36,7 @@ function FormTextarea({
       value={value || children}
       disabled={disabled}
       rows={rows}
+      onChange={onChange}
     />
   );
 }
