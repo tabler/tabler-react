@@ -8,11 +8,11 @@ import type { Props as DropdownMenuProps } from "../Dropdown/DropdownMenu.react"
 
 import type { ReferenceChildrenProps } from "react-popper";
 
-type Props = ButtonProps & {|
+type Props = ButtonProps & {
   +value?: string,
   +children?: React.Node,
   +dropdownProps?: DropdownMenuProps,
-|};
+};
 
 type State = {
   isOpen: boolean,
