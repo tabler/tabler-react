@@ -143,6 +143,10 @@ module.exports = {
           components: "src/components/StoreCard/**/*.react.{js,jsx}",
         },
         {
+          name: "TabbedCard",
+          components: "src/components/{TabbedCard,Tabs}/**/*.react.{js,jsx}",
+        },
+        {
           name: "Table",
           components: "src/components/Table/**/*.react.{js,jsx}",
         },
