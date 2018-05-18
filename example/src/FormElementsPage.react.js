@@ -160,13 +160,12 @@ function FormElements() {
                   <Form.Input />
                   <Form.InputGroup append>
                     <Button color="primary">Actions</Button>
-                    <Button color="primary" isDropdownToggle />
-                    <Dropdown.Menu position="right">
+                    <Button.Dropdown color="primary">
                       <Dropdown.Item>News</Dropdown.Item>
                       <Dropdown.Item>Messages</Dropdown.Item>
                       <Dropdown.ItemDivider />
                       <Dropdown.Item>Edit Profile</Dropdown.Item>
-                    </Dropdown.Menu>
+                    </Button.Dropdown>
                   </Form.InputGroup>
                 </Form.InputGroup>
               </Form.Group>
