@@ -14,4 +14,5 @@ function TabbedContainer(props: Props): React.Node {
   return tabs.filter(tab => tab.props.title === props.selectedTitle);
 }
 
+/** @component */
 export default TabbedContainer;

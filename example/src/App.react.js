@@ -49,7 +49,7 @@ import {
 
 import "bootstrap";
 
-import "./App.css";
+import "tabler-react/dist/Tabler.css";
 
 type Props = {||};
 

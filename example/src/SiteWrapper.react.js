@@ -3,17 +3,7 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 
-import {
-  Page,
-  Site,
-  Button,
-  Nav,
-  Dropdown,
-  Avatar,
-  Grid,
-  Text,
-  Icon,
-} from "tabler-react";
+import { Site } from "tabler-react";
 
 type Props = {|
   +children: React.Node,
@@ -96,154 +86,67 @@ const navBarItems: Array<navItem> = [
   },
 ];
 
+const notificationsObjects = [
+  {
+    avatarURL: "demo/faces/male/41.jpg",
+    message: (
+      <React.Fragment>
+        <strong>Nathan</strong> pushed new commit: Fix page load performance
+        issue.
+      </React.Fragment>
+    ),
+    time: "10 minutes ago",
+  },
+  {
+    avatarURL: "demo/faces/female/1.jpg",
+    message: (
+      <React.Fragment>
+        <strong>Alice</strong> started new task: Tabler UI design.
+      </React.Fragment>
+    ),
+    time: "1 hour ago",
+  },
+  {
+    avatarURL: "demo/faces/female/18.jpg",
+    message: (
+      <React.Fragment>
+        <strong>Rose</strong> deployed new version of NodeJS REST Api // V3
+      </React.Fragment>
+    ),
+    time: "2 hours ago",
+  },
+];
+
+const accountDropdownProps = {
+  avatarURL: "./demo/faces/female/25.jpg",
+  name: "Jane Pearson",
+  description: "Administrator",
+  options: [
+    { icon: "user", value: "Profile" },
+    { icon: "settings", value: "Settings" },
+    { icon: "mail", value: "Inbox", badge: "6" },
+    { icon: "send", value: "Message" },
+    { isDivider: true },
+    { icon: "help-circle", value: "Need help?" },
+    { icon: "log-out", value: "Sign out" },
+  ],
+};
+
 class SiteWrapper extends React.Component<Props, void> {
   render(): React.Node {
     return (
-      <Page>
-        <Page.Main>
-          <Site.Header>
-            <Site.Logo
-              href={"/"}
-              alt="Tabler React"
-              src="./demo/brand/tabler.svg"
-            />
-            <div className="d-flex order-lg-2 ml-auto">
-              <Nav.Item type="div" className="d-none d-md-flex">
-                <Button
-                  href="https://github.com/tabler/tabler-react"
-                  target="_blank"
-                  outline
-                  size="sm"
-                  RootComponent="a"
-                  color="primary"
-                >
-                  Source code
-                </Button>
-              </Nav.Item>
-
-              <Dropdown
-                triggerContent={<span className="nav-unread" />}
-                isNavLink={true}
-                toggle={false}
-                icon="bell"
-                desktopOnly
-                items={
-                  <React.Fragment>
-                    <Dropdown.Item className="d-flex">
-                      <Avatar
-                        className="mr-3 align-self-center"
-                        imageURL="demo/faces/male/41.jpg"
-                      />
-                      <div>
-                        <strong>Nathan</strong> pushed new commit: Fix page load
-                        performance issue.
-                        <Text color="muted" size="small">
-                          10 minutes ago
-                        </Text>
-                      </div>
-                    </Dropdown.Item>
-                    <Dropdown.Item className=" d-flex">
-                      <Avatar
-                        className="mr-3 align-self-center"
-                        imageURL={"demo/faces/female/1.jpg"}
-                      />
-                      <div>
-                        <strong>Alice</strong> started new task: Tabler UI
-                        design.
-                        <Text color="muted" size="small">
-                          1 hour ago
-                        </Text>
-                      </div>
-                    </Dropdown.Item>
-                    <Dropdown.Item className="d-flex">
-                      <Avatar
-                        className="mr-3 align-self-center"
-                        imageURL={"demo/faces/female/18.jpg"}
-                      />
-                      <div>
-                        <strong>Rose</strong> deployed new version of NodeJS
-                        REST Api V3
-                        <Text color="muted" size="small">
-                          2 hours ago
-                        </Text>
-                      </div>
-                    </Dropdown.Item>
-                    <Dropdown.ItemDivider />
-                    <Dropdown.Item className="text-center text-muted-dark">
-                      Mark all as read
-                    </Dropdown.Item>
-                  </React.Fragment>
-                }
-                position="bottom-end"
-                arrow={true}
-                arrowPosition="right"
-              />
-
-              <Dropdown
-                isNavLink
-                triggerClassName="pr-0 leading-none"
-                triggerContent={
-                  <React.Fragment>
-                    <Avatar imageURL={"./demo/faces/female/25.jpg"} />
-                    <span className="ml-2 d-none d-lg-block">
-                      <span className="text-default">Jane Pearson</span>
-                      <small className="text-muted d-block mt-1">
-                        Administrator
-                      </small>
-                    </span>
-                  </React.Fragment>
-                }
-                position="bottom-end"
-                arrow={true}
-                arrowPosition="right"
-                toggle={false}
-                itemsObject={[
-                  { icon: "user", value: "Profile" },
-                  { icon: "settings", value: "Settings" },
-                  { icon: "mail", value: "Inbox", badge: "6" },
-                  { icon: "send", value: "Message" },
-                  { isDivider: true },
-                  { icon: "help-circle", value: "Need help?" },
-                  { icon: "log-out", value: "Sign out" },
-                ]}
-              />
-            </div>
-            <a
-              className="header-toggler d-lg-none ml-3 ml-lg-0"
-              data-toggle="collapse"
-              data-target="#headerMenuCollapse"
-            >
-              <span className="header-toggler-icon" />
-            </a>
-          </Site.Header>
-          <Site.Nav>
-            <Grid.Row className="align-items-center">
-              <Grid.Col lg={3} className="ml-auto">
-                <form className="input-icon my-3 my-lg-0">
-                  <input
-                    type="search"
-                    className="form-control header-search"
-                    placeholder="Search&hellip;"
-                    tabIndex="1"
-                  />
-                  <div className="input-icon-addon">
-                    <Icon prefix="fe" name="search" />
-                  </div>
-                </form>
-              </Grid.Col>
-              <Grid.Col className="col-lg order-lg-first">
-                <Nav
-                  tabbed
-                  className="border-0 flex-column flex-lg-row"
-                  itemsObjects={navBarItems}
-                />
-              </Grid.Col>
-            </Grid.Row>
-          </Site.Nav>
-          {this.props.children}
-        </Page.Main>
-        <Site.Footer />
-      </Page>
+      <Site.Wrapper
+        headerProps={{
+          href: "/",
+          alt: "Tabler React",
+          imageURL: "./demo/brand/tabler.svg",
+          notificationsTray: { notificationsObjects },
+          accountDropdown: accountDropdownProps,
+        }}
+        navProps={{ itemsObjects: navBarItems }}
+      >
+        {this.props.children}
+      </Site.Wrapper>
     );
   }
 }

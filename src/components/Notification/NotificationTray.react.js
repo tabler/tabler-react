@@ -3,7 +3,7 @@ import * as React from "react";
 import { Notification, Dropdown } from "../";
 import type { Props as NotificationProps } from "./Notification.react";
 
-type Props = {|
+export type Props = {|
   /**
    * Notification components
    */

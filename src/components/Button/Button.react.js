@@ -4,6 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 import { Icon } from "../";
 import ButtonList from "./ButtonList.react";
+import ButtonDropdown from "./ButtonDropdown.react";
 
 type PropsForAll = {|
   +size?: "sm" | "lg",
@@ -49,7 +50,7 @@ type BtnInputComponent = {|
   +onClick?: (SyntheticMouseEvent<HTMLInputElement>) => mixed,
 |};
 
-type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
+export type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
 
 const Button = (props: Props): React.Node => {
   const {
@@ -160,5 +161,6 @@ const Button = (props: Props): React.Node => {
 };
 
 Button.List = ButtonList;
+Button.Dropdown = ButtonDropdown;
 
 export default Button;
