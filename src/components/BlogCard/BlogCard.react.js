@@ -41,11 +41,7 @@ function BlogCard({
   return !aside ? (
     <Card>
       <a href={postHref}>
-        <img
-          className="card-img-top"
-          src={imgSrc}
-          alt="And this isn't my nose. This is a false one."
-        />
+        <img className="card-img-top" src={imgSrc} alt={imgAlt} />
       </a>
       <Card.Body className="d-flex flex-column">
         <h4>
