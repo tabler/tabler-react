@@ -2,7 +2,7 @@
   "groups": {
     "default": {
       "packages": ["example/package.json", "package.json"],
-      "ignore": ["webkit"]
+      "ignore": ["webkit", "eslint-plugin-jsx-a11y"]
     }
   }
 }
