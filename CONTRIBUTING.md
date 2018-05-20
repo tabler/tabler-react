@@ -1,28 +1,30 @@
 # Contributing
 
-Thanks for getting involved, we really appreciate the help! Before you get going please have a read of the below...
+Thanks for getting involved, we really appreciate the help!
 
 ## Commit Guidelines
 
-Please structure your commit messages going by the [AngularJS commit message convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines), also known as [conventional-changelog](https://github.com/ajoslin/conventional-changelog). You can install [commitizen](https://github.com/commitizen/cz-cli) to help, just follow their default setup instructions.
+Please structure your commit messages going by the [AngularJS commit message convention](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines), also known as [conventional-changelog](https://github.com/ajoslin/conventional-changelog).
+
+We're using [commitlint](https://github.com/marionebl/commitlint) to help enforce these guidelines, you can install [commitizen](https://github.com/commitizen/cz-cli) to help, just follow their default setup instructions.
 
 Examples:
 
-| Commit Message                                                                                                      | Version Change |
-| ------------------------------------------------------------------------------------------------------------------- | -------------- |
-| feat(Card): A new feature                                                                                           | **Minor**      |
-| fix(Button): A bug fix                                                                                              | **Patch**      |
-| docs(Header): Documentation only changes                                                                            | None           |
-| style(Nav): Changes that do not affect the meaning of the code (white-space, for matting, missing semi-colons, etc) | None           |
-| refactor(Form): A code change that neither fixes a bug nor adds a feature                                           | None           |
-| perf(): A code change that improves performance                                                                     | None           |
-| test(): Adding missing tests or correcting existing tests                                                           | None           |
-| build(): Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)        | None           |
-| ci(): Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)   | None           |
-| chore(): Other changes that don't modify src or test files                                                          | None           |
-| revert(): Reverts a previous commit                                                                                 | None           |
+| Commit Message                                                                                                             | Version Change |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| feat(Card): A new feature                                                                                                  | **Minor**      |
+| fix(Button): A bug fix                                                                                                     | **Patch**      |
+| docs(Header): Documentation only changes                                                                                   | None           |
+| style(Nav): Changes that do not affect the meaning of the code (white-space, for matting, missing semi-colons, etc)        | None           |
+| refactor(Form): A code change that neither fixes a bug nor adds a feature                                                  | None           |
+| perf(Alert): A code change that improves performance                                                                       | None           |
+| test(Dropdown): Adding missing tests or correcting existing tests                                                          | None           |
+| build(webpack): Changes that affect the build system or external dependencies (example scopes: webpack, greenkeeper,, npm) | None           |
+| ci(buddy): Changes to our CI configuration files and scripts (example scopes: buddy, semantic-release)                     | None           |
+| chore(package): Other changes that don't modify src or test files                                                          | None           |
+| revert(#123): Reverts a previous commit                                                                                    | None           |
 
-##### Breaking changes
+##### Breaking changes / Major Version
 
 If your change breaks anything a new major version should be released.
 To do this your commit body needs to include 'BREAKING CHANGE:'. If you are using commitizen you will be asked about breaking changes during your commit.
