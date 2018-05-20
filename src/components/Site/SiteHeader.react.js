@@ -1,14 +1,7 @@
 // @flow
 
 import * as React from "react";
-import {
-  Container,
-  Site,
-  Nav,
-  Button,
-  Notification,
-  AccountDropdown,
-} from "../";
+import { Container, Site, Notification, AccountDropdown } from "../";
 import type { Props as NotificationTrayProps } from "../Notification/NotificationTray.react";
 import type { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown.react";
 
@@ -31,6 +24,7 @@ export type Props = {|
    */
   +notificationsTray?: NotificationTrayProps,
   +accountDropdown?: AccountDropdownProps,
+  +navItems?: React.Node,
 |};
 
 /**
@@ -44,6 +38,7 @@ const SiteHeader = ({
   alt,
   notificationsTray: notificationsTrayFromProps,
   accountDropdown: accountDropdownFromProps,
+  navItems,
 }: Props): React.Node => {
   const notificationsTray =
     notificationsTrayFromProps &&
@@ -61,19 +56,7 @@ const SiteHeader = ({
             <React.Fragment>
               <Site.Logo href={href} alt={alt} src={imageURL} />
               <div className="d-flex order-lg-2 ml-auto">
-                <Nav.Item type="div" className="d-none d-md-flex">
-                  <Button
-                    href="https://github.com/tabler/tabler-react"
-                    target="_blank"
-                    outline
-                    size="sm"
-                    RootComponent="a"
-                    color="primary"
-                  >
-                    Source code
-                  </Button>
-                </Nav.Item>
-
+                {navItems}
                 {notificationsTray}
                 {accountDropdown}
               </div>
