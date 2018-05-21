@@ -107,6 +107,10 @@
     lodash.pick "4.4.0"
     meow "4.0.0"
 
+"@commitlint/config-conventional@^6.1.3":
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-6.1.3.tgz#6c06eeae04c5ac789c3618df4d52aeda89ffb810"
+
 "@commitlint/ensure@^6.1.3":
   version "6.1.3"
   resolved "https://registry.yarnpkg.com/@commitlint/ensure/-/ensure-6.1.3.tgz#813b58c9fdfae15351b72fe646a162ebdb71ea2a"
@@ -8261,9 +8265,9 @@ rollup-pluginutils@^2.0.1:
     estree-walker "^0.3.0"
     micromatch "^2.3.11"
 
-rollup@0.59.1:
-  version "0.59.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.59.1.tgz#86cbceaecd861df1317a0aa29207173de23e6a5d"
+rollup@0.59.2:
+  version "0.59.2"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.59.2.tgz#37011ed83947e4e1071b66f9e7d0574b144affc9"
   dependencies:
     "@types/estree" "0.0.39"
     "@types/node" "*"
