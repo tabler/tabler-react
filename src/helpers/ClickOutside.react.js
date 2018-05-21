@@ -13,11 +13,11 @@ type Props = {|
 class ClickOutside extends React.PureComponent<Props, void> {
   elementRef: ?HTMLElement;
 
-  componentDidMount = () => {
+  componentDidMount = (): void => {
     document.addEventListener("mousedown", this.handleOutsideOnClick, false);
   };
 
-  componentWillUnmount = () => {
+  componentWillUnmount = (): void => {
     document.removeEventListener("mousedown", this.handleOutsideOnClick, false);
   };
 
@@ -32,7 +32,6 @@ class ClickOutside extends React.PureComponent<Props, void> {
 
   handleOutsideOnClick: MouseEventListener = ({ target }) => {
     if (this.isOutsideClick(target)) this.props.onOutsideClick();
-    return;
   };
 
   render() {
