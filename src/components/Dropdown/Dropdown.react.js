@@ -7,6 +7,8 @@ import DropdownMenu from "./DropdownMenu.react";
 import DropdownItem from "./DropdownItem.react";
 import DropdownItemDivider from "./DropdownItemDivider.react";
 
+import ClickOutside from "../../helpers/ClickOutside.react";
+
 import { Manager } from "react-popper";
 
 import type { Placement } from "react-popper";
@@ -245,10 +247,14 @@ class Dropdown extends React.Component<Props, State> {
 
     return (
       <Manager>
-        <div className={classes}>
-          {trigger}
-          {menu || children}
-        </div>
+        <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
+          {({ setElementRef }) => (
+            <div className={classes} ref={setElementRef}>
+              {trigger}
+              {menu || children}
+            </div>
+          )}
+        </ClickOutside>
       </Manager>
     );
   }

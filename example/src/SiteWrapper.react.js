@@ -3,7 +3,7 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 
-import { Site, Grid, List, Button } from "tabler-react";
+import { Site, Nav, Grid, List, Button } from "tabler-react";
 
 type Props = {|
   +children: React.Node,
@@ -140,6 +140,20 @@ class SiteWrapper extends React.Component<Props, void> {
           href: "/",
           alt: "Tabler React",
           imageURL: "./demo/brand/tabler.svg",
+          navItems: (
+            <Nav.Item type="div" className="d-none d-md-flex">
+              <Button
+                href="https://github.com/tabler/tabler-react"
+                target="_blank"
+                outline
+                size="sm"
+                RootComponent="a"
+                color="primary"
+              >
+                Source code
+              </Button>
+            </Nav.Item>
+          ),
           notificationsTray: { notificationsObjects },
           accountDropdown: accountDropdownProps,
         }}

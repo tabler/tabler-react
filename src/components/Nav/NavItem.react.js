@@ -4,6 +4,7 @@ import cn from "classnames";
 import Nav from "../Nav";
 import Dropdown from "../Dropdown";
 import type { subNavItem } from "./Nav.react";
+import ClickOutside from "../../helpers/ClickOutside.react";
 
 import { Manager, Reference } from "react-popper";
 import type { Placement, ReferenceChildrenProps } from "react-popper";
@@ -132,13 +133,29 @@ class NavItem extends React.PureComponent<Props, State> {
 
     const wrappedChildren =
       type === "div" ? (
-        <div className={wrapperClasses} onClick={this._handleOnClick}>
-          {childrenForAll}
-        </div>
+        <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
+          {({ setElementRef }) => (
+            <div
+              className={wrapperClasses}
+              onClick={this._handleOnClick}
+              ref={setElementRef}
+            >
+              {childrenForAll}
+            </div>
+          )}
+        </ClickOutside>
       ) : (
-        <li className={wrapperClasses} onClick={this._handleOnClick}>
-          {childrenForAll}
-        </li>
+        <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
+          {({ setElementRef }) => (
+            <li
+              className={wrapperClasses}
+              onClick={this._handleOnClick}
+              ref={setElementRef}
+            >
+              {childrenForAll}
+            </li>
+          )}
+        </ClickOutside>
       );
 
     return hasSubNav ? <Manager>{wrappedChildren}</Manager> : wrappedChildren;
