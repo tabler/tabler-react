@@ -169,8 +169,8 @@ class SiteWrapper extends React.Component<Props, void> {
             <a>Seventh Link</a>,
             <a>Eigth Link</a>,
           ],
-          note: `Premium and Open Source dashboard template with responsive and high
-        quality UI. For Free!`,
+          note:
+            "Premium and Open Source dashboard template with responsive and high quality UI. For Free!",
           copyright: (
             <React.Fragment>
               Copyright © 2018
