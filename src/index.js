@@ -6,7 +6,26 @@ export {
 } from "./page_templates/StandaloneFormPage.react";
 export {
   default as DefaultErrorPage,
-} from "./page_templates/DefaultErrorPage.react";
+} from "./page_templates/errors/DefaultErrorPage.react";
+export {
+  default as Error400Page,
+} from "./page_templates/errors/Error400Page.react";
+export {
+  default as Error401Page,
+} from "./page_templates/errors/Error401Page.react";
+export {
+  default as Error403Page,
+} from "./page_templates/errors/Error403Page.react";
+export {
+  default as Error404Page,
+} from "./page_templates/errors/Error404Page.react";
+export {
+  default as Error500Page,
+} from "./page_templates/errors/Error500Page.react";
+export {
+  default as Error503Page,
+} from "./page_templates/errors/Error503Page.react";
+
 export { default as FormCard } from "./forms/FormCard.react";
 export { default as FormTextInput } from "./forms/FormTextInput.react";
 export { default as FormCheckboxInput } from "./forms/FormCheckboxInput.react";
