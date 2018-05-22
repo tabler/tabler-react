@@ -23,7 +23,11 @@ function DefaultErrorPage(props: Props): React.Node {
     return true;
   };
 
-  const { title, subtitle, details } = props;
+  const {
+    title = "Error",
+    subtitle = "Sorry an unkown error occurred",
+    details,
+  } = props;
   return (
     <Page className="text-center">
       <Container>
