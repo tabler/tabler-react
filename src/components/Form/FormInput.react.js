@@ -63,31 +63,25 @@ function FormInput(props: Props): React.Node {
     },
     className
   );
+
+  const allInputProps = {
+    name,
+    className: classes,
+    type,
+    placeholder,
+    value,
+    disabled,
+    readOnly,
+    onChange,
+    onBlur,
+  };
+
   return !icon ? (
     <React.Fragment>
       {type === "checkbox" || type === "radio" ? (
-        <input
-          name={name}
-          className={classes}
-          type={type}
-          placeholder={placeholder}
-          checked={checked}
-          value={value}
-          disabled={disabled}
-          readOnly={readOnly}
-          onChange={onChange}
-        />
+        <input {...allInputProps} checked={checked} />
       ) : (
-        <input
-          name={name}
-          className={classes}
-          type={type}
-          placeholder={placeholder}
-          value={value}
-          disabled={disabled}
-          readOnly={readOnly}
-          onChange={onChange}
-        />
+        <input {...allInputProps} />
       )}
       {feedback &&
         (invalid || cross) && (
@@ -101,16 +95,7 @@ function FormInput(props: Props): React.Node {
           <Icon name={icon} />
         </span>
       )}
-      <input
-        name={name}
-        className={classes}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        disabled={disabled}
-        readOnly={readOnly}
-        onChange={onChange}
-      />
+      <input {...allInputProps} />
       {position === "append" && (
         <span className="input-icon-addon">
           <Icon name={icon} />
