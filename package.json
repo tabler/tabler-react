@@ -11,10 +11,10 @@
   "scripts": {
     "test": "CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "rollup -c && flow-copy-source -v src dist",
-    "start": "rollup -c -w",
-    "prepare":
-      "yarn run build && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
+    "build":
+      "yarn run copytablercsstodist && rollup -c && flow-copy-source -v src dist",
+    "start": "yarn run copytablercsstodist && rollup -c -w",
+    "prepare": "yarn run build && yarn run copytablercsstodist",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "precommit":
@@ -23,7 +23,9 @@
     "lint": "eslint --ext .js src/**/*",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "copytablercsstodist":
+      "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"

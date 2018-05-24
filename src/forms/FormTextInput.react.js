@@ -8,6 +8,8 @@ type Props = {|
   +type?: "checkbox" | "text" | "email" | "password",
   +label: string,
   +placeHolder: string,
+  +onChange?: (SyntheticInputEvent<HTMLInputElement>) => void,
+  +onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
 |};
 
 type State = {|
@@ -25,12 +27,13 @@ class FormTextInput extends React.PureComponent<Props, State> {
 
   render(): React.Node {
     const type = this.props.type || "text";
-    const { label, placeHolder } = this.props;
+    const { label, placeHolder, onChange, onBlur } = this.props;
     const { value } = this.state;
     return (
       <Form.Group label={label}>
         <Form.Input
-          onChange={this._handleChange}
+          onChange={onChange || this._handleChange}
+          onBlur={onBlur}
           placeholder={placeHolder}
           type={type}
           value={value}

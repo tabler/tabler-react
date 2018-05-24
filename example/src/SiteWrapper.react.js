@@ -3,7 +3,7 @@
 import * as React from "react";
 import { NavLink } from "react-router-dom";
 
-import { Site, Nav, Button } from "tabler-react";
+import { Site, Nav, Grid, List, Button } from "tabler-react";
 
 type Props = {|
   +children: React.Node,
@@ -158,6 +158,60 @@ class SiteWrapper extends React.Component<Props, void> {
           accountDropdown: accountDropdownProps,
         }}
         navProps={{ itemsObjects: navBarItems }}
+        footerProps={{
+          links: [
+            <a>First Link</a>,
+            <a>Second Link</a>,
+            <a>Third Link</a>,
+            <a>Fourth Link</a>,
+            <a>Five Link</a>,
+            <a>Sixth Link</a>,
+            <a>Seventh Link</a>,
+            <a>Eigth Link</a>,
+          ],
+          note:
+            "Premium and Open Source dashboard template with responsive and high quality UI. For Free!",
+          copyright: (
+            <React.Fragment>
+              Copyright © 2018
+              <a href="."> Tabler-react</a>. Theme by
+              <a
+                href="https://codecalm.net"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
+                codecalm.net
+              </a>{" "}
+              All rights reserved.
+            </React.Fragment>
+          ),
+          nav: (
+            <React.Fragment>
+              <Grid.Col auto={true}>
+                <List className="list-inline list-inline-dots mb-0">
+                  <List.Item className="list-inline-item">
+                    <a href="./docs/index.html">Documentation</a>
+                  </List.Item>
+                  <List.Item className="list-inline-item">
+                    <a href="./faq.html">FAQ</a>
+                  </List.Item>
+                </List>
+              </Grid.Col>
+              <Grid.Col auto={true}>
+                <Button
+                  href="https://github.com/tabler/tabler-react"
+                  size="sm"
+                  outline
+                  color="primary"
+                  RootComponent="a"
+                >
+                  Source code
+                </Button>
+              </Grid.Col>
+            </React.Fragment>
+          ),
+        }}
       >
         {this.props.children}
       </Site.Wrapper>
