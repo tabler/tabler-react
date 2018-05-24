@@ -25,6 +25,7 @@ type FormStyle = {|
 type Props = {|
   ...FormStyle,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +placeholder?: string,
   +type?: "checkbox" | "radio" | "text" | "email" | "password",
   +value?: string | number | boolean,
@@ -45,6 +46,7 @@ function FormInput(props: Props): React.Node {
     value,
     checked,
     onChange,
+    onBlur,
     disabled,
     readOnly,
   } = props;
