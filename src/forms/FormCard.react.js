@@ -7,22 +7,30 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 
 type Props = {|
-  +action: string,
+  +action?: string,
   +children?: React.Node,
-  +method: string,
+  +method?: string,
   +title: string,
   +buttonText: string,
+  +onSubmit?: Function,
 |};
 
-function FormCard(props: Props): React.Node {
+function FormCard({
+  children,
+  action,
+  method,
+  onSubmit,
+  title,
+  buttonText,
+}: Props): React.Node {
   return (
-    <Form className="card">
+    <Form className="card" onSubmit={onSubmit} action={action} method={method}>
       <Card.Body className="p-6">
-        <Card.Title RootComponent="div">{props.title}</Card.Title>
-        {props.children}
+        <Card.Title RootComponent="div">{title}</Card.Title>
+        {children}
         <Form.Footer>
-          <Button color="primary" block={true}>
-            {props.buttonText}
+          <Button type="submit" color="primary" block={true}>
+            {buttonText}
           </Button>
         </Form.Footer>
       </Card.Body>
