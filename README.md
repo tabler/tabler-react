@@ -8,9 +8,9 @@
 
 ## Install
 
-Make sure you have [Node.js](https://nodejs.org/) 8+ and [npm](https://npmjs.com/) installed.
+Make sure you have [Node.js](https://nodejs.org/) 8+ and [yarn](https://yarnpkg.com) installed.
 
-`npm install --save tabler-react` or `yarn add tabler-react`
+`yarn add tabler-react`
 
 ## Example
 
@@ -51,8 +51,8 @@ The package is made up of 2 main folders:
 To setup and run a local copy:
 
 1.  Clone this repo with `git clone https://github.com/tabler/tabler-react`
-2.  Run `yarn` or `npm install` in the root folder
-3.  Run `yarn` or `npm install` in the example folder
+2.  Run `yarn install` in the root folder
+3.  Run `yarn install` in the example folder
 4.  In seperate terminal windows, run `yarn start` in the root and example folders.
 
 You should now be up and running with live browser reloading of the example website while you work on Tabler React components in the /src folder.
