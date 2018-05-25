@@ -4,7 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 import { Manager, Placement, Reference, Popper } from "react-popper";
 import type { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
-import styles from "./tooltip.css";
+import styles from "./Tooltip.css";
 
 type Props = {|
   +content: string,
