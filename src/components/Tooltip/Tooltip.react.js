@@ -35,7 +35,7 @@ class Tooltip extends React.Component<Props, State> {
 
     const classes = cn(
       "tooltip",
-      placement ? "bs-tooltip-" + placement : null,
+      placement && "bs-tooltip-" + placement,
       {
         show: this.state.isShown,
       },
@@ -57,7 +57,7 @@ class Tooltip extends React.Component<Props, State> {
             </div>
           )}
         </Reference>
-        {this.state.isShown ? (
+        {this.state.isShown && (
           <Popper placement={placement} eventsEnabled={true}>
             {({ ref, style, placement }: PopperChildrenProps) => {
               return (
@@ -73,7 +73,7 @@ class Tooltip extends React.Component<Props, State> {
               );
             }}
           </Popper>
-        ) : null}
+        )}
       </Manager>
     );
   }
