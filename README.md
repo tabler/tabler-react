@@ -2,15 +2,15 @@
 
 > React implementation of the [Tabler Dashboard UI Kit](https://github.com/tabler/tabler)
 
-[![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg) [![Greenkeeper badge](https://badges.greenkeeper.io/tabler/tabler-react.svg)](https://greenkeeper.io/)
+[![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg) [![Greenkeeper badge](https://badges.greenkeeper.io/tabler/tabler-react.svg)](https://greenkeeper.io/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 **[Demo](https://tabler.github.io/tabler-react/)** | **[Documentation](https://tabler.github.io/tabler-react/documentation/)** | **[Issues](https://github.com/tabler/tabler-react/issues)** | **[Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
 
 ## Install
 
-Make sure you have [Node.js](https://nodejs.org/) 8+ and [npm](https://npmjs.com/) installed.
+Make sure you have [Node.js](https://nodejs.org/) 8+ and [yarn](https://yarnpkg.com) installed.
 
-`npm install --save tabler-react` or `yarn add tabler-react`
+`yarn add tabler-react`
 
 ## Example
 
@@ -51,8 +51,8 @@ The package is made up of 2 main folders:
 To setup and run a local copy:
 
 1.  Clone this repo with `git clone https://github.com/tabler/tabler-react`
-2.  Run `yarn` or `npm install` in the root folder
-3.  Run `yarn` or `npm install` in the example folder
+2.  Run `yarn install` in the root folder
+3.  Run `yarn install` in the example folder
 4.  In seperate terminal windows, run `yarn start` in the root and example folders.
 
 You should now be up and running with live browser reloading of the example website while you work on Tabler React components in the /src folder.

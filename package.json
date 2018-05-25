@@ -1,6 +1,6 @@
 {
   "name": "tabler-react",
-  "version": "0.0.8",
+  "version": "1.5.1",
   "description": "",
   "author": "jonthomp and AaronCoplan",
   "license": "MIT",
@@ -25,7 +25,8 @@
     "styleguide:build": "styleguidist build",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "copytablercsstodist":
-      "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/"
+      "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
+    "cm": "git-cz"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
@@ -51,6 +52,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
     "empty": "^0.10.1",
     "eslint": "^4.1.1",
     "eslint-config-react-app": "^2.1.0",
@@ -58,7 +61,7 @@
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "flow-bin": "^0.73.0",
+    "flow-bin": "^0.72.0",
     "flow-copy-source": "^1.3.0",
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
@@ -68,7 +71,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "^1.1.1",
-    "rollup": "0.59.3",
+    "rollup": "0.59.1",
     "rollup-plugin-babel": "3.0.4",
     "rollup-plugin-commonjs": "9.1.3",
     "rollup-plugin-node-resolve": "3.3.0",
@@ -77,5 +80,10 @@
     "rollup-plugin-url": "1.4.0",
     "typed-styles": "^0.0.5"
   },
-  "files": ["dist"]
+  "files": ["dist"],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
