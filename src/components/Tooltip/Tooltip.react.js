@@ -4,6 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 import { Manager, Placement, Reference, Popper } from "react-popper";
 import type { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
+import styles from "./tooltip.css";
 
 type Props = {|
   +content: string,
@@ -41,6 +42,8 @@ class Tooltip extends React.Component<Props, State> {
       className
     );
 
+    const arrowClasses = cn("arrow", styles["tbr-arrow"]);
+
     return (
       <Manager>
         <Reference>
@@ -64,7 +67,7 @@ class Tooltip extends React.Component<Props, State> {
                   style={style}
                   ref={ref}
                 >
-                  {/* <div className="arrow tbr-arrow" /> */}
+                  <div className={arrowClasses} />
                   <div className="tooltip-inner">{content}</div>
                 </div>
               );

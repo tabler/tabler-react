@@ -1,0 +1,5 @@
+/* Tooltip-specific Stylesheet */
+
+.tbr-arrow {
+  left: calc(50% - 0.4rem);
+}
