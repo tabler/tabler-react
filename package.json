@@ -25,7 +25,8 @@
     "styleguide:build": "styleguidist build",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "copytablercsstodist":
-      "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/"
+      "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
+    "cm": "git-cz"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
@@ -51,6 +52,8 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
     "empty": "^0.10.1",
     "eslint": "^4.1.1",
     "eslint-config-react-app": "^2.1.0",
@@ -77,5 +80,10 @@
     "rollup-plugin-url": "1.4.0",
     "typed-styles": "^0.0.5"
   },
-  "files": ["dist"]
+  "files": ["dist"],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
