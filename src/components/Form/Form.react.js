@@ -32,11 +32,29 @@ import FormDatePicker from "./FormDatePicker.react";
 type Props = {|
   +children?: React.Node,
   +className?: string,
+  +action?: string,
+  +method?: string,
+  +onSubmit?: Function,
 |};
 
-function Form({ className, children }: Props): React.Node {
+function Form({
+  className,
+  children,
+  action,
+  method,
+  onSubmit,
+}: Props): React.Node {
   const classes = cn(className);
-  return <form className={classes}>{children}</form>;
+  return (
+    <form
+      className={classes}
+      onSubmit={onSubmit}
+      action={action}
+      method={method}
+    >
+      {children}
+    </form>
+  );
 }
 
 Form.Group = FormGroup;

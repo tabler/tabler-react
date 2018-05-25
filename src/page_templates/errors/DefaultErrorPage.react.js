@@ -2,15 +2,15 @@
 
 import * as React from "react";
 
-import Container from "../components/Container.react";
-import Page from "../components/Page/Page.react";
-import Header from "../components/Header/Header.react";
-import Icon from "../components/Icon/Icon.react";
-import Button from "../components/Button/Button.react";
+import Container from "../../components/Container.react";
+import Page from "../../components/Page/Page.react";
+import Header from "../../components/Header/Header.react";
+import Icon from "../../components/Icon/Icon.react";
+import Button from "../../components/Button/Button.react";
 
-type Props = {|
-  +title: string,
-  +subtitle: string,
+export type Props = {|
+  +title?: string,
+  +subtitle?: string,
   +details?: string,
 |};
 
@@ -23,7 +23,11 @@ function DefaultErrorPage(props: Props): React.Node {
     return true;
   };
 
-  const { title, subtitle, details } = props;
+  const {
+    title = "Error",
+    subtitle = "Sorry an unkown error occurred",
+    details,
+  } = props;
   return (
     <Page className="text-center">
       <Container>

@@ -1,12 +1,10 @@
-> Please note: we're working fast towards [version 1.0](https://github.com/tabler/tabler-react/milestone/1) and until then all releases should be considered unstable and potentially breaking
-
 **[Demo](https://tabler.github.io/tabler-react/)** | **[Issues](https://github.com/tabler/tabler-react/issues)** | **[Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
 
 ## Install
 
-Make sure you have [Node.js](https://nodejs.org/) 8+ and [npm](https://npmjs.com/) installed.
+Make sure you have [Node.js](https://nodejs.org/) 8+ and [yarn](https://yarnpkg.com) installed.
 
-`npm install --save tabler-react` or `yarn add tabler-react`
+`yarn add tabler-react`
 
 ## Basic Usage Example
 

@@ -160,5 +160,14 @@ module.exports = {
         },
       ],
     },
+    {
+      name: "Page Templates",
+      sections: [
+        {
+          name: "Errors",
+          components: "src/page_templates/errors/**/*.react.{js,jsx}",
+        },
+      ],
+    },
   ],
 };

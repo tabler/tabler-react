@@ -13,6 +13,7 @@ type FormStyle = {|
   +invalid?: boolean,
   +cross?: boolean,
   +feedback?: string,
+  +error?: string,
   +type?: string,
   +placeholder?: string,
   +name?: string,
@@ -25,6 +26,7 @@ type FormStyle = {|
 type Props = {|
   ...FormStyle,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +placeholder?: string,
   +type?: "checkbox" | "radio" | "text" | "email" | "password",
   +value?: string | number | boolean,
@@ -40,11 +42,12 @@ function FormInput(props: Props): React.Node {
     tick,
     invalid,
     cross,
-    feedback,
+    error,
     placeholder,
     value,
     checked,
     onChange,
+    onBlur,
     disabled,
     readOnly,
   } = props;
@@ -56,65 +59,52 @@ function FormInput(props: Props): React.Node {
       "custom-control-input": type === "checkbox" || type === "radio",
       "is-valid": valid,
       "state-valid": tick,
-      "is-invalid": invalid,
-      "state-invalid": cross,
+      "is-invalid": invalid || !!error,
+      "state-invalid": cross || !!error,
     },
     className
   );
+
+  const feedback = error || props.feedback;
+
+  const allInputProps = {
+    name,
+    className: classes,
+    type,
+    placeholder,
+    value,
+    disabled,
+    readOnly,
+    onChange,
+    onBlur,
+  };
+
   return !icon ? (
     <React.Fragment>
       {type === "checkbox" || type === "radio" ? (
-        <input
-          name={name}
-          className={classes}
-          type={type}
-          placeholder={placeholder}
-          checked={checked}
-          value={value}
-          disabled={disabled}
-          readOnly={readOnly}
-          onChange={onChange}
-        />
+        <input {...allInputProps} checked={checked} />
       ) : (
-        <input
-          name={name}
-          className={classes}
-          type={type}
-          placeholder={placeholder}
-          value={value}
-          disabled={disabled}
-          readOnly={readOnly}
-          onChange={onChange}
-        />
+        <input {...allInputProps} />
       )}
-      {feedback &&
-        (invalid || cross) && (
-          <span className="invalid-feedback">{feedback}</span>
-        )}
+      {feedback && <span className="invalid-feedback">{feedback}</span>}
     </React.Fragment>
   ) : (
-    <div className="input-icon">
-      {position === "prepend" && (
-        <span className="input-icon-addon">
-          <Icon name={icon} />
-        </span>
-      )}
-      <input
-        name={name}
-        className={classes}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        disabled={disabled}
-        readOnly={readOnly}
-        onChange={onChange}
-      />
-      {position === "append" && (
-        <span className="input-icon-addon">
-          <Icon name={icon} />
-        </span>
-      )}
-    </div>
+    <React.Fragment>
+      <div className="input-icon">
+        {position === "prepend" && (
+          <span className="input-icon-addon">
+            <Icon name={icon} />
+          </span>
+        )}
+        <input {...allInputProps} />
+        {position === "append" && (
+          <span className="input-icon-addon">
+            <Icon name={icon} />
+          </span>
+        )}
+      </div>
+      {feedback && <span className="invalid-feedback">{feedback}</span>}
+    </React.Fragment>
   );
 }
 
