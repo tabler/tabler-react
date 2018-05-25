@@ -43,7 +43,7 @@ class Tooltip extends React.Component<Props, State> {
     );
 
     const arrowClasses = cn(
-      "arrow"
+      "arrow",
       placement === "top" || placement === "bottom"
         ? styles["tbr-arrow-vertical"]
         : styles["tbr-arrow-horizontal"]
