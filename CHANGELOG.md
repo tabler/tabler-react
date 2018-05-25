@@ -1,3 +1,11 @@
+<a name="1.5.1"></a>
+
+## [1.5.1](https://github.com/tabler/tabler-react/compare/v1.5.0...v1.5.1) (2018-05-25)
+
+### Bug Fixes
+
+* **semantic-release:** fix config ([5ba703d](https://github.com/tabler/tabler-react/commit/5ba703d))
+
 <a name="1.5.0"></a>
 
 # [1.5.0](https://github.com/tabler/tabler-react/compare/v1.4.0...v1.5.0) (2018-05-25)
