@@ -13,6 +13,7 @@ type FormStyle = {|
   +invalid?: boolean,
   +cross?: boolean,
   +feedback?: string,
+  +error?: string,
   +type?: string,
   +placeholder?: string,
   +name?: string,
@@ -41,7 +42,7 @@ function FormInput(props: Props): React.Node {
     tick,
     invalid,
     cross,
-    feedback,
+    error,
     placeholder,
     value,
     checked,
@@ -58,11 +59,13 @@ function FormInput(props: Props): React.Node {
       "custom-control-input": type === "checkbox" || type === "radio",
       "is-valid": valid,
       "state-valid": tick,
-      "is-invalid": invalid,
-      "state-invalid": cross,
+      "is-invalid": invalid || !!error,
+      "state-invalid": cross || !!error,
     },
     className
   );
+
+  const feedback = error || props.feedback;
 
   const allInputProps = {
     name,
@@ -83,25 +86,25 @@ function FormInput(props: Props): React.Node {
       ) : (
         <input {...allInputProps} />
       )}
-      {feedback &&
-        (invalid || cross) && (
-          <span className="invalid-feedback">{feedback}</span>
-        )}
+      {feedback && <span className="invalid-feedback">{feedback}</span>}
     </React.Fragment>
   ) : (
-    <div className="input-icon">
-      {position === "prepend" && (
-        <span className="input-icon-addon">
-          <Icon name={icon} />
-        </span>
-      )}
-      <input {...allInputProps} />
-      {position === "append" && (
-        <span className="input-icon-addon">
-          <Icon name={icon} />
-        </span>
-      )}
-    </div>
+    <React.Fragment>
+      <div className="input-icon">
+        {position === "prepend" && (
+          <span className="input-icon-addon">
+            <Icon name={icon} />
+          </span>
+        )}
+        <input {...allInputProps} />
+        {position === "append" && (
+          <span className="input-icon-addon">
+            <Icon name={icon} />
+          </span>
+        )}
+      </div>
+      {feedback && <span className="invalid-feedback">{feedback}</span>}
+    </React.Fragment>
   );
 }
 
