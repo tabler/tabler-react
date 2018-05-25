@@ -22,7 +22,7 @@ type FormStyle = {|
   +checked?: boolean,
 |};
 
-type Props = {|
+export type Props = {|
   ...FormStyle,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
