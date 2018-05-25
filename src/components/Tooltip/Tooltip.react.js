@@ -4,7 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 import { Manager, Placement, Reference, Popper } from "react-popper";
 import type { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
-import styles from "./Tooltip.css";
+// import styles from "./Tooltip.css";
 
 type Props = {|
   +content: string,
@@ -43,10 +43,10 @@ class Tooltip extends React.Component<Props, State> {
     );
 
     const arrowClasses = cn(
-      "arrow",
-      placement === "top" || placement === "bottom"
-        ? styles["tbr-arrow-vertical"]
-        : styles["tbr-arrow-horizontal"]
+      "arrow"
+      // placement === "top" || placement === "bottom"
+      //   ? styles["tbr-arrow-vertical"]
+      //   : styles["tbr-arrow-horizontal"]
     );
 
     return (
