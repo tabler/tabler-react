@@ -9,12 +9,25 @@ type Props = {|
    * Should this icon be rendered within an <a> tag
    */
   +link?: boolean,
+  /**
+   * The icon prefix
+   */
   +prefix?: string,
+  /**
+   * The icon name
+   */
   +name: string,
   +isAriaHidden?: boolean,
+  /**
+   * Use the built in payment icon set
+   */
   +payment?: boolean,
 |};
 
+/**
+ * Display an icon.
+ * Uses the included feathers icon set by default but you can add your own
+ */
 function Icon({
   prefix: prefixFromProps = "fe",
   name,
