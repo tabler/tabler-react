@@ -19,9 +19,13 @@ type Props = {|
   +name: string,
   +isAriaHidden?: boolean,
   /**
-   * Use the built in payment icon set
+   * Use the built-in payment icon set
    */
   +payment?: boolean,
+  /**
+   * Use the built-in flag icon set
+   */
+  +flag?: boolean,
 |};
 
 /**
@@ -35,8 +39,9 @@ function Icon({
   link,
   isAriaHidden,
   payment,
+  flag,
 }: Props): React.Node {
-  const prefix = payment ? "payment" : prefixFromProps;
+  const prefix = (payment && "payment") || (flag && "flag") || prefixFromProps;
   const classes = cn(
     {
       [prefix]: true,
