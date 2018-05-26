@@ -21,7 +21,7 @@ Then use the Icon `prefix` prop
 #### Rendering a flag
 
 ```jsx
-<Icon prefix="flag" name="gb" />
+<Icon flag name="gb" />
 ```
 
 #### Rendering a payment icon
