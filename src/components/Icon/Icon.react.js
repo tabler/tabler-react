@@ -9,7 +9,7 @@ type Props = {|
    * Should this icon be rendered within an <a> tag
    */
   +link?: boolean,
-  +prefix?: "fa" | "fe" | "flag" | "payment",
+  +prefix?: string,
   +name: string,
   +isAriaHidden?: boolean,
   +payment?: boolean,
