@@ -20,6 +20,7 @@ type Props = {|
   +imgAlt?: string,
   +aside?: boolean,
   +postHref?: string,
+  +profileHref?: string,
 |};
 
 function BlogCard({
@@ -32,11 +33,12 @@ function BlogCard({
   aside,
   authorName,
   date,
-  imgSrc = " ",
-  avatarImgSrc = " ",
+  imgSrc = "",
+  avatarImgSrc = "",
   iconName,
   iconHref,
   postHref,
+  profileHref,
 }: Props): React.Node {
   return !aside ? (
     <Card>
@@ -45,7 +47,7 @@ function BlogCard({
       </a>
       <Card.Body className="d-flex flex-column">
         <h4>
-          {" "}
+          {""}
           <a href={postHref}>{title}</a>
         </h4>
         <div className="text-muted">{description}</div>
@@ -55,7 +57,7 @@ function BlogCard({
             style={{ backgroundImage: `url(${avatarImgSrc}` }}
           />
           <div>
-            <a href="./profile.html" className="text-default">
+            <a href={profileHref} className="text-default">
               {authorName}
             </a>
             <small className="d-block text-muted">{date}</small>
@@ -75,7 +77,7 @@ function BlogCard({
         className="card-aside-column"
         style={{ backgroundImage: `url(${imgSrc})` }}
       >
-        {" "}
+        {""}
       </a>
       <Card.Body className="d-flex flex-column">
         <h4>
@@ -88,7 +90,7 @@ function BlogCard({
             style={{ backgroundImage: `url(${avatarImgSrc}` }}
           />
           <div>
-            <a href="./profile.html" className="text-default">
+            <a href={profileHref} className="text-default">
               {authorName}
             </a>
             <small className="d-block text-muted">{date}</small>

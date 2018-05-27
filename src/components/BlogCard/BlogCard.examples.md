@@ -1,16 +1,5 @@
-## Store Component
-
-### Usage
-
 ```jsx
-import { BlogCard } from 'tabler-react'
-
-...
-...
-...
-
-
-< BlogCard
+<BlogCard
   aside
   title=""
   titleUrl=""
@@ -23,6 +12,5 @@ import { BlogCard } from 'tabler-react'
   imgAlt=""
   iconName=""
   iconHref=""
-
 />
 ```
