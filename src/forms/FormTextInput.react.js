@@ -4,12 +4,11 @@ import * as React from "react";
 
 import Form from "../components/Form";
 
+import type { Props as FormInputProps } from "../components/Form/FormInput.react";
+
 type Props = {|
-  +type?: "checkbox" | "text" | "email" | "password",
-  +label: string,
-  +placeHolder: string,
-  +onChange?: (SyntheticInputEvent<HTMLInputElement>) => void,
-  +onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
+  ...FormInputProps,
+  +label?: string,
 |};
 
 type State = {|
@@ -17,29 +16,12 @@ type State = {|
 |};
 
 class FormTextInput extends React.PureComponent<Props, State> {
-  state = {
-    value: "",
-  };
-
-  _handleChange = (event: SyntheticInputEvent<HTMLInputElement>): void => {
-    this.setState({ value: event.target.value });
-  };
-
   render(): React.Node {
-    const type = this.props.type || "text";
-    const { label, placeHolder, onChange, onBlur } = this.props;
-    const { value } = this.state;
-    return (
-      <Form.Group label={label}>
-        <Form.Input
-          onChange={onChange || this._handleChange}
-          onBlur={onBlur}
-          placeholder={placeHolder}
-          type={type}
-          value={value}
-        />
-      </Form.Group>
-    );
+    const { label, ...props } = this.props;
+
+    const formInputComponent = React.createElement(Form.Input, props);
+
+    return <Form.Group label={label}>{formInputComponent}</Form.Group>;
   }
 }
 
