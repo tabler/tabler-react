@@ -42,8 +42,8 @@
     "webpack": "^3.8.1"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.2.0",
