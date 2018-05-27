@@ -1,6 +1,6 @@
 {
   "name": "tabler-react",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "",
   "author": "jonthomp and AaronCoplan",
   "license": "MIT",
@@ -32,6 +32,8 @@
     "src/**/*.js": "eslint --max-warnings=0"
   },
   "dependencies": {
+    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/git": "^5.0.0",
     "classnames": "^2.2.5",
     "commitlint": "^6.2.0",
     "react-popper": "^1.0.0-beta.6",
@@ -78,6 +80,7 @@
     "rollup-plugin-peer-deps-external": "2.1.1",
     "rollup-plugin-postcss": "1.6.1",
     "rollup-plugin-url": "1.4.0",
+    "semantic-release": "^15.5.0",
     "typed-styles": "^0.0.5"
   },
   "files": ["dist"],
