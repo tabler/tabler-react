@@ -4,7 +4,7 @@ import * as React from "react";
 import cn from "classnames";
 import Form from "./";
 
-type Props = {|
+export type Props = {|
   +className?: string,
   +label?: string,
   +value?: string | number | boolean,
@@ -13,6 +13,7 @@ type Props = {|
   +disabled?: boolean,
   +readOnly?: boolean,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +isInline?: boolean,
 |};
 

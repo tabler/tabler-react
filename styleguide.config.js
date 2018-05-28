@@ -186,6 +186,20 @@ module.exports = {
       name: "Page Templates",
       sections: [
         {
+          name: "Login Page",
+          components: "src/page_templates/account/LoginPage/*.react.{js,jsx}",
+        },
+        {
+          name: "Register Page",
+          components:
+            "src/page_templates/account/RegisterPage/*.react.{js,jsx}",
+        },
+        {
+          name: "Forgot Password Page",
+          components:
+            "src/page_templates/account/ForgotPasswordPage/*.react.{js,jsx}",
+        },
+        {
           name: "Errors",
           components: "src/page_templates/errors/**/*.react.{js,jsx}",
         },
