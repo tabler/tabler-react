@@ -32,3 +32,6 @@ export { default as FormCheckboxInput } from "./forms/FormCheckboxInput.react";
 export { default as colors } from "./colors";
 export { default as LoginPage } from "./page_templates/account/LoginPage";
 export { default as RegisterPage } from "./page_templates/account/RegisterPage";
+export {
+  default as ForgotPasswordPage,
+} from "./page_templates/account/ForgotPasswordPage";
