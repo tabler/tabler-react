@@ -13,6 +13,7 @@ export type Props = {|
   +disabled?: boolean,
   +readOnly?: boolean,
   +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +isInline?: boolean,
 |};
 
