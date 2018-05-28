@@ -11,30 +11,12 @@ type Props = {|
   +label?: string,
 |};
 
-type State = {|
-  value: string | number,
-|};
+function FormTextInput(props: Props): React.Node {
+  const { label, ...propsForInput } = props;
 
-class FormTextInput extends React.PureComponent<Props, State> {
-  render(): React.Node {
-    const { label, ...props } = this.props;
+  const formInputComponent = React.createElement(Form.Input, propsForInput);
 
-    const formInputComponent = React.createElement(Form.Input, props);
-
-    return <Form.Group label={label}>{formInputComponent}</Form.Group>;
-  }
+  return <Form.Group label={label}>{formInputComponent}</Form.Group>;
 }
-
-/*
-
-<input
-  className="form-control"
-  onChange={this._handleChange}
-  placeholder={placeHolder}
-  type={type}
-  value={value}
-/>
-
-*/
 
 export default FormTextInput;
