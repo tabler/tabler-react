@@ -24,7 +24,7 @@ type touchedTypes = {|
   name?: boolean,
   email?: boolean,
   password?: boolean,
-  terms?: string,
+  terms?: boolean,
 |};
 
 type Props = {|
