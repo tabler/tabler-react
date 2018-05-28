@@ -11,24 +11,20 @@
   "scripts": {
     "test": "CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build":
-      "yarn run copytablercsstodist && rollup -c && flow-copy-source -v src dist",
+    "build": "yarn run copytablercsstodist && rollup -c && flow-copy-source -v src dist",
     "start": "yarn run copytablercsstodist && rollup -c -w",
     "prepare": "yarn run build && yarn run copytablercsstodist",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "precommit":
-      "pretty-quick --staged && lint-staged && cd scripts && python propscheck.py && cd .. && ./scripts/runflow",
+    "precommit": "pretty-quick --staged && lint-staged && cd scripts && python propscheck.py && cd .. && ./scripts/runflow",
     "format": "prettier --write \"+(src|example)/**/*.js\"",
     "lint": "eslint --ext .js src/**/*",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "copytablercsstodist":
-      "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
+    "copytablercsstodist": "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
     "cm": "git-cz",
-    "startagain":
-      "rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build"
+    "startagain": "rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
@@ -65,7 +61,7 @@
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "flow-bin": "^0.72.0",
+    "flow-bin": "^0.73.0",
     "flow-copy-source": "^1.3.0",
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
@@ -85,7 +81,9 @@
     "semantic-release": "^15.5.0",
     "typed-styles": "^0.0.5"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
