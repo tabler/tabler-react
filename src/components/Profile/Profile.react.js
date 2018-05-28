@@ -14,6 +14,7 @@ export type Props = {|
   +avatarURL?: string,
   +twitterURL?: string,
   +backgroundURL?: string,
+  +bio?: string,
 |};
 
 function Profile({
@@ -23,6 +24,7 @@ function Profile({
   avatarURL = "",
   twitterURL = "",
   backgroundURL = "",
+  bio,
 }: Props): React.Node {
   const classes = cn("card card-profile", className);
   return (
@@ -31,7 +33,7 @@ function Profile({
       <Card.Body className="text-center">
         <ProfileImage avatarURL={avatarURL} />
         <Header.H3 className="mb-3">{name}</Header.H3>
-        <p className="mb-4">{children}</p>
+        <p className="mb-4">{bio || children}</p>
         <Button outline color="primary" size="sm">
           <Icon name="twitter" prefix="fa" /> Follow
         </Button>
