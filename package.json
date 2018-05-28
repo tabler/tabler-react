@@ -26,7 +26,9 @@
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "copytablercsstodist":
       "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
-    "cm": "git-cz"
+    "cm": "git-cz",
+    "startagain":
+      "rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
@@ -68,7 +70,7 @@
     "gh-pages": "^1.1.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
-    "prettier": "1.12.1",
+    "prettier": "1.13.0",
     "pretty-quick": "^1.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
