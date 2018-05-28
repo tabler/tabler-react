@@ -47,7 +47,6 @@ function BlogCard({
       </a>
       <Card.Body className="d-flex flex-column">
         <h4>
-          {""}
           <a href={postHref}>{title}</a>
         </h4>
         <div className="text-muted">{description}</div>
