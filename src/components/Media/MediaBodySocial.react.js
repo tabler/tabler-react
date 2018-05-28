@@ -3,7 +3,7 @@
 import * as React from "react";
 import { List, Media } from "../../components";
 
-type Props = {|
+export type Props = {|
   +children?: React.Node,
   +className?: string,
   +name: string,

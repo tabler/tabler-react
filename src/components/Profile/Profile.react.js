@@ -7,7 +7,7 @@ import { Card, Header, Button, Icon } from "../../components";
 
 import ProfileImage from "./ProfileImage.react";
 
-type Props = {|
+export type Props = {|
   +children?: React.Node,
   +className?: string,
   +name: string,

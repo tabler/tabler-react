@@ -5,7 +5,7 @@ import { Icon } from "../";
 import cn from "classnames";
 import AvatarList from "./AvatarList.react";
 
-type Props = {|
+export type Props = {|
   +children?: React.Node,
   +className?: string,
   /**
