@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { List, Media } from "../../components";
+import { List, Icon, Media, SocialNetworksList } from "../../components";
 
 export type Props = {|
   +children?: React.Node,
@@ -31,9 +31,9 @@ function MediaBodySocial({
 
   if (facebook) {
     fbIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <a href="/Profile">
-          <i className="fa fa-facebook" />
+          <Icon prefix="fa" name="facebook" />
         </a>
       </List.Item>
     );
@@ -41,9 +41,9 @@ function MediaBodySocial({
 
   if (twitter) {
     twitterIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <a href="/Profile" data-original-title="Twitter">
-          <i className="fa fa-twitter" />
+          <Icon prefix="fa" name="twitter" />
         </a>
       </List.Item>
     );
@@ -51,9 +51,9 @@ function MediaBodySocial({
 
   if (phone) {
     phoneIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <a href="/Profile" data-original-title="1234567890">
-          <i className="fa fa-phone" />
+          <Icon prefix="fa" name="phone" />
         </a>
       </List.Item>
     );
@@ -61,9 +61,9 @@ function MediaBodySocial({
 
   if (skype) {
     skypeIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <a href="/Profile" data-original-title="@skypename">
-          <i className="fa fa-skype" />
+          <Icon prefix="fa" name="skype" />
         </a>
       </List.Item>
     );
@@ -72,12 +72,12 @@ function MediaBodySocial({
     <Media.Body>
       <h4 className="m-0">{name}</h4>
       <p className="text-muted mb-0">{workTitle}</p>
-      <List className="social-links list-inline mb-0 mt-2">
+      <SocialNetworksList className="mb-0 mt-2">
         {fbIcon}
         {twitterIcon}
         {phoneIcon}
         {skypeIcon}
-      </List>
+      </SocialNetworksList>
       {children}
     </Media.Body>
   );
