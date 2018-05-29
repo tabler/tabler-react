@@ -2,12 +2,15 @@
 
 import * as React from "react";
 import cn from "classnames";
+import FormInputGroupAppend from "./FormInputGroupAppend.react";
+import FormInputGroupPrepend from "./FormInputGroupPrepend.react";
 
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +append?: boolean,
-  +prepend?: boolean,
+  +input?: React.Node,
+  +append?: React.Node,
+  +prepend?: React.Node,
   +RootComponent?: React.ElementType,
 |};
 
@@ -20,14 +23,18 @@ function FormInputGroup({
 }: Props): React.Node {
   const classes = cn(
     {
-      "input-group": !append && !prepend,
-      "input-group-append": append,
-      "input-group-prepend": prepend,
+      "input-group": true,
     },
     className
   );
   const Component = RootComponent || "div";
-  return <Component className={classes}>{children}</Component>;
+  return (
+    <Component className={classes}>
+      {prepend && <FormInputGroupPrepend>{prepend}</FormInputGroupPrepend>}
+      {children}
+      {append && <FormInputGroupAppend>{append}</FormInputGroupAppend>}
+    </Component>
+  );
 }
 
 FormInputGroup.displayName = "Form.InputGroup";
