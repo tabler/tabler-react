@@ -2,25 +2,22 @@
 
 import * as React from "react";
 import cn from "classnames";
+import Form from "./Form.react";
 import FormInputGroupAppend from "./FormInputGroupAppend.react";
 import FormInputGroupPrepend from "./FormInputGroupPrepend.react";
+import type { Props as InputProps } from "./FormInput.react";
 
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +input?: React.Node,
   +append?: React.Node,
   +prepend?: React.Node,
   +RootComponent?: React.ElementType,
+  +inputProps?: InputProps,
 |};
 
-function FormInputGroup({
-  className,
-  children,
-  append,
-  prepend,
-  RootComponent,
-}: Props): React.Node {
+function FormInputGroup(props: Props): React.Node {
+  const { className, append, prepend, RootComponent, inputProps } = props;
   const classes = cn(
     {
       "input-group": true,
@@ -28,6 +25,8 @@ function FormInputGroup({
     className
   );
   const Component = RootComponent || "div";
+  const children = inputProps ? <Form.Input {...inputProps} /> : props.children;
+
   return (
     <Component className={classes}>
       {prepend && <FormInputGroupPrepend>{prepend}</FormInputGroupPrepend>}
