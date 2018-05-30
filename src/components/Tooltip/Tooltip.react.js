@@ -66,20 +66,18 @@ class Tooltip extends React.Component<Props, State> {
       <Manager>
         <Reference>
           {({ ref }: ReferenceChildrenProps) =>
-            typeof children === "undefined"
-              ? // Type checking, undefined cannot be passed to React.cloneElement
-                console.error("undefined children provided to Tooltip.")
-              : this.props.type
-                ? React.cloneElement(children, {
-                    ref: ref,
-                    onMouseEnter: this._handleTriggerOnMouseEnter,
-                    onMouseLeave: this._handleTriggerOnMouseLeave,
-                  })
-                : React.cloneElement(children, {
-                    rootRef: ref,
-                    onMouseEnter: this._handleTriggerOnMouseEnter,
-                    onMouseLeave: this._handleTriggerOnMouseLeave,
-                  })
+            typeof children !== "undefined" &&
+            (this.props.type
+              ? React.cloneElement(children, {
+                  ref: ref,
+                  onMouseEnter: this._handleTriggerOnMouseEnter,
+                  onMouseLeave: this._handleTriggerOnMouseLeave,
+                })
+              : React.cloneElement(children, {
+                  rootRef: ref,
+                  onMouseEnter: this._handleTriggerOnMouseEnter,
+                  onMouseLeave: this._handleTriggerOnMouseLeave,
+                }))
           }
         </Reference>
         {this.state.isShown && (
