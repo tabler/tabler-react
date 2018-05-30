@@ -7,10 +7,23 @@ import type { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
 import styles from "./Tooltip.css";
 
 type Props = {|
-  +content: string,
-  +children?: React.Node,
+  /**
+   * The reference element which the Tooltip will be based on.
+   */
+  +children?: React.Element<any>,
+  /**
+   * Any additional classNames for the Tooltip.
+   */
   +className?: string,
+  /**
+   * This is the text content of the Tooltip.
+   */
+  +content: string,
+  /**
+   * This is the placement of the Tooltip (top, bottom, left, right).
+   */
   +placement?: Placement,
+  +type?: "link",
 |};
 
 type State = {
@@ -52,15 +65,22 @@ class Tooltip extends React.Component<Props, State> {
     return (
       <Manager>
         <Reference>
-          {({ ref }: ReferenceChildrenProps) => (
-            <div
-              ref={ref}
-              onMouseEnter={this._handleTriggerOnMouseEnter}
-              onMouseLeave={this._handleTriggerOnMouseLeave}
-            >
-              {children}
-            </div>
-          )}
+          {({ ref }: ReferenceChildrenProps) =>
+            typeof children === "undefined"
+              ? // Type checking, undefined cannot be passed to React.cloneElement
+                console.error("undefined children provided to Tooltip.")
+              : this.props.type
+                ? React.cloneElement(children, {
+                    ref: ref,
+                    onMouseEnter: this._handleTriggerOnMouseEnter,
+                    onMouseLeave: this._handleTriggerOnMouseLeave,
+                  })
+                : React.cloneElement(children, {
+                    rootRef: ref,
+                    onMouseEnter: this._handleTriggerOnMouseEnter,
+                    onMouseLeave: this._handleTriggerOnMouseLeave,
+                  })
+          }
         </Reference>
         {this.state.isShown && (
           <Popper placement={placement} eventsEnabled={true}>
