@@ -6,6 +6,28 @@ module.exports = {
   },
   require: ["./src/Tabler.css"],
   styleguideDir: "./example/public/documentation",
+  template: {
+    head: {
+      links: [
+        {
+          rel: "stylesheet",
+          href:
+            "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+        },
+        {
+          rel: "stylesheet",
+          href:
+            "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext",
+        },
+      ],
+    },
+  },
+  theme: {
+    fontFamily: {
+      base:
+        '"Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
+    },
+  },
   sections: [
     {
       name: "Introduction",
@@ -167,6 +189,20 @@ module.exports = {
     {
       name: "Page Templates",
       sections: [
+        {
+          name: "Login Page",
+          components: "src/page_templates/account/LoginPage/*.react.{js,jsx}",
+        },
+        {
+          name: "Register Page",
+          components:
+            "src/page_templates/account/RegisterPage/*.react.{js,jsx}",
+        },
+        {
+          name: "Forgot Password Page",
+          components:
+            "src/page_templates/account/ForgotPasswordPage/*.react.{js,jsx}",
+        },
         {
           name: "Errors",
           components: "src/page_templates/errors/**/*.react.{js,jsx}",

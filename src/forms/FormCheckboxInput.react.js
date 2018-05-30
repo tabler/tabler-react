@@ -3,42 +3,12 @@
 import * as React from "react";
 
 import Form from "../components/Form";
+import type { Props as FormCheckboxProps } from "../components/Form/FormCheckbox.react";
 
-type Props = {|
-  +label: string,
-|};
+function FormCheckboxInput(props: FormCheckboxProps) {
+  const formCheckboxComponent = React.createElement(Form.Checkbox, props);
 
-type State = {
-  value: boolean,
-};
-
-class FormCheckboxInput extends React.PureComponent<Props, State> {
-  state = {
-    value: false,
-  };
-
-  _handleChange = (event: SyntheticInputEvent<HTMLInputElement>): void => {
-    this.setState((prevState, _) => ({
-      value: !prevState.value,
-    }));
-  };
-
-  render(): React.Node {
-    const { label } = this.props;
-    const { value } = this.state;
-    return (
-      <Form.Group>
-        <label className="custom-control custom-checkbox">
-          <Form.Input
-            type="checkbox"
-            onChange={this._handleChange}
-            value={value}
-          />
-          <span className="custom-control-label">{label}</span>
-        </label>
-      </Form.Group>
-    );
-  }
+  return <Form.Group>{formCheckboxComponent}</Form.Group>;
 }
 
 export default FormCheckboxInput;

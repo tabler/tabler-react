@@ -1,3 +1,27 @@
+<a name="1.6.0"></a>
+
+# [1.6.0](https://github.com/tabler/tabler-react/compare/v1.5.1...v1.6.0) (2018-05-27)
+
+### Features
+
+* **Icon:** Add new flag shorthand prop ([ad208cc](https://github.com/tabler/tabler-react/commit/ad208cc))
+
+<a name="1.6.0"></a>
+
+# [1.6.0](https://github.com/tabler/tabler-react/compare/v1.5.1...v1.6.0) (2018-05-27)
+
+### Features
+
+* **Icon:** Add new flag shorthand prop ([ad208cc](https://github.com/tabler/tabler-react/commit/ad208cc))
+
+<a name="1.6.0"></a>
+
+# [1.6.0](https://github.com/tabler/tabler-react/compare/v1.5.1...v1.6.0) (2018-05-27)
+
+### Features
+
+* **Icon:** Add new flag shorthand prop ([ad208cc](https://github.com/tabler/tabler-react/commit/ad208cc))
+
 <a name="1.5.1"></a>
 
 ## [1.5.1](https://github.com/tabler/tabler-react/compare/v1.5.0...v1.5.1) (2018-05-25)

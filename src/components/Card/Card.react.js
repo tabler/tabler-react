@@ -29,6 +29,7 @@ type Props = {|
   +alert?: React.Node,
   +alertColor?: string,
   +footer?: string,
+  +aside?: boolean,
 |};
 
 type State = {|
@@ -83,6 +84,7 @@ class Card extends React.PureComponent<Props, State> {
       isCollapsible,
       isClosable,
       isFullscreenable,
+      aside,
       statusColor,
       statusSide,
       alert,
@@ -96,6 +98,7 @@ class Card extends React.PureComponent<Props, State> {
     const classes = cn(
       {
         card: true,
+        aside: aside,
         "card-collapsed": isCollapsed,
         "card-fullscreen": isFullscreen,
       },
