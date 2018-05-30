@@ -158,6 +158,10 @@ module.exports = {
           name: "Text",
           components: "src/components/Text/**/*.react.{js,jsx}",
         },
+        {
+          name: "Tooltip",
+          components: "src/components/Tooltip/**/*.react.{js,jsx}",
+        },
       ],
     },
     {
