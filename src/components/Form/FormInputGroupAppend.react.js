@@ -10,11 +10,7 @@ type Props = {|
 
 function FormInputGroupAppend({ className, children }: Props): React.Node {
   const classes = cn("input-group-append", className);
-  return (
-    <span className={classes}>
-      <span className="input-group-text">{children}</span>
-    </span>
-  );
+  return <span className={classes}>{children}</span>;
 }
 
 FormInputGroupAppend.displayName = "Form.InputGroupAppend";

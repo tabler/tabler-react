@@ -10,11 +10,7 @@ type Props = {|
 
 function FormInputGroupPrepend({ className, children }: Props): React.Node {
   const classes = cn("input-group-prepend", className);
-  return (
-    <span RootComponent="span" className={classes}>
-      <span className="input-group-text">{children}</span>
-    </span>
-  );
+  return <span className={classes}>{children}</span>;
 }
 
 FormInputGroupPrepend.displayName = "Form.InputGroupPrepend";
