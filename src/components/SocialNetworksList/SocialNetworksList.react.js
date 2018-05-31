@@ -21,8 +21,8 @@ type Props = {|
   +items?: Array<React.Node>,
 |};
 
-function listItemFromObjectFactory(asButtons, iconPrefix) {
-  return item => {
+function listItemFromObjectFactory(asButtons: boolean, iconPrefix: string) {
+  return (item: itemObject) => {
     const itemContent = asButtons ? (
       <Button to={item.to} social={item.name} color={item.color} size="sm">
         {item.label}
