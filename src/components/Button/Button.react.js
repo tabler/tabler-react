@@ -24,6 +24,7 @@ type PropsForAll = {|
   +to?: string,
   +isOption?: boolean,
   +rootRef?: (?HTMLElement) => void,
+  +onClick?: (event: SyntheticMouseEvent<HTMLElement>) => mixed,
 |};
 
 type DefaultButtonComponent = {|
@@ -70,6 +71,8 @@ const Button = (props: Props): React.Node => {
     isDropdownToggle,
     isOption,
     rootRef,
+    to,
+    onClick,
   } = props;
 
   const classes = cn(
@@ -148,8 +151,6 @@ const Button = (props: Props): React.Node => {
       </a>
     );
   } else {
-    const { onClick, to } = props;
-
     const Component: React.ElementType = props.RootComponent;
 
     return (
