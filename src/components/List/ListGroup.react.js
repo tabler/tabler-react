@@ -7,14 +7,21 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +transparent?: boolean,
+  +isCardBody?: boolean,
 |};
 
-function ListGroup({ className, children, transparent }: Props): React.Node {
+function ListGroup({
+  className,
+  children,
+  transparent,
+  isCardBody,
+}: Props): React.Node {
   const classes = cn(
     "list-group",
     "mb-0",
     {
       "list-group-transparent": transparent,
+      "card-list-group": isCardBody,
     },
     className
   );
