@@ -61,6 +61,10 @@ module.exports = {
           components: "src/components/Badge/**/*.react.{js,jsx}",
         },
         {
+          name: "BlogCard",
+          components: "src/components/BlogCard/**/*.react.{js,jsx}",
+        },
+        {
           name: "Button",
           components: "src/components/Button/**/*.react.{js,jsx}",
         },
