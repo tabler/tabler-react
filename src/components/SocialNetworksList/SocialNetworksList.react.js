@@ -21,7 +21,10 @@ type Props = {|
   +items?: Array<React.Node>,
 |};
 
-function listItemFromObjectFactory(asButtons: boolean, iconPrefix: string) {
+function listItemFromObjectFactory(
+  asButtons: boolean = false,
+  iconPrefix: string
+) {
   return (item: itemObject) => {
     const itemContent = asButtons ? (
       <Button to={item.to} social={item.name} color={item.color} size="sm">
@@ -37,20 +40,26 @@ function listItemFromObjectFactory(asButtons: boolean, iconPrefix: string) {
 }
 
 function SocialNetworksList(props: Props): React.Node {
-  const { children, className, asButtons, prefix = "fe" } = props;
+  const {
+    children,
+    className,
+    asButtons,
+    prefix = "fe",
+    items,
+    itemsObjects,
+  } = props;
   const classes = cn("social-links", className);
 
   const getObjectListItem = listItemFromObjectFactory(asButtons, prefix);
 
-  const items =
-    (props.itemsObjects && props.itemsObjects.map(getObjectListItem)) ||
-    (props.items &&
-      props.items.map(item => <List.Item inline>{item}</List.Item>)) ||
+  const contents =
+    (itemsObjects && itemsObjects.map(getObjectListItem)) ||
+    (items && items.map(item => <List.Item inline>{item}</List.Item>)) ||
     children;
 
   return (
     <List inline className={classes}>
-      {items}
+      {contents}
     </List>
   );
 }
