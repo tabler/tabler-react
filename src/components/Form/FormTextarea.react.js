@@ -75,4 +75,5 @@ function FormTextarea(props: Props): React.Node {
 
 FormTextarea.displayName = "Form.Textarea";
 
+/** @component */
 export default FormTextarea;

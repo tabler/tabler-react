@@ -141,7 +141,7 @@ function FormElements() {
               <Form.Group label="Input Group">
                 <Form.InputGroup>
                   <Form.Input placeholder="Search for..." />
-                  <Form.InputGroup append>
+                  <Form.InputGroupAppend>
                     <Button
                       RootComponent="a"
                       color="primary"
@@ -149,7 +149,7 @@ function FormElements() {
                     >
                       Go!
                     </Button>
-                  </Form.InputGroup>
+                  </Form.InputGroupAppend>
                 </Form.InputGroup>
               </Form.Group>
             </ComponentDemo>
@@ -158,7 +158,7 @@ function FormElements() {
               <Form.Group label="Input Group Buttons">
                 <Form.InputGroup>
                   <Form.Input />
-                  <Form.InputGroup append>
+                  <Form.InputGroupAppend>
                     <Button color="primary">Actions</Button>
                     <Button.Dropdown color="primary">
                       <Dropdown.Item>News</Dropdown.Item>
@@ -166,7 +166,7 @@ function FormElements() {
                       <Dropdown.ItemDivider />
                       <Dropdown.Item>Edit Profile</Dropdown.Item>
                     </Button.Dropdown>
-                  </Form.InputGroup>
+                  </Form.InputGroupAppend>
                 </Form.InputGroup>
               </Form.Group>
             </ComponentDemo>

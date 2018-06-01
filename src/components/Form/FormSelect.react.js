@@ -78,4 +78,5 @@ function FormSelect(props: Props): React.Node {
 
 FormSelect.displayName = "Form.Select";
 
+/** @component */
 export default FormSelect;

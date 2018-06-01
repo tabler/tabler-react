@@ -37,6 +37,9 @@ export type Props = {|
   +label?: string,
 |};
 
+/**
+ * A an input field
+ */
 function FormInput(props: Props): React.Node {
   const {
     className,
