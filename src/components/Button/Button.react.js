@@ -164,4 +164,6 @@ const Button = (props: Props): React.Node => {
 Button.List = ButtonList;
 Button.Dropdown = ButtonDropdown;
 
+Button.displayName = "Button";
+
 export default Button;
