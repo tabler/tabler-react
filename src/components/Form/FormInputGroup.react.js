@@ -27,6 +27,14 @@ function FormInputGroup(props: Props): React.Node {
   const Component = RootComponent || "div";
   const children = inputProps ? <Form.Input {...inputProps} /> : props.children;
 
+  if (prepend === true) {
+    return <FormInputGroupPrepend>{children}</FormInputGroupPrepend>;
+  }
+
+  if (append === true) {
+    return <FormInputGroupAppend>{children}</FormInputGroupAppend>;
+  }
+
   return (
     <Component className={classes}>
       {prepend && <FormInputGroupPrepend>{prepend}</FormInputGroupPrepend>}
