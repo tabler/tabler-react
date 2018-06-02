@@ -327,7 +327,7 @@ function Home() {
                   </Card.Body>
                 </Card>
               </Grid.Col>
-              <Grid.Col sm={4}>
+              <Grid.Col sm={6}>
                 <ProgressCard
                   header="New feedback"
                   content="62"
@@ -335,7 +335,7 @@ function Home() {
                   progressWidth={28}
                 />
               </Grid.Col>
-              <Grid.Col sm={4}>
+              <Grid.Col sm={6}>
                 <ProgressCard
                   header="Today profit"
                   content="$652"
@@ -343,7 +343,7 @@ function Home() {
                   progressWidth={84}
                 />
               </Grid.Col>
-              <Grid.Col sm={4}>
+              <Grid.Col sm={6}>
                 <ProgressCard
                   header="Users online"
                   content="76"
