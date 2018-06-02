@@ -36,4 +36,5 @@ export { default as Table } from "./Table";
 export { default as Tag } from "./Tag";
 export { default as Text } from "./Text";
 export { default as Timeline } from "./Timeline";
+export { default as Tooltip } from "./Tooltip";
 export { Tab, Tabs, TabbedContainer, TabbedHeader } from "./Tabs";
