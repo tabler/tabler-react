@@ -28,6 +28,10 @@ type DefaultProps = {|
    * Is this Dropdown a Card option?
    */
   +isOption?: boolean,
+  /**
+   * Add flex classes to the Dropdown
+   */
+  +flex?: boolean | "xs" | "sm" | "md" | "lg" | "xl",
 |};
 
 type WithAnyTriggerProps = {|
@@ -159,13 +163,22 @@ class Dropdown extends React.Component<Props, State> {
   };
 
   render(): React.Node {
-    const { className, children, desktopOnly, isOption, ...props } = this.props;
+    const {
+      className,
+      children,
+      desktopOnly,
+      isOption,
+      flex = false,
+      ...props
+    } = this.props;
 
     const classes = cn(
       {
         dropdown: true,
         "d-none": desktopOnly,
-        "d-md-flex": desktopOnly,
+        "d-md-flex": desktopOnly || flex === "md",
+        [`d-{flex}-flex`]: ["xs", "sm", "lg", "xl"].includes(flex),
+        "d-flex": typeof flex === "boolean",
         "card-options-dropdown": isOption,
         show: this.state.isOpen,
       },
