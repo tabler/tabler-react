@@ -61,6 +61,10 @@ module.exports = {
           components: "src/components/Badge/**/*.react.{js,jsx}",
         },
         {
+          name: "BlogCard",
+          components: "src/components/BlogCard/**/*.react.{js,jsx}",
+        },
+        {
           name: "Button",
           components: "src/components/Button/**/*.react.{js,jsx}",
         },
@@ -179,6 +183,10 @@ module.exports = {
         {
           name: "Text",
           components: "src/components/Text/**/*.react.{js,jsx}",
+        },
+        {
+          name: "Tooltip",
+          components: "src/components/Tooltip/**/*.react.{js,jsx}",
         },
       ],
     },

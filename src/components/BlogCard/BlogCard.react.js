@@ -105,4 +105,5 @@ function BlogCard({
   );
 }
 
+/** @component */
 export default BlogCard;
