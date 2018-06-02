@@ -178,7 +178,7 @@ class Dropdown extends React.Component<Props, State> {
         "d-none": desktopOnly,
         "d-md-flex": desktopOnly || flex === "md",
         [`d-{flex}-flex`]: ["xs", "sm", "lg", "xl"].includes(flex),
-        "d-flex": typeof flex === "boolean",
+        "d-flex": flex === true,
         "card-options-dropdown": isOption,
         show: this.state.isOpen,
       },
