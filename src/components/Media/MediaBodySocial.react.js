@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { List, Icon, Media, SocialNetworksList } from "../../components";
+import { List, Icon, Media, SocialNetworksList, Tooltip } from "../";
 
 export type Props = {|
   +children?: React.Node,
@@ -32,9 +32,11 @@ function MediaBodySocial({
   if (facebook) {
     fbIcon = (
       <List.Item inline>
-        <a href="/Profile">
-          <Icon prefix="fa" name="facebook" />
-        </a>
+        <Tooltip content="Facebook" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="facebook" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }
@@ -42,9 +44,11 @@ function MediaBodySocial({
   if (twitter) {
     twitterIcon = (
       <List.Item inline>
-        <a href="/Profile" data-original-title="Twitter">
-          <Icon prefix="fa" name="twitter" />
-        </a>
+        <Tooltip content="Twitter" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="twitter" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }
@@ -52,9 +56,11 @@ function MediaBodySocial({
   if (phone) {
     phoneIcon = (
       <List.Item inline>
-        <a href="/Profile" data-original-title="1234567890">
-          <Icon prefix="fa" name="phone" />
-        </a>
+        <Tooltip content="+1 234-567-8901" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="phone" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }
@@ -62,9 +68,11 @@ function MediaBodySocial({
   if (skype) {
     skypeIcon = (
       <List.Item inline>
-        <a href="/Profile" data-original-title="@skypename">
-          <Icon prefix="fa" name="skype" />
-        </a>
+        <Tooltip content="@skypename" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="skype" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }

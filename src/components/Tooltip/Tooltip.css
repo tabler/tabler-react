@@ -1,0 +1,9 @@
+/* Tooltip-specific Stylesheet */
+
+.tbr-arrow-vertical {
+  left: calc(50% - 0.4rem);
+}
+
+.tbr-arrow-horizontal {
+  top: calc(50% - 0.4rem);
+}
