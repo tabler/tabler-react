@@ -25,6 +25,7 @@ type Props = {|
 
 /**
  * A header
+ * By default renders a div not a <hX> tag and has no additional spacing classes applied
  */
 function Header({
   RootComponent,
