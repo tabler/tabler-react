@@ -359,8 +359,7 @@ function Home() {
               icon="dollar-sign"
               header={
                 <a>
-                  132
-                  <small>Sales</small>
+                  132 <small>Sales</small>
                 </a>
               }
               footer={"12 waiting payments"}
@@ -372,8 +371,7 @@ function Home() {
               icon="shopping-cart"
               header={
                 <a>
-                  78
-                  <small>Orders</small>
+                  78 <small>Orders</small>
                 </a>
               }
               footer={"32 shipped"}
@@ -385,8 +383,7 @@ function Home() {
               icon="users"
               header={
                 <a>
-                  1,352
-                  <small>Members</small>
+                  1,352 <small>Members</small>
                 </a>
               }
               footer={"163 registered today"}
@@ -398,8 +395,7 @@ function Home() {
               icon="message-square"
               header={
                 <a>
-                  132
-                  <small>Comments</small>
+                  132 <small>Comments</small>
                 </a>
               }
               footer={"16 waiting"}
