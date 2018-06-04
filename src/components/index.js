@@ -27,6 +27,7 @@ export { default as Profile } from "./Profile";
 export { default as Progress } from "./Progress";
 export { default as ProgressCard } from "./ProgressCard";
 export { default as Site } from "./Site";
+export { default as SocialNetworksList } from "./SocialNetworksList";
 export { default as Stamp } from "./Stamp";
 export { default as StampCard } from "./StampCard";
 export { default as StatsCard } from "./StatsCard";
