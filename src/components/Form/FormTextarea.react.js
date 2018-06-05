@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
+import FormGroup from "./FormGroup.react";
 
 type Props = {|
   +className?: string,
@@ -20,6 +21,7 @@ type Props = {|
   +children?: string,
   +onChange?: (event: SyntheticInputEvent<HTMLTextAreaElement>) => void,
   +onBlur?: (event: SyntheticInputEvent<HTMLTextAreaElement>) => void,
+  +label?: string,
 |};
 
 function FormTextarea(props: Props): React.Node {
@@ -38,6 +40,7 @@ function FormTextarea(props: Props): React.Node {
     rows,
     children,
     onChange,
+    label,
   } = props;
   const classes = cn(
     "form-control",
@@ -51,7 +54,7 @@ function FormTextarea(props: Props): React.Node {
   );
   const feedback = error || props.feedback;
 
-  return (
+  const contents = (
     <React.Fragment>
       <textarea
         className={classes}
@@ -66,8 +69,11 @@ function FormTextarea(props: Props): React.Node {
       {feedback && <span className="invalid-feedback">{feedback}</span>}
     </React.Fragment>
   );
+
+  return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
 }
 
 FormTextarea.displayName = "Form.Textarea";
 
+/** @component */
 export default FormTextarea;

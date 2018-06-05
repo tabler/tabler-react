@@ -6,6 +6,9 @@ import Form from "./";
 
 export type Props = {|
   +className?: string,
+  /**
+   * Wrap the checkbox with a label
+   */
   +label?: string,
   +value?: string | number | boolean,
   +name?: string,
@@ -33,23 +36,30 @@ function FormCheckbox({
     { "custom-control-inline": isInline },
     className
   );
-  return (
+  const inputComponent = (
+    <Form.Input
+      type="checkbox"
+      name={name}
+      value={value}
+      checked={checked}
+      className={classes}
+      disabled={disabled}
+      readOnly={readOnly}
+      onChange={onChange}
+    />
+  );
+
+  return label ? (
     <label className={classes}>
-      <Form.Input
-        type="checkbox"
-        name={name}
-        value={value}
-        checked={checked}
-        className={classes}
-        disabled={disabled}
-        readOnly={readOnly}
-        onChange={onChange}
-      />
+      {inputComponent}
       <span className="custom-control-label">{label}</span>
     </label>
+  ) : (
+    inputComponent
   );
 }
 
 FormCheckbox.displayName = "Form.Checkbox";
 
+/** @component */
 export default FormCheckbox;
