@@ -96,11 +96,7 @@ function Table({
     </table>
   );
 
-  return !responsive ? (
-    table
-  ) : (
-    <div className="Table.table-responsive">{table}</div>
-  );
+  return !responsive ? table : <div className="table-responsive">{table}</div>;
 }
 
 Table.defaultProps = {

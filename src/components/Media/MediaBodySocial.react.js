@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import { List, Media, Tooltip } from "../";
+import { List, Icon, Media, SocialNetworksList, Tooltip } from "../";
 
 export type Props = {|
   +children?: React.Node,
@@ -31,10 +31,10 @@ function MediaBodySocial({
 
   if (facebook) {
     fbIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <Tooltip content="Facebook" placement="top">
           <a href="/Profile">
-            <i className="fa fa-facebook" />
+            <Icon prefix="fa" name="facebook" />
           </a>
         </Tooltip>
       </List.Item>
@@ -43,10 +43,10 @@ function MediaBodySocial({
 
   if (twitter) {
     twitterIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <Tooltip content="Twitter" placement="top">
           <a href="/Profile">
-            <i className="fa fa-twitter" />
+            <Icon prefix="fa" name="twitter" />
           </a>
         </Tooltip>
       </List.Item>
@@ -55,10 +55,10 @@ function MediaBodySocial({
 
   if (phone) {
     phoneIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <Tooltip content="+1 234-567-8901" placement="top">
           <a href="/Profile">
-            <i className="fa fa-phone" />
+            <Icon prefix="fa" name="phone" />
           </a>
         </Tooltip>
       </List.Item>
@@ -67,10 +67,10 @@ function MediaBodySocial({
 
   if (skype) {
     skypeIcon = (
-      <List.Item className="list-inline-item">
+      <List.Item inline>
         <Tooltip content="@skypename" placement="top">
           <a href="/Profile">
-            <i className="fa fa-skype" />
+            <Icon prefix="fa" name="skype" />
           </a>
         </Tooltip>
       </List.Item>
@@ -80,12 +80,12 @@ function MediaBodySocial({
     <Media.Body>
       <h4 className="m-0">{name}</h4>
       <p className="text-muted mb-0">{workTitle}</p>
-      <List className="social-links list-inline mb-0 mt-2">
+      <SocialNetworksList className="mb-0 mt-2">
         {fbIcon}
         {twitterIcon}
         {phoneIcon}
         {skypeIcon}
-      </List>
+      </SocialNetworksList>
       {children}
     </Media.Body>
   );
