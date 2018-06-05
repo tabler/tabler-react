@@ -9,6 +9,9 @@ type Props = {|
   +className?: string,
 |};
 
+/**
+ * A Header component rendered as a h1 HTML element with a margin below
+ */
 function H1({ className, children }: Props): React.Node {
   const classes: string = cn("mt-0 mb-4", className);
   return (
