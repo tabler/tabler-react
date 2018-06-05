@@ -33,6 +33,7 @@ function NotificationTray(props: Props): React.Node {
       position="bottom-end"
       arrow={true}
       arrowPosition="right"
+      flex
       items={
         <React.Fragment>
           {(notifications &&
