@@ -2,8 +2,10 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Icon, Avatar } from "../";
+import { Icon, Avatar, Button } from "../";
 import AlertLink from "./AlertLink.react";
+
+import type { MouseEvents, PointerEvents } from "../../";
 
 type AlertType =
   | "primary"
@@ -14,6 +16,8 @@ type AlertType =
   | "danger";
 
 type Props = {|
+  ...MouseEvents,
+  ...PointerEvents,
   +children?: React.Node,
   +className?: string,
   /**
@@ -68,6 +72,11 @@ class Alert extends React.Component<Props, State> {
       hasExtraSpace,
       isDismissible,
       avatar,
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onPointerEnter,
+      onPointerLeave,
     }: Props = this.props;
     const classes = cn(
       "alert",
@@ -80,15 +89,20 @@ class Alert extends React.Component<Props, State> {
       },
       className
     );
+
+    const events = {
+      onClick: onClick,
+      onMouseEnter: onMouseEnter,
+      onMouseLeave: onMouseLeave,
+      onPointerEnter: onPointerEnter,
+      onPointerLeave: onPointerLeave,
+    };
+
     return (
       !isDismissed && (
-        <div className={classes} role="alert">
+        <div {...events} className={classes} role="alert">
           {isDismissible && (
-            <button
-              type="button"
-              className="close"
-              onClick={this._handleOnDismissClick}
-            />
+            <Button className="close" onClick={this._handleOnDismissClick} />
           )}
           {avatar && <Avatar imageURL={avatar} />}
           {icon && <Icon name={icon} className="mr-2" isAriaHidden={true} />}
