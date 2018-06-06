@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Icon } from "../";
 import cn from "classnames";
+import FormGroup from "./FormGroup.react";
 
 type FormStyle = {|
   +className?: string,
@@ -30,8 +31,15 @@ export type Props = {|
   +placeholder?: string,
   +type?: "checkbox" | "radio" | "text" | "email" | "password",
   +value?: string | number | boolean,
+  /**
+   * Wraps the input in Form.Group and adds a label
+   */
+  +label?: string,
 |};
 
+/**
+ * A an input field
+ */
 function FormInput(props: Props): React.Node {
   const {
     className,
@@ -50,6 +58,7 @@ function FormInput(props: Props): React.Node {
     onBlur,
     disabled,
     readOnly,
+    label,
   } = props;
   const type = props.type || "text";
 
@@ -79,7 +88,7 @@ function FormInput(props: Props): React.Node {
     onBlur,
   };
 
-  return !icon ? (
+  const contents = !icon ? (
     <React.Fragment>
       {type === "checkbox" || type === "radio" ? (
         <input {...allInputProps} checked={checked} />
@@ -106,6 +115,8 @@ function FormInput(props: Props): React.Node {
       {feedback && <span className="invalid-feedback">{feedback}</span>}
     </React.Fragment>
   );
+
+  return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
 }
 
 FormInput.displayName = "Form.Input";

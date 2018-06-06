@@ -1,9 +1,9 @@
 // @flow
 
 import * as React from "react";
-import { List, Media } from "../../components";
+import { List, Icon, Media, SocialNetworksList, Tooltip } from "../";
 
-type Props = {|
+export type Props = {|
   +children?: React.Node,
   +className?: string,
   +name: string,
@@ -31,40 +31,48 @@ function MediaBodySocial({
 
   if (facebook) {
     fbIcon = (
-      <List.Item className="list-inline-item">
-        <a href="/Profile">
-          <i className="fa fa-facebook" />
-        </a>
+      <List.Item inline>
+        <Tooltip content="Facebook" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="facebook" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }
 
   if (twitter) {
     twitterIcon = (
-      <List.Item className="list-inline-item">
-        <a href="/Profile" data-original-title="Twitter">
-          <i className="fa fa-twitter" />
-        </a>
+      <List.Item inline>
+        <Tooltip content="Twitter" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="twitter" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }
 
   if (phone) {
     phoneIcon = (
-      <List.Item className="list-inline-item">
-        <a href="/Profile" data-original-title="1234567890">
-          <i className="fa fa-phone" />
-        </a>
+      <List.Item inline>
+        <Tooltip content="+1 234-567-8901" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="phone" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }
 
   if (skype) {
     skypeIcon = (
-      <List.Item className="list-inline-item">
-        <a href="/Profile" data-original-title="@skypename">
-          <i className="fa fa-skype" />
-        </a>
+      <List.Item inline>
+        <Tooltip content="@skypename" placement="top">
+          <a href="/Profile">
+            <Icon prefix="fa" name="skype" />
+          </a>
+        </Tooltip>
       </List.Item>
     );
   }
@@ -72,12 +80,12 @@ function MediaBodySocial({
     <Media.Body>
       <h4 className="m-0">{name}</h4>
       <p className="text-muted mb-0">{workTitle}</p>
-      <List className="social-links list-inline mb-0 mt-2">
+      <SocialNetworksList className="mb-0 mt-2">
         {fbIcon}
         {twitterIcon}
         {phoneIcon}
         {skypeIcon}
-      </List>
+      </SocialNetworksList>
       {children}
     </Media.Body>
   );
