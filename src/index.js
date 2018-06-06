@@ -1,6 +1,22 @@
 // @flow
 
 export * from "./components";
+export type { Animation } from "./flow";
+export type { Clipboard } from "./flow";
+export type { Composition } from "./flow";
+export type { Focus } from "./flow";
+export type { Form } from "./flow";
+export type { Image } from "./flow";
+export type { Keyboard } from "./flow";
+export type { Media } from "./flow";
+export type { Mouse } from "./flow";
+export type { Other } from "./flow";
+export type { Pointer } from "./flow";
+export type { Selection } from "./flow";
+export type { Touch } from "./flow";
+export type { UserInterface } from "./flow";
+export type { Wheel } from "./flow";
+
 export {
   default as StandaloneFormPage,
 } from "./page_templates/StandaloneFormPage.react";
