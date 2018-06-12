@@ -141,7 +141,7 @@ function FormElements() {
               <Form.Group label="Input Group">
                 <Form.InputGroup>
                   <Form.Input placeholder="Search for..." />
-                  <Form.InputGroup append>
+                  <Form.InputGroupAppend>
                     <Button
                       RootComponent="a"
                       color="primary"
@@ -149,7 +149,7 @@ function FormElements() {
                     >
                       Go!
                     </Button>
-                  </Form.InputGroup>
+                  </Form.InputGroupAppend>
                 </Form.InputGroup>
               </Form.Group>
             </ComponentDemo>
