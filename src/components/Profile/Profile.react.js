@@ -48,7 +48,10 @@ function Profile(props: Props): React.Node {
     avatarURL = "",
     socialNetworksObjects,
   } = props;
-  const classes = cn({ "card-profile": props.layout === 1 }, className);
+  const classes = cn(
+    { "card-profile": !props.layout || props.layout === 1 },
+    className
+  );
   if (!props.layout || props.layout === 1) {
     const { bio, backgroundURL = "" } = props;
     return (
