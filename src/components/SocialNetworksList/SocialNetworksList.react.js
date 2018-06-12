@@ -2,13 +2,18 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { List, Icon, Button } from "../";
+import { List, Icon, Button, Tooltip } from "../";
+import { Placement } from "react-popper";
 
-type itemObject = {|
+export type itemObject = {|
   name: string,
   label?: string,
   to?: string,
   tooltip?: string,
+  /**
+   * Tooltip placement
+   */
+  placement?: Placement,
   color?: string,
 |};
 
@@ -25,17 +30,31 @@ function listItemFromObjectFactory(
   asButtons: boolean = false,
   iconPrefix: string
 ) {
-  return (item: itemObject) => {
+  return ({
+    tooltip,
+    placement = "top",
+    to,
+    name,
+    label,
+    ...item
+  }: itemObject) => {
     const itemContent = asButtons ? (
-      <Button to={item.to} social={item.name} color={item.color} size="sm">
-        {item.label}
+      <Button to={to} social={name} color={item.color} size="sm">
+        label}
       </Button>
     ) : (
-      <a href={item.to} data-original-title={item.tooltip}>
-        <Icon prefix={iconPrefix} name={item.name} />
+      <a href={to} data-original-title={tooltip}>
+        <Icon prefix={iconPrefix} name={name} />
       </a>
     );
-    return <List.Item inline>{itemContent}</List.Item>;
+    const itemComponent = <List.Item inline>{itemContent}</List.Item>;
+    return tooltip ? (
+      <Tooltip content={tooltip} placement={placement}>
+        {itemComponent}
+      </Tooltip>
+    ) : (
+      itemComponent
+    );
   };
 }
 
