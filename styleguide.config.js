@@ -141,12 +141,16 @@ module.exports = {
           components: "src/components/Profile/**/*.react.{js,jsx}",
         },
         {
-          name: "Progress",
+          name: "Progress Indicator",
           components: "src/components/Progress/**/*.react.{js,jsx}",
         },
         {
-          name: "ProgressCard",
+          name: "Progress Card",
           components: "src/components/ProgressCard/**/*.react.{js,jsx}",
+        },
+        {
+          name: "Social Networks List",
+          components: "src/components/SocialNetworksList/**/*.react.{js,jsx}",
         },
         {
           name: "Site",
