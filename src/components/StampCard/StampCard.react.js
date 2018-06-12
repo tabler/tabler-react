@@ -27,7 +27,11 @@ function StampCard({
       <div className="d-flex align-items-center">
         <Stamp color={color} icon={icon} className="mr-3" />
         <div>
-          {header && <Header.H4 className="m-0">{header}</Header.H4>}
+          {header && (
+            <Header size={4} className="m-0">
+              {header}
+            </Header>
+          )}
           {children}
           {footer && <Text.Small muted>{footer}</Text.Small>}
         </div>
