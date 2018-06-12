@@ -29,7 +29,7 @@ import FormInputGroupPrepend from "./FormInputGroupPrepend.react";
 import FormMaskedInput from "./FormMaskedInput.react";
 import FormDatePicker from "./FormDatePicker.react";
 
-type Props = {|
+export type Props = {|
   +children?: React.Node,
   +className?: string,
   +action?: string,
