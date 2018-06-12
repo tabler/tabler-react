@@ -94,11 +94,10 @@ function ProfilePage() {
             <Grid.Col lg={8}>
               <Card>
                 <Card.Header>
-                  <Form.InputGroup>
+                  <Form.InputGroup
+                    append={<Button icon="camera" color="secondary" />}
+                  >
                     <Form.Input type="text" placeholder="Message" />
-                    <Form.InputGroup append>
-                      <Button icon="camera" color="secondary" />
-                    </Form.InputGroup>
                   </Form.InputGroup>
                 </Card.Header>
                 <List.Group className="card-list-group">
