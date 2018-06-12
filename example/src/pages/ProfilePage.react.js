@@ -28,29 +28,24 @@ function ProfilePage() {
                 name="Peter Richards"
                 backgroundURL="demo/photos/eberhard-grossgasteiger-311213-500.jpg"
                 avatarURL="demo/faces/male/16.jpg"
-                twitterURL="test"
+                socialNetworksObjects={[
+                  { name: "twitter", to: "test", label: "Follow" },
+                ]}
               >
                 Big belly rude boy, million dollar hustler. Unemployed.
               </Profile>
-              <Card>
-                <Card.Body>
-                  <Media>
-                    <Avatar
-                      size="xxl"
-                      className="mr-5"
-                      imageURL="demo/faces/male/21.jpg"
-                    />
-                    <Media.BodySocial
-                      name="Juan Hernandez"
-                      workTitle="Webdeveloper"
-                      facebook="Facebook"
-                      twitter="Twitter"
-                      phone="1234567890"
-                      skype="@skypename"
-                    />
-                  </Media>
-                </Card.Body>
-              </Card>
+              <Profile
+                layout={2}
+                name="Juan Hernandez"
+                jobTitle="Webdeveloper"
+                avatarURL="demo/faces/male/21.jpg"
+                socialNetworksObjects={[
+                  { name: "facebook", to: "/profile", tooltip: "Facebook" },
+                  { name: "twitter", to: "/profile", tooltip: "Twitter" },
+                  { name: "phone", to: "/profile", tooltip: "+1 234-567-8901" },
+                  { name: "skype", to: "/profile", tooltip: "@skypename" },
+                ]}
+              />
               <Card>
                 <Card.Header>
                   <Card.Title>My Profile</Card.Title>
