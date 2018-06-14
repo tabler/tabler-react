@@ -6,7 +6,11 @@ import { Icon } from "../";
 import ButtonList from "./ButtonList.react";
 import ButtonDropdown from "./ButtonDropdown.react";
 
+import type { MouseEvents, PointerEvents } from "../../";
+
 type PropsForAll = {|
+  ...MouseEvents,
+  ...PointerEvents,
   +size?: "sm" | "lg",
   +outline?: boolean,
   +link?: boolean,
@@ -24,7 +28,6 @@ type PropsForAll = {|
   +to?: string,
   +isOption?: boolean,
   +rootRef?: (?HTMLElement) => void,
-  +onClick?: (event: SyntheticMouseEvent<HTMLElement>) => mixed,
 |};
 
 type DefaultButtonComponent = {|
@@ -32,7 +35,6 @@ type DefaultButtonComponent = {|
   +RootComponent?: "button",
   +type?: "button" | "submit" | "reset",
   +value?: string,
-  +onClick?: (event: SyntheticMouseEvent<HTMLInputElement>) => mixed,
 |};
 
 type BtnAComponent = {|
@@ -40,7 +42,6 @@ type BtnAComponent = {|
   +RootComponent: "a",
   +href?: string,
   +target?: string,
-  +onClick?: (SyntheticMouseEvent<HTMLLinkElement>) => mixed,
 |};
 
 type BtnInputComponent = {|
@@ -48,7 +49,6 @@ type BtnInputComponent = {|
   +RootComponent: "input",
   +type?: "button" | "submit" | "reset",
   +value?: string,
-  +onClick?: (SyntheticMouseEvent<HTMLInputElement>) => mixed,
 |};
 
 export type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
@@ -73,6 +73,10 @@ const Button = (props: Props): React.Node => {
     rootRef,
     to,
     onClick,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
   } = props;
 
   const classes = cn(
@@ -98,6 +102,11 @@ const Button = (props: Props): React.Node => {
   const propsForAll = {
     className: classes,
     disabled: disabled,
+    onClick: onClick,
+    onMouseEnter: onMouseEnter,
+    onMouseLeave: onMouseLeave,
+    onPointerEnter: onPointerEnter,
+    onPointerLeave: onPointerLeave,
   };
 
   const childrenForAll = (
@@ -112,41 +121,21 @@ const Button = (props: Props): React.Node => {
   );
 
   if (!props.RootComponent || props.RootComponent === "button") {
-    const { type, value, onClick } = props;
+    const { type, value } = props;
     return (
-      <button
-        {...propsForAll}
-        type={type}
-        value={value}
-        onClick={onClick}
-        ref={rootRef}
-      >
+      <button {...propsForAll} type={type} value={value} ref={rootRef}>
         {childrenForAll}
       </button>
     );
   } else if (props.RootComponent === "input") {
-    const { type, value, onClick } = props;
+    const { type, value } = props;
 
-    return (
-      <input
-        {...propsForAll}
-        type={type}
-        value={value}
-        onClick={onClick}
-        ref={rootRef}
-      />
-    );
+    return <input {...propsForAll} type={type} value={value} ref={rootRef} />;
   } else if (props.RootComponent === "a") {
-    const { href, target, onClick } = props;
+    const { href, target } = props;
 
     return (
-      <a
-        {...propsForAll}
-        href={href}
-        target={target}
-        onClick={onClick}
-        ref={rootRef}
-      >
+      <a {...propsForAll} href={href} target={target} ref={rootRef}>
         {childrenForAll}
       </a>
     );
@@ -154,7 +143,7 @@ const Button = (props: Props): React.Node => {
     const Component: React.ElementType = props.RootComponent;
 
     return (
-      <Component {...propsForAll} to={to} onClick={onClick}>
+      <Component {...propsForAll} to={to}>
         {childrenForAll}
       </Component>
     );

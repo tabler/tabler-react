@@ -5,7 +5,11 @@ import { Icon } from "../";
 import cn from "classnames";
 import AvatarList from "./AvatarList.react";
 
+import type { MouseEvents, PointerEvents } from "../../";
+
 export type Props = {|
+  ...MouseEvents,
+  ...PointerEvents,
   +children?: React.Node,
   +className?: string,
   /**
@@ -45,6 +49,11 @@ function Avatar({
   placeholder,
   icon,
   color = "",
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+  onPointerEnter,
+  onPointerLeave,
 }: Props): React.Node {
   const classes = cn(
     {
@@ -68,6 +77,11 @@ function Avatar({
             )
           : style
       }
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onPointerEnter={onPointerEnter}
+      onPointerLeave={onPointerLeave}
     >
       {icon && <Icon name={icon} />}
       {status && <span className={`avatar-status bg-${status}`} />}

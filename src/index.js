@@ -1,6 +1,22 @@
 // @flow
 
 export * from "./components";
+export type { Animation as AnimationEvents } from "./flow";
+export type { Clipboard as ClipboardEvents } from "./flow";
+export type { Composition as CompositionEvents } from "./flow";
+export type { Focus as FocusEvents } from "./flow";
+export type { Form as FormEvents } from "./flow";
+export type { Image as ImageEvents } from "./flow";
+export type { Keyboard as KeyboardEvents } from "./flow";
+export type { Media as MediaEvents } from "./flow";
+export type { Mouse as MouseEvents } from "./flow";
+export type { Other as OtherEvents } from "./flow";
+export type { Pointer as PointerEvents } from "./flow";
+export type { Selection as SelectionEvents } from "./flow";
+export type { Touch as TouchEvents } from "./flow";
+export type { UserInterface as UIEvents } from "./flow";
+export type { Wheel as WheelEvents } from "./flow";
+
 export {
   default as StandaloneFormPage,
 } from "./page_templates/StandaloneFormPage.react";
