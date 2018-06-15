@@ -2,8 +2,12 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Manager, Placement, Reference, Popper } from "react-popper";
-import type { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
+import { Manager, Reference, Popper } from "react-popper";
+import type {
+  Placement,
+  PopperChildrenProps,
+  ReferenceChildrenProps,
+} from "react-popper";
 import "./Tooltip.css";
 
 type Props = {|
