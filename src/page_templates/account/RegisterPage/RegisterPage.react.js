@@ -13,6 +13,8 @@ import withTouchedErrors from "../../../helpers/withTouchedErrors.react";
 import defaultStrings from "./RegisterPage.strings";
 import type { stringTypes } from "./RegisterPage.strings";
 
+import type { FormEvents, FocusEvents } from "../../../";
+
 type fieldTypes = {|
   name?: string,
   email?: string,
@@ -28,12 +30,11 @@ type touchedTypes = {|
 |};
 
 type Props = {|
+  ...FormEvents,
+  ...FocusEvents,
   +strings?: stringTypes,
   +action?: string,
   +method?: string,
-  +onSubmit?: Function,
-  +onChange?: (SyntheticInputEvent<HTMLInputElement>) => void,
-  +onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
   +values?: fieldTypes,
   +errors?: fieldTypes,
   +touched?: touchedTypes,
