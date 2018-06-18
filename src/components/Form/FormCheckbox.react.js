@@ -4,7 +4,11 @@ import * as React from "react";
 import cn from "classnames";
 import Form from "./";
 
+import type { FormEvents, FocusEvents } from "../../";
+
 export type Props = {|
+  ...FormEvents,
+  ...FocusEvents,
   +className?: string,
   /**
    * Wrap the checkbox with a label
@@ -15,8 +19,6 @@ export type Props = {|
   +checked?: boolean,
   +disabled?: boolean,
   +readOnly?: boolean,
-  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
-  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +isInline?: boolean,
 |};
 
@@ -29,6 +31,8 @@ function FormCheckbox({
   disabled,
   readOnly,
   onChange,
+  onFocus,
+  onBlur,
   isInline,
 }: Props): React.Node {
   const classes = cn(
@@ -46,6 +50,8 @@ function FormCheckbox({
       disabled={disabled}
       readOnly={readOnly}
       onChange={onChange}
+      onBlur={onBlur}
+      onFocus={onFocus}
     />
   );
 

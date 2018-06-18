@@ -4,7 +4,18 @@ import * as React from "react";
 import cn from "classnames";
 import FormGroup from "./FormGroup.react";
 
+import type {
+  FocusEvents,
+  FormEvents,
+  MouseEvents,
+  PointerEvents,
+} from "../../";
+
 type Props = {|
+  ...FocusEvents,
+  ...FormEvents,
+  ...MouseEvents,
+  ...PointerEvents,
   +className?: string,
   +valid?: boolean,
   +tick?: boolean,
@@ -19,8 +30,6 @@ type Props = {|
   +disabled?: boolean,
   +rows?: number,
   +children?: string,
-  +onChange?: (event: SyntheticInputEvent<HTMLTextAreaElement>) => void,
-  +onBlur?: (event: SyntheticInputEvent<HTMLTextAreaElement>) => void,
   +label?: string,
 |};
 
@@ -40,6 +49,13 @@ function FormTextarea(props: Props): React.Node {
     rows,
     children,
     onChange,
+    onBlur,
+    onFocus,
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
     label,
   } = props;
   const classes = cn(
@@ -65,6 +81,13 @@ function FormTextarea(props: Props): React.Node {
         disabled={disabled}
         rows={rows}
         onChange={onChange}
+        onBlur={onBlur}
+        onClick={onClick}
+        onFocus={onFocus}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onPointerEnter={onPointerEnter}
+        onPointerLeave={onPointerLeave}
       />
       {feedback && <span className="invalid-feedback">{feedback}</span>}
     </React.Fragment>

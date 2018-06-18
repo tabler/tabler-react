@@ -29,12 +29,14 @@ import FormInputGroupPrepend from "./FormInputGroupPrepend.react";
 import FormMaskedInput from "./FormMaskedInput.react";
 import FormDatePicker from "./FormDatePicker.react";
 
+import type { FormEvents } from "../../";
+
 export type Props = {|
+  ...FormEvents,
   +children?: React.Node,
   +className?: string,
   +action?: string,
   +method?: string,
-  +onSubmit?: Function,
 |};
 
 function Form({

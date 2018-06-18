@@ -4,9 +4,27 @@ import * as React from "react";
 import cn from "classnames";
 import Grid from "../Grid";
 
-type Props = {| +className?: string, +color: string |};
+import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
 
-function FormColorCheckItem({ className, color }: Props): React.Node {
+type Props = {|
+  ...MouseEvents,
+  ...PointerEvents,
+  ...FocusEvents,
+  +className?: string,
+  +color: string,
+|};
+
+function FormColorCheckItem({
+  className,
+  color,
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+  onPointerEnter,
+  onPointerLeave,
+  onFocus,
+  onBlur,
+}: Props): React.Node {
   const classes = cn(className);
   return (
     <Grid.Col auto className={classes}>
@@ -16,6 +34,13 @@ function FormColorCheckItem({ className, color }: Props): React.Node {
           type="checkbox"
           value={color}
           className="colorinput-input"
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onPointerEnter={onPointerEnter}
+          onPointerLeave={onPointerLeave}
+          onFocus={onFocus}
+          onBlur={onBlur}
         />
         <span className={`colorinput-color bg-${color}`} />
       </label>
