@@ -17,7 +17,7 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "precommit": "pretty-quick --staged && lint-staged && cd scripts && python propscheck.py && cd .. && ./scripts/runflow",
-    "flow:copy-source": "flow-copy-source -v src dist",
+    "flow:copy-source": "node scripts/flow-copy-source.js",
     "format": "prettier --write \"+(src|example)/**/*.js\"",
     "lint": "eslint --ext .js src/**/*",
     "styleguide": "styleguidist server",
