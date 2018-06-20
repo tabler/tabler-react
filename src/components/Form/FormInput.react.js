@@ -5,6 +5,13 @@ import { Icon } from "../";
 import cn from "classnames";
 import FormGroup from "./FormGroup.react";
 
+import type {
+  FormEvents,
+  MouseEvents,
+  PointerEvents,
+  FocusEvents,
+} from "../../";
+
 type FormStyle = {|
   +className?: string,
   +icon?: string,
@@ -26,8 +33,10 @@ type FormStyle = {|
 
 export type Props = {|
   ...FormStyle,
-  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
-  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  ...FormEvents,
+  ...MouseEvents,
+  ...PointerEvents,
+  ...FocusEvents,
   +placeholder?: string,
   +type?: "checkbox" | "radio" | "text" | "email" | "password",
   +value?: string | number | boolean,
@@ -55,6 +64,11 @@ function FormInput(props: Props): React.Node {
     value,
     checked,
     onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
     onBlur,
     disabled,
     readOnly,
@@ -85,6 +99,11 @@ function FormInput(props: Props): React.Node {
     disabled,
     readOnly,
     onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
     onBlur,
   };
 

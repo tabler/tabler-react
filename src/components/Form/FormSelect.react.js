@@ -4,11 +4,20 @@ import * as React from "react";
 import cn from "classnames";
 import FormGroup from "./FormGroup.react";
 
+import type {
+  FocusEvents,
+  FormEvents,
+  MouseEvents,
+  PointerEvents,
+} from "../../";
+
 type Props = {|
+  ...FocusEvents,
+  ...FormEvents,
+  ...MouseEvents,
+  ...PointerEvents,
   +children?: React.Node,
   +className?: string,
-  +onChange?: (SyntheticInputEvent<EventTarget>) => mixed,
-  +onBlur?: (SyntheticInputEvent<EventTarget>) => mixed,
   +valid?: boolean,
   +tick?: boolean,
   +invalid?: boolean,
@@ -29,18 +38,23 @@ function FormSelect(props: Props): React.Node {
   const {
     className,
     children,
-    onChange,
     valid,
     tick,
     invalid,
     cross,
     error,
     label,
-    onBlur,
     disabled,
     readOnly,
     name,
     value,
+    onChange,
+    onBlur,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onClick,
   } = props;
   const classes = cn(
     {
@@ -63,6 +77,11 @@ function FormSelect(props: Props): React.Node {
         value={value}
         onChange={onChange}
         onBlur={onBlur}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onPointerEnter={onPointerEnter}
+        onPointerLeave={onPointerLeave}
+        onClick={onClick}
         className={classes}
         disabled={disabled}
         readOnly={readOnly}

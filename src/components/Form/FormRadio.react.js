@@ -4,7 +4,18 @@ import * as React from "react";
 import cn from "classnames";
 import Form from "./";
 
+import type {
+  MouseEvents,
+  PointerEvents,
+  FormEvents,
+  FocusEvents,
+} from "../../";
+
 type Props = {|
+  ...MouseEvents,
+  ...PointerEvents,
+  ...FormEvents,
+  ...FocusEvents,
   +className?: string,
   /**
    * Wrap the checkbox with a label
@@ -15,7 +26,6 @@ type Props = {|
   +checked?: boolean,
   +disabled?: boolean,
   +readOnly?: boolean,
-  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +isInline?: boolean,
 |};
 
@@ -28,6 +38,13 @@ function FormRadio({
   disabled,
   readOnly,
   onChange,
+  onMouseEnter,
+  onMouseLeave,
+  onPointerEnter,
+  onPointerLeave,
+  onBlur,
+  onFocus,
+  onClick,
   isInline,
 }: Props): React.Node {
   const classes = cn(
@@ -35,8 +52,21 @@ function FormRadio({
     { "custom-control-inline": isInline },
     className
   );
+
+  const events = {
+    onChange: onChange,
+    onMouseEnter: onMouseEnter,
+    onMouseLeave: onMouseLeave,
+    onPointerEnter: onPointerEnter,
+    onPointerLeave: onPointerLeave,
+    onBlur: onBlur,
+    onFocus: onFocus,
+    onClick: onClick,
+  };
+
   const inputComponent = (
     <Form.Input
+      {...events}
       type="radio"
       name={name}
       value={value}

@@ -3,8 +3,18 @@
 import * as React from "react";
 import cn from "classnames";
 import { Icon } from "../";
+import type {
+  FormEvents,
+  FocusEvents,
+  MouseEvents,
+  PointerEvents,
+} from "../../";
 
 type Props = {|
+  ...FormEvents,
+  ...FocusEvents,
+  ...MouseEvents,
+  ...PointerEvents,
   +className?: string,
   +label?: string,
   +value?: string | number | boolean,
@@ -22,6 +32,14 @@ function FormSelectGroupItem({
   checked,
   icon,
   type,
+  onChange,
+  onFocus,
+  onBlur,
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+  onPointerEnter,
+  onPointerLeave,
 }: Props): React.Node {
   const classes = cn({ "selectgroup-item": true }, className);
   const btnClasses = cn("selectgroup-button", {
@@ -37,6 +55,14 @@ function FormSelectGroupItem({
           value={value}
           className="selectgroup-input"
           checked={checked}
+          onChange={onChange}
+          onClick={onClick}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onPointerEnter={onPointerEnter}
+          onPointerLeave={onPointerLeave}
         />
       ) : (
         <input
@@ -45,6 +71,14 @@ function FormSelectGroupItem({
           value={value}
           className="selectgroup-input"
           checked={checked}
+          onChange={onChange}
+          onClick={onClick}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onPointerEnter={onPointerEnter}
+          onPointerLeave={onPointerLeave}
         />
       )}
       <span className={btnClasses}>{outputLabel}</span>

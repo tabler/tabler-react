@@ -4,7 +4,13 @@ import * as React from "react";
 import cn from "classnames";
 import { Grid } from "../";
 
+import type { MouseEvents, FocusEvents, PointerEvents } from "../../";
+// FormEvents not imported due to check on props utilization. Props typing do not use mandatory props.
+
 type PropsForAll = {|
+  ...MouseEvents,
+  ...FocusEvents,
+  ...PointerEvents,
   +className?: string,
   +step?: number,
   +min?: number,
@@ -43,7 +49,19 @@ class FormRatio extends React.PureComponent<Props, State> {
   };
 
   render(): React.Node {
-    const { className, step = 1, min = 0, max = 0 } = this.props;
+    const {
+      className,
+      step = 1,
+      min = 0,
+      max = 0,
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onPointerEnter,
+      onPointerLeave,
+      onFocus,
+      onBlur,
+    } = this.props;
     const classes = cn(className);
 
     const value: number = this.props.onChange
@@ -60,6 +78,11 @@ class FormRatio extends React.PureComponent<Props, State> {
             min={min}
             max={max}
             onChange={this.handleOnChange}
+            onClick={onClick}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onPointerEnter={onPointerEnter}
+            onPointerLeave={onPointerLeave}
             value={value}
           />
         </Grid.Col>
@@ -68,6 +91,8 @@ class FormRatio extends React.PureComponent<Props, State> {
             type="number"
             className="form-control w-8"
             value={value}
+            onFocus={onFocus}
+            onBlur={onBlur}
             readOnly
           />
         </Grid.Col>

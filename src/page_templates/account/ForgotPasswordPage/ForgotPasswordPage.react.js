@@ -7,6 +7,7 @@ import withTouchedErrors from "../../../helpers/withTouchedErrors.react";
 
 import defaultStrings from "./ForgotPasswordPage.strings";
 import type { stringTypes } from "./ForgotPasswordPage.strings";
+import type { FormEvents, FocusEvents } from "../../../";
 
 type fieldTypes = {|
   email?: string,
@@ -17,12 +18,11 @@ type touchedTypes = {|
 |};
 
 type Props = {|
+  ...FormEvents,
+  ...FocusEvents,
   +strings?: stringTypes,
   +action?: string,
   +method?: string,
-  +onSubmit?: Function,
-  +onChange?: (SyntheticInputEvent<HTMLInputElement>) => void,
-  +onBlur?: (SyntheticInputEvent<HTMLInputElement>) => void,
   +values?: fieldTypes,
   +errors?: fieldTypes,
   +touched?: touchedTypes,

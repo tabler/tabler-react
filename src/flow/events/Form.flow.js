@@ -20,5 +20,5 @@ export type Form = {|
   /**
    * Handle Form Submit Event
    */
-  +onSubmit?: (event: SyntheticInputEvent<*>) => mixed,
+  +onSubmit?: Function,
 |};
