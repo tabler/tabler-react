@@ -20,6 +20,8 @@ type PropsForAll = {|
   +addOn?: React.Node,
   +addOnIcon?: string,
   +addOnColor?: string,
+  +onDelete?: Function,
+  +addOnOnClick?: Function,
 |};
 
 type DefaultProps = {|
@@ -58,6 +60,8 @@ function Tag(props: Props): React.Node {
     onPointerLeave,
     onFocus,
     onBlur,
+    onDelete,
+    addOnOnClick,
   } = props;
 
   const classes = cn(
@@ -90,11 +94,11 @@ function Tag(props: Props): React.Node {
       )}
       {children}
       {(addOn || addOnIcon) && (
-        <TagAddOn icon={addOnIcon} color={addOnColor}>
+        <TagAddOn icon={addOnIcon} color={addOnColor} onClick={addOnOnClick}>
           {addOn}
         </TagAddOn>
       )}
-      {remove && <TagAddOn link icon="x" />}
+      {remove && <TagAddOn onClick={onDelete} link icon="x" />}
     </React.Fragment>
   );
 
