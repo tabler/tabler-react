@@ -5,7 +5,12 @@ import cn from "classnames";
 import TagList from "./TagList.react";
 import TagAddOn from "./TagAddOn.react";
 
+import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+
 type PropsForAll = {|
+  ...MouseEvents,
+  ...PointerEvents,
+  ...FocusEvents,
   +children?: React.Node,
   +className?: string,
   +rounded?: boolean,
@@ -46,7 +51,15 @@ function Tag(props: Props): React.Node {
     addOn,
     addOnIcon,
     addOnColor,
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
+    onBlur,
   } = props;
+
   const classes = cn(
     {
       tag: true,
@@ -56,6 +69,17 @@ function Tag(props: Props): React.Node {
     },
     className
   );
+
+  const eventProps = {
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
+    onBlur,
+  };
+
   const childrenForAll = (
     <React.Fragment>
       {avatar && (
@@ -77,7 +101,7 @@ function Tag(props: Props): React.Node {
   if (props.RootComponent) {
     const { RootComponent: Component, to } = props;
     return (
-      <Component className={classes} to={to}>
+      <Component className={classes} to={to} {...eventProps}>
         {childrenForAll}
       </Component>
     );
@@ -86,13 +110,17 @@ function Tag(props: Props): React.Node {
   if (props.link) {
     const { href } = props;
     return (
-      <a className={classes} href={href}>
+      <a className={classes} href={href} {...eventProps}>
         {childrenForAll}
       </a>
     );
   }
 
-  return <span className={classes}>{childrenForAll}</span>;
+  return (
+    <span className={classes} {...eventProps}>
+      {childrenForAll}
+    </span>
+  );
 }
 
 Tag.displayName = "Tag";
