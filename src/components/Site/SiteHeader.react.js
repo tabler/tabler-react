@@ -25,6 +25,10 @@ export type Props = {|
   +notificationsTray?: NotificationTrayProps,
   +accountDropdown?: AccountDropdownProps,
   +navItems?: React.Node,
+  /**
+   * Handle toggling/collapsing of the mobile menu when the collapse icon is clicked
+   */
+  +onMenuToggleClick?: () => void,
 |};
 
 /**
@@ -39,6 +43,7 @@ const SiteHeader = ({
   notificationsTray: notificationsTrayFromProps,
   accountDropdown: accountDropdownFromProps,
   navItems,
+  onMenuToggleClick,
 }: Props): React.Node => {
   const notificationsTray =
     notificationsTrayFromProps &&
@@ -62,8 +67,7 @@ const SiteHeader = ({
               </div>
               <a
                 className="header-toggler d-lg-none ml-3 ml-lg-0"
-                data-toggle="collapse"
-                data-target="#headerMenuCollapse"
+                onClick={onMenuToggleClick}
               >
                 <span className="header-toggler-icon" />
               </a>
