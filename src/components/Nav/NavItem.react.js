@@ -41,7 +41,7 @@ type State = {
 /**
  * A NavItem with react-popper powered subIems Dropdowns
  */
-class NavItem extends React.PureComponent<Props, State> {
+class NavItem extends React.Component<Props, State> {
   displayName = "Nav.Item";
 
   state = {
