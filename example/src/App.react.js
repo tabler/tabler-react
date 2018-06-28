@@ -47,8 +47,6 @@ import {
   DocsNavPage,
 } from "./documentation";
 
-import "bootstrap";
-
 import "tabler-react/dist/Tabler.css";
 
 type Props = {||};
