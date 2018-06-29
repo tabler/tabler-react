@@ -42,94 +42,119 @@ type ReactRouterProps = {|
 
 type Props = DefaultProps | LinkComponentProps | ReactRouterProps;
 
-function Tag(props: Props): React.Node {
-  const {
-    children,
-    className,
-    rounded,
-    color = "",
-    avatar,
-    remove,
-    addOn,
-    addOnIcon,
-    addOnColor,
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    onFocus,
-    onBlur,
-    onRemoveClick,
-    onAddOnClick,
-  } = props;
+type State = {|
+  isDeleted: boolean,
+|};
 
-  const classes = cn(
-    {
-      tag: true,
-      expanded: true,
-      "tag-rounded": rounded,
-      [`tag-${color}`]: color,
-    },
-    className
-  );
-
-  const eventProps = {
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    onFocus,
-    onBlur,
+class Tag extends React.Component<Props, State> {
+  state = {
+    isDeleted: false,
   };
 
-  const childrenForAll = (
-    <React.Fragment>
-      {avatar && (
-        <span
-          class="tag-avatar avatar"
-          style={{ backgroundImage: `url(${avatar})` }}
-        />
-      )}
-      {children}
-      {(addOn || addOnIcon) && (
-        <TagAddOn icon={addOnIcon} color={addOnColor} onClick={onAddOnClick}>
-          {addOn}
-        </TagAddOn>
-      )}
-      {remove && <TagAddOn onClick={onRemoveClick} link icon="x" />}
-    </React.Fragment>
-  );
+  static List = TagList;
+  static AddOn = TagAddOn;
 
-  if (props.RootComponent) {
-    const { RootComponent: Component, to } = props;
+  handleOnRemoveClick = (): void => {
+    this.setState(s => ({
+      isDeleted: true,
+    }));
+  };
+
+  render(): React.Node {
+    const {
+      children,
+      className,
+      rounded,
+      color = "",
+      avatar,
+      remove,
+      addOn,
+      addOnIcon,
+      addOnColor,
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onPointerEnter,
+      onPointerLeave,
+      onFocus,
+      onBlur,
+      onRemoveClick,
+      onAddOnClick,
+    } = this.props;
+
+    const classes = cn(
+      {
+        tag: true,
+        expanded: true,
+        "tag-rounded": rounded,
+        [`tag-${color}`]: color,
+      },
+      className
+    );
+
+    const eventProps = {
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onPointerEnter,
+      onPointerLeave,
+      onFocus,
+      onBlur,
+    };
+
+    if (this.state.isDeleted) {
+      console.log("Deleted");
+      return null;
+    }
+
+    const childrenForAll = (
+      <React.Fragment>
+        {avatar && (
+          <span
+            class="tag-avatar avatar"
+            style={{ backgroundImage: `url(${avatar})` }}
+          />
+        )}
+        {children}
+        {(addOn || addOnIcon) && (
+          <TagAddOn icon={addOnIcon} color={addOnColor} onClick={onAddOnClick}>
+            {addOn}
+          </TagAddOn>
+        )}
+        {remove && onRemoveClick ? (
+          <TagAddOn onClick={onRemoveClick} link icon="x" />
+        ) : (
+          remove && (
+            <TagAddOn onClick={this.handleOnRemoveClick} link icon="x" />
+          )
+        )}
+      </React.Fragment>
+    );
+
+    if (this.props.RootComponent) {
+      const { to } = this.props;
+      return (
+        <React.Component className={classes} to={to} {...eventProps}>
+          {childrenForAll}
+        </React.Component>
+      );
+    }
+
+    if (this.props.link) {
+      const { href } = this.props;
+      return (
+        <a className={classes} href={href} {...eventProps}>
+          {childrenForAll}
+        </a>
+      );
+    }
+
     return (
-      <Component className={classes} to={to} {...eventProps}>
+      <span className={classes} {...eventProps}>
         {childrenForAll}
-      </Component>
+      </span>
     );
   }
-
-  if (props.link) {
-    const { href } = props;
-    return (
-      <a className={classes} href={href} {...eventProps}>
-        {childrenForAll}
-      </a>
-    );
-  }
-
-  return (
-    <span className={classes} {...eventProps}>
-      {childrenForAll}
-    </span>
-  );
 }
-
-Tag.displayName = "Tag";
-
-Tag.List = TagList;
-Tag.AddOn = TagAddOn;
 
 export default Tag;
