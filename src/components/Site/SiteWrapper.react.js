@@ -14,25 +14,47 @@ type Props = {|
   +children: React.Node,
 |};
 
-function SiteWrapper(props: Props): React.Node {
-  const { headerProps, navProps, footerProps, children } = props;
+type State = {
+  collapseMobileMenu: boolean,
+};
 
-  const header = React.createElement(Site.Header, headerProps);
-  const nav = React.createElement(Site.Nav, navProps);
-  const footer = React.createElement(Site.Footer, footerProps);
+class SiteWrapper extends React.PureComponent<Props, State> {
+  static displayName = "Site.Wrapper";
 
-  return (
-    <Page>
-      <Page.Main>
-        {header}
-        {nav}
-        {children}
-      </Page.Main>
-      {footer}
-    </Page>
-  );
+  state = {
+    collapseMobileMenu: true,
+  };
+
+  handleCollapseMobileMenu = (): void => {
+    this.setState(s => ({ collapseMobileMenu: !s.collapseMobileMenu }));
+  };
+
+  render(): React.Node {
+    const { headerProps, navProps, footerProps, children }: Props = this.props;
+
+    const headerPropsWithToggleClick = {
+      ...headerProps,
+      onMenuToggleClick: this.handleCollapseMobileMenu,
+    };
+    const header = React.createElement(Site.Header, headerPropsWithToggleClick);
+    const navPropsWithCollapse = {
+      ...navProps,
+      collapse: this.state.collapseMobileMenu,
+    };
+    const nav = React.createElement(Site.Nav, navPropsWithCollapse);
+    const footer = React.createElement(Site.Footer, footerProps);
+
+    return (
+      <Page>
+        <Page.Main>
+          {header}
+          {nav}
+          {children}
+        </Page.Main>
+        {footer}
+      </Page>
+    );
+  }
 }
-
-SiteWrapper.displayName = "Site.Wrapper";
 
 export default SiteWrapper;
