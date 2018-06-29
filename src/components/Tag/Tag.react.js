@@ -103,7 +103,6 @@ class Tag extends React.Component<Props, State> {
     };
 
     if (this.state.isDeleted) {
-      console.log("Deleted");
       return null;
     }
 
