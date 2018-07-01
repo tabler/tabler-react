@@ -8,11 +8,11 @@ import type { Props as AccountDropdownProps } from "../AccountDropdown/AccountDr
 export type Props = {|
   +children?: React.Node,
   /**
-   * href attribute for the logo
+   * header alignment
    */
   +align?: string,
   /**
-   * header alignment
+   * href attribute for the logo
    */
   +href?: string,
   /**
