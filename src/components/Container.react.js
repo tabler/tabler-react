@@ -3,6 +3,8 @@
 import * as React from "react";
 import cn from "classnames";
 
+import "./Container.css";
+
 type Props = {|
   +children?: React.Node,
   +className?: string,
