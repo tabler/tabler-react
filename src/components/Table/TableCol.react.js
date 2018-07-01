@@ -14,9 +14,14 @@ function TableCol({
   className,
   children,
   alignContent = "",
+  colSpan,
 }: Props): React.Node {
   const classes = cn({ [`text-${alignContent}`]: alignContent }, className);
-  return <td className={classes} colSpan={colSpan}>{children}</td>;
+  return (
+    <td className={classes} colSpan={colSpan}>
+      {children}
+    </td>
+  );
 }
 
 TableCol.displayName = "Table.Col";
