@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/**
+Container customization
+ */
+
+.container.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
