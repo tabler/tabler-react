@@ -603,12 +603,6 @@ pre code {
   margin-left: auto;
 }
 
-.container.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
