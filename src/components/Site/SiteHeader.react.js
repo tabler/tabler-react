@@ -8,7 +8,11 @@ import type { Props as AccountDropdownProps } from "../AccountDropdown/AccountDr
 export type Props = {|
   +children?: React.Node,
   /**
-   * href attributefor the logo
+   * header alignment
+   */
+  +align?: string,
+  /**
+   * href attribute for the logo
    */
   +href?: string,
   /**
@@ -38,6 +42,7 @@ export type Props = {|
 const SiteHeader = ({
   children,
   href,
+  align,
   imageURL,
   alt,
   notificationsTray: notificationsTrayFromProps,
@@ -55,7 +60,7 @@ const SiteHeader = ({
 
   return (
     <div className="header py-4">
-      <Container>
+      <Container className={align}>
         <div className="d-flex">
           {children || (
             <React.Fragment>
