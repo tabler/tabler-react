@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import cn from "classnames";
-import "./Table.css";
 import TableHeader from "./TableHeader.react";
 import TableBody from "./TableBody.react";
 import TableRow from "./TableRow.react";
