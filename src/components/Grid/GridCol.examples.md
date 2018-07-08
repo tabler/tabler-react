@@ -49,3 +49,16 @@
   </Grid.Col>
 </Grid.Row>
 ```
+
+### Column Offset
+
+```jsx
+<Grid.Row>
+  <Grid.Col width={6} offset={3}>
+    2
+  </Grid.Col>
+  <Grid.Col md={6} offsetMd={3}>
+    4
+  </Grid.Col>
+</Grid.Row>
+```
