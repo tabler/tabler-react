@@ -42,7 +42,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
-    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^6.0.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.3",
