@@ -3,7 +3,6 @@
 import * as React from "react";
 import cn from "classnames";
 import { Icon, Badge } from "../";
-import type { Mouse } from "../../flow";
 
 type Props = {|
   +children?: React.Node,
@@ -37,7 +36,7 @@ type Props = {|
   /**
    * onClick handler
    */
-  +onClick?: Mouse.onClick,
+  +onClick?: (event: SyntheticMouseEvent<*>) => mixed,
 |};
 
 /**

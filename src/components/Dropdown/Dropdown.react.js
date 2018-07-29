@@ -12,7 +12,6 @@ import ClickOutside from "../../helpers/ClickOutside.react";
 import { Manager } from "react-popper";
 
 import type { Placement } from "react-popper";
-import type { Mouse } from "../../flow";
 
 type DefaultProps = {|
   +children?: React.Node,
@@ -113,7 +112,7 @@ export type itemObject = {|
   +isDivider?: boolean,
   +to?: string,
   +RootComponent?: React.ElementType,
-  +onClick?: Mouse.onClick,
+  +onClick?: (event: SyntheticMouseEvent<*>) => mixed,
 |};
 
 type WithItemsObjectProp = {|
