@@ -37,6 +37,7 @@ export type Props = {|
   +className?: string,
   +action?: string,
   +method?: string,
+  +autocomplete?: "on" | "off",
 |};
 
 function Form({
@@ -45,12 +46,14 @@ function Form({
   action,
   method,
   onSubmit,
+  autocomplete,
 }: Props): React.Node {
   const classes = cn(className);
   return (
     <form
       className={classes}
       onSubmit={onSubmit}
+      autocomplete={autocomplete}
       action={action}
       method={method}
     >
