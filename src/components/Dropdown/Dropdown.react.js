@@ -112,6 +112,7 @@ export type itemObject = {|
   +isDivider?: boolean,
   +to?: string,
   +RootComponent?: React.ElementType,
+  +onClick?: (event: SyntheticMouseEvent<*>) => mixed,
 |};
 
 type WithItemsObjectProp = {|
@@ -233,6 +234,7 @@ class Dropdown extends React.Component<Props, State> {
                 key={i}
                 to={item.to}
                 RootComponent={item.RootComponent || itemsRootComponent}
+                onClick={item.onClick}
               />
             )
         );

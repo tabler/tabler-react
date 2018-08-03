@@ -33,6 +33,10 @@ type Props = {|
    * A component to be used instead of an <a> tag
    */
   +RootComponent?: React.ElementType,
+  /**
+   * onClick handler
+   */
+  +onClick?: (event: SyntheticMouseEvent<*>) => mixed,
 |};
 
 /**
@@ -47,6 +51,7 @@ function DropdownItem({
   badgeType,
   to,
   RootComponent,
+  onClick,
 }: Props): React.Node {
   const classes = cn({ "dropdown-item": true }, className);
   const childrenForAll = (
@@ -66,11 +71,11 @@ function DropdownItem({
     </React.Fragment>
   );
   return RootComponent ? (
-    <RootComponent className={classes} to={to}>
+    <RootComponent className={classes} to={to} onClick={onClick}>
       {childrenForAll}
     </RootComponent>
   ) : (
-    <a className={classes} href={to}>
+    <a className={classes} href={to} onClick={onClick}>
       {childrenForAll}
     </a>
   );
