@@ -44,6 +44,7 @@ export type Props = {|
    * Wraps the input in Form.Group and adds a label
    */
   +label?: string,
+  +autocomplete?: "on" | "off",
 |};
 
 /**
@@ -73,6 +74,7 @@ function FormInput(props: Props): React.Node {
     disabled,
     readOnly,
     label,
+    autocomplete,
   } = props;
   const type = props.type || "text";
 
@@ -105,6 +107,7 @@ function FormInput(props: Props): React.Node {
     onPointerLeave,
     onFocus,
     onBlur,
+    autocomplete,
   };
 
   const contents = !icon ? (
