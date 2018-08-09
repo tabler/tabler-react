@@ -74,7 +74,7 @@
     "react-styleguidist": "^7.0.9",
     "rollup": "0.63.4",
     "rollup-plugin-babel": "3.0.7",
-    "rollup-plugin-commonjs": "9.1.4",
+    "rollup-plugin-commonjs": "9.1.5",
     "rollup-plugin-node-resolve": "3.3.0",
     "rollup-plugin-peer-deps-external": "2.2.0",
     "rollup-plugin-postcss": "1.6.2",
