@@ -25,12 +25,7 @@ export type Props = {|
 /**
  * The footer of your website
  */
-const SiteFooter = ({
-  links = [],
-  note,
-  copyright,
-  nav,
-}: Props): React.Node => (
+const SiteFooter = ({ links, note, copyright, nav }: Props): React.Node => (
   <React.Fragment>
     {(links || note) && (
       <div className="footer">
