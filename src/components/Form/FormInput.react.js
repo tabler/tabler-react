@@ -10,6 +10,8 @@ import type {
   MouseEvents,
   PointerEvents,
   FocusEvents,
+  KeyboardEvents,
+  ClipboardEvents,
 } from "../../";
 
 type FormStyle = {|
@@ -37,6 +39,8 @@ export type Props = {|
   ...MouseEvents,
   ...PointerEvents,
   ...FocusEvents,
+  ...KeyboardEvents,
+  ...ClipboardEvents,
   +placeholder?: string,
   +type?: "checkbox" | "radio" | "text" | "email" | "password",
   +value?: string | number | boolean,
@@ -70,6 +74,12 @@ function FormInput(props: Props): React.Node {
     onPointerLeave,
     onFocus,
     onBlur,
+    onKeyPress,
+    onKeyUp,
+    onKeyDown,
+    onCopy,
+    onCut,
+    onPaste,
     disabled,
     readOnly,
     label,
@@ -105,6 +115,12 @@ function FormInput(props: Props): React.Node {
     onPointerLeave,
     onFocus,
     onBlur,
+    onKeyPress,
+    onKeyUp,
+    onKeyDown,
+    onCopy,
+    onCut,
+    onPaste,
   };
 
   const contents = !icon ? (
