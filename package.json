@@ -75,7 +75,7 @@
     "rollup": "0.63.4",
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-commonjs": "9.1.4",
-    "rollup-plugin-node-resolve": "3.3.0",
+    "rollup-plugin-node-resolve": "3.4.0",
     "rollup-plugin-peer-deps-external": "2.2.0",
     "rollup-plugin-postcss": "1.6.2",
     "rollup-plugin-url": "1.4.0",
