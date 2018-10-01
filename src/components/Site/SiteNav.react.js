@@ -54,7 +54,7 @@ const SiteNav = ({
       <Container>
         {children || (
           <Grid.Row className="align-items-center">
-            <Grid.Col lg={3} className="ml-auto">
+            <Grid.Col lg={3} className="ml-auto" ignoreCol={true}>
               {/* @TODO: add InlineSearchForm  */}
               {/* {rightColumnComponent || (withSearchForm && <InlineSearchForm />)} */}
               {rightColumnComponent}

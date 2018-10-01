@@ -24,6 +24,7 @@ type Props = {|
   +offsetMd?: number,
   +offsetLg?: number,
   +offsetXl?: number,
+  +ignoreCol?: boolean,
 |};
 
 function GridCol({
@@ -47,10 +48,11 @@ function GridCol({
   offsetMd = 0,
   offsetLg = 0,
   offsetXl = 0,
+  ignoreCol = false,
 }: Props): React.Node {
   const classes = cn(
     {
-      col: true,
+      col: !ignoreCol,
       [`col-${width}`]: width,
       [`col-xs-${xs}`]: xs,
       [`col-xs-auto`]: xsAuto,
