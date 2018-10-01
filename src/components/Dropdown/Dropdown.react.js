@@ -163,6 +163,16 @@ class Dropdown extends React.Component<Props, State> {
     this.setState(s => ({ isOpen: !s.isOpen }));
   };
 
+  _handleItemClick = (
+    e: SyntheticMouseEvent<HTMLElement>,
+    callback?: (SyntheticMouseEvent<*>) => mixed
+  ) => {
+    this.setState({ isOpen: false });
+    if (callback) {
+      callback(e);
+    }
+  };
+
   render(): React.Node {
     const {
       className,
@@ -234,7 +244,7 @@ class Dropdown extends React.Component<Props, State> {
                 key={i}
                 to={item.to}
                 RootComponent={item.RootComponent || itemsRootComponent}
-                onClick={item.onClick}
+                onClick={e => this._handleItemClick(e, item.onClick)}
               />
             )
         );
