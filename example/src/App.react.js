@@ -26,26 +26,6 @@ import GalleryPage from "./GalleryPage.react";
 import MapCardsPage from "./components/MapCardsPage.react";
 import BlogPage from "./components/BlogPage.react";
 
-import {
-  DocsIntroPage,
-  DocsAlertsPage,
-  DocsButtonsPage,
-  DocsCardsPage,
-  DocsAvatarsPage,
-  DocsColorsPage,
-  DocsFormComponentsPage,
-  DocsChartsPage,
-  DocsTagsPage,
-  DocsTypographyPage,
-  DocsTablePage,
-  DocsBadgePage,
-  DocsStampPage,
-  DocsDropdownPage,
-  DocsGridPage,
-  DocsListPage,
-  DocsNavPage,
-} from "./documentation";
-
 import "tabler-react/dist/Tabler.css";
 
 type Props = {||};
@@ -65,27 +45,6 @@ function App(props: Props): React.Node {
           <Route exact path="/blog" component={BlogPage} />
           <Route exact path="/cards" component={CardsDesignPage} />
           <Route exact path="/charts" component={ChartsPage} />
-          <Route exact path="/docs" component={DocsIntroPage} />
-          <Route exact path="/docs/alerts" component={DocsAlertsPage} />
-          <Route exact path="/docs/buttons" component={DocsButtonsPage} />
-          <Route exact path="/docs/avatars" component={DocsAvatarsPage} />
-          <Route exact path="/docs/badges" component={DocsBadgePage} />
-          <Route exact path="/docs/cards" component={DocsCardsPage} />
-          <Route exact path="/docs/charts" component={DocsChartsPage} />
-          <Route exact path="/docs/colors" component={DocsColorsPage} />
-          <Route exact path="/docs/dropdowns" component={DocsDropdownPage} />
-          <Route
-            exact
-            path="/docs/form-components"
-            component={DocsFormComponentsPage}
-          />
-          <Route exact path="/docs/grids" component={DocsGridPage} />
-          <Route exact path="/docs/lists" component={DocsListPage} />
-          <Route exact path="/docs/navs" component={DocsNavPage} />
-          <Route exact path="/docs/stamps" component={DocsStampPage} />
-          <Route exact path="/docs/tags" component={DocsTagsPage} />
-          <Route exact path="/docs/tables" component={DocsTablePage} />
-          <Route exact path="/docs/typography" component={DocsTypographyPage} />
           <Route exact path="/email" component={Email} />
           <Route exact path="/empty-page" component={Empty} />
           <Route exact path="/form-elements" component={FormElementsPage} />
