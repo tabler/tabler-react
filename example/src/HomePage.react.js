@@ -473,23 +473,26 @@ function Home() {
                     </Table.Col>
                     <Table.Col alignContent="center">42%</Table.Col>
                     <Table.Col alignContent="center">
-                      <Dropdown>
-                        <Dropdown.Trigger icon="more-vertical" toggle={false} />
-                        <Dropdown.Menu position="right">
-                          <Dropdown.Item icon="tag">Action </Dropdown.Item>
-                          <Dropdown.Item icon="edit-2">
-                            Another action{" "}
-                          </Dropdown.Item>
-                          <Dropdown.Item icon="message-square">
-                            Something else here
-                          </Dropdown.Item>
-                          <Dropdown.ItemDivider />
-                          <Dropdown.Item icon="link">
-                            {" "}
-                            Separated link
-                          </Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown>
+                      <Dropdown
+                        triggerContent={<Icon name="more-vertical" />}
+                        items={
+                          <React.Fragment>
+                            <Dropdown.Item icon="tag">Action </Dropdown.Item>
+                            <Dropdown.Item icon="edit-2">
+                              Another action{" "}
+                            </Dropdown.Item>
+                            <Dropdown.Item icon="message-square">
+                              Something else here
+                            </Dropdown.Item>
+                            <Dropdown.ItemDivider />
+                            <Dropdown.Item icon="link">
+                              {" "}
+                              Separated link
+                            </Dropdown.Item>
+                          </React.Fragment>
+                        }
+                        toggle={false}
+                      />
                     </Table.Col>
                   </Table.Row>
                 </Table.Body>
