@@ -8,6 +8,15 @@ import TableRow from "./TableRow.react";
 import TableCol from "./TableCol.react";
 import TableColHeader from "./TableColHeader.react";
 
+type BodyItem = {|
+  key: string | number,
+  item: Array<{
+    +content?: React.Node,
+    +className?: string,
+    +alignContent?: "left" | "center" | "right",
+  }>
+|};
+
 type Props = {|
   +children?: React.Node,
   +className?: string,
@@ -27,13 +36,7 @@ type Props = {|
   +hasOutline?: boolean,
   +verticalAlign?: "center",
   +headerItems?: Array<{ +content?: React.Node, +className?: string }>,
-  +bodyItems?: Array<
-    Array<{
-      +content?: React.Node,
-      +className?: string,
-      +alignContent?: "left" | "center" | "right",
-    }>
-  >,
+  +bodyItems?: Array<BodyItem>,
 |};
 
 function Table({
@@ -74,11 +77,12 @@ function Table({
   const body = props.bodyItems && (
     <Table.Body>
       {props.bodyItems.map((row, i) => (
-        <Table.Row>
-          {row.map(col => (
+        <Table.Row key={row.key}>
+          {row.item.map((col, i) => (
             <Table.Col
               className={col.className}
               alignContent={col.alignContent}
+              key={i}
             >
               {col.content}
             </Table.Col>
