@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { Page, Grid, Card, Icon, BlogCard } from "tabler-react";
+import { Page, Grid, BlogCard } from "tabler-react";
 import SiteWrapper from "../SiteWrapper.react";
 
 function BlogPage(): React.Node {

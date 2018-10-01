@@ -55,11 +55,14 @@ function DocsTablePage(): React.Node {
             { content: "Action" },
           ]}
           bodyItems={[
-            [
-              { content: "1" },
-              { content: "Jon" },
-              { content: <Button color="primary">Edit</Button> },
-            ],
+            {
+              key: '1',
+              item: [
+                { content: "1" },
+                { content: "Jon" },
+                { content: <Button color="primary">Edit</Button> },
+              ]
+            },
           ]}
         />
       </ComponentDemo>
