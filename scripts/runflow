@@ -1,12 +1,17 @@
 #!/usr/bin/env bash
 
+flow version > /dev/null 2>&1
+uses_global_flow=$?
+
 yarn flow version > /dev/null 2>&1
 uses_yarn=$?
 
 npm run flow version > /dev/null 2>&1
 uses_npm=$?
 
-if [ $uses_yarn -eq 0 ]; then
+if [ $uses_global_flow -eq 0 ]; then
+  flow
+elif [ $uses_yarn -eq 0 ]; then
   yarn flow
 elif [ $uses_npm -eq 0 ]; then
   npm run flow
