@@ -23,7 +23,7 @@ type DefaultProps = {|
   /**
    * The trigger component for this Dropdown
    */
-  +trigger?: React.Node,
+  +trigger?: React.Element<*>,
   /**
    * Is this Dropdown a Card option?
    */
@@ -158,9 +158,12 @@ class Dropdown extends React.Component<Props, State> {
   static Item = DropdownItem;
   static ItemDivider = DropdownItemDivider;
 
-  _handleTriggerOnClick = (e: SyntheticMouseEvent<HTMLElement>) => {
+  _handleTriggerOnClick = (e: SyntheticMouseEvent<HTMLElement>, o?: Object) => {
     e.preventDefault();
     this.setState(s => ({ isOpen: !s.isOpen }));
+    if (o && o.onClick) {
+      o.onClick(e);
+    }
   };
 
   _handleItemClick = (
@@ -197,7 +200,12 @@ class Dropdown extends React.Component<Props, State> {
     );
 
     const trigger = (() => {
-      if (props.trigger) return props.trigger;
+      if (props.trigger) {
+        return React.cloneElement(props.trigger, {
+          onClick: e => this._handleTriggerOnClick(e, props.trigger),
+        });
+        // return props.trigger;
+      }
       if (props.icon || props.triggerContent || props.toggle) {
         const {
           icon,
