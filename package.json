@@ -70,7 +70,7 @@
     "pretty-quick": "^1.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "^1.1.1",
+    "react-scripts": "^2.0.3",
     "react-styleguidist": "^7.0.9",
     "rollup": "0.63.5",
     "rollup-plugin-babel": "3.0.7",
