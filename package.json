@@ -56,7 +56,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "empty": "^0.10.1",
     "eslint": "^5.0.1",
-    "eslint-config-react-app": "^2.1.0",
+    "eslint-config-react-app": "^3.0.3",
     "eslint-plugin-flowtype": "^2.34.1",
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
