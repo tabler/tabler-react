@@ -72,7 +72,7 @@
     "react-dom": "^16.2.0",
     "react-scripts": "^1.1.1",
     "react-styleguidist": "^7.0.9",
-    "rollup": "0.63.5",
+    "rollup": "0.66.3",
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-commonjs": "9.1.5",
     "rollup-plugin-node-resolve": "3.4.0",
