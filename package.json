@@ -78,7 +78,7 @@
     "rollup-plugin-node-resolve": "3.4.0",
     "rollup-plugin-peer-deps-external": "2.2.0",
     "rollup-plugin-postcss": "1.6.2",
-    "rollup-plugin-url": "1.4.0",
+    "rollup-plugin-url": "2.0.0",
     "semantic-release": "^15.5.0",
     "webpack": "^3.8.1"
   },
