@@ -8279,10 +8279,10 @@ react-simple-maps@^0.12.0:
     d3-geo-projection "1.2.2"
     topojson-client "2.1.0"
 
-react-syntax-highlighter@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-8.0.1.tgz#88f7833e3a2d3c718799f2e7776266486c82c566"
-  integrity sha512-en/fS7a1eFvEVnAFZ60agglGgH9jRsNrgWpijeFCn4KE39PH7/RWt2wF2HaV47C+FlZW757agCtCgmpxT6MSzg==
+react-syntax-highlighter@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-9.0.0.tgz#746717ce7f98171a833344e47a5191da6e689167"
+  integrity sha512-kdaBn+2FE3Yh4+rgYQYaNyNHK1km+OY6EzcDVSFyFRICY3KCTM8FgRJZ2+hVG6WxCWp10ylMZ3lNcYvuPqYOCQ==
   dependencies:
     babel-runtime "^6.18.0"
     highlight.js "~9.12.0"
