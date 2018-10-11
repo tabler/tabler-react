@@ -44,18 +44,35 @@ function Nav({
     <ul className={classes}>
       {items ||
         (itemsObjects &&
-          itemsObjects.map((a, i) => (
-            <Nav.Item
-              key={i}
-              icon={a.icon}
-              value={a.value}
-              to={a.to}
-              hasSubNav={!!a.subItems}
-              LinkComponent={a.LinkComponent}
-              subItemsObjects={a.subItems}
-              active={a.active}
-            />
-          ))) ||
+          itemsObjects.map((a, i) => {
+            if (a.value === "Components") {
+              console.log(a.subItems);
+            }
+            const pprops = {
+              key: i,
+              icon: a.icon,
+              value: a.value,
+              to: a.to,
+              hasSubNav: !!a.subItems,
+              subItemsObjects: a.subItems,
+              active: a.active,
+            };
+            if (a.LinkComponent) {
+              return React.createElement(a.LinkComponent, pprops);
+            }
+
+            return (
+              <Nav.Item
+                key={i}
+                icon={a.icon}
+                value={a.value}
+                to={a.to}
+                hasSubNav={!!a.subItems}
+                subItemsObjects={a.subItems}
+                active={a.active}
+              />
+            );
+          })) ||
         children}
     </ul>
   );

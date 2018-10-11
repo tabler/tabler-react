@@ -47,6 +47,7 @@ const navBarItems: Array<navItem> = [
   {
     value: "Components",
     icon: "calendar",
+    LinkComponent: withRouter(Nav.Item),
     subItems: [
       { value: "Maps", to: "/maps", LinkComponent: withRouter(NavLink) },
       { value: "Icons", to: "/icons", LinkComponent: withRouter(NavLink) },

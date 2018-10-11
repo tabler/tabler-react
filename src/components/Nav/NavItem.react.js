@@ -71,7 +71,34 @@ class NavItem extends React.Component<Props, State> {
       position = "bottom-start",
     }: Props = this.props;
 
+    let isActive = active || false;
     const hasSubNav = forcedHasSubNav || !!subItems || !!subItemsObjects;
+
+    const subNav = hasSubNav && (
+      <Dropdown.Menu arrow show={this.state.isOpen} position={position}>
+        {subItems ||
+          (subItemsObjects &&
+            subItemsObjects.map((a, i) => {
+              console.log(this.props.location);
+              if (
+                this.props.location &&
+                this.props.location.pathname === a.to
+              ) {
+                isActive = true;
+              }
+              return (
+                <Nav.SubItem
+                  key={i}
+                  value={a.value}
+                  to={a.to}
+                  icon={a.icon}
+                  LinkComponent={a.LinkComponent}
+                />
+              );
+            })) ||
+          children}
+      </Dropdown.Menu>
+    );
 
     const navLink =
       (typeof children === "string" || value) && hasSubNav ? (
@@ -83,7 +110,7 @@ class NavItem extends React.Component<Props, State> {
               icon={icon}
               RootComponent={LinkComponent}
               hasSubNav={hasSubNav}
-              active={active}
+              active={isActive}
               rootRef={ref}
             >
               {!hasSubNav && typeof children === "string" ? children : value}
@@ -107,22 +134,7 @@ class NavItem extends React.Component<Props, State> {
       <React.Fragment>
         {navLink}
         {typeof children !== "string" && !hasSubNav && children}
-        {hasSubNav && (
-          <Dropdown.Menu arrow show={this.state.isOpen} position={position}>
-            {subItems ||
-              (subItemsObjects &&
-                subItemsObjects.map((a, i) => (
-                  <Nav.SubItem
-                    key={i}
-                    value={a.value}
-                    to={a.to}
-                    icon={a.icon}
-                    LinkComponent={a.LinkComponent}
-                  />
-                ))) ||
-              children}
-          </Dropdown.Menu>
-        )}
+        {subNav}
       </React.Fragment>
     );
 
