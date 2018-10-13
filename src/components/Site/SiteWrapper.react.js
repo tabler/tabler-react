@@ -12,6 +12,7 @@ type Props = {|
   +navProps: SiteNavProps,
   +footerProps: SiteFooterProps,
   +children: React.Node,
+  +routerContextComponentType?: React.ElementType,
 |};
 
 type State = {
@@ -30,7 +31,13 @@ class SiteWrapper extends React.PureComponent<Props, State> {
   };
 
   render(): React.Node {
-    const { headerProps, navProps, footerProps, children }: Props = this.props;
+    const {
+      headerProps,
+      navProps,
+      footerProps,
+      children,
+      routerContextComponentType,
+    }: Props = this.props;
 
     const headerPropsWithToggleClick = {
       ...headerProps,
@@ -40,6 +47,7 @@ class SiteWrapper extends React.PureComponent<Props, State> {
     const navPropsWithCollapse = {
       ...navProps,
       collapse: this.state.collapseMobileMenu,
+      routerContextComponentType: routerContextComponentType,
     };
     const nav = React.createElement(Site.Nav, navPropsWithCollapse);
     const footer = React.createElement(Site.Footer, footerProps);

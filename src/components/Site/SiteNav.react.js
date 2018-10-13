@@ -38,6 +38,7 @@ export type Props = {|
    * Toggle the collapsed state of the nav
    */
   +collapse?: boolean,
+  +routerContextComponentType?: React.ElementType,
 |};
 
 const SiteNav = ({
@@ -47,6 +48,7 @@ const SiteNav = ({
   withSearchForm = true,
   rightColumnComponent,
   collapse = true,
+  routerContextComponentType,
 }: Props): React.Node => {
   const classes = cn("header d-lg-flex p-0", { collapse });
   return (
@@ -65,6 +67,7 @@ const SiteNav = ({
                 className="border-0 flex-column flex-lg-row"
                 items={items}
                 itemsObjects={itemsObjects}
+                routerContextComponentType={routerContextComponentType}
               />
             </Grid.Col>
           </Grid.Row>

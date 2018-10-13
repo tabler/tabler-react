@@ -28,43 +28,110 @@ type Props = {|
   +children?: React.Node,
   +className?: string,
   +tabbed?: boolean,
+  // eslint-disable-next-line no-use-before-define
   +items?: React.ChildrenArray<React.Element<typeof Nav.Item>>,
   +itemsObjects?: Array<navItem>,
+  +routerContextComponentType?: React.ElementType,
 |};
 
-function Nav({
-  className,
-  children,
-  tabbed = true,
-  items,
-  itemsObjects,
-}: Props): React.Node {
-  const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
-  return (
-    <ul className={classes}>
-      {items ||
-        (itemsObjects &&
-          itemsObjects.map((a, i) => (
-            <Nav.Item
-              key={i}
-              icon={a.icon}
-              value={a.value}
-              to={a.to}
-              hasSubNav={!!a.subItems}
-              LinkComponent={a.LinkComponent}
-              subItemsObjects={a.subItems}
-              active={a.active}
-            />
-          ))) ||
-        children}
-    </ul>
-  );
+type State = {|
+  pathName: ?string,
+|};
+
+class Nav extends React.Component<Props, State> {
+  state = {
+    pathName: null,
+  };
+
+  static Item = NavItem;
+  static SubItem = NavSubItem;
+  static Link = NavLink;
+  static Submenu = NavSubmenu;
+  static SubmenuItem = NavSubmenuItem;
+
+  routerCallback = (location: { pathname: string }): void => {
+    this.setState({ pathName: location.pathname });
+  };
+
+  computeActive(
+    initialValue?: boolean,
+    to?: string,
+    subItems?: Array<subNavItem>
+  ): boolean {
+    const { pathName } = this.state;
+
+    if (
+      initialValue !== null &&
+      initialValue !== undefined &&
+      initialValue === true
+    ) {
+      return true;
+    }
+
+    if (to !== null && to !== undefined && to === pathName) {
+      return true;
+    }
+
+    if (subItems !== null && subItems !== undefined) {
+      if (
+        subItems.find(
+          item =>
+            item.to !== null && item.to !== undefined && item.to === pathName
+        )
+      ) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  render(): React.Node {
+    const {
+      className,
+      children,
+      tabbed = true,
+      items,
+      itemsObjects,
+      routerContextComponentType,
+    } = this.props;
+    const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
+
+    let element: ?React.Element<*> = null;
+    if (routerContextComponentType) {
+      const routerContextComponentFactory = React.createFactory(
+        routerContextComponentType
+      );
+      element = routerContextComponentFactory({
+        callback: this.routerCallback,
+      });
+    }
+
+    return (
+      <React.Fragment>
+        {element}
+        <ul className={classes}>
+          {items ||
+            (itemsObjects &&
+              itemsObjects.map((a, i) => (
+                <Nav.Item
+                  key={i}
+                  icon={a.icon}
+                  value={a.value}
+                  to={a.to}
+                  hasSubNav={!!a.subItems}
+                  LinkComponent={a.LinkComponent}
+                  subItemsObjects={a.subItems}
+                  active={this.computeActive(a.active, a.to, a.subItems)}
+                />
+              ))) ||
+            children}
+        </ul>
+      </React.Fragment>
+    );
+  }
 }
 
-Nav.Item = NavItem;
-Nav.SubItem = NavSubItem;
-Nav.Link = NavLink;
-Nav.Submenu = NavSubmenu;
-Nav.SubmenuItem = NavSubmenuItem;
+//Nav.Item = NavItem;
 
 export default Nav;
