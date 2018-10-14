@@ -18,6 +18,10 @@ export type { UserInterface as UIEvents } from "./flow";
 export type { Wheel as WheelEvents } from "./flow";
 
 export {
+  default as RouterContextProvider,
+} from "./helpers/RouterContextProvider.react";
+
+export {
   default as StandaloneFormPage,
 } from "./page_templates/StandaloneFormPage.react";
 export {

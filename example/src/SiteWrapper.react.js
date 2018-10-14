@@ -3,7 +3,14 @@
 import * as React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
-import { Site, Nav, Grid, List, Button } from "tabler-react";
+import {
+  Site,
+  Nav,
+  Grid,
+  List,
+  Button,
+  RouterContextProvider,
+} from "tabler-react";
 
 type Props = {|
   +children: React.Node,
@@ -179,6 +186,7 @@ class SiteWrapper extends React.Component<Props, void> {
           accountDropdown: accountDropdownProps,
         }}
         navProps={{ itemsObjects: navBarItems }}
+        routerContextComponentType={withRouter(RouterContextProvider)}
         footerProps={{
           links: [
             <a>First Link</a>,
