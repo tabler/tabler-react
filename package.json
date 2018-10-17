@@ -80,7 +80,7 @@
     "rollup-plugin-postcss": "1.6.2",
     "rollup-plugin-url": "2.0.1",
     "semantic-release": "^15.5.0",
-    "webpack": "4.19.1"
+    "webpack": "4.21.0"
   },
   "files": [
     "dist"
