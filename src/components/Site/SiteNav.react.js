@@ -26,6 +26,7 @@ export type Props = {|
   +children?: React.Node,
   +items?: React.ChildrenArray<React.Element<typeof Nav.Item>>,
   +itemsObjects?: navItems,
+  +collapse?:true,
   /**
    * Display a search form to the right of the nav items
    */
