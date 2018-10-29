@@ -65,7 +65,7 @@
     "flow-copy-source": "^2.0.0",
     "gh-pages": "^2.0.0",
     "husky": "^1.0.0",
-    "lint-staged": "^7.0.4",
+    "lint-staged": "^8.0.0",
     "prettier": "1.14.1",
     "pretty-quick": "^1.6.0",
     "react": "^16.2.0",
