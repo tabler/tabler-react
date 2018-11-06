@@ -24,9 +24,9 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "copytablercsstodist": "mkdir -p dist && shx cp src/Tabler.css src/Tabler.RTL.css dist/ && shx cp -r src/fonts src/images dist/",
+    "copytablercsstodist": "mkdir -p dist && cp src/Tabler.css src/Tabler.RTL.css dist/ && cp -r src/fonts src/images dist/",
     "cm": "git-cz",
-    "startagain": "shx rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build"
+    "startagain": "rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
