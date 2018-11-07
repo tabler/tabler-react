@@ -66,7 +66,7 @@
     "gh-pages": "^2.0.0",
     "husky": "^1.0.0",
     "lint-staged": "^7.0.4",
-    "prettier": "1.14.1",
+    "prettier": "1.15.0",
     "pretty-quick": "^1.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
