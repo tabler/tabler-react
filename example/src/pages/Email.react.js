@@ -16,7 +16,7 @@ import SiteWrapper from "../SiteWrapper.react";
 function Email() {
   return (
     <SiteWrapper>
-      <div class="my-3 my-md-5">
+      <div className="my-3 my-md-5">
         <Container>
           <Grid.Row>
             <Grid.Col md={3}>
@@ -29,7 +29,8 @@ function Email() {
                     icon="inbox"
                     active
                   >
-                    Inbox<Badge className="ml-auto">14</Badge>
+                    Inbox
+                    <Badge className="ml-auto">14</Badge>
                   </List.GroupItem>
                   <List.GroupItem
                     to="/email"
