@@ -358,7 +358,7 @@ function Home() {
               color="blue"
               icon="dollar-sign"
               header={
-                <a>
+                <a href="%23">
                   132 <small>Sales</small>
                 </a>
               }
@@ -370,7 +370,7 @@ function Home() {
               color="green"
               icon="shopping-cart"
               header={
-                <a>
+                <a href="%23">
                   78 <small>Orders</small>
                 </a>
               }
@@ -382,7 +382,7 @@ function Home() {
               color="red"
               icon="users"
               header={
-                <a>
+                <a href="%23">
                   1,352 <small>Members</small>
                 </a>
               }
@@ -394,7 +394,7 @@ function Home() {
               color="yellow"
               icon="message-square"
               header={
-                <a>
+                <a href="%23">
                   132 <small>Comments</small>
                 </a>
               }
@@ -550,7 +550,9 @@ function Home() {
                       </Grid.Col>
                       <Grid.Col>
                         <div>
-                          <a className="text-inherit">Amanda Hunt</a>
+                          <a className="text-inherit" href="%23">
+                            Amanda Hunt
+                          </a>
                         </div>
                         <Text.Small muted className="d-block item-except h-1x">
                           amanda_hunt@example.com
