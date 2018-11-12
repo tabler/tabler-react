@@ -189,14 +189,14 @@ class SiteWrapper extends React.Component<Props, void> {
         routerContextComponentType={withRouter(RouterContextProvider)}
         footerProps={{
           links: [
-            <a>First Link</a>,
-            <a>Second Link</a>,
-            <a>Third Link</a>,
-            <a>Fourth Link</a>,
-            <a>Five Link</a>,
-            <a>Sixth Link</a>,
-            <a>Seventh Link</a>,
-            <a>Eigth Link</a>,
+            <a href="#">First Link</a>,
+            <a href="#">Second Link</a>,
+            <a href="#">Third Link</a>,
+            <a href="#">Fourth Link</a>,
+            <a href="#">Five Link</a>,
+            <a href="#">Sixth Link</a>,
+            <a href="#">Seventh Link</a>,
+            <a href="#">Eigth Link</a>,
           ],
           note:
             "Premium and Open Source dashboard template with responsive and high quality UI. For Free!",

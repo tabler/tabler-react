@@ -1,7 +1,7 @@
 // https://github.com/mightyiam/get-own-enumerable-property-symbols/blob/master/src/index.ts
-const getOwnEnumPropSymbols = (object: object): symbol[] =>
-  Object.getOwnPropertySymbols(object).filter((keySymbol): boolean =>
-    object.propertyIsEnumerable(keySymbol)
+const getOwnEnumPropSymbols = (object: Object): symbol[] =>
+  Object.getOwnPropertySymbols(object).filter(
+    (keySymbol): boolean => object.propertyIsEnumerable(keySymbol)
   );
 
 // https://github.com/sindresorhus/is-regexp/blob/master/index.js

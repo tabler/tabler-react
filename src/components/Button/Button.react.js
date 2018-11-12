@@ -129,11 +129,9 @@ const Button = (props: Props): React.Node => {
     );
   } else if (props.RootComponent === "input") {
     const { type, value } = props;
-
     return <input {...propsForAll} type={type} value={value} ref={rootRef} />;
   } else if (props.RootComponent === "a") {
     const { href, target } = props;
-
     return (
       <a {...propsForAll} href={href} target={target} ref={rootRef}>
         {childrenForAll}
@@ -141,7 +139,6 @@ const Button = (props: Props): React.Node => {
     );
   } else {
     const Component: React.ElementType = props.RootComponent;
-
     return (
       <Component {...propsForAll} to={to}>
         {childrenForAll}

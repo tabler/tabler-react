@@ -8,7 +8,11 @@ type Props = {|
 |};
 
 function TimelineItemTitle({ children, active }: Props): React.Node {
-  return active ? <strong>{children}</strong> : children;
+  if (children) {
+    return active ? <strong>{children}</strong> : children;
+  } else {
+    return null;
+  }
 }
 
 TimelineItemTitle.displayName = "Timeline.ItemTitle";
