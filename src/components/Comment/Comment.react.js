@@ -5,6 +5,8 @@ import cn from "classnames";
 import List from "../List/List.react";
 import Media from "../Media/Media.react";
 import Text from "../Text/Text.react";
+import CommentList from "./CommentList.react";
+import CommentReply from "./CommentReply.react";
 
 type Props = {|
   +children?: React.Node,
@@ -43,5 +45,8 @@ function Comment({
     </List.GroupItem>
   );
 }
+
+Comment.List = CommentList;
+Comment.Reply = CommentReply;
 
 export default Comment;
