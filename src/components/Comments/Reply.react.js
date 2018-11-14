@@ -1,7 +1,6 @@
 // @flow
 
 import * as React from "react";
-import cn from "classnames";
 import Media from "../Media/Media.react";
 
 type Props = {|
@@ -21,10 +20,8 @@ function CommentReply({
   date,
   text,
 }: Props): React.Node {
-  const classes = cn({}, className);
-
   return (
-    <Media.ListItem className={classes}>
+    <Media.ListItem className={className}>
       <Media.Object avatar objectURL={avatarURL} className="mr-4" />
       {null}
       <Media.Body>
