@@ -23,7 +23,6 @@ function CommentReply({
   return (
     <Media.ListItem className={className}>
       <Media.Object avatar objectURL={avatarURL} className="mr-4" />
-      {null}
       <Media.Body>
         <strong>{name}: </strong>
         {text}
