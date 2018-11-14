@@ -131,7 +131,7 @@ function ProfilePage() {
                   />
                   <Comment
                     avatarURL="demo/faces/male/16.jpg"
-                    date="12 min"
+                    date="34 min"
                     name="Peter Richards"
                     text="Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui."
                     replies={
