@@ -4,7 +4,12 @@ import * as React from "react";
 import cn from "classnames";
 import { Icon } from "../";
 
+import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+
 type PropsForAll = {|
+  ...MouseEvents,
+  ...PointerEvents,
+  ...FocusEvents,
   +children?: React.Node,
   +className?: string,
   +icon?: string,
@@ -17,7 +22,6 @@ type PropsForLink = {|
   ...PropsForAll,
   link: true,
   +href?: string,
-  +onClick?: (event: SyntheticMouseEvent<HTMLLinkElement>) => mixed,
 |};
 
 type PropsForReactRouter = {|
@@ -29,8 +33,31 @@ type PropsForReactRouter = {|
 type Props = DefaultProps | PropsForLink | PropsForReactRouter;
 
 function TagAddOn(props: Props): React.Node {
-  const { children, className, icon, color = "" } = props;
+  const {
+    children,
+    className,
+    icon,
+    color = "",
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
+    onBlur,
+  } = props;
+
   const classes = cn("tag-addon", { [`tag-${color}`]: color }, className);
+
+  const eventProps = {
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
+    onBlur,
+  };
 
   const childrenForAll = (
     <React.Fragment>
@@ -40,9 +67,9 @@ function TagAddOn(props: Props): React.Node {
   );
 
   if (props.link) {
-    const { href, onClick } = props;
+    const { href } = props;
     return (
-      <a className={classes} href={href} onClick={onClick}>
+      <a className={classes} href={href} {...eventProps}>
         {childrenForAll}
       </a>
     );
@@ -50,10 +77,18 @@ function TagAddOn(props: Props): React.Node {
 
   if (props.RootComponent) {
     const { RootComponent: Component, to } = props;
-    return <Component to={to}>{childrenForAll}</Component>;
+    return (
+      <Component to={to} {...eventProps}>
+        {childrenForAll}
+      </Component>
+    );
   }
 
-  return <span className={classes}>{childrenForAll}</span>;
+  return (
+    <span className={classes} {...eventProps}>
+      {childrenForAll}
+    </span>
+  );
 }
 
 TagAddOn.displayName = "Tag.AddOn";

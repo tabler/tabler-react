@@ -3,7 +3,12 @@
 import * as React from "react";
 import cn from "classnames";
 
+import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+
 type Props = {|
+  ...MouseEvents,
+  ...PointerEvents,
+  ...FocusEvents,
   +className?: string,
   /**
    * Should this icon be rendered within an <a> tag
@@ -40,6 +45,13 @@ function Icon({
   isAriaHidden,
   payment,
   flag,
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+  onPointerEnter,
+  onPointerLeave,
+  onFocus,
+  onBlur,
 }: Props): React.Node {
   const prefix = (payment && "payment") || (flag && "flag") || prefixFromProps;
   const classes = cn(
@@ -55,10 +67,20 @@ function Icon({
       }
     : null;
 
+  const eventProps = {
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
+    onBlur,
+  };
+
   return !link ? (
-    <i className={classes} />
+    <i className={classes} {...eventProps} />
   ) : (
-    <a className="icon" {...extraProps}>
+    <a className="icon" {...extraProps} {...eventProps}>
       <i className={classes} />
     </a>
   );

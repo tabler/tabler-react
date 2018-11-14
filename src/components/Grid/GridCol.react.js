@@ -18,6 +18,13 @@ type Props = {|
   +xl?: number,
   +xlAuto?: boolean,
   +auto?: boolean,
+  +offset?: number,
+  +offsetXs?: number,
+  +offsetSm?: number,
+  +offsetMd?: number,
+  +offsetLg?: number,
+  +offsetXl?: number,
+  +ignoreCol?: boolean,
 |};
 
 function GridCol({
@@ -35,10 +42,17 @@ function GridCol({
   lgAuto,
   xlAuto,
   auto,
+  offset = 0,
+  offsetXs = 0,
+  offsetSm = 0,
+  offsetMd = 0,
+  offsetLg = 0,
+  offsetXl = 0,
+  ignoreCol = false,
 }: Props): React.Node {
   const classes = cn(
     {
-      col: true,
+      col: !ignoreCol,
       [`col-${width}`]: width,
       [`col-xs-${xs}`]: xs,
       [`col-xs-auto`]: xsAuto,
@@ -51,6 +65,12 @@ function GridCol({
       [`col-xl-${xl}`]: xl,
       [`col-xl-auto`]: xlAuto,
       "col-auto": auto,
+      [`offset-${offset}`]: offset,
+      [`offset-xs-${offsetXs}`]: offsetXs,
+      [`offset-sm-${offsetSm}`]: offsetSm,
+      [`offset-md-${offsetMd}`]: offsetMd,
+      [`offset-lg-${offsetLg}`]: offsetLg,
+      [`offset-xl-${offsetXl}`]: offsetXl,
     },
     className
   );

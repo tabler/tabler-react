@@ -3,12 +3,36 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {| +children?: React.Node, +className?: string, +aside?: string |};
+import type { MouseEvents, PointerEvents } from "../../";
 
-function FormLabel({ className, aside, children }: Props): React.Node {
+type Props = {|
+  ...MouseEvents,
+  ...PointerEvents,
+  +children?: React.Node,
+  +className?: string,
+  +aside?: string,
+|};
+
+function FormLabel({
+  className,
+  aside,
+  children,
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+  onPointerEnter,
+  onPointerLeave,
+}: Props): React.Node {
   const classes = cn("form-label", className);
   return (
-    <label className={classes}>
+    <label
+      className={classes}
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onPointerEnter={onPointerEnter}
+      onPointerLeave={onPointerLeave}
+    >
       {aside && <span className="form-label-small">{aside}</span>}
       {children}
     </label>

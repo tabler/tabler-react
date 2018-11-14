@@ -8,7 +8,11 @@ import type { Props as AccountDropdownProps } from "../AccountDropdown/AccountDr
 export type Props = {|
   +children?: React.Node,
   /**
-   * href attributefor the logo
+   * header alignment
+   */
+  +align?: string,
+  /**
+   * href attribute for the logo
    */
   +href?: string,
   /**
@@ -25,6 +29,10 @@ export type Props = {|
   +notificationsTray?: NotificationTrayProps,
   +accountDropdown?: AccountDropdownProps,
   +navItems?: React.Node,
+  /**
+   * Handle toggling/collapsing of the mobile menu when the collapse icon is clicked
+   */
+  +onMenuToggleClick?: () => void,
 |};
 
 /**
@@ -34,11 +42,13 @@ export type Props = {|
 const SiteHeader = ({
   children,
   href,
+  align,
   imageURL,
   alt,
   notificationsTray: notificationsTrayFromProps,
   accountDropdown: accountDropdownFromProps,
   navItems,
+  onMenuToggleClick,
 }: Props): React.Node => {
   const notificationsTray =
     notificationsTrayFromProps &&
@@ -50,7 +60,7 @@ const SiteHeader = ({
 
   return (
     <div className="header py-4">
-      <Container>
+      <Container className={align}>
         <div className="d-flex">
           {children || (
             <React.Fragment>
@@ -62,8 +72,7 @@ const SiteHeader = ({
               </div>
               <a
                 className="header-toggler d-lg-none ml-3 ml-lg-0"
-                data-toggle="collapse"
-                data-target="#headerMenuCollapse"
+                onClick={onMenuToggleClick}
               >
                 <span className="header-toggler-icon" />
               </a>

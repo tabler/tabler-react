@@ -41,7 +41,7 @@ function DropdownMenu({
   arrowPosition = "left",
   style,
   rootRef,
-  show,
+  show = false,
 }: Props): React.Node {
   const classes = cn(
     {
@@ -53,21 +53,22 @@ function DropdownMenu({
     className
   );
   return (
-    <Popper placement={position} eventsEnabled={true} positionFixed={false}>
-      {({ ref, style, placement, scheduleUpdate }: PopperChildrenProps) => {
-        scheduleUpdate();
-        return (
-          <div
-            className={classes}
-            data-placement={placement}
-            style={style}
-            ref={ref}
-          >
-            {children}
-          </div>
-        );
-      }}
-    </Popper>
+    show && (
+      <Popper placement={position} eventsEnabled={true} positionFixed={false}>
+        {({ ref, style, placement }: PopperChildrenProps) => {
+          return (
+            <div
+              className={classes}
+              data-placement={placement}
+              style={style}
+              ref={ref}
+            >
+              {children}
+            </div>
+          );
+        }}
+      </Popper>
+    )
   );
 }
 

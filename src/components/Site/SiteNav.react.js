@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from "react";
+import cn from "classnames";
 import { Container, Grid, Nav } from "../../";
 
 type subNavItem = {|
@@ -33,6 +34,11 @@ export type Props = {|
    * Provide your own component to replace the search form
    */
   +rightColumnComponent?: React.Node,
+  /**
+   * Toggle the collapsed state of the nav
+   */
+  +collapse?: boolean,
+  +routerContextComponentType?: React.ElementType,
 |};
 
 const SiteNav = ({
@@ -41,29 +47,35 @@ const SiteNav = ({
   itemsObjects,
   withSearchForm = true,
   rightColumnComponent,
-}: Props): React.Node => (
-  <div className="header collapse d-lg-flex p-0" id="headerMenuCollapse">
-    <Container>
-      {children || (
-        <Grid.Row className="align-items-center">
-          <Grid.Col lg={3} className="ml-auto">
-            {/* @TODO: add InlineSearchForm  */}
-            {/* {rightColumnComponent || (withSearchForm && <InlineSearchForm />)} */}
-            {rightColumnComponent}
-          </Grid.Col>
-          <Grid.Col className="col-lg order-lg-first">
-            <Nav
-              tabbed
-              className="border-0 flex-column flex-lg-row"
-              items={items}
-              itemsObjects={itemsObjects}
-            />
-          </Grid.Col>
-        </Grid.Row>
-      )}
-    </Container>
-  </div>
-);
+  collapse = true,
+  routerContextComponentType,
+}: Props): React.Node => {
+  const classes = cn("header d-lg-flex p-0", { collapse });
+  return (
+    <div className={classes}>
+      <Container>
+        {children || (
+          <Grid.Row className="align-items-center">
+            <Grid.Col lg={3} className="ml-auto" ignoreCol={true}>
+              {/* @TODO: add InlineSearchForm  */}
+              {/* {rightColumnComponent || (withSearchForm && <InlineSearchForm />)} */}
+              {rightColumnComponent}
+            </Grid.Col>
+            <Grid.Col className="col-lg order-lg-first">
+              <Nav
+                tabbed
+                className="border-0 flex-column flex-lg-row"
+                items={items}
+                itemsObjects={itemsObjects}
+                routerContextComponentType={routerContextComponentType}
+              />
+            </Grid.Col>
+          </Grid.Row>
+        )}
+      </Container>
+    </div>
+  );
+};
 
 SiteNav.displayName = "Site.Nav";
 

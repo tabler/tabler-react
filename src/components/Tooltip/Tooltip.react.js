@@ -2,8 +2,12 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Manager, Placement, Reference, Popper } from "react-popper";
-import type { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
+import { Manager, Reference, Popper } from "react-popper";
+import type {
+  Placement,
+  PopperChildrenProps,
+  ReferenceChildrenProps,
+} from "react-popper";
 import "./Tooltip.css";
 
 type Props = {|
@@ -49,9 +53,7 @@ class Tooltip extends React.Component<Props, State> {
     const classes = cn(
       "tooltip",
       placement && "bs-tooltip-" + placement,
-      {
-        show: this.state.isShown,
-      },
+      "show",
       className
     );
 
@@ -67,21 +69,15 @@ class Tooltip extends React.Component<Props, State> {
         <Reference>
           {({ ref }: ReferenceChildrenProps) =>
             typeof children !== "undefined" &&
-            (this.props.type
-              ? React.cloneElement(children, {
-                  ref: ref,
-                  onMouseEnter: this._handleTriggerOnMouseEnter,
-                  onMouseLeave: this._handleTriggerOnMouseLeave,
-                })
-              : React.cloneElement(children, {
-                  rootRef: ref,
-                  onMouseEnter: this._handleTriggerOnMouseEnter,
-                  onMouseLeave: this._handleTriggerOnMouseLeave,
-                }))
+            React.cloneElement(children, {
+              ref: ref,
+              onMouseEnter: this._handleTriggerOnMouseEnter,
+              onMouseLeave: this._handleTriggerOnMouseLeave,
+            })
           }
         </Reference>
         {this.state.isShown && (
-          <Popper placement={placement} eventsEnabled={true}>
+          <Popper placement={placement}>
             {({ ref, style, placement }: PopperChildrenProps) => {
               return (
                 <div

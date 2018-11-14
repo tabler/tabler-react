@@ -3,14 +3,23 @@ import * as React from "react";
 import cn from "classnames";
 import MaskedInput from "react-text-mask";
 
+import type {
+  FormEvents,
+  FocusEvents,
+  MouseEvents,
+  PointerEvents,
+} from "../../";
+
 type Props = {|
+  ...FormEvents,
+  ...FocusEvents,
+  ...MouseEvents,
+  ...PointerEvents,
   +mask: Array<string | RegExp>,
   +className?: string,
   +placeholder?: string,
   +guide?: boolean,
   +id?: string,
-  +onBlur?: () => {},
-  +onChange?: () => {},
   +value?: string,
   +valid?: boolean,
   +tick?: boolean,
@@ -35,6 +44,7 @@ function FormMaskedInput(props: Props): React.Node {
     },
     props.className
   );
+
   return (
     <React.Fragment>
       <MaskedInput className={classes} {...props} />

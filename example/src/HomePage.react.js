@@ -358,7 +358,7 @@ function Home() {
               color="blue"
               icon="dollar-sign"
               header={
-                <a>
+                <a href="#">
                   132 <small>Sales</small>
                 </a>
               }
@@ -370,7 +370,7 @@ function Home() {
               color="green"
               icon="shopping-cart"
               header={
-                <a>
+                <a href="#">
                   78 <small>Orders</small>
                 </a>
               }
@@ -382,7 +382,7 @@ function Home() {
               color="red"
               icon="users"
               header={
-                <a>
+                <a href="#">
                   1,352 <small>Members</small>
                 </a>
               }
@@ -394,7 +394,7 @@ function Home() {
               color="yellow"
               icon="message-square"
               header={
-                <a>
+                <a href="#">
                   132 <small>Comments</small>
                 </a>
               }
@@ -473,23 +473,31 @@ function Home() {
                     </Table.Col>
                     <Table.Col alignContent="center">42%</Table.Col>
                     <Table.Col alignContent="center">
-                      <Dropdown>
-                        <Dropdown.Trigger icon="more-vertical" toggle={false} />
-                        <Dropdown.Menu position="right">
-                          <Dropdown.Item icon="tag">Action </Dropdown.Item>
-                          <Dropdown.Item icon="edit-2">
-                            Another action{" "}
-                          </Dropdown.Item>
-                          <Dropdown.Item icon="message-square">
-                            Something else here
-                          </Dropdown.Item>
-                          <Dropdown.ItemDivider />
-                          <Dropdown.Item icon="link">
-                            {" "}
-                            Separated link
-                          </Dropdown.Item>
-                        </Dropdown.Menu>
-                      </Dropdown>
+                      <Dropdown
+                        trigger={
+                          <Dropdown.Trigger
+                            icon="more-vertical"
+                            toggle={false}
+                          />
+                        }
+                        position="right"
+                        items={
+                          <React.Fragment>
+                            <Dropdown.Item icon="tag">Action </Dropdown.Item>
+                            <Dropdown.Item icon="edit-2">
+                              Another action{" "}
+                            </Dropdown.Item>
+                            <Dropdown.Item icon="message-square">
+                              Something else here
+                            </Dropdown.Item>
+                            <Dropdown.ItemDivider />
+                            <Dropdown.Item icon="link">
+                              {" "}
+                              Separated link
+                            </Dropdown.Item>
+                          </React.Fragment>
+                        }
+                      />
                     </Table.Col>
                   </Table.Row>
                 </Table.Body>
@@ -542,35 +550,42 @@ function Home() {
                       </Grid.Col>
                       <Grid.Col>
                         <div>
-                          <a className="text-inherit">Amanda Hunt</a>
+                          <a className="text-inherit" href="#">
+                            Amanda Hunt
+                          </a>
                         </div>
                         <Text.Small muted className="d-block item-except h-1x">
                           amanda_hunt@example.com
                         </Text.Small>
                       </Grid.Col>
                       <Grid.Col auto>
-                        <Dropdown>
-                          <Dropdown.Trigger
-                            icon="more-vertical"
-                            toggle={false}
-                          />
-                          <Dropdown.Menu position="right">
-                            <Dropdown.Item icon="tag">Action </Dropdown.Item>
-                            <Dropdown.Item icon="edit-2">
-                              {" "}
-                              Another action{" "}
-                            </Dropdown.Item>
-                            <Dropdown.Item icon="message-square">
-                              {" "}
-                              Something else here
-                            </Dropdown.Item>
-                            <Dropdown.ItemDivider />
-                            <Dropdown.Item icon="link">
-                              {" "}
-                              Separated link
-                            </Dropdown.Item>
-                          </Dropdown.Menu>
-                        </Dropdown>
+                        <Dropdown
+                          trigger={
+                            <Dropdown.Trigger
+                              icon="more-vertical"
+                              toggle={false}
+                            />
+                          }
+                          position="right"
+                          items={
+                            <React.Fragment>
+                              <Dropdown.Item icon="tag">Action </Dropdown.Item>
+                              <Dropdown.Item icon="edit-2">
+                                {" "}
+                                Another action{" "}
+                              </Dropdown.Item>
+                              <Dropdown.Item icon="message-square">
+                                {" "}
+                                Something else here
+                              </Dropdown.Item>
+                              <Dropdown.ItemDivider />
+                              <Dropdown.Item icon="link">
+                                {" "}
+                                Separated link
+                              </Dropdown.Item>
+                            </React.Fragment>
+                          }
+                        />
                       </Grid.Col>
                     </Grid.Row>
                   </li>
@@ -847,53 +862,56 @@ function Home() {
                   { content: null },
                 ]}
                 bodyItems={[
-                  [
-                    {
-                      content: (
-                        <Text RootComponent="span" muted>
-                          001401
-                        </Text>
-                      ),
-                    },
-                    {
-                      content: (
-                        <a href="invoice.html" className="text-inherit">
-                          Design Works
-                        </a>
-                      ),
-                    },
-                    { content: "Carlson Limited" },
-                    { content: "87956621" },
-                    { content: "15 Dec 2017" },
-                    {
-                      content: (
-                        <React.Fragment>
-                          <span className="status-icon bg-success" /> Paid
-                        </React.Fragment>
-                      ),
-                    },
-                    { content: "$887" },
-                    {
-                      alignContent: "right",
-                      content: (
-                        <React.Fragment>
-                          <Button size="sm" color="secondary">
-                            Manage
-                          </Button>
-                          <div className="dropdown">
-                            <Button
-                              color="secondary"
-                              size="sm"
-                              isDropdownToggle
-                            >
-                              Actions
+                  {
+                    key: "1",
+                    item: [
+                      {
+                        content: (
+                          <Text RootComponent="span" muted>
+                            001401
+                          </Text>
+                        ),
+                      },
+                      {
+                        content: (
+                          <a href="invoice.html" className="text-inherit">
+                            Design Works
+                          </a>
+                        ),
+                      },
+                      { content: "Carlson Limited" },
+                      { content: "87956621" },
+                      { content: "15 Dec 2017" },
+                      {
+                        content: (
+                          <React.Fragment>
+                            <span className="status-icon bg-success" /> Paid
+                          </React.Fragment>
+                        ),
+                      },
+                      { content: "$887" },
+                      {
+                        alignContent: "right",
+                        content: (
+                          <React.Fragment>
+                            <Button size="sm" color="secondary">
+                              Manage
                             </Button>
-                          </div>
-                        </React.Fragment>
-                      ),
-                    },
-                    { content: <Icon link name="edit" /> },
-                  ],
+                            <div className="dropdown">
+                              <Button
+                                color="secondary"
+                                size="sm"
+                                isDropdownToggle
+                              >
+                                Actions
+                              </Button>
+                            </div>
+                          </React.Fragment>
+                        ),
+                      },
+                      { content: <Icon link name="edit" /> },
+                    ],
+                  },
                 ]}
               />
             </Card>

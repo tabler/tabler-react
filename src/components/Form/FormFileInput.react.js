@@ -3,14 +3,24 @@
 import * as React from "react";
 import cn from "classnames";
 
+import type {
+  FormEvents,
+  FocusEvents,
+  MouseEvents,
+  PointerEvents,
+} from "../../";
+
 type Props = {|
+  ...FormEvents,
+  ...FocusEvents,
+  ...MouseEvents,
+  ...PointerEvents,
   +className?: string,
   +value?: string | number | boolean,
   +name?: string,
   +label?: string,
   +disabled?: boolean,
   +readOnly?: boolean,
-  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
 |};
 
 type State = {| fileName: string |};
@@ -36,6 +46,13 @@ class FormFileInput extends React.Component<Props, State> {
       label: labelFromProps = "Choose file",
       disabled,
       readOnly,
+      onClick,
+      onMouseEnter,
+      onMouseLeave,
+      onPointerEnter,
+      onPointerLeave,
+      onFocus,
+      onBlur,
     } = this.props;
 
     const classes = cn("custom-file", className);
@@ -50,6 +67,13 @@ class FormFileInput extends React.Component<Props, State> {
           disabled={disabled}
           readOnly={readOnly}
           onChange={this._handleOnChange}
+          onClick={onClick}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onPointerEnter={onPointerEnter}
+          onPointerLeave={onPointerLeave}
+          onFocus={onFocus}
+          onBlur={onBlur}
         />
         <label
           className="custom-file-label"

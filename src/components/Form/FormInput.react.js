@@ -3,6 +3,16 @@
 import * as React from "react";
 import { Icon } from "../";
 import cn from "classnames";
+import FormGroup from "./FormGroup.react";
+
+import type {
+  FormEvents,
+  MouseEvents,
+  PointerEvents,
+  FocusEvents,
+  KeyboardEvents,
+  ClipboardEvents,
+} from "../../";
 
 type FormStyle = {|
   +className?: string,
@@ -25,13 +35,24 @@ type FormStyle = {|
 
 export type Props = {|
   ...FormStyle,
-  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
-  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
+  ...FormEvents,
+  ...MouseEvents,
+  ...PointerEvents,
+  ...FocusEvents,
+  ...KeyboardEvents,
+  ...ClipboardEvents,
   +placeholder?: string,
   +type?: "checkbox" | "radio" | "text" | "email" | "password",
   +value?: string | number | boolean,
+  /**
+   * Wraps the input in Form.Group and adds a label
+   */
+  +label?: string,
 |};
 
+/**
+ * A an input field
+ */
 function FormInput(props: Props): React.Node {
   const {
     className,
@@ -47,9 +68,21 @@ function FormInput(props: Props): React.Node {
     value,
     checked,
     onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
     onBlur,
+    onKeyPress,
+    onKeyUp,
+    onKeyDown,
+    onCopy,
+    onCut,
+    onPaste,
     disabled,
     readOnly,
+    label,
   } = props;
   const type = props.type || "text";
 
@@ -76,10 +109,21 @@ function FormInput(props: Props): React.Node {
     disabled,
     readOnly,
     onChange,
+    onMouseEnter,
+    onMouseLeave,
+    onPointerEnter,
+    onPointerLeave,
+    onFocus,
     onBlur,
+    onKeyPress,
+    onKeyUp,
+    onKeyDown,
+    onCopy,
+    onCut,
+    onPaste,
   };
 
-  return !icon ? (
+  const contents = !icon ? (
     <React.Fragment>
       {type === "checkbox" || type === "radio" ? (
         <input {...allInputProps} checked={checked} />
@@ -106,6 +150,8 @@ function FormInput(props: Props): React.Node {
       {feedback && <span className="invalid-feedback">{feedback}</span>}
     </React.Fragment>
   );
+
+  return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
 }
 
 FormInput.displayName = "Form.Input";

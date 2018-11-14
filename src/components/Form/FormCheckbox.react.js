@@ -4,16 +4,21 @@ import * as React from "react";
 import cn from "classnames";
 import Form from "./";
 
+import type { FormEvents, FocusEvents } from "../../";
+
 export type Props = {|
+  ...FormEvents,
+  ...FocusEvents,
   +className?: string,
+  /**
+   * Wrap the checkbox with a label
+   */
   +label?: string,
   +value?: string | number | boolean,
   +name?: string,
   +checked?: boolean,
   +disabled?: boolean,
   +readOnly?: boolean,
-  +onChange?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
-  +onBlur?: (event: SyntheticInputEvent<HTMLInputElement>) => void,
   +isInline?: boolean,
 |};
 
@@ -26,6 +31,8 @@ function FormCheckbox({
   disabled,
   readOnly,
   onChange,
+  onFocus,
+  onBlur,
   isInline,
 }: Props): React.Node {
   const classes = cn(
@@ -33,23 +40,32 @@ function FormCheckbox({
     { "custom-control-inline": isInline },
     className
   );
-  return (
+  const inputComponent = (
+    <Form.Input
+      type="checkbox"
+      name={name}
+      value={value}
+      checked={checked}
+      className={classes}
+      disabled={disabled}
+      readOnly={readOnly}
+      onChange={onChange}
+      onBlur={onBlur}
+      onFocus={onFocus}
+    />
+  );
+
+  return label ? (
     <label className={classes}>
-      <Form.Input
-        type="checkbox"
-        name={name}
-        value={value}
-        checked={checked}
-        className={classes}
-        disabled={disabled}
-        readOnly={readOnly}
-        onChange={onChange}
-      />
+      {inputComponent}
       <span className="custom-control-label">{label}</span>
     </label>
+  ) : (
+    inputComponent
   );
 }
 
 FormCheckbox.displayName = "Form.Checkbox";
 
+/** @component */
 export default FormCheckbox;
