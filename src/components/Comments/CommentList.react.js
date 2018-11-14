@@ -9,9 +9,9 @@ type Props = {|
   +className?: string,
 |};
 
-function Comments({ className, children }: Props): React.Node {
+function CommentList({ className, children }: Props): React.Node {
   const classes = cn("card-list-group", className);
   return <List.Group className={classes}>{children}</List.Group>;
 }
 
-export default Comments;
+export default CommentList;
