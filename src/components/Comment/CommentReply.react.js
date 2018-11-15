@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import Media from "../Media/Media.react";
+import Media from "../Media";
 
 type Props = {|
   +children?: React.Node,

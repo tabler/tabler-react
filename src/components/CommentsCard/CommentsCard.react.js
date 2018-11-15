@@ -3,8 +3,8 @@
 import * as React from "react";
 import cn from "classnames";
 import FormWithSingleInputAndButton from "../../forms/FormWithSingleInputAndButton.react";
-import Card from "../Card/Card.react";
-import Comments from "../Comments/Comments.react";
+import Card from "../Card";
+import Comment from "../Comment";
 
 type Props = {|
   +children?: React.Node,
@@ -21,7 +21,7 @@ function CommentsCard({ className, children }: Props): React.Node {
           inputProps={{ placeholder: "Message" }}
           buttonProps={{ icon: "camera", color: "secondary" }}
         />
-        <Comments>{children}</Comments>
+        <Comment>{children}</Comment>
       </Card.Header>
     </Card>
   );

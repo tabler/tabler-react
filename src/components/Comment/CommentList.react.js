@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
-import List from "../List/List.react";
+import List from "../List";
 
 type Props = {|
   +children?: React.Node,

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import cn from "classnames";
-import List from "../List/List.react";
+import List from "../List";
 import Media from "../Media/Media.react";
 import Text from "../Text/Text.react";
 import CommentList from "./CommentList.react";
