@@ -9,7 +9,6 @@ import Comment from "../Comment";
 type Props = {|
   +children?: React.Node,
   +className?: string,
-  +comments?: React.Node,
 |};
 
 function CommentsCard({ className, children }: Props): React.Node {
