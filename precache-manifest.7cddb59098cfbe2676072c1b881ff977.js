@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "625866342c77dcf827cdc22d004c6227",
-    "url": "/tabler-react/static/media/zm.62586634.svg"
+    "revision": "340124dfa62c424e4bb7",
+    "url": "/tabler-react/static/css/main.1f998881.chunk.css"
   },
   {
-    "revision": "35b347245f8226179a66",
-    "url": "/tabler-react/static/css/main.ad63a5ce.chunk.css"
+    "revision": "340124dfa62c424e4bb7",
+    "url": "/tabler-react/static/js/main.340124df.chunk.js"
   },
   {
-    "revision": "5d0397854840a158d950",
-    "url": "/tabler-react/static/js/1.5d039785.chunk.js"
+    "revision": "b19ef77e0f71ca3dbe44",
+    "url": "/tabler-react/static/js/1.b19ef77e.chunk.js"
   },
   {
     "revision": "9c14f1f15d0160d05fc8",
@@ -20,12 +20,20 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/aol-explorer.f2a4363b.svg"
   },
   {
+    "revision": "ead509aef9d7ac89dc55069b4c0acbfd",
+    "url": "/tabler-react/static/media/blackberry.ead509ae.svg"
+  },
+  {
+    "revision": "2bbe801cebc095f84c7d92574ec7214d",
+    "url": "/tabler-react/static/media/chrome.2bbe801c.svg"
+  },
+  {
     "revision": "e1d3686c3d84d0a4de49cbfbcd51f5df",
     "url": "/tabler-react/static/media/android-browser.e1d3686c.svg"
   },
   {
-    "revision": "ead509aef9d7ac89dc55069b4c0acbfd",
-    "url": "/tabler-react/static/media/blackberry.ead509ae.svg"
+    "revision": "870087fd8e511c411e5baed4005d5bb7",
+    "url": "/tabler-react/static/media/chromium.870087fd.svg"
   },
   {
     "revision": "f66d5a061976c8b9bf6e852d9d1e2de7",
@@ -36,20 +44,8 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/edge.abda4ac1.svg"
   },
   {
-    "revision": "2bbe801cebc095f84c7d92574ec7214d",
-    "url": "/tabler-react/static/media/chrome.2bbe801c.svg"
-  },
-  {
-    "revision": "870087fd8e511c411e5baed4005d5bb7",
-    "url": "/tabler-react/static/media/chromium.870087fd.svg"
-  },
-  {
     "revision": "57c3e539655a13da5d3207594f0b78ed",
     "url": "/tabler-react/static/media/ie.57c3e539.svg"
-  },
-  {
-    "revision": "f64e67934b079414af1bf18158c582dd",
-    "url": "/tabler-react/static/media/netscape.f64e6793.svg"
   },
   {
     "revision": "df51f6f457a137ad3b3a4246639450f7",
@@ -58,6 +54,10 @@ self.__precacheManifest = [
   {
     "revision": "438992de4e83d2123b1d9cdf8bb4bd03",
     "url": "/tabler-react/static/media/opera.438992de.svg"
+  },
+  {
+    "revision": "f64e67934b079414af1bf18158c582dd",
+    "url": "/tabler-react/static/media/netscape.f64e6793.svg"
   },
   {
     "revision": "1751c6d6fbb09e086eaf46c3897268d7",
@@ -80,40 +80,40 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/ag.7cb635f0.svg"
   },
   {
-    "revision": "1c4942df0b4d72faad8672114454bb09",
-    "url": "/tabler-react/static/media/al.1c4942df.svg"
-  },
-  {
     "revision": "af917f4b31ecb7cc539fd89144632782",
     "url": "/tabler-react/static/media/am.af917f4b.svg"
+  },
+  {
+    "revision": "1c4942df0b4d72faad8672114454bb09",
+    "url": "/tabler-react/static/media/al.1c4942df.svg"
   },
   {
     "revision": "fd948d03374b46e183d93dbd3709705c",
     "url": "/tabler-react/static/media/ao.fd948d03.svg"
   },
   {
-    "revision": "fb98f0e65ec013a1920944ecc3826df3",
-    "url": "/tabler-react/static/media/aq.fb98f0e6.svg"
-  },
-  {
     "revision": "2ed2ee2a0b02519ffee732e3d9d6f9fb",
     "url": "/tabler-react/static/media/ar.2ed2ee2a.svg"
   },
   {
-    "revision": "b853c2ebc123eab5abe5e71a6b329863",
-    "url": "/tabler-react/static/media/au.b853c2eb.svg"
+    "revision": "fb98f0e65ec013a1920944ecc3826df3",
+    "url": "/tabler-react/static/media/aq.fb98f0e6.svg"
   },
   {
     "revision": "511e196f2b286fc220c83221b3bb8a01",
     "url": "/tabler-react/static/media/at.511e196f.svg"
   },
   {
-    "revision": "ba2d1e5e6f743781569d6b671077db3c",
-    "url": "/tabler-react/static/media/az.ba2d1e5e.svg"
+    "revision": "b853c2ebc123eab5abe5e71a6b329863",
+    "url": "/tabler-react/static/media/au.b853c2eb.svg"
   },
   {
     "revision": "3301f616c5f32ad07226366d2882d9cd",
     "url": "/tabler-react/static/media/ax.3301f616.svg"
+  },
+  {
+    "revision": "ba2d1e5e6f743781569d6b671077db3c",
+    "url": "/tabler-react/static/media/az.ba2d1e5e.svg"
   },
   {
     "revision": "a441d8da7d266c9b9d315d06ee5fb429",
@@ -124,20 +124,16 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/bb.c568edd5.svg"
   },
   {
-    "revision": "fb18617cede15ad0122419d7f1c74a9c",
-    "url": "/tabler-react/static/media/be.fb18617c.svg"
-  },
-  {
     "revision": "b12e306073e83e7fec9d4b20e676b759",
     "url": "/tabler-react/static/media/bd.b12e3060.svg"
   },
   {
-    "revision": "f88288fa14a3979b34582b6018a62e35",
-    "url": "/tabler-react/static/media/bf.f88288fa.svg"
+    "revision": "fb18617cede15ad0122419d7f1c74a9c",
+    "url": "/tabler-react/static/media/be.fb18617c.svg"
   },
   {
-    "revision": "bc8085f9a17e392f05c127dc50293578",
-    "url": "/tabler-react/static/media/bi.bc8085f9.svg"
+    "revision": "f88288fa14a3979b34582b6018a62e35",
+    "url": "/tabler-react/static/media/bf.f88288fa.svg"
   },
   {
     "revision": "bc04745d5b10f157bac0f3c721133844",
@@ -148,12 +144,16 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/bh.805f2682.svg"
   },
   {
-    "revision": "a5c508b2ab0cdb85d5f22d40d2c3b97b",
-    "url": "/tabler-react/static/media/bl.a5c508b2.svg"
+    "revision": "bc8085f9a17e392f05c127dc50293578",
+    "url": "/tabler-react/static/media/bi.bc8085f9.svg"
   },
   {
     "revision": "ea52986c752328b2ca8ce558cab8a98f",
     "url": "/tabler-react/static/media/bj.ea52986c.svg"
+  },
+  {
+    "revision": "a5c508b2ab0cdb85d5f22d40d2c3b97b",
+    "url": "/tabler-react/static/media/bl.a5c508b2.svg"
   },
   {
     "revision": "4cac15edfcf9d342d21a46e5ee9cb2c2",
@@ -164,48 +164,48 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/bs.421969c2.svg"
   },
   {
-    "revision": "58761e89669c1387b966f11c2c1ddca3",
-    "url": "/tabler-react/static/media/bv.58761e89.svg"
-  },
-  {
     "revision": "8ecb0b8e0257d3d0654dc7efd84da4c5",
     "url": "/tabler-react/static/media/bw.8ecb0b8e.svg"
   },
   {
-    "revision": "ec7f382086e8fcb4ac6fb02d1c4117fd",
-    "url": "/tabler-react/static/media/cc.ec7f3820.svg"
+    "revision": "58761e89669c1387b966f11c2c1ddca3",
+    "url": "/tabler-react/static/media/bv.58761e89.svg"
   },
   {
     "revision": "af259017cdf3bcf91fa79f3639fff3fc",
     "url": "/tabler-react/static/media/ca.af259017.svg"
   },
   {
-    "revision": "f75250a7950f5fb23779d262fd0da81d",
-    "url": "/tabler-react/static/media/cf.f75250a7.svg"
-  },
-  {
-    "revision": "d51618940f7f8df58cae92f4acb930fd",
-    "url": "/tabler-react/static/media/ch.d5161894.svg"
-  },
-  {
-    "revision": "497d91d1318438d0b128595d371d351e",
-    "url": "/tabler-react/static/media/cg.497d91d1.svg"
-  },
-  {
-    "revision": "869edc7171502fe62f15951ab9ab51ea",
-    "url": "/tabler-react/static/media/ck.869edc71.svg"
+    "revision": "ec7f382086e8fcb4ac6fb02d1c4117fd",
+    "url": "/tabler-react/static/media/cc.ec7f3820.svg"
   },
   {
     "revision": "020e3d1ee345ac631a4b463b073b57b7",
     "url": "/tabler-react/static/media/cd.020e3d1e.svg"
   },
   {
-    "revision": "9d5227cbd7309dd8801518e8f3d9a7de",
-    "url": "/tabler-react/static/media/cl.9d5227cb.svg"
+    "revision": "f75250a7950f5fb23779d262fd0da81d",
+    "url": "/tabler-react/static/media/cf.f75250a7.svg"
+  },
+  {
+    "revision": "497d91d1318438d0b128595d371d351e",
+    "url": "/tabler-react/static/media/cg.497d91d1.svg"
   },
   {
     "revision": "1334b221487d5b445f6802ddd024a5c8",
     "url": "/tabler-react/static/media/ci.1334b221.svg"
+  },
+  {
+    "revision": "869edc7171502fe62f15951ab9ab51ea",
+    "url": "/tabler-react/static/media/ck.869edc71.svg"
+  },
+  {
+    "revision": "9d5227cbd7309dd8801518e8f3d9a7de",
+    "url": "/tabler-react/static/media/cl.9d5227cb.svg"
+  },
+  {
+    "revision": "d51618940f7f8df58cae92f4acb930fd",
+    "url": "/tabler-react/static/media/ch.d5161894.svg"
   },
   {
     "revision": "17f2e2c9827f7a093f9b94921ed16638",
@@ -216,40 +216,36 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/cn.c2814ac0.svg"
   },
   {
-    "revision": "050058cb15f5c99a8710f96da1461357",
-    "url": "/tabler-react/static/media/cu.050058cb.svg"
-  },
-  {
-    "revision": "6b6994926cbbd25d691d0d029999492a",
-    "url": "/tabler-react/static/media/cv.6b699492.svg"
+    "revision": "433d22ad5949ca9376e7fee2398cf908",
+    "url": "/tabler-react/static/media/co.433d22ad.svg"
   },
   {
     "revision": "20a9e6bf3919e282db3bf53d0e7820e2",
     "url": "/tabler-react/static/media/cr.20a9e6bf.svg"
   },
   {
-    "revision": "433d22ad5949ca9376e7fee2398cf908",
-    "url": "/tabler-react/static/media/co.433d22ad.svg"
+    "revision": "5180dbe51ead0d4850f3cc2db94d4cf9",
+    "url": "/tabler-react/static/media/cx.5180dbe5.svg"
+  },
+  {
+    "revision": "050058cb15f5c99a8710f96da1461357",
+    "url": "/tabler-react/static/media/cu.050058cb.svg"
   },
   {
     "revision": "07a0d3f998ff4c6e2213fb5a4863325b",
     "url": "/tabler-react/static/media/cw.07a0d3f9.svg"
   },
   {
-    "revision": "6731f87258db1b3310d7c8b86efa97e6",
-    "url": "/tabler-react/static/media/cz.6731f872.svg"
+    "revision": "6b6994926cbbd25d691d0d029999492a",
+    "url": "/tabler-react/static/media/cv.6b699492.svg"
   },
   {
     "revision": "01e89f77d4cd293951a32164b25ced60",
     "url": "/tabler-react/static/media/de.01e89f77.svg"
   },
   {
-    "revision": "f4c086cc100130afc0642dc7bf1357de",
-    "url": "/tabler-react/static/media/dj.f4c086cc.svg"
-  },
-  {
-    "revision": "5180dbe51ead0d4850f3cc2db94d4cf9",
-    "url": "/tabler-react/static/media/cx.5180dbe5.svg"
+    "revision": "6731f87258db1b3310d7c8b86efa97e6",
+    "url": "/tabler-react/static/media/cz.6731f872.svg"
   },
   {
     "revision": "44761537674d28555c1985159c2b2e88",
@@ -268,6 +264,10 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/eh.e4f13505.svg"
   },
   {
+    "revision": "f4c086cc100130afc0642dc7bf1357de",
+    "url": "/tabler-react/static/media/dj.f4c086cc.svg"
+  },
+  {
     "revision": "70738db67657a95db078a19581859e69",
     "url": "/tabler-react/static/media/er.70738db6.svg"
   },
@@ -284,6 +284,10 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/fi.58bcc4af.svg"
   },
   {
+    "revision": "dc9ed815f9a4bc59036c5fb3ef3aecca",
+    "url": "/tabler-react/static/media/fo.dc9ed815.svg"
+  },
+  {
     "revision": "2bd7d4dffe1fd474663f05041e95e46a",
     "url": "/tabler-react/static/media/fm.2bd7d4df.svg"
   },
@@ -292,20 +296,16 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/ga.33442fb9.svg"
   },
   {
-    "revision": "a178bcfbbbc26cb995fa19241b7a12a2",
-    "url": "/tabler-react/static/media/fr.a178bcfb.svg"
-  },
-  {
     "revision": "a933214c8977a7009219775519a584b4",
     "url": "/tabler-react/static/media/gb-eng.a933214c.svg"
   },
   {
-    "revision": "dc9ed815f9a4bc59036c5fb3ef3aecca",
-    "url": "/tabler-react/static/media/fo.dc9ed815.svg"
-  },
-  {
     "revision": "772350bf81e7b44332b5585cd15dfa3c",
     "url": "/tabler-react/static/media/gb-sct.772350bf.svg"
+  },
+  {
+    "revision": "a178bcfbbbc26cb995fa19241b7a12a2",
+    "url": "/tabler-react/static/media/fr.a178bcfb.svg"
   },
   {
     "revision": "91974b40e86c4b9db2b9bd6ec533bfa7",
@@ -388,28 +388,28 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/ai.928b5a4f.svg"
   },
   {
-    "revision": "5f3974a30d3ead800491befb7af540a8",
-    "url": "/tabler-react/static/media/westernunion-dark.5f3974a3.svg"
-  },
-  {
-    "revision": "a09152e75acbfee13fe82e13c54a77ad",
-    "url": "/tabler-react/static/media/visa.a09152e7.svg"
-  },
-  {
     "revision": "4082e1b1ac8f311463c064a0875a8e5a",
     "url": "/tabler-react/static/media/westernunion.4082e1b1.svg"
   },
   {
-    "revision": "c77724f331e1053188a5aa0d796ffc3b",
-    "url": "/tabler-react/static/media/webmoney.c77724f3.svg"
+    "revision": "5f3974a30d3ead800491befb7af540a8",
+    "url": "/tabler-react/static/media/westernunion-dark.5f3974a3.svg"
   },
   {
     "revision": "5c559c4c11d8fda02a9f9e86e1615b41",
     "url": "/tabler-react/static/media/webmoney-dark.5c559c4c.svg"
   },
   {
+    "revision": "c77724f331e1053188a5aa0d796ffc3b",
+    "url": "/tabler-react/static/media/webmoney.c77724f3.svg"
+  },
+  {
     "revision": "f6a55e1d4fc96499269717a964bc3984",
     "url": "/tabler-react/static/media/visa-dark.f6a55e1d.svg"
+  },
+  {
+    "revision": "a09152e75acbfee13fe82e13c54a77ad",
+    "url": "/tabler-react/static/media/visa.a09152e7.svg"
   },
   {
     "revision": "012caff4df8cce6f2ea751366a4d0804",
@@ -428,16 +428,20 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/switch-dark.54599ad9.svg"
   },
   {
-    "revision": "4db9c83cfd89dfc89536c33d2065ae16",
-    "url": "/tabler-react/static/media/square-dark.4db9c83c.svg"
-  },
-  {
     "revision": "77c6af283968828069b3720792640fa9",
     "url": "/tabler-react/static/media/stripe.77c6af28.svg"
   },
   {
     "revision": "025afc3556434d9a218b3de9ae6aab11",
     "url": "/tabler-react/static/media/stripe-dark.025afc35.svg"
+  },
+  {
+    "revision": "48f113984b06dd75617b37d6d764a02b",
+    "url": "/tabler-react/static/media/square.48f11398.svg"
+  },
+  {
+    "revision": "4db9c83cfd89dfc89536c33d2065ae16",
+    "url": "/tabler-react/static/media/square-dark.4db9c83c.svg"
   },
   {
     "revision": "f7fcc525735b4166573bc49f7c418161",
@@ -448,36 +452,32 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/solo-dark.17da28b9.svg"
   },
   {
-    "revision": "a1a4a38c94505ac4c80974b84591059e",
-    "url": "/tabler-react/static/media/skrill-dark.a1a4a38c.svg"
+    "revision": "b0d31271e85a4ee845ff91eeb2dc1ab4",
+    "url": "/tabler-react/static/media/skrill.b0d31271.svg"
   },
   {
-    "revision": "48f113984b06dd75617b37d6d764a02b",
-    "url": "/tabler-react/static/media/square.48f11398.svg"
+    "revision": "a1a4a38c94505ac4c80974b84591059e",
+    "url": "/tabler-react/static/media/skrill-dark.a1a4a38c.svg"
   },
   {
     "revision": "c962e60b37391f1d7dd0a0ffacad256b",
     "url": "/tabler-react/static/media/sage.c962e60b.svg"
   },
   {
-    "revision": "b0d31271e85a4ee845ff91eeb2dc1ab4",
-    "url": "/tabler-react/static/media/skrill.b0d31271.svg"
+    "revision": "1560c69d3cf081291eb13f477dc9e043",
+    "url": "/tabler-react/static/media/sage-dark.1560c69d.svg"
   },
   {
     "revision": "057164517322929b8b277ef36a63da87",
     "url": "/tabler-react/static/media/payza.05716451.svg"
   },
   {
-    "revision": "aaf8d63fe0f20e267e21c89f0824edbf",
-    "url": "/tabler-react/static/media/payza-dark.aaf8d63f.svg"
-  },
-  {
-    "revision": "1560c69d3cf081291eb13f477dc9e043",
-    "url": "/tabler-react/static/media/sage-dark.1560c69d.svg"
-  },
-  {
     "revision": "ece9e63914c3f788968b357cf6189e95",
     "url": "/tabler-react/static/media/payu.ece9e639.svg"
+  },
+  {
+    "revision": "aaf8d63fe0f20e267e21c89f0824edbf",
+    "url": "/tabler-react/static/media/payza-dark.aaf8d63f.svg"
   },
   {
     "revision": "80265cc7c79041d66e9437374b08894c",
@@ -524,20 +524,20 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/okpay-dark.26eabf7a.svg"
   },
   {
-    "revision": "5fa709fb52bd0947dc6ddd33eab567fc",
-    "url": "/tabler-react/static/media/ogone-dark.5fa709fb.svg"
-  },
-  {
     "revision": "8832c251bab55b7228f17ad1dcd93bcd",
     "url": "/tabler-react/static/media/ogone.8832c251.svg"
   },
   {
-    "revision": "63736caca924eb35fb9104d4f432cfb0",
-    "url": "/tabler-react/static/media/neteller-dark.63736cac.svg"
+    "revision": "5fa709fb52bd0947dc6ddd33eab567fc",
+    "url": "/tabler-react/static/media/ogone-dark.5fa709fb.svg"
   },
   {
     "revision": "798e0b4b9b2b5b2a6966e3160c8652d1",
     "url": "/tabler-react/static/media/neteller.798e0b4b.svg"
+  },
+  {
+    "revision": "63736caca924eb35fb9104d4f432cfb0",
+    "url": "/tabler-react/static/media/neteller-dark.63736cac.svg"
   },
   {
     "revision": "7df16d088d2d3fafc742fc011ab39191",
@@ -548,12 +548,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/monero-dark.29d40dee.svg"
   },
   {
-    "revision": "758bd7b66e03b7b4f0feb8195ac30124",
-    "url": "/tabler-react/static/media/laser-dark.758bd7b6.svg"
-  },
-  {
     "revision": "4642dfb3bacbec31479381e4800275b2",
     "url": "/tabler-react/static/media/laser.4642dfb3.svg"
+  },
+  {
+    "revision": "758bd7b66e03b7b4f0feb8195ac30124",
+    "url": "/tabler-react/static/media/laser-dark.758bd7b6.svg"
   },
   {
     "revision": "20a24d68389a7dfe17336496dc3e51b3",
@@ -580,12 +580,16 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/ebay-dark.bd7ccde1.svg"
   },
   {
+    "revision": "a99e6d1ce661b5ec0118fa5e211dbdb1",
+    "url": "/tabler-react/static/media/worldpay-dark.a99e6d1c.svg"
+  },
+  {
     "revision": "d63620a3337795f043b232846be946f8",
     "url": "/tabler-react/static/media/worldpay.d63620a3.svg"
   },
   {
-    "revision": "a99e6d1ce661b5ec0118fa5e211dbdb1",
-    "url": "/tabler-react/static/media/worldpay-dark.a99e6d1c.svg"
+    "revision": "36f577700982f8fb3542d92a6c362650",
+    "url": "/tabler-react/static/media/dwolla.36f57770.svg"
   },
   {
     "revision": "285de38e64669e7d6fdb6b88092a7adb",
@@ -596,20 +600,20 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/unionpay-dark.22beb1a2.svg"
   },
   {
-    "revision": "7a542b9ee5e6c96713e790bbd3854c85",
-    "url": "/tabler-react/static/media/ukash.7a542b9e.svg"
-  },
-  {
     "revision": "89b7d2ae90e9df97aa9e3a9940bac2c1",
     "url": "/tabler-react/static/media/ukash-dark.89b7d2ae.svg"
   },
   {
-    "revision": "2a87d23fcf628021ed81203dc2305938",
-    "url": "/tabler-react/static/media/shopify.2a87d23f.svg"
+    "revision": "7a542b9ee5e6c96713e790bbd3854c85",
+    "url": "/tabler-react/static/media/ukash.7a542b9e.svg"
   },
   {
     "revision": "937412fda731ef86a0a3658eb6b1044f",
     "url": "/tabler-react/static/media/shopify-dark.937412fd.svg"
+  },
+  {
+    "revision": "2a87d23fcf628021ed81203dc2305938",
+    "url": "/tabler-react/static/media/shopify.2a87d23f.svg"
   },
   {
     "revision": "a741b2b1463ca0e5cc9fd430004319b2",
@@ -636,12 +640,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/payoneer-dark.8d95de50.svg"
   },
   {
-    "revision": "0d91ff8fa73e4822b3df8578f6f90708",
-    "url": "/tabler-react/static/media/maestro-dark.0d91ff8f.svg"
-  },
-  {
     "revision": "31a202b40107161647c50fac56384c29",
     "url": "/tabler-react/static/media/maestro.31a202b4.svg"
+  },
+  {
+    "revision": "0d91ff8fa73e4822b3df8578f6f90708",
+    "url": "/tabler-react/static/media/maestro-dark.0d91ff8f.svg"
   },
   {
     "revision": "c05b3bbaa7150d0b60d6dfa8c602f70f",
@@ -650,10 +654,6 @@ self.__precacheManifest = [
   {
     "revision": "3a666a1e1aeba0c533c35132129e65db",
     "url": "/tabler-react/static/media/klarna-dark.3a666a1e.svg"
-  },
-  {
-    "revision": "36f577700982f8fb3542d92a6c362650",
-    "url": "/tabler-react/static/media/dwolla.36f57770.svg"
   },
   {
     "revision": "7f0e39ad58186b6fdbe5878970192668",
@@ -672,12 +672,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/eway.54d6e672.svg"
   },
   {
-    "revision": "bbf15466f81b7a24e9cc9e9522a2a709",
-    "url": "/tabler-react/static/media/eway-dark.bbf15466.svg"
-  },
-  {
     "revision": "e86e9bd2426bbbbe2bba12fb641c185c",
     "url": "/tabler-react/static/media/bz.e86e9bd2.svg"
+  },
+  {
+    "revision": "bbf15466f81b7a24e9cc9e9522a2a709",
+    "url": "/tabler-react/static/media/eway-dark.bbf15466.svg"
   },
   {
     "revision": "2f4fe159d3189ca05916f3ad46cb1a6c",
@@ -688,12 +688,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/feather-webfont.2cf523cd.woff"
   },
   {
-    "revision": "1f0c2c56a34c8dce6fdbeaa80579e2c4",
-    "url": "/tabler-react/static/media/verisign-dark.1f0c2c56.svg"
-  },
-  {
     "revision": "3684cf8229ff28f3054fa1d2a6095077",
     "url": "/tabler-react/static/media/verisign.3684cf82.svg"
+  },
+  {
+    "revision": "1f0c2c56a34c8dce6fdbeaa80579e2c4",
+    "url": "/tabler-react/static/media/verisign-dark.1f0c2c56.svg"
   },
   {
     "revision": "a6684d9315e2ded55b8ee33df8c370d5",
@@ -732,6 +732,10 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/coinkite-dark.f50deb17.svg"
   },
   {
+    "revision": "b8e9cbc7ac23b572497cd2115bcf71c6",
+    "url": "/tabler-react/static/media/feather-webfont.b8e9cbc7.ttf"
+  },
+  {
     "revision": "eb61d075dbf8722029027b09b39cc3a8",
     "url": "/tabler-react/static/media/clickandbuy.eb61d075.svg"
   },
@@ -740,28 +744,28 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/feather-webfont.cc5143b2.eot"
   },
   {
-    "revision": "983db5f2256f8e24e520ef7d1146ed3f",
-    "url": "/tabler-react/static/media/cirrus.983db5f2.svg"
-  },
-  {
     "revision": "f7d38984e9cfaa1bf3f98a0046862667",
     "url": "/tabler-react/static/media/clickandbuy-dark.f7d38984.svg"
   },
   {
-    "revision": "b8e9cbc7ac23b572497cd2115bcf71c6",
-    "url": "/tabler-react/static/media/feather-webfont.b8e9cbc7.ttf"
-  },
-  {
-    "revision": "e044dbdb76e1805843ae429c3c16bdd9",
-    "url": "/tabler-react/static/media/applepay-dark.e044dbdb.svg"
+    "revision": "983db5f2256f8e24e520ef7d1146ed3f",
+    "url": "/tabler-react/static/media/cirrus.983db5f2.svg"
   },
   {
     "revision": "1ff3d3f0d176196bbd3aaf4a6ecf7dac",
     "url": "/tabler-react/static/media/applepay.1ff3d3f0.svg"
   },
   {
+    "revision": "e044dbdb76e1805843ae429c3c16bdd9",
+    "url": "/tabler-react/static/media/applepay-dark.e044dbdb.svg"
+  },
+  {
     "revision": "31580e28ff89814332255e3f3ad510d6",
     "url": "/tabler-react/static/media/alipay.31580e28.svg"
+  },
+  {
+    "revision": "e14c0f5e3d367693fa699906a02119c6",
+    "url": "/tabler-react/static/media/2checkout.e14c0f5e.svg"
   },
   {
     "revision": "b6a651d2cd0063d0e83b505c40f24dd7",
@@ -772,20 +776,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/zw.e223cee5.svg"
   },
   {
-    "revision": "e14c0f5e3d367693fa699906a02119c6",
-    "url": "/tabler-react/static/media/2checkout.e14c0f5e.svg"
-  },
-  {
     "revision": "65d58d809466b33a779ff1b029046730",
     "url": "/tabler-react/static/media/2checkout-dark.65d58d80.svg"
   },
   {
-    "revision": "35b347245f8226179a66",
-    "url": "/tabler-react/static/js/main.35b34724.chunk.js"
-  },
-  {
-    "revision": "d8ffed672eb363336a1ad1ad4dc965be",
-    "url": "/tabler-react/static/media/za.d8ffed67.svg"
+    "revision": "625866342c77dcf827cdc22d004c6227",
+    "url": "/tabler-react/static/media/zm.62586634.svg"
   },
   {
     "revision": "a2dc66505c31b7096ba48bac4557855c",
@@ -800,20 +796,28 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/ws.23b64335.svg"
   },
   {
-    "revision": "4b4f5462b60b559d729a55f8719cf005",
-    "url": "/tabler-react/static/media/wf.4b4f5462.svg"
+    "revision": "d8ffed672eb363336a1ad1ad4dc965be",
+    "url": "/tabler-react/static/media/za.d8ffed67.svg"
   },
   {
-    "revision": "0b7571b87f2faaa3d8e3b5662636d574",
-    "url": "/tabler-react/static/media/vn.0b7571b8.svg"
+    "revision": "4b4f5462b60b559d729a55f8719cf005",
+    "url": "/tabler-react/static/media/wf.4b4f5462.svg"
   },
   {
     "revision": "9a6c3abc25acb7444923135ab30b7cb9",
     "url": "/tabler-react/static/media/vu.9a6c3abc.svg"
   },
   {
+    "revision": "0b7571b87f2faaa3d8e3b5662636d574",
+    "url": "/tabler-react/static/media/vn.0b7571b8.svg"
+  },
+  {
     "revision": "6f48a1b9488fe66e13887fb43304c009",
     "url": "/tabler-react/static/media/ve.6f48a1b9.svg"
+  },
+  {
+    "revision": "f3912357d0a5339a1f402efefc89a8e7",
+    "url": "/tabler-react/static/media/vc.f3912357.svg"
   },
   {
     "revision": "791dfbdae7960b7482e949dfac7c829a",
@@ -824,10 +828,6 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/uy.a7e91b40.svg"
   },
   {
-    "revision": "f3912357d0a5339a1f402efefc89a8e7",
-    "url": "/tabler-react/static/media/vc.f3912357.svg"
-  },
-  {
     "revision": "2382ea7ec7cc55bfe1cc7a3ea8326989",
     "url": "/tabler-react/static/media/us.2382ea7e.svg"
   },
@@ -836,28 +836,28 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/um.a1fa2de3.svg"
   },
   {
-    "revision": "acc88be0743859f3c1d499c3117cfdcd",
-    "url": "/tabler-react/static/media/ua.acc88be0.svg"
-  },
-  {
-    "revision": "7baefd1c21ecb97a0a48a0d738bf79dc",
-    "url": "/tabler-react/static/media/tw.7baefd1c.svg"
-  },
-  {
     "revision": "1e070275fe2eb891e7a1b90ac3c3ee13",
     "url": "/tabler-react/static/media/ug.1e070275.svg"
+  },
+  {
+    "revision": "acc88be0743859f3c1d499c3117cfdcd",
+    "url": "/tabler-react/static/media/ua.acc88be0.svg"
   },
   {
     "revision": "d5c9c20a3cfbf0c135ea7d58d29684f5",
     "url": "/tabler-react/static/media/tz.d5c9c20a.svg"
   },
   {
-    "revision": "f09daa6dc55999ef79edf7d708ad1f90",
-    "url": "/tabler-react/static/media/tt.f09daa6d.svg"
+    "revision": "7baefd1c21ecb97a0a48a0d738bf79dc",
+    "url": "/tabler-react/static/media/tw.7baefd1c.svg"
   },
   {
     "revision": "1a077ad0ee7788a6a1688dbfc5c12526",
     "url": "/tabler-react/static/media/tv.1a077ad0.svg"
+  },
+  {
+    "revision": "f09daa6dc55999ef79edf7d708ad1f90",
+    "url": "/tabler-react/static/media/tt.f09daa6d.svg"
   },
   {
     "revision": "aabe02c21bdc96b4499f10c7ead37008",
@@ -884,36 +884,40 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/tj.b6533ad3.svg"
   },
   {
-    "revision": "ffb94e65905ea7a299e8ee52944abef1",
-    "url": "/tabler-react/static/media/bitpay.ffb94e65.svg"
-  },
-  {
-    "revision": "243a362ebddb29c473ace764e5b11e6b",
-    "url": "/tabler-react/static/media/cirrus-dark.243a362e.svg"
-  },
-  {
     "revision": "502695871e6c9632d23ed1db99f4e102",
     "url": "/tabler-react/static/media/th.50269587.svg"
-  },
-  {
-    "revision": "f86a15dac57d28c89e0b69ac3eee63f8",
-    "url": "/tabler-react/static/media/bitpay-dark.f86a15da.svg"
   },
   {
     "revision": "b96ee5428e8c67d6b1fc8bf73925af34",
     "url": "/tabler-react/static/media/tg.b96ee542.svg"
   },
   {
+    "revision": "243a362ebddb29c473ace764e5b11e6b",
+    "url": "/tabler-react/static/media/cirrus-dark.243a362e.svg"
+  },
+  {
+    "revision": "ffb94e65905ea7a299e8ee52944abef1",
+    "url": "/tabler-react/static/media/bitpay.ffb94e65.svg"
+  },
+  {
+    "revision": "f86a15dac57d28c89e0b69ac3eee63f8",
+    "url": "/tabler-react/static/media/bitpay-dark.f86a15da.svg"
+  },
+  {
     "revision": "8c0a0fa2bc07c9102ff49218b0ca9145",
     "url": "/tabler-react/static/media/bancontact.8c0a0fa2.svg"
   },
   {
-    "revision": "079a252552085195fa1e74c55965d960",
-    "url": "/tabler-react/static/media/td.079a2525.svg"
-  },
-  {
     "revision": "6e78609075a295f1627cd785a2005837",
     "url": "/tabler-react/static/media/bancontact-dark.6e786090.svg"
+  },
+  {
+    "revision": "adc24fb28bb1688520b8ee3272929644",
+    "url": "/tabler-react/static/media/tf.adc24fb2.svg"
+  },
+  {
+    "revision": "079a252552085195fa1e74c55965d960",
+    "url": "/tabler-react/static/media/td.079a2525.svg"
   },
   {
     "revision": "b89abdaf46ce1b76d1f382de92ed7c0e",
@@ -924,8 +928,8 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/americanexpress-dark.c2ea2d77.svg"
   },
   {
-    "revision": "adc24fb28bb1688520b8ee3272929644",
-    "url": "/tabler-react/static/media/tf.adc24fb2.svg"
+    "revision": "5c500045ab6cd762cd5f9abd393c2577",
+    "url": "/tabler-react/static/media/amazon.5c500045.svg"
   },
   {
     "revision": "b178a57fcddb6156a5ec639d1b5d5a24",
@@ -934,10 +938,6 @@ self.__precacheManifest = [
   {
     "revision": "0fedea0746db6aa80b93dc14293c1754",
     "url": "/tabler-react/static/media/sy.0fedea07.svg"
-  },
-  {
-    "revision": "5c500045ab6cd762cd5f9abd393c2577",
-    "url": "/tabler-react/static/media/amazon.5c500045.svg"
   },
   {
     "revision": "230410b519c6205157002ce21ff8d629",
@@ -1004,12 +1004,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/bitcoin.d9ac7b61.svg"
   },
   {
-    "revision": "46fb809f4912001f48fdc2b878e80f17",
-    "url": "/tabler-react/static/media/rw.46fb809f.svg"
-  },
-  {
     "revision": "edaf60e16ce0cc50bf2d0b7a499036e4",
     "url": "/tabler-react/static/media/bitcoin-dark.edaf60e1.svg"
+  },
+  {
+    "revision": "46fb809f4912001f48fdc2b878e80f17",
+    "url": "/tabler-react/static/media/rw.46fb809f.svg"
   },
   {
     "revision": "517e32a1f8c51260abfd28e65123eac8",
@@ -1044,12 +1044,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/tc.2f7d308e.svg"
   },
   {
-    "revision": "20a4d7413504b137c05f202bbf385e9b",
-    "url": "/tabler-react/static/media/qa.20a4d741.svg"
-  },
-  {
     "revision": "d23d18072122ea995d7f4f4bea2300fe",
     "url": "/tabler-react/static/media/sx.d23d1807.svg"
+  },
+  {
+    "revision": "20a4d7413504b137c05f202bbf385e9b",
+    "url": "/tabler-react/static/media/qa.20a4d741.svg"
   },
   {
     "revision": "1519b6c631d063c9e495cd9f3dfd0f66",
@@ -1064,12 +1064,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/pw.0557592e.svg"
   },
   {
-    "revision": "baff56e3fdcd57bc731c02c4878e7441",
-    "url": "/tabler-react/static/media/dinersclub-dark.baff56e3.svg"
-  },
-  {
     "revision": "45249b1dd66c3b8425f9ce67f014d9ee",
     "url": "/tabler-react/static/media/dinersclub.45249b1d.svg"
+  },
+  {
+    "revision": "baff56e3fdcd57bc731c02c4878e7441",
+    "url": "/tabler-react/static/media/dinersclub-dark.baff56e3.svg"
   },
   {
     "revision": "225ede3505309835812a31d8cd526332",
@@ -1096,8 +1096,16 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/feather-webfont.4a878d5b.svg"
   },
   {
+    "revision": "bf813bfe31876e1a07e61f7ecdafd5a6",
+    "url": "/tabler-react/static/media/pn.bf813bfe.svg"
+  },
+  {
     "revision": "a2dc66505c31b7096ba48bac4557855c",
     "url": "/tabler-react/static/media/pm.a2dc6650.svg"
+  },
+  {
+    "revision": "2257cff690948088abf92a799e89544e",
+    "url": "/tabler-react/static/media/pl.2257cff6.svg"
   },
   {
     "revision": "abc5b39643482e82cb856bf160fa50fe",
@@ -1108,20 +1116,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/sh.0726abdb.svg"
   },
   {
-    "revision": "2257cff690948088abf92a799e89544e",
-    "url": "/tabler-react/static/media/pl.2257cff6.svg"
-  },
-  {
     "revision": "db891066a9bf98fd99cfa111abe7d535",
     "url": "/tabler-react/static/media/pk.db891066.svg"
   },
   {
     "revision": "8b5fbe69f9da3819f4887f6a01b8648e",
     "url": "/tabler-react/static/media/ph.8b5fbe69.svg"
-  },
-  {
-    "revision": "bf813bfe31876e1a07e61f7ecdafd5a6",
-    "url": "/tabler-react/static/media/pn.bf813bfe.svg"
   },
   {
     "revision": "e444f903a3056c776d7eb977380fa0c6",
@@ -1136,12 +1136,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/pe.4cabbfc6.svg"
   },
   {
-    "revision": "03d7410ae73601f5ec7122019a2ab888",
-    "url": "/tabler-react/static/media/nz.03d7410a.svg"
-  },
-  {
     "revision": "910761356d647746a34206d23e138727",
     "url": "/tabler-react/static/media/pa.91076135.svg"
+  },
+  {
+    "revision": "03d7410ae73601f5ec7122019a2ab888",
+    "url": "/tabler-react/static/media/nz.03d7410a.svg"
   },
   {
     "revision": "e6bfaa15b7678d8441d4106e06376792",
@@ -1176,6 +1176,10 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/nc.a2dc6650.svg"
   },
   {
+    "revision": "f38aead1dd402abc43b2e0dddd08ae47",
+    "url": "/tabler-react/static/media/na.f38aead1.svg"
+  },
+  {
     "revision": "cd1e97af5e343e6d7db5c8f8bbb40cac",
     "url": "/tabler-react/static/media/mz.cd1e97af.svg"
   },
@@ -1184,20 +1188,16 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/my.aae5bd9c.svg"
   },
   {
-    "revision": "f38aead1dd402abc43b2e0dddd08ae47",
-    "url": "/tabler-react/static/media/na.f38aead1.svg"
-  },
-  {
     "revision": "5b33db847ef48920cfec09f0c2926e90",
     "url": "/tabler-react/static/media/mw.5b33db84.svg"
   },
   {
-    "revision": "974b9e6c380a062b6504150999965d5f",
-    "url": "/tabler-react/static/media/mu.974b9e6c.svg"
-  },
-  {
     "revision": "e343afe8028575ea736d2677db4f7744",
     "url": "/tabler-react/static/media/mv.e343afe8.svg"
+  },
+  {
+    "revision": "974b9e6c380a062b6504150999965d5f",
+    "url": "/tabler-react/static/media/mu.974b9e6c.svg"
   },
   {
     "revision": "6b3d082dde2cd6355e7dd6194b258da7",
@@ -1220,20 +1220,20 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/bo.e02afe04.svg"
   },
   {
-    "revision": "be076fd925ea2dd5a74f6a552166ba71",
-    "url": "/tabler-react/static/media/ml.be076fd9.svg"
-  },
-  {
     "revision": "e6d7c5a4187b1fd8ab643d0e5d2f5bd1",
     "url": "/tabler-react/static/media/mm.e6d7c5a4.svg"
   },
   {
-    "revision": "a3bb001b15d05e4a8974729fa75f9247",
-    "url": "/tabler-react/static/media/mh.a3bb001b.svg"
+    "revision": "be076fd925ea2dd5a74f6a552166ba71",
+    "url": "/tabler-react/static/media/ml.be076fd9.svg"
   },
   {
     "revision": "29cb0cb257ce61901ab1d97c97200be9",
     "url": "/tabler-react/static/media/mk.29cb0cb2.svg"
+  },
+  {
+    "revision": "a3bb001b15d05e4a8974729fa75f9247",
+    "url": "/tabler-react/static/media/mh.a3bb001b.svg"
   },
   {
     "revision": "0c0da5f0631b226d95fd57929b9e4b4b",
@@ -1260,12 +1260,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/lv.83353fa9.svg"
   },
   {
-    "revision": "06956a1377123bf7bf98076217a07361",
-    "url": "/tabler-react/static/media/lu.06956a13.svg"
-  },
-  {
     "revision": "14b63eab7de31bd29ffcdc4002433cd6",
     "url": "/tabler-react/static/media/lt.14b63eab.svg"
+  },
+  {
+    "revision": "06956a1377123bf7bf98076217a07361",
+    "url": "/tabler-react/static/media/lu.06956a13.svg"
   },
   {
     "revision": "700ddad000d732b2603dcde0195ea3e7",
@@ -1276,12 +1276,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/lr.5485e606.svg"
   },
   {
-    "revision": "4981974031355cb8cb9fa6ae351ec6cf",
-    "url": "/tabler-react/static/media/lb.49819740.svg"
-  },
-  {
     "revision": "6c2940dae95d15b98cf38bcf44816d21",
     "url": "/tabler-react/static/media/lc.6c2940da.svg"
+  },
+  {
+    "revision": "4981974031355cb8cb9fa6ae351ec6cf",
+    "url": "/tabler-react/static/media/lb.49819740.svg"
   },
   {
     "revision": "bdfc4ab5e964e3466fcf31b5ec4bf87b",
@@ -1320,16 +1320,20 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/km.cd351374.svg"
   },
   {
-    "revision": "de33c0489053970bffc24559744aaae3",
-    "url": "/tabler-react/static/media/kg.de33c048.svg"
-  },
-  {
     "revision": "fbe824dcd1ef2519d2d21f189a345c2a",
     "url": "/tabler-react/static/media/ki.fbe824dc.svg"
   },
   {
+    "revision": "de33c0489053970bffc24559744aaae3",
+    "url": "/tabler-react/static/media/kg.de33c048.svg"
+  },
+  {
     "revision": "15b698f31b8bec3028bea1726cea84fb",
     "url": "/tabler-react/static/media/ke.15b698f3.svg"
+  },
+  {
+    "revision": "f9aceffb03e9764fac60e5aafe3743ec",
+    "url": "/tabler-react/static/media/md.f9aceffb.svg"
   },
   {
     "revision": "fd2646810e3b7a16d5ff0e16401fcf94",
@@ -1338,10 +1342,6 @@ self.__precacheManifest = [
   {
     "revision": "d14059401101d457efe14ba2495e69c6",
     "url": "/tabler-react/static/media/jo.d1405940.svg"
-  },
-  {
-    "revision": "f9aceffb03e9764fac60e5aafe3743ec",
-    "url": "/tabler-react/static/media/md.f9aceffb.svg"
   },
   {
     "revision": "7db0ffd8c9e9717bf8a4e670b8e14de8",
@@ -1360,12 +1360,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/li.10e0d5b2.svg"
   },
   {
-    "revision": "ec1fb8765fe74b0912ab152afe850c38",
-    "url": "/tabler-react/static/media/is.ec1fb876.svg"
-  },
-  {
     "revision": "2646bc518e3540d4639365448d02b23d",
     "url": "/tabler-react/static/media/jcb.2646bc51.svg"
+  },
+  {
+    "revision": "ec1fb8765fe74b0912ab152afe850c38",
+    "url": "/tabler-react/static/media/is.ec1fb876.svg"
   },
   {
     "revision": "f9bf701dcacbc6a9e40cc626153d6ff9",
@@ -1384,16 +1384,16 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/in.2d667fbb.svg"
   },
   {
-    "revision": "f0a4f4f6d893038aa99ccbcb7f6e5271",
-    "url": "/tabler-react/static/media/lk.f0a4f4f6.svg"
-  },
-  {
     "revision": "9b7a06b9a821841e7a5fd0f3e3ab8cc4",
     "url": "/tabler-react/static/media/om.9b7a06b9.svg"
   },
   {
     "revision": "0ea7e9dad5f9fce9cdee314eea294da8",
     "url": "/tabler-react/static/media/il.0ea7e9da.svg"
+  },
+  {
+    "revision": "f0a4f4f6d893038aa99ccbcb7f6e5271",
+    "url": "/tabler-react/static/media/lk.f0a4f4f6.svg"
   },
   {
     "revision": "d609c4e7bbb267cc920b9bfacdf8c553",
@@ -1464,20 +1464,24 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/gr.9a9a62a1.svg"
   },
   {
-    "revision": "6b139c75ff4f94335205a2d93dc7e090",
-    "url": "/tabler-react/static/media/va.6b139c75.svg"
-  },
-  {
     "revision": "6bbb0e7695e648aa9d7e25eff7165284",
     "url": "/tabler-react/static/media/gq.6bbb0e76.svg"
+  },
+  {
+    "revision": "a178bcfbbbc26cb995fa19241b7a12a2",
+    "url": "/tabler-react/static/media/gp.a178bcfb.svg"
+  },
+  {
+    "revision": "6b139c75ff4f94335205a2d93dc7e090",
+    "url": "/tabler-react/static/media/va.6b139c75.svg"
   },
   {
     "revision": "e472dff761a5641c37c985858a735dc3",
     "url": "/tabler-react/static/media/gn.e472dff7.svg"
   },
   {
-    "revision": "a178bcfbbbc26cb995fa19241b7a12a2",
-    "url": "/tabler-react/static/media/gp.a178bcfb.svg"
+    "revision": "d02c42ea2b63c1131bb36da347ac3490",
+    "url": "/tabler-react/static/media/gl.d02c42ea.svg"
   },
   {
     "revision": "9423800e095be53df9249808ce63306c",
@@ -1486,10 +1490,6 @@ self.__precacheManifest = [
   {
     "revision": "2e0c61df4402b9748b394cf508f1a0c7",
     "url": "/tabler-react/static/media/io.2e0c61df.svg"
-  },
-  {
-    "revision": "d02c42ea2b63c1131bb36da347ac3490",
-    "url": "/tabler-react/static/media/gl.d02c42ea.svg"
   },
   {
     "revision": "c9543d40b95a35ff339fe78d6184b6d1",
@@ -1532,12 +1532,12 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/gs.37216917.svg"
   },
   {
-    "revision": "0b689ffe012a208dbd4609b8e7a6ce4c",
-    "url": "/tabler-react/static/media/gt.0b689ffe.svg"
-  },
-  {
     "revision": "79e564a4cd82e29e24b5a3ff6c6d914e",
     "url": "/tabler-react/static/media/hr.79e564a4.svg"
+  },
+  {
+    "revision": "0b689ffe012a208dbd4609b8e7a6ce4c",
+    "url": "/tabler-react/static/media/gt.0b689ffe.svg"
   },
   {
     "revision": "399015d8b358e8c3c2c1a3e699752e63",
@@ -1556,7 +1556,7 @@ self.__precacheManifest = [
     "url": "/tabler-react/static/media/do.d8ab6db9.svg"
   },
   {
-    "revision": "8d929b5c87acb8aa35f810420bd32b63",
+    "revision": "17e2a75bef1e9f2012b89d7488fb26c7",
     "url": "/tabler-react/index.html"
   }
 ];
