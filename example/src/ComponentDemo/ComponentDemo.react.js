@@ -4,8 +4,8 @@ import * as React from "react";
 import cn from "classnames";
 import { Button } from "tabler-react";
 import "./ComponentDemo.css";
-import SyntaxHighlighter from "react-syntax-highlighter/prism";
-import { prism } from "react-syntax-highlighter/styles/prism";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import reactElementToJSXString from "./react-element-to-jsx-string";
 
 type Props = {|
