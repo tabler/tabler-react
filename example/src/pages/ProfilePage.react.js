@@ -13,6 +13,7 @@ import {
   List,
   Media,
   Text,
+  Comment,
 } from "tabler-react";
 
 import SiteWrapper from "../SiteWrapper.react";
@@ -101,137 +102,47 @@ function ProfilePage() {
                     </Form.InputGroup>
                   </Form.InputGroup>
                 </Card.Header>
-                <List.Group className="card-list-group">
-                  <List.GroupItem className="py-5">
-                    <Media>
-                      <Media.Object
-                        avatar
-                        objectURL="demo/faces/male/16.jpg"
-                        size="md"
-                        className="mr-4"
+                <Comment.List>
+                  <Comment
+                    avatarURL="demo/faces/male/16.jpg"
+                    name="Peter Richards"
+                    date="4 min"
+                    text="Aenean lacinia bibendum nulla sed consectetur. Vestibulum id ligula porta felis euismod semper. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+                    replies={
+                      <React.Fragment>
+                        <Comment.Reply
+                          name="Debra Beck"
+                          avatarURL="demo/faces/female/17.jpg"
+                          text="Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis."
+                        />
+                        <Comment.Reply
+                          name="Jack Ruiz"
+                          avatarURL="demo/faces/male/32.jpg"
+                          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus."
+                        />
+                      </React.Fragment>
+                    }
+                  />
+                  <Comment
+                    avatarURL="demo/faces/male/16.jpg"
+                    date="12 min"
+                    name="Peter Richards"
+                    text="Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis."
+                  />
+                  <Comment
+                    avatarURL="demo/faces/male/16.jpg"
+                    date="34 min"
+                    name="Peter Richards"
+                    text="Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui."
+                    replies={
+                      <Comment.Reply
+                        name="Wayne Holland"
+                        avatarURL="demo/faces/male/26.jpg"
+                        text=" Donec id elit non mi porta gravida at eget metus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis."
                       />
-                      <Media.Body>
-                        <Media.Heading>
-                          <small className="float-right text-muted">
-                            4 min
-                          </small>
-                          <h5>Peter Richards</h5>
-                        </Media.Heading>
-                        <Text>
-                          Aenean lacinia bibendum nulla sed consectetur.
-                          Vestibulum id ligula porta felis euismod semper. Morbi
-                          leo risus, porta ac consectetur ac, vestibulum at
-                          eros. Cras justo odio, dapibus ac facilisis in,
-                          egestas eget quam. Vestibulum id ligula porta felis
-                          euismod semper. Cum sociis natoque penatibus et magnis
-                          dis parturient montes, nascetur ridiculus mus.
-                        </Text>
-                        <Media.List>
-                          <Media.ListItem>
-                            <Media.Object
-                              avatar
-                              objectURL="demo/faces/female/17.jpg"
-                              className="mr-4"
-                            />
-                            <Media.Body>
-                              <strong>Debra Beck: </strong>
-                              Donec id elit non mi porta gravida at eget metus.
-                              Vivamus sagittis lacus vel augue laoreet rutrum
-                              faucibus dolor auctor. Donec ullamcorper nulla non
-                              metus auctor fringilla. Praesent commodo cursus
-                              magna, vel scelerisque nisl consectetur et. Sed
-                              posuere consectetur est at lobortis.
-                            </Media.Body>
-                          </Media.ListItem>
-                          <Media.ListItem>
-                            <Media.Object
-                              avatar
-                              objectURL="demo/faces/male/32.jpg"
-                              className="mr-4"
-                            />
-                            <Media.Body>
-                              <strong>Jack Ruiz: </strong>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Fusce dapibus, tellus ac cursus commodo,
-                              tortor mauris condimentum nibh, ut fermentum massa
-                              justo sit amet risus.
-                            </Media.Body>
-                          </Media.ListItem>
-                        </Media.List>
-                      </Media.Body>
-                    </Media>
-                  </List.GroupItem>
-                  <List.GroupItem className="py-5">
-                    <Media>
-                      <Media.Object
-                        avatar
-                        size="md"
-                        objectURL="demo/faces/male/16.jpg"
-                        className="mr-4"
-                      />
-                      <Media.Body>
-                        <Media.Heading>
-                          <small className="float-right text-muted">
-                            12 min
-                          </small>
-                          <h5>Peter Richards</h5>
-                        </Media.Heading>
-                        <Text>
-                          Donec id elit non mi porta gravida at eget metus.
-                          Integer posuere erat a ante venenatis dapibus posuere
-                          velit aliquet. Cum sociis natoque penatibus et magnis
-                          dis parturient montes, nascetur ridiculus mus. Morbi
-                          leo risus, porta ac consectetur ac, vestibulum at
-                          eros. Lorem ipsum dolor sit amet, consectetur
-                          adipiscing elit.
-                        </Text>
-                      </Media.Body>
-                    </Media>
-                  </List.GroupItem>
-                  <List.GroupItem className="py-5">
-                    <Media>
-                      <Media.Object
-                        avatar
-                        size="md"
-                        objectURL="demo/faces/male/16.jpg"
-                        className="mr-4"
-                      />
-                      <Media.Body>
-                        <Media.Heading>
-                          <small className="float-right text-muted">
-                            34 min
-                          </small>
-                          <h5>Peter Richards</h5>
-                        </Media.Heading>
-                        <Text>
-                          Donec ullamcorper nulla non metus auctor fringilla.
-                          Vestibulum id ligula porta felis euismod semper.
-                          Aenean eu leo quam. Pellentesque ornare sem lacinia
-                          quam venenatis vestibulum. Etiam porta sem malesuada
-                          magna mollis euismod. Donec sed odio dui.
-                        </Text>
-                        <Media.List>
-                          <Media.ListItem>
-                            <Media.Object
-                              avatar
-                              objectURL="demo/faces/male/26.jpg"
-                              className="mr-4"
-                            />
-                            <Media.Body>
-                              <strong>Wayne Holland: </strong>
-                              Donec id elit non mi porta gravida at eget metus.
-                              Vivamus sagittis lacus vel augue laoreet rutrum
-                              faucibus dolor auctor. Donec ullamcorper nulla non
-                              metus auctor fringilla. Praesent commodo cursus
-                              magna, vel scelerisque nisl consectetur et. Sed
-                              posuere consectetur est at lobortis.
-                            </Media.Body>
-                          </Media.ListItem>
-                        </Media.List>
-                      </Media.Body>
-                    </Media>
-                  </List.GroupItem>
-                </List.Group>
+                    }
+                  />
+                </Comment.List>
               </Card>
               <Form className="card">
                 <Card.Body>

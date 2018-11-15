@@ -7,6 +7,8 @@ export { default as Badge } from "./Badge";
 export { default as BlogCard } from "./BlogCard";
 export { default as Button } from "./Button";
 export { default as Card } from "./Card";
+export { default as Comment } from "./Comment";
+export { default as CommentsCard } from "./CommentsCard";
 export { default as ContactCard } from "./ContactCard";
 export { default as Container } from "./Container.react";
 export { default as Dimmer } from "./Dimmer";
