@@ -16,13 +16,17 @@ export type Props = {|
    * Display a small red circle to symbolize that there are unread notifications
    */
   +unread?: boolean,
+  /**
+   * Action to run when the 'Mark All As Read' button is activated
+   */
+  +markAllAsRead?: () => void,
 |};
 
 /**
  * An Icon triggered Dropdown containing Notifications
  */
 function NotificationTray(props: Props): React.Node {
-  const { children, unread, notificationsObjects } = props;
+  const { children, unread, notificationsObjects, markAllAsRead } = props;
   const notifications = children && React.Children.toArray(children);
   return (
     <Dropdown
@@ -52,10 +56,17 @@ function NotificationTray(props: Props): React.Node {
                   />
                 </Dropdown.Item>
               )))}
-          <Dropdown.ItemDivider />
-          <Dropdown.Item className="text-center text-muted-dark">
-            Mark all as read
-          </Dropdown.Item>
+          {markAllAsRead && (
+            <React.Fragment>
+              <Dropdown.ItemDivider />
+              <Dropdown.Item
+                className="text-center text-muted-dark"
+                onClick={() => markAllAsRead()}
+              >
+                Mark all as read
+              </Dropdown.Item>
+            </React.Fragment>
+          )}
         </React.Fragment>
       }
     />
