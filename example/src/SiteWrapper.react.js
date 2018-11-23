@@ -16,6 +16,10 @@ type Props = {|
   +children: React.Node,
 |};
 
+type State = {|
+  +unreadCount: number,
+|};
+
 type subNavItem = {|
   +value: string,
   +to?: string,
@@ -160,8 +164,14 @@ const accountDropdownProps = {
   ],
 };
 
-class SiteWrapper extends React.Component<Props, void> {
+class SiteWrapper extends React.Component<Props, State> {
+  constructor() {
+    super();
+    this.state = { unreadCount: 2 };
+  }
+
   render(): React.Node {
+    const unreadCount = this.state.unreadCount || 0;
     return (
       <Site.Wrapper
         headerProps={{
@@ -182,7 +192,14 @@ class SiteWrapper extends React.Component<Props, void> {
               </Button>
             </Nav.Item>
           ),
-          notificationsTray: { notificationsObjects },
+          notificationsTray: {
+            notificationsObjects,
+            markAllAsRead: () =>
+              this.setState({ unreadCount: 0 }, () =>
+                setTimeout(() => this.setState({ unreadCount: 4 }), 5000)
+              ),
+            unread: unreadCount > 0,
+          },
           accountDropdown: accountDropdownProps,
         }}
         navProps={{ itemsObjects: navBarItems }}
