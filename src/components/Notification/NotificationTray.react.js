@@ -56,7 +56,7 @@ function NotificationTray(props: Props): React.Node {
                   />
                 </Dropdown.Item>
               )))}
-          {markAllAsRead && (
+          {markAllAsRead && unread && (
             <React.Fragment>
               <Dropdown.ItemDivider />
               <Dropdown.Item
