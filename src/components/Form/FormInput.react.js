@@ -30,6 +30,7 @@ type FormStyle = {|
   +value?: string | number,
   +disabled?: boolean,
   +readOnly?: boolean,
+  +autoFocus?: boolean,
   +checked?: boolean,
 |};
 
@@ -82,6 +83,7 @@ function FormInput(props: Props): React.Node {
     onPaste,
     disabled,
     readOnly,
+    autoFocus,
     label,
   } = props;
   const type = props.type || "text";
@@ -108,6 +110,7 @@ function FormInput(props: Props): React.Node {
     value,
     disabled,
     readOnly,
+    autoFocus,
     onChange,
     onMouseEnter,
     onMouseLeave,
