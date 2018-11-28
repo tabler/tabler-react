@@ -61,7 +61,7 @@
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "flow-bin": "^0.86.0",
+    "flow-bin": "^0.87.0",
     "flow-copy-source": "^2.0.0",
     "gh-pages": "^2.0.0",
     "husky": "^1.0.0",
