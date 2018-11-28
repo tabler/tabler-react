@@ -165,10 +165,9 @@ const accountDropdownProps = {
 };
 
 class SiteWrapper extends React.Component<Props, State> {
-  constructor() {
-    super();
-    this.state = { unreadCount: 2 };
-  }
+  state = {
+    unreadCount: 2,
+  };
 
   render(): React.Node {
     const unreadCount = this.state.unreadCount || 0;
