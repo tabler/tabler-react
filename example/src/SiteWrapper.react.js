@@ -17,7 +17,7 @@ type Props = {|
 |};
 
 type State = {|
-  +unreadCount: number,
+  unreadCount: number,
 |};
 
 type subNavItem = {|
