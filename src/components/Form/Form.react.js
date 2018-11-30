@@ -37,7 +37,7 @@ export type Props = {|
   +className?: string,
   +action?: string,
   +method?: string,
-  +autocomplete?: "on" | "off",
+  +autocomplete: "on" | "off",
 |};
 
 function Form({
@@ -48,10 +48,6 @@ function Form({
   onSubmit,
   autocomplete,
 }: Props): React.Node {
-  // default for autocomplete is "off" if not passed in explicitly
-  if (!autocomplete) {
-    autocomplete = "off";
-  }
   const classes = cn(className);
   return (
     <form
@@ -65,6 +61,10 @@ function Form({
     </form>
   );
 }
+
+Form.defaultProps = {
+  autocomplete: 'off',
+};
 
 Form.Group = FormGroup;
 Form.Label = FormLabel;
