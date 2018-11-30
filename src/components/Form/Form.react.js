@@ -1,6 +1,5 @@
 // @flow
 import * as React from "react";
-import cn from "classnames";
 
 import FormGroup from "./FormGroup.react";
 import FormLabel from "./FormLabel.react";
@@ -48,10 +47,9 @@ function Form({
   onSubmit,
   autocomplete,
 }: Props): React.Node {
-  const classes = cn(className);
   return (
     <form
-      className={classes}
+      className={className}
       onSubmit={onSubmit}
       action={action}
       method={method}
@@ -63,7 +61,7 @@ function Form({
 }
 
 Form.defaultProps = {
-  autocomplete: 'off',
+  autocomplete: "off",
 };
 
 Form.Group = FormGroup;
