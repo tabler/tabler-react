@@ -16,6 +16,10 @@ export type Props = {|
    * The time displayed within the Notification
    */
   +time?: string,
+  /**
+   * The time displayed within the Notification
+   */
+  +unread?: boolean,
 |};
 
 /**
