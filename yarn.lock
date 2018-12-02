@@ -10651,9 +10651,10 @@ rollup-plugin-postcss@1.6.3:
     rollup-pluginutils "^2.0.1"
     style-inject "^0.3.0"
 
-rollup-plugin-url@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-url/-/rollup-plugin-url-2.0.1.tgz#d6481321e05196c37a48ac576a07ff212dd02742"
+rollup-plugin-url@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-url/-/rollup-plugin-url-2.1.0.tgz#c06be791dfee1b9f5e0854a94cc6bb3dc2743bc0"
+  integrity sha512-qANv7Yf9JiUcOmlUS5j0Woo1tiyyCiBVX7UFZAFImu+1eHrVlkc1LSk+zetOvZ4e8cwhGUIrtGe7wP/dNOCASw==
   dependencies:
     mime "^2.3.1"
     mkpath "^1.0.0"
