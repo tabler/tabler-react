@@ -17,7 +17,7 @@ export type Props = {|
    */
   +time?: string,
   /**
-   * The time displayed within the Notification
+   * Indicate the notification as unread
    */
   +unread?: boolean,
 |};
@@ -25,7 +25,7 @@ export type Props = {|
 /**
  * An individual Notification made up of an Avatar alongside some text and the time
  */
-function Notification({ avatarURL, message, time }: Props): React.Node {
+function Notification({ avatarURL, message, time, unread }: Props): React.Node {
   return (
     <React.Fragment>
       {avatarURL && (

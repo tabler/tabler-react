@@ -12,17 +12,14 @@ import {
   RouterContextProvider,
 } from "tabler-react";
 
+import type { NotificationProps } from "tabler-react";
+
 type Props = {|
   +children: React.Node,
 |};
 
 type State = {|
-  notificationsObjects: Array<{
-    unread: boolean,
-    avatarURL: string,
-    message: React.Node,
-    time: string,
-  }>,
+  notificationsObjects: Array<NotificationProps>,
 |};
 
 type subNavItem = {|
