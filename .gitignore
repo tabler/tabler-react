@@ -31,3 +31,7 @@ yarn-error.log*
 
 # VSCode
 .vscode
+
+# vim
+*.swp
+
