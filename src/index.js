@@ -16,6 +16,7 @@ export type { Selection as SelectionEvents } from "./flow";
 export type { Touch as TouchEvents } from "./flow";
 export type { UserInterface as UIEvents } from "./flow";
 export type { Wheel as WheelEvents } from "./flow";
+export type { NotificationProps } from "./components";
 
 export {
   default as RouterContextProvider,

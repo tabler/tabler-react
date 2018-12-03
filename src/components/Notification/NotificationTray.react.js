@@ -48,8 +48,12 @@ function NotificationTray(props: Props): React.Node {
             ))) ||
             (notificationsObjects &&
               notificationsObjects.map((n, i) => (
-                <Dropdown.Item className="d-flex" key={i}>
+                <Dropdown.Item
+                  className={`d-flex ${n.unread ? "bg-light" : ""}`}
+                  key={i}
+                >
                   <Notification
+                    unread={n.unread}
                     avatarURL={n.avatarURL}
                     message={n.message}
                     time={n.time}
