@@ -12,6 +12,7 @@ type Props = {|
   +to?: string,
   +hasSubNav?: boolean,
   +rootRef?: (?HTMLElement) => void,
+  +useExact?: boolean,
 |};
 
 function NavLink({
@@ -23,6 +24,7 @@ function NavLink({
   to,
   hasSubNav,
   rootRef,
+  useExact,
 }: Props): React.Node {
   const classes = cn({ "nav-link": true, active: active }, className);
 
@@ -36,9 +38,8 @@ function NavLink({
       {children}
     </React.Fragment>
   );
-
   return RootComponent ? (
-    <RootComponent exact className={classes} to={to}>
+    <RootComponent exact={useExact || false} className={classes} to={to}>
       {childrenForAll}
     </RootComponent>
   ) : (

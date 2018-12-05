@@ -18,6 +18,7 @@ type navItem = {|
   +active?: boolean,
   +LinkComponent?: React.ElementType,
   +subItems?: Array<subNavItem>,
+  +useExact?: boolean,
 |};
 
 type navItems = Array<navItem>;
