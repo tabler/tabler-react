@@ -31,7 +31,6 @@ class FormFileInput extends React.Component<Props, State> {
   };
 
   _handleOnChange = (event: SyntheticInputEvent<HTMLInputElement>): void => {
-    console.log(event.target.files);
     this.setState({ fileName: event.target.files[0].name });
     if (this.props.onChange) {
       this.props.onChange(event);
