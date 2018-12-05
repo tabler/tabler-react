@@ -36,10 +36,17 @@ type navItem = {|
   +active?: boolean,
   +LinkComponent?: React.ElementType,
   +subItems?: Array<subNavItem>,
+  +useExact?: boolean,
 |};
 
 const navBarItems: Array<navItem> = [
-  { value: "Home", to: "/", icon: "home", LinkComponent: withRouter(NavLink) },
+  {
+    value: "Home",
+    to: "/",
+    icon: "home",
+    LinkComponent: withRouter(NavLink),
+    useExact: true,
+  },
   {
     value: "Interface",
     icon: "box",

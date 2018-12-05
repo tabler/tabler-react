@@ -22,6 +22,7 @@ type navItem = {|
   +active?: boolean,
   +LinkComponent?: React.ElementType,
   +subItems?: Array<subNavItem>,
+  +useExact?: boolean,
 |};
 
 type Props = {|
@@ -123,6 +124,7 @@ class Nav extends React.Component<Props, State> {
                   LinkComponent={a.LinkComponent}
                   subItemsObjects={a.subItems}
                   active={this.computeActive(a.active, a.to, a.subItems)}
+                  useExact={a.useExact}
                 />
               ))) ||
             children}

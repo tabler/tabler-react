@@ -32,6 +32,10 @@ type Props = {|
    * Position of the subnav Dropdown
    */
   +position?: Placement,
+  /**
+   * Whether or not to pass "exact" property to underlying NavLink component
+   */
+  +useExact?: boolean,
 |};
 
 type State = {
@@ -68,6 +72,7 @@ class NavItem extends React.Component<Props, State> {
       active,
       subItems,
       subItemsObjects,
+      useExact,
       position = "bottom-start",
     }: Props = this.props;
 
@@ -85,6 +90,7 @@ class NavItem extends React.Component<Props, State> {
               hasSubNav={hasSubNav}
               active={active}
               rootRef={ref}
+              useExact={useExact}
             >
               {!hasSubNav && typeof children === "string" ? children : value}
             </Nav.Link>
@@ -98,6 +104,7 @@ class NavItem extends React.Component<Props, State> {
           RootComponent={LinkComponent}
           hasSubNav={hasSubNav}
           active={active}
+          useExact={useExact}
         >
           {!hasSubNav && typeof children === "string" ? children : value}
         </Nav.Link>
