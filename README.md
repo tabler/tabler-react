@@ -4,7 +4,7 @@
 
 [![NPM](https://img.shields.io/npm/v/tabler-react.svg)](https://www.npmjs.com/package/tabler-react) ![Type definitions](https://img.shields.io/badge/type%20definitions-flow-green.svg) [![Greenkeeper badge](https://badges.greenkeeper.io/tabler/tabler-react.svg)](https://greenkeeper.io/) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-**[Demo](https://tabler.github.io/tabler-react/)** | **[Documentation](https://tabler.github.io/tabler-react/documentation/)** | **[Issues](https://github.com/tabler/tabler-react/issues)** | **[Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
+**[Demo](http://tabler-react.com)** | **[Documentation](http://tabler-react.com/documentation/)** | **[Issues](https://github.com/tabler/tabler-react/issues)** | **[Slack](https://tabler-ui.slack.com/messages/CA55LDVHU/)**.
 
 ## Install
 
@@ -37,7 +37,7 @@ class MyCard extends Component {
 }
 ```
 
-For more examples and documentation see the [demo website](https://tabler.github.io/tabler-react/)
+For more examples and documentation see the [demo website](http://tabler-react.com)
 
 ## Contributing
 
@@ -45,8 +45,8 @@ For more examples and documentation see the [demo website](https://tabler.github
 
 The package is made up of 2 main folders:
 
-* /src contains all the Tabler React components
-* /example is our [create-react-app](https://github.com/facebook/create-react-app/) based demo website
+- /src contains all the Tabler React components
+- /example is our [create-react-app](https://github.com/facebook/create-react-app/) based demo website
 
 To setup and run a local copy:
 

@@ -33,7 +33,7 @@ type Props = {||};
 function App(props: Props): React.Node {
   return (
     <React.StrictMode>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/400" component={Error400} />
