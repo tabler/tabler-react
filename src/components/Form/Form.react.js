@@ -25,6 +25,7 @@ import FormSwitchStack from "./FormSwitchStack.react";
 import FormSwitch from "./FormSwitch.react";
 import FormInputGroupAppend from "./FormInputGroupAppend.react";
 import FormInputGroupPrepend from "./FormInputGroupPrepend.react";
+import FormInputGroupText from "./FormInputGroupText.react";
 import FormMaskedInput from "./FormMaskedInput.react";
 import FormDatePicker from "./FormDatePicker.react";
 
@@ -88,6 +89,7 @@ Form.SwitchStack = FormSwitchStack;
 Form.Switch = FormSwitch;
 Form.InputGroupAppend = FormInputGroupAppend;
 Form.InputGroupPrepend = FormInputGroupPrepend;
+Form.InputGroupText = FormInputGroupText;
 Form.MaskedInput = FormMaskedInput;
 Form.DatePicker = FormDatePicker;
 
