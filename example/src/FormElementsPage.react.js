@@ -529,7 +529,9 @@ function FormElements() {
             <ComponentDemo>
               <Form.Group label="Username">
                 <Form.InputGroup>
-                  <Form.InputGroupPrepend>@</Form.InputGroupPrepend>
+                  <Form.InputGroupPrepend>
+                    <Form.InputGroupText>@</Form.InputGroupText>
+                  </Form.InputGroupPrepend>
                   <Form.Input placeholder="Username" />
                 </Form.InputGroup>
               </Form.Group>
@@ -539,7 +541,9 @@ function FormElements() {
               <Form.Group label="Subdomain">
                 <Form.InputGroup>
                   <Form.Input placeholder="Your subdomain" />
-                  <Form.InputGroupAppend>.example.com</Form.InputGroupAppend>
+                  <Form.InputGroupAppend>
+                    <Form.InputGroupText>.example.com</Form.InputGroupText>
+                  </Form.InputGroupAppend>
                 </Form.InputGroup>
               </Form.Group>
             </ComponentDemo>
@@ -548,7 +552,9 @@ function FormElements() {
               <Form.Group label="Your vanity URL">
                 <Form.InputGroup>
                   <Form.InputGroupPrepend>
-                    https://example.com/users/
+                    <Form.InputGroupText>
+                      https://example.com/users/
+                    </Form.InputGroupText>
                   </Form.InputGroupPrepend>
                   <Form.Input />
                 </Form.InputGroup>
@@ -558,9 +564,13 @@ function FormElements() {
             <ComponentDemo>
               <Form.Group label="Price">
                 <Form.InputGroup>
-                  <Form.InputGroupPrepend>$</Form.InputGroupPrepend>
+                  <Form.InputGroupPrepend>
+                    <Form.InputGroupText>$</Form.InputGroupText>
+                  </Form.InputGroupPrepend>
                   <Form.Input />
-                  <Form.InputGroupAppend>.00</Form.InputGroupAppend>
+                  <Form.InputGroupAppend>
+                    <Form.InputGroupText>.00</Form.InputGroupText>
+                  </Form.InputGroupAppend>
                 </Form.InputGroup>
               </Form.Group>
             </ComponentDemo>
