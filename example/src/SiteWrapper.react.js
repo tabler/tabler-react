@@ -246,7 +246,7 @@ class SiteWrapper extends React.Component<Props, State> {
             "Premium and Open Source dashboard template with responsive and high quality UI. For Free!",
           copyright: (
             <React.Fragment>
-              Copyright © 2018
+              Copyright © 2019
               <a href="."> Tabler-react</a>. Theme by
               <a
                 href="https://codecalm.net"
