@@ -9,9 +9,15 @@ function Error500Page({
   title = "500",
   subtitle = "Oops... You just found an error page...",
   details = "We are sorry but your request contains bad syntax and cannot be fulfilled...",
+  action,
 }: DefaultErrorProps): React.Node {
   return (
-    <DefaultErrorPage title={title} subtitle={subtitle} details={details} />
+    <DefaultErrorPage
+      title={title}
+      subtitle={subtitle}
+      details={details}
+      action={action}
+    />
   );
 }
 

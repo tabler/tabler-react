@@ -9,9 +9,15 @@ function Error403Page({
   title = "403",
   subtitle = "Oops... You just found an error page...",
   details = "We are sorry but you do not have permission to access this page...",
+  action,
 }: DefaultErrorProps): React.Node {
   return (
-    <DefaultErrorPage title={title} subtitle={subtitle} details={details} />
+    <DefaultErrorPage
+      title={title}
+      subtitle={subtitle}
+      details={details}
+      action={action}
+    />
   );
 }
 

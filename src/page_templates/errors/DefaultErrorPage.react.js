@@ -12,6 +12,7 @@ export type Props = {|
   +title?: string,
   +subtitle?: string,
   +details?: string,
+  +action?: string,
 |};
 
 function DefaultErrorPage(props: Props): React.Node {
@@ -27,6 +28,7 @@ function DefaultErrorPage(props: Props): React.Node {
     title = "Error",
     subtitle = "Sorry an unkown error occurred",
     details,
+    action = "Go back",
   } = props;
   return (
     <Page className="text-center">
@@ -40,7 +42,7 @@ function DefaultErrorPage(props: Props): React.Node {
         )}
         <Button onClick={_onBackClick} className="btn-primary">
           <Icon className="mr-2" name="arrow-left" />
-          Go back
+          {action}
         </Button>
       </Container>
     </Page>
