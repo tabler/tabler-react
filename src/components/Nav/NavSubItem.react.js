@@ -9,6 +9,7 @@ type Props = {|
   +to?: string,
   +icon?: string,
   +value?: string,
+  +useExact?: boolean,
 |};
 
 function NavSubItem({
@@ -19,9 +20,10 @@ function NavSubItem({
   icon,
   hasSubNav,
   value,
+  useExact,
 }: Props): React.Node {
   return (
-    <Dropdown.Item to={to} icon={icon} RootComponent={LinkComponent}>
+    <Dropdown.Item to={to} icon={icon} RootComponent={LinkComponent} useExact={useExact || false}>
       {value || children}
     </Dropdown.Item>
   );
