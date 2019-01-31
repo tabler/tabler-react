@@ -14,7 +14,7 @@
     "build": "yarn run copytablercsstodist && rollup -c && yarn run flow:copy-source",
     "start": "yarn run copytablercsstodist && rollup -c -w",
     "prepare": "yarn run build && yarn run copytablercsstodist",
-    "predeploy": "cd example && yarn install && yarn run build",
+    "predeploy": "yarn styleguide:build && cd example && yarn install && yarn run build",
     "deploy": "echo \"tabler-react.com\" > example/build/CNAME && gh-pages -d example/build",
     "precommit": "yarn pretty-quick --staged && lint-staged && cd scripts && python propscheck.py && cd .. && ./scripts/runflow",
     "flow:copy-source": "node scripts/flow-copy-source.js",
