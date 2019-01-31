@@ -9138,7 +9138,7 @@ eval("module.exports = __webpack_require__.p + \"static/media/worldpay.d63620a3.
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! exports provided: AccountDropdown, Alert, Avatar, Badge, BlogCard, Button, Card, Comment, CommentsCard, ContactCard, Container, Dimmer, Dropdown, Form, GalleryCard, Grid, Header, Icon, List, Loader, Media, Nav, Notification, Page, PricingCard, Profile, Progress, ProgressCard, Site, SocialNetworksList, Stamp, StampCard, StatsCard, StoreCard, TabbedCard, Table, Tag, Text, Timeline, Tooltip, Tab, Tabs, TabbedContainer, TabbedHeader, RouterContextProvider, StandaloneFormPage, DefaultErrorPage, Error400Page, Error401Page, Error403Page, Error404Page, Error500Page, Error503Page, FormCard, FormTextInput, FormCheckboxInput, colors, LoginPage, RegisterPage, ForgotPasswordPage */
+/*! exports provided: RouterContextProvider, StandaloneFormPage, DefaultErrorPage, Error400Page, Error401Page, Error403Page, Error404Page, Error500Page, Error503Page, FormCard, FormTextInput, FormCheckboxInput, colors, LoginPage, RegisterPage, ForgotPasswordPage, AccountDropdown, Alert, Avatar, Badge, BlogCard, Button, Card, Comment, CommentsCard, ContactCard, Container, Dimmer, Dropdown, Form, GalleryCard, Grid, Header, Icon, List, Loader, Media, Nav, Notification, Page, PricingCard, Profile, Progress, ProgressCard, Site, SocialNetworksList, Stamp, StampCard, StatsCard, StoreCard, TabbedCard, Table, Tag, Text, Timeline, Tooltip, Tab, Tabs, TabbedContainer, TabbedHeader */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
