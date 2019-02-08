@@ -24,6 +24,7 @@ type PropsForAll = {|
   +icon?: string,
   +social?: string,
   +loading?: boolean,
+  +tabIndex?: number,
   +isDropdownToggle?: boolean,
   +to?: string,
   +isOption?: boolean,
@@ -68,6 +69,7 @@ const Button = (props: Props): React.Node => {
     icon,
     social = "",
     loading,
+    tabIndex,
     isDropdownToggle,
     isOption,
     rootRef,
@@ -107,6 +109,7 @@ const Button = (props: Props): React.Node => {
     onMouseLeave: onMouseLeave,
     onPointerEnter: onPointerEnter,
     onPointerLeave: onPointerLeave,
+    tabIndex: tabIndex,
   };
 
   const childrenForAll = (
