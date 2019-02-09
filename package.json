@@ -41,7 +41,7 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.0.0",
+    "@commitlint/cli": "^7.5.1",
     "@commitlint/config-conventional": "^7.0.1",
     "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^7.0.1",
