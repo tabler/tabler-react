@@ -45,7 +45,7 @@ function ForgotPasswordPage(props: Props): React.Node {
   } = props;
 
   return (
-    <StandaloneFormPage>
+    <StandaloneFormPage imageURL={"./demo/logo.svg"}>
       <FormCard
         buttonText={strings.buttonText || defaultStrings.buttonText}
         title={strings.title || defaultStrings.title}
@@ -72,8 +72,8 @@ function ForgotPasswordPage(props: Props): React.Node {
   );
 }
 
-const ForgotPasswordPageWithTouchedErrors: React.ComponentType<
-  Props
-> = withTouchedErrors(["email"])(ForgotPasswordPage);
+const ForgotPasswordPageWithTouchedErrors: React.ComponentType<Props> = withTouchedErrors(
+  ["email"]
+)(ForgotPasswordPage);
 
 export default ForgotPasswordPageWithTouchedErrors;

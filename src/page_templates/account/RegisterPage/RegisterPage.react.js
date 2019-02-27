@@ -57,7 +57,7 @@ function RegisterPage(props: Props): React.Node {
   } = props;
 
   return (
-    <StandaloneFormPage>
+    <StandaloneFormPage imageURL={"./demo/logo.svg"}>
       <FormCard
         buttonText={strings.buttonText || defaultStrings.buttonText}
         title={strings.title || defaultStrings.title}
@@ -111,8 +111,8 @@ function RegisterPage(props: Props): React.Node {
   );
 }
 
-const RegisterPageWithTouchedErrors: React.ComponentType<
-  Props
-> = withTouchedErrors(["name", "email", "password", "terms"])(RegisterPage);
+const RegisterPageWithTouchedErrors: React.ComponentType<Props> = withTouchedErrors(
+  ["name", "email", "password", "terms"]
+)(RegisterPage);
 
 export default RegisterPageWithTouchedErrors;
