@@ -71,7 +71,7 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "^2.0.3",
-    "react-styleguidist": "^8.0.0",
+    "react-styleguidist": "^9.0.3",
     "rollup": "0.68.0",
     "rollup-plugin-babel": "3.0.7",
     "rollup-plugin-commonjs": "9.2.0",
