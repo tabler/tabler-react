@@ -21,6 +21,7 @@ type Props = {|
   +label?: string,
   +disabled?: boolean,
   +readOnly?: boolean,
+  +accept?: string,
 |};
 
 type State = {| fileName: string |};
@@ -52,6 +53,7 @@ class FormFileInput extends React.Component<Props, State> {
       onPointerLeave,
       onFocus,
       onBlur,
+      accept,
     } = this.props;
 
     const classes = cn("custom-file", className);
@@ -73,6 +75,7 @@ class FormFileInput extends React.Component<Props, State> {
           onPointerLeave={onPointerLeave}
           onFocus={onFocus}
           onBlur={onBlur}
+          accept={accept}
         />
         <label
           className="custom-file-label"
