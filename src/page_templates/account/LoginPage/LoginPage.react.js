@@ -47,7 +47,7 @@ function LoginPage(props: Props): React.Node {
   } = props;
 
   return (
-    <StandaloneFormPage>
+    <StandaloneFormPage imageURL={"./demo/logo.svg"}>
       <FormCard
         buttonText={strings.buttonText || defaultStrings.buttonText}
         title={strings.title || defaultStrings.title}
@@ -83,8 +83,8 @@ function LoginPage(props: Props): React.Node {
   );
 }
 
-const LoginPageWithTouchedErrors: React.ComponentType<
-  Props
-> = withTouchedErrors(["email", "password"])(LoginPage);
+const LoginPageWithTouchedErrors: React.ComponentType<Props> = withTouchedErrors(
+  ["email", "password"]
+)(LoginPage);
 
 export default LoginPageWithTouchedErrors;
