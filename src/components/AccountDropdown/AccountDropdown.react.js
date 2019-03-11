@@ -63,7 +63,7 @@ function AccountDropdown({
       triggerClassName="pr-0 leading-none"
       triggerContent={
         <React.Fragment>
-          <Avatar imageURL={avatarURL} />
+          {avatarURL && <Avatar imageURL={avatarURL} />}
           <span className="ml-2 d-none d-lg-block">
             <span className="text-default">{name}</span>
             <small className="text-muted d-block mt-1">{description}</small>
