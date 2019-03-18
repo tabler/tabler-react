@@ -5,7 +5,7 @@
   "private": true,
   "license": "MIT",
   "dependencies": {
-    "d3-scale": "^2.0.0",
+    "d3-scale": "^3.0.0",
     "formik": "^1.0.2",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
