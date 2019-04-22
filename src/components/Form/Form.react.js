@@ -37,7 +37,7 @@ export type Props = {|
   +className?: string,
   +action?: string,
   +method?: string,
-  +autocomplete: "on" | "off",
+  +autoComplete: "on" | "off",
 |};
 
 function Form({
@@ -46,7 +46,7 @@ function Form({
   action,
   method,
   onSubmit,
-  autocomplete,
+  autoComplete,
 }: Props): React.Node {
   return (
     <form
@@ -54,7 +54,7 @@ function Form({
       onSubmit={onSubmit}
       action={action}
       method={method}
-      autocomplete={autocomplete}
+      autoComplete={autoComplete}
     >
       {children}
     </form>
@@ -62,7 +62,7 @@ function Form({
 }
 
 Form.defaultProps = {
-  autocomplete: "off",
+  autoComplete: "off",
 };
 
 Form.Group = FormGroup;
