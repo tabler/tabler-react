@@ -64,7 +64,7 @@
     "flow-bin": "^0.89.0",
     "flow-copy-source": "^2.0.0",
     "gh-pages": "^2.0.0",
-    "husky": "^1.0.0",
+    "husky": "^2.0.0",
     "lint-staged": "^8.0.0",
     "prettier": "1.15.3",
     "pretty-quick": "^1.6.0",
