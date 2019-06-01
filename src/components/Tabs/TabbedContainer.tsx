@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import Tab from "./Tab.react";
+import Tab from "./Tab";
 
 type Props = {|
   +children: React.ChildrenArray<React.Element<typeof Tab>>,
