@@ -1,19 +1,17 @@
-// @flow
-
 import * as React from "react";
 
 import Form from "../components/Form";
 import Card from "../components/Card";
 import Button from "../components/Button";
 
-type Props = {|
-  +action?: string,
-  +children?: React.Node,
-  +method?: string,
-  +title: string,
-  +buttonText: string,
-  +onSubmit?: Function,
-|};
+interface Props {
+  action?: string;
+  children?: React.ReactNode;
+  method?: string;
+  title: string;
+  buttonText: string;
+  onSubmit?: Function;
+}
 
 function FormCard({
   children,
@@ -22,7 +20,7 @@ function FormCard({
   onSubmit,
   title,
   buttonText,
-}: Props): React.Node {
+}: Props) {
   return (
     <Form className="card" onSubmit={onSubmit} action={action} method={method}>
       <Card.Body className="p-6">

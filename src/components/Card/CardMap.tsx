@@ -1,15 +1,13 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +placeholder?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  placeholder?: string;
+}
 
-function CardMap({ className, children, placeholder }: Props): React.Node {
+function CardMap({ className, children, placeholder }: Props) {
   const classes = cn(
     "card-map",
     { "card-map-placeholder": placeholder },
