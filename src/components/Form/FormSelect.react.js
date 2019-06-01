@@ -32,6 +32,7 @@ type Props = {|
   +value?: string | number,
   +disabled?: boolean,
   +readOnly?: boolean,
+  +multiple?: boolean,
 |};
 
 function FormSelect(props: Props): React.Node {
@@ -55,6 +56,7 @@ function FormSelect(props: Props): React.Node {
     onPointerEnter,
     onPointerLeave,
     onClick,
+    multiple,
   } = props;
   const classes = cn(
     {
@@ -85,6 +87,7 @@ function FormSelect(props: Props): React.Node {
         className={classes}
         disabled={disabled}
         readOnly={readOnly}
+        multiple={multiple}
       >
         {children}
       </select>
