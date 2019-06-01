@@ -13,6 +13,7 @@ export type subNavItem = {|
   +to?: string,
   +icon?: string,
   +LinkComponent?: React.ElementType,
+  +useExact?: boolean,
 |};
 
 type navItem = {|

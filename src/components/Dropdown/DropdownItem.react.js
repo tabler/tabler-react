@@ -37,6 +37,10 @@ type Props = {|
    * onClick handler
    */
   +onClick?: (event: SyntheticMouseEvent<*>) => mixed,
+  /**
+   * Whether or not to pass "exact" property to underlying NavLink component
+   */
+  +useExact?: boolean,
 |};
 
 /**
@@ -52,6 +56,7 @@ function DropdownItem({
   to,
   RootComponent,
   onClick,
+  useExact,
 }: Props): React.Node {
   const classes = cn({ "dropdown-item": true }, className);
   const childrenForAll = (
@@ -71,7 +76,7 @@ function DropdownItem({
     </React.Fragment>
   );
   return RootComponent ? (
-    <RootComponent className={classes} to={to} onClick={onClick}>
+    <RootComponent className={classes} to={to} onClick={onClick} exact={useExact}>
       {childrenForAll}
     </RootComponent>
   ) : (
