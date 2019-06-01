@@ -1,8 +1,7 @@
-// @flow
 import * as React from "react";
-import { Dropdown, Avatar } from "../";
+import { Dropdown, Avatar } from "..";
 
-import type { itemObject } from "../Dropdown/Dropdown.react";
+import { itemObject } from "../Dropdown/Dropdown";
 
 type defaultOptionType =
   | "profile"
@@ -15,22 +14,22 @@ type defaultOptionType =
 
 type optionsType = Array<defaultOptionType | itemObject>;
 
-type defaultOptionsType = { [defaultOptionType]: itemObject };
+type defaultOptionsType = { [K in defaultOptionType]: itemObject };
 
-export type Props = {|
-  +avatarURL?: string,
-  +name?: string,
-  +description?: string,
+export interface Props {
+  avatarURL?: string;
+  name?: string;
+  description?: string;
   /**
    * An array of the option items within the Dropdown
    */
-  +options?: optionsType,
+  options?: optionsType;
   /**
    * The default RootComponent for all options.
    * optionsObjects[x].RootComponent takes priority
    */
-  +optionsRootComponent?: React.ElementType,
-|};
+  optionsRootComponent?: React.ElementType;
+}
 
 const defaultOptions: defaultOptionsType = {
   profile: { icon: "user", value: "Profile", to: "/profile" },
@@ -54,7 +53,7 @@ function AccountDropdown({
   description,
   options = [],
   optionsRootComponent,
-}: Props): React.Node {
+}: Props) {
   const itemsObjects = itemsFromDefaultOptions(options);
 
   return (
