@@ -2,14 +2,14 @@
 
 import * as React from "react";
 
-type Props = {|
-  +children?: React.Node,
-|};
+interface Props {
+  children?: React.ReactNode;
+}
 
 /**
  * Used to seperate items within a Dropdown with a horizontal line
  */
-function DropdownItemDivider(props: Props): React.Node {
+function DropdownItemDivider(props: Props) {
   return <div className="dropdown-divider">{props.children}</div>;
 }
 

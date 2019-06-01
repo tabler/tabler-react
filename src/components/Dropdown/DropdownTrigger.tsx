@@ -2,50 +2,48 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Button, Icon } from "../";
+import { Button, Icon } from "..";
 
 import { Reference } from "react-popper";
-import type { ReferenceChildrenProps } from "react-popper";
+import { ReferenceChildrenProps } from "react-popper";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
   /**
    * Display an arrow alongside the trigger content
    */
-  +toggle?: boolean,
+  toggle?: boolean;
   /**
    * The value to be displayed within the trigger if children is not included
    */
-  +value?: string,
+  value?: string;
   /**
    * Render the trigger as an <a> tag or a Button
    */
-  +type?: "link" | "button",
+  type?: "link" | "button";
   /**
    * The background color for a Button trigger
    */
-  +color?: string,
+  color?: string;
   /**
    * An Icon displayed to the left of the trigger content
    */
-  +icon?: string,
+  icon?: string;
   /**
    * Is this trigger being used as a NavLink
    */
-  +isNavLink?: boolean,
+  isNavLink?: boolean;
   /**
    * Is this trigger beind used as a Card.Header option
    */
-  +isOption?: boolean,
+  isOption?: boolean;
   /**
    * Handle the onClick of this trigger
    */
-  +onClick?: (
-    e: SyntheticMouseEvent<HTMLInputElement> | SyntheticMouseEvent<HTMLElement>
-  ) => void,
-  +rootRef?: (?HTMLElement) => void,
-|};
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  rootRef?: (el: HTMLElement) => void;
+}
 
 /**
  * Provides the trigger element for a Dropdown
@@ -62,7 +60,7 @@ function DropdownTrigger({
   isOption,
   onClick,
   rootRef,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     { "dropdown-toggle": toggle, "nav-link": isNavLink },
     className
