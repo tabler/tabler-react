@@ -54,6 +54,7 @@ export type Props = {|
    * Wraps the input in Form.Group and adds a label
    */
   +label?: string,
+  +autoComplete?: "on" | "off",
 |};
 
 /**
@@ -95,6 +96,7 @@ function FormInput(props: Props): React.Node {
     autoFocus,
     required,
     label,
+    autoComplete,
   } = props;
   const type = props.type || "text";
 
@@ -139,6 +141,7 @@ function FormInput(props: Props): React.Node {
     onCopy,
     onCut,
     onPaste,
+    autoComplete,
   };
 
   const contents = !icon ? (
