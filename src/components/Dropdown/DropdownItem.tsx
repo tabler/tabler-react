@@ -1,43 +1,41 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Icon, Badge } from "../";
+import { Icon, Badge } from "..";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
   /**
    * Display an Icon to the left of DropdownItem content
    */
-  +icon?: string,
+  icon?: string;
   /**
    * The content of the DropdownItem if children is not used
    */
-  +value?: string,
+  value?: string;
   /**
    * Display a badge with this content to the right of DropdownItem content
    */
-  +badge?: string,
+  badge?: string;
   /**
    * The type/color of Badge to be displayed
    */
-  +badgeType?: string,
+  badgeType?: string;
   /**
    * Where the user should be taken on click.
    * By default this will be passed as the 'href' prop to the <a> tag,
    * but to the RootComponent it will be a 'to' prop instead
    */
-  +to?: string,
+  to?: string;
   /**
    * A component to be used instead of an <a> tag
    */
-  +RootComponent?: React.ElementType,
+  RootComponent?: React.ElementType;
   /**
    * onClick handler
    */
-  +onClick?: (event: SyntheticMouseEvent<*>) => mixed,
-|};
+  onClick?: (event: React.MouseEvent<any>) => any;
+}
 
 /**
  * An individual item that should be contained within a Dropdown.Menu
@@ -52,7 +50,7 @@ function DropdownItem({
   to,
   RootComponent,
   onClick,
-}: Props): React.Node {
+}: Props) {
   const classes = cn({ "dropdown-item": true }, className);
   const childrenForAll = (
     <React.Fragment>
