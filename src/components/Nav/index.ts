@@ -1,5 +1,5 @@
 // @flow
 
-import Nav from "./Nav.react";
+import Nav from "./Nav";
 
 export { Nav as default };

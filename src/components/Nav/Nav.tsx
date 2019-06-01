@@ -1,44 +1,41 @@
-//@flow
-
 import * as React from "react";
 import cn from "classnames";
-import NavItem from "./NavItem.react";
-import NavLink from "./NavLink.react";
-import NavSubItem from "./NavSubItem.react";
-import NavSubmenu from "./NavSubmenu.react";
-import NavSubmenuItem from "./NavSubmenuItem.react";
+import NavItem from "./NavItem";
+import NavLink from "./NavLink";
+import NavSubItem from "./NavSubItem";
+import NavSubmenu from "./NavSubmenu";
+import NavSubmenuItem from "./NavSubmenuItem";
 
-export type subNavItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +LinkComponent?: React.ElementType,
-  +useExact?: boolean,
-|};
+export type subNavItem = {
+  value: string;
+  to?: string;
+  icon?: string;
+  LinkComponent?: React.ElementType;
+};
 
-type navItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +active?: boolean,
-  +LinkComponent?: React.ElementType,
-  +subItems?: Array<subNavItem>,
-  +useExact?: boolean,
-|};
+type navItem = {
+  value: string;
+  to?: string;
+  icon?: string;
+  active?: boolean;
+  LinkComponent?: React.ElementType;
+  subItems?: Array<subNavItem>;
+  useExact?: boolean;
+};
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +tabbed?: boolean,
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  tabbed?: boolean;
   // eslint-disable-next-line no-use-before-define
-  +items?: React.ChildrenArray<React.Element<typeof Nav.Item>>,
-  +itemsObjects?: Array<navItem>,
-  +routerContextComponentType?: React.ElementType,
-|};
+  items?: React.ReactElement<typeof Nav.Item>[];
+  itemsObjects?: Array<navItem>;
+  routerContextComponentType?: any;
+}
 
-type State = {|
-  pathName: ?string,
-|};
+type State = {
+  pathName?: string | null;
+};
 
 class Nav extends React.Component<Props, State> {
   state = {
@@ -51,7 +48,7 @@ class Nav extends React.Component<Props, State> {
   static Submenu = NavSubmenu;
   static SubmenuItem = NavSubmenuItem;
 
-  routerCallback = (location: { pathname: string }): void => {
+  routerCallback = (location: { pathname: string }): any => {
     this.setState({ pathName: location.pathname });
   };
 
@@ -88,7 +85,7 @@ class Nav extends React.Component<Props, State> {
     return false;
   }
 
-  render(): React.Node {
+  render() {
     const {
       className,
       children,
@@ -99,14 +96,14 @@ class Nav extends React.Component<Props, State> {
     } = this.props;
     const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
 
-    let element: ?React.Element<*> = null;
+    let element: null | React.ReactElement<any> = null;
     if (routerContextComponentType) {
       const routerContextComponentFactory = React.createFactory(
         routerContextComponentType
       );
       element = routerContextComponentFactory({
         callback: this.routerCallback,
-      });
+      } as any);
     }
 
     return (

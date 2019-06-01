@@ -1,19 +1,18 @@
-// @flow
 import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +RootComponent?: React.ElementType,
-  +active?: boolean,
-  +icon?: string,
-  +to?: string,
-  +hasSubNav?: boolean,
-  +rootRef?: (?HTMLElement) => void,
-  +useExact?: boolean,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  RootComponent?: React.ElementType;
+  active?: boolean;
+  icon?: string;
+  to?: string;
+  hasSubNav?: boolean;
+  rootRef?: any;
+  useExact?: boolean;
+}
 
 function NavLink({
   children,
@@ -25,7 +24,7 @@ function NavLink({
   hasSubNav,
   rootRef,
   useExact,
-}: Props): React.Node {
+}: Props) {
   const classes = cn({ "nav-link": true, active: active }, className);
 
   const childrenForAll = (

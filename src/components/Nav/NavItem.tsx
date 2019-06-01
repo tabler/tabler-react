@@ -1,45 +1,44 @@
-// @flow
 import * as React from "react";
 import cn from "classnames";
-import Nav from "../Nav";
+import Nav from ".";
 import Dropdown from "../Dropdown";
-import type { subNavItem } from "./Nav.react";
-import ClickOutside from "../../helpers/ClickOutside.react";
+import { subNavItem } from "./Nav";
+import ClickOutside from "../../helpers/ClickOutside";
 
 import { Manager, Reference } from "react-popper";
-import type { Placement, ReferenceChildrenProps } from "react-popper";
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +value?: string,
-  +LinkComponent?: React.ElementType,
-  +href?: string,
-  +to?: string,
-  +icon?: string,
-  +type?: "li" | "div",
+import { ReferenceChildrenProps } from "react-popper";
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  value?: string;
+  LinkComponent?: React.ElementType;
+  href?: string;
+  to?: string;
+  icon?: string;
+  type?: "li" | "div";
   /**
    * Make this item behave like it has a subNav even if you dont use subItems or subItemsObjects
    */
-  +hasSubNav?: boolean,
-  +onClick?: () => void,
+  hasSubNav?: boolean;
+  onClick?: () => void;
   /**
    * Display this item in an active, or currently viewing, state
    */
-  +active?: boolean,
-  +subItems?: React.ChildrenArray<React.Element<typeof Nav.SubItem>>,
-  +subItemsObjects?: Array<subNavItem>,
+  active?: boolean;
+  subItems?: React.ReactElement<typeof Nav.SubItem>[];
+  subItemsObjects?: Array<subNavItem>;
   /**
    * Position of the subnav Dropdown
    */
-  +position?: Placement,
+  position?: any;
   /**
    * Whether or not to pass "exact" property to underlying NavLink component
    */
-  +useExact?: boolean,
-|};
+  useExact?: boolean;
+}
 
 type State = {
-  isOpen: boolean,
+  isOpen: boolean;
 };
 
 /**
@@ -59,7 +58,7 @@ class NavItem extends React.Component<Props, State> {
     if (this.props.onClick) this.props.onClick();
   };
 
-  render(): React.Node {
+  render() {
     const {
       children,
       LinkComponent,
@@ -142,7 +141,7 @@ class NavItem extends React.Component<Props, State> {
     const wrappedChildren =
       type === "div" ? (
         <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
-          {({ setElementRef }) => (
+          {({ setElementRef }: any) => (
             <div
               className={wrapperClasses}
               onClick={this._handleOnClick}
@@ -154,7 +153,7 @@ class NavItem extends React.Component<Props, State> {
         </ClickOutside>
       ) : (
         <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
-          {({ setElementRef }) => (
+          {({ setElementRef }: any) => (
             <li
               className={wrapperClasses}
               onClick={this._handleOnClick}
