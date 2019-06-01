@@ -1,6 +1,6 @@
 {
   "name": "tabler-react",
-  "version": "1.6.0",
+  "version": "1.30.0",
   "description": "",
   "author": "jonthomp and AaronCoplan",
   "license": "MIT",
@@ -26,7 +26,8 @@
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "copytablercsstodist": "shx mkdir -p dist && shx cp src/Tabler.css src/Tabler.RTL.css dist/ && shx cp -r src/fonts src/images dist/",
     "cm": "git-cz",
-    "startagain": "shx rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build"
+    "startagain": "shx rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build",
+    "semantic-release": "semantic-release  --no-ci"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
@@ -79,7 +80,7 @@
     "rollup-plugin-peer-deps-external": "2.2.0",
     "rollup-plugin-postcss": "1.6.3",
     "rollup-plugin-url": "2.2.1",
-    "semantic-release": "^15.5.0",
+    "semantic-release": "^15.13.12",
     "shx": "^0.3.2",
     "webpack": "4.19.1"
   },
