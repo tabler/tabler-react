@@ -1,11 +1,9 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Icon, Avatar, Button } from "../";
-import AlertLink from "./AlertLink.react";
+import { Icon, Avatar, Button } from "..";
+import AlertLink from "./AlertLink";
 
-import type { MouseEvents, PointerEvents } from "../../";
+import { MouseEvents, PointerEvents } from "../../";
 
 type AlertType =
   | "primary"
@@ -15,39 +13,37 @@ type AlertType =
   | "warning"
   | "danger";
 
-type Props = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  +children?: React.Node,
-  +className?: string,
+interface Props extends MouseEvents, PointerEvents {
+  children?: React.ReactNode;
+  className?: string;
   /**
    * The type of this Alert, changes it's color
    */
-  +type: AlertType,
+  type: AlertType;
   /**
    * An Icon to be displayed on the right hand side of the Alert
    */
-  +icon?: string,
+  icon?: string;
   /**
    * Add extra space above and below the alert
    */
-  +hasExtraSpace?: boolean,
+  hasExtraSpace?: boolean;
   /**
    * Adds an 'X' to the left side of the Alert that dismisses the Alert
    */
-  +isDismissible?: boolean,
+  isDismissible?: boolean;
   /**
    * Display an Avatar on the left hand side of this Alert
    */
-  +avatar?: string,
+  avatar?: string;
   /**
    * Handle the dismissing of the Alert yourself
    */
-  +onDismissClick?: () => void,
-|};
+  onDismissClick?: () => void;
+}
 
 type State = {
-  isDismissed: boolean,
+  isDismissed: boolean;
 };
 
 class Alert extends React.Component<Props, State> {
@@ -62,7 +58,7 @@ class Alert extends React.Component<Props, State> {
 
   static Link = AlertLink;
 
-  render(): React.Node {
+  render() {
     const { isDismissed } = this.state;
     const {
       className,
