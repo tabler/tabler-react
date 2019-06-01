@@ -1,16 +1,14 @@
-// @flow
-
 import * as React from "react";
-import Tab from "./Tab.react";
-import Nav from "../Nav/Nav.react";
+import Tab, { Props as TabProps } from "./Tab";
+import Nav from "../Nav/Nav";
 
-type Props = {|
-  +children: React.ChildrenArray<React.Element<typeof Tab>>,
-  +selectedTitle: string,
-  +stateCallback: (selectedTitle: string) => void,
-|};
+interface Props {
+  children: React.ReactElement<TabProps>[];
+  selectedTitle: string;
+  stateCallback: (selectedTitle: string) => void;
+}
 
-function TabbedHeader(props: Props): React.Node {
+function TabbedHeader(props: Props) {
   const { children, stateCallback } = props;
   const tabs = React.Children.toArray(children);
   return (

@@ -1,16 +1,14 @@
-// @flow
-
 import * as React from "react";
 
-type Props = {|
-  title: string,
-  children: React.Node,
-|};
+export interface Props {
+  title: string;
+  children: React.ReactNode;
+}
 
-type State = {||};
+interface State {}
 
 class Tab extends React.PureComponent<Props, State> {
-  render(): React.Node {
+  render() {
     return this.props.children;
   }
 }
