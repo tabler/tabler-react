@@ -1,24 +1,16 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "../";
+import { Icon } from "..";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +icon?: string,
-  +type?: "collapse" | "close" | "fullscreen",
-  +onClick?: () => mixed,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  icon?: string;
+  type?: "collapse" | "close" | "fullscreen";
+  onClick?: () => any;
+}
 
-function CardOptionsItem({
-  className,
-  children,
-  icon,
-  type,
-  onClick,
-}: Props): React.Node {
+function CardOptionsItem({ className, children, icon, type, onClick }: Props) {
   const classes = cn(
     {
       "card-options-collapse": type === "collapse",

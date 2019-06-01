@@ -1,42 +1,41 @@
-// @flow
 import * as React from "react";
 
 import cn from "classnames";
-import CardHeader from "./CardHeader.react";
-import CardTitle from "./CardTitle.react";
-import CardBody from "./CardBody.react";
-import CardOptions from "./CardOptions.react";
-import CardOptionsItem from "./CardOptionsItem.react";
-import CardStatus from "./CardStatus.react";
-import CardAlert from "./CardAlert.react";
-import CardFooter from "./CardFooter.react";
-import CardMap from "./CardMap.react";
+import CardHeader from "./CardHeader";
+import CardTitle from "./CardTitle";
+import CardBody from "./CardBody";
+import CardOptions from "./CardOptions";
+import CardOptionsItem from "./CardOptionsItem";
+import CardStatus from "./CardStatus";
+import CardAlert from "./CardAlert";
+import CardFooter from "./CardFooter";
+import CardMap from "./CardMap";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +title?: string,
-  +body?: React.Node,
-  +RootComponent?: React.ElementType,
-  +options?: React.Node,
-  +isCollapsible?: boolean,
-  +isCollapsed?: boolean,
-  +isClosable?: boolean,
-  +isClosed?: boolean,
-  +isFullscreenable?: boolean,
-  +statusColor?: string,
-  +statusSide?: boolean,
-  +alert?: React.Node,
-  +alertColor?: string,
-  +footer?: string,
-  +aside?: boolean,
-|};
+interface Props {
+  children?: React.ReactElement;
+  className?: string;
+  title?: string;
+  body?: React.ReactNode;
+  RootComponent?: React.ElementType;
+  options?: React.ReactNode;
+  isCollapsible?: boolean;
+  isCollapsed?: boolean;
+  isClosable?: boolean;
+  isClosed?: boolean;
+  isFullscreenable?: boolean;
+  statusColor?: string;
+  statusSide?: boolean;
+  alert?: React.ReactNode;
+  alertColor?: string;
+  footer?: string;
+  aside?: boolean;
+}
 
-type State = {|
-  isClosed: boolean,
-  isCollapsed: boolean,
-  isFullscreen: boolean,
-|};
+interface State {
+  isClosed: boolean;
+  isCollapsed: boolean;
+  isFullscreen: boolean;
+}
 
 class Card extends React.PureComponent<Props, State> {
   state = {
@@ -73,7 +72,7 @@ class Card extends React.PureComponent<Props, State> {
     }));
   };
 
-  render(): React.Node {
+  render() {
     const {
       className,
       children,
@@ -131,8 +130,9 @@ class Card extends React.PureComponent<Props, State> {
       <Card.Status color={statusColor} side={statusSide} />
     );
 
-    const card_alert = alert &&
-      alertColor && <Card.Alert color={alertColor}>{alert}</Card.Alert>;
+    const card_alert = alert && alertColor && (
+      <Card.Alert color={alertColor}>{alert}</Card.Alert>
+    );
 
     const card_header = title && (
       <Card.Header>
