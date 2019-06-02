@@ -6,17 +6,17 @@ export interface Form {
   /**
    * Handle Change Event
    */
-  onChange?: (event: React.KeyboardEvent) => any;
+  onChange?: (event: React.ChangeEvent) => any;
   /**
    * Handle Input Event
    */
-  onInput?: (event: React.KeyboardEvent) => any;
+  onInput?: (event: React.ChangeEvent) => any;
   /**
    * Handle Invalid Input Event
    */
-  onInvalid?: (event: React.KeyboardEvent) => any;
+  onInvalid?: (event: React.SyntheticEvent) => any;
   /**
    * Handle Form Submit Event
    */
-  onSubmit?: Function;
+  onSubmit?: (event: React.FormEvent) => any;
 }
