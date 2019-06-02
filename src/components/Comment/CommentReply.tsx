@@ -1,16 +1,14 @@
-// @flow
-
 import * as React from "react";
 import Media from "../Media";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +avatarURL?: string,
-  +name?: string,
-  +date?: string,
-  +text?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  avatarURL?: string;
+  name?: string;
+  date?: string;
+  text?: string;
+}
 
 function CommentReply({
   className,
@@ -19,7 +17,7 @@ function CommentReply({
   name,
   date,
   text,
-}: Props): React.Node {
+}: Props) {
   return (
     <Media.ListItem className={className}>
       <Media.Object avatar objectURL={avatarURL} className="mr-4" />

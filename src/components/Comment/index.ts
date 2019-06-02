@@ -1,5 +1,5 @@
 // @flow
 
-import Comment from "./Comment.react";
+import Comment from "./Comment";
 
 export { Comment as default };

@@ -1,22 +1,20 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 import List from "../List";
 import Media from "../Media/Media.react";
 import Text from "../Text/Text.react";
-import CommentList from "./CommentList.react";
-import CommentReply from "./CommentReply.react";
+import CommentList from "./CommentList";
+import CommentReply from "./CommentReply";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +avatarURL?: string,
-  +name?: string,
-  +date?: string,
-  +text?: string,
-  +replies?: React.Node,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  avatarURL?: string;
+  name?: string;
+  date?: string;
+  text?: string;
+  replies?: React.ReactNode;
+}
 
 function Comment({
   className,
@@ -26,7 +24,7 @@ function Comment({
   date,
   text,
   replies,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("py-5", className);
 
   return (
