@@ -12,7 +12,7 @@ import CardFooter from "./CardFooter";
 import CardMap from "./CardMap";
 
 interface Props {
-  children?: React.ReactElement;
+  children?: React.ReactNode;
   className?: string;
   title?: string;
   body?: React.ReactNode;
