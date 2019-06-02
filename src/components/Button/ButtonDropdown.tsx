@@ -1,32 +1,30 @@
-// @flow
-
 import * as React from "react";
-import { Button, Dropdown } from "../";
+import { Button, Dropdown } from "..";
 import { Manager, Reference } from "react-popper";
-import type { Props as ButtonProps } from "../Button/Button.react";
-import type { Props as DropdownMenuProps } from "../Dropdown/DropdownMenu.react";
+import { DefaultButtonComponent } from "../Button/Button";
+import { Props as DropdownMenuProps } from "../Dropdown/DropdownMenu";
 
-import type { ReferenceChildrenProps } from "react-popper";
+import { ReferenceChildrenProps } from "react-popper";
 
-type Props = ButtonProps & {
-  +value?: string,
-  +children?: React.Node,
-  +dropdownProps?: DropdownMenuProps,
-};
+interface Props extends DefaultButtonComponent {
+  value?: string;
+  children?: React.ReactNode;
+  dropdownProps?: DropdownMenuProps;
+}
 
 type State = {
-  isOpen: boolean,
+  isOpen: boolean;
 };
 
 class ButtonDropdown extends React.Component<Props, State> {
   state = { isOpen: false };
 
-  _handleButtonOnClick = (e: SyntheticMouseEvent<HTMLElement>) => {
+  _handleButtonOnClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     this.setState(s => ({ isOpen: !s.isOpen }));
   };
 
-  render(): React.Node {
+  render() {
     const { children, value, dropdownProps, ...buttonProps } = this.props;
 
     const propsForDropdownMenu: DropdownMenuProps = dropdownProps
@@ -63,6 +61,6 @@ class ButtonDropdown extends React.Component<Props, State> {
   }
 }
 
-ButtonDropdown.displayName = "Button.Dropdown";
+(ButtonDropdown as any).displayName = "Button.Dropdown";
 
 export default ButtonDropdown;

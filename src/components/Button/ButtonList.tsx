@@ -1,20 +1,13 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +align?: "" | "left" | "center" | "right",
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  align?: "" | "left" | "center" | "right";
+}
 
-function ButtonList({
-  className,
-  children,
-  align = "",
-  ...props
-}: Props): React.Node {
+function ButtonList({ className, children, align = "", ...props }: Props) {
   const classes = cn(
     { "btn-list": true, [`text-${align}`]: !!align },
     className

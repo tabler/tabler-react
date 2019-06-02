@@ -1,60 +1,54 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "../";
-import ButtonList from "./ButtonList.react";
-import ButtonDropdown from "./ButtonDropdown.react";
+import { Icon } from "..";
+import ButtonList from "./ButtonList";
+import ButtonDropdown from "./ButtonDropdown";
 
-import type { MouseEvents, PointerEvents } from "../../";
+import { MouseEvents, PointerEvents } from "../../";
+import { RefHandler } from "react-popper";
 
-type PropsForAll = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  +size?: "sm" | "lg",
-  +outline?: boolean,
-  +link?: boolean,
-  +block?: boolean,
-  +className?: string,
-  +children?: React.Node,
-  +disabled?: boolean,
-  +color?: string,
-  +square?: boolean,
-  +pill?: boolean,
-  +icon?: string,
-  +social?: string,
-  +loading?: boolean,
-  +tabIndex?: number,
-  +isDropdownToggle?: boolean,
-  +to?: string,
-  +isOption?: boolean,
-  +rootRef?: (?HTMLElement) => void,
-|};
+interface PropsForAll extends MouseEvents, PointerEvents {
+  size?: "sm" | "lg";
+  outline?: boolean;
+  link?: boolean;
+  block?: boolean;
+  className?: string;
+  children?: React.ReactNode;
+  disabled?: boolean;
+  color?: string;
+  square?: boolean;
+  pill?: boolean;
+  icon?: string;
+  social?: string;
+  loading?: boolean;
+  tabIndex?: number;
+  isDropdownToggle?: boolean;
+  to?: string;
+  isOption?: boolean;
+  rootRef?: RefHandler;
+}
 
-type DefaultButtonComponent = {|
-  ...PropsForAll,
-  +RootComponent?: "button",
-  +type?: "button" | "submit" | "reset",
-  +value?: string,
-|};
+export interface DefaultButtonComponent extends PropsForAll {
+  RootComponent?: "button";
+  type?: "button" | "submit" | "reset";
+  value?: string;
+}
 
-type BtnAComponent = {|
-  ...PropsForAll,
-  +RootComponent: "a",
-  +href?: string,
-  +target?: string,
-|};
+interface BtnAComponent extends PropsForAll {
+  RootComponent: "a";
+  href?: string;
+  target?: string;
+}
 
-type BtnInputComponent = {|
-  ...PropsForAll,
-  +RootComponent: "input",
-  +type?: "button" | "submit" | "reset",
-  +value?: string,
-|};
+interface BtnInputComponent extends PropsForAll {
+  RootComponent: "input";
+  type?: "button" | "submit" | "reset";
+  value?: string;
+}
 
 export type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
 
-const Button = (props: Props): React.Node => {
+const Button = (props: Props) => {
   const {
     size = "",
     outline,
@@ -141,7 +135,7 @@ const Button = (props: Props): React.Node => {
       </a>
     );
   } else {
-    const Component: React.ElementType = props.RootComponent;
+    const Component = props.RootComponent as any;
     return (
       <Component {...propsForAll} to={to}>
         {childrenForAll}
