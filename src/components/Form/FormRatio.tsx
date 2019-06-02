@@ -1,45 +1,41 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Grid } from "../";
+import { Grid } from "..";
 
-import type { MouseEvents, FocusEvents, PointerEvents } from "../../";
+import { MouseEvents, FocusEvents, PointerEvents } from "../../";
 // FormEvents not imported due to check on props utilization. Props typing do not use mandatory props.
 
-type PropsForAll = {|
-  ...MouseEvents,
-  ...FocusEvents,
-  ...PointerEvents,
-  +className?: string,
-  +step?: number,
-  +min?: number,
-  +max?: number,
-|};
+interface PropsForAll extends MouseEvents, FocusEvents, PointerEvents {
+  className?: string;
+  step?: number;
+  min?: number;
+  max?: number;
+  value?: number;
+  onChange?: (event: React.ChangeEvent<EventTarget>) => any;
+  defaultValue?: number;
+}
 
-type ControlledProps = {|
-  ...PropsForAll,
-  +value: number,
-  +onChange: (SyntheticInputEvent<EventTarget>) => mixed,
-|};
+interface ControlledProps extends PropsForAll {
+  value: number;
+  onChange: (event: React.ChangeEvent<EventTarget>) => any;
+}
 
-type UnControlledProps = {|
-  ...PropsForAll,
-  +defaultValue: number,
-|};
+interface UnControlledProps extends PropsForAll {
+  defaultValue: number;
+}
 
 type Props = ControlledProps | UnControlledProps;
 
-type State = {|
-  internalValue: number,
-|};
+type State = {
+  internalValue: number;
+};
 
 class FormRatio extends React.PureComponent<Props, State> {
   state = {
     internalValue: !this.props.onChange ? this.props.defaultValue : 0,
   };
 
-  handleOnChange = (e: SyntheticInputEvent<EventTarget>): mixed => {
+  handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): any => {
     if (this.props.onChange) {
       this.props.onChange(e);
     } else {
@@ -48,7 +44,7 @@ class FormRatio extends React.PureComponent<Props, State> {
     }
   };
 
-  render(): React.Node {
+  render() {
     const {
       className,
       step = 1,
@@ -101,6 +97,6 @@ class FormRatio extends React.PureComponent<Props, State> {
   }
 }
 
-FormRatio.displayName = "Form.Ratio";
+(FormRatio as any).displayName = "Form.Ratio";
 
 export default FormRatio;

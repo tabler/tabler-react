@@ -1,28 +1,17 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "../";
-import type {
-  FormEvents,
-  FocusEvents,
-  MouseEvents,
-  PointerEvents,
-} from "../../";
+import { Icon } from "..";
+import { FormEvents, FocusEvents, MouseEvents, PointerEvents } from "../../";
 
-type Props = {|
-  ...FormEvents,
-  ...FocusEvents,
-  ...MouseEvents,
-  ...PointerEvents,
-  +className?: string,
-  +label?: string,
-  +value?: string | number | boolean,
-  +name: string,
-  +checked?: boolean,
-  +icon?: string,
-  +type?: "radio" | "checkbox",
-|};
+interface Props extends FormEvents, FocusEvents, MouseEvents, PointerEvents {
+  className?: string;
+  label?: string;
+  value?: string | number;
+  name: string;
+  checked?: boolean;
+  icon?: string;
+  type?: "radio" | "checkbox";
+}
 
 function FormSelectGroupItem({
   className,
@@ -40,7 +29,7 @@ function FormSelectGroupItem({
   onMouseLeave,
   onPointerEnter,
   onPointerLeave,
-}: Props): React.Node {
+}: Props) {
   const classes = cn({ "selectgroup-item": true }, className);
   const btnClasses = cn("selectgroup-button", {
     "selectgroup-button-icon": icon,

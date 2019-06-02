@@ -1,23 +1,12 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import type {
-  MouseEvents,
-  FocusEvents,
-  FormEvents,
-  PointerEvents,
-} from "../../";
+import { MouseEvents, FocusEvents, FormEvents, PointerEvents } from "../../";
 
-type Props = {|
-  ...MouseEvents,
-  ...FocusEvents,
-  ...FormEvents,
-  ...PointerEvents,
-  +children?: React.Node,
-  +className?: string,
-|};
+interface Props extends MouseEvents, FocusEvents, FormEvents, PointerEvents {
+  children?: React.ReactNode;
+  className?: string;
+}
 
 function FormStaticText({
   className,
@@ -30,7 +19,7 @@ function FormStaticText({
   onMouseLeave,
   onPointerEnter,
   onPointerLeave,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("form-control-plaintext", className);
   return (
     <div

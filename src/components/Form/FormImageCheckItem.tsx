@@ -1,23 +1,18 @@
-// @flow
-
 import * as React from "react";
 import Grid from "../Grid";
-import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { MouseEvents, PointerEvents, FocusEvents } from "../../";
 
-type Props = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  ...FocusEvents,
-  +className?: string,
-  +value: string | number,
-  +imageURL: string,
-  +col?: {|
-    +width?: number,
-    +sm?: number,
-    +md?: number,
-    +lg?: number,
-  |},
-|};
+interface Props extends MouseEvents, PointerEvents, FocusEvents {
+  className?: string;
+  value: string | number;
+  imageURL: string;
+  col?: {
+    width?: number;
+    sm?: number;
+    md?: number;
+    lg?: number;
+  };
+}
 
 function FormImageCheckItem({
   className,
@@ -31,7 +26,7 @@ function FormImageCheckItem({
   onPointerLeave,
   onFocus,
   onBlur,
-}: Props): React.Node {
+}: Props) {
   return (
     <Grid.Col width={width} sm={sm} md={md} lg={lg}>
       <label className="imagecheck mb-4">

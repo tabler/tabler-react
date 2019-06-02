@@ -1,33 +1,22 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import Form from "./";
+import Form from ".";
 
-import type {
-  MouseEvents,
-  PointerEvents,
-  FormEvents,
-  FocusEvents,
-} from "../../";
+import { MouseEvents, PointerEvents, FormEvents, FocusEvents } from "../../";
 
-type Props = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  ...FormEvents,
-  ...FocusEvents,
-  +className?: string,
+interface Props extends MouseEvents, PointerEvents, FormEvents, FocusEvents {
+  className?: string;
   /**
    * Wrap the checkbox with a label
    */
-  +label?: string,
-  +value?: string | number | boolean,
-  +name?: string,
-  +checked?: boolean,
-  +disabled?: boolean,
-  +readOnly?: boolean,
-  +isInline?: boolean,
-|};
+  label?: string;
+  value?: string | number;
+  name?: string;
+  checked?: boolean;
+  disabled?: boolean;
+  readOnly?: boolean;
+  isInline?: boolean;
+}
 
 function FormRadio({
   className,
@@ -46,7 +35,7 @@ function FormRadio({
   onFocus,
   onClick,
   isInline,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     "custom-control custom-radio",
     { "custom-control-inline": isInline },

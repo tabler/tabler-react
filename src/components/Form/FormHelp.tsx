@@ -1,23 +1,17 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +position?: "top" | "bottom",
-  +message?: React.Node,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  position?: "top" | "bottom";
+  message?: React.ReactNode;
+}
 
-function FormHelp({
-  className,
-  children,
-  position = "top",
-  message,
-}: Props): React.Node {
+function FormHelp({ className, children, position = "top", message }: Props) {
   const classes = cn("form-help", className);
   return (
+    // @ts-ignore
     <span
       className={classes}
       dataContent={message}

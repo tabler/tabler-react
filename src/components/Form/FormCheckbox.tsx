@@ -1,26 +1,22 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import Form from "./";
+import Form from ".";
 
-import type { FormEvents, FocusEvents } from "../../";
+import { FormEvents, FocusEvents } from "../../";
 
-export type Props = {|
-  ...FormEvents,
-  ...FocusEvents,
-  +className?: string,
+export interface Props extends FormEvents, FocusEvents {
+  className?: string;
   /**
    * Wrap the checkbox with a label
    */
-  +label?: string,
-  +value?: string | number | boolean,
-  +name?: string,
-  +checked?: boolean,
-  +disabled?: boolean,
-  +readOnly?: boolean,
-  +isInline?: boolean,
-|};
+  label?: string;
+  value?: string | number | boolean;
+  name?: string;
+  checked?: boolean;
+  disabled?: boolean;
+  readOnly?: boolean;
+  isInline?: boolean;
+}
 
 function FormCheckbox({
   className,
@@ -34,7 +30,7 @@ function FormCheckbox({
   onFocus,
   onBlur,
   isInline,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     "custom-control custom-checkbox",
     { "custom-control-inline": isInline },

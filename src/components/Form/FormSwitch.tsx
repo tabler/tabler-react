@@ -1,27 +1,16 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import type {
-  FocusEvents,
-  FormEvents,
-  MouseEvents,
-  PointerEvents,
-} from "../../";
+import { FocusEvents, FormEvents, MouseEvents, PointerEvents } from "../../";
 
-type Props = {|
-  ...FocusEvents,
-  ...FormEvents,
-  ...MouseEvents,
-  ...PointerEvents,
-  +className?: string,
-  +name?: string,
-  +label?: string | number,
-  +value?: string | number,
-  +checked?: boolean,
-  +type?: "checkbox" | "radio",
-|};
+interface Props extends FocusEvents, FormEvents, MouseEvents, PointerEvents {
+  className?: string;
+  name?: string;
+  label?: string | number;
+  value?: string | number;
+  checked?: boolean;
+  type?: "checkbox" | "radio";
+}
 
 function FormToggle({
   className,
@@ -38,7 +27,7 @@ function FormToggle({
   onMouseLeave,
   onPointerEnter,
   onPointerLeave,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("custom-switch", className);
   return (
     <label className={classes}>

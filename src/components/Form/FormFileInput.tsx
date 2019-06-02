@@ -1,44 +1,35 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import type {
-  FormEvents,
-  FocusEvents,
-  MouseEvents,
-  PointerEvents,
-} from "../../";
+import { FormEvents, FocusEvents, MouseEvents, PointerEvents } from "../../";
 
-type Props = {|
-  ...FormEvents,
-  ...FocusEvents,
-  ...MouseEvents,
-  ...PointerEvents,
-  +className?: string,
-  +value?: string | number | boolean,
-  +name?: string,
-  +label?: string,
-  +disabled?: boolean,
-  +readOnly?: boolean,
-  +accept?: string,
-|};
+interface Props extends FormEvents, FocusEvents, MouseEvents, PointerEvents {
+  className?: string;
+  value?: string | number;
+  name?: string;
+  label?: string;
+  disabled?: boolean;
+  readOnly?: boolean;
+  accept?: string;
+}
 
-type State = {| fileName: string |};
+type State = { fileName: string };
 
 class FormFileInput extends React.Component<Props, State> {
   state = {
     fileName: "",
   };
 
-  _handleOnChange = (event: SyntheticInputEvent<HTMLInputElement>): void => {
-    this.setState({ fileName: event.target.files[0].name });
+  _handleOnChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    if (event.target.files) {
+      this.setState({ fileName: event.target.files[0].name });
+    }
     if (this.props.onChange) {
       this.props.onChange(event);
     }
   };
 
-  render(): React.Node {
+  render() {
     const {
       className,
       value,
@@ -92,6 +83,6 @@ class FormFileInput extends React.Component<Props, State> {
   }
 }
 
-FormFileInput.displayName = "Form.FileInput";
+(FormFileInput as any).displayName = "Form.FileInput";
 
 export default FormFileInput;

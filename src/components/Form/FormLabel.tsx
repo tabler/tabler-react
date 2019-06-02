@@ -1,17 +1,13 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import type { MouseEvents, PointerEvents } from "../../";
+import { MouseEvents, PointerEvents } from "../../";
 
-type Props = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  +children?: React.Node,
-  +className?: string,
-  +aside?: string,
-|};
+interface Props extends MouseEvents, PointerEvents {
+  children?: React.ReactNode;
+  className?: string;
+  aside?: string;
+}
 
 function FormLabel({
   className,
@@ -22,7 +18,7 @@ function FormLabel({
   onMouseLeave,
   onPointerEnter,
   onPointerLeave,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("form-label", className);
   return (
     <label

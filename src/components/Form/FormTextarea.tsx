@@ -1,39 +1,28 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import FormGroup from "./FormGroup.react";
+import FormGroup from "./FormGroup";
 
-import type {
-  FocusEvents,
-  FormEvents,
-  MouseEvents,
-  PointerEvents,
-} from "../../";
+import { FocusEvents, FormEvents, MouseEvents, PointerEvents } from "../../";
 
-type Props = {|
-  ...FocusEvents,
-  ...FormEvents,
-  ...MouseEvents,
-  ...PointerEvents,
-  +className?: string,
-  +valid?: boolean,
-  +tick?: boolean,
-  +invalid?: boolean,
-  +cross?: boolean,
-  +feedback?: string,
-  +error?: string,
-  +placeholder?: string,
-  +name?: string,
-  +value?: string | number,
-  +defaultValue?: string | number,
-  +disabled?: boolean,
-  +rows?: number,
-  +children?: string,
-  +label?: string,
-|};
+interface Props extends FocusEvents, FormEvents, MouseEvents, PointerEvents {
+  className?: string;
+  valid?: boolean;
+  tick?: boolean;
+  invalid?: boolean;
+  cross?: boolean;
+  feedback?: string;
+  error?: string;
+  placeholder?: string;
+  name?: string;
+  value?: string | number;
+  defaultValue?: string;
+  disabled?: boolean;
+  rows?: number;
+  children?: string;
+  label?: string;
+}
 
-function FormTextarea(props: Props): React.Node {
+function FormTextarea(props: Props) {
   const {
     className,
     name,

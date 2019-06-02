@@ -1,18 +1,13 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 import Grid from "../Grid";
 
-import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { MouseEvents, PointerEvents, FocusEvents } from "../../";
 
-type Props = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  ...FocusEvents,
-  +className?: string,
-  +color: string,
-|};
+interface Props extends MouseEvents, PointerEvents, FocusEvents {
+  className?: string;
+  color: string;
+}
 
 function FormColorCheckItem({
   className,
@@ -24,7 +19,7 @@ function FormColorCheckItem({
   onPointerLeave,
   onFocus,
   onBlur,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(className);
   return (
     <Grid.Col auto className={classes}>

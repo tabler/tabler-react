@@ -1,22 +1,20 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import Form from "./Form.react";
-import FormInputGroupAppend from "./FormInputGroupAppend.react";
-import FormInputGroupPrepend from "./FormInputGroupPrepend.react";
-import type { Props as InputProps } from "./FormInput.react";
+import Form from "./Form";
+import FormInputGroupAppend from "./FormInputGroupAppend";
+import FormInputGroupPrepend from "./FormInputGroupPrepend";
+import { Props as InputProps } from "./FormInput";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +append?: React.Node,
-  +prepend?: React.Node,
-  +RootComponent?: React.ElementType,
-  +inputProps?: InputProps,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  append?: React.ReactNode;
+  prepend?: React.ReactNode;
+  RootComponent?: React.ElementType;
+  inputProps?: InputProps;
+};
 
-function FormInputGroup(props: Props): React.Node {
+function FormInputGroup(props: Props) {
   const { className, append, prepend, RootComponent, inputProps } = props;
   const classes = cn(
     {

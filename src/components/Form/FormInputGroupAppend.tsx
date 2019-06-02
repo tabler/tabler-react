@@ -1,14 +1,12 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-function FormInputGroupAppend({ className, children }: Props): React.Node {
+function FormInputGroupAppend({ className, children }: Props) {
   const classes = cn("input-group-append", className);
   return <span className={classes}>{children}</span>;
 }

@@ -1,31 +1,25 @@
-// @flow
-
 import * as React from "react";
-import FormSelect from "./FormSelect.react";
-import FormInputGroup from "./FormInputGroup.react";
+import FormSelect from "./FormSelect";
+import FormInputGroup from "./FormInputGroup";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +defaultDate: Date,
-  +minYear: number,
-  +maxYear: number,
-  +format: string,
-  +monthLabels: Array<string>,
-  +onChange?: Date => void,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  defaultDate: Date;
+  minYear: number;
+  maxYear: number;
+  format: string;
+  monthLabels: Array<string>;
+  onChange?: (date: Date) => void;
+}
 
-type State = {|
-  currentDate: Date,
-|};
-
-type DateComponents = {
-  yyyy: React.Node,
-  dd: React.Node,
-  mm: React.Node,
-};
+interface State {
+  currentDate: Date;
+}
 
 type ChangeTypes = "mm" | "yyyy" | "dd";
+
+type DateComponents = { [Key in ChangeTypes]: React.ReactNode };
 
 class FormDatePicker extends React.PureComponent<Props, State> {
   static defaultProps = {
@@ -83,11 +77,11 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     Array.from({ length: end + 1 - start }, (v, k) => k + start);
 
   // Renders the months select
-  _renderMonths = (): React.Node => {
+  _renderMonths = () => {
     const { currentDate } = this.state;
     const { monthLabels } = this.props;
 
-    const onChangeMonths = (e: SyntheticInputEvent<EventTarget>): void =>
+    const onChangeMonths = (e: React.ChangeEvent<HTMLInputElement>): void =>
       this._handleOnChange("mm", Number(e.target.value));
 
     return (
@@ -102,7 +96,7 @@ class FormDatePicker extends React.PureComponent<Props, State> {
   };
 
   // Renders the days select
-  _renderDays = (): React.Node => {
+  _renderDays = () => {
     const { currentDate } = this.state;
     const currentMonthDays = new Date(
       currentDate.getUTCFullYear(),
@@ -112,7 +106,7 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     const daysRange = this._range(1, currentMonthDays);
     const currentDay = currentDate.getUTCDate();
 
-    const onChangeDays = (e: SyntheticInputEvent<EventTarget>) =>
+    const onChangeDays = (e: React.ChangeEvent<HTMLInputElement>) =>
       this._handleOnChange("dd", Number(e.target.value));
 
     return (
@@ -127,13 +121,13 @@ class FormDatePicker extends React.PureComponent<Props, State> {
   };
 
   // renderes the years select
-  _renderYears = (): React.Node => {
+  _renderYears = () => {
     const { minYear, maxYear } = this.props;
     const { currentDate } = this.state;
     const yearsRange = this._range(minYear, maxYear).reverse();
     const currentYear = currentDate.getUTCFullYear();
 
-    const onChangeYears = (e: SyntheticInputEvent<EventTarget>) =>
+    const onChangeYears = (e: React.ChangeEvent<HTMLInputElement>) =>
       this._handleOnChange("yyyy", Number(e.target.value));
 
     return (
@@ -147,7 +141,7 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     );
   };
 
-  render(): React.Node {
+  render() {
     const { format, className } = this.props;
     const formatSplit = format.split("/");
     const dateComponents: DateComponents = {
@@ -159,13 +153,16 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     return (
       <div className={className}>
         <FormInputGroup>
-          {formatSplit.map((type: string): React.Node => dateComponents[type])}
+          {formatSplit.map(
+            (type: string): React.ReactNode =>
+              dateComponents[type as ChangeTypes]
+          )}
         </FormInputGroup>
       </div>
     );
   }
 }
 
-FormDatePicker.displayName = "Form.DatePicker";
+(FormDatePicker as any).displayName = "Form.DatePicker";
 
 export default FormDatePicker;

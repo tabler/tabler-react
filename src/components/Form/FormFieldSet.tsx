@@ -1,14 +1,12 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-function FormFieldSet({ className, children }: Props): React.Node {
+function FormFieldSet({ className, children }: Props) {
   const classes = cn("form-fieldset", className);
   return <fieldset className={classes}>{children}</fieldset>;
 }

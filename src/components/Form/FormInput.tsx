@@ -1,11 +1,9 @@
-// @flow
-
 import * as React from "react";
-import { Icon } from "../";
+import { Icon } from "..";
 import cn from "classnames";
-import FormGroup from "./FormGroup.react";
+import FormGroup from "./FormGroup";
 
-import type {
+import {
   FormEvents,
   MouseEvents,
   PointerEvents,
@@ -14,53 +12,53 @@ import type {
   ClipboardEvents,
 } from "../../";
 
-type FormStyle = {|
-  +className?: string,
-  +icon?: string,
-  +position?: "append" | "prepend",
-  +valid?: boolean,
-  +tick?: boolean,
-  +invalid?: boolean,
-  +cross?: boolean,
-  +feedback?: string,
-  +error?: string,
-  +type?: string,
-  +placeholder?: string,
-  +name?: string,
-  +value?: string | number,
-  +min?: string | number,
-  +max?: string | number,
-  +minLength?: string | number,
-  +maxLength?: string | number,
-  +disabled?: boolean,
-  +readOnly?: boolean,
-  +autoFocus?: boolean,
-  +required?: boolean,
-  +checked?: boolean,
-|};
+interface FormStyle {
+  className?: string;
+  icon?: string;
+  position?: "append" | "prepend";
+  valid?: boolean;
+  tick?: boolean;
+  invalid?: boolean;
+  cross?: boolean;
+  feedback?: string;
+  error?: string;
+  type?: string;
+  placeholder?: string;
+  name?: string;
+  value?: string | number;
+  min?: string | number;
+  max?: string | number;
+  minLength?: number;
+  maxLength?: number;
+  disabled?: boolean;
+  readOnly?: boolean;
+  autoFocus?: boolean;
+  required?: boolean;
+  checked?: boolean;
+}
 
-export type Props = {|
-  ...FormStyle,
-  ...FormEvents,
-  ...MouseEvents,
-  ...PointerEvents,
-  ...FocusEvents,
-  ...KeyboardEvents,
-  ...ClipboardEvents,
-  +placeholder?: string,
-  +type?: "checkbox" | "radio" | "text" | "email" | "password",
-  +value?: string | number | boolean,
+export interface Props
+  extends FormStyle,
+    FormEvents,
+    MouseEvents,
+    PointerEvents,
+    FocusEvents,
+    KeyboardEvents,
+    ClipboardEvents {
+  placeholder?: string;
+  type?: "checkbox" | "radio" | "text" | "email" | "password";
+  value?: string | number;
   /**
    * Wraps the input in Form.Group and adds a label
    */
-  +label?: string,
-  +autoComplete?: "on" | "off",
-|};
+  label?: string;
+  autoComplete?: "on" | "off";
+}
 
 /**
  * A an input field
  */
-function FormInput(props: Props): React.Node {
+function FormInput(props: Props) {
   const {
     className,
     name,

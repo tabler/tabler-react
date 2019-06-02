@@ -1,24 +1,13 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import type {
-  FormEvents,
-  FocusEvents,
-  MouseEvents,
-  PointerEvents,
-} from "../../";
+import { FormEvents, FocusEvents, MouseEvents, PointerEvents } from "../../";
 
-type Props = {|
-  ...FormEvents,
-  ...FocusEvents,
-  ...MouseEvents,
-  ...PointerEvents,
-  +children: Array<React.Element<any>>,
-  +className?: string,
-  +pills?: boolean,
-  +canSelectMultiple?: boolean,
-|};
+interface Props extends FormEvents, FocusEvents, MouseEvents, PointerEvents {
+  children: React.ReactElement[];
+  className?: string;
+  pills?: boolean;
+  canSelectMultiple?: boolean;
+}
 
 function FormSelectGroup({
   className,
@@ -33,7 +22,7 @@ function FormSelectGroup({
   onMouseLeave,
   onPointerEnter,
   onPointerLeave,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     { selectgroup: true, "w-100": true, "selectgroup-pills": pills },
     className

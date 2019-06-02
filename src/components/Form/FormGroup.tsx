@@ -1,18 +1,16 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import FormLabel from "./FormLabel.react";
-import FormInput from "./FormInput.react";
-import type { Props as InputProps } from "./FormInput.react";
+import FormLabel from "./FormLabel";
+import FormInput from "./FormInput";
+import { Props as InputProps } from "./FormInput";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +label?: React.Node,
-  +isRequired?: boolean,
-  +inputProps?: InputProps,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  label?: React.ReactNode;
+  isRequired?: boolean;
+  inputProps?: InputProps;
+}
 
 function FormGroup({
   className,
@@ -20,7 +18,7 @@ function FormGroup({
   label,
   isRequired,
   inputProps,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("form-group", className);
   const inputComponent =
     inputProps && React.createElement(FormInput, inputProps);
