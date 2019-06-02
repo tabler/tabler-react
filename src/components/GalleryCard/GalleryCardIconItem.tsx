@@ -1,18 +1,17 @@
-// @flow
 import * as React from "react";
 import cn from "classnames";
 
 import Icon from "../Icon";
 
-type Props = {|
-  +className?: string,
-  +label?: string,
-  +name: string,
-  +href?: string,
-  +right?: boolean,
-  +to?: string,
-  +RootComponent?: React.ElementType,
-|};
+interface Props {
+  className?: string;
+  label?: string;
+  name: string;
+  href?: string;
+  right?: boolean;
+  to?: string;
+  RootComponent?: React.ElementType;
+}
 
 function GalleryCardIconItem({
   className,
@@ -22,7 +21,7 @@ function GalleryCardIconItem({
   right,
   to,
   RootComponent,
-}: Props): React.Node {
+}: Props) {
   const positionRightClasses = "d-none d-md-inline-block ml-3";
   const componentClasses = !right
     ? cn("icon", className)
@@ -37,7 +36,7 @@ function GalleryCardIconItem({
     </React.Fragment>
   );
 
-  const extraProps = {};
+  const extraProps = { href: undefined };
 
   if (href) {
     extraProps.href = href;

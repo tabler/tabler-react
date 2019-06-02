@@ -1,17 +1,16 @@
-// @flow
 // GalleryCardDetails Component
 import * as React from "react";
 import cn from "classnames";
 
 import Avatar from "../Avatar";
 
-type Props = {|
-  +className?: string,
-  +children?: React.Node,
-  +avatarURL?: string,
-  +fullName?: string,
-  +dateString?: string,
-|};
+interface Props {
+  className?: string;
+  children?: React.ReactNode;
+  avatarURL?: string;
+  fullName?: string;
+  dateString?: string;
+}
 
 function GalleryCardDetails({
   className,
@@ -19,7 +18,7 @@ function GalleryCardDetails({
   avatarURL,
   fullName,
   dateString,
-}: Props): React.Node {
+}: Props) {
   //classes
 
   const avatarClasses = cn("mr-3");

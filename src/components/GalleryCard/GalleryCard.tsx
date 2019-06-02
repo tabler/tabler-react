@@ -1,18 +1,17 @@
-// @flow
 import * as React from "react";
 import cn from "classnames";
 import Card from "../Card";
 
-import GalleryCardDetails from "./GalleryCardDetails.react";
-import GalleryCardFooter from "./GalleryCardFooter.react";
-import GalleryCardIconGroup from "./GalleryCardIconGroup.react";
-import GalleryCardIconItem from "./GalleryCardIconItem.react";
-import GalleryCardImage from "./GalleryCardImage.react";
+import GalleryCardDetails from "./GalleryCardDetails";
+import GalleryCardFooter from "./GalleryCardFooter";
+import GalleryCardIconGroup from "./GalleryCardIconGroup";
+import GalleryCardIconItem from "./GalleryCardIconItem";
+import GalleryCardImage from "./GalleryCardImage";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
 
 function GalleryCard({ children, className }: Props) {
   const cardClassName = cn("p-3", className);

@@ -1,17 +1,15 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +src: string,
-  +alt?: string,
-  +href?: string,
-  +rounded?: boolean,
-  +className?: string,
-  +to?: string,
-  +RootComponent?: React.ElementType,
-|};
+interface Props {
+  src: string;
+  alt?: string;
+  href?: string;
+  rounded?: boolean;
+  className?: string;
+  to?: string;
+  RootComponent?: React.ElementType;
+}
 
 function GalleryCardImage({
   src,
@@ -21,7 +19,7 @@ function GalleryCardImage({
   className,
   to,
   RootComponent,
-}: Props): React.Node {
+}: Props) {
   const componentClasses = cn("mb-3");
 
   const imageClasses = cn(
@@ -31,7 +29,7 @@ function GalleryCardImage({
     className
   );
 
-  const componentOptionalProps = {};
+  const componentOptionalProps = { href: undefined };
 
   if (href) {
     componentOptionalProps.href = href;
