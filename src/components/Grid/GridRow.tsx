@@ -1,27 +1,25 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +cards?: boolean,
-  +deck?: boolean,
-  +gutters?: "xs" | "sm" | "md" | "lg",
-  +alignItems?: string,
-  +justifyContent?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  cards?: boolean;
+  deck?: boolean;
+  gutters?: "xs" | "sm" | "md" | "lg";
+  alignItems?: string;
+  justifyContent?: string;
+}
 
 function GridRow({
   className,
   children,
   cards,
   deck,
-  gutters = "",
+  gutters,
   alignItems = "",
   justifyContent = "",
-}: Props): React.Node {
+}: Props) {
   const classes: string = cn(
     `row`,
     {

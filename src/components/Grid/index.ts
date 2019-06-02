@@ -1,5 +1,5 @@
 // @flow
 
-import Grid from "./Grid.react";
+import Grid from "./Grid";
 
 export { Grid as default };

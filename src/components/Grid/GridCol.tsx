@@ -1,31 +1,29 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +width?: number,
-  +xs?: number,
-  +xsAuto?: boolean,
-  +sm?: number,
-  +smAuto?: boolean,
-  +md?: number,
-  +mdAuto?: boolean,
-  +lg?: number,
-  +lgAuto?: boolean,
-  +xl?: number,
-  +xlAuto?: boolean,
-  +auto?: boolean,
-  +offset?: number,
-  +offsetXs?: number,
-  +offsetSm?: number,
-  +offsetMd?: number,
-  +offsetLg?: number,
-  +offsetXl?: number,
-  +ignoreCol?: boolean,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  width?: number;
+  xs?: number;
+  xsAuto?: boolean;
+  sm?: number;
+  smAuto?: boolean;
+  md?: number;
+  mdAuto?: boolean;
+  lg?: number;
+  lgAuto?: boolean;
+  xl?: number;
+  xlAuto?: boolean;
+  auto?: boolean;
+  offset?: number;
+  offsetXs?: number;
+  offsetSm?: number;
+  offsetMd?: number;
+  offsetLg?: number;
+  offsetXl?: number;
+  ignoreCol?: boolean;
+}
 
 function GridCol({
   className,
@@ -49,7 +47,7 @@ function GridCol({
   offsetLg = 0,
   offsetXl = 0,
   ignoreCol = false,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     {
       col: !ignoreCol,
