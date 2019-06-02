@@ -1,15 +1,13 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +inline?: boolean,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  inline?: boolean;
+}
 
-function ListItem({ className, children, inline }: Props): React.Node {
+function ListItem({ className, children, inline }: Props) {
   const classes = cn({ "list-inline-item": inline }, className);
   return <li className={classes}>{children}</li>;
 }

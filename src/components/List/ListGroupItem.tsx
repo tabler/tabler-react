@@ -1,19 +1,17 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import { Icon } from "../../components";
+import { Icon } from "..";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +RootComponent?: React.ElementType,
-  +active?: boolean,
-  +action?: boolean,
-  +icon?: string,
-  +to?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  RootComponent?: React.ElementType;
+  active?: boolean;
+  action?: boolean;
+  icon?: string;
+  to?: string;
+}
 
 function ListGroupItem({
   className,
@@ -23,7 +21,7 @@ function ListGroupItem({
   action,
   icon,
   to,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     "list-group-item",
     {

@@ -1,27 +1,19 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import ListItem from "./ListItem.react";
-import ListGroup from "./ListGroup.react";
-import ListGroupItem from "./ListGroupItem.react";
+import ListItem from "./ListItem";
+import ListGroup from "./ListGroup";
+import ListGroupItem from "./ListGroupItem";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +unstyled?: boolean,
-  +seperated?: boolean,
-  +inline?: boolean,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  unstyled?: boolean;
+  seperated?: boolean;
+  inline?: boolean;
+}
 
-function List({
-  className,
-  children,
-  unstyled,
-  seperated,
-  inline,
-}: Props): React.Node {
+function List({ className, children, unstyled, seperated, inline }: Props) {
   const classes = cn(
     {
       list: !unstyled,
