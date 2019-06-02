@@ -1,56 +1,55 @@
-// @flow
 import * as React from "react";
 import cn from "classnames";
-import { Card, Media, Grid, Header } from "../";
+import { Card, Media, Grid, Header } from "..";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
   /**
    * The Card title
    */
-  +cardTitle?: string,
+  cardTitle?: string;
   /**
    * Render a map at the top of the Card
    */
-  +map?: React.Node,
+  map?: React.ReactNode;
   /**
    * Render a map placeholder at the top of the Card
    */
-  +mapPlaceholder?: string,
+  mapPlaceholder?: string;
   /**
    * Add rounded corners to the Media.Object rendered by objectURL
    */
-  +rounded?: boolean,
+  rounded?: boolean;
   /**
    * Display an Avatar in place of the Media.Object rendered by objectURL
    */
-  +avatar?: boolean,
+  avatar?: boolean;
   /**
    * The URL of a contact image to displayed alongside thier name
    */
-  +objectURL?: string,
+  objectURL?: string;
   /**
    * The alt value for the objectURL image
    */
-  +alt?: string,
+  alt?: string;
   /**
    * The contacts name
    */
-  +name?: string,
+  name?: string;
   /**
    * The contacts address
    */
-  +address?: {| +line1?: string, +line2?: string |},
+  address?: { line1?: string; line2?: string };
   /**
    * An array of contacts details displayed in a 2 column Grid
    */
-  +details?: Array<{| +title: string, +content?: React.Node |}>,
+  details?: Array<{ title: string; content?: React.ReactNode }>;
   /**
    * An additional block of text below the details
    */
-  +description?: string | {| +title: string, +content?: string |},
-|};
+  description?: string | { title: string; content?: string };
+}
 
 /**
  * Renders a Card designed for displaying details of a person or business
@@ -90,7 +89,7 @@ function ContactCard({
           <Media.Body>
             {name && <Header.H5>{name}</Header.H5>}
             {address && (
-              <address class="text-muted small">
+              <address className="text-muted small">
                 {address.line1}
                 {address.line2 && <br />}
                 {address.line2}
