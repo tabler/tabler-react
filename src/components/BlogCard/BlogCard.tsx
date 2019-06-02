@@ -1,27 +1,25 @@
-//@flow
-
 import * as React from "react";
-import Card from "../Card/Card.react";
+import Card from "../Card/Card";
 import Icon from "../Icon/Icon.react";
 
-type Props = {|
-  +children?: React.Node,
-  +title?: string,
-  +titleUrl?: string,
-  +avatarUrl?: string,
-  +description?: string,
-  +date?: string,
-  +imgUrl?: string,
-  +iconName?: string,
-  +iconHref?: string,
-  +authorName?: string,
-  +avatarImgSrc?: string,
-  +imgSrc?: string,
-  +imgAlt?: string,
-  +aside?: boolean,
-  +postHref?: string,
-  +profileHref?: string,
-|};
+interface Props {
+  children?: React.ReactChildren;
+  title?: string;
+  titleUrl?: string;
+  avatarUrl?: string;
+  description?: string;
+  date?: string;
+  imgUrl?: string;
+  iconName?: string;
+  iconHref?: string;
+  authorName?: string;
+  avatarImgSrc?: string;
+  imgSrc?: string;
+  imgAlt?: string;
+  aside?: boolean;
+  postHref?: string;
+  profileHref?: string;
+}
 
 function BlogCard({
   children,
@@ -39,7 +37,7 @@ function BlogCard({
   iconHref,
   postHref,
   profileHref,
-}: Props): React.Node {
+}: Props) {
   return !aside ? (
     <Card>
       <a href={postHref}>
