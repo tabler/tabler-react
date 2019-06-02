@@ -1,14 +1,12 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-function CodeExample({ className, children }: Props): React.Node {
+function CodeExample({ className, children }: Props) {
   const classes = cn(`example`, className);
   return <div className={classes}>{children}</div>;
 }
