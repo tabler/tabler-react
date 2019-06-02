@@ -1,40 +1,36 @@
-// @flow
-
 import * as React from "react";
-import { Icon } from "../";
+import { Icon } from "..";
 import cn from "classnames";
-import AvatarList from "./AvatarList.react";
+import AvatarList from "./AvatarList";
 
-import type { MouseEvents, PointerEvents } from "../../";
+import { MouseEvents, PointerEvents } from "../../";
 
-export type Props = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  +children?: React.Node,
-  +className?: string,
+export interface Props extends MouseEvents, PointerEvents {
+  children?: React.ReactNode;
+  className?: string;
   /**
    * The URL of the image to be displayed
    */
-  +imageURL?: string,
-  +style?: Object,
-  +size?: "sm" | "md" | "lg" | "xl" | "xxl",
+  imageURL?: string;
+  style?: Object;
+  size?: "sm" | "md" | "lg" | "xl" | "xxl";
   /**
    * Display a colored status dot with the avatar
    */
-  +status?: "grey" | "red" | "yellow" | "green",
+  status?: "grey" | "red" | "yellow" | "green";
   /**
    * Displays the user icon as a placeholder
    */
-  +placeholder?: boolean,
+  placeholder?: boolean;
   /**
    * Render an icon instead of an imageURL
    */
-  +icon?: string,
+  icon?: string;
   /**
    * The background and font color of the circle
    */
-  +color?: string,
-|};
+  color?: string;
+}
 
 /**
  * Renders a single circular avatar
@@ -44,7 +40,7 @@ function Avatar({
   children,
   imageURL,
   style,
-  size = "",
+  size,
   status,
   placeholder,
   icon,
@@ -54,7 +50,7 @@ function Avatar({
   onMouseLeave,
   onPointerEnter,
   onPointerLeave,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     {
       avatar: true,

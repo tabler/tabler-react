@@ -1,21 +1,19 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
   /**
    * Renders the Avatars to look stacked by slightly overlapping each over
    */
-  +stacked?: boolean,
-|};
+  stacked?: boolean;
+}
 
 /**
  * Renders a group of Icons
  */
-function AvatarList({ className, children, stacked }: Props): React.Node {
+function AvatarList({ className, children, stacked }: Props) {
   const classes = cn(
     {
       "avatar-list": true,
