@@ -1,6 +1,6 @@
 import * as React from "react";
 import Card from "../Card/Card";
-import Icon from "../Icon/Icon.react";
+import Icon from "../Icon/Icon";
 
 interface Props {
   children?: React.ReactChildren;

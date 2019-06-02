@@ -1,37 +1,32 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { MouseEvents, PointerEvents, FocusEvents } from "../../";
 
-type Props = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  ...FocusEvents,
-  +className?: string,
+interface Props extends MouseEvents, PointerEvents, FocusEvents {
+  className?: string;
   /**
    * Should this icon be rendered within an <a> tag
    */
-  +link?: boolean,
+  link?: boolean;
   /**
    * The icon prefix
    */
-  +prefix?: string,
+  prefix?: string;
   /**
    * The icon name
    */
-  +name: string,
-  +isAriaHidden?: boolean,
+  name: string;
+  isAriaHidden?: boolean;
   /**
    * Use the built-in payment icon set
    */
-  +payment?: boolean,
+  payment?: boolean;
   /**
    * Use the built-in flag icon set
    */
-  +flag?: boolean,
-|};
+  flag?: boolean;
+}
 
 /**
  * Display an icon.
@@ -52,7 +47,7 @@ function Icon({
   onPointerLeave,
   onFocus,
   onBlur,
-}: Props): React.Node {
+}: Props) {
   const prefix = (payment && "payment") || (flag && "flag") || prefixFromProps;
   const classes = cn(
     {
@@ -63,7 +58,7 @@ function Icon({
   );
   const extraProps = isAriaHidden
     ? {
-        "aria-hidden": "true",
+        "aria-hidden": true,
       }
     : null;
 
