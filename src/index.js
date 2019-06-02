@@ -1,22 +1,20 @@
-// @flow
-
 export * from "./components";
-export type { Animation as AnimationEvents } from "./flow";
-export type { Clipboard as ClipboardEvents } from "./flow";
-export type { Composition as CompositionEvents } from "./flow";
-export type { Focus as FocusEvents } from "./flow";
-export type { Form as FormEvents } from "./flow";
-export type { Image as ImageEvents } from "./flow";
-export type { Keyboard as KeyboardEvents } from "./flow";
-export type { Media as MediaEvents } from "./flow";
-export type { Mouse as MouseEvents } from "./flow";
-export type { Other as OtherEvents } from "./flow";
-export type { Pointer as PointerEvents } from "./flow";
-export type { Selection as SelectionEvents } from "./flow";
-export type { Touch as TouchEvents } from "./flow";
-export type { UserInterface as UIEvents } from "./flow";
-export type { Wheel as WheelEvents } from "./flow";
-export type { NotificationProps } from "./components";
+export { Animation as AnimationEvents } from "./flow";
+export { Clipboard as ClipboardEvents } from "./flow";
+export { Composition as CompositionEvents } from "./flow";
+export { Focus as FocusEvents } from "./flow";
+export { Form as FormEvents } from "./flow";
+export { Image as ImageEvents } from "./flow";
+export { Keyboard as KeyboardEvents } from "./flow";
+export { Media as MediaEvents } from "./flow";
+export { Mouse as MouseEvents } from "./flow";
+export { Other as OtherEvents } from "./flow";
+export { Pointer as PointerEvents } from "./flow";
+export { Selection as SelectionEvents } from "./flow";
+export { Touch as TouchEvents } from "./flow";
+export { UserInterface as UIEvents } from "./flow";
+export { Wheel as WheelEvents } from "./flow";
+export { NotificationProps } from "./components";
 
 export {
   default as RouterContextProvider,
