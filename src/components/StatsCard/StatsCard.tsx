@@ -1,33 +1,31 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import { Card, Text, Header, Icon } from "../";
+import { Card, Text, Header, Icon } from "..";
 
-type Props = {|
-  +className?: string,
+type Props = {
+  className?: string;
   /**
    * The % amount by which your total has increased
    */
-  +movement: number,
+  movement: number;
   /**
    * The main number displayed within the Card
    */
-  +total: string,
+  total: string;
   /**
    * The text label displayed within the Card
    */
-  +label: string,
+  label: string;
   /**
    * The layout to render
    */
-  +layout?: 1 | 2,
+  layout?: 1 | 2;
   /**
    * A Chart to be included at the bottom of layout 2
    */
-  +chart?: React.Node,
-|};
+  chart?: React.ReactNode;
+};
 
 /**
  * Used for dispaying an individual statistic/number with 2 potential layouts
@@ -39,7 +37,7 @@ function StatsCard({
   label,
   layout = 1,
   chart,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(className);
   const movementString = `${movement > 0 ? "+" : ""}${movement}%`;
   const movementColor = !movement ? "yellow" : movement > 0 ? "green" : "red";
