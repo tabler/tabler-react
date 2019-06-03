@@ -1,31 +1,29 @@
-// @flow
-
 import * as React from "react";
-import { Container, Grid, List } from "../../components";
+import { Container, Grid, List } from "..";
 
-export type Props = {|
+export type Props = {
   /**
    * An array of the 8 links displayed in the first footer bar
    */
-  +links?: Array<React.Node>,
+  links?: Array<React.ReactNode>;
   /**
    * The text block displayed next to the links
    */
-  +note?: string,
+  note?: string;
   /**
    * The content of the very bottom copyright notice space
    */
-  +copyright?: React.Node,
+  copyright?: React.ReactNode;
   /**
    * The content of the very bottom nav space
    */
-  +nav?: React.Node,
-|};
+  nav?: React.ReactNode;
+};
 
 /**
  * The footer of your website
  */
-const SiteFooter = ({ links, note, copyright, nav }: Props): React.Node => (
+const SiteFooter = ({ links, note, copyright, nav }: Props) => (
   <React.Fragment>
     {(links || note) && (
       <div className="footer">

@@ -1,39 +1,37 @@
-// @flow
-
 import * as React from "react";
-import { Container, Site, Notification, AccountDropdown } from "../";
-import type { Props as NotificationTrayProps } from "../Notification/NotificationTray.react";
-import type { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown.react";
+import { Container, Site, Notification, AccountDropdown } from "..";
+import { Props as NotificationTrayProps } from "../Notification/NotificationTray";
+import { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown";
 
-export type Props = {|
-  +children?: React.Node,
+export type Props = {
+  children?: React.ReactNode;
   /**
    * header alignment
    */
-  +align?: string,
+  align?: string;
   /**
    * href attribute for the logo
    */
-  +href?: string,
+  href?: string;
   /**
    * Logo image URL
    */
-  +imageURL?: string,
+  imageURL?: string;
   /**
    * The logo alt attribute
    */
-  +alt?: string,
+  alt?: string;
   /**
    * Include a notifications tray
    */
-  +notificationsTray?: NotificationTrayProps,
-  +accountDropdown?: AccountDropdownProps,
-  +navItems?: React.Node,
+  notificationsTray?: NotificationTrayProps;
+  accountDropdown?: AccountDropdownProps;
+  navItems?: React.ReactNode;
   /**
    * Handle toggling/collapsing of the mobile menu when the collapse icon is clicked
    */
-  +onMenuToggleClick?: () => void,
-|};
+  onMenuToggleClick?: () => void;
+};
 
 /**
  * The very top header bar of your website, containing the logo and some optional
@@ -49,7 +47,7 @@ const SiteHeader = ({
   accountDropdown: accountDropdownFromProps,
   navItems,
   onMenuToggleClick,
-}: Props): React.Node => {
+}: Props) => {
   const notificationsTray =
     notificationsTrayFromProps &&
     React.createElement(Notification.Tray, notificationsTrayFromProps);

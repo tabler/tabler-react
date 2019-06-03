@@ -2,46 +2,46 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Container, Grid, Nav } from "../../";
+import { Container, Grid, Nav } from "../..";
 
-type subNavItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +LinkComponent?: React.ElementType,
-  +useExact?: boolean,
-|};
+type subNavItem = {
+  value: string;
+  to?: string;
+  icon?: string;
+  LinkComponent?: React.ElementType;
+  useExact?: boolean;
+};
 
-type navItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +active?: boolean,
-  +LinkComponent?: React.ElementType,
-  +subItems?: Array<subNavItem>,
-  +useExact?: boolean,
-|};
+type navItem = {
+  value: string;
+  to?: string;
+  icon?: string;
+  active?: boolean;
+  LinkComponent?: React.ElementType;
+  subItems?: Array<subNavItem>;
+  useExact?: boolean;
+};
 
 type navItems = Array<navItem>;
 
-export type Props = {|
-  +children?: React.Node,
-  +items?: React.ChildrenArray<React.Element<typeof Nav.Item>>,
-  +itemsObjects?: navItems,
+export type Props = {
+  children?: React.ReactNode;
+  items?: React.ReactElement<typeof Nav.Item>[];
+  itemsObjects?: navItems;
   /**
    * Display a search form to the right of the nav items
    */
-  +withSearchForm?: boolean,
+  withSearchForm?: boolean;
   /**
    * Provide your own component to replace the search form
    */
-  +rightColumnComponent?: React.Node,
+  rightColumnComponent?: React.ReactNode;
   /**
    * Toggle the collapsed state of the nav
    */
-  +collapse?: boolean,
-  +routerContextComponentType?: React.ElementType,
-|};
+  collapse?: boolean;
+  routerContextComponentType?: React.ElementType;
+};
 
 const SiteNav = ({
   children,
@@ -51,7 +51,7 @@ const SiteNav = ({
   rightColumnComponent,
   collapse = true,
   routerContextComponentType,
-}: Props): React.Node => {
+}: Props) => {
   const classes = cn("header d-lg-flex p-0", { collapse });
   return (
     <div className={classes}>

@@ -1,20 +1,18 @@
-// @flow
-
 import * as React from "react";
-import SiteHeader from "./SiteHeader.react";
-import SiteFooter from "./SiteFooter.react";
-import SiteNav from "./SiteNav.react";
-import SiteLogo from "./SiteLogo.react";
-import SiteWrapper from "./SiteWrapper.react";
+import SiteHeader from "./SiteHeader";
+import SiteFooter from "./SiteFooter";
+import SiteNav from "./SiteNav";
+import SiteLogo from "./SiteLogo";
+import SiteWrapper from "./SiteWrapper";
 
-type Props = {|
-  +children: React.Node,
-|};
+type Props = {
+  children: React.ReactNode;
+};
 
 /**
  * Components for building the base of your website, such as a header, footer and nav bar
  */
-function Site(props: Props): React.Node {
+function Site(props: Props) {
   return props.children;
 }
 
