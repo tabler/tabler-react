@@ -1,38 +1,34 @@
-// @flow
-
 import * as React from "react";
 
-import { FormCard, FormTextInput, StandaloneFormPage } from "../../../";
+import { FormCard, FormTextInput, StandaloneFormPage } from "../../..";
 import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./ForgotPasswordPage.strings";
-import type { stringTypes } from "./ForgotPasswordPage.strings";
-import type { FormEvents, FocusEvents } from "../../../";
+import { stringTypes } from "./ForgotPasswordPage.strings";
+import { FormEvents, FocusEvents } from "../../../";
 
-type fieldTypes = {|
-  email?: string,
-|};
+type fieldTypes = {
+  email?: string;
+};
 
-type touchedTypes = {|
-  email?: boolean,
-|};
+type touchedTypes = {
+  email?: boolean;
+};
 
-type Props = {|
-  ...FormEvents,
-  ...FocusEvents,
-  +strings?: stringTypes,
-  +action?: string,
-  +method?: string,
-  +values?: fieldTypes,
-  +errors?: fieldTypes,
-  +touched?: touchedTypes,
-|};
+interface Props extends FormEvents, FocusEvents {
+  strings?: stringTypes;
+  action?: string;
+  method?: string;
+  values?: fieldTypes;
+  errors?: fieldTypes;
+  touched?: touchedTypes;
+}
 
 /**
  * A forgot password page
  * Can be easily wrapped with form libraries like formik and redux-form
  */
-function ForgotPasswordPage(props: Props): React.Node {
+function ForgotPasswordPage(props: Props) {
   const {
     action,
     method,
@@ -40,7 +36,7 @@ function ForgotPasswordPage(props: Props): React.Node {
     onChange,
     onBlur,
     values,
-    strings = {},
+    strings,
     errors,
   } = props;
 
@@ -72,8 +68,8 @@ function ForgotPasswordPage(props: Props): React.Node {
   );
 }
 
-const ForgotPasswordPageWithTouchedErrors: React.ComponentType<Props> = withTouchedErrors(
-  ["email"]
-)(ForgotPasswordPage);
+const ForgotPasswordPageWithTouchedErrors: React.ComponentType<
+  Props
+> = withTouchedErrors(["email"])(ForgotPasswordPage);
 
 export default ForgotPasswordPageWithTouchedErrors;
