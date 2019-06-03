@@ -1,19 +1,17 @@
-//@flow
-
 import * as React from "react";
-import Card from "../Card/Card.react";
+import Card from "../Card/Card";
 import Text from "../Text/Text.react";
-import Button from "../Button/Button.react";
-import Icon from "../Icon/Icon.react";
+import Button from "../Button/Button";
+import Icon from "../Icon/Icon";
 
-type Props = {|
-  +children?: React.Node,
-  +title?: string,
-  +price?: string,
-  +subtitle?: string,
-  +imgUrl?: string,
-  +imgAlt?: string,
-|};
+type Props = {
+  children?: React.ReactNode;
+  title?: string;
+  price?: string;
+  subtitle?: string;
+  imgUrl?: string;
+  imgAlt?: string;
+};
 
 function StoreCard({
   children,
@@ -22,7 +20,7 @@ function StoreCard({
   price,
   imgUrl,
   imgAlt,
-}: Props): React.Node {
+}: Props) {
   return (
     <Card>
       <Card.Body>
