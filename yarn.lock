@@ -532,13 +532,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/plugin-syntax-flow@^7.2.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-flow/-/plugin-syntax-flow-7.2.0.tgz#a765f061f803bc48f240c26f8747faf97c26bf7c"
-  integrity sha512-r6YMuZDWLtLlu0kqIim5o/3TNRAlWb073HwT3e2nKf9I8IIvOggPrnILYPsrrKilmn/mYEMCf/Z07w3yQJF6dg==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-
 "@babel/plugin-syntax-json-strings@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-json-strings/-/plugin-syntax-json-strings-7.0.0.tgz#0d259a68090e15b383ce3710e01d5b23f3770cbd"
@@ -759,14 +752,6 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-flow" "^7.0.0"
-
-"@babel/plugin-transform-flow-strip-types@^7.0.0":
-  version "7.4.4"
-  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-flow-strip-types/-/plugin-transform-flow-strip-types-7.4.4.tgz#d267a081f49a8705fc9146de0768c6b58dccd8f7"
-  integrity sha512-WyVedfeEIILYEaWGAUWzVNyqG4sfsNooMhXWsu/YzOvVGcsnPb5PguysjJqI3t3qiaYj0BR8T2f5njdjTGe44Q==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-syntax-flow" "^7.2.0"
 
 "@babel/plugin-transform-for-of@^7.0.0":
   version "7.0.0"
@@ -1194,14 +1179,6 @@
     invariant "^2.2.2"
     js-levenshtein "^1.1.3"
     semver "^5.5.0"
-
-"@babel/preset-flow@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@babel/preset-flow/-/preset-flow-7.0.0.tgz#afd764835d9535ec63d8c7d4caf1c06457263da2"
-  integrity sha512-bJOHrYOPqJZCkPVbG1Lot2r5OSsB+iUOaxiHdlOeB1yPWS6evswVHwvkDLZ54WTaTRIk89ds0iHmGZSnxlPejQ==
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-transform-flow-strip-types" "^7.0.0"
 
 "@babel/preset-react@7.0.0", "@babel/preset-react@^7.0.0":
   version "7.0.0"
@@ -4879,12 +4856,6 @@ eslint-module-utils@^2.2.0:
 eslint-plugin-flowtype@2.50.1:
   version "2.50.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.50.1.tgz#36d4c961ac8b9e9e1dc091d3fba0537dad34ae8a"
-  dependencies:
-    lodash "^4.17.10"
-
-eslint-plugin-flowtype@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-3.2.0.tgz#824364ed5940a404b91326fdb5a313a2a74760df"
   dependencies:
     lodash "^4.17.10"
 
