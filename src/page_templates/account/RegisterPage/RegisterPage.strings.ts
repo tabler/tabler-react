@@ -1,4 +1,3 @@
-//@flow
 const strings = {
   title: "Create New Account",
   buttonText: "Create Account",
@@ -13,4 +12,6 @@ const strings = {
 
 export default strings;
 
-export type stringTypes = { [$Keys<typeof strings>]: string };
+type strings = keyof typeof strings;
+
+export type stringTypes = { [key in strings]: string };

@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 
 import {
@@ -7,44 +5,42 @@ import {
   FormTextInput,
   FormCheckboxInput,
   StandaloneFormPage,
-} from "../../../";
+} from "../../..";
 import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./RegisterPage.strings";
-import type { stringTypes } from "./RegisterPage.strings";
+import { stringTypes } from "./RegisterPage.strings";
 
-import type { FormEvents, FocusEvents } from "../../../";
+import { FormEvents, FocusEvents } from "../../../";
 
-type fieldTypes = {|
-  name?: string,
-  email?: string,
-  password?: string,
-  terms?: string,
-|};
+type fieldTypes = {
+  name?: string;
+  email?: string;
+  password?: string;
+  terms?: string;
+};
 
-type touchedTypes = {|
-  name?: boolean,
-  email?: boolean,
-  password?: boolean,
-  terms?: boolean,
-|};
+type touchedTypes = {
+  name?: boolean;
+  email?: boolean;
+  password?: boolean;
+  terms?: boolean;
+};
 
-type Props = {|
-  ...FormEvents,
-  ...FocusEvents,
-  +strings?: stringTypes,
-  +action?: string,
-  +method?: string,
-  +values?: fieldTypes,
-  +errors?: fieldTypes,
-  +touched?: touchedTypes,
-|};
+interface Props extends FormEvents, FocusEvents {
+  strings?: stringTypes;
+  action?: string;
+  method?: string;
+  values?: fieldTypes;
+  errors?: fieldTypes;
+  touched?: touchedTypes;
+}
 
 /**
  * A register page
  * Can be easily wrapped with form libraries like formik and redux-form
  */
-function RegisterPage(props: Props): React.Node {
+function RegisterPage(props: Props) {
   const {
     action,
     method,
@@ -52,7 +48,7 @@ function RegisterPage(props: Props): React.Node {
     onChange,
     onBlur,
     values,
-    strings = {},
+    strings,
     errors,
   } = props;
 
@@ -111,8 +107,8 @@ function RegisterPage(props: Props): React.Node {
   );
 }
 
-const RegisterPageWithTouchedErrors: React.ComponentType<Props> = withTouchedErrors(
-  ["name", "email", "password", "terms"]
-)(RegisterPage);
+const RegisterPageWithTouchedErrors: React.ComponentType<
+  Props
+> = withTouchedErrors(["name", "email", "password", "terms"])(RegisterPage);
 
 export default RegisterPageWithTouchedErrors;
