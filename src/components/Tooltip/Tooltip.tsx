@@ -1,53 +1,47 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 import { Manager, Reference, Popper } from "react-popper";
-import type {
-  Placement,
-  PopperChildrenProps,
-  ReferenceChildrenProps,
-} from "react-popper";
+import { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
 import "./Tooltip.css";
 
-type Props = {|
+type Props = {
   /**
    * The reference element which the Tooltip will be based on.
    */
-  +children?: React.Element<any>,
+  children?: React.ReactElement<any>;
   /**
    * Any additional classNames for the Tooltip.
    */
-  +className?: string,
+  className?: string;
   /**
    * This is the text content of the Tooltip.
    */
-  +content: string,
+  content: string;
   /**
    * This is the placement of the Tooltip (top, bottom, left, right).
    */
-  +placement?: Placement,
-  +type?: "link",
-|};
+  placement?: any;
+  type?: "link";
+};
 
 type State = {
-  isShown: boolean,
+  isShown: boolean;
 };
 
 class Tooltip extends React.Component<Props, State> {
   state = { isShown: false };
 
-  _handleTriggerOnMouseEnter = (e: SyntheticMouseEvent<HTMLElement>) => {
+  _handleTriggerOnMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     this.setState({ isShown: true });
   };
 
-  _handleTriggerOnMouseLeave = (e: SyntheticMouseEvent<HTMLElement>) => {
+  _handleTriggerOnMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     this.setState({ isShown: false });
   };
 
-  render(): React.Node {
+  render() {
     const { className, children, placement, content } = this.props;
 
     const classes = cn(
