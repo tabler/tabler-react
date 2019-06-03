@@ -1,7 +1,7 @@
 import * as React from "react";
 import Card from "../Card/Card";
 import { TabbedContainer, TabbedHeader } from "../Tabs";
-import { Props as TabProps } from "../Tabs/Tab";
+import Tab, { Props as TabProps } from "../Tabs/Tab";
 
 type Props = {
   initialTab: string;

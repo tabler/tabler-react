@@ -1,17 +1,15 @@
-// @flow
-
 import * as React from "react";
 
-import Tab from "./Tab";
+import { Props as TabProps } from "./Tab";
 
-type Props = {|
-  +children: React.ChildrenArray<React.Element<typeof Tab>>,
-  +selectedTitle: string,
-|};
+interface Props {
+  children: React.ReactElement<TabProps>[] | React.ReactElement<TabProps>;
+  selectedTitle: string;
+}
 
-function TabbedContainer(props: Props): React.Node {
+function TabbedContainer(props: Props) {
   const tabs = React.Children.toArray(props.children);
-  return tabs.filter(tab => tab.props.title === props.selectedTitle);
+  return <>{tabs.filter(tab => tab.props.title === props.selectedTitle)}</>;
 }
 
 /** @component */

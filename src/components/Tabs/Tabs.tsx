@@ -8,7 +8,7 @@ import "./Tabs.css";
 
 interface Props {
   initialTab: string;
-  children: React.ReactElement<TabProps>[];
+  children: React.ReactElement<TabProps>[] | React.ReactElement<TabProps>;
 }
 
 interface State {

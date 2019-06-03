@@ -1,9 +1,9 @@
 import * as React from "react";
-import Tab, { Props as TabProps } from "./Tab";
+import { Props as TabProps } from "./Tab";
 import Nav from "../Nav/Nav";
 
 interface Props {
-  children: React.ReactElement<TabProps>[];
+  children: React.ReactElement<TabProps>[] | React.ReactElement<TabProps>;
   selectedTitle: string;
   stateCallback: (selectedTitle: string) => void;
 }
