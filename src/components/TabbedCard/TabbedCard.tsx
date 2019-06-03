@@ -1,24 +1,23 @@
-// @flow
-
 import * as React from "react";
-import Card from "../Card/Card.react";
-import { TabbedContainer, TabbedHeader, Tab } from "../Tabs";
+import Card from "../Card/Card";
+import { TabbedContainer, TabbedHeader } from "../Tabs";
+import { Props as TabProps } from "../Tabs/Tab";
 
-type Props = {|
-  +initialTab: string,
-  +children: React.ChildrenArray<React.Element<typeof Tab>>,
-|};
+type Props = {
+  initialTab: string;
+  children: React.ReactElement<TabProps>[];
+};
 
-type State = {|
-  selectedTitle: string,
-|};
+type State = {
+  selectedTitle: string;
+};
 
 class TabbedCard extends React.PureComponent<Props, State> {
   state = {
     selectedTitle: this.props.initialTab,
   };
 
-  render(): React.Node {
+  render() {
     const { children } = this.props;
     const { selectedTitle } = this.state;
     return (
