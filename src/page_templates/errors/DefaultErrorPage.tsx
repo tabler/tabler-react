@@ -1,24 +1,20 @@
-// @flow
-
 import * as React from "react";
 
-import Container from "../../components/Container.react";
-import Page from "../../components/Page/Page.react";
-import Header from "../../components/Header/Header.react";
-import Icon from "../../components/Icon/Icon.react";
-import Button from "../../components/Button/Button.react";
+import Container from "../../components/Container";
+import Page from "../../components/Page/Page";
+import Header from "../../components/Header/Header";
+import Icon from "../../components/Icon/Icon";
+import Button from "../../components/Button/Button";
 
-export type Props = {|
-  +title?: string,
-  +subtitle?: string,
-  +details?: string,
-  +action?: string,
-|};
+export type Props = {
+  title?: string;
+  subtitle?: string;
+  details?: string;
+  action?: string;
+};
 
-function DefaultErrorPage(props: Props): React.Node {
-  const _onBackClick = (
-    event: SyntheticMouseEvent<HTMLInputElement>
-  ): boolean => {
+function DefaultErrorPage(props: Props) {
+  const _onBackClick = (event: React.MouseEvent<HTMLInputElement>): boolean => {
     window.history.back();
     event.preventDefault();
     return true;

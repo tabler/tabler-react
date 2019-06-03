@@ -1,16 +1,14 @@
-// @flow
-
 import * as React from "react";
 
-import DefaultErrorPage from "./DefaultErrorPage.react";
-import type { Props as DefaultErrorProps } from "./DefaultErrorPage.react";
+import DefaultErrorPage from "./DefaultErrorPage";
+import { Props as DefaultErrorProps } from "./DefaultErrorPage";
 
 function Error404Page({
   title = "404",
   subtitle = "Oops... You just found an error page...",
   details = "We are sorry but the page you have requested can not be found...",
   action,
-}: DefaultErrorProps): React.Node {
+}: DefaultErrorProps) {
   return (
     <DefaultErrorPage
       title={title}
