@@ -1,6 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
-import FormWithSingleInputAndButton from "../../forms/FormWithSingleInputAndButton.react";
+import FormWithSingleInputAndButton from "../../forms/FormWithSingleInputAndButton";
 import Card from "../Card";
 import Comment from "../Comment";
 

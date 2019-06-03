@@ -1,17 +1,14 @@
-// @flow
-
 import * as React from "react";
 
 import Form from "../components/Form";
 
-import type { Props as FormInputProps } from "../components/Form/FormInput.react";
+import { Props as FormInputProps } from "../components/Form/FormInput";
 
-type Props = {|
-  ...FormInputProps,
-  +label?: string,
-|};
+interface Props extends FormInputProps {
+  label?: string;
+}
 
-function FormTextInput(props: Props): React.Node {
+function FormTextInput(props: Props) {
   const { label, ...propsForInput } = props;
 
   const formInputComponent = React.createElement(Form.Input, propsForInput);
