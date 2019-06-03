@@ -1,50 +1,45 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import TagList from "./TagList.react";
-import TagAddOn from "./TagAddOn.react";
+import TagList from "./TagList";
+import TagAddOn from "./TagAddOn";
 
-import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { MouseEvents, PointerEvents, FocusEvents } from "../../";
 
-type PropsForAll = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  ...FocusEvents,
-  +children?: React.Node,
-  +className?: string,
-  +rounded?: boolean,
-  +color?: string,
-  +avatar?: string,
-  +remove?: boolean,
-  +onRemoveClick?: Function,
-  +addOn?: React.Node,
-  +addOnIcon?: string,
-  +addOnColor?: string,
-  +onAddOnClick?: Function,
-|};
+interface PropsForAll extends MouseEvents, PointerEvents, FocusEvents {
+  children?: React.ReactNode;
+  className?: string;
+  rounded?: boolean;
+  color?: string;
+  avatar?: string;
+  remove?: boolean;
+  onRemoveClick?: React.MouseEventHandler;
+  addOn?: React.ReactNode;
+  addOnIcon?: string;
+  addOnColor?: string;
+  onAddOnClick?: React.MouseEventHandler;
+  link?: true;
+  href?: string;
+  RootComponent?: React.ElementType;
+  to?: string;
+}
 
-type DefaultProps = {|
-  ...PropsForAll,
-|};
+interface DefaultProps extends PropsForAll {}
 
-type LinkComponentProps = {|
-  ...PropsForAll,
-  +link: true,
-  +href: string,
-|};
+interface LinkComponentProps extends PropsForAll {
+  link: true;
+  href: string;
+}
 
-type ReactRouterProps = {|
-  ...PropsForAll,
-  +RootComponent: React.ElementType,
-  +to: string,
-|};
+interface ReactRouterProps extends PropsForAll {
+  RootComponent: React.ElementType;
+  to: string;
+}
 
 type Props = DefaultProps | LinkComponentProps | ReactRouterProps;
 
-type State = {|
-  isDeleted: boolean,
-|};
+type State = {
+  isDeleted: boolean;
+};
 
 class Tag extends React.Component<Props, State> {
   state = {
@@ -60,7 +55,7 @@ class Tag extends React.Component<Props, State> {
     }));
   };
 
-  render(): React.Node {
+  render() {
     const {
       children,
       className,
@@ -110,7 +105,7 @@ class Tag extends React.Component<Props, State> {
       <React.Fragment>
         {avatar && (
           <span
-            class="tag-avatar avatar"
+            className="tag-avatar avatar"
             style={{ backgroundImage: `url(${avatar})` }}
           />
         )}

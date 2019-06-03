@@ -1,38 +1,35 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "../";
+import { Icon } from "..";
 
-import type { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { MouseEvents, PointerEvents, FocusEvents } from "../../";
 
-type PropsForAll = {|
-  ...MouseEvents,
-  ...PointerEvents,
-  ...FocusEvents,
-  +children?: React.Node,
-  +className?: string,
-  +icon?: string,
-  +color?: string,
-|};
+interface PropsForAll extends MouseEvents, PointerEvents, FocusEvents {
+  children?: React.ReactNode;
+  className?: string;
+  icon?: string;
+  color?: string;
+  link?: true;
+  href?: string;
+  RootComponent?: React.ElementType;
+  to?: string;
+}
 
-type DefaultProps = {| ...PropsForAll |};
+interface DefaultProps extends PropsForAll {}
 
-type PropsForLink = {|
-  ...PropsForAll,
-  link: true,
-  +href?: string,
-|};
+interface PropsForLink extends PropsForAll {
+  link: true;
+  href?: string;
+}
 
-type PropsForReactRouter = {|
-  ...PropsForAll,
-  +RootComponent: React.ElementType,
-  +to: string,
-|};
+interface PropsForReactRouter extends PropsForAll {
+  RootComponent: React.ElementType;
+  to: string;
+}
 
 type Props = DefaultProps | PropsForLink | PropsForReactRouter;
 
-function TagAddOn(props: Props): React.Node {
+function TagAddOn(props: Props) {
   const {
     children,
     className,
