@@ -1,7 +1,5 @@
-// @flow
-
-import type NotificationProps from "./Notification";
-export type { NotificationProps };
+import NotificationProps from "./Notification";
+export { NotificationProps };
 
 export { default as AccountDropdown } from "./AccountDropdown";
 export { default as Alert } from "./Alert";
@@ -13,7 +11,7 @@ export { default as Card } from "./Card";
 export { default as Comment } from "./Comment";
 export { default as CommentsCard } from "./CommentsCard";
 export { default as ContactCard } from "./ContactCard";
-export { default as Container } from "./Container.react";
+export { default as Container } from "./Container";
 export { default as Dimmer } from "./Dimmer";
 export { default as Dropdown } from "./Dropdown";
 export { default as Form } from "./Form";
