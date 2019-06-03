@@ -1,17 +1,15 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Card, Stamp, Header, Text } from "../";
+import { Card, Stamp, Header, Text } from "..";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +icon?: string,
-  +color?: string,
-  +header?: React.Node,
-  +footer?: React.Node,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  icon?: string;
+  color?: string;
+  header?: React.ReactNode;
+  footer?: React.ReactNode;
+};
 
 function StampCard({
   children,
@@ -20,7 +18,7 @@ function StampCard({
   color = "",
   header,
   footer,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("p-3", className);
   return (
     <Card className={classes}>
