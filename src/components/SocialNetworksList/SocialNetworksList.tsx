@@ -1,25 +1,23 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { List, Icon, Button } from "../";
+import { List, Icon, Button } from "..";
 
-type itemObject = {|
-  name: string,
-  label?: string,
-  to?: string,
-  tooltip?: string,
-  color?: string,
-|};
+type itemObject = {
+  name: string;
+  label?: string;
+  to?: string;
+  tooltip?: string;
+  color?: string;
+};
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +asButtons?: boolean,
-  +prefix?: string,
-  +itemsObjects?: Array<itemObject>,
-  +items?: Array<React.Node>,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  asButtons?: boolean;
+  prefix?: string;
+  itemsObjects?: Array<itemObject>;
+  items?: Array<React.ReactNode>;
+};
 
 function listItemFromObjectFactory(
   asButtons: boolean = false,
@@ -39,7 +37,7 @@ function listItemFromObjectFactory(
   };
 }
 
-function SocialNetworksList(props: Props): React.Node {
+function SocialNetworksList(props: Props) {
   const {
     children,
     className,
