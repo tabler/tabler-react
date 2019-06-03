@@ -1,18 +1,16 @@
-// @flow
-
 import * as React from "react";
-import { List, Icon, Media, SocialNetworksList, Tooltip } from "../";
+import { List, Icon, Media, SocialNetworksList, Tooltip } from "..";
 
-export type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +name: string,
-  +workTitle: string,
-  +facebook?: string,
-  +twitter?: string,
-  +phone?: string,
-  +skype?: string,
-|};
+export interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  name: string;
+  workTitle: string;
+  facebook?: string;
+  twitter?: string;
+  phone?: string;
+  skype?: string;
+}
 
 function MediaBodySocial({
   className,
@@ -23,7 +21,7 @@ function MediaBodySocial({
   twitter = "",
   phone = "",
   skype = "",
-}: Props): React.Node {
+}: Props) {
   let fbIcon;
   let twitterIcon;
   let phoneIcon;

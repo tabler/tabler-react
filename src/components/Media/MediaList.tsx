@@ -1,14 +1,12 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-|};
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+}
 
-function MediaList({ className, children }: Props): React.Node {
+function MediaList({ className, children }: Props) {
   const classes = cn("media-list", className);
   return <ul className={classes}>{children}</ul>;
 }
