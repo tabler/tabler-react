@@ -52,7 +52,12 @@ function SocialNetworksList(props: Props) {
 
   const contents =
     (itemsObjects && itemsObjects.map(getObjectListItem)) ||
-    (items && items.map(item => <List.Item inline>{item}</List.Item>)) ||
+    (items &&
+      items.map((item, index) => (
+        <List.Item key={index} inline>
+          {item}
+        </List.Item>
+      ))) ||
     children;
 
   return (

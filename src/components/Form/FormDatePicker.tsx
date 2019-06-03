@@ -87,7 +87,11 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     return (
       <FormSelect onChange={onChangeMonths}>
         {monthLabels.map((name, index) => (
-          <option value={index} selected={currentDate.getUTCMonth() === index}>
+          <option
+            key={index}
+            value={index}
+            selected={currentDate.getUTCMonth() === index}
+          >
             {name}
           </option>
         ))}
@@ -112,7 +116,7 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     return (
       <FormSelect onChange={onChangeDays}>
         {daysRange.map(day => (
-          <option value={day} selected={currentDay === day}>
+          <option key={day} value={day} selected={currentDay === day}>
             {day}
           </option>
         ))}
@@ -133,7 +137,7 @@ class FormDatePicker extends React.PureComponent<Props, State> {
     return (
       <FormSelect onChange={onChangeYears}>
         {yearsRange.map(year => (
-          <option value={year} selected={currentYear === year}>
+          <option key={year} value={year} selected={currentYear === year}>
             {year}
           </option>
         ))}
