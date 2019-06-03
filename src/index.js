@@ -18,7 +18,7 @@ export { NotificationProps } from "./components";
 
 export {
   default as RouterContextProvider,
-} from "./helpers/RouterContextProvider.react";
+} from "./helpers/RouterContextProvider";
 
 export {
   default as StandaloneFormPage,
@@ -46,8 +46,8 @@ export {
 } from "./page_templates/errors/Error503Page.react";
 
 export { default as FormCard } from "./forms/FormCard.react";
-export { default as FormTextInput } from "./forms/FormTextInput.react";
-export { default as FormCheckboxInput } from "./forms/FormCheckboxInput.react";
+export { default as FormTextInput } from "./forms/FormTextInput";
+export { default as FormCheckboxInput } from "./forms/FormCheckboxInput";
 export { default as colors } from "./colors";
 export { default as LoginPage } from "./page_templates/account/LoginPage";
 export { default as RegisterPage } from "./page_templates/account/RegisterPage";

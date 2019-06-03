@@ -8,7 +8,7 @@ import {
   FormCheckboxInput,
   StandaloneFormPage,
 } from "../../../";
-import withTouchedErrors from "../../../helpers/withTouchedErrors.react";
+import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./RegisterPage.strings";
 import type { stringTypes } from "./RegisterPage.strings";

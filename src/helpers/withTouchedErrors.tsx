@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 
 /**
@@ -7,10 +5,10 @@ import * as React from "react";
  * If a value is both touched and has a non-empty error string it is returned as the fields value
  */
 function touchedErrors(
-  touched: { [string]: boolean } = {},
-  errors: { [string]: string } = {},
+  touched: { [key: string]: boolean } = {},
+  errors: { [key: string]: string } = {},
   fields: Array<string> = []
-): { [string]: string } {
+): { [key: string]: string } {
   return fields.reduce(
     (acc, cur) =>
       Object.assign(acc, {
@@ -26,7 +24,7 @@ function touchedErrors(
  * First takes an array of the field names, followed by the component
  */
 function withTouchedErrors(fields: Array<string> = []) {
-  return function withComponent<A: { +touched?: *, +errors?: * }>(
+  return function withComponent<A extends { touched?: any; errors?: any }>(
     Component: React.ComponentType<A>
   ): React.ComponentType<A> {
     return function WithTouchedErrors(props: A) {

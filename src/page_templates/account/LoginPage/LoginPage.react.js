@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { FormCard, FormTextInput, StandaloneFormPage } from "../../../";
-import withTouchedErrors from "../../../helpers/withTouchedErrors.react";
+import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./LoginPage.strings";
 import type { stringTypes } from "./LoginPage.strings";
