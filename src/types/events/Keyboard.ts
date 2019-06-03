@@ -2,7 +2,7 @@
  * interface definitions for Keyboard EventHandling
  */
 
-export interface Keyboard {
+export interface KeyboardEvents {
   /**
    * Handle Key Down Event
    */

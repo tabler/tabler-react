@@ -2,7 +2,7 @@
  * interface definitions for Selection EventHandling
  */
 
-export interface Selection {
+export interface SelectionEvents {
   /**
    * Handle Selection Event
    */

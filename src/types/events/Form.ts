@@ -2,11 +2,11 @@
  * interface definitions for Form EventHandling
  */
 
-export interface Form {
+export interface FormEvents {
   /**
    * Handle Change Event
    */
-  onChange?: (event: React.FormEvent) => any;
+  onChange?: (event: React.ChangeEvent<any>) => any;
   /**
    * Handle Input Event
    */

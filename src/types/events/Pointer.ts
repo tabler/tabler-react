@@ -2,7 +2,7 @@
  * interface definitions for Pointer EventHandling
  */
 
-export interface Pointer {
+export interface PointerEvents {
   /**
    * Handle Pointer Down Event
    */

@@ -2,7 +2,7 @@
  * interface definitions for Other EventHandling
  */
 
-export interface Other {
+export interface OtherEvents {
   /**
    * Handle Toggling Event
    */

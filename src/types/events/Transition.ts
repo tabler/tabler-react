@@ -2,7 +2,7 @@
  * interface definitions for Transition EventHandling
  */
 
-export interface Transition {
+export interface TransitionEvents {
   /**
    * Handle End of Transition
    */

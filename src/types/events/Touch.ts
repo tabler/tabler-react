@@ -2,7 +2,7 @@
  * interface definitions for Touch EventHandling
  */
 
-export interface Touch {
+export interface TouchEvents {
   /**
    * Handle Touch Cancel Event
    */

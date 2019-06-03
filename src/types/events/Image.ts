@@ -2,7 +2,7 @@
  * interface definitions for Image EventHandling
  */
 
-export interface Image {
+export interface ImageEvents {
   /**
    * Handle Image Loading Event
    */

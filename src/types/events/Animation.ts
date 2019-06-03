@@ -2,7 +2,7 @@
  * interface definitions for Animation EventHandling
  */
 
-export interface Animation {
+export interface AnimationEvents {
   /**
    * Handle Animation Start
    */

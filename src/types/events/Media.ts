@@ -2,7 +2,7 @@
  * interface definitions for Media EventHandling
  */
 
-export interface Media {
+export interface MediaEvents {
   /**
    * Handle Media Abort Event
    */

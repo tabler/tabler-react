@@ -2,7 +2,7 @@
  * interface definitions for Focus EventHandling
  */
 
-export interface Focus {
+export interface FocusEvents {
   /**
    * Handle Blur Event
    */

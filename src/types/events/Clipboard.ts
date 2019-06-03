@@ -2,7 +2,7 @@
  * interface definitions for Clipboard EventHandling
  */
 
-export interface Clipboard {
+export interface ClipboardEvents {
   /**
    * Handle Copy Event
    */

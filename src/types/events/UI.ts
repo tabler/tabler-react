@@ -2,7 +2,7 @@
  * interface definitions for UI EventHandling
  */
 
-export interface UserInterface {
+export interface UIEvents {
   /**
    * Handle Scroll Event
    */

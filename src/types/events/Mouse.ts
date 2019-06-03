@@ -2,7 +2,7 @@
  * interface definitions for Mouse EventHandling
  */
 
-export interface Mouse {
+export interface MouseEvents {
   /**
    * Handle Single-click Event (Left-click)
    */

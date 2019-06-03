@@ -2,7 +2,7 @@
  * interface definitions for Wheel EventHandling
  */
 
-export interface Wheel {
+export interface WheelEvents {
   /**
    * Handle Wheel Event
    */

@@ -2,7 +2,7 @@
  * interface definitions for Composition EventHandling
  */
 
-export interface Composition {
+export interface CompositionEvents {
   /**
    * Handle Composition Start
    */
