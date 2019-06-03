@@ -3,13 +3,13 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +className?: string,
-  +color?: string,
-  +width?: number,
-|};
+type Props = {
+  className?: string;
+  color?: string;
+  width?: number;
+};
 
-function ProgressBar({ className, color = "", width = 0 }: Props): React.Node {
+function ProgressBar({ className, color = "", width = 0 }: Props) {
   const classes = cn(`progress-bar`, { [`bg-${color}`]: !!color }, className);
   return <div className={classes} style={{ width: `${width}%` }} />;
 }
