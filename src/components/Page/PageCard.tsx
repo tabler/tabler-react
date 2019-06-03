@@ -1,24 +1,16 @@
-// @flow
-
 import * as React from "react";
 
-import { Grid, Card, Container } from "../";
+import { Grid, Card, Container } from "..";
 
-type Props = {|
-  +children?: React.Node,
-  +title?: string,
-  +header?: React.Node,
-  +footer?: React.Node,
-  +RootComponent?: React.ElementType,
-|};
+type Props = {
+  children?: React.ReactNode;
+  title?: string;
+  header?: React.ReactNode;
+  footer?: React.ReactNode;
+  RootComponent?: React.ElementType;
+};
 
-function PageCard({
-  children,
-  title,
-  header,
-  footer,
-  RootComponent,
-}: Props): React.Node {
+function PageCard({ children, title, header, footer, RootComponent }: Props) {
   return (
     <div className="my-3 my-md-5">
       <Container>
