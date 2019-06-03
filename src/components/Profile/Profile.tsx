@@ -1,21 +1,19 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-import { Card, Header, SocialNetworksList } from "../../components";
+import { Card, Header, SocialNetworksList } from "..";
 
-import ProfileImage from "./ProfileImage.react";
+import ProfileImage from "./ProfileImage";
 
-export type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +name: string,
-  +avatarURL?: string,
-  +twitterURL?: string,
-  +backgroundURL?: string,
-  +bio?: string,
-|};
+export interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  name: string;
+  avatarURL?: string;
+  twitterURL?: string;
+  backgroundURL?: string;
+  bio?: string;
+}
 
 function Profile({
   className,
@@ -25,7 +23,7 @@ function Profile({
   twitterURL = "",
   backgroundURL = "",
   bio,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("card-profile", className);
   return (
     <Card className={classes}>
