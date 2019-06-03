@@ -1,23 +1,15 @@
-// @flow
-
 import * as React from "react";
-import Text from "./";
+import Text from ".";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +color?: string,
-  +wrap?: boolean,
-  +muted?: boolean,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  color?: string;
+  wrap?: boolean;
+  muted?: boolean;
+};
 
-const TextSmall = ({
-  className,
-  children,
-  color = "",
-  wrap,
-  muted,
-}: Props): React.Node => {
+const TextSmall = ({ className, children, color = "", wrap, muted }: Props) => {
   return (
     <Text
       RootComponent="small"

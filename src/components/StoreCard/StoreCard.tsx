@@ -1,6 +1,6 @@
 import * as React from "react";
 import Card from "../Card/Card";
-import Text from "../Text/Text.react";
+import Text from "../Text/Text";
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 

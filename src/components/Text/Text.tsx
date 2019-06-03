@@ -1,52 +1,50 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import TextSmall from "./TextSmall.react";
+import TextSmall from "./TextSmall";
 
-type AlignProps = {|
-  +align?: "left" | "center" | "right" | "justify",
-  +left?: boolean,
-  +center?: boolean,
-  +right?: boolean,
-  +justify?: boolean,
-|};
+interface AlignProps {
+  align?: "left" | "center" | "right" | "justify";
+  left?: boolean;
+  center?: boolean;
+  right?: boolean;
+  justify?: boolean;
+}
 
-type TransformProps = {|
-  +transform?: "lowercase" | "uppercase" | "capitalize",
-  +lowercase?: boolean,
-  +uppercase?: boolean,
-  +capitalize?: boolean,
-|};
+interface TransformProps {
+  transform?: "lowercase" | "uppercase" | "capitalize";
+  lowercase?: boolean;
+  uppercase?: boolean;
+  capitalize?: boolean;
+}
 
-type TrackingProps = {|
-  +tracking?: "tight" | "normal" | "wide",
-  +trackingTight?: boolean,
-  +trackingNormal?: boolean,
-  +trackingWide?: boolean,
-|};
+interface TrackingProps {
+  tracking?: "tight" | "normal" | "wide";
+  trackingTight?: boolean;
+  trackingNormal?: boolean;
+  trackingWide?: boolean;
+}
 
-type LeadingProps = {|
-  +leading?: "none" | "tight" | "normal" | "loose",
-  +leadingNone?: boolean,
-  +leadingTight?: boolean,
-  +leadingNormal?: boolean,
-  +leadingLoose?: boolean,
-|};
+interface LeadingProps {
+  leading?: "none" | "tight" | "normal" | "loose";
+  leadingNone?: boolean;
+  leadingTight?: boolean;
+  leadingNormal?: boolean;
+  leadingLoose?: boolean;
+}
 
-type TextProps = {|
-  ...AlignProps,
-  ...TransformProps,
-  ...TrackingProps,
-  ...LeadingProps,
-  +children?: React.Node,
-  +className?: string,
-  +RootComponent?: React.ElementType,
-  +color?: string,
-  +size?: string,
-  +wrap?: boolean,
-  +muted?: boolean,
-|};
+interface TextProps
+  extends AlignProps,
+    TransformProps,
+    TrackingProps,
+    LeadingProps {
+  children?: React.ReactNode;
+  className?: string;
+  RootComponent?: React.ElementType;
+  color?: string;
+  size?: string;
+  wrap?: boolean;
+  muted?: boolean;
+}
 
 const Text = ({
   className,
@@ -57,7 +55,7 @@ const Text = ({
   wrap,
   muted,
   ...props
-}: TextProps): React.Node => {
+}: TextProps) => {
   const { align: alignFromProps, left, center, right, justify } = props;
   const align =
     alignFromProps ||
