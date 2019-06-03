@@ -1,40 +1,36 @@
-// @flow
-
 import * as React from "react";
 
-import { FormCard, FormTextInput, StandaloneFormPage } from "../../../";
+import { FormCard, FormTextInput, StandaloneFormPage } from "../../..";
 import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./LoginPage.strings";
-import type { stringTypes } from "./LoginPage.strings";
-import type { FormEvents, FocusEvents } from "../../../";
+import { stringTypes } from "./LoginPage.strings";
+import { FormEvents, FocusEvents } from "../../../";
 
-type fieldTypes = {|
-  email?: string,
-  password?: string,
-|};
+type fieldTypes = {
+  email?: string;
+  password?: string;
+};
 
-type touchedTypes = {|
-  email?: boolean,
-  password?: boolean,
-|};
+type touchedTypes = {
+  email?: boolean;
+  password?: boolean;
+};
 
-type Props = {|
-  ...FormEvents,
-  ...FocusEvents,
-  +strings?: stringTypes,
-  +action?: string,
-  +method?: string,
-  +values?: fieldTypes,
-  +errors?: fieldTypes,
-  +touched?: touchedTypes,
-|};
+interface Props extends FormEvents, FocusEvents {
+  strings?: stringTypes;
+  action?: string;
+  method?: string;
+  values?: fieldTypes;
+  errors?: fieldTypes;
+  touched?: touchedTypes;
+}
 
 /**
  * A login page
  * Can be easily wrapped with form libraries like formik and redux-form
  */
-function LoginPage(props: Props): React.Node {
+function LoginPage(props: Props) {
   const {
     action,
     method,
@@ -42,7 +38,7 @@ function LoginPage(props: Props): React.Node {
     onChange,
     onBlur,
     values,
-    strings = {},
+    strings,
     errors,
   } = props;
 
@@ -83,8 +79,8 @@ function LoginPage(props: Props): React.Node {
   );
 }
 
-const LoginPageWithTouchedErrors: React.ComponentType<Props> = withTouchedErrors(
-  ["email", "password"]
-)(LoginPage);
+const LoginPageWithTouchedErrors: React.ComponentType<
+  Props
+> = withTouchedErrors(["email", "password"])(LoginPage);
 
 export default LoginPageWithTouchedErrors;
