@@ -1,43 +1,41 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import TableHeader from "./TableHeader.react";
-import TableBody from "./TableBody.react";
-import TableRow from "./TableRow.react";
-import TableCol from "./TableCol.react";
-import TableColHeader from "./TableColHeader.react";
+import TableHeader from "./TableHeader";
+import TableBody from "./TableBody";
+import TableRow from "./TableRow";
+import TableCol from "./TableCol";
+import TableColHeader from "./TableColHeader";
 
-type BodyItem = {|
-  key: string | number,
+type BodyItem = {
+  key: string | number;
   item: Array<{
-    +content?: React.Node,
-    +className?: string,
-    +alignContent?: "left" | "center" | "right",
-  }>
-|};
+    content?: React.ReactNode;
+    className?: string;
+    alignContent?: "left" | "center" | "right";
+  }>;
+};
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
   /**
    * Should this Table be optimized to contain Cards
    */
-  +cards?: boolean,
+  cards?: boolean;
   /**
    * Give the table striped rows
    */
-  +striped?: boolean,
+  striped?: boolean;
   /**
    * Make the table responsive
    */
-  +responsive?: boolean,
-  +highlightRowOnHover?: boolean,
-  +hasOutline?: boolean,
-  +verticalAlign?: "center",
-  +headerItems?: Array<{ +content?: React.Node, +className?: string }>,
-  +bodyItems?: Array<BodyItem>,
-|};
+  responsive?: boolean;
+  highlightRowOnHover?: boolean;
+  hasOutline?: boolean;
+  verticalAlign?: "center";
+  headerItems?: Array<{ content?: React.ReactNode; className?: string }>;
+  bodyItems?: Array<BodyItem>;
+};
 
 function Table({
   className,
@@ -49,7 +47,7 @@ function Table({
   hasOutline,
   verticalAlign,
   ...props
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     "table",
     {

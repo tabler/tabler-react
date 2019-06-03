@@ -1,14 +1,12 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+};
 
-function TableHeader({ className, children, ...props }: Props): React.Node {
+function TableHeader({ className, children, ...props }: Props) {
   const classes = cn(className);
   return (
     <thead className={classes} {...props}>
