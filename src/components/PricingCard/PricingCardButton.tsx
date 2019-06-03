@@ -1,19 +1,17 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
 // TODO: Add onClick Event Handler
 // TODO : Add  color prop
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +RootComponent?: React.ElementType,
-  +active?: boolean,
-  +href?: string,
-  +to?: string,
-  +onClick?: (event: SyntheticMouseEvent<HTMLInputElement>) => mixed,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  RootComponent?: React.ElementType;
+  active?: boolean;
+  href?: string;
+  to?: string;
+  onClick?: (event: React.MouseEvent<HTMLInputElement>) => any;
+};
 
 function PricingCardButton({
   className,
@@ -23,7 +21,7 @@ function PricingCardButton({
   href,
   to,
   onClick,
-}: Props): React.Node {
+}: Props) {
   const classes = cn("text-center", "mt-6");
   const Component = RootComponent || "a";
   const componentClasses = cn(
@@ -33,7 +31,12 @@ function PricingCardButton({
     className
   );
 
-  const otherProps = {};
+  const otherProps = {
+    href: undefined,
+    to: undefined,
+    role: undefined,
+    onClick: undefined,
+  };
 
   if (href) {
     otherProps.href = href;

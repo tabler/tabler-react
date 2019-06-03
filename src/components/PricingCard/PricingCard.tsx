@@ -1,28 +1,21 @@
-//@flow
-
 import * as React from "react";
 import cn from "classnames";
-import Card from "../Card/Card.react";
+import Card from "../Card/Card";
 
-import PricingCardCategory from "./PricingCardCategory.react";
-import PricingCardPrice from "./PricingCardPrice.react";
-import PricingCardAttributeList from "./PricingCardAttributeList.react";
-import PricingCardAttributeItem from "./PricingCardAttributeItem.react";
-import PricingCardButton from "./PricingCardButton.react";
+import PricingCardCategory from "./PricingCardCategory";
+import PricingCardPrice from "./PricingCardPrice";
+import PricingCardAttributeList from "./PricingCardAttributeList";
+import PricingCardAttributeItem from "./PricingCardAttributeItem";
+import PricingCardButton from "./PricingCardButton";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +active?: boolean,
-  +category?: React.Node,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  active?: boolean;
+  category?: React.ReactNode;
+};
 
-function PricingCard({
-  className,
-  children,
-  active = false,
-  category,
-}: Props): React.Node {
+function PricingCard({ className, children, active = false, category }: Props) {
   const cardBodyClassName = cn("text-center");
   const cardStatusClassName = cn("card-status", "bg-green");
   const cardStatus = <div className={cardStatusClassName} />;

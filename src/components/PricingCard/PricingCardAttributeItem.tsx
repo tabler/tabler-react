@@ -1,21 +1,15 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
 import Icon from "../Icon";
 // TODO: Add RootComponent prop
-type Props = {|
-  +children?: React.Node,
-  +available?: boolean,
-  +hasIcon?: boolean,
-|};
+type Props = {
+  children?: React.ReactNode;
+  available?: boolean;
+  hasIcon?: boolean;
+};
 
-function PricingCardAttributeItem({
-  children,
-  available,
-  hasIcon,
-}: Props): React.Node {
+function PricingCardAttributeItem({ children, available, hasIcon }: Props) {
   const iconClasses = available
     ? cn("text-success", "mr-2")
     : cn("text-danger", "mr-2");
