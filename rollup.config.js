@@ -7,8 +7,10 @@ import url from "rollup-plugin-url";
 
 import pkg from "./package.json";
 
+const extensions = [".js", ".jsx", ".ts", ".tsx"];
+
 export default {
-  input: "src/index.js",
+  input: "src/index.ts",
   output: [
     {
       file: pkg.main,
@@ -20,15 +22,17 @@ export default {
     },
   ],
   plugins: [
+    resolve({ extensions }),
+    commonjs(),
+    babel({
+      extensions,
+      include: ["src/**/*"],
+      exclude: "node_modules/**",
+    }),
     external(),
     postcss({
       modules: false,
     }),
     url(),
-    babel({
-      exclude: "node_modules/**",
-    }),
-    resolve(),
-    commonjs(),
   ],
 };
