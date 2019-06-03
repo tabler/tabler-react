@@ -1,16 +1,14 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Card, Header, Progress } from "../";
+import { Card, Header, Progress } from "..";
 
-type Props = {|
-  +className?: string,
-  +header?: React.Node,
-  +content?: React.Node,
-  +progressColor?: string,
-  +progressWidth?: number,
-|};
+type Props = {
+  className?: string;
+  header?: React.ReactNode;
+  content?: React.ReactNode;
+  progressColor?: string;
+  progressWidth?: number;
+};
 
 function ProgressCard({
   className,
@@ -18,7 +16,7 @@ function ProgressCard({
   content,
   progressColor,
   progressWidth,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(className);
   return (
     <Card className={classes}>
