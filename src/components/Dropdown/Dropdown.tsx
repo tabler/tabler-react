@@ -78,7 +78,7 @@ interface DefaultProps {
   /**
    * The items for this Dropdowns menu in object form
    */
-  itemsObject: Array<itemObject>;
+  itemsObject?: Array<itemObject>;
   /**
    * The default RootComponent for all itemsObjects.
    * itemsObjects[x].RootComponent takes priority

@@ -1,31 +1,30 @@
-// @flow
 import * as React from "react";
-import { Avatar, Text } from "../";
-import NotificationTray from "./NotificationTray.react";
+import { Avatar, Text } from "..";
+import NotificationTray from "./NotificationTray";
 
-export type Props = {|
+export interface Props {
   /**
    * The  avatar image URL
    */
-  +avatarURL?: string,
+  avatarURL?: string;
   /**
    * The message displayed within the Notification
    */
-  +message: React.Node,
+  message: React.ReactNode;
   /**
    * The time displayed within the Notification
    */
-  +time?: string,
+  time?: string;
   /**
    * Indicate the notification as unread
    */
-  +unread?: boolean,
-|};
+  unread?: boolean;
+}
 
 /**
  * An individual Notification made up of an Avatar alongside some text and the time
  */
-function Notification({ avatarURL, message, time, unread }: Props): React.Node {
+function Notification({ avatarURL, message, time, unread }: Props) {
   return (
     <React.Fragment>
       {avatarURL && (

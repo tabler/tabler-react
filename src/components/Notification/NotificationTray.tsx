@@ -1,31 +1,30 @@
-// @flow
 import * as React from "react";
-import { Notification, Dropdown } from "../";
-import type { Props as NotificationProps } from "./Notification.react";
+import { Notification, Dropdown } from "..";
+import { Props as NotificationProps } from "./Notification";
 
-export type Props = {|
+export interface Props {
   /**
    * Notification components
    */
-  +children?: React.ChildrenArray<React.Element<typeof Notification>>,
+  children?: React.ReactElement<typeof Notification>[];
   /**
    * An array containing objects of notification data
    */
-  +notificationsObjects?: Array<NotificationProps>,
+  notificationsObjects?: NotificationProps[];
   /**
    * Display a small red circle to symbolize that there are unread notifications
    */
-  +unread?: boolean,
+  unread?: boolean;
   /**
    * Action to run when the 'Mark All As Read' button is activated
    */
-  +markAllAsRead?: () => void,
-|};
+  markAllAsRead?: () => void;
+}
 
 /**
  * An Icon triggered Dropdown containing Notifications
  */
-function NotificationTray(props: Props): React.Node {
+function NotificationTray(props: Props) {
   const { children, unread, notificationsObjects, markAllAsRead } = props;
   const notifications = children && React.Children.toArray(children);
   return (
@@ -41,7 +40,7 @@ function NotificationTray(props: Props): React.Node {
       items={
         <React.Fragment>
           {(notifications &&
-            notifications.map((n: React.Node, i) => (
+            notifications.map((n: React.ReactNode, i) => (
               <Dropdown.Item className="d-flex" key={i}>
                 {n}
               </Dropdown.Item>
