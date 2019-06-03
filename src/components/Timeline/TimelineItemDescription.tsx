@@ -1,12 +1,10 @@
-// @flow
-
 import * as React from "react";
 
-type Props = {|
-  +children?: React.Node,
-|};
+type Props = {
+  children?: React.ReactNode;
+};
 
-function TimelineItemDescription({ children }: Props): React.Node {
+function TimelineItemDescription({ children }: Props) {
   return <small className="d-block text-muted">{children}</small>;
 }
 

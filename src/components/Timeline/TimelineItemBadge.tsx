@@ -3,17 +3,13 @@
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +color?: string,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  color?: string;
+};
 
-function TimelineItemBadge({
-  className,
-  children,
-  color = "",
-}: Props): React.Node {
+function TimelineItemBadge({ className, children, color = "" }: Props) {
   const classes = cn(
     {
       "timeline-badge": true,

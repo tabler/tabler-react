@@ -3,21 +3,21 @@
 import * as React from "react";
 import cn from "classnames";
 
-import TimelineItemBadge from "./TimelineItemBadge.react";
-import TimelineItemTime from "./TimelineItemTime.react";
-import TimelineItemTitle from "./TimelineItemTitle.react";
-import TimelineItemDescription from "./TimelineItemDescription.react";
+import TimelineItemBadge from "./TimelineItemBadge";
+import TimelineItemTime from "./TimelineItemTime";
+import TimelineItemTitle from "./TimelineItemTitle";
+import TimelineItemDescription from "./TimelineItemDescription";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +title?: string,
-  +description?: string,
-  +badge?: boolean,
-  +badgeColor?: string,
-  +time?: string,
-  +active?: boolean,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  title?: string;
+  description?: string;
+  badge?: boolean;
+  badgeColor?: string;
+  time?: string;
+  active?: boolean;
+};
 
 function TimelineItem({
   className,
@@ -28,7 +28,7 @@ function TimelineItem({
   badgeColor,
   time,
   active,
-}: Props): React.Node {
+}: Props) {
   const classes = cn(
     {
       "timeline-item": true,

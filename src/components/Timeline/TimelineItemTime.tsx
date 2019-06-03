@@ -1,15 +1,13 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +active?: boolean,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  active?: boolean;
+};
 
-function TimelineItemTime({ className, children, active }: Props): React.Node {
+function TimelineItemTime({ className, children, active }: Props) {
   const classes = cn(
     {
       "timeline-time": true,
