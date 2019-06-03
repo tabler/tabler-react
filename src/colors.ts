@@ -1,5 +1,4 @@
-// @ flow
-const colors: { [string]: string } = {
+const colors = {
   blue: "#467fcf",
   "blue-darkest": "#0e1929",
   "blue-darker": "#1c3353",

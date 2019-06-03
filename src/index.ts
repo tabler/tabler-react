@@ -33,7 +33,7 @@ export { default as Error404Page } from "./page_templates/errors/Error404Page";
 export { default as Error500Page } from "./page_templates/errors/Error500Page";
 export { default as Error503Page } from "./page_templates/errors/Error503Page";
 
-export { default as FormCard } from "./forms/FormCard.react";
+export { default as FormCard } from "./forms/FormCard";
 export { default as FormTextInput } from "./forms/FormTextInput";
 export { default as FormCheckboxInput } from "./forms/FormCheckboxInput";
 export { default as colors } from "./colors";
