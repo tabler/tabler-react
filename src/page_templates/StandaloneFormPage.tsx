@@ -1,13 +1,11 @@
-// @flow
-
 import * as React from "react";
 
-type Props = {|
-  +children?: React.Node,
-  +imageURL?: string,
-|};
+type Props = {
+  children?: React.ReactNode;
+  imageURL?: string;
+};
 
-function StandaloneFormPage(props: Props): React.Node {
+function StandaloneFormPage(props: Props) {
   return (
     <div className="page">
       <div className="page-single">

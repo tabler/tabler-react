@@ -22,7 +22,7 @@ export {
 
 export {
   default as StandaloneFormPage,
-} from "./page_templates/StandaloneFormPage.react";
+} from "./page_templates/StandaloneFormPage";
 export {
   default as DefaultErrorPage,
 } from "./page_templates/errors/DefaultErrorPage";
