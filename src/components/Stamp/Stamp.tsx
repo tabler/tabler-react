@@ -1,24 +1,16 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "../";
+import { Icon } from "..";
 
-type Props = {|
-  +children?: React.Node,
-  +className?: string,
-  +size?: "sm" | "md",
-  +icon?: string,
-  +color?: string,
-|};
+type Props = {
+  children?: React.ReactNode;
+  className?: string;
+  size?: "sm" | "md";
+  icon?: string;
+  color?: string;
+};
 
-function Stamp({
-  children,
-  className,
-  size = "md",
-  icon,
-  color = "",
-}: Props): React.Node {
+function Stamp({ children, className, size = "md", icon, color = "" }: Props) {
   const classes = cn(
     { stamp: true, [`stamp-${size}`]: size, [`bg-${color}`]: color },
     className
