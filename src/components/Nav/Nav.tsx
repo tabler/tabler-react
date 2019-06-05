@@ -104,17 +104,13 @@ class Nav extends React.Component<Props, State> {
     const _items =
       items ||
       (itemsObjects &&
-        itemsObjects.map((a, i) => (
+        itemsObjects.map(({ subItems, active, ...rest }, i) => (
           <NavItem
             key={i}
-            icon={a.icon}
-            value={a.value}
-            to={a.to}
-            hasSubNav={!!a.subItems}
-            LinkComponent={a.LinkComponent}
-            subItemsObjects={a.subItems}
-            active={this.computeActive(a.active, a.to, a.subItems)}
-            useExact={a.useExact}
+            hasSubNav={!!subItems}
+            subItemsObjects={subItems}
+            active={this.computeActive(active, rest.to, subItems)}
+            {...rest}
           />
         )));
     const _children = _items || children;
