@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import DropdownTrigger from "./DropdownTrigger";
 import DropdownMenu from "./DropdownMenu";
@@ -98,154 +98,151 @@ export type itemObject = {
 };
 type Props = DefaultProps;
 
-type State = {
-  isOpen: boolean;
-};
+const Dropdown = function({
+  className,
+  children,
+  desktopOnly,
+  isOption,
+  flex = false,
+  ...props
+}: Props) {
+  const [isOpen, setIsOpen] = useState(false);
 
-class Dropdown extends React.Component<Props, State> {
-  state = { isOpen: false };
-
-  _handleTriggerOnClick = (
-    e: React.MouseEvent,
+  const _handleTriggerOnClick = (
+    e: React.MouseEvent<Element>,
     o?: { onClick: React.MouseEventHandler }
   ) => {
     e.preventDefault();
-    this.setState(s => ({ isOpen: !s.isOpen }));
+    setIsOpen(!isOpen);
     if (o && o.onClick) {
       o.onClick(e);
     }
   };
 
-  _handleItemClick = (
-    e: React.MouseEvent,
+  const _handleItemClick = (
+    e: React.MouseEvent<HTMLElement>,
     callback?: (e: React.MouseEvent<any>) => any
   ) => {
-    this.setState({ isOpen: false });
+    setIsOpen(false);
     if (callback) {
       callback(e);
     }
   };
 
-  render() {
-    const {
-      className,
-      children,
-      desktopOnly,
-      isOption,
-      flex = false,
-      ...props
-    } = this.props;
+  const classes = cn(
+    {
+      dropdown: true,
+      "d-none": desktopOnly,
+      "d-md-flex": desktopOnly || flex === "md",
+      [`d-{flex}-flex`]:
+        (typeof flex !== "boolean" &&
+          ["xs", "sm", "lg", "xl"].includes(flex)) ||
+        flex,
+      "d-flex": flex === true,
+      "card-options-dropdown": isOption,
+      show: isOpen,
+    },
+    className
+  );
 
-    const classes = cn(
-      {
-        dropdown: true,
-        "d-none": desktopOnly,
-        "d-md-flex": desktopOnly || flex === "md",
-        [`d-{flex}-flex`]:
-          (typeof flex !== "boolean" &&
-            ["xs", "sm", "lg", "xl"].includes(flex)) ||
-          flex,
-        "d-flex": flex === true,
-        "card-options-dropdown": isOption,
-        show: this.state.isOpen,
-      },
-      className
-    );
+  const trigger = (() => {
+    if (props.trigger) {
+      return React.cloneElement(props.trigger, {
+        onClick: (e: React.MouseEvent<any>) =>
+          _handleTriggerOnClick(e, props.trigger),
+      });
+      // return props.trigger;
+    }
+    if (props.icon || props.triggerContent || props.toggle) {
+      const {
+        icon,
+        triggerContent,
+        isNavLink,
+        type,
+        triggerClassName,
+        color,
+        toggle,
+      } = props;
 
-    const trigger = (() => {
-      if (props.trigger) {
-        return React.cloneElement(props.trigger, {
-          onClick: (e: React.MouseEvent<any>) =>
-            this._handleTriggerOnClick(e, props.trigger),
-        });
-        // return props.trigger;
-      }
-      if (props.icon || props.triggerContent || props.toggle) {
-        const {
-          icon,
-          triggerContent,
-          isNavLink,
-          type,
-          triggerClassName,
-          color,
-          toggle,
-        } = props;
+      return (
+        <DropdownTrigger
+          isNavLink={isNavLink}
+          icon={icon}
+          type={type}
+          className={triggerClassName}
+          isOption={isOption}
+          color={color}
+          toggle={toggle}
+          onClick={_handleTriggerOnClick}
+        >
+          {triggerContent}
+        </DropdownTrigger>
+      );
+    }
+    return null;
+  })();
 
-        return (
-          <DropdownTrigger
-            isNavLink={isNavLink}
-            icon={icon}
-            type={type}
-            className={triggerClassName}
-            isOption={isOption}
-            color={color}
-            toggle={toggle}
-            onClick={this._handleTriggerOnClick}
-          >
-            {triggerContent}
-          </DropdownTrigger>
-        );
-      }
-      return null;
-    })();
+  const items = (() => {
+    if (props.items) return props.items;
+    if (props.itemsObject) {
+      const { itemsObject, itemsRootComponent } = props;
+      return itemsObject.map((item, i) =>
+        item.isDivider ? (
+          <Dropdown.ItemDivider key={i} />
+        ) : (
+          <Dropdown.Item
+            icon={item.icon}
+            badge={item.badge}
+            badgeType={item.badgeType}
+            value={item.value}
+            key={i}
+            to={item.to}
+            RootComponent={item.RootComponent || itemsRootComponent}
+            onClick={(e: React.MouseEvent<any>) =>
+              _handleItemClick(e, item.onClick)
+            }
+          />
+        )
+      );
+    }
+    return null;
+  })();
 
-    const items = (() => {
-      if (props.items) return props.items;
-      if (props.itemsObject) {
-        const { itemsObject, itemsRootComponent } = props;
-        return itemsObject.map((item, i) =>
-          item.isDivider ? (
-            <DropdownItemDivider key={i} />
-          ) : (
-            <DropdownItem
-              icon={item.icon}
-              badge={item.badge}
-              badgeType={item.badgeType}
-              value={item.value}
-              key={i}
-              to={item.to}
-              RootComponent={item.RootComponent || itemsRootComponent}
-              onClick={(e: React.MouseEvent<any>) =>
-                this._handleItemClick(e, item.onClick)
-              }
-            />
-          )
-        );
-      }
-      return null;
-    })();
+  const menu = (() => {
+    if (props.items) {
+      const { position, arrow, arrowPosition, dropdownMenuClassName } = props;
+      return (
+        <DropdownMenu
+          position={position}
+          arrow={arrow}
+          arrowPosition={arrowPosition}
+          className={dropdownMenuClassName}
+          show={isOpen}
+        >
+          {items}
+        </DropdownMenu>
+      );
+    }
+    return null;
+  })();
 
-    const menu = (() => {
-      if (props.items) {
-        const { position, arrow, arrowPosition, dropdownMenuClassName } = props;
-        return (
-          <DropdownMenu
-            position={position}
-            arrow={arrow}
-            arrowPosition={arrowPosition}
-            className={dropdownMenuClassName}
-            show={this.state.isOpen}
-          >
-            {items}
-          </DropdownMenu>
-        );
-      }
-      return null;
-    })();
+  return (
+    <Manager>
+      <ClickOutside onOutsideClick={() => setIsOpen(false)}>
+        {({ setElementRef }: any) => (
+          <div className={classes} ref={setElementRef}>
+            {trigger}
+            {menu || children}
+          </div>
+        )}
+      </ClickOutside>
+    </Manager>
+  );
+};
 
-    return (
-      <Manager>
-        <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
-          {({ setElementRef }: any) => (
-            <div className={classes} ref={setElementRef}>
-              {trigger}
-              {menu || children}
-            </div>
-          )}
-        </ClickOutside>
-      </Manager>
-    );
-  }
-}
+Dropdown.Trigger = DropdownTrigger;
+Dropdown.Menu = DropdownMenu;
+Dropdown.Item = DropdownItem;
+Dropdown.ItemDivider = DropdownItemDivider;
 
 export default Dropdown;
