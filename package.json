@@ -16,7 +16,7 @@
     "prepare": "yarn run build && yarn run copytablercsstodist",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "echo \"tabler-react.com\" > example/build/CNAME && gh-pages -d example/build",
-    "precommit": "yarn pretty-quick --staged && lint-staged && cd scripts",
+    "precommit": "yarn pretty-quick --staged && lint-staged",
     "format": "prettier --write \"+(src|example)/**/*.js\"",
     "pretty-quick": "pretty-quick",
     "lint": "eslint --ext .js src/**/* && tslint -c tslint.json 'src/**/*.{ts,tsx}'",
