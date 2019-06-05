@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Button, Icon } from "..";
+import Button from "../Button";
+import Icon from "../Icon";
 
 import { Reference } from "react-popper";
 import { ReferenceChildrenProps } from "react-popper";

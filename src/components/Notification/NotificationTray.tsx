@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Notification, Dropdown } from "..";
-import { Props as NotificationProps } from "./Notification";
+import Notification, { Props as NotificationProps } from "./Notification";
+import Dropdown from "../Dropdown";
 
 export interface Props {
   /**

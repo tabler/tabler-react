@@ -1,8 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import { Grid } from "..";
+import Grid from "../Grid";
 
-import { MouseEvents, FocusEvents, PointerEvents } from "../../";
+import { MouseEvents, FocusEvents, PointerEvents } from "../../types";
 // FormEvents not imported due to check on props utilization. Props typing do not use mandatory props.
 
 interface PropsForAll extends MouseEvents, FocusEvents, PointerEvents {

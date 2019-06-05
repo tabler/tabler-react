@@ -1,5 +1,7 @@
-import Notification from "./Notification";
-import Props from "./Notification";
+import Notification, { Props } from "./Notification";
+import NotificationTray from "./NotificationTray";
 
-export { Notification as default };
-export { Props as NotificationProps };
+// @ts-ignore
+Notification.Tray = NotificationTray;
+
+export { Notification as default, Notification, NotificationTray };

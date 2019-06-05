@@ -1,8 +1,7 @@
 import * as React from "react";
 import cn from "classnames";
-import Nav from ".";
+import Nav, { subNavItem } from "./Nav";
 import Dropdown from "../Dropdown";
-import { subNavItem } from "./Nav";
 import ClickOutside from "../../helpers/ClickOutside";
 
 import { Manager, Reference } from "react-popper";

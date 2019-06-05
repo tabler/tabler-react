@@ -1,13 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
 
-import H1 from "./H1";
-import H2 from "./H2";
-import H3 from "./H3";
-import H4 from "./H4";
-import H5 from "./H5";
-import H6 from "./H6";
-
 interface Props {
   /**
    * A component to use instead of a <div> as the root component
@@ -30,12 +23,5 @@ function Header({ RootComponent, className, children, size = 1 }: Props) {
   const Component = RootComponent || "div";
   return <Component className={classes}>{children}</Component>;
 }
-
-Header.H1 = H1;
-Header.H2 = H2;
-Header.H3 = H3;
-Header.H4 = H4;
-Header.H5 = H5;
-Header.H6 = H6;
 
 export default Header;

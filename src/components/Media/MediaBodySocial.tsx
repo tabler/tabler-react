@@ -1,5 +1,9 @@
 import * as React from "react";
-import { List, Icon, Media, SocialNetworksList, Tooltip } from "..";
+import List from "../List";
+import Icon from "../Icon";
+import Media from "./Media";
+import SocialNetworksList from "../SocialNetworksList";
+import Tooltip from "../Tooltip";
 
 export interface Props {
   children?: React.ReactNode;

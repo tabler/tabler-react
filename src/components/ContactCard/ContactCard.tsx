@@ -1,6 +1,10 @@
 import * as React from "react";
 import cn from "classnames";
-import { Card, Media, Grid, Header } from "..";
+
+import Card from "../Card";
+import Media from "../Media";
+import Header from "../Header";
+import Grid from "../Grid";
 
 interface Props {
   children?: React.ReactNode;

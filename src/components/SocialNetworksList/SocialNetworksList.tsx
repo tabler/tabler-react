@@ -1,6 +1,9 @@
 import * as React from "react";
 import cn from "classnames";
-import { List, Icon, Button } from "..";
+
+import List from "../List";
+import Button from "../Button";
+import Icon from "../Icon";
 
 type itemObject = {
   name: string;

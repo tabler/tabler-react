@@ -3,7 +3,7 @@ import cn from "classnames";
 import TagList from "./TagList";
 import TagAddOn from "./TagAddOn";
 
-import { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { MouseEvents, PointerEvents, FocusEvents } from "../../types";
 
 interface PropsForAll extends MouseEvents, PointerEvents, FocusEvents {
   children?: React.ReactNode;

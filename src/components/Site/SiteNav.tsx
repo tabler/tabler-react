@@ -2,7 +2,10 @@
 
 import * as React from "react";
 import cn from "classnames";
-import { Container, Grid, Nav } from "../..";
+
+import Container from "../Container";
+import Grid from "../Grid";
+import Nav from "../Nav";
 
 type subNavItem = {
   value: string;

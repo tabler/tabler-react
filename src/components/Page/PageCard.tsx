@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import { Grid, Card, Container } from "..";
+import Grid from "../Grid";
+import Card from "../Card";
+import Container from "../Container";
 
 type Props = {
   children?: React.ReactNode;

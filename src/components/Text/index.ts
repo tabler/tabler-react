@@ -1,3 +1,7 @@
 import Text from "./Text";
+import TextSmall from "./TextSmall";
 
-export { Text as default };
+// @ts-ignore
+Text.Small = TextSmall;
+
+export { Text as default, Text, TextSmall };

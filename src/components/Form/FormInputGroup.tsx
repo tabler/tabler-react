@@ -1,9 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import Form from "./Form";
 import FormInputGroupAppend from "./FormInputGroupAppend";
 import FormInputGroupPrepend from "./FormInputGroupPrepend";
-import { Props as InputProps } from "./FormInput";
+import FormInput, { Props as InputProps } from "./FormInput";
 
 type Props = {
   children?: React.ReactNode;
@@ -11,7 +10,7 @@ type Props = {
   append?: React.ReactNode;
   prepend?: React.ReactNode;
   RootComponent?: React.ElementType;
-  inputProps?: InputProps;
+  inputProps?: any;
 };
 
 function FormInputGroup(props: Props) {
@@ -23,7 +22,7 @@ function FormInputGroup(props: Props) {
     className
   );
   const Component = RootComponent || "div";
-  const children = inputProps ? <Form.Input {...inputProps} /> : props.children;
+  const children = inputProps ? <FormInput {...inputProps} /> : props.children;
 
   if (prepend === true) {
     return <FormInputGroupPrepend>{children}</FormInputGroupPrepend>;

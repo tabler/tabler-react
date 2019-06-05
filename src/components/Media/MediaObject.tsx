@@ -1,7 +1,7 @@
 import * as React from "react";
 import cn from "classnames";
 
-import { Avatar } from "..";
+import Avatar from "../Avatar";
 
 interface Props {
   children?: React.ReactNode;

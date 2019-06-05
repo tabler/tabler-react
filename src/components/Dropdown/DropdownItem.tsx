@@ -1,6 +1,7 @@
 import * as React from "react";
 import cn from "classnames";
-import { Icon, Badge } from "..";
+import Icon from "../Icon";
+import Badge from "../Badge";
 
 interface Props {
   children?: React.ReactNode;

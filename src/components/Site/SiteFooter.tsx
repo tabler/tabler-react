@@ -1,5 +1,8 @@
 import * as React from "react";
-import { Container, Grid, List } from "..";
+
+import Container from "../Container";
+import Grid from "../Grid";
+import List from "../List";
 
 export type Props = {
   /**

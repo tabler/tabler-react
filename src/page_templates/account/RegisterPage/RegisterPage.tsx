@@ -1,17 +1,16 @@
 import * as React from "react";
 
-import {
-  FormCard,
-  FormTextInput,
-  FormCheckboxInput,
-  StandaloneFormPage,
-} from "../../..";
+import FormCard from "../../../forms/FormCard";
+import FormCheckboxInput from "../../../forms/FormCheckboxInput";
+import FormTextInput from "../../../forms/FormTextInput";
+import StandaloneFormPage from "../../StandaloneFormPage";
+
 import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./RegisterPage.strings";
 import { stringTypes } from "./RegisterPage.strings";
 
-import { FormEvents, FocusEvents } from "../../../";
+import { FormEvents, FocusEvents } from "../../../types";
 
 type fieldTypes = {
   name?: string;

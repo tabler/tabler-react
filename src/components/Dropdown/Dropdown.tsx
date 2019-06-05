@@ -105,11 +105,6 @@ type State = {
 class Dropdown extends React.Component<Props, State> {
   state = { isOpen: false };
 
-  static Trigger = DropdownTrigger;
-  static Menu = DropdownMenu;
-  static Item = DropdownItem;
-  static ItemDivider = DropdownItemDivider;
-
   _handleTriggerOnClick = (
     e: React.MouseEvent<HTMLElement>,
     o?: { onClick: React.MouseEventHandler }
@@ -200,9 +195,9 @@ class Dropdown extends React.Component<Props, State> {
         const { itemsObject, itemsRootComponent } = props;
         return itemsObject.map((item, i) =>
           item.isDivider ? (
-            <Dropdown.ItemDivider key={i} />
+            <DropdownItemDivider key={i} />
           ) : (
-            <Dropdown.Item
+            <DropdownItem
               icon={item.icon}
               badge={item.badge}
               badgeType={item.badgeType}

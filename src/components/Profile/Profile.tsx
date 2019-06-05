@@ -1,7 +1,9 @@
 import * as React from "react";
 import cn from "classnames";
 
-import { Card, Header, SocialNetworksList } from "..";
+import Card from "../Card";
+import SocialNetworksList from "../SocialNetworksList";
+import Header from "../Header";
 
 import ProfileImage from "./ProfileImage";
 

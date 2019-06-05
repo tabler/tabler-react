@@ -1,8 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "..";
+import Icon from "../Icon";
 
-import { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { MouseEvents, PointerEvents, FocusEvents } from "../../types";
 
 interface PropsForAll extends MouseEvents, PointerEvents, FocusEvents {
   children?: React.ReactNode;

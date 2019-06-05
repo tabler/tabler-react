@@ -1,6 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
-import { Container } from "..";
+import Container from "../Container";
 import PageHeader from "./PageHeader";
 
 type Props = {

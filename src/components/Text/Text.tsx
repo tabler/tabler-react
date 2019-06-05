@@ -1,6 +1,5 @@
 import * as React from "react";
 import cn from "classnames";
-import TextSmall from "./TextSmall";
 
 interface AlignProps {
   align?: "left" | "center" | "right" | "justify";
@@ -128,8 +127,6 @@ const Text = ({
 };
 
 Text.displayName = "Text";
-
-Text.Small = TextSmall;
 
 /** @component */
 export default Text;

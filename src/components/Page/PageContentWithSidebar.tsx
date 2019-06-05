@@ -1,7 +1,8 @@
 // @flow
 
 import * as React from "react";
-import { Page, Grid } from "..";
+import Page from "./Page";
+import Grid from "../Grid";
 
 type Props = {
   children?: React.ReactNode;

@@ -1,6 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import { Icon, Avatar, Button } from "..";
+import Icon from "../Icon";
+import Avatar from "../Avatar";
+import Button from "../Button";
 import AlertLink from "./AlertLink";
 
 import { MouseEvents, PointerEvents } from "../../";

@@ -1,11 +1,14 @@
 import * as React from "react";
 
-import { FormCard, FormTextInput, StandaloneFormPage } from "../../..";
+import FormCard from "../../../forms/FormCard";
+import FormTextInput from "../../../forms/FormTextInput";
+import StandaloneFormPage from "../../StandaloneFormPage";
+
 import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./LoginPage.strings";
 import { stringTypes } from "./LoginPage.strings";
-import { FormEvents, FocusEvents } from "../../../";
+import { FormEvents, FocusEvents } from "../../../types";
 
 type fieldTypes = {
   email?: string;

@@ -1,8 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import Form from ".";
+import FormInput from "./FormInput";
 
-import { FormEvents, FocusEvents } from "../../";
+import { FormEvents, FocusEvents } from "../../types";
 
 export interface Props extends FormEvents, FocusEvents {
   className?: string;
@@ -10,7 +10,7 @@ export interface Props extends FormEvents, FocusEvents {
    * Wrap the checkbox with a label
    */
   label?: string;
-  value?: string | number | boolean;
+  value?: string | number;
   name?: string;
   checked?: boolean;
   disabled?: boolean;
@@ -37,7 +37,7 @@ function FormCheckbox({
     className
   );
   const inputComponent = (
-    <Form.Input
+    <FormInput
       type="checkbox"
       name={name}
       value={value}

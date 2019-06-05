@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Dropdown, Avatar } from "..";
+import Dropdown from "../Dropdown";
+import Avatar from "../Avatar";
 
 import { itemObject } from "../Dropdown/Dropdown";
 

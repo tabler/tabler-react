@@ -1,8 +1,9 @@
 import * as React from "react";
-import { Button, Dropdown } from "..";
+import Button, { DefaultButtonComponent } from "./Button";
 import { Manager, Reference } from "react-popper";
-import { DefaultButtonComponent } from "../Button/Button";
-import { Props as DropdownMenuProps } from "../Dropdown/DropdownMenu";
+import DropdownMenu, {
+  Props as DropdownMenuProps,
+} from "../Dropdown/DropdownMenu";
 
 import { ReferenceChildrenProps } from "react-popper";
 
@@ -34,7 +35,7 @@ class ButtonDropdown extends React.Component<Props, State> {
         };
 
     const dropdownMenu = React.createElement(
-      Dropdown.Menu,
+      DropdownMenu,
       propsForDropdownMenu,
       children
     );

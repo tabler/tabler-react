@@ -1,6 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "..";
+import Icon from "../Icon";
 
 interface Props {
   children?: React.ReactNode;

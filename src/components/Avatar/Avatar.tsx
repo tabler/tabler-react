@@ -1,9 +1,9 @@
 import * as React from "react";
-import { Icon } from "..";
+import Icon from "../Icon";
 import cn from "classnames";
 import AvatarList from "./AvatarList";
 
-import { MouseEvents, PointerEvents } from "../../";
+import { MouseEvents, PointerEvents } from "../../types";
 
 export interface Props extends MouseEvents, PointerEvents {
   children?: React.ReactNode;

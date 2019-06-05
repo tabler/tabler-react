@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Avatar, Text } from "..";
-import NotificationTray from "./NotificationTray";
+import Avatar from "../Avatar";
+import Text from "../Text";
 
 export interface Props {
   /**
@@ -41,7 +41,5 @@ function Notification({ avatarURL, message, time, unread }: Props) {
     </React.Fragment>
   );
 }
-
-Notification.Tray = NotificationTray;
 
 export default Notification;

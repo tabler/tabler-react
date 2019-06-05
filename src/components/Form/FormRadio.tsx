@@ -1,8 +1,13 @@
 import * as React from "react";
 import cn from "classnames";
-import Form from ".";
+import FormInput from "./FormInput";
 
-import { MouseEvents, PointerEvents, FormEvents, FocusEvents } from "../../";
+import {
+  MouseEvents,
+  PointerEvents,
+  FormEvents,
+  FocusEvents,
+} from "../../types";
 
 interface Props extends MouseEvents, PointerEvents, FormEvents, FocusEvents {
   className?: string;
@@ -54,7 +59,7 @@ function FormRadio({
   };
 
   const inputComponent = (
-    <Form.Input
+    <FormInput
       {...events}
       type="radio"
       name={name}

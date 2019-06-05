@@ -1,6 +1,10 @@
 import * as React from "react";
 import cn from "classnames";
-import { Card, Stamp, Header, Text } from "..";
+
+import Card from "../Card";
+import Text from "../Text";
+import Header from "../Header";
+import Stamp from "../Stamp";
 
 type Props = {
   children?: React.ReactNode;

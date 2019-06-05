@@ -1,10 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import { Icon } from "..";
-import ButtonList from "./ButtonList";
-import ButtonDropdown from "./ButtonDropdown";
+import Icon from "../Icon";
 
-import { MouseEvents, PointerEvents } from "../../";
+import { MouseEvents, PointerEvents } from "../../types";
 import { RefHandler } from "react-popper";
 
 interface PropsForAll extends MouseEvents, PointerEvents {
@@ -143,9 +141,6 @@ const Button = (props: Props) => {
     );
   }
 };
-
-Button.List = ButtonList;
-Button.Dropdown = ButtonDropdown;
 
 Button.displayName = "Button";
 

@@ -1,27 +1,20 @@
 import * as React from "react";
 import cn from "classnames";
 import FormLabel from "./FormLabel";
-import FormInput from "./FormInput";
-import { Props as InputProps } from "./FormInput";
 
 interface Props {
   children?: React.ReactNode;
   className?: string;
   label?: React.ReactNode;
   isRequired?: boolean;
-  inputProps?: InputProps;
+  /**
+   * @deprecated
+   */
+  inputProps?: any;
 }
 
-function FormGroup({
-  className,
-  children,
-  label,
-  isRequired,
-  inputProps,
-}: Props) {
+function FormGroup({ className, children, label, isRequired }: Props) {
   const classes = cn("form-group", className);
-  const inputComponent =
-    inputProps && React.createElement(FormInput, inputProps);
   return (
     <div className={classes}>
       {!label ? null : typeof label === "string" ? (
@@ -32,7 +25,7 @@ function FormGroup({
       ) : (
         label
       )}
-      {inputComponent || children}
+      {children}
     </div>
   );
 }

@@ -1,6 +1,9 @@
 import * as React from "react";
 import cn from "classnames";
-import { Card, Header, Progress } from "..";
+
+import Card from "../Card";
+import Progress from "../Progress";
+import Header from "../Header";
 
 type Props = {
   className?: string;

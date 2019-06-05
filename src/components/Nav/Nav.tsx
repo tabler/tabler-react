@@ -1,10 +1,5 @@
 import * as React from "react";
 import cn from "classnames";
-import NavItem from "./NavItem";
-import NavLink from "./NavLink";
-import NavSubItem from "./NavSubItem";
-import NavSubmenu from "./NavSubmenu";
-import NavSubmenuItem from "./NavSubmenuItem";
 
 export type subNavItem = {
   value: string;
@@ -41,12 +36,6 @@ class Nav extends React.Component<Props, State> {
   state = {
     pathName: null,
   };
-
-  static Item = NavItem;
-  static SubItem = NavSubItem;
-  static Link = NavLink;
-  static Submenu = NavSubmenu;
-  static SubmenuItem = NavSubmenuItem;
 
   routerCallback = (location: { pathname: string }): any => {
     this.setState({ pathName: location.pathname });

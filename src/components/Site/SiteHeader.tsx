@@ -1,5 +1,10 @@
 import * as React from "react";
-import { Container, Site, Notification, AccountDropdown } from "..";
+
+import Container from "../Container";
+import Site from "./Site";
+import Notification from "../Notification";
+import AccountDropdown from "../AccountDropdown";
+
 import { Props as NotificationTrayProps } from "../Notification/NotificationTray";
 import { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown";
 

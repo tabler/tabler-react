@@ -1,6 +1,8 @@
 import * as React from "react";
 
-import { Page, Site } from "..";
+import Page from "../Page";
+import Site from "./Site";
+
 import { Props as SiteHeaderProps } from "./SiteHeader";
 import { Props as SiteNavProps } from "./SiteNav";
 import { Props as SiteFooterProps } from "./SiteFooter";

@@ -1,5 +1,5 @@
 import * as React from "react";
-import Text from ".";
+import Text from "./Text";
 
 type Props = {
   children?: React.ReactNode;

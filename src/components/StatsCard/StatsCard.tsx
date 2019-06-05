@@ -1,7 +1,10 @@
 import * as React from "react";
 import cn from "classnames";
 
-import { Card, Text, Header, Icon } from "..";
+import Card from "../Card";
+import Text from "../Text";
+import Header from "../Header";
+import Icon from "../Icon";
 
 type Props = {
   className?: string;
