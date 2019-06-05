@@ -2,6 +2,8 @@ import { configure, addDecorator } from "@storybook/react";
 import "@storybook/addon-console";
 import { withInfo } from "@storybook/addon-info";
 
+import "../src/Tabler.css";
+
 // automatically import all files ending in *.stories.js
 const req = require.context("../src", true, /\.stories\.{js|ts|tsx}$/);
 function loadStories() {
