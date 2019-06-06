@@ -47,7 +47,7 @@ function RegisterPage(props: Props) {
     onChange,
     onBlur,
     values,
-    strings,
+    strings = {} as stringTypes,
     errors,
   } = props;
 

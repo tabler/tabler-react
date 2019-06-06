@@ -36,7 +36,7 @@ function GalleryCardIconItem({
     </React.Fragment>
   );
 
-  const extraProps = { href: undefined };
+  const extraProps: Pick<Props, "href"> = { href: undefined };
 
   if (href) {
     extraProps.href = href;

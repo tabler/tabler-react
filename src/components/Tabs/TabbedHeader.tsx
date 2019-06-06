@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Props as TabProps } from "./Tab";
-import Nav from "../Nav/Nav";
+import Nav from "../Nav";
 
 interface Props {
   children: React.ReactElement<TabProps>[] | React.ReactElement<TabProps>;

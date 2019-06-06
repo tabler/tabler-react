@@ -16,7 +16,7 @@ function CardMap({ className, children, placeholder }: Props) {
   return (
     <div
       className={classes}
-      style={placeholder && { backgroundImage: `url(${placeholder})` }}
+      style={placeholder ? { backgroundImage: `url(${placeholder})` } : {}}
     >
       {children}
     </div>

@@ -1,6 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import Nav, { subNavItem } from "./Nav";
+import NavSubItem from "./NavSubItem";
+import NavLink from "./NavLink";
+import { subNavItem } from "./Nav";
 import Dropdown from "../Dropdown";
 import ClickOutside from "../../helpers/ClickOutside";
 
@@ -24,7 +26,7 @@ interface Props {
    * Display this item in an active, or currently viewing, state
    */
   active?: boolean;
-  subItems?: React.ReactElement<typeof Nav.SubItem>[];
+  subItems?: React.ReactElement<typeof NavSubItem>[];
   subItemsObjects?: Array<subNavItem>;
   /**
    * Position of the subnav Dropdown
@@ -80,7 +82,7 @@ class NavItem extends React.Component<Props, State> {
       (typeof children === "string" || value) && hasSubNav ? (
         <Reference>
           {({ ref }: ReferenceChildrenProps) => (
-            <Nav.Link
+            <NavLink
               className={className}
               to={to}
               icon={icon}
@@ -91,11 +93,11 @@ class NavItem extends React.Component<Props, State> {
               useExact={useExact}
             >
               {!hasSubNav && typeof children === "string" ? children : value}
-            </Nav.Link>
+            </NavLink>
           )}
         </Reference>
       ) : (
-        <Nav.Link
+        <NavLink
           className={className}
           to={to}
           icon={icon}
@@ -105,7 +107,7 @@ class NavItem extends React.Component<Props, State> {
           useExact={useExact}
         >
           {!hasSubNav && typeof children === "string" ? children : value}
-        </Nav.Link>
+        </NavLink>
       );
 
     const childrenForAll = (
@@ -117,7 +119,7 @@ class NavItem extends React.Component<Props, State> {
             {subItems ||
               (subItemsObjects &&
                 subItemsObjects.map((a, i) => (
-                  <Nav.SubItem
+                  <NavSubItem
                     key={i}
                     value={a.value}
                     to={a.to}

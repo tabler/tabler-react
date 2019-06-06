@@ -1,6 +1,6 @@
 import * as React from "react";
-import Form from "../components/Form/Form";
-import Button from "../components/Button/Button";
+import Form from "../components/Form";
+import Button from "../components/Button";
 import { Props as FormProps } from "../components/Form/Form";
 import { Props as FormInputProps } from "../components/Form/FormInput";
 import { Props as ButtonProps } from "../components/Button/Button";

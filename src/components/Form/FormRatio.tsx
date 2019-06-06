@@ -27,7 +27,7 @@ interface UnControlledProps extends PropsForAll {
 type Props = ControlledProps | UnControlledProps;
 
 type State = {
-  internalValue: number;
+  internalValue: number | undefined;
 };
 
 class FormRatio extends React.PureComponent<Props, State> {
@@ -60,7 +60,7 @@ class FormRatio extends React.PureComponent<Props, State> {
     } = this.props;
     const classes = cn(className);
 
-    const value: number = this.props.onChange
+    const value = this.props.onChange
       ? this.props.value
       : this.state.internalValue;
 

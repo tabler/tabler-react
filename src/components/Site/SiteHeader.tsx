@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Container from "../Container";
-import Site from "./Site";
+import SiteLogo from "./SiteLogo";
 import Notification from "../Notification";
 import AccountDropdown from "../AccountDropdown";
 
@@ -67,7 +67,7 @@ const SiteHeader = ({
         <div className="d-flex">
           {children || (
             <React.Fragment>
-              <Site.Logo href={href} alt={alt} src={imageURL} />
+              <SiteLogo href={href} alt={alt} src={imageURL} />
               <div className="d-flex order-lg-2 ml-auto">
                 {navItems}
                 {notificationsTray}

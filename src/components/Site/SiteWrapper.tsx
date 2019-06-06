@@ -1,7 +1,9 @@
 import * as React from "react";
 
 import Page from "../Page";
-import Site from "./Site";
+import SiteHeader from "./SiteHeader";
+import SiteFooter from "./SiteFooter";
+import SiteNav from "./SiteNav";
 
 import { Props as SiteHeaderProps } from "./SiteHeader";
 import { Props as SiteNavProps } from "./SiteNav";
@@ -43,14 +45,14 @@ class SiteWrapper extends React.PureComponent<Props, State> {
       ...headerProps,
       onMenuToggleClick: this.handleCollapseMobileMenu,
     };
-    const header = React.createElement(Site.Header, headerPropsWithToggleClick);
+    const header = React.createElement(SiteHeader, headerPropsWithToggleClick);
     const navPropsWithCollapse = {
       ...navProps,
       collapse: this.state.collapseMobileMenu,
       routerContextComponentType: routerContextComponentType,
     };
-    const nav = React.createElement(Site.Nav, navPropsWithCollapse);
-    const footer = React.createElement(Site.Footer, footerProps);
+    const nav = React.createElement(SiteNav, navPropsWithCollapse);
+    const footer = React.createElement(SiteFooter, footerProps);
 
     return (
       <Page>

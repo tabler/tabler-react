@@ -10,7 +10,7 @@ type Props = {
   active?: boolean;
   href?: string;
   to?: string;
-  onClick?: (event: React.MouseEvent<HTMLInputElement>) => any;
+  onClick?: (event: React.MouseEvent) => any;
 };
 
 function PricingCardButton({
@@ -31,7 +31,9 @@ function PricingCardButton({
     className
   );
 
-  const otherProps = {
+  const otherProps: Pick<Props, "href" | "to" | "onClick"> & {
+    role: string | undefined;
+  } = {
     href: undefined,
     to: undefined,
     role: undefined,

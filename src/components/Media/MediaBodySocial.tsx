@@ -1,7 +1,7 @@
 import * as React from "react";
 import List from "../List";
 import Icon from "../Icon";
-import Media from "./Media";
+import MediaBody from "./MediaBody";
 import SocialNetworksList from "../SocialNetworksList";
 import Tooltip from "../Tooltip";
 
@@ -79,7 +79,7 @@ function MediaBodySocial({
     );
   }
   return (
-    <Media.Body>
+    <MediaBody>
       <h4 className="m-0">{name}</h4>
       <p className="text-muted mb-0">{workTitle}</p>
       <SocialNetworksList className="mb-0 mt-2">
@@ -89,7 +89,7 @@ function MediaBodySocial({
         {skypeIcon}
       </SocialNetworksList>
       {children}
-    </Media.Body>
+    </MediaBody>
   );
 }
 

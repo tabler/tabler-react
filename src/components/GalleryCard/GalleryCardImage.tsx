@@ -29,7 +29,7 @@ function GalleryCardImage({
     className
   );
 
-  const componentOptionalProps = { href: undefined };
+  const componentOptionalProps: Pick<Props, "href"> = { href: undefined };
 
   if (href) {
     componentOptionalProps.href = href;

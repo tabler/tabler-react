@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from "react";
-import Page from "./Page";
+import PageContent from "./PageContent";
 import Grid from "../Grid";
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 
 function PageContentWithSidebar({ children, header, sidebar }: Props) {
   return (
-    <Page.Content>
+    <PageContent>
       {header}
       <Grid.Row>
         <Grid.Col lg={3} className="order-lg-1 mb-4">
@@ -20,7 +20,7 @@ function PageContentWithSidebar({ children, header, sidebar }: Props) {
         </Grid.Col>
         <Grid.Col lg={9}>{children}</Grid.Col>
       </Grid.Row>
-    </Page.Content>
+    </PageContent>
   );
 }
 

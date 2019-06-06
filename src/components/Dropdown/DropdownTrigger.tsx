@@ -42,7 +42,7 @@ interface Props {
   /**
    * Handle the onClick of this trigger
    */
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+  onClick?: (e: React.MouseEvent) => void;
   rootRef?: (el: HTMLElement) => void;
 }
 

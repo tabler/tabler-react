@@ -1,10 +1,10 @@
 import * as React from "react";
 
 import Container from "../../components/Container";
-import Page from "../../components/Page/Page";
-import Header from "../../components/Header/Header";
-import Icon from "../../components/Icon/Icon";
-import Button from "../../components/Button/Button";
+import Page from "../../components/Page";
+import Header from "../../components/Header";
+import Icon from "../../components/Icon";
+import Button from "../../components/Button";
 
 export type Props = {
   title?: string;
@@ -14,7 +14,7 @@ export type Props = {
 };
 
 function DefaultErrorPage(props: Props) {
-  const _onBackClick = (event: React.MouseEvent<HTMLInputElement>): boolean => {
+  const _onBackClick = (event: React.MouseEvent): boolean => {
     window.history.back();
     event.preventDefault();
     return true;

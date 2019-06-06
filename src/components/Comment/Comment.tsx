@@ -1,8 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
 import List from "../List";
-import Media from "../Media/Media";
-import Text from "../Text/Text";
+import Media from "../Media";
+import Text from "../Text";
 import CommentList from "./CommentList";
 import CommentReply from "./CommentReply";
 

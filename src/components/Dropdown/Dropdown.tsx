@@ -94,7 +94,7 @@ export type itemObject = {
   isDivider?: boolean;
   to?: string;
   RootComponent?: React.ElementType;
-  onClick?: (event: React.MouseEvent<any>) => any;
+  onClick?: (event: React.MouseEvent) => any;
 };
 type Props = DefaultProps;
 
@@ -106,7 +106,7 @@ class Dropdown extends React.Component<Props, State> {
   state = { isOpen: false };
 
   _handleTriggerOnClick = (
-    e: React.MouseEvent<HTMLElement>,
+    e: React.MouseEvent,
     o?: { onClick: React.MouseEventHandler }
   ) => {
     e.preventDefault();
@@ -117,7 +117,7 @@ class Dropdown extends React.Component<Props, State> {
   };
 
   _handleItemClick = (
-    e: React.MouseEvent<HTMLElement>,
+    e: React.MouseEvent,
     callback?: (e: React.MouseEvent<any>) => any
   ) => {
     this.setState({ isOpen: false });

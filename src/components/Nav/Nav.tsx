@@ -1,11 +1,13 @@
 import * as React from "react";
 import cn from "classnames";
+import NavItem from "./NavItem";
 
 export type subNavItem = {
   value: string;
   to?: string;
   icon?: string;
   LinkComponent?: React.ElementType;
+  useExact?: boolean;
 };
 
 type navItem = {
@@ -23,7 +25,7 @@ interface Props {
   className?: string;
   tabbed?: boolean;
   // eslint-disable-next-line no-use-before-define
-  items?: React.ReactElement<typeof Nav.Item>[];
+  items?: React.ReactElement<typeof NavItem>[];
   itemsObjects?: Array<navItem>;
   routerContextComponentType?: any;
 }
@@ -102,7 +104,7 @@ class Nav extends React.Component<Props, State> {
           {items ||
             (itemsObjects &&
               itemsObjects.map((a, i) => (
-                <Nav.Item
+                <NavItem
                   key={i}
                   icon={a.icon}
                   value={a.value}
