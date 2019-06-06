@@ -8,20 +8,24 @@ import PageCard from "./PageCard";
 import PageTitle from "./PageTitle";
 import PageMapHeader from "./PageMapHeader";
 
-// @ts-ignore
-Page.Main = PageMain;
-// @ts-ignore
-Page.Content = PageContent;
-// @ts-ignore
-Page.Header = PageHeader;
-// @ts-ignore
-Page.ContentWithSidebar = PageContentWithSidebar;
-// @ts-ignore
-Page.Card = PageCard;
-// @ts-ignore
-Page.Title = PageTitle;
-// @ts-ignore
-Page.MapHeader = PageMapHeader;
-// @ts-ignore
+const CompoundPage = Object.assign(Page, {
+  Main: PageMain,
+  Content: PageContent,
+  Header: PageHeader,
+  ContentWithSidebar: PageContentWithSidebar,
+  Card: PageCard,
+  Title: PageTitle,
+  MapHeader: PageMapHeader,
+});
 
-export { Page as default };
+export {
+  CompoundPage as default,
+  Page,
+  PageMain,
+  PageContent,
+  PageHeader,
+  PageContentWithSidebar,
+  PageCard,
+  PageTitle,
+  PageMapHeader,
+};

@@ -7,18 +7,22 @@ import MediaObject from "./MediaObject";
 import MediaBodySocial from "./MediaBodySocial";
 import MediaListItem from "./MediaListItem";
 
-// @ts-ignore
-Media.Body = MediaBody;
-// @ts-ignore
-Media.BodySocial = MediaBodySocial;
-// @ts-ignore
-Media.Heading = MediaHeading;
-// @ts-ignore
-Media.List = MediaList;
-// @ts-ignore
-Media.ListItem = MediaListItem;
-// @ts-ignore
-Media.Object = MediaObject;
-// @ts-ignore
+const CompoundMedia = Object.assign(Media, {
+  Body: MediaBody,
+  BodySocial: MediaBodySocial,
+  Heading: MediaHeading,
+  List: MediaList,
+  ListItem: MediaListItem,
+  Object: MediaObject,
+});
 
-export { Media as default };
+export {
+  CompoundMedia as default,
+  Media,
+  MediaBody,
+  MediaBodySocial,
+  MediaHeading,
+  MediaList,
+  MediaListItem,
+  MediaObject,
+};

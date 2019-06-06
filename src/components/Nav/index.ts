@@ -8,15 +8,19 @@ import NavSubItem from "./NavSubItem";
 import NavSubmenu from "./NavSubmenu";
 import NavSubmenuItem from "./NavSubmenuItem";
 
-// @ts-ignore
-Nav.Item = NavItem;
-// @ts-ignore
-Nav.SubItem = NavSubItem;
-// @ts-ignore
-Nav.Link = NavLink;
-// @ts-ignore
-Nav.Submenu = NavSubmenu;
-// @ts-ignore
-Nav.SubmenuItem = NavSubmenuItem;
+const CompoundNav = Object.assign(Nav, {
+  Item: NavItem,
+  SubItem: NavSubItem,
+  Link: NavLink,
+  Submenu: NavSubmenu,
+  SubmenuItem: NavSubmenuItem,
+});
 
-export { Nav as default };
+export {
+  CompoundNav as default,
+  Nav,
+  NavSubItem,
+  NavLink,
+  NavSubmenu,
+  NavSubmenuItem,
+};

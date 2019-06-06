@@ -5,14 +5,18 @@ import DropdownMenu from "./DropdownMenu";
 import DropdownItem from "./DropdownItem";
 import DropdownItemDivider from "./DropdownItemDivider";
 
-// @ts-ignore
-Dropdown.Trigger = DropdownTrigger;
-// @ts-ignore
-Dropdown.Menu = DropdownMenu;
-// @ts-ignore
-Dropdown.Item = DropdownItem;
-// @ts-ignore
-Dropdown.ItemDivider = DropdownItemDivider;
-// @ts-ignore
+const CompoundDropdown = Object.assign(Dropdown, {
+  Trigger: DropdownTrigger,
+  Menu: DropdownMenu,
+  Item: DropdownItem,
+  ItemDivider: DropdownItemDivider,
+});
 
-export { Dropdown as default };
+export {
+  CompoundDropdown as default,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  DropdownItemDivider,
+};

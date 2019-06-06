@@ -1,7 +1,8 @@
-import Notification, { Props } from "./Notification";
+import Notification from "./Notification";
 import NotificationTray from "./NotificationTray";
 
-// @ts-ignore
-Notification.Tray = NotificationTray;
+const CompoundNotification = Object.assign(Notification, {
+  Tray: NotificationTray,
+});
 
-export { Notification as default, Notification, NotificationTray };
+export { CompoundNotification as default, Notification, NotificationTray };

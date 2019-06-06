@@ -2,10 +2,9 @@ import Button from "./Button";
 import ButtonList from "./ButtonList";
 import ButtonDropdown from "./ButtonDropdown";
 
-// @ts-ignore
-Button.List = ButtonList;
+const CompoundButton = Object.assign(Button, {
+  List: ButtonList,
+  Dropdown: ButtonDropdown,
+});
 
-// @ts-ignore
-Button.Dropdown = ButtonDropdown;
-
-export { Button as default };
+export { CompoundButton as default, Button, ButtonList, ButtonDropdown };

@@ -28,59 +28,64 @@ import FormInputGroupText from "./FormInputGroupText";
 import FormMaskedInput from "./FormMaskedInput";
 import FormDatePicker from "./FormDatePicker";
 
-// @ts-ignore
-Form.Group = FormGroup;
-// @ts-ignore
-Form.Label = FormLabel;
-// @ts-ignore
-Form.Input = FormInput;
-// @ts-ignore
-Form.StaticText = FormStaticText;
-// @ts-ignore
-Form.Textarea = FormTextarea;
-// @ts-ignore
-Form.ImageCheck = FormImageCheck;
-// @ts-ignore
-Form.ImageCheckItem = FormImageCheckItem;
-// @ts-ignore
-Form.ColorCheck = FormColorCheck;
-// @ts-ignore
-Form.ColorCheckItem = FormColorCheckItem;
-// @ts-ignore
-Form.InputGroup = FormInputGroup;
-// @ts-ignore
-Form.Help = FormHelp;
-// @ts-ignore
-Form.Select = FormSelect;
-// @ts-ignore
-Form.Footer = FormFooter;
-// @ts-ignore
-Form.Ratio = FormRatio;
-// @ts-ignore
-Form.FieldSet = FormFieldSet;
-// @ts-ignore
-Form.SelectGroup = FormSelectGroup;
-// @ts-ignore
-Form.SelectGroupItem = FormSelectGroupItem;
-// @ts-ignore
-Form.Radio = FormRadio;
-// @ts-ignore
-Form.Checkbox = FormCheckbox;
-// @ts-ignore
-Form.FileInput = FormFileInput;
-// @ts-ignore
-Form.SwitchStack = FormSwitchStack;
-// @ts-ignore
-Form.Switch = FormSwitch;
-// @ts-ignore
-Form.InputGroupAppend = FormInputGroupAppend;
-// @ts-ignore
-Form.InputGroupPrepend = FormInputGroupPrepend;
-// @ts-ignore
-Form.InputGroupText = FormInputGroupText;
-// @ts-ignore
-Form.MaskedInput = FormMaskedInput;
-// @ts-ignore
-Form.DatePicker = FormDatePicker;
+const CompoundForm = Object.assign(Form, {
+  Group: FormGroup,
+  Label: FormLabel,
+  Input: FormInput,
+  StaticText: FormStaticText,
+  Textarea: FormTextarea,
+  ImageCheck: FormImageCheck,
+  ImageCheckItem: FormImageCheckItem,
+  ColorCheck: FormColorCheck,
+  ColorCheckItem: FormColorCheckItem,
+  InputGroup: FormInputGroup,
+  Help: FormHelp,
+  Select: FormSelect,
+  Footer: FormFooter,
+  Ratio: FormRatio,
+  FieldSet: FormFieldSet,
+  SelectGroup: FormSelectGroup,
+  SelectGroupItem: FormSelectGroupItem,
+  Radio: FormRadio,
+  Checkbox: FormCheckbox,
+  FileInput: FormFileInput,
+  SwitchStack: FormSwitchStack,
+  Switch: FormSwitch,
+  InputGroupAppend: FormInputGroupAppend,
+  InputGroupPrepend: FormInputGroupPrepend,
+  InputGroupText: FormInputGroupText,
+  MaskedInput: FormMaskedInput,
+  DatePicker: FormDatePicker,
+});
 
-export { Form as default };
+export {
+  CompoundForm as default,
+  Form,
+  FormGroup,
+  FormLabel,
+  FormInput,
+  FormStaticText,
+  FormTextarea,
+  FormImageCheck,
+  FormImageCheckItem,
+  FormColorCheck,
+  FormColorCheckItem,
+  FormInputGroup,
+  FormHelp,
+  FormSelect,
+  FormFooter,
+  FormRatio,
+  FormFieldSet,
+  FormSelectGroup,
+  FormSelectGroupItem,
+  FormRadio,
+  FormCheckbox,
+  FormFileInput,
+  FormSwitchStack,
+  FormSwitch,
+  FormInputGroupAppend,
+  FormInputGroupPrepend,
+  FormInputGroupText,
+  FormMaskedInput,
+  FormDatePicker,
+};
