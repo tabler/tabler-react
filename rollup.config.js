@@ -21,6 +21,7 @@ export default {
       format: "es",
     },
   ],
+  external: ["react", "react-dom"],
   plugins: [
     autoExternal(),
     resolve({ extensions }),
