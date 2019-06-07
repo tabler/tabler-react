@@ -1,38 +1,47 @@
 {
-  "name": "tabler-react-example",
-  "homepage": "https://tabler-react.com",
-  "version": "0.0.0",
+  "name": "example-v2",
+  "version": "0.1.0",
   "private": true,
-  "license": "MIT",
   "dependencies": {
+    "@types/jest": "24.0.13",
+    "@types/node": "12.0.5",
+    "@types/react": "16.8.19",
+    "@types/react-dom": "16.8.4",
+    "@types/react-router-dom": "^4.3.3",
     "d3-scale": "^3.0.0",
-    "formik": "^1.0.2",
-    "prop-types": "^15.6.1",
-    "react": "^16.2.0",
+    "formik": "^1.5.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
     "react-c3js": "^0.1.20",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.8.6",
     "react-google-maps": "^9.4.5",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "^2.0.3",
-    "react-simple-maps": "^0.12.0",
-    "react-syntax-highlighter": "^10.0.0",
-    "refractor": "^2.6.1",
-    "tabler-react": "link:.."
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "react-simple-maps": "^0.12.1",
+    "react-syntax-highlighter": "^10.3.0",
+    "refractor": "^2.9.0",
+    "tabler-react": "link:..",
+    "typescript": "3.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "watch": "react-scripts start --watch",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {},
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
