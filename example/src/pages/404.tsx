@@ -1,12 +1,10 @@
-// @flow
-
 import * as React from "react";
 
 import { Error404Page } from "tabler-react";
 
-type Props = {||};
+type Props = {};
 
-function Error404(props: Props): React.Node {
+function Error404(props: Props) {
   return <Error404Page />;
 }
 

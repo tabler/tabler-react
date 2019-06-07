@@ -1,5 +1,3 @@
-// @flow
-
 import React from "react";
 
 import {
@@ -10,13 +8,11 @@ import {
   Form,
   Avatar,
   Profile,
-  List,
   Media,
-  Text,
   Comment,
 } from "tabler-react";
 
-import SiteWrapper from "../SiteWrapper.react";
+import SiteWrapper from "../SiteWrapper";
 
 function ProfilePage() {
   return (

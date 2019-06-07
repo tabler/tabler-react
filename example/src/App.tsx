@@ -15,22 +15,22 @@ import {
   ProfilePage,
 } from "./pages";
 
-import HomePage from "./HomePage.react";
-import FormElementsPage from "./FormElementsPage.react";
-import PricingCardsPage from "./interface/PricingCardsPage.react";
-import CardsDesignPage from "./interface/CardsDesignPage.react";
-import StoreCardsPage from "./components/StoreCardsPage.react.js";
-import IconPage from "./components/IconPage.react.js";
-import ChartsPage from "./interface/ChartsPage.react";
-import GalleryPage from "./GalleryPage.react";
-import MapCardsPage from "./components/MapCardsPage.react";
-import BlogPage from "./components/BlogPage.react";
+import HomePage from "./HomePage";
+import FormElementsPage from "./FormElementsPage";
+import PricingCardsPage from "./interface/PricingCardsPage";
+import CardsDesignPage from "./interface/CardsDesignPage";
+import StoreCardsPage from "./components/StoreCardsPage";
+import IconPage from "./components/IconPage";
+import ChartsPage from "./interface/ChartsPage";
+import GalleryPage from "./GalleryPage";
+import MapCardsPage from "./components/MapCardsPage";
+import BlogPage from "./components/BlogPage";
 
 import "tabler-react/dist/Tabler.css";
 
-type Props = {||};
+type Props = {};
 
-function App(props: Props): React.Node {
+function App(props: Props) {
   return (
     <React.StrictMode>
       <Router>

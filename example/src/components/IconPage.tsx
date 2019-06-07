@@ -1,21 +1,19 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Grid, Card, Icon } from "tabler-react";
 
-import faIcons from "../data/icons/fa";
-import feIcons from "../data/icons/fe";
-import flagIcons from "../data/icons/flag";
-import paymentIcons from "../data/icons/payment";
-import SiteWrapper from "../SiteWrapper.react";
+import faIcons from "../data/icons/fa.json";
+import feIcons from "../data/icons/fe.json";
+import flagIcons from "../data/icons/flag.json";
+import paymentIcons from "../data/icons/payment.json";
+import SiteWrapper from "../SiteWrapper";
 
 const iconSets: Array<{
-  prefix: "fa" | "fe" | "flag" | "payment",
-  title: string,
-  icons: Array<string>,
-  description?: string,
-  link?: string,
+  prefix: "fa" | "fe" | "flag" | "payment";
+  title: string;
+  icons: Array<string>;
+  description?: string;
+  link?: string;
 }> = [
   {
     prefix: "fe",
@@ -35,7 +33,7 @@ const iconSets: Array<{
   { prefix: "payment", title: "Payments", icons: paymentIcons },
 ];
 
-function IconPage(): React.Node {
+function IconPage() {
   return (
     <SiteWrapper>
       <Page.Content title="Icons">
@@ -59,7 +57,8 @@ function IconPage(): React.Node {
                           rel="noopener noreferrer"
                         >
                           click here
-                        </a>.
+                        </a>
+                        .
                       </span>
                     )}
                   </p>

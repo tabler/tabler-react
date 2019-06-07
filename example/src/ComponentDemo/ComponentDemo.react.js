@@ -8,21 +8,21 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/styles/prism";
 import reactElementToJSXString from "./react-element-to-jsx-string";
 
-type Props = {|
-  +children: React.Element<any>,
-  +className?: string,
-  +asString?: string,
-|};
+// type Props = {|
+//   +children: React.Element<any>,
+//   +className?: string,
+//   +asString?: string,
+// |};
 
-type State = {|
-  codeOpen: boolean,
-|};
+// type State = {|
+//   codeOpen: boolean,
+// |};
 
-class ComponentDemo extends React.PureComponent<Props, State> {
+class ComponentDemo extends React.PureComponent {
   state = {
     codeOpen: false,
   };
-  handleSourceButtonOnClick = (e: SyntheticMouseEvent<HTMLInputElement>) => {
+  handleSourceButtonOnClick = e => {
     e.preventDefault();
     this.setState(s => ({ codeOpen: !s.codeOpen }));
   };

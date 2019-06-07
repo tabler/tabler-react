@@ -1,16 +1,14 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Grid, GalleryCard, Form } from "tabler-react";
 
-import SiteWrapper from "./SiteWrapper.react";
+import SiteWrapper from "./SiteWrapper";
 
-import json from "./data/Gallery.Items";
+import json from "./data/Gallery.Items.json";
 // TODO:Add GalleryCardList component to avoid insert extra className
 // TODO:Update Page.Header to additional components
 
-function GalleryPage(): React.Node {
+function GalleryPage() {
   const options = (
     <React.Fragment>
       <Form.Select className="w-auto mr-2">
@@ -30,7 +28,7 @@ function GalleryPage(): React.Node {
         />
 
         <Grid.Row className="row-cards">
-          {json.items.map((item, key) => (
+          {json.items.map((item: any, key: any) => (
             <Grid.Col sm={6} lg={4} key={key}>
               <GalleryCard>
                 <GalleryCard.Image

@@ -1,11 +1,9 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Card, Grid, Form, Button, Dropdown } from "tabler-react";
 
 import ComponentDemo from "./ComponentDemo";
-import SiteWrapper from "./SiteWrapper.react";
+import SiteWrapper from "./SiteWrapper";
 
 function FormElements() {
   return (
@@ -216,7 +214,7 @@ function FormElements() {
                             extended ZIP+4 code to determine address more
                             accurately.
                           </p>
-                          <p class="mb-0">
+                          <p className="mb-0">
                             <a href="#">USP ZIP codes lookup tools</a>
                           </p>
                         </React.Fragment>

@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import { NavLink, withRouter } from "react-router-dom";
 
@@ -12,40 +10,41 @@ import {
   RouterContextProvider,
 } from "tabler-react";
 
-import type { NotificationProps } from "tabler-react";
+type Props = {
+  children: React.ReactNode;
+};
 
-type Props = {|
-  +children: React.Node,
-|};
+type State = {
+  notificationsObjects: any[];
+};
 
-type State = {|
-  notificationsObjects: Array<NotificationProps>,
-|};
+type subNavItem = {
+  value: string;
+  to?: string;
+  icon?: string;
+  LinkComponent?: React.ElementType;
+  useExact?: boolean;
+};
 
-type subNavItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +LinkComponent?: React.ElementType,
-  +useExact?: boolean,
-|};
+type navItem = {
+  value: string;
+  to?: string;
+  icon?: string;
+  active?: boolean;
+  LinkComponent?: React.ElementType;
+  subItems?: Array<subNavItem>;
+  useExact?: boolean;
+};
 
-type navItem = {|
-  +value: string,
-  +to?: string,
-  +icon?: string,
-  +active?: boolean,
-  +LinkComponent?: React.ElementType,
-  +subItems?: Array<subNavItem>,
-  +useExact?: boolean,
-|};
+const withRouterNavLink = (to: string) =>
+  withRouter((props: any) => <NavLink {...props} to={to} />);
 
 const navBarItems: Array<navItem> = [
   {
     value: "Home",
     to: "/",
     icon: "home",
-    LinkComponent: withRouter(NavLink),
+    LinkComponent: withRouterNavLink("/"),
     useExact: true,
   },
   {
@@ -55,13 +54,17 @@ const navBarItems: Array<navItem> = [
       {
         value: "Cards Design",
         to: "/cards",
-        LinkComponent: withRouter(NavLink),
+        LinkComponent: withRouterNavLink("/cards"),
       },
-      { value: "Charts", to: "/charts", LinkComponent: withRouter(NavLink) },
+      {
+        value: "Charts",
+        to: "/charts",
+        LinkComponent: withRouterNavLink("/charts"),
+      },
       {
         value: "Pricing Cards",
         to: "/pricing-cards",
-        LinkComponent: withRouter(NavLink),
+        LinkComponent: withRouterNavLink("/pricing-cards"),
       },
     ],
   },
@@ -69,54 +72,106 @@ const navBarItems: Array<navItem> = [
     value: "Components",
     icon: "calendar",
     subItems: [
-      { value: "Maps", to: "/maps", LinkComponent: withRouter(NavLink) },
-      { value: "Icons", to: "/icons", LinkComponent: withRouter(NavLink) },
-      { value: "Store", to: "/store", LinkComponent: withRouter(NavLink) },
-      { value: "Blog", to: "/blog", LinkComponent: withRouter(NavLink) },
+      {
+        value: "Maps",
+        to: "/maps",
+        LinkComponent: withRouterNavLink("/maps"),
+      },
+      {
+        value: "Icons",
+        to: "/icons",
+        LinkComponent: withRouterNavLink("/icons"),
+      },
+      {
+        value: "Store",
+        to: "/store",
+        LinkComponent: withRouterNavLink("/store"),
+      },
+      {
+        value: "Blog",
+        to: "/blog",
+        LinkComponent: withRouterNavLink("/blog"),
+      },
     ],
   },
   {
     value: "Pages",
     icon: "file",
     subItems: [
-      { value: "Profile", to: "/profile", LinkComponent: withRouter(NavLink) },
-      { value: "Login", to: "/login", LinkComponent: withRouter(NavLink) },
+      {
+        value: "Profile",
+        to: "/profile",
+        LinkComponent: withRouterNavLink("/profile"),
+      },
+      {
+        value: "Login",
+        to: "/login",
+        LinkComponent: withRouterNavLink("/login"),
+      },
       {
         value: "Register",
         to: "/register",
-        LinkComponent: withRouter(NavLink),
+        LinkComponent: withRouterNavLink("/register"),
       },
       {
         value: "Forgot password",
         to: "/forgot-password",
-        LinkComponent: withRouter(NavLink),
+        LinkComponent: withRouterNavLink("/forgot-password"),
       },
-      { value: "400 error", to: "/400", LinkComponent: withRouter(NavLink) },
-      { value: "401 error", to: "/401", LinkComponent: withRouter(NavLink) },
-      { value: "403 error", to: "/403", LinkComponent: withRouter(NavLink) },
-      { value: "404 error", to: "/404", LinkComponent: withRouter(NavLink) },
-      { value: "500 error", to: "/500", LinkComponent: withRouter(NavLink) },
-      { value: "503 error", to: "/503", LinkComponent: withRouter(NavLink) },
-      { value: "Email", to: "/email", LinkComponent: withRouter(NavLink) },
+      {
+        value: "400 error",
+        to: "/400",
+        LinkComponent: withRouterNavLink("/400"),
+      },
+      {
+        value: "401 error",
+        to: "/401",
+        LinkComponent: withRouterNavLink("/401"),
+      },
+      {
+        value: "403 error",
+        to: "/403",
+        LinkComponent: withRouterNavLink("/403"),
+      },
+      {
+        value: "404 error",
+        to: "/404",
+        LinkComponent: withRouterNavLink("/404"),
+      },
+      {
+        value: "500 error",
+        to: "/500",
+        LinkComponent: withRouterNavLink("/500"),
+      },
+      {
+        value: "503 error",
+        to: "/503",
+        LinkComponent: withRouterNavLink("/503"),
+      },
+      {
+        value: "Email",
+        to: "/email",
+        LinkComponent: withRouterNavLink("/email"),
+      },
       {
         value: "Empty page",
         to: "/empty-page",
-        LinkComponent: withRouter(NavLink),
+        LinkComponent: withRouterNavLink("/empty-page"),
       },
-      { value: "RTL", to: "/rtl", LinkComponent: withRouter(NavLink) },
+      { value: "RTL", to: "/rtl", LinkComponent: withRouterNavLink("/rtl") },
     ],
   },
   {
     value: "Forms",
     to: "/form-elements",
     icon: "check-square",
-    LinkComponent: withRouter(NavLink),
+    LinkComponent: withRouterNavLink("/form-elements"),
   },
   {
     value: "Gallery",
     to: "/gallery",
     icon: "image",
-    LinkComponent: withRouter(NavLink),
+    LinkComponent: withRouterNavLink("/gallery"),
   },
   {
     icon: "file-text",
@@ -180,7 +235,7 @@ class SiteWrapper extends React.Component<Props, State> {
     ],
   };
 
-  render(): React.Node {
+  render() {
     const notificationsObjects = this.state.notificationsObjects || [];
     const unreadCount = this.state.notificationsObjects.reduce(
       (a, v) => a || v.unread,
@@ -231,17 +286,33 @@ class SiteWrapper extends React.Component<Props, State> {
           accountDropdown: accountDropdownProps,
         }}
         navProps={{ itemsObjects: navBarItems }}
-        routerContextComponentType={withRouter(RouterContextProvider)}
+        routerContextComponentType={withRouter(RouterContextProvider as any)}
         footerProps={{
           links: [
-            <a href="#">First Link</a>,
-            <a href="#">Second Link</a>,
-            <a href="#">Third Link</a>,
-            <a href="#">Fourth Link</a>,
-            <a href="#">Five Link</a>,
-            <a href="#">Sixth Link</a>,
-            <a href="#">Seventh Link</a>,
-            <a href="#">Eigth Link</a>,
+            <a href="#" key="1">
+              First Link
+            </a>,
+            <a href="#" key="2">
+              Second Link
+            </a>,
+            <a href="#" key="3">
+              Third Link
+            </a>,
+            <a href="#" key="4">
+              Fourth Link
+            </a>,
+            <a href="#" key="5">
+              Five Link
+            </a>,
+            <a href="#" key="6">
+              Sixth Link
+            </a>,
+            <a href="#" key="7">
+              Seventh Link
+            </a>,
+            <a href="#" key="8">
+              Eigth Link
+            </a>,
           ],
           note:
             "Premium and Open Source dashboard template with responsive and high quality UI. For Free!",

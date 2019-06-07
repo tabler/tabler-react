@@ -1,13 +1,11 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Grid, Card, colors } from "tabler-react";
 
 import C3Chart from "react-c3js";
 
-import SiteWrapper from "../SiteWrapper.react";
-function ChartsPage(): React.Node {
+import SiteWrapper from "../SiteWrapper";
+function ChartsPage() {
   const cards = [
     {
       title: "Employment Growth",

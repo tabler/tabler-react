@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 
 import {
@@ -12,13 +10,13 @@ import {
   Timeline,
 } from "tabler-react";
 
-import SiteWrapper from "../SiteWrapper.react";
+import SiteWrapper from "../SiteWrapper";
 
 import GoogleMap from "../GoogleMap";
 
 import ReactSimpleMap from "../ReactSimpleMap";
 
-function MapCardsPage(): React.Node {
+function MapCardsPage() {
   return (
     <SiteWrapper>
       <div className="my-3 my-md-5">

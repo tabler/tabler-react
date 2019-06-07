@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import {
   ComposableMap,
@@ -19,23 +17,23 @@ const wrapperStyles = {
 };
 
 type State = {
-  origin: { x: number, y: number },
-  content: string,
+  origin: { x: number; y: number };
+  content: string;
 };
 
 const popScale = scaleLinear()
   .domain([0, 100000000, 1400000000])
   .range(["#CFD8DC", "#607D8B", "#37474F"]);
 
-class ReactSimpleMap extends React.PureComponent<void, State> {
+class ReactSimpleMap extends React.PureComponent<any, State> {
   state = {
     origin: { x: 0, y: 0 },
     content: "",
   };
 
   handleMove = (
-    geography: { properties: { name: string, pop_est: string } },
-    evt: SyntheticMouseEvent<>
+    geography: { properties: { name: string; pop_est: string } },
+    evt: React.MouseEvent
   ): void => {
     const x = evt.clientX;
     const y = evt.clientY + window.pageYOffset;
@@ -82,8 +80,8 @@ class ReactSimpleMap extends React.PureComponent<void, State> {
         >
           <ZoomableGroup center={[0, 20]}>
             <Geographies geography={data}>
-              {(geographies, projection) =>
-                geographies.map((geography, i) => (
+              {(geographies: any, projection: any) =>
+                geographies.map((geography: any, i: any) => (
                   <Geography
                     key={i}
                     geography={geography}

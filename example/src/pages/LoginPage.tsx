@@ -1,12 +1,10 @@
-// @flow
-
 import * as React from "react";
 import { Formik } from "formik";
 import { LoginPage as TablerLoginPage } from "tabler-react";
 
-type Props = {||};
+type Props = {};
 
-function LoginPage(props: Props): React.Node {
+function LoginPage(props: Props) {
   return (
     <Formik
       initialValues={{
@@ -15,7 +13,7 @@ function LoginPage(props: Props): React.Node {
       }}
       validate={values => {
         // same as above, but feel free to move this into a class method now.
-        let errors = {};
+        let errors: any = {};
         if (!values.email) {
           errors.email = "Required";
         } else if (

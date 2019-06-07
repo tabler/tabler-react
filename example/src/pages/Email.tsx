@@ -1,5 +1,3 @@
-// @flow
-
 import React from "react";
 import {
   Page,
@@ -11,7 +9,7 @@ import {
   List,
   Form,
 } from "tabler-react";
-import SiteWrapper from "../SiteWrapper.react";
+import SiteWrapper from "../SiteWrapper";
 
 function Email() {
   return (

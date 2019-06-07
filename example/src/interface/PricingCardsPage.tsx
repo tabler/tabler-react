@@ -1,12 +1,10 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Grid, PricingCard } from "tabler-react";
 
-import SiteWrapper from "../SiteWrapper.react";
+import SiteWrapper from "../SiteWrapper";
 
-function PricingCardsPage(): React.Node {
+function PricingCardsPage() {
   return (
     <SiteWrapper>
       <Page.Content title="Pricing cards">

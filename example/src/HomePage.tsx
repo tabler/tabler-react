@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 
 import {
@@ -23,7 +21,7 @@ import {
 
 import C3Chart from "react-c3js";
 
-import SiteWrapper from "./SiteWrapper.react";
+import SiteWrapper from "./SiteWrapper";
 
 function Home() {
   return (
@@ -142,7 +140,7 @@ function Home() {
                 }}
                 tooltip={{
                   format: {
-                    title: function(x) {
+                    title: function(x: any) {
                       return "";
                     },
                   },
@@ -627,7 +625,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x) {
+                          title: function(x: any) {
                             return "";
                           },
                         },
@@ -689,7 +687,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x) {
+                          title: function(x: any) {
                             return "";
                           },
                         },
@@ -751,7 +749,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x) {
+                          title: function(x: any) {
                             return "";
                           },
                         },
@@ -813,7 +811,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x) {
+                          title: function(x: any) {
                             return "";
                           },
                         },

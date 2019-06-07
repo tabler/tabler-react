@@ -1,11 +1,9 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Grid, BlogCard } from "tabler-react";
-import SiteWrapper from "../SiteWrapper.react";
+import SiteWrapper from "../SiteWrapper";
 
-function BlogPage(): React.Node {
+function BlogPage() {
   return (
     <SiteWrapper>
       <Page.Content title="Blog Component">

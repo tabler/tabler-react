@@ -1,12 +1,10 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Grid, StoreCard, Table, Card, Badge } from "tabler-react";
 
-import SiteWrapper from "../SiteWrapper.react";
+import SiteWrapper from "../SiteWrapper";
 
-function StoreCardsPage(): React.Node {
+function StoreCardsPage() {
   return (
     <SiteWrapper>
       <Page.Content title="Store Components">
@@ -142,10 +140,8 @@ function StoreCardsPage(): React.Node {
                       />
                     </Table.Col>
                     <Table.Col>
-                      Xiaomi Mi A1 64GB Black<Badge color="default">
-                        {" "}
-                        New{" "}
-                      </Badge>
+                      Xiaomi Mi A1 64GB Black
+                      <Badge color="default"> New </Badge>
                     </Table.Col>
                     <Table.Col className="text-right text-muted d-none d-md-table-cell text-nowrap">
                       63 reviews

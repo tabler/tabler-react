@@ -1,12 +1,10 @@
-// @flow
-
 import * as React from "react";
 
 import { Page, Grid, Card, Button, Form, Dimmer } from "tabler-react";
 
-import SiteWrapper from "../SiteWrapper.react";
+import SiteWrapper from "../SiteWrapper";
 
-function CardsDesignPage(): React.Node {
+function CardsDesignPage() {
   return (
     <SiteWrapper>
       <Page.Content>

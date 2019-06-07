@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
@@ -16,16 +14,16 @@ const MapComponent: React.ElementType = withScriptjs(
     <ReactGoogleMap
       defaultZoom={8}
       defaultCenter={{ lat: -34.397, lng: 150.644 }}
-      disableDefaultUI={true}
+      // disableDefaultUI={true}
     />
   ))
 );
 
-type Props = {|
-  +blackAndWhite?: boolean,
-|};
+type Props = {
+  blackAndWhite?: boolean;
+};
 
-function GoogleMap({ blackAndWhite }: Props): React.Node {
+function GoogleMap({ blackAndWhite }: Props) {
   const containerClasses = cn("GoogleMapContainer", { blackAndWhite });
   return (
     <MapComponent

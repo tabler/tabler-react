@@ -1,12 +1,10 @@
-// @flow
-
 import * as React from "react";
 
 import { RegisterPage as TablerRegisterPage } from "tabler-react";
 
-type Props = {||};
+type Props = {};
 
-function RegisterPage(props: Props): React.Node {
+function RegisterPage(props: Props) {
   return <TablerRegisterPage />;
 }
 
