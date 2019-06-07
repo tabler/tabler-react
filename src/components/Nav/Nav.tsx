@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import NavItem from "./NavItem";
 
@@ -38,22 +38,25 @@ type State = {
   pathName?: string | null;
 };
 
-class Nav extends React.Component<Props, State> {
-  state = {
-    pathName: null,
+const Nav = function({
+  className,
+  children,
+  tabbed = true,
+  items,
+  itemsObjects,
+  routerContextComponentType,
+}: Props) {
+  const [pathName, setPathName] = useState("");
+
+  const routerCallback = (location: { pathname: string }): any => {
+    setPathName(location.pathname);
   };
 
-  routerCallback = (location: { pathname: string }): any => {
-    this.setState({ pathName: location.pathname });
-  };
-
-  computeActive(
+  const computeActive = (
     initialValue?: boolean,
     to?: string,
     subItems?: Array<subNavItem>
-  ): boolean {
-    const { pathName } = this.state;
-
+  ): boolean => {
     if (
       initialValue !== null &&
       initialValue !== undefined &&
@@ -78,52 +81,42 @@ class Nav extends React.Component<Props, State> {
     }
 
     return false;
-  }
+  };
 
-  render() {
-    const {
-      className,
-      children,
-      tabbed = true,
-      items,
-      itemsObjects,
-      routerContextComponentType,
-    } = this.props;
-    const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
+  const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
 
-    let element: null | React.ReactElement<any> = null;
-    if (routerContextComponentType) {
-      const routerContextComponentFactory = React.createFactory(
-        routerContextComponentType
-      );
-      element = routerContextComponentFactory({
-        callback: this.routerCallback,
-      } as any);
-    }
-
-    const _items =
-      items ||
-      (itemsObjects &&
-        itemsObjects.map(({ subItems, active, ...rest }, i) => (
-          <NavItem
-            key={i}
-            hasSubNav={!!subItems}
-            subItemsObjects={subItems}
-            active={this.computeActive(active, rest.to, subItems)}
-            {...rest}
-          />
-        )));
-    const _children = _items || children;
-
-    return (
-      <React.Fragment>
-        {element}
-        <ul className={classes}>{_children}</ul>
-      </React.Fragment>
+  let element: null | React.ReactElement<any> = null;
+  if (routerContextComponentType) {
+    const routerContextComponentFactory = React.createFactory(
+      routerContextComponentType
     );
+    element = routerContextComponentFactory({
+      callback: routerCallback,
+    } as any);
   }
-}
 
-// Nav.Item = NavItem;
+  const _items =
+    items ||
+    (itemsObjects &&
+      itemsObjects.map(({ subItems, active, ...rest }, i) => (
+        <NavItem
+          key={i}
+          hasSubNav={!!subItems}
+          subItemsObjects={subItems}
+          active={computeActive(active, rest.to, subItems)}
+          {...rest}
+        />
+      )));
+  const _children = _items || children;
+
+  return (
+    <React.Fragment>
+      {element}
+      <ul className={classes}>{_children}</ul>
+    </React.Fragment>
+  );
+};
+
+Nav.displayName = "Nav";
 
 export default Nav;

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import NavSubItem from "./NavSubItem";
 import NavLink from "./NavLink";
@@ -45,130 +45,125 @@ type State = {
 /**
  * A NavItem with react-popper powered subIems Dropdowns
  */
-class NavItem extends React.Component<Props, State> {
-  displayName = "Nav.Item";
+const NavItem = function({
+  children,
+  LinkComponent,
+  value,
+  className,
+  to,
+  type = "li",
+  icon,
+  hasSubNav: forcedHasSubNav,
+  active,
+  subItems,
+  subItemsObjects,
+  useExact,
+  position = "bottom-start",
+  onClick,
+}: Props) {
+  const [isOpen, setIsOpen] = useState(false);
 
-  state = {
-    isOpen: false,
-  };
-
-  _handleOnClick = (): void => {
-    if (this.props.hasSubNav) {
-      this.setState(s => ({ isOpen: !s.isOpen }));
+  const _handleOnClick = (): void => {
+    if (hasSubNav) {
+      setIsOpen(!isOpen);
     }
-    if (this.props.onClick) this.props.onClick();
+    if (onClick) onClick();
   };
 
-  render() {
-    const {
-      children,
-      LinkComponent,
-      value,
-      className,
-      to,
-      type = "li",
-      icon,
-      hasSubNav: forcedHasSubNav,
-      active,
-      subItems,
-      subItemsObjects,
-      useExact,
-      position = "bottom-start",
-    }: Props = this.props;
+  const hasSubNav = forcedHasSubNav || !!subItems || !!subItemsObjects;
 
-    const hasSubNav = forcedHasSubNav || !!subItems || !!subItemsObjects;
-
-    const navLink =
-      (typeof children === "string" || value) && hasSubNav ? (
-        <Reference>
-          {({ ref }: ReferenceChildrenProps) => (
-            <NavLink
-              className={className}
-              to={to}
-              icon={icon}
-              RootComponent={LinkComponent}
-              hasSubNav={hasSubNav}
-              active={active}
-              rootRef={ref}
-              useExact={useExact}
-            >
-              {!hasSubNav && typeof children === "string" ? children : value}
-            </NavLink>
-          )}
-        </Reference>
-      ) : (
-        <NavLink
-          className={className}
-          to={to}
-          icon={icon}
-          RootComponent={LinkComponent}
-          hasSubNav={hasSubNav}
-          active={active}
-          useExact={useExact}
-        >
-          {!hasSubNav && typeof children === "string" ? children : value}
-        </NavLink>
-      );
-
-    const childrenForAll = (
-      <React.Fragment>
-        {navLink}
-        {typeof children !== "string" && !hasSubNav && children}
-        {hasSubNav && (
-          <Dropdown.Menu arrow show={this.state.isOpen} position={position}>
-            {subItems ||
-              (subItemsObjects &&
-                subItemsObjects.map((a, i) => (
-                  <NavSubItem
-                    key={i}
-                    value={a.value}
-                    to={a.to}
-                    icon={a.icon}
-                    LinkComponent={a.LinkComponent}
-                    useExact={a.useExact}
-                  />
-                ))) ||
-              children}
-          </Dropdown.Menu>
+  const navLink =
+    (typeof children === "string" || value) && hasSubNav ? (
+      <Reference>
+        {({ ref }: ReferenceChildrenProps) => (
+          <NavLink
+            className={className}
+            to={to}
+            icon={icon}
+            RootComponent={LinkComponent}
+            hasSubNav={hasSubNav}
+            active={active}
+            rootRef={ref}
+            useExact={useExact}
+          >
+            {!hasSubNav && typeof children === "string" ? children : value}
+          </NavLink>
         )}
-      </React.Fragment>
+      </Reference>
+    ) : (
+      <NavLink
+        className={className}
+        to={to}
+        icon={icon}
+        RootComponent={LinkComponent}
+        hasSubNav={hasSubNav}
+        active={active}
+        useExact={useExact}
+      >
+        {!hasSubNav && typeof children === "string" ? children : value}
+      </NavLink>
     );
 
-    const wrapperClasses = cn({
-      "nav-item": true,
-      show: this.state.isOpen,
-    });
+  const childrenForAll = (
+    <React.Fragment>
+      {navLink}
+      {typeof children !== "string" && !hasSubNav && children}
+      {hasSubNav && (
+        <Dropdown.Menu arrow show={isOpen} position={position}>
+          {subItems ||
+            (subItemsObjects &&
+              subItemsObjects.map((a, i) => (
+                <NavSubItem
+                  key={i}
+                  value={a.value}
+                  to={a.to}
+                  icon={a.icon}
+                  LinkComponent={a.LinkComponent}
+                  useExact={a.useExact}
+                />
+              ))) ||
+            children}
+        </Dropdown.Menu>
+      )}
+    </React.Fragment>
+  );
 
-    const wrappedChildren =
-      type === "div" ? (
-        <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
-          {({ setElementRef }: any) => (
-            <div
-              className={wrapperClasses}
-              onClick={this._handleOnClick}
-              ref={setElementRef}
-            >
-              {childrenForAll}
-            </div>
-          )}
-        </ClickOutside>
-      ) : (
-        <ClickOutside onOutsideClick={() => this.setState({ isOpen: false })}>
-          {({ setElementRef }: any) => (
-            <li
-              className={wrapperClasses}
-              onClick={this._handleOnClick}
-              ref={setElementRef}
-            >
-              {childrenForAll}
-            </li>
-          )}
-        </ClickOutside>
-      );
+  const wrapperClasses = cn({
+    "nav-item": true,
+    show: isOpen,
+  });
 
-    return hasSubNav ? <Manager>{wrappedChildren}</Manager> : wrappedChildren;
-  }
-}
+  const wrappedChildren =
+    type === "div" ? (
+      <ClickOutside onOutsideClick={() => setIsOpen(false)}>
+        {({ setElementRef }: any) => (
+          <div
+            className={wrapperClasses}
+            onClick={_handleOnClick}
+            ref={setElementRef}
+          >
+            {childrenForAll}
+          </div>
+        )}
+      </ClickOutside>
+    ) : (
+      <ClickOutside onOutsideClick={() => setIsOpen(false)}>
+        {({ setElementRef }: any) => (
+          <li
+            className={wrapperClasses}
+            onClick={_handleOnClick}
+            ref={setElementRef}
+          >
+            {childrenForAll}
+          </li>
+        )}
+      </ClickOutside>
+    );
+
+  return hasSubNav ? <Manager>{wrappedChildren}</Manager> : wrappedChildren;
+};
+
+NavItem.displayName = "Nav.Item";
 
 /** @component */
 export default NavItem;

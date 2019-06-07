@@ -3,7 +3,7 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
 
-import Nav from "./Nav";
+import Nav from "./";
 import examples from "./Nav.examples.md";
 
 // @ts-ignore
