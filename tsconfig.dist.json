@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "dist/types/",
+    "outFile": "dist/types/index.d.ts",
+    "declarationMap": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["src"]
+}
