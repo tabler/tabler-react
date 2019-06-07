@@ -28,35 +28,63 @@ import FormInputGroupText from "./FormInputGroupText";
 import FormMaskedInput from "./FormMaskedInput";
 import FormDatePicker from "./FormDatePicker";
 
-const CompoundForm = Object.assign(Form, {
-  Group: FormGroup,
-  Label: FormLabel,
-  Input: FormInput,
-  StaticText: FormStaticText,
-  Textarea: FormTextarea,
-  ImageCheck: FormImageCheck,
-  ImageCheckItem: FormImageCheckItem,
-  ColorCheck: FormColorCheck,
-  ColorCheckItem: FormColorCheckItem,
-  InputGroup: FormInputGroup,
-  Help: FormHelp,
-  Select: FormSelect,
-  Footer: FormFooter,
-  Ratio: FormRatio,
-  FieldSet: FormFieldSet,
-  SelectGroup: FormSelectGroup,
-  SelectGroupItem: FormSelectGroupItem,
-  Radio: FormRadio,
-  Checkbox: FormCheckbox,
-  FileInput: FormFileInput,
-  SwitchStack: FormSwitchStack,
-  Switch: FormSwitch,
-  InputGroupAppend: FormInputGroupAppend,
-  InputGroupPrepend: FormInputGroupPrepend,
-  InputGroupText: FormInputGroupText,
-  MaskedInput: FormMaskedInput,
-  DatePicker: FormDatePicker,
-});
+const CompoundForm = Form as typeof Form & {
+  Group: typeof FormGroup;
+  Label: typeof FormLabel;
+  Input: typeof FormInput;
+  StaticText: typeof FormStaticText;
+  Textarea: typeof FormTextarea;
+  ImageCheck: typeof FormImageCheck;
+  ImageCheckItem: typeof FormImageCheckItem;
+  ColorCheck: typeof FormColorCheck;
+  ColorCheckItem: typeof FormColorCheckItem;
+  InputGroup: typeof FormInputGroup;
+  Help: typeof FormHelp;
+  Select: typeof FormSelect;
+  Footer: typeof FormFooter;
+  Ratio: typeof FormRatio;
+  FieldSet: typeof FormFieldSet;
+  SelectGroup: typeof FormSelectGroup;
+  SelectGroupItem: typeof FormSelectGroupItem;
+  Radio: typeof FormRadio;
+  Checkbox: typeof FormCheckbox;
+  FileInput: typeof FormFileInput;
+  SwitchStack: typeof FormSwitchStack;
+  Switch: typeof FormSwitch;
+  InputGroupAppend: typeof FormInputGroupAppend;
+  InputGroupPrepend: typeof FormInputGroupPrepend;
+  InputGroupText: typeof FormInputGroupText;
+  MaskedInput: typeof FormMaskedInput;
+  DatePicker: typeof FormDatePicker;
+};
+
+CompoundForm.Group = FormGroup;
+CompoundForm.Label = FormLabel;
+CompoundForm.Input = FormInput;
+CompoundForm.StaticText = FormStaticText;
+CompoundForm.Textarea = FormTextarea;
+CompoundForm.ImageCheck = FormImageCheck;
+CompoundForm.ImageCheckItem = FormImageCheckItem;
+CompoundForm.ColorCheck = FormColorCheck;
+CompoundForm.ColorCheckItem = FormColorCheckItem;
+CompoundForm.InputGroup = FormInputGroup;
+CompoundForm.Help = FormHelp;
+CompoundForm.Select = FormSelect;
+CompoundForm.Footer = FormFooter;
+CompoundForm.Ratio = FormRatio;
+CompoundForm.FieldSet = FormFieldSet;
+CompoundForm.SelectGroup = FormSelectGroup;
+CompoundForm.SelectGroupItem = FormSelectGroupItem;
+CompoundForm.Radio = FormRadio;
+CompoundForm.Checkbox = FormCheckbox;
+CompoundForm.FileInput = FormFileInput;
+CompoundForm.SwitchStack = FormSwitchStack;
+CompoundForm.Switch = FormSwitch;
+CompoundForm.InputGroupAppend = FormInputGroupAppend;
+CompoundForm.InputGroupPrepend = FormInputGroupPrepend;
+CompoundForm.InputGroupText = FormInputGroupText;
+CompoundForm.MaskedInput = FormMaskedInput;
+CompoundForm.DatePicker = FormDatePicker;
 
 export {
   CompoundForm as default,

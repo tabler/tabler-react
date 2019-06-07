@@ -31,7 +31,7 @@ interface LeadingProps {
   leadingLoose?: boolean;
 }
 
-interface TextProps
+export interface TextProps
   extends AlignProps,
     TransformProps,
     TrackingProps,

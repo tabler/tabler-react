@@ -18,5 +18,5 @@ export interface FormEvents {
   /**
    * Handle Form Submit Event
    */
-  onSubmit?: (event: React.FormEvent) => any;
+  onSubmit?: (event?: React.FormEvent<any> | undefined) => any;
 }

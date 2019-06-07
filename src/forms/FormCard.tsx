@@ -10,7 +10,7 @@ interface Props {
   method?: string;
   title: string;
   buttonText: string;
-  onSubmit?: React.FormEventHandler;
+  onSubmit?: (e?: React.FormEvent) => any;
 }
 
 function FormCard({

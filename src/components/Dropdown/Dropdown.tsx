@@ -12,7 +12,7 @@ import { Manager } from "react-popper";
 interface TriggerElement {
   onClick: (e: React.MouseEvent) => any;
 }
-interface DefaultProps {
+export interface DefaultProps {
   children?: React.ReactNode;
   className?: string;
   /**
