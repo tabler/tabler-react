@@ -7,6 +7,7 @@ import Icon from "../Icon";
 
 import { Reference } from "react-popper";
 import { ReferenceChildrenProps } from "react-popper";
+import DropdownContext from "./DropdownContext";
 
 interface Props {
   children?: React.ReactNode;
@@ -41,6 +42,7 @@ interface Props {
   isOption?: boolean;
   /**
    * Handle the onClick of this trigger
+   * @deprecated use context
    */
   onClick?: (e: React.MouseEvent) => void;
   rootRef?: (el: HTMLElement) => void;
@@ -59,9 +61,10 @@ function DropdownTrigger({
   color,
   isNavLink,
   isOption,
-  onClick,
   rootRef,
 }: Props) {
+  const [isOpen, setIsOpen] = React.useContext(DropdownContext);
+
   const classes = cn(
     { "dropdown-toggle": toggle, "nav-link": isNavLink },
     className
@@ -82,7 +85,7 @@ function DropdownTrigger({
   return type === "link" ? (
     <Reference>
       {({ ref }: ReferenceChildrenProps) => (
-        <a className={classes} onClick={onClick} ref={ref}>
+        <a className={classes} onClick={() => setIsOpen(!isOpen)} ref={ref}>
           {childrenFragment}
         </a>
       )}
@@ -95,7 +98,7 @@ function DropdownTrigger({
           color={color}
           isDropdownToggle
           isOption={isOption}
-          onClick={onClick}
+          onClick={() => setIsOpen(!isOpen)}
           rootRef={ref}
         >
           {childrenFragment}

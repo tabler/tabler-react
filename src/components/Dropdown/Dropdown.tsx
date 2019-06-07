@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { Manager } from "react-popper";
 import cn from "classnames";
 import DropdownTrigger from "./DropdownTrigger";
 import DropdownMenu from "./DropdownMenu";
@@ -6,8 +7,8 @@ import DropdownItem from "./DropdownItem";
 import DropdownItemDivider from "./DropdownItemDivider";
 
 import ClickOutside from "../../helpers/ClickOutside";
-
-import { Manager } from "react-popper";
+import withDropdownProvider from "./withDropdownProvider";
+import DropdownContext from "./DropdownContext";
 
 interface TriggerElement {
   onClick: (e: React.MouseEvent) => any;
@@ -106,18 +107,7 @@ const Dropdown = function({
   flex = false,
   ...props
 }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const _handleTriggerOnClick = (
-    e: React.MouseEvent<Element>,
-    o?: { onClick: React.MouseEventHandler }
-  ) => {
-    e.preventDefault();
-    setIsOpen(!isOpen);
-    if (o && o.onClick) {
-      o.onClick(e);
-    }
-  };
+  const [isOpen, setIsOpen] = useContext(DropdownContext);
 
   const _handleItemClick = (
     e: React.MouseEvent<HTMLElement>,
@@ -147,11 +137,7 @@ const Dropdown = function({
 
   const trigger = (() => {
     if (props.trigger) {
-      return React.cloneElement(props.trigger, {
-        onClick: (e: React.MouseEvent<any>) =>
-          _handleTriggerOnClick(e, props.trigger),
-      });
-      // return props.trigger;
+      return props.trigger;
     }
     if (props.icon || props.triggerContent || props.toggle) {
       const {
@@ -173,7 +159,6 @@ const Dropdown = function({
           isOption={isOption}
           color={color}
           toggle={toggle}
-          onClick={_handleTriggerOnClick}
         >
           {triggerContent}
         </DropdownTrigger>
@@ -186,21 +171,15 @@ const Dropdown = function({
     if (props.items) return props.items;
     if (props.itemsObject) {
       const { itemsObject, itemsRootComponent } = props;
-      return itemsObject.map((item, i) =>
+      return itemsObject.map(({ RootComponent, onClick, ...item }, i) =>
         item.isDivider ? (
-          <Dropdown.ItemDivider key={i} />
+          <DropdownItemDivider key={i} />
         ) : (
-          <Dropdown.Item
-            icon={item.icon}
-            badge={item.badge}
-            badgeType={item.badgeType}
-            value={item.value}
+          <DropdownItem
             key={i}
-            to={item.to}
-            RootComponent={item.RootComponent || itemsRootComponent}
-            onClick={(e: React.MouseEvent<any>) =>
-              _handleItemClick(e, item.onClick)
-            }
+            RootComponent={RootComponent || itemsRootComponent}
+            onClick={(e: React.MouseEvent<any>) => _handleItemClick(e, onClick)}
+            {...item}
           />
         )
       );
@@ -209,7 +188,7 @@ const Dropdown = function({
   })();
 
   const menu = (() => {
-    if (props.items) {
+    if (items) {
       const { position, arrow, arrowPosition, dropdownMenuClassName } = props;
       return (
         <DropdownMenu
@@ -240,9 +219,6 @@ const Dropdown = function({
   );
 };
 
-Dropdown.Trigger = DropdownTrigger;
-Dropdown.Menu = DropdownMenu;
-Dropdown.Item = DropdownItem;
-Dropdown.ItemDivider = DropdownItemDivider;
+Dropdown.displayName = "Dropdown";
 
-export default Dropdown;
+export default withDropdownProvider(Dropdown);

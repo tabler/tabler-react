@@ -5,6 +5,7 @@ import cn from "classnames";
 import { Popper } from "react-popper";
 
 import { PopperChildrenProps } from "react-popper";
+import DropdownContext from "./DropdownContext";
 
 export interface Props {
   children?: React.ReactNode;
@@ -21,6 +22,7 @@ export interface Props {
   rootRef?: (el: HTMLElement) => void;
   /**
    * Show the DropdownMenu
+   * @deprecated use context
    */
   show?: boolean;
 }
@@ -35,33 +37,35 @@ function DropdownMenu({
   arrow,
   arrowPosition = "left",
   rootRef,
-  show = false,
 }: Props) {
+  const [isOpen] = React.useContext(DropdownContext);
   const classes = cn(
     {
       "dropdown-menu": true,
       [`dropdown-menu-${arrowPosition}`]: arrowPosition,
       [`dropdown-menu-arrow`]: arrow,
-      show: show,
+      show: isOpen,
     },
     className
   );
-  return show ? (
+  return (
     <Popper placement={position} eventsEnabled={true} positionFixed={false}>
       {({ ref, style, placement }: PopperChildrenProps) => {
         return (
-          <div
-            className={classes}
-            data-placement={placement}
-            style={style}
-            ref={ref}
-          >
-            {children}
-          </div>
+          isOpen && (
+            <div
+              className={classes}
+              data-placement={placement}
+              style={style}
+              ref={ref}
+            >
+              {children}
+            </div>
+          )
         );
       }}
     </Popper>
-  ) : null;
+  );
 }
 
 DropdownMenu.displayName = "Dropdown.Menu";
