@@ -8,10 +8,11 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "test": "CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "yarn run copytablercsstodist && rollup -c",
+    "build": "yarn run copytablercsstodist && rollup -c && tsc --project tsconfig.dist.json",
     "start": "yarn run copytablercsstodist && rollup -c -w",
     "prepare": "yarn run build && yarn run copytablercsstodist",
     "predeploy": "cd example && yarn install && yarn run build",
@@ -33,14 +34,10 @@
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
   },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "react-popper": "^1.0.0-beta.6",
-    "react-text-mask": "^5.4.1"
-  },
+  "dependencies": {},
   "peerDependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -65,12 +62,14 @@
     "@storybook/react": "^5.0.11",
     "@types/classnames": "^2.2.8",
     "@types/react": "^16.8.19",
+    "@types/react-text-mask": "^5.4.5",
     "@types/storybook__addon-actions": "^3.4.2",
     "@types/storybook__addon-knobs": "^5.0.0",
     "@types/storybook__addon-links": "^3.3.4",
     "@types/storybook__react": "^4.0.1",
-    "babel-eslint": "^9.0.0",
-    "babel-loader": "^8.0.6",
+    "babel-eslint": "10.0.1",
+    "babel-loader": "8.0.5",
+    "classnames": "^2.2.5",
     "commitizen": "^3.1.1",
     "commitlint": "^8.0.0",
     "css-loader": "^2.1.1",
@@ -81,18 +80,22 @@
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
     "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
     "gh-pages": "^2.0.0",
     "husky": "^2.0.0",
     "lint-staged": "^8.0.0",
     "prettier": "1.17.1",
     "pretty-quick": "^1.6.0",
-    "react": "^16.2.0",
+    "react": "^16.8.0",
     "react-docgen-typescript": "^1.12.4",
     "react-docgen-typescript-loader": "^3.1.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "^2.0.3",
+    "react-dom": "^16.8.0",
+    "react-popper": "^1.0.0-beta.6",
+    "react-scripts": "^3.0.0",
     "react-styleguidist": "^9.1.2",
+    "react-text-mask": "^5.4.1",
     "rollup": "^1.13.1",
+    "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.0.1",
@@ -104,7 +107,7 @@
     "tslint": "^5.17.0",
     "tslint-react": "^4.0.0",
     "typescript": "^3.5.1",
-    "webpack": "4.19.1"
+    "webpack": "4.29.6"
   },
   "files": [
     "dist"
