@@ -46,7 +46,7 @@ export interface Props
     KeyboardEvents,
     ClipboardEvents {
   placeholder?: string;
-  type?: "checkbox" | "radio" | "text" | "email" | "password";
+  type?: "checkbox" | "radio" | "text" | "email" | "password" | "number";
   value?: string | number;
   /**
    * Wraps the input in Form.Group and adds a label
