@@ -186,6 +186,8 @@ By default a Button will render a <button>, you can change this with the RootCom
   <Button icon="message-circle" color="info">
     Comment
   </Button>
+  <Button color="primary" icon="activity" />
+  <Button color="success" icon="bell" />
 </Button.List>
 ```
 
@@ -206,21 +208,6 @@ By default a Button will render a <button>, you can change this with the RootCom
   <Button social="rss">RSS</Button>
   <Button social="flickr">Flickr</Button>
   <Button social="bitbucket">Bitbucket</Button>
-</Button.List>
-```
-
-### Icon Buttons
-
-```jsx
-<Button.List>
-  <Button social="facebook" />
-  <Button social="github" />
-  <Button color="primary" icon="activity" />
-  <Button color="success" icon="bell" />
-  <Button color="warning" icon="star" />
-  <Button color="danger" icon="trash" />
-  <Button color="purple" icon="bar-chart" />
-  <Button color="secondary" icon="git-merge" />
 </Button.List>
 ```
 

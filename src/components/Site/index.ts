@@ -6,13 +6,19 @@ import SiteNav from "./SiteNav";
 import SiteLogo from "./SiteLogo";
 import SiteWrapper from "./SiteWrapper";
 
-const CompoundSite = Object.assign(Site, {
-  Header: SiteHeader,
-  Footer: SiteFooter,
-  Nav: SiteNav,
-  Logo: SiteLogo,
-  Wrapper: SiteWrapper,
-});
+const CompoundSite = Site as typeof Site & {
+  Header: typeof SiteHeader;
+  Footer: typeof SiteFooter;
+  Nav: typeof SiteNav;
+  Logo: typeof SiteLogo;
+  Wrapper: typeof SiteWrapper;
+};
+
+CompoundSite.Header = SiteHeader;
+CompoundSite.Footer = SiteFooter;
+CompoundSite.Nav = SiteNav;
+CompoundSite.Logo = SiteLogo;
+CompoundSite.Wrapper = SiteWrapper;
 
 export {
   CompoundSite as default,

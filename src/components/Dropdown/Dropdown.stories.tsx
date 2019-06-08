@@ -9,7 +9,7 @@ import examples from "./Dropdown.examples.md";
 // @ts-ignore
 React.Fragment = ({ children }) => children;
 
-const stories = storiesOf("Dropdown", module);
+const stories = storiesOf("Dropdown/Dropdown", module);
 
 stories.addDecorator(withKnobs);
 
