@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, CSSProperties } from "react";
 import { Manager } from "react-popper";
 import cn from "classnames";
 import DropdownTrigger from "./DropdownTrigger";
@@ -85,6 +85,7 @@ export interface DefaultProps {
    * itemsObjects[x].RootComponent takes priority
    */
   itemsRootComponent?: React.ElementType;
+  style?: CSSProperties;
 }
 
 export type itemObject = {
@@ -105,7 +106,22 @@ const Dropdown = function({
   desktopOnly,
   isOption,
   flex = false,
-  ...props
+  items,
+  trigger,
+  icon,
+  triggerContent,
+  isNavLink,
+  type,
+  triggerClassName,
+  color,
+  toggle,
+  itemsObject,
+  itemsRootComponent,
+  position,
+  arrow,
+  arrowPosition,
+  dropdownMenuClassName,
+  style,
 }: Props) {
   const [isOpen, setIsOpen] = useContext(DropdownContext);
 
@@ -135,61 +151,51 @@ const Dropdown = function({
     className
   );
 
-  const trigger = (() => {
-    if (props.trigger) {
-      return props.trigger;
-    }
-    if (props.icon || props.triggerContent || props.toggle) {
-      const {
-        icon,
-        triggerContent,
-        isNavLink,
-        type,
-        triggerClassName,
-        color,
-        toggle,
-      } = props;
+  const _trigger =
+    trigger ||
+    (() => {
+      if (icon || triggerContent || toggle) {
+        return (
+          <DropdownTrigger
+            isNavLink={isNavLink}
+            icon={icon}
+            type={type}
+            className={triggerClassName}
+            isOption={isOption}
+            color={color}
+            toggle={toggle}
+          >
+            {triggerContent}
+          </DropdownTrigger>
+        );
+      }
+      return null;
+    })();
 
-      return (
-        <DropdownTrigger
-          isNavLink={isNavLink}
-          icon={icon}
-          type={type}
-          className={triggerClassName}
-          isOption={isOption}
-          color={color}
-          toggle={toggle}
-        >
-          {triggerContent}
-        </DropdownTrigger>
-      );
-    }
-    return null;
-  })();
-
-  const items = (() => {
-    if (props.items) return props.items;
-    if (props.itemsObject) {
-      const { itemsObject, itemsRootComponent } = props;
-      return itemsObject.map(({ RootComponent, onClick, ...item }, i) =>
-        item.isDivider ? (
-          <DropdownItemDivider key={i} />
-        ) : (
-          <DropdownItem
-            key={i}
-            RootComponent={RootComponent || itemsRootComponent}
-            onClick={(e: React.MouseEvent<any>) => _handleItemClick(e, onClick)}
-            {...item}
-          />
-        )
-      );
-    }
-    return null;
-  })();
+  const _items =
+    items ||
+    (() => {
+      if (itemsObject) {
+        return itemsObject.map(({ RootComponent, onClick, ...item }, i) =>
+          item.isDivider ? (
+            <DropdownItemDivider key={i} />
+          ) : (
+            <DropdownItem
+              key={i}
+              RootComponent={RootComponent || itemsRootComponent}
+              onClick={(e: React.MouseEvent<any>) =>
+                _handleItemClick(e, onClick)
+              }
+              {...item}
+            />
+          )
+        );
+      }
+      return null;
+    })();
 
   const menu = (() => {
-    if (items) {
-      const { position, arrow, arrowPosition, dropdownMenuClassName } = props;
+    if (_items) {
       return (
         <DropdownMenu
           position={position}
@@ -198,7 +204,7 @@ const Dropdown = function({
           className={dropdownMenuClassName}
           show={isOpen}
         >
-          {items}
+          {_items}
         </DropdownMenu>
       );
     }
@@ -209,8 +215,8 @@ const Dropdown = function({
     <Manager>
       <ClickOutside onOutsideClick={() => setIsOpen(false)}>
         {({ setElementRef }: any) => (
-          <div className={classes} ref={setElementRef}>
-            {trigger}
+          <div className={classes} ref={setElementRef} style={style}>
+            {_trigger}
             {menu || children}
           </div>
         )}
