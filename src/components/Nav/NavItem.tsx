@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import cn from "classnames";
 import NavSubItem from "./NavSubItem";
 import NavLink from "./NavLink";
@@ -8,6 +8,8 @@ import ClickOutside from "../../helpers/ClickOutside";
 
 import { Manager, Reference } from "react-popper";
 import { ReferenceChildrenProps } from "react-popper";
+import withDropdownProvider from "../Dropdown/withDropdownProvider";
+import DropdownContext from "../Dropdown/DropdownContext";
 interface Props {
   children?: React.ReactNode;
   className?: string;
@@ -61,7 +63,7 @@ const NavItem = function({
   position = "bottom-start",
   onClick,
 }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useContext(DropdownContext);
 
   const _handleOnClick = (): void => {
     if (hasSubNav) {
@@ -109,7 +111,7 @@ const NavItem = function({
       {navLink}
       {typeof children !== "string" && !hasSubNav && children}
       {hasSubNav && (
-        <Dropdown.Menu arrow show={isOpen} position={position}>
+        <Dropdown.Menu arrow position={position}>
           {subItems ||
             (subItemsObjects &&
               subItemsObjects.map((a, i) => (
@@ -166,4 +168,4 @@ const NavItem = function({
 NavItem.displayName = "Nav.Item";
 
 /** @component */
-export default NavItem;
+export default withDropdownProvider(NavItem);
