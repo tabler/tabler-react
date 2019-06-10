@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs, text, boolean, number } from "@storybook/addon-knobs";
+import { withKnobs } from "@storybook/addon-knobs";
 
 import Site from "./";
 import Nav from "../Nav";

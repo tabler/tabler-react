@@ -2,7 +2,7 @@ import * as React from "react";
 import cn from "classnames";
 import FormInputGroupAppend from "./FormInputGroupAppend";
 import FormInputGroupPrepend from "./FormInputGroupPrepend";
-import FormInput, { Props as InputProps } from "./FormInput";
+import FormInput from "./FormInput";
 
 type Props = {
   children?: React.ReactNode;

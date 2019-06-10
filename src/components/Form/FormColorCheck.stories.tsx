@@ -5,7 +5,6 @@ import { withKnobs } from "@storybook/addon-knobs";
 
 import Form from ".";
 import examples from "./FormColorCheck.examples.md";
-import { Button } from "../Button";
 
 // @ts-ignore
 React.Fragment = ({ children }) => children;

@@ -5,7 +5,6 @@ import { withKnobs } from "@storybook/addon-knobs";
 
 import Button from ".";
 import examples from "./ButtonList.examples.md";
-import { Dropdown } from "..";
 
 // @ts-ignore
 React.Fragment = ({ children }) => children;

@@ -3,13 +3,13 @@ import * as React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import Form from ".";
-import examples from "./FormMaskedInput.examples.md";
+import List from ".";
+import examples from "./ListGroup.examples.md";
 
 // @ts-ignore
 React.Fragment = ({ children }) => children;
 
-const stories = storiesOf("Form/FormMaskedInput", module);
+const stories = storiesOf("List/ListGroup", module);
 
 stories.addDecorator(withKnobs);
 
@@ -17,12 +17,11 @@ stories.add(
   "Example",
   () => {
     return (
-      <Form.Group label="Date">
-        <Form.MaskedInput
-          placeholder="00/00/0000"
-          mask={[/\d/, /\d/, "/", /\d/, /\d/, "/", /\d/, /\d/, /\d/, /\d/]}
-        />
-      </Form.Group>
+      <List.Group>
+        <List.GroupItem>An Item</List.GroupItem>
+        <List.GroupItem>Another Item</List.GroupItem>
+        <List.GroupItem>A third item</List.GroupItem>
+      </List.Group>
     );
   },
   {

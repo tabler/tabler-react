@@ -20,7 +20,7 @@ type navItem = {
   useExact?: boolean;
 };
 
-interface Props {
+export interface Props {
   children?: React.ReactNode;
   className?: string;
   tabbed?: boolean;

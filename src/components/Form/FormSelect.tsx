@@ -35,7 +35,6 @@ function FormSelect(props: Props) {
     error,
     label,
     disabled,
-    readOnly,
     name,
     value,
     onChange,

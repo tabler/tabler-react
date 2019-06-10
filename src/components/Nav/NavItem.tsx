@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, {  useContext } from "react";
 import cn from "classnames";
 import NavSubItem from "./NavSubItem";
 import NavLink from "./NavLink";

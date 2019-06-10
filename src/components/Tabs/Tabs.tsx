@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import Tab, { Props as TabProps } from "./Tab";
+import { Props as TabProps } from "./Tab";
 import TabbedContainer from "./TabbedContainer";
 import TabbedHeader from "./TabbedHeader";
 
