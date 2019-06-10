@@ -11,5 +11,3 @@ function loadStories() {
 }
 
 configure(loadStories, module);
-
-addDecorator(withInfo);
