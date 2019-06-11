@@ -66,7 +66,7 @@ const accountDropdownProps = {
   ],
 };
 
-stories.add("Wrapper", () => {
+stories.add("SiteWrapper", () => {
   return (
     <Site.Wrapper
       headerProps={{
