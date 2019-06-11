@@ -103,6 +103,8 @@ export type colors =
   | "danger"
   | "success"
   | "warning"
-  | "info";
+  | "info"
+  | "primary"
+  | "secondary";
 
 export default colors;
