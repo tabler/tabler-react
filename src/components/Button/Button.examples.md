@@ -1,6 +1,6 @@
 ### Root Component
 
-By default a Button will render a <button>, you can change this with the RootComponent prop
+By default a Button will render a `<button>`, you can change this with the RootComponent prop
 
 ```jsx
 <Button.List>

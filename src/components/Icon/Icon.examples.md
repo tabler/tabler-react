@@ -6,10 +6,13 @@
 
 First you need to add font awesome to your project.
 
-In your HTML <head>:
+In your HTML `<head>`:
 
 ```html
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 ```
 
 Then use the Icon `prefix` prop
