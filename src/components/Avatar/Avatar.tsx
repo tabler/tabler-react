@@ -3,21 +3,20 @@ import Icon from "../Icon";
 import cn from "classnames";
 import AvatarList from "./AvatarList";
 
-import { MouseEvents, PointerEvents } from "../../types";
+import { MouseEvents, PointerEvents, TablerComponent } from "../../types";
+import { colors } from "../../colors";
+import { Badge } from "..";
 
-export interface Props extends MouseEvents, PointerEvents {
-  children?: React.ReactNode;
-  className?: string;
+export interface Props extends TablerComponent, MouseEvents, PointerEvents {
   /**
    * The URL of the image to be displayed
    */
   imageURL?: string;
-  style?: Object;
   size?: "sm" | "md" | "lg" | "xl" | "xxl";
   /**
    * Display a colored status dot with the avatar
    */
-  status?: "grey" | "red" | "yellow" | "green";
+  status?: colors;
   /**
    * Displays the user icon as a placeholder
    */
@@ -29,7 +28,7 @@ export interface Props extends MouseEvents, PointerEvents {
   /**
    * The background and font color of the circle
    */
-  color?: string;
+  color?: colors;
 }
 
 /**
@@ -44,7 +43,7 @@ function Avatar({
   status,
   placeholder,
   icon,
-  color = "",
+  color,
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -55,11 +54,12 @@ function Avatar({
     {
       avatar: true,
       [`avatar-${size}`]: !!size,
-      "avatar-placeholder": placeholder,
-      [`avatar-${color}`]: !!color,
+      [`bg-${color}`]: !!color,
     },
     className
   );
+  const _icon = icon || placeholder ? "user" : null;
+
   return (
     <span
       className={classes}
@@ -79,8 +79,8 @@ function Avatar({
       onPointerEnter={onPointerEnter}
       onPointerLeave={onPointerLeave}
     >
-      {icon && <Icon name={icon} />}
-      {status && <span className={`avatar-status bg-${status}`} />}
+      {_icon && <Icon name={_icon} />}
+      {status && <Badge color={status} />}
       {children}
     </span>
   );

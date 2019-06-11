@@ -44,10 +44,10 @@ stories.add("Status Indicator", () => {
   return (
     <Avatar.List>
       <Avatar imageURL="/demo/faces/male/9.jpg" />
-      <Avatar status="grey" imageURL="/demo/faces/female/8.jpg" />
+      <Avatar status="gray" imageURL="/demo/faces/female/8.jpg" />
       <Avatar status="red" imageURL="/demo/faces/male/4.jpg" />
       <Avatar status="yellow" imageURL="/demo/faces/male/35.jpg" />
-      <Avatar status="green" imageURL="/demo/faces/female/29.jpg" />
+      <Avatar status="success" imageURL="/demo/faces/female/29.jpg" />
     </Avatar.List>
   );
 });
