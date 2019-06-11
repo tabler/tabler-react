@@ -15,7 +15,7 @@ type AlertType =
   | "warning"
   | "danger";
 
-interface Props extends TablerComponent, MouseEvents, PointerEvents {
+export interface Props extends TablerComponent, MouseEvents, PointerEvents {
   /**
    * The type of this Alert, changes it's color
    */

@@ -3,7 +3,7 @@ import cn from "classnames";
 import { TablerComponent } from "../../types";
 import { string } from "prop-types";
 
-interface Props extends TablerComponent {
+export interface Props extends TablerComponent {
   href?: string;
   src?: string;
   srcSmall?: string;
