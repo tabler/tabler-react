@@ -59,15 +59,18 @@ function AccountDropdown({
 
   return (
     <Dropdown
-      isNavLink
       triggerClassName="pr-0 leading-none"
       triggerContent={
         <React.Fragment>
-          {avatarURL && <Avatar imageURL={avatarURL} />}
-          <span className="ml-2 d-none d-lg-block">
-            <span className="text-default">{name}</span>
-            <small className="text-muted d-block mt-1">{description}</small>
-          </span>
+          <a className="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color ml-2">
+            {avatarURL && <Avatar imageURL={avatarURL} />}
+            <span className="ml-2 d-none d-lg-block leading-none">
+              <span>{name}</span>
+              <span className="text-muted d-block mt-1 text-h6">
+                {description}
+              </span>
+            </span>
+          </a>
         </React.Fragment>
       }
       position="bottom-end"
