@@ -232,13 +232,12 @@ function Home() {
               </Table>
             </Card>
           </Grid.Col>
-
           <Grid.Col md={6}>
             <Alert type="primary">
               <Alert.Link
                 href={
                   process.env.NODE_ENV === "production"
-                    ? "https://tabler.github.io/tabler-react/documentation"
+                    ? "https://tabler-react.com/documentation"
                     : "/documentation"
                 }
               >
