@@ -9,6 +9,7 @@ import DropdownItemDivider from "./DropdownItemDivider";
 import ClickOutside from "../../helpers/ClickOutside";
 import withDropdownProvider from "./withDropdownProvider";
 import DropdownContext from "./DropdownContext";
+import { colors } from "../../colors";
 
 interface TriggerElement {
   onClick: (e: React.MouseEvent) => any;
@@ -56,7 +57,7 @@ export interface DefaultProps {
   /**
    * The triggers background color
    */
-  color?: string;
+  color?: colors;
   /**
    * Should the trigger display an arrow toggler?
    */
@@ -91,7 +92,7 @@ export interface DefaultProps {
 export type itemObject = {
   icon?: string;
   badge?: string;
-  badgeType?: string;
+  badgeType?: colors;
   value?: string;
   isDivider?: boolean;
   to?: string;

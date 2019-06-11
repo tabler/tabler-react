@@ -2,6 +2,7 @@ import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 import Badge from "../Badge";
+import { colors } from "../../colors";
 
 interface Props {
   children?: React.ReactNode;
@@ -21,7 +22,7 @@ interface Props {
   /**
    * The type/color of Badge to be displayed
    */
-  badgeType?: string;
+  badgeType?: colors;
   /**
    * Where the user should be taken on click.
    * By default this will be passed as the 'href' prop to the <a> tag,
