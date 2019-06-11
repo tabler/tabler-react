@@ -1,6 +1,5 @@
-import { configure, addDecorator } from "@storybook/react";
+import { configure } from "@storybook/react";
 import "@storybook/addon-console";
-import { withInfo } from "@storybook/addon-info";
 
 import "../src/tabler.scss";
 
