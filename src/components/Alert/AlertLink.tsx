@@ -1,9 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
+import { TablerComponent } from "../../types";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+interface Props extends TablerComponent {
   href?: string;
 }
 

@@ -1,11 +1,11 @@
-import * as React from "react";
+import React, { useState, CSSProperties } from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 import Avatar from "../Avatar";
 import Button from "../Button";
 import AlertLink from "./AlertLink";
 
-import { MouseEvents, PointerEvents } from "../../";
+import { TablerComponent, MouseEvents, PointerEvents } from "../../";
 
 type AlertType =
   | "primary"
@@ -15,9 +15,7 @@ type AlertType =
   | "warning"
   | "danger";
 
-interface Props extends MouseEvents, PointerEvents {
-  children?: React.ReactNode;
-  className?: string;
+interface Props extends TablerComponent, MouseEvents, PointerEvents {
   /**
    * The type of this Alert, changes it's color
    */
@@ -44,71 +42,63 @@ interface Props extends MouseEvents, PointerEvents {
   onDismissClick?: () => void;
 }
 
-type State = {
-  isDismissed: boolean;
-};
+const Alert = function({
+  className,
+  style,
+  children,
+  type,
+  icon,
+  hasExtraSpace,
+  isDismissible,
+  avatar,
+  onDismissClick,
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+  onPointerEnter,
+  onPointerLeave,
+}: Props) {
+  const [isDismissed, setIsDismissed] = useState(false);
 
-class Alert extends React.Component<Props, State> {
-  state = {
-    isDismissed: false,
+  const _handleOnDismissClick = (): void => {
+    if (onDismissClick) onDismissClick();
+    setIsDismissed(true);
   };
 
-  _handleOnDismissClick = (): void => {
-    if (this.props.onDismissClick) this.props.onDismissClick();
-    this.setState({ isDismissed: true });
+  const classes = cn(
+    "alert",
+    `alert-${type}`,
+    {
+      "alert-icon": !!icon,
+      "mt-5 mb-6": hasExtraSpace,
+      "alert-dismissible": isDismissible,
+      "alert-avatar": !!avatar,
+    },
+    className
+  );
+
+  const events = {
+    onClick: onClick,
+    onMouseEnter: onMouseEnter,
+    onMouseLeave: onMouseLeave,
+    onPointerEnter: onPointerEnter,
+    onPointerLeave: onPointerLeave,
   };
 
-  static Link = AlertLink;
-
-  render() {
-    const { isDismissed } = this.state;
-    const {
-      className,
-      children,
-      type,
-      icon,
-      hasExtraSpace,
-      isDismissible,
-      avatar,
-      onClick,
-      onMouseEnter,
-      onMouseLeave,
-      onPointerEnter,
-      onPointerLeave,
-    }: Props = this.props;
-    const classes = cn(
-      "alert",
-      `alert-${type}`,
-      {
-        "alert-icon": !!icon,
-        "mt-5 mb-6": hasExtraSpace,
-        "alert-dismissible": isDismissible,
-        "alert-avatar": !!avatar,
-      },
-      className
-    );
-
-    const events = {
-      onClick: onClick,
-      onMouseEnter: onMouseEnter,
-      onMouseLeave: onMouseLeave,
-      onPointerEnter: onPointerEnter,
-      onPointerLeave: onPointerLeave,
-    };
-
-    return (
-      !isDismissed && (
-        <div {...events} className={classes} role="alert">
-          {isDismissible && (
-            <Button className="close" onClick={this._handleOnDismissClick} />
-          )}
-          {avatar && <Avatar imageURL={avatar} />}
-          {icon && <Icon name={icon} className="mr-2" isAriaHidden={true} />}
-          {children}
-        </div>
-      )
-    );
+  if (isDismissed) {
+    return null;
   }
-}
+
+  return (
+    <div {...events} className={classes} style={style} role="alert">
+      {isDismissible && (
+        <Button className="close" onClick={_handleOnDismissClick} />
+      )}
+      {avatar && <Avatar imageURL={avatar} />}
+      {icon && <Icon name={icon} className="mr-2" isAriaHidden={true} />}
+      {children}
+    </div>
+  );
+};
 
 export default Alert;

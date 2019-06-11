@@ -1,3 +1,8 @@
 import Alert from "./Alert";
+import AlertLink from "./AlertLink";
 
-export { Alert as default };
+const CompoundAlert = Alert as typeof Alert & {
+  Link: typeof AlertLink;
+};
+
+export { CompoundAlert as default, Alert, AlertLink };
