@@ -5,7 +5,7 @@ import AvatarList from "./AvatarList";
 
 import { MouseEvents, PointerEvents, TablerComponent } from "../../types";
 import { colors } from "../../colors";
-import { Badge } from "..";
+import Badge from "../Badge";
 
 export interface Props extends TablerComponent, MouseEvents, PointerEvents {
   /**
