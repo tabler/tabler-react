@@ -98,8 +98,25 @@ const colors = {
   "gray-dark-lightest": "#ebebec",
 };
 
+type ltColors =
+  | "blue-lt"
+  | "azure-lt"
+  | "indigo-lt"
+  | "purple-lt"
+  | "pink-lt"
+  | "red-lt"
+  | "orange-lt"
+  | "yellow-lt"
+  | "lime-lt"
+  | "green-lt"
+  | "teal-lt"
+  | "cyan-lt"
+  | "gray-lt"
+  | "dark-lt";
+
 export type colors =
   | keyof typeof colors
+  | ltColors
   | "danger"
   | "success"
   | "warning"
