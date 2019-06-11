@@ -5,4 +5,6 @@ const CompoundAlert = Alert as typeof Alert & {
   Link: typeof AlertLink;
 };
 
+CompoundAlert.Link = AlertLink;
+
 export { CompoundAlert as default, Alert, AlertLink };
