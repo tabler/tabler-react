@@ -7,6 +7,7 @@ import AccountDropdown from "../AccountDropdown";
 
 import { Props as NotificationTrayProps } from "../Notification/NotificationTray";
 import { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown";
+import Nav from "../Nav";
 
 export type Props = {
   children?: React.ReactNode;
@@ -62,28 +63,32 @@ const SiteHeader = ({
     React.createElement(AccountDropdown, accountDropdownFromProps);
 
   return (
-    <div className="header py-4">
+    <header className="navbar navbar-expand-md">
       <Container className={align}>
-        <div className="d-flex">
-          {children || (
-            <React.Fragment>
-              <SiteLogo href={href} alt={alt} src={imageURL} />
-              <div className="d-flex order-lg-2 ml-auto">
-                {navItems}
-                {notificationsTray}
-                {accountDropdown}
-              </div>
-              <a
-                className="header-toggler d-lg-none ml-3 ml-lg-0"
-                onClick={onMenuToggleClick}
-              >
-                <span className="header-toggler-icon" />
-              </a>
-            </React.Fragment>
-          )}
-        </div>
+        {children || (
+          <React.Fragment>
+            <a className="navbar-toggler" onClick={onMenuToggleClick}>
+              <span className="navbar-toggler-icon" />
+            </a>
+            <SiteLogo
+              className="text-inherit mr-md-3"
+              href={href}
+              alt={alt}
+              src={imageURL}
+            />
+            <Nav className="align-items-center order-1 order-lg-2">
+              {navItems}
+              {notificationsTrayFromProps && (
+                <Nav.Item className="d-none d-md-flex">
+                  <Notification.Tray {...notificationsTrayFromProps} />
+                </Nav.Item>
+              )}
+              {accountDropdown}
+            </Nav>
+          </React.Fragment>
+        )}
       </Container>
-    </div>
+    </header>
   );
 };
 

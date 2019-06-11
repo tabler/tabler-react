@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 import cn from "classnames";
 
@@ -52,33 +50,27 @@ const SiteNav = ({
   itemsObjects,
   withSearchForm = true,
   rightColumnComponent,
-  collapse = true,
+  collapse = false,
   routerContextComponentType,
 }: Props) => {
-  const classes = cn("header d-lg-flex p-0", { collapse });
+  const classes = cn("navbar navbar-expand-md", { collapse: collapse });
   return (
-    <div className={classes}>
+    <header className={classes}>
       <Container>
         {children || (
-          <Grid.Row className="align-items-center">
-            <Grid.Col lg={3} className="ml-auto" ignoreCol={true}>
-              {/* @TODO: add InlineSearchForm  */}
-              {/* {rightColumnComponent || (withSearchForm && <InlineSearchForm />)} */}
-              {rightColumnComponent}
-            </Grid.Col>
-            <Grid.Col className="col-lg order-lg-first">
-              <Nav
-                tabbed
-                className="border-0 flex-column flex-lg-row"
-                items={items}
-                itemsObjects={itemsObjects}
-                routerContextComponentType={routerContextComponentType}
-              />
-            </Grid.Col>
-          </Grid.Row>
+          <React.Fragment>
+            <Nav
+              tabbed
+              className="border-0 flex-column flex-lg-row"
+              items={items}
+              itemsObjects={itemsObjects}
+              routerContextComponentType={routerContextComponentType}
+            />
+            {rightColumnComponent}
+          </React.Fragment>
         )}
       </Container>
-    </div>
+    </header>
   );
 };
 

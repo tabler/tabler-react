@@ -25,7 +25,7 @@ class SiteWrapper extends React.PureComponent<Props, State> {
   static displayName = "Site.Wrapper";
 
   state = {
-    collapseMobileMenu: true,
+    collapseMobileMenu: false,
   };
 
   handleCollapseMobileMenu = (): void => {
