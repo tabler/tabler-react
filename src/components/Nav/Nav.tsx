@@ -83,7 +83,10 @@ const Nav = function({
     return false;
   };
 
-  const classes = cn({ nav: true, "nav-tabs": tabbed }, className);
+  const classes = cn(
+    { nav: true, "navbar-menu": true, "nav-tabs": tabbed },
+    className
+  );
 
   let element: null | React.ReactElement<any> = null;
   if (routerContextComponentType) {
