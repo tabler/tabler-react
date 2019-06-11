@@ -41,7 +41,7 @@ type State = {
 const Nav = function({
   className,
   children,
-  tabbed = true,
+  tabbed = false,
   items,
   itemsObjects,
   routerContextComponentType,
