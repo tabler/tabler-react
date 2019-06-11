@@ -28,7 +28,7 @@
     "cm": "git-cz",
     "startagain": "shx rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build",
     "semantic-release": "semantic-release  --no-ci",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -s ./example/public -p 6006",
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
@@ -93,6 +93,7 @@
     "react-dom": "^16.8.0",
     "react-popper": "^1.3.3",
     "react-scripts": "^3.0.0",
+    "react-storybook-addon-props-combinations": "^1.1.0",
     "react-styleguidist": "^9.1.2",
     "react-text-mask": "^5.4.1",
     "rollup": "^1.13.1",
