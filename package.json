@@ -103,6 +103,7 @@
     "rollup-plugin-node-resolve": "^5.0.1",
     "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-url": "^2.2.1",
+    "sass-loader": "^7.1.0",
     "semantic-release": "^15.13.12",
     "shx": "^0.3.2",
     "tabler": "tabler/tabler#tabler-v1",

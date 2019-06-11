@@ -16,8 +16,8 @@ module.exports = {
         },
         // Other loaders that are needed for your components
         {
-          test: /\.css$/,
-          use: ["style-loader", "css-loader"],
+          test: /\.(css|scss)$/,
+          use: ["style-loader", "css-loader", "sass-loader"],
         },
 
         {
@@ -50,7 +50,7 @@ module.exports = {
   getExampleFilename(componentPath) {
     return componentPath.replace(/\.tsx?$/, ".examples.md");
   },
-  require: ["./src/Tabler.css"],
+  require: ["./src/tabler.scss"],
   styleguideDir: "./example/public/documentation",
   template: {
     head: {
