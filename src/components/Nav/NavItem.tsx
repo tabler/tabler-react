@@ -1,4 +1,4 @@
-import React, {  useContext } from "react";
+import React, { useContext } from "react";
 import cn from "classnames";
 import NavSubItem from "./NavSubItem";
 import NavLink from "./NavLink";
@@ -130,10 +130,13 @@ const NavItem = function({
     </React.Fragment>
   );
 
-  const wrapperClasses = cn({
-    "nav-item": true,
-    show: isOpen,
-  });
+  const wrapperClasses = cn(
+    {
+      "nav-item": true,
+      show: isOpen,
+    },
+    className
+  );
 
   const wrappedChildren =
     type === "div" ? (
