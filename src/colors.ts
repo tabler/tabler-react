@@ -98,6 +98,11 @@ const colors = {
   "gray-dark-lightest": "#ebebec",
 };
 
-export type colors = keyof typeof colors;
+export type colors =
+  | keyof typeof colors
+  | "danger"
+  | "success"
+  | "warning"
+  | "info";
 
 export default colors;
