@@ -1,4 +1,5 @@
 const colors = {
+  white: "#ffffff",
   blue: "#467fcf",
   "blue-darkest": "#0e1929",
   "blue-darker": "#1c3353",
@@ -97,6 +98,23 @@ const colors = {
   "gray-dark-lighter": "#c2c4c6",
   "gray-dark-lightest": "#ebebec",
 };
+
+export const softColors = [
+  "blue-lt",
+  "azure-lt",
+  "indigo-lt",
+  "purple-lt",
+  "pink-lt",
+  "red-lt",
+  "orange-lt",
+  "yellow-lt",
+  "lime-lt",
+  "green-lt",
+  "teal-lt",
+  "cyan-lt",
+  "gray-lt",
+  "dark-lt",
+];
 
 type ltColors =
   | "blue-lt"
