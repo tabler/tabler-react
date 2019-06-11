@@ -1,4 +1,6 @@
 ```jsx
+import { Table, Button } from "tabler-react";
+
 <Table>
   <Table.Header>
     <Table.ColHeader>ID</Table.ColHeader>
@@ -14,5 +16,5 @@
       </Table.Col>
     </Table.Row>
   </Table.Body>
-</Table>
+</Table>;
 ```

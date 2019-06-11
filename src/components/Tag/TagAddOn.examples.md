@@ -1,4 +1,6 @@
 ```jsx
+import { Tag } from "tabler-react";
+
 <Tag.List>
   <Tag addOn={<Icon name="user" />}>A User</Tag>
   <Tag color="danger" addOnIcon="activity">
@@ -10,5 +12,5 @@
   <Tag color="dark" addOn="1kb" addOnColor="warning">
     CSS gzip size
   </Tag>
-</Tag.List>
+</Tag.List>;
 ```

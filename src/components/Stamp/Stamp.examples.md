@@ -1,4 +1,6 @@
 ```jsx
+import { Stamp } from "tabler-react";
+
 <Stamp size="sm" className="mr-1">
   A
 </Stamp>

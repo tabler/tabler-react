@@ -1,4 +1,6 @@
 ```jsx
+import { Grid } from "tabler-react";
+
 <Grid.Row>
   <Grid.Col>1</Grid.Col>
   <Grid.Col>2</Grid.Col>
@@ -12,22 +14,26 @@
   <Grid.Col>10</Grid.Col>
   <Grid.Col>11</Grid.Col>
   <Grid.Col>12</Grid.Col>
-</Grid.Row>
+</Grid.Row>;
 ```
 
 ### Column Width
 
 ```jsx
+import { Grid } from "tabler-react";
+
 <Grid.Row>
   <Grid.Col width={2}>1</Grid.Col>
   <Grid.Col width={4}>2</Grid.Col>
   <Grid.Col width={6}>3</Grid.Col>
-</Grid.Row>
+</Grid.Row>;
 ```
 
 ### Responsive Column Width
 
 ```jsx
+import { Grid } from "tabler-react";
+
 <Grid.Row>
   <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
     1
@@ -47,12 +53,14 @@
   <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
     6
   </Grid.Col>
-</Grid.Row>
+</Grid.Row>;
 ```
 
 ### Column Offset
 
 ```jsx
+import { Grid } from "tabler-react";
+
 <Grid.Row>
   <Grid.Col width={6} offset={3}>
     2
@@ -60,5 +68,5 @@
   <Grid.Col md={6} offsetMd={3}>
     4
   </Grid.Col>
-</Grid.Row>
+</Grid.Row>;
 ```

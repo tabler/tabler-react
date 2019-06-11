@@ -1,6 +1,8 @@
 ### Color input
 
 ```jsx
+import { Form } from "tabler-react";
+
 <Form.Group label="Color input">
   <Form.ColorCheck>
     <Form.ColorCheckItem color="azure" />
@@ -14,5 +16,5 @@
     <Form.ColorCheckItem color="green" />
     <Form.ColorCheckItem color="teal" />
   </Form.ColorCheck>
-</Form.Group>
+</Form.Group>;
 ```

@@ -1,4 +1,6 @@
 ```jsx
+import { Card, Grid } from "tabler-react";
+
 <Grid.Row cards deck>
   <Grid.Col md={6}>
     <Card
@@ -24,5 +26,5 @@
       </Card.Body>
     </Card>
   </Grid.Col>
-</Grid.Row>
+</Grid.Row>;
 ```

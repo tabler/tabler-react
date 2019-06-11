@@ -1,4 +1,6 @@
 ```jsx
+import { Nav } from "tabler-react";
+
 <Nav>
   <Nav.Item hasSubNav value="Page One" icon="globe">
     <Nav.SubItem value="Sub Item 1" />
@@ -10,12 +12,14 @@
   <Nav.Item active icon="user">
     Page Four
   </Nav.Item>
-</Nav>
+</Nav>;
 ```
 
 #### With item components from props
 
 ```jsx
+import { Nav } from "tabler-react";
+
 <Nav
   items={
     <React.Fragment>
@@ -31,12 +35,14 @@
       </Nav.Item>
     </React.Fragment>
   }
-/>
+/>;
 ```
 
 #### With item objects from props
 
 ```jsx
+import { Nav } from "tabler-react";
+
 <Nav
   itemsObjects={[
     {
@@ -52,5 +58,5 @@
     { value: "Page Three" },
     { value: "Page Four", icon: "user", active: true },
   ]}
-/>
+/>;
 ```

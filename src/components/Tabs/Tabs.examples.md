@@ -1,4 +1,6 @@
 ```jsx
+import { Tabs, Tab, Grid, Card } from "tabler-react";
+
 <Tabs initialTab="Hello">
   <Tab title="Hello">Hello World</Tab>
   <Tab title="Goodbye">Goodbye</Tab>
@@ -8,14 +10,12 @@
         <Card body="Short content" />
       </Grid.Col>
       <Grid.Col md={4}>
-        <Card
-          body="Extra long content of card. Lorem ipsum dolor sit amet, consetetur sadipscing elitr"
-        />
+        <Card body="Extra long content of card. Lorem ipsum dolor sit amet, consetetur sadipscing elitr" />
       </Grid.Col>
       <Grid.Col md={4}>
         <Card body="Short content" />
       </Grid.Col>
     </Grid.Row>
   </Tab>
-</Tabs>
+</Tabs>;
 ```

@@ -1,4 +1,6 @@
 ```jsx
+import { Tab, TabbedCard, Grid, Card } from "tabler-react";
+
 <TabbedCard initialTab="Hello">
   <Tab title="Hello">Hello World</Tab>
   <Tab title="Goodbye">Goodbye</Tab>
@@ -15,5 +17,5 @@
       </Grid.Col>
     </Grid.Row>
   </Tab>
-</TabbedCard>
+</TabbedCard>;
 ```

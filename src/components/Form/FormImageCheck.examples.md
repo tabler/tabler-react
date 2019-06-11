@@ -1,6 +1,8 @@
 ### Image input
 
 ```jsx
+import { Form } from "tabler-react";
+
 <Form.Group label="Image input">
   <Form.ImageCheck>
     <Form.ImageCheckItem
@@ -34,5 +36,5 @@
       col={{ sm: 2 }}
     />
   </Form.ImageCheck>
-</Form.Group>
+</Form.Group>;
 ```

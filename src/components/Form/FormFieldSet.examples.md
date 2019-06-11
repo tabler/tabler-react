@@ -1,6 +1,8 @@
 ### Form fieldset
 
 ```jsx
+import { Form } from "tabler-react";
+
 <Form.FieldSet>
   <Form.Group label="Full name" isRequired>
     <Form.Input name="example-text-input" />
@@ -14,5 +16,5 @@
   <Form.Group label="Phone number" className="mb-0">
     <Form.Input name="example-text-input" />
   </Form.Group>
-</Form.FieldSet>
+</Form.FieldSet>;
 ```

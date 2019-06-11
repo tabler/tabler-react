@@ -11,6 +11,8 @@
 ### Advanced Card
 
 ```jsx
+import { Button, Card } from "tabler-react";
+
 <Card>
   <Card.Header>
     <Card.Title>Card title</Card.Title>
@@ -30,7 +32,7 @@
     temporibus!
   </Card.Body>
   <Card.Footer>This is standard card footer</Card.Footer>
-</Card>
+</Card>;
 ```
 
 ### Row Deck
@@ -38,6 +40,8 @@
 Use Grid.Row and the 'cards' and 'deck' props to render same height cards
 
 ```jsx
+import { Card, Grid } from "tabler-react";
+
 <Grid.Row cards deck>
   <Grid.Col md={4}>
     <Card body="Short content" />
@@ -51,12 +55,14 @@ Use Grid.Row and the 'cards' and 'deck' props to render same height cards
   <Grid.Col md={4}>
     <Card body="Short content" />
   </Grid.Col>
-</Grid.Row>
+</Grid.Row>;
 ```
 
 ### Card with loader
 
 ```jsx
+import { Dimmer } from "tabler-react";
+
 <Card title="Card with loader" isClosable isCollapsible>
   <Card.Body>
     <Dimmer active loader>
@@ -66,5 +72,5 @@ Use Grid.Row and the 'cards' and 'deck' props to render same height cards
       nulla temporibus!
     </Dimmer>
   </Card.Body>
-</Card>
+</Card>;
 ```

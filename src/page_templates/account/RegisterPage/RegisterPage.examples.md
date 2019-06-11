@@ -1,3 +1,5 @@
 ```jsx
-<RegisterPage />
+import { RegisterPage } from "tabler-react";
+
+<RegisterPage />;
 ```

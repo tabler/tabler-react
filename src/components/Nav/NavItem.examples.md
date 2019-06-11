@@ -1,16 +1,20 @@
 ```jsx
+import { Nav } from "tabler-react";
+
 <Nav>
   <Nav.Item hasSubNav value="Menu 1">
     <Nav.SubItem value="Sub Item 1" />
     <Nav.SubItem>Sub Item 2</Nav.SubItem>
     <Nav.SubItem icon="globe">Sub Item 3</Nav.SubItem>
   </Nav.Item>
-</Nav>
+</Nav>;
 ```
 
 #### With sub-items from component based prop
 
 ```jsx
+import { Nav } from "tabler-react";
+
 <Nav>
   <Nav.Item
     hasSubNav
@@ -23,12 +27,14 @@
       </React.Fragment>
     }
   />
-</Nav>
+</Nav>;
 ```
 
 #### With sub-item from objects props
 
 ```jsx
+import { Nav } from "tabler-react";
+
 <Nav>
   <Nav.Item
     hasSubNav
@@ -46,5 +52,5 @@
       },
     ]}
   />
-</Nav>
+</Nav>;
 ```

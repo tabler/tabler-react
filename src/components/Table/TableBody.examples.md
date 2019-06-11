@@ -1,4 +1,6 @@
 ```jsx
+import { Table, Button } from "tabler-react";
+
 <Table>
   <Table.Body>
     <Table.Row>
@@ -9,12 +11,14 @@
       </Table.Col>
     </Table.Row>
   </Table.Body>
-</Table>
+</Table>;
 ```
 
 ### Build body from Table props
 
 ```jsx
+import { Table, Button } from "tabler-react";
+
 <Table
   bodyItems={[
     {
@@ -32,5 +36,5 @@
     <Table.ColHeader>Name</Table.ColHeader>
     <Table.ColHeader>Action</Table.ColHeader>
   </Table.Header>
-</Table>
+</Table>;
 ```

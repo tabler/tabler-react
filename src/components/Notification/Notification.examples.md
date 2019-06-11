@@ -1,4 +1,6 @@
 ```jsx
+import { Notification } from "tabler-react";
+
 <div className="d-flex">
   <Notification
     avatarURL="demo/faces/female/1.jpg"
@@ -9,5 +11,5 @@
     }
     time="1 hour ago"
   />
-</div>
+</div>;
 ```

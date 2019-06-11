@@ -1,15 +1,19 @@
 ```jsx
+import { Button } from "tabler-react";
+
 <Button.List>
   <Button color="success">Save changes</Button>
   <Button color="secondary">Save and continue</Button>
   <Button color="danger">Cancel</Button>
-</Button.List>
+</Button.List>;
 ```
 
 If the list is very long, it will automatically wrap on multiple lines,
 while keeping all buttons evenly spaced.
 
 ```jsx
+import { Button } from "tabler-react";
+
 <Button.List>
   <Button color="secondary">One</Button>
   <Button color="secondary">Two</Button>
@@ -30,21 +34,25 @@ while keeping all buttons evenly spaced.
   <Button color="secondary">Seventeen</Button>
   <Button color="secondary">Eighteen</Button>
   <Button color="secondary">Nineteen</Button>
-</Button.List>
+</Button.List>;
 ```
 
 ### List Buttons Alignment
 
 ```jsx
+import { Button } from "tabler-react";
+
 <Button.List align="center">
   <Button color="primary">color='primary'</Button>
   <Button color="secondary">color='secondary'</Button>
-</Button.List>
+</Button.List>;
 ```
 
 ```jsx
+import { Button } from "tabler-react";
+
 <Button.List align="right">
   <Button color="primary">color='primary'</Button>
   <Button color="secondary">color='secondary'</Button>
-</Button.List>
+</Button.List>;
 ```

@@ -1,4 +1,6 @@
 ```jsx
+import { List } from "tabler-react";
+
 <List.Group>
   <List.GroupItem action active>
     Already Active
@@ -7,5 +9,5 @@
   <List.GroupItem action icon="globe">
     With an icon!
   </List.GroupItem>
-</List.Group>
+</List.Group>;
 ```

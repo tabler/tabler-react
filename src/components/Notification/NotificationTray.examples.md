@@ -1,5 +1,7 @@
 ```jsx
-<NotificationTray
+import { Notification } from "tabler-react";
+
+<Notification.Tray
   notificationsObjects={[
     {
       avatarURL: "demo/faces/male/41.jpg",
@@ -30,11 +32,13 @@
       time: "2 hours ago",
     },
   ]}
-/>
+/>;
 ```
 
 ```jsx
-<NotificationTray unread={true}>
+import { Notification } from "tabler-react";
+
+<Notification.Tray unread={true}>
   <Notification
     avatarURL="demo/faces/male/41.jpg"
     message={

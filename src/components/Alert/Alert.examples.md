@@ -65,6 +65,8 @@
 ### Alert with buttons
 
 ```jsx
+import { Button, Header } from "tabler-react";
+
 <Alert type="primary" isDismissible>
   <Header.H4>Some Message</Header.H4>
   <p>
@@ -79,7 +81,7 @@
       No, thanks
     </Button>
   </Button.List>
-</Alert>
+</Alert>;
 ```
 
 ### Alert with extra space

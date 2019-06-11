@@ -1,3 +1,5 @@
 ```jsx
-<LoginPage />
+import { LoginPage } from "tabler-react";
+
+<LoginPage />;
 ```

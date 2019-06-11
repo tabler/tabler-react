@@ -1,5 +1,7 @@
 ```jsx
-<Icon name="user" />
+import { Icon } from "tabler-react";
+
+<Icon name="user" />;
 ```
 
 #### Changing the prefix to use fontawesome
@@ -18,17 +20,23 @@ In your HTML `<head>`:
 Then use the Icon `prefix` prop
 
 ```jsx
-<Icon prefix="fa" name="user" />
+import { Icon } from "tabler-react";
+
+<Icon prefix="fa" name="user" />;
 ```
 
 #### Rendering a flag
 
 ```jsx
-<Icon flag name="gb" />
+import { Icon } from "tabler-react";
+
+<Icon flag name="gb" />;
 ```
 
 #### Rendering a payment icon
 
 ```jsx
-<Icon payment name="visa" />
+import { Icon } from "tabler-react";
+
+<Icon payment name="visa" />;
 ```

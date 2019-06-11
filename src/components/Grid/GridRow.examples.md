@@ -1,6 +1,8 @@
 ### Row gutters
 
 ```jsx
+import { Grid } from 'tabler-react';
+
 <Grid.Row gutters="xs">
   <Grid.Col>
     <div
@@ -123,6 +125,8 @@
 ### Rows of Cards
 
 ```jsx
+import { Grid, Card } from 'tabler-react';
+
 <Grid.Row cards>
   <Grid.Col>
     <Card title="Title" body="A" />
@@ -158,6 +162,8 @@
 ### Row Alignment
 
 ```jsx
+import { Grid, Card } from "tabler-react";
+
 <Grid.Row cards alignItems="center">
   <Grid.Col>
     <Card title="Title" body="A" />
@@ -172,5 +178,5 @@
   <Grid.Col>
     <Card title="Title" body="C" />
   </Grid.Col>
-</Grid.Row>
+</Grid.Row>;
 ```

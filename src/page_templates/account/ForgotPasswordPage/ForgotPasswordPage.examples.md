@@ -1,3 +1,5 @@
 ```jsx
-<ForgotPasswordPage />
+import { ForgotPasswordPage } from "tabler-react";
+
+<ForgotPasswordPage />;
 ```
