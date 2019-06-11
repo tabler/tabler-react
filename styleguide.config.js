@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   components: "src/**/*.{tsx,ts,js}",
   ignore: ["**/*.stories.*", "**/Code/*", "**/index.ts"],
@@ -46,6 +48,9 @@ module.exports = {
         },
       ],
     },
+  },
+  moduleAliases: {
+    "tabler-react": path.resolve(__dirname, "src"),
   },
   getExampleFilename(componentPath) {
     return componentPath.replace(/\.tsx?$/, ".examples.md");
