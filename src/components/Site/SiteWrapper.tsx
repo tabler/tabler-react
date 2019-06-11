@@ -22,7 +22,7 @@ type State = {
 };
 
 class SiteWrapper extends React.PureComponent<Props, State> {
-  static displayName = "Site.Wrapper";
+  
 
   state = {
     collapseMobileMenu: false,

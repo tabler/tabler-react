@@ -142,6 +142,6 @@ const Button = (props: Props) => {
   }
 };
 
-Button.displayName = "Button";
+
 
 export default Button;

@@ -24,6 +24,6 @@ const TextSmall = ({ className, children, color = "", wrap, muted }: Props) => {
   );
 };
 
-TextSmall.displayName = "Text.Small";
+
 
 export default TextSmall;

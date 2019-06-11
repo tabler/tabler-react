@@ -13,6 +13,6 @@ function DropdownItemDivider(props: Props) {
   return <div className="dropdown-divider">{props.children}</div>;
 }
 
-DropdownItemDivider.displayName = "Dropdown.ItemDivider";
+
 
 export default DropdownItemDivider;

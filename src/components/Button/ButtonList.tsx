@@ -19,6 +19,4 @@ function ButtonList({ className, children, align = "", ...props }: Props) {
   );
 }
 
-ButtonList.displayName = "Button.List";
-
 export default ButtonList;

@@ -79,6 +79,6 @@ function StatsCard({
   );
 }
 
-StatsCard.displayName = "StatsCard";
+
 
 export default StatsCard;

@@ -24,6 +24,6 @@ function PageContentWithSidebar({ children, header, sidebar }: Props) {
   );
 }
 
-PageContentWithSidebar.displayName = "Page.ContentWithSidebar";
+
 
 export default PageContentWithSidebar;

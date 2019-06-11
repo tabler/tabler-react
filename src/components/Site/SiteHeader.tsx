@@ -92,6 +92,6 @@ const SiteHeader = ({
   );
 };
 
-SiteHeader.displayName = "Site.Header";
+
 
 export default SiteHeader;

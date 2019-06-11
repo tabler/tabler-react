@@ -23,6 +23,6 @@ function PageHeader({ children, title, subTitle, options }: Props) {
   );
 }
 
-PageHeader.displayName = "Page.Header";
+
 
 export default PageHeader;

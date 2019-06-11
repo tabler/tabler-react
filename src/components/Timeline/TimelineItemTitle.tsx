@@ -13,6 +13,6 @@ function TimelineItemTitle({ children, active }: Props): any {
   }
 }
 
-TimelineItemTitle.displayName = "Timeline.ItemTitle";
+
 
 export default TimelineItemTitle;

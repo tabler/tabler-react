@@ -11,6 +11,6 @@ function CardFooter({ className, children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-CardFooter.displayName = "Card.Footer";
+
 
 export default CardFooter;

@@ -11,6 +11,6 @@ function PageTitle({ className, children }: Props) {
   return <h1 className={classes}>{children}</h1>;
 }
 
-PageTitle.displayName = "Page.Title";
+
 
 export default PageTitle;

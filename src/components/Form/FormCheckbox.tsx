@@ -61,7 +61,5 @@ function FormCheckbox({
   );
 }
 
-FormCheckbox.displayName = "Form.Checkbox";
-
 /** @component */
 export default FormCheckbox;

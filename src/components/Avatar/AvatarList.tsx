@@ -24,6 +24,4 @@ function AvatarList({ className, children, stacked }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-AvatarList.displayName = "Avatar.List";
-
 export default AvatarList;

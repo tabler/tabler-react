@@ -85,7 +85,7 @@ function FormSelect(props: Props) {
   return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
 }
 
-FormSelect.displayName = "Form.Select";
+
 
 /** @component */
 export default FormSelect;

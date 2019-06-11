@@ -35,7 +35,7 @@ function GridRow({
   return <div className={classes}>{children}</div>;
 }
 
-GridRow.displayName = "Grid.Row";
+
 
 /** @component */
 export default GridRow;

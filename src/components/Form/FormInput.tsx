@@ -173,7 +173,5 @@ function FormInput(props: Props) {
   return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
 }
 
-FormInput.displayName = "Form.Input";
-
 /** @component */
 export default FormInput;

@@ -62,6 +62,4 @@ class ButtonDropdown extends React.Component<Props, State> {
   }
 }
 
-(ButtonDropdown as any).displayName = "Button.Dropdown";
-
 export default ButtonDropdown;

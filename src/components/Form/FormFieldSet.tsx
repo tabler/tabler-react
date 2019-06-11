@@ -11,6 +11,4 @@ function FormFieldSet({ className, children }: Props) {
   return <fieldset className={classes}>{children}</fieldset>;
 }
 
-FormFieldSet.displayName = "Form.FieldSet";
-
 export default FormFieldSet;

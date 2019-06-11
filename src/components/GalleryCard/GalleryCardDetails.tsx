@@ -48,6 +48,6 @@ function GalleryCardDetails({
   );
 }
 
-GalleryCardDetails.displayName = "GalleryCard.Details";
+
 
 export default GalleryCardDetails;

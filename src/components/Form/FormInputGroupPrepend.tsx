@@ -11,6 +11,4 @@ function FormInputGroupPrepend({ className, children }: Props) {
   return <span className={classes}>{children}</span>;
 }
 
-FormInputGroupPrepend.displayName = "Form.InputGroupPrepend";
-
 export default FormInputGroupPrepend;

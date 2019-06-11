@@ -34,6 +34,6 @@ function ProgressCard({
   );
 }
 
-ProgressCard.displayName = "ProgressCard";
+
 
 export default ProgressCard;

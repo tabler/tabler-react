@@ -75,6 +75,6 @@ function FormSelectGroupItem({
   );
 }
 
-FormSelectGroupItem.displayName = "Form.SelectGroupItem";
+
 
 export default FormSelectGroupItem;

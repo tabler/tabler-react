@@ -74,6 +74,6 @@ const SiteNav = ({
   );
 };
 
-SiteNav.displayName = "Site.Nav";
+
 
 export default SiteNav;

@@ -68,6 +68,4 @@ function DropdownMenu({
   );
 }
 
-DropdownMenu.displayName = "Dropdown.Menu";
-
 export default DropdownMenu;

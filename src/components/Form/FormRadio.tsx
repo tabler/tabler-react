@@ -82,6 +82,6 @@ function FormRadio({
   );
 }
 
-FormRadio.displayName = "Form.Radio";
+
 
 export default FormRadio;

@@ -11,6 +11,6 @@ function DimmerContent({ className, children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-DimmerContent.displayName = "Dimmer.Content";
+
 
 export default DimmerContent;

@@ -17,7 +17,6 @@ function AlertLink({ children, className, href }: Props) {
     </a>
   );
 }
-
-AlertLink.displayName = "Alert.Link";
+ 
 
 export default AlertLink;

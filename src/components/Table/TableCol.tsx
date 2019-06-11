@@ -17,6 +17,6 @@ function TableCol({ className, children, alignContent, colSpan }: Props) {
   );
 }
 
-TableCol.displayName = "Table.Col";
+
 
 export default TableCol;

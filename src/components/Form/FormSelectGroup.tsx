@@ -46,6 +46,6 @@ function FormSelectGroup({
   );
 }
 
-FormSelectGroup.displayName = "Form.SelectGroup";
+
 
 export default FormSelectGroup;

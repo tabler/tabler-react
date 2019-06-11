@@ -12,6 +12,6 @@ function CardAlert({ className, children, color }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-CardAlert.displayName = "Card.Alert";
+
 
 export default CardAlert;

@@ -226,6 +226,6 @@ const Dropdown = function({
   );
 };
 
-Dropdown.displayName = "Dropdown";
+
 
 export default withDropdownProvider(Dropdown);

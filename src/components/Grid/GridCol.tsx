@@ -75,7 +75,7 @@ function GridCol({
   return <div className={classes}>{children}</div>;
 }
 
-GridCol.displayName = "Grid.Col";
+
 
 /** @component */
 export default GridCol;

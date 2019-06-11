@@ -12,6 +12,6 @@ function TableBody({ className, children, ...props }: Props) {
   );
 }
 
-TableBody.displayName = "Table.Body";
+
 
 export default TableBody;

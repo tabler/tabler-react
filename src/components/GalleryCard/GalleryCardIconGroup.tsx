@@ -12,6 +12,6 @@ function GalleryCardIconGroup({ children, className }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-GalleryCardIconGroup.displayName = "GalleryCard.IconGroup";
+
 
 export default GalleryCardIconGroup;

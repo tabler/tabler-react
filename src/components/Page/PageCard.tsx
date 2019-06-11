@@ -35,6 +35,6 @@ function PageCard({ children, title, header, footer, RootComponent }: Props) {
   );
 }
 
-PageCard.displayName = "Page.Card";
+
 
 export default PageCard;

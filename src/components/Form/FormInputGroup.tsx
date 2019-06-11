@@ -41,6 +41,4 @@ function FormInputGroup(props: Props) {
   );
 }
 
-FormInputGroup.displayName = "Form.InputGroup";
-
 export default FormInputGroup;

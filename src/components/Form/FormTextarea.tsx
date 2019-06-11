@@ -85,7 +85,7 @@ function FormTextarea(props: Props) {
   return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
 }
 
-FormTextarea.displayName = "Form.Textarea";
+
 
 /** @component */
 export default FormTextarea;

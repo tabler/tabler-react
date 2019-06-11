@@ -23,6 +23,6 @@ function CardMap({ className, children, placeholder }: Props) {
   );
 }
 
-CardMap.displayName = "Card.Map";
+
 
 export default CardMap;

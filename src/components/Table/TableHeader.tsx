@@ -15,6 +15,6 @@ function TableHeader({ className, children, ...props }: Props) {
   );
 }
 
-TableHeader.displayName = "Table.Header";
+
 
 export default TableHeader;

@@ -11,6 +11,4 @@ function FormInputGroupAppend({ className, children }: Props) {
   return <span className={classes}>{children}</span>;
 }
 
-FormInputGroupAppend.displayName = "Form.InputGroupAppend";
-
 export default FormInputGroupAppend;

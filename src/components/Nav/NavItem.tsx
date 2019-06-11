@@ -168,7 +168,7 @@ const NavItem = function({
   return hasSubNav ? <Manager>{wrappedChildren}</Manager> : wrappedChildren;
 };
 
-NavItem.displayName = "Nav.Item";
+
 
 /** @component */
 export default withDropdownProvider(NavItem);

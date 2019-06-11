@@ -21,6 +21,6 @@ function ListGroup({ className, children, transparent, isCardBody }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-ListGroup.displayName = "List.Group";
+
 
 export default ListGroup;

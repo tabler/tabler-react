@@ -12,6 +12,6 @@ function ListItem({ className, children, inline }: Props) {
   return <li className={classes}>{children}</li>;
 }
 
-ListItem.displayName = "List.Item";
+
 
 export default ListItem;

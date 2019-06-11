@@ -43,6 +43,6 @@ function FormColorCheckItem({
   );
 }
 
-FormColorCheckItem.displayName = "Form.ColorCheckItem";
+
 
 export default FormColorCheckItem;

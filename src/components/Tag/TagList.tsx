@@ -15,6 +15,6 @@ function TagList(props: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-TagList.displayName = "Tag.List";
+
 
 export default TagList;

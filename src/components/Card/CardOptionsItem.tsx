@@ -56,6 +56,6 @@ function CardOptionsItem({ className, children, icon, type, onClick }: Props) {
   );
 }
 
-CardOptionsItem.displayName = "Card.OptionsItem";
+
 
 export default CardOptionsItem;

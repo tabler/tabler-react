@@ -23,6 +23,6 @@ function FormHelp({ className, children, position = "top", message }: Props) {
   );
 }
 
-FormHelp.displayName = "Form.Help";
+
 
 export default FormHelp;

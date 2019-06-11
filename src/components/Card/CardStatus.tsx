@@ -20,6 +20,4 @@ function CardStatus({ className, children, color, side }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-CardStatus.displayName = "Card.Status";
-
 export default CardStatus;

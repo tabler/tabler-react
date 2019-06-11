@@ -88,6 +88,6 @@ const SiteFooter = ({ links, note, copyright, nav }: Props) => (
   </React.Fragment>
 );
 
-SiteFooter.displayName = "Site.Footer";
+
 
 export default SiteFooter;

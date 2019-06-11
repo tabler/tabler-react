@@ -14,6 +14,6 @@ function PageMain({ children }: Props) {
   );
 }
 
-PageMain.displayName = "Page.Main";
+
 
 export default PageMain;

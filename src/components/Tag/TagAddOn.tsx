@@ -88,6 +88,6 @@ function TagAddOn(props: Props) {
   );
 }
 
-TagAddOn.displayName = "Tag.AddOn";
+
 
 export default TagAddOn;

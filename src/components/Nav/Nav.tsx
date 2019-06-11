@@ -120,6 +120,6 @@ const Nav = function({
   );
 };
 
-Nav.displayName = "Nav";
+
 
 export default Nav;

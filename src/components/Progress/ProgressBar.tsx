@@ -14,6 +14,6 @@ function ProgressBar({ className, color = "", width = 0 }: Props) {
   return <div className={classes} style={{ width: `${width}%` }} />;
 }
 
-ProgressBar.displayName = "Progress.Bar";
+
 
 export default ProgressBar;

@@ -13,6 +13,6 @@ function CardTitle({ className, children, RootComponent }: Props) {
   return <Component className={classes}>{children}</Component>;
 }
 
-CardTitle.displayName = "Card.Title";
+
 
 export default CardTitle;

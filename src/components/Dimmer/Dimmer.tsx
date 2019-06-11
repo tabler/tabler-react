@@ -23,7 +23,7 @@ function Dimmer({ className, children, active, loader }: Props) {
   );
 }
 
-Dimmer.displayName = "Dimmer";
+
 
 Dimmer.Content = DimmerContent;
 

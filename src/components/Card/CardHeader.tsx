@@ -26,6 +26,6 @@ function CardHeader({ className, children, backgroundURL = "" }: Props) {
   );
 }
 
-CardHeader.displayName = "Card.Header";
+
 
 export default CardHeader;

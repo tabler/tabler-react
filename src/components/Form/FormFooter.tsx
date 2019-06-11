@@ -11,6 +11,6 @@ function FormFooter(props: Props) {
   return <div className={classes}>{props.children}</div>;
 }
 
-FormFooter.displayName = "Form.Footer";
+
 
 export default FormFooter;

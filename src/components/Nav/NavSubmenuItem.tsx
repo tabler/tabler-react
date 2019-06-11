@@ -33,6 +33,6 @@ function NavSubmenuItem({
   );
 }
 
-NavSubmenuItem.displayName = "Nav.SubmenuItem";
+
 
 export default NavSubmenuItem;

@@ -11,6 +11,6 @@ function GalleryCardFooter({ children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-GalleryCardFooter.displayName = "GalleryCard.Footer";
+
 
 export default GalleryCardFooter;

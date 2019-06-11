@@ -19,6 +19,6 @@ function H5({ className, children }: Props) {
   );
 }
 
-H5.displayName = "Header.H5";
+
 
 export default H5;

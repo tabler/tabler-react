@@ -62,6 +62,6 @@ function PricingCardButton({
   );
 }
 
-PricingCardButton.displayName = "PricingCard.Button";
+
 
 export default PricingCardButton;

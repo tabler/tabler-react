@@ -53,7 +53,7 @@ function GalleryCardIconItem({
   );
 }
 
-GalleryCardIconItem.displayName = "GalleryCard.IconItem";
+
 
 /** @component */
 export default GalleryCardIconItem;

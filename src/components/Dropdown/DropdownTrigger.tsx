@@ -108,7 +108,5 @@ function DropdownTrigger({
   );
 }
 
-DropdownTrigger.displayName = "Dropdown.Trigger";
-
 /** @component */
 export default DropdownTrigger;

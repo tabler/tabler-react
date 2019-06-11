@@ -11,6 +11,6 @@ function CardOptions({ className, children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-CardOptions.displayName = "Card.Options";
+
 
 export default CardOptions;

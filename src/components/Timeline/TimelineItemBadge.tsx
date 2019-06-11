@@ -20,6 +20,6 @@ function TimelineItemBadge({ className, children, color = "" }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-TimelineItemBadge.displayName = "Timeline.ItemBadge";
+
 
 export default TimelineItemBadge;

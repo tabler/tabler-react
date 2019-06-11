@@ -126,7 +126,7 @@ const Text = ({
   );
 };
 
-Text.displayName = "Text";
+
 
 /** @component */
 export default Text;

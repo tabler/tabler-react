@@ -11,7 +11,7 @@ function Site(props: Props) {
   return props.children;
 }
 
-Site.displayName = "Site";
+
 
 /** @component */
 export default Site;

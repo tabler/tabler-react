@@ -32,6 +32,6 @@ function NavSubItem({
   );
 }
 
-NavSubItem.displayName = "Nav.SubItem";
+
 
 export default NavSubItem;

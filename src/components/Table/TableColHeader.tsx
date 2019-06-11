@@ -17,6 +17,6 @@ function TableColHeader({ className, children, colSpan, alignContent }: Props) {
   );
 }
 
-TableColHeader.displayName = "Table.ColHeader";
+
 
 export default TableColHeader;

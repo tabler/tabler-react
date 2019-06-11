@@ -45,6 +45,4 @@ function FormMaskedInput(props: Props) {
   );
 }
 
-FormMaskedInput.displayName = "Form.MaskedInput";
-
 export default FormMaskedInput;

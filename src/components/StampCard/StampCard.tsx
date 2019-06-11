@@ -42,6 +42,6 @@ function StampCard({
   );
 }
 
-StampCard.displayName = "StampCard";
+
 
 export default StampCard;

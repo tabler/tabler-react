@@ -54,7 +54,7 @@ function ListGroupItem({
   );
 }
 
-ListGroupItem.displayName = "List.GroupItem";
+
 
 /** @component */
 export default ListGroupItem;

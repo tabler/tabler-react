@@ -30,6 +30,6 @@ const SiteLogo = ({ className, ...props }: Props) => {
   );
 };
 
-SiteLogo.displayName = "Site.Logo";
+
 
 export default SiteLogo;

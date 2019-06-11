@@ -52,6 +52,6 @@ function FormToggle({
   );
 }
 
-FormToggle.displayName = "Form.Toggle";
+
 
 export default FormToggle;

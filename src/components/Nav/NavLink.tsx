@@ -48,7 +48,7 @@ function NavLink({
   );
 }
 
-NavLink.displayName = "Nav.Link";
+
 
 /** @component */
 export default NavLink;

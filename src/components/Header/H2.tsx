@@ -19,6 +19,6 @@ function H2({ className, children }: Props) {
   );
 }
 
-H2.displayName = "Header.H2";
+
 
 export default H2;

@@ -27,6 +27,6 @@ function PageContent({ className, children, title, subTitle, options }: Props) {
   );
 }
 
-PageContent.displayName = "Page.Content";
+
 
 export default PageContent;

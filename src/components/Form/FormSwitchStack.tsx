@@ -11,6 +11,4 @@ function FormToggleStack({ className, children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-FormToggleStack.displayName = "Form.ToggleStack";
-
 export default FormToggleStack;

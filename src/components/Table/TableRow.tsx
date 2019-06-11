@@ -15,6 +15,6 @@ function TableRow({ className, children, ...props }: Props) {
   );
 }
 
-TableRow.displayName = "Table.Row";
+
 
 export default TableRow;

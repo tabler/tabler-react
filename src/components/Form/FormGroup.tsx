@@ -30,6 +30,6 @@ function FormGroup({ className, children, label, isRequired }: Props) {
   );
 }
 
-FormGroup.displayName = "Form.Group";
+
 
 export default FormGroup;

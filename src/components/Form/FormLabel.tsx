@@ -35,6 +35,6 @@ function FormLabel({
   );
 }
 
-FormLabel.displayName = "Form.Label";
+
 
 export default FormLabel;

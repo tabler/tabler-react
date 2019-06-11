@@ -11,6 +11,6 @@ function PricingCardPrice({ className, children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-PricingCardPrice.displayName = "PricingCard.Price";
+
 
 export default PricingCardPrice;

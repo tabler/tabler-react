@@ -13,7 +13,7 @@ function Grid(props: Props) {
 Grid.Row = GridRow;
 Grid.Col = GridCol;
 
-Grid.displayName = "Grid";
+
 
 /** @component */
 export default Grid;

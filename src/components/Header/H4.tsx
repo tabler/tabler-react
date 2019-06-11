@@ -19,6 +19,6 @@ function H4({ className, children }: Props) {
   );
 }
 
-H4.displayName = "Header.H4";
+
 
 export default H4;

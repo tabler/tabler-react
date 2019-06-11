@@ -11,6 +11,6 @@ function FormInputGroupText({ className, children }: Props) {
   return <span className={classes}>{children}</span>;
 }
 
-FormInputGroupText.displayName = "Form.InputGroupText";
+
 
 export default FormInputGroupText;

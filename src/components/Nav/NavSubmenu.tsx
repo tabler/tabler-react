@@ -11,6 +11,6 @@ function NavSubmenu({ className, children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-NavSubmenu.displayName = "Nav.Submenu";
+
 
 export default NavSubmenu;

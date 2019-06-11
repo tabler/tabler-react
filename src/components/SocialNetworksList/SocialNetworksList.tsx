@@ -70,6 +70,6 @@ function SocialNetworksList(props: Props) {
   );
 }
 
-SocialNetworksList.displayName = "SocialNetworksList";
+
 
 export default SocialNetworksList;

@@ -30,7 +30,7 @@ function PricingCardAttributeItem({ children, available, hasIcon }: Props) {
   );
 }
 
-PricingCardAttributeItem.displayName = "PricingCard.AttributeItem";
+
 
 /** @component */
 export default PricingCardAttributeItem;

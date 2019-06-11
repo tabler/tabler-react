@@ -38,6 +38,6 @@ function FormStaticText({
   );
 }
 
-FormStaticText.displayName = "Form.StaticText";
+
 
 export default FormStaticText;

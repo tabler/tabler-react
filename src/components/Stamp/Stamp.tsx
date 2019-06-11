@@ -23,6 +23,6 @@ function Stamp({ children, className, size = "md", icon, color = "" }: Props) {
   );
 }
 
-Stamp.displayName = "Stamp";
+
 
 export default Stamp;

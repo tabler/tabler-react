@@ -11,6 +11,6 @@ function Loader({ className, children }: Props) {
   return <div className={classes}>{children}</div>;
 }
 
-Loader.displayName = "Loader";
+
 
 export default Loader;
