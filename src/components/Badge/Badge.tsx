@@ -1,24 +1,42 @@
 import * as React from "react";
 import cn from "classnames";
+import { TablerComponent, MouseEvents } from "../../types";
+import { colors, softColors } from "../../colors";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-  color?: string;
+export interface Props extends TablerComponent, MouseEvents {
+  color?: colors;
+  textColor?: colors;
+  pill?: boolean;
+  as?: React.ElementType;
+  href?: string;
 }
 
 /**
  * A small colored rectangle with rounded corners.
  */
-function Badge({ className, children, color = "primary" }: Props) {
-  const classes = cn(
+function Badge({
+  className,
+  children,
+  as: Component = "span",
+  color = "primary",
+  textColor = "white",
+  pill,
+  ...rest
+}: Props) {
+  const _className = cn(
     {
       badge: true,
-      [`badge-${color}`]: color,
+      [`bg-${color}`]: color,
+      [`text-${textColor}`]: softColors.includes(color) ? false : textColor,
+      "badge-pill": pill,
     },
     className
   );
-  return <span className={classes}>{children}</span>;
+  return (
+    <Component className={_className} {...rest}>
+      {children}
+    </Component>
+  );
 }
 
 export default Badge;
