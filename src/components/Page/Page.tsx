@@ -7,8 +7,16 @@ type Props = {
 };
 
 function Page({ className, children }: Props) {
-  const classes = cn("page", className);
-  return <div className={classes}>{children}</div>;
+  const classes = cn("page d-flex h-auto min-h-screen", className);
+  return (
+    <div className={classes}>
+      <div className="d-flex flex-fill">
+        <div className="main-content flex-fill d-flex flex-column max-w-full">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Page;
