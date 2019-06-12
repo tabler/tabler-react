@@ -7,8 +7,8 @@
 node_modules
 
 # builds
-build
-dist
+/build
+/dist
 
 # misc
 .DS_Store
