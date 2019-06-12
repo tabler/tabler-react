@@ -1,20 +1,3 @@
-import * as React from "react";
-import cn from "classnames";
+import TagList from "../Badge/BadgeList";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-};
-
-/**
- * Adds a space between its child Tags
- */
-function TagList(props: Props) {
-  const { children, className } = props;
-  const classes = cn("tags", className);
-  return <div className={classes}>{children}</div>;
-}
-
-
-
-export default TagList;
+export { TagList as default, TagList };
