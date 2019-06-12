@@ -22,6 +22,12 @@ interface Props {
   offsetMd?: number;
   offsetLg?: number;
   offsetXl?: number;
+  order?: number;
+  orderXs?: number;
+  orderSm?: number;
+  orderMd?: number;
+  orderLg?: number;
+  orderXl?: number;
   ignoreCol?: boolean;
 }
 
@@ -46,6 +52,12 @@ function GridCol({
   offsetMd = 0,
   offsetLg = 0,
   offsetXl = 0,
+  order,
+  orderXs,
+  orderSm,
+  orderMd,
+  orderLg,
+  orderXl,
   ignoreCol = false,
 }: Props) {
   const classes = cn(
@@ -69,13 +81,17 @@ function GridCol({
       [`offset-md-${offsetMd}`]: offsetMd,
       [`offset-lg-${offsetLg}`]: offsetLg,
       [`offset-xl-${offsetXl}`]: offsetXl,
+      [`order-${order}`]: order,
+      [`order-xs-${orderXs}`]: orderXs,
+      [`order-sm-${orderSm}`]: orderSm,
+      [`order-md-${orderMd}`]: orderMd,
+      [`order-lg-${orderLg}`]: orderLg,
+      [`order-xl-${orderXl}`]: orderXl,
     },
     className
   );
   return <div className={classes}>{children}</div>;
 }
-
-
 
 /** @component */
 export default GridCol;
