@@ -2,11 +2,14 @@ import * as React from "react";
 import cn from "classnames";
 
 import Icon from "../Icon";
+import { TablerComponent } from "../../types";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+interface Props extends TablerComponent {
+  /**
+   * @deprecated use 'as'
+   */
   RootComponent?: React.ElementType;
+  as?: React.ElementType;
   active?: boolean;
   action?: boolean;
   icon?: string;
@@ -17,10 +20,11 @@ function ListGroupItem({
   className,
   children,
   RootComponent,
+  as = "a",
   active,
   action,
   icon,
-  to,
+  ...rest
 }: Props) {
   const classes = cn(
     "list-group-item",
@@ -32,29 +36,18 @@ function ListGroupItem({
     },
     className
   );
-  // const Component = RootComponent || "a";
-  return RootComponent ? (
-    <RootComponent to={to} className={classes}>
+  const Component = as || RootComponent;
+  return (
+    <Component className={classes} {...rest}>
       {icon && (
         <span className="mr-3 icon">
           <Icon prefix="fe" name={icon} />{" "}
         </span>
       )}
       {children}
-    </RootComponent>
-  ) : (
-    <a className={classes} href={to}>
-      {icon && (
-        <span className="mr-3 icon">
-          <Icon prefix="fe" name={icon} />{" "}
-        </span>
-      )}
-      {children}
-    </a>
+    </Component>
   );
 }
-
-
 
 /** @component */
 export default ListGroupItem;
