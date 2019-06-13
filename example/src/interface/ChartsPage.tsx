@@ -2,11 +2,15 @@ import * as React from "react";
 
 import { Page, Grid, Card, colors } from "tabler-react";
 
-import C3Chart from "react-c3js";
+import C3Chart from "../C3Chart";
 
 import SiteWrapper from "../SiteWrapper";
+import { ChartConfiguration } from "c3";
+
+type cardsConfig = ChartConfiguration & { title?: string };
+
 function ChartsPage() {
-  const cards = [
+  const cards: cardsConfig[] = [
     {
       title: "Employment Growth",
       data: {
@@ -572,7 +576,7 @@ function ChartsPage() {
           data1: "Development",
           data2: "Marketing",
           data3: "Sales",
-          data4: "Sales",
+          data4: "More Sales",
         },
       },
       axis: {

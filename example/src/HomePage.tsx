@@ -19,7 +19,7 @@ import {
   Badge,
 } from "tabler-react";
 
-import C3Chart from "react-c3js";
+import C3Chart from "./C3Chart";
 
 import SiteWrapper from "./SiteWrapper";
 
@@ -67,7 +67,7 @@ function Home() {
                 <Card.Title>Development Activity</Card.Title>
               </Card.Header>
               <C3Chart
-                style={{ height: "10rem" }}
+                style={{ height: "200px" }}
                 data={{
                   columns: [
                     // each columns data
@@ -253,7 +253,7 @@ function Home() {
                   </Card.Header>
                   <Card.Body>
                     <C3Chart
-                      style={{ height: "12rem" }}
+                      style={{ height: "250px" }}
                       data={{
                         columns: [
                           // each columns data
@@ -289,7 +289,7 @@ function Home() {
                   </Card.Header>
                   <Card.Body>
                     <C3Chart
-                      style={{ height: "12rem" }}
+                      style={{ height: "250px" }}
                       data={{
                         columns: [
                           // each columns data
@@ -506,29 +506,29 @@ function Home() {
           <Grid.Col sm={6} lg={4}>
             <Card title="Browser Stats">
               <Table className="card-table">
-                <Table.Row>
-                  <Table.Col>
-                    <Icon prefix="fa" name="chrome" className="text-muted" />
-                  </Table.Col>
-                  <Table.Col>Google Chrome</Table.Col>
-                  <Table.Col className="text-right">
-                    <Text RootComponent="span" muted>
-                      23%
-                    </Text>
-                  </Table.Col>
-                </Table.Row>
+                  <Table.Row>
+                    <Table.Col>
+                      <Icon prefix="fa" name="chrome" className="text-muted" />
+                    </Table.Col>
+                    <Table.Col>Google Chrome</Table.Col>
+                    <Table.Col className="text-right">
+                      <Text RootComponent="span" muted>
+                        23%
+                      </Text>
+                    </Table.Col>
+                  </Table.Row>
               </Table>
             </Card>
           </Grid.Col>
           <Grid.Col sm={6} lg={4}>
             <Card title="Projects">
               <Table cards>
-                <Table.Row>
-                  <Table.Col>Admin Template</Table.Col>
-                  <Table.Col alignContent="right">
+                  <Table.Row>
+                    <Table.Col>Admin Template</Table.Col>
+                    <Table.Col alignContent="right">
                     <Badge color="default">65%</Badge>
-                  </Table.Col>
-                </Table.Row>
+                    </Table.Col>
+                  </Table.Row>
               </Table>
             </Card>
           </Grid.Col>
