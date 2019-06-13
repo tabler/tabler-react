@@ -7,13 +7,12 @@ import PricingCardPrice from "./PricingCardPrice";
 import PricingCardAttributeList from "./PricingCardAttributeList";
 import PricingCardAttributeItem from "./PricingCardAttributeItem";
 import PricingCardButton from "./PricingCardButton";
+import { TablerComponent } from "../../types";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+interface Props extends TablerComponent {
   active?: boolean;
   category?: React.ReactNode;
-};
+}
 
 function PricingCard({ className, children, active = false, category }: Props) {
   const cardBodyClassName = cn("text-center");
