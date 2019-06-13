@@ -62,7 +62,7 @@ function AccountDropdown({
       triggerClassName="pr-0 leading-none"
       triggerContent={
         <React.Fragment>
-          <a className="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color ml-2">
+          <span className="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color ml-2">
             {avatarURL && <Avatar imageURL={avatarURL} />}
             <span className="ml-2 d-none d-lg-block leading-none">
               <span>{name}</span>
@@ -70,7 +70,7 @@ function AccountDropdown({
                 {description}
               </span>
             </span>
-          </a>
+          </span>
         </React.Fragment>
       }
       position="bottom-end"
