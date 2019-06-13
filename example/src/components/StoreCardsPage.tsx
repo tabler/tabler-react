@@ -58,7 +58,7 @@ function StoreCardsPage() {
                     </Table.Col>
                     <Table.Col>
                       Apple MacBook Pro i7 3,1GHz/16/512/Radeon 560 Space Gray{" "}
-                      <Badge color="default"> New </Badge>
+                      <Badge> New </Badge>
                     </Table.Col>
                     <Table.Col className="text-right text-muted d-none d-md-table-cell text-nowrap">
                       97 reviews
@@ -98,7 +98,7 @@ function StoreCardsPage() {
                       />
                     </Table.Col>
                     <Table.Col>
-                      GoPro HERO6 Black <Badge color="default"> New </Badge>
+                      GoPro HERO6 Black <Badge> New </Badge>
                     </Table.Col>
                     <Table.Col className="text-right text-muted d-none d-md-table-cell text-nowrap">
                       66 reviews{" "}
@@ -141,7 +141,7 @@ function StoreCardsPage() {
                     </Table.Col>
                     <Table.Col>
                       Xiaomi Mi A1 64GB Black
-                      <Badge color="default"> New </Badge>
+                      <Badge> New </Badge>
                     </Table.Col>
                     <Table.Col className="text-right text-muted d-none d-md-table-cell text-nowrap">
                       63 reviews
@@ -181,7 +181,7 @@ function StoreCardsPage() {
                       />
                     </Table.Col>
                     <Table.Col>
-                      Sony KD-49XE7005<Badge color="default"> New </Badge>
+                      Sony KD-49XE7005<Badge> New </Badge>
                     </Table.Col>
                     <Table.Col className="text-right text-muted d-none d-md-table-cell text-nowrap">
                       54 reviews
