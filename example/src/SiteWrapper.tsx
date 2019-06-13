@@ -37,7 +37,9 @@ type navItem = {
 };
 
 const withRouterNavLink = (to: string) =>
-  withRouter((props: any) => <NavLink {...props} to={to} />);
+  withRouter(({ staticContext, ...props }: any) => (
+    <NavLink {...props} to={to} />
+  ));
 
 const navBarItems: Array<navItem> = [
   {
