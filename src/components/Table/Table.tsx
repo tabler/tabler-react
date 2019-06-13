@@ -46,6 +46,8 @@ function Table({
   highlightRowOnHover,
   hasOutline,
   verticalAlign,
+  headerItems,
+  bodyItems,
   ...props
 }: Props) {
   const classes = cn(
@@ -60,10 +62,10 @@ function Table({
     className
   );
 
-  const header = props.headerItems && (
+  const header = headerItems && (
     <Table.Header>
       <Table.Row>
-        {props.headerItems.map((item, i) => (
+        {headerItems.map((item, i) => (
           <Table.ColHeader key={i} className={item.className}>
             {item.content}
           </Table.ColHeader>
@@ -72,9 +74,9 @@ function Table({
     </Table.Header>
   );
 
-  const body = props.bodyItems && (
+  const body = bodyItems && (
     <Table.Body>
-      {props.bodyItems.map((row, i) => (
+      {bodyItems.map((row, i) => (
         <Table.Row key={row.key}>
           {row.item.map((col, i) => (
             <Table.Col
