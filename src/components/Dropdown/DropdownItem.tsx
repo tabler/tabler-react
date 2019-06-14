@@ -3,10 +3,9 @@ import cn from "classnames";
 import Icon from "../Icon";
 import Badge from "../Badge";
 import { colors } from "../../colors";
+import { TablerComponent } from "../../types";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface DropdownItemProps extends TablerComponent {
   /**
    * Display an Icon to the left of DropdownItem content
    */
@@ -57,7 +56,7 @@ function DropdownItem({
   RootComponent,
   onClick,
   useExact,
-}: Props) {
+}: DropdownItemProps) {
   const classes = cn({ "dropdown-item": true }, className);
   const childrenForAll = (
     <React.Fragment>
