@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import cn from "classnames";
-import NavSubItem from "./NavSubItem";
-import NavLink from "./NavLink";
-import { subNavItem } from "./Nav";
+import NavSubItem, { NavSubItemProps } from "./NavSubItem";
+import NavLink, { NavLinkProps } from "./NavLink";
 import Dropdown from "../Dropdown";
 import ClickOutside from "../../helpers/ClickOutside";
 
@@ -10,14 +9,33 @@ import { Manager, Reference } from "react-popper";
 import { ReferenceChildrenProps } from "react-popper";
 import withDropdownProvider from "../Dropdown/withDropdownProvider";
 import DropdownContext from "../Dropdown/DropdownContext";
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+import { TablerComponent } from "../../types";
+import El from "../El/El";
+
+export interface NavItemProps extends TablerComponent {
+  as?: React.ElementType;
+  linkAs?: React.ElementType;
+  linkProps?: NavLinkProps;
   value?: string;
+  /**
+   * @deprecated use 'linkAs'
+   */
   LinkComponent?: React.ElementType;
+  /**
+   * @deprecated use 'linkProps'
+   */
   href?: string;
+  /**
+   * @deprecated use 'linkProps'
+   */
   to?: string;
+  /**
+   * @deprecated use 'linkProps'
+   */
   icon?: string;
+  /**
+   * @deprecated use 'as'
+   */
   type?: "li" | "div";
   /**
    * Make this item behave like it has a subNav even if you dont use subItems or subItemsObjects
@@ -25,24 +43,22 @@ interface Props {
   hasSubNav?: boolean;
   onClick?: () => void;
   /**
+   * @deprecated use 'linkProps'
    * Display this item in an active, or currently viewing, state
    */
   active?: boolean;
-  subItems?: React.ReactElement<typeof NavSubItem>[];
-  subItemsObjects?: Array<subNavItem>;
+  subItems?: React.ReactElement<NavSubItemProps>[];
+  subItemsObjects?: Array<NavSubItemProps>;
   /**
    * Position of the subnav Dropdown
    */
   position?: any;
   /**
+   * @deprecated use 'linkProps'
    * Whether or not to pass "exact" property to underlying NavLink component
    */
   useExact?: boolean;
 }
-
-type State = {
-  isOpen: boolean;
-};
 
 /**
  * A NavItem with react-popper powered subIems Dropdowns
@@ -52,8 +68,9 @@ const NavItem = function({
   LinkComponent,
   value,
   className,
+  href,
   to,
-  type = "li",
+  type,
   icon,
   hasSubNav: forcedHasSubNav,
   active,
@@ -62,8 +79,23 @@ const NavItem = function({
   useExact,
   position = "bottom-start",
   onClick,
-}: Props) {
+  as = El.Li,
+  linkAs,
+  linkProps,
+  ...props
+}: NavItemProps) {
   const [isOpen, setIsOpen] = useContext(DropdownContext);
+
+  const Component = type || as;
+  const _linkAs = LinkComponent || linkAs;
+  const _linkProps = {
+    ...linkProps,
+    href,
+    to,
+    icon,
+    active,
+    useExact,
+  };
 
   const _handleOnClick = (): void => {
     if (hasSubNav) {
@@ -78,30 +110,13 @@ const NavItem = function({
     (typeof children === "string" || value) && hasSubNav ? (
       <Reference>
         {({ ref }: ReferenceChildrenProps) => (
-          <NavLink
-            className={className}
-            to={to}
-            icon={icon}
-            RootComponent={LinkComponent}
-            hasSubNav={hasSubNav}
-            active={active}
-            rootRef={ref}
-            useExact={useExact}
-          >
+          <NavLink as={_linkAs} rootRef={ref} {..._linkProps}>
             {!hasSubNav && typeof children === "string" ? children : value}
           </NavLink>
         )}
       </Reference>
     ) : (
-      <NavLink
-        className={className}
-        to={to}
-        icon={icon}
-        RootComponent={LinkComponent}
-        hasSubNav={hasSubNav}
-        active={active}
-        useExact={useExact}
-      >
+      <NavLink as={_linkAs} {..._linkProps}>
         {!hasSubNav && typeof children === "string" ? children : value}
       </NavLink>
     );
@@ -114,16 +129,7 @@ const NavItem = function({
         <Dropdown.Menu arrow position={position}>
           {subItems ||
             (subItemsObjects &&
-              subItemsObjects.map((a, i) => (
-                <NavSubItem
-                  key={i}
-                  value={a.value}
-                  to={a.to}
-                  icon={a.icon}
-                  LinkComponent={a.LinkComponent}
-                  useExact={a.useExact}
-                />
-              ))) ||
+              subItemsObjects.map((a, i) => <NavSubItem key={i} {...a} />)) ||
             children}
         </Dropdown.Menu>
       )}
@@ -138,37 +144,31 @@ const NavItem = function({
     className
   );
 
-  const wrappedChildren =
-    type === "div" ? (
-      <ClickOutside onOutsideClick={() => setIsOpen(false)}>
-        {({ setElementRef }: any) => (
-          <div
-            className={wrapperClasses}
-            onClick={_handleOnClick}
-            ref={setElementRef}
-          >
-            {childrenForAll}
-          </div>
-        )}
-      </ClickOutside>
-    ) : (
-      <ClickOutside onOutsideClick={() => setIsOpen(false)}>
-        {({ setElementRef }: any) => (
-          <li
-            className={wrapperClasses}
-            onClick={_handleOnClick}
-            ref={setElementRef}
-          >
-            {childrenForAll}
-          </li>
-        )}
-      </ClickOutside>
+  if (hasSubNav) {
+    return (
+      <Manager>
+        <ClickOutside onOutsideClick={() => setIsOpen(false)}>
+          {({ setElementRef }: any) => (
+            <Component
+              className={wrapperClasses}
+              onClick={_handleOnClick}
+              ref={setElementRef}
+              {...props}
+            >
+              {childrenForAll}
+            </Component>
+          )}
+        </ClickOutside>
+      </Manager>
     );
+  }
 
-  return hasSubNav ? <Manager>{wrappedChildren}</Manager> : wrappedChildren;
+  return (
+    <Component className={wrapperClasses} onClick={_handleOnClick} {...props}>
+      {childrenForAll}
+    </Component>
+  );
 };
-
-
 
 /** @component */
 export default withDropdownProvider(NavItem);

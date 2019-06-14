@@ -64,7 +64,7 @@ stories.add("Items as Objects", () => {
         {
           value: "Page One",
           icon: "globe",
-          subItems: [
+          subItemsObjects: [
             { value: "Sub Item 1" },
             { value: "Sub Item 2" },
             { value: "Sub Item 3", icon: "globe" },

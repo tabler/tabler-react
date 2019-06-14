@@ -1,37 +1,31 @@
 import * as React from "react";
 import Dropdown from "../Dropdown";
+import { TablerComponent } from "../../types";
+import { DropdownItemProps } from "../Dropdown/DropdownItem";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+export interface NavSubItemProps extends TablerComponent, DropdownItemProps {
+  as?: React.ElementType;
   LinkComponent?: React.ElementType;
-  to?: string;
-  icon?: string;
+  /**
+   * @deprecated use children
+   */
   value?: string;
-  useExact?: boolean;
-};
+}
 
 function NavSubItem({
   children,
+  as,
   LinkComponent,
-  className,
-  to,
-  icon,
   value,
-  useExact,
-}: Props) {
+  ...props
+}: NavSubItemProps) {
+  const _as = LinkComponent || as;
+  const _children = value || children;
   return (
-    <Dropdown.Item
-      to={to}
-      icon={icon}
-      RootComponent={LinkComponent}
-      useExact={useExact || false}
-    >
-      {value || children}
+    <Dropdown.Item RootComponent={_as} {...props}>
+      {_children}
     </Dropdown.Item>
   );
 }
-
-
 
 export default NavSubItem;

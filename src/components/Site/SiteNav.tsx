@@ -2,33 +2,13 @@ import * as React from "react";
 import cn from "classnames";
 
 import Container from "../Container";
-import Grid from "../Grid";
 import Nav from "../Nav";
-
-type subNavItem = {
-  value: string;
-  to?: string;
-  icon?: string;
-  LinkComponent?: React.ElementType;
-  useExact?: boolean;
-};
-
-type navItem = {
-  value: string;
-  to?: string;
-  icon?: string;
-  active?: boolean;
-  LinkComponent?: React.ElementType;
-  subItems?: Array<subNavItem>;
-  useExact?: boolean;
-};
-
-type navItems = Array<navItem>;
+import { NavItemProps } from "../Nav/NavItem";
 
 export type Props = {
   children?: React.ReactNode;
-  items?: React.ReactElement<typeof Nav.Item>[];
-  itemsObjects?: navItems;
+  items?: React.ReactElement<NavItemProps>[];
+  itemsObjects?: NavItemProps[];
   /**
    * Display a search form to the right of the nav items
    */
@@ -73,7 +53,5 @@ const SiteNav = ({
     </header>
   );
 };
-
-
 
 export default SiteNav;

@@ -1,16 +1,24 @@
 import * as React from "react";
 import cn from "classnames";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface NavSubmenuProps extends TablerComponent {
+  as?: React.ElementType;
 }
 
-function NavSubmenu({ className, children }: Props) {
+function NavSubmenu({
+  as: Component = El.Div,
+  className,
+  children,
+  ...rest
+}: NavSubmenuProps) {
   const classes = cn({ nav: true, "nav-submenu": true }, className);
-  return <div className={classes}>{children}</div>;
+  return (
+    <Component className={classes} {...rest}>
+      {children}
+    </Component>
+  );
 }
-
-
 
 export default NavSubmenu;

@@ -1,51 +1,31 @@
 import React, { useState } from "react";
 import cn from "classnames";
-import NavItem from "./NavItem";
+import NavItem, { NavItemProps } from "./NavItem";
+import { TablerComponent } from "../../types";
+import { NavSubItemProps } from "./NavSubItem";
+import El from "../El/El";
 
-export type subNavItem = {
-  value: string;
-  to?: string;
-  icon?: string;
-  LinkComponent?: React.ElementType;
-  useExact?: boolean;
-};
-
-type navItem = {
-  value: string;
-  to?: string;
-  icon?: string;
-  active?: boolean;
-  LinkComponent?: React.ElementType;
-  subItems?: Array<subNavItem>;
-  useExact?: boolean;
-};
-
-export interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface NavProps extends TablerComponent {
+  as?: React.ElementType;
   tabbed?: boolean;
   /**
    * @deprecated use children instead
    */
-  items?:
-    | React.ReactElement<typeof NavItem>
-    | React.ReactElement<typeof NavItem>[];
-  itemsObjects?: Array<navItem>;
+  items?: React.ReactElement<NavItemProps> | React.ReactElement<NavItemProps>[];
+  itemsObjects?: Array<NavItemProps>;
   routerContextComponentType?: any;
 }
 
-type State = {
-  pathName?: string | null;
-};
-
 const Nav = function({
+  as: Component = El.Ul,
   className,
   children,
   tabbed = false,
   items,
   itemsObjects,
   routerContextComponentType,
-}: Props) {
+  ...rest
+}: NavProps) {
   const [pathName, setPathName] = useState("");
 
   const routerCallback = (location: { pathname: string }): any => {
@@ -55,7 +35,7 @@ const Nav = function({
   const computeActive = (
     initialValue?: boolean,
     to?: string,
-    subItems?: Array<subNavItem>
+    subItems?: Array<NavSubItemProps> | any
   ): boolean => {
     if (
       initialValue !== null &&
@@ -69,7 +49,11 @@ const Nav = function({
       return true;
     }
 
-    if (subItems !== null && subItems !== undefined) {
+    if (
+      subItems !== null &&
+      subItems !== undefined &&
+      Array.isArray(subItems)
+    ) {
       if (
         subItems.find(
           item =>
@@ -115,11 +99,9 @@ const Nav = function({
   return (
     <React.Fragment>
       {element}
-      <ul className={classes}>{_children}</ul>
+      <Component className={classes}>{_children}</Component>
     </React.Fragment>
   );
 };
-
-
 
 export default Nav;

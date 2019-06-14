@@ -1,38 +1,37 @@
 import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+export interface NavSubmenuItemProps extends TablerComponent {
+  as?: React.ElementType;
   RootComponent?: React.ElementType;
   active?: boolean;
   icon?: string;
-  to?: string;
-};
+}
 
 function NavSubmenuItem({
   className,
+  as = El.A,
   RootComponent,
   icon,
   children,
   active = false,
-  to,
-}: Props) {
+  ...rest
+}: NavSubmenuItemProps) {
   const classes = cn({ "nav-item": true, active: active }, className);
-  const Component = RootComponent || "a";
+  const Component = RootComponent || as;
   return (
-    <Component className={classes} to={to}>
+    <Component className={classes} {...rest}>
       {icon && (
         <React.Fragment>
-          <Icon name={icon} />{" "}
+          <Icon name={icon} />
         </React.Fragment>
       )}
       {children}
     </Component>
   );
 }
-
-
 
 export default NavSubmenuItem;
