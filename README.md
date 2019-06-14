@@ -1,3 +1,5 @@
+# !! Update June 2018: Version 2 alpha coming soon, check out progress [here](https://github.com/tabler/tabler-react/tree/version-2);
+
 # Tabler React
 
 > React implementation of the [Tabler Dashboard UI Kit](https://github.com/tabler/tabler)
