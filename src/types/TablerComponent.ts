@@ -1,10 +1,11 @@
 import React, { CSSProperties, ReactChild } from "react";
+import { UtilityProps } from "../helpers/utilityPropsToClassNames";
 
 /**
  * Base Props Interface for Tabler components
  */
-export interface TablerComponent {
-  children?: React.ReactNode | React.ReactChild | React.ReactChild[];
+export interface TablerComponent extends UtilityProps {
+  children?: React.ReactNode;
   className?: string;
   style?: CSSProperties;
 }
