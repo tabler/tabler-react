@@ -1,24 +1,30 @@
-import * as React from "react";
-import cn from "classnames";
-import Header from "./Header";
+import React from "react";
+import Header, { HeaderProps } from "./Header";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface H2Props extends HeaderProps {}
 
 /**
  * A Header component rendered as a h2 HTML element with a margin below
  */
-function H2({ className, children }: Props) {
-  const classes: string = cn("mt-0 mb-4", className);
+function H2({
+  children,
+  RootComponent = "h2",
+  mt = 0,
+  mb = 4,
+  size = 2,
+  ...props
+}: H2Props) {
   return (
-    <Header RootComponent="h2" className={classes} size={2}>
+    <Header
+      RootComponent={RootComponent}
+      size={size}
+      mt={mt}
+      mb={mb}
+      {...props}
+    >
       {children}
     </Header>
   );
 }
-
-
 
 export default H2;

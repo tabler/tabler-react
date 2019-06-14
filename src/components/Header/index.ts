@@ -1,5 +1,3 @@
-// @flow
-
 import Header from "./Header";
 import H1 from "./H1";
 import H2 from "./H2";

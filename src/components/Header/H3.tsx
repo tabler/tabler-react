@@ -1,24 +1,30 @@
-import * as React from "react";
-import cn from "classnames";
-import Header from "./Header";
+import React from "react";
+import Header, { HeaderProps } from "./Header";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface H3Props extends HeaderProps {}
 
 /**
  * A Header component rendered as a h3 HTML element with a margin below
  */
-function H3({ className, children }: Props) {
-  const classes: string = cn("mt-0 mb-4", className);
+function H3({
+  children,
+  RootComponent = "h3",
+  mt = 0,
+  mb = 4,
+  size = 3,
+  ...props
+}: H3Props) {
   return (
-    <Header RootComponent="h3" className={classes} size={3}>
+    <Header
+      RootComponent={RootComponent}
+      size={size}
+      mt={mt}
+      mb={mb}
+      {...props}
+    >
       {children}
     </Header>
   );
 }
-
-
 
 export default H3;

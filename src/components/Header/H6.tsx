@@ -1,24 +1,30 @@
-import * as React from "react";
-import cn from "classnames";
-import Header from "./Header";
+import React from "react";
+import Header, { HeaderProps } from "./Header";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface H6Props extends HeaderProps {}
 
 /**
  * A Header component rendered as a h6 HTML element with a margin below
  */
-function H6({ className, children }: Props) {
-  const classes: string = cn("mt-0 mb-4", className);
+function H6({
+  children,
+  RootComponent = "h6",
+  mt = 0,
+  mb = 4,
+  size = 6,
+  ...props
+}: H6Props) {
   return (
-    <Header RootComponent="h6" className={classes} size={6}>
+    <Header
+      RootComponent={RootComponent}
+      size={size}
+      mt={mt}
+      mb={mb}
+      {...props}
+    >
       {children}
     </Header>
   );
 }
-
-
 
 export default H6;

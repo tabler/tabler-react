@@ -1,24 +1,30 @@
-import * as React from "react";
-import cn from "classnames";
-import Header from "./Header";
+import React from "react";
+import Header, { HeaderProps } from "./Header";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface H5Props extends HeaderProps {}
 
 /**
  * A Header component rendered as a h5 HTML element with a margin below
  */
-function H5({ className, children }: Props) {
-  const classes: string = cn("mt-0 mb-4", className);
+function H5({
+  children,
+  RootComponent = "h5",
+  mt = 0,
+  mb = 4,
+  size = 5,
+  ...props
+}: H5Props) {
   return (
-    <Header RootComponent="h5" className={classes} size={5}>
+    <Header
+      RootComponent={RootComponent}
+      size={size}
+      mt={mt}
+      mb={mb}
+      {...props}
+    >
       {children}
     </Header>
   );
 }
-
-
 
 export default H5;
