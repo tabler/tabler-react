@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Form from "../components/Form";
 
-import { Props as FormInputProps } from "../components/Form/FormInput";
+import { FormInputProps } from "../components/Form/FormInput";
 
 interface Props extends FormInputProps {
   label?: string;

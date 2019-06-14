@@ -1,48 +1,27 @@
-import * as React from "react";
+import React, { InputHTMLAttributes } from "react";
 import cn from "classnames";
 import Grid from "../Grid";
+import { colors } from "../../colors";
 
-import { MouseEvents, PointerEvents, FocusEvents } from "../../";
-
-interface Props extends MouseEvents, PointerEvents, FocusEvents {
-  className?: string;
-  color: string;
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  color: colors;
 }
 
-function FormColorCheckItem({
-  className,
-  color,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
-  onFocus,
-  onBlur,
-}: Props) {
+function FormColorCheckItem({ className, color, ...rest }: Props) {
   const classes = cn(className);
   return (
     <Grid.Col auto className={classes}>
       <label className="colorinput">
         <input
-          name="color"
           type="checkbox"
           value={color}
           className="colorinput-input"
-          onClick={onClick}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          onPointerEnter={onPointerEnter}
-          onPointerLeave={onPointerLeave}
-          onFocus={onFocus}
-          onBlur={onBlur}
+          {...rest}
         />
         <span className={`colorinput-color bg-${color}`} />
       </label>
     </Grid.Col>
   );
 }
-
-
 
 export default FormColorCheckItem;

@@ -1,38 +1,17 @@
-import * as React from "react";
+import React, { HTMLAttributes, FormHTMLAttributes } from "react";
 
 import { FormEvents } from "../../";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-export interface Props extends FormEvents {
-  children?: React.ReactNode;
-  className?: string;
-  action?: string;
-  method?: string;
-  autoComplete: "on" | "off";
+export interface FormProps
+  extends TablerComponent,
+    FormHTMLAttributes<HTMLFormElement> {
+  as?: React.ElementType;
 }
 
-function Form({
-  className,
-  children,
-  action,
-  method,
-  onSubmit,
-  autoComplete,
-}: Props) {
-  return (
-    <form
-      className={className}
-      onSubmit={onSubmit}
-      action={action}
-      method={method}
-      autoComplete={autoComplete}
-    >
-      {children}
-    </form>
-  );
+function Form({ children, as: Component = El.Form, ...rest }: FormProps) {
+  return <Component {...rest}>{children}</Component>;
 }
-
-Form.defaultProps = {
-  autoComplete: "off",
-};
 
 export default Form;

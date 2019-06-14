@@ -1,19 +1,17 @@
-import * as React from "react";
+import React, { InputHTMLAttributes } from "react";
 import Icon from "../Icon";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-import {
-  FormEvents,
-  MouseEvents,
-  PointerEvents,
-  FocusEvents,
-  KeyboardEvents,
-  ClipboardEvents,
-} from "../../";
-
-interface FormStyle {
-  className?: string;
+export interface FormInputProps
+  extends TablerComponent,
+    InputHTMLAttributes<HTMLInputElement> {
+  /**
+   * Wraps the input in Form.Group and adds a label
+   */
+  label?: string;
   icon?: string;
   position?: "append" | "prepend";
   valid?: boolean;
@@ -22,82 +20,25 @@ interface FormStyle {
   cross?: boolean;
   feedback?: string;
   error?: string;
-  type?: string;
-  placeholder?: string;
-  name?: string;
-  value?: string | number;
-  min?: string | number;
-  max?: string | number;
-  minLength?: number;
-  maxLength?: number;
-  disabled?: boolean;
-  readOnly?: boolean;
-  autoFocus?: boolean;
-  required?: boolean;
-  checked?: boolean;
-}
-
-export interface Props
-  extends FormStyle,
-    FormEvents,
-    MouseEvents,
-    PointerEvents,
-    FocusEvents,
-    KeyboardEvents,
-    ClipboardEvents {
-  placeholder?: string;
-  type?: "checkbox" | "radio" | "text" | "email" | "password" | "number";
-  value?: string | number;
-  /**
-   * Wraps the input in Form.Group and adds a label
-   */
-  label?: string;
-  autoComplete?: "on" | "off";
 }
 
 /**
  * A an input field
  */
-function FormInput(props: Props) {
-  const {
-    className,
-    name,
-    icon,
-    position = "prepend",
-    valid,
-    tick,
-    invalid,
-    cross,
-    error,
-    placeholder,
-    value,
-    min,
-    max,
-    minLength,
-    maxLength,
-    checked,
-    onChange,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    onFocus,
-    onBlur,
-    onKeyPress,
-    onKeyUp,
-    onKeyDown,
-    onCopy,
-    onCut,
-    onPaste,
-    disabled,
-    readOnly,
-    autoFocus,
-    required,
-    label,
-    autoComplete,
-  } = props;
-  const type = props.type || "text";
-
+function FormInput({
+  className,
+  icon,
+  position = "prepend",
+  valid,
+  tick,
+  invalid,
+  cross,
+  error,
+  label,
+  type = "text",
+  feedback,
+  ...rest
+}: FormInputProps) {
   const classes = cn(
     {
       "form-control": type !== "checkbox" && type !== "radio",
@@ -110,46 +51,18 @@ function FormInput(props: Props) {
     className
   );
 
-  const feedback = error || props.feedback;
+  const _feedback = error || feedback;
 
   const allInputProps = {
-    name,
     className: classes,
     type,
-    placeholder,
-    value,
-    min,
-    max,
-    minLength,
-    maxLength,
-    disabled,
-    readOnly,
-    autoFocus,
-    required,
-    onChange,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    onFocus,
-    onBlur,
-    onKeyPress,
-    onKeyUp,
-    onKeyDown,
-    onCopy,
-    onCut,
-    onPaste,
-    autoComplete,
+    ...rest,
   };
 
-  const contents = !icon ? (
+  const _children = !icon ? (
     <React.Fragment>
-      {type === "checkbox" || type === "radio" ? (
-        <input {...allInputProps} checked={checked} />
-      ) : (
-        <input {...allInputProps} />
-      )}
-      {feedback && <span className="invalid-feedback">{feedback}</span>}
+      <El.Input {...allInputProps} />
+      {_feedback && <span className="invalid-feedback">{_feedback}</span>}
     </React.Fragment>
   ) : (
     <React.Fragment>
@@ -159,18 +72,18 @@ function FormInput(props: Props) {
             <Icon name={icon} />
           </span>
         )}
-        <input {...allInputProps} />
+        <El.Input {...allInputProps} />
         {position === "append" && (
           <span className="input-icon-addon">
             <Icon name={icon} />
           </span>
         )}
       </div>
-      {feedback && <span className="invalid-feedback">{feedback}</span>}
+      {_feedback && <span className="invalid-feedback">{_feedback}</span>}
     </React.Fragment>
   );
 
-  return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
+  return label ? <FormGroup label={label}>{_children}</FormGroup> : _children;
 }
 
 /** @component */
