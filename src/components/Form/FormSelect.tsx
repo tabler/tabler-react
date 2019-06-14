@@ -5,7 +5,8 @@ import FormGroup from "./FormGroup";
 import { FocusEvents, FormEvents, MouseEvents, PointerEvents } from "../../";
 import El from "../El/El";
 
-interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
+export interface FormSelectProps
+  extends SelectHTMLAttributes<HTMLSelectElement> {
   valid?: boolean;
   tick?: boolean;
   invalid?: boolean;
@@ -29,7 +30,7 @@ function FormSelect({
   label,
   feedback,
   ...rest
-}: Props) {
+}: FormSelectProps) {
   const classes = cn(
     {
       "form-control": true,
