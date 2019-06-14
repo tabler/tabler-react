@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from "react";
+import React, { InputHTMLAttributes, forwardRef } from "react";
 import Icon from "../Icon";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
@@ -25,20 +25,23 @@ export interface FormInputProps
 /**
  * A an input field
  */
-function FormInput({
-  className,
-  icon,
-  position = "prepend",
-  valid,
-  tick,
-  invalid,
-  cross,
-  error,
-  label,
-  type = "text",
-  feedback,
-  ...rest
-}: FormInputProps) {
+export const FormInput = (
+  {
+    className,
+    icon,
+    position = "prepend",
+    valid,
+    tick,
+    invalid,
+    cross,
+    error,
+    label,
+    type = "text",
+    feedback,
+    ...rest
+  }: FormInputProps,
+  ref: React.Ref<HTMLInputElement>
+) => {
   const classes = cn(
     {
       "form-control": type !== "checkbox" && type !== "radio",
@@ -61,7 +64,7 @@ function FormInput({
 
   const _children = !icon ? (
     <React.Fragment>
-      <El.Input {...allInputProps} />
+      <El.Input ref={ref} {...allInputProps} />
       {_feedback && <span className="invalid-feedback">{_feedback}</span>}
     </React.Fragment>
   ) : (
@@ -72,7 +75,7 @@ function FormInput({
             <Icon name={icon} />
           </span>
         )}
-        <El.Input {...allInputProps} />
+        <El.Input ref={ref} {...allInputProps} />
         {position === "append" && (
           <span className="input-icon-addon">
             <Icon name={icon} />
@@ -84,7 +87,6 @@ function FormInput({
   );
 
   return label ? <FormGroup label={label}>{_children}</FormGroup> : _children;
-}
+};
 
-/** @component */
-export default FormInput;
+export default forwardRef(FormInput);

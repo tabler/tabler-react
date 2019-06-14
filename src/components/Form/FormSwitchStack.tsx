@@ -1,14 +1,15 @@
-import * as React from "react";
-import cn from "classnames";
+import React from "react";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface FormToggleStackProps extends ELProps<HTMLDivElement> {}
 
-function FormToggleStack({ className, children }: Props) {
-  const classes = cn("custom-switches-stacked", className);
-  return <div className={classes}>{children}</div>;
+function FormToggleStack({ children, ...rest }: FormToggleStackProps) {
+  return (
+    <El.Div classNames="custom-switches-stacked" {...rest}>
+      {children}
+    </El.Div>
+  );
 }
 
 export default FormToggleStack;

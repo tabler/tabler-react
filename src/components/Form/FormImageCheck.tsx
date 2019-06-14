@@ -1,15 +1,15 @@
 import * as React from "react";
-import cn from "classnames";
 import Grid from "../Grid";
+import { GridRowProps } from "../Grid/GridRow";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface FormImageCheckProps extends GridRowProps {}
 
-function FormImageCheck({ className, children }: Props) {
-  const classes = cn("gutters-sm", className);
-  return <Grid.Row className={classes}>{children}</Grid.Row>;
+function FormImageCheck({ children, ...rest }: FormImageCheckProps) {
+  return (
+    <Grid.Row gutters="sm" {...rest}>
+      {children}
+    </Grid.Row>
+  );
 }
 
 export default FormImageCheck;

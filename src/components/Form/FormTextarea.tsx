@@ -1,52 +1,34 @@
-import * as React from "react";
+import React, { TextareaHTMLAttributes } from "react";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
 
-import { FocusEvents, FormEvents, MouseEvents, PointerEvents } from "../../";
+import El from "../El/El";
 
-interface Props extends FocusEvents, FormEvents, MouseEvents, PointerEvents {
-  className?: string;
+export interface FormTextareaProps
+  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   valid?: boolean;
   tick?: boolean;
   invalid?: boolean;
   cross?: boolean;
   feedback?: string;
   error?: string;
-  placeholder?: string;
-  name?: string;
-  value?: string | number;
-  defaultValue?: string;
-  disabled?: boolean;
-  rows?: number;
   children?: string;
   label?: string;
 }
 
-function FormTextarea(props: Props) {
-  const {
-    className,
-    name,
-    valid,
-    tick,
-    invalid,
-    cross,
-    error,
-    placeholder,
-    defaultValue,
-    value,
-    disabled,
-    rows,
-    children,
-    onChange,
-    onBlur,
-    onFocus,
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    label,
-  } = props;
+function FormTextarea({
+  className,
+  valid,
+  tick,
+  invalid,
+  cross,
+  error,
+  value,
+  children,
+  label,
+  feedback,
+  ...rest
+}: FormTextareaProps) {
   const classes = cn(
     "form-control",
     {
@@ -57,35 +39,17 @@ function FormTextarea(props: Props) {
     },
     className
   );
-  const feedback = error || props.feedback;
+  const _feedback = error || feedback;
 
   const contents = (
     <React.Fragment>
-      <textarea
-        className={classes}
-        name={name}
-        placeholder={placeholder}
-        defaultValue={defaultValue}
-        value={value || children}
-        disabled={disabled}
-        rows={rows}
-        onChange={onChange}
-        onBlur={onBlur}
-        onClick={onClick}
-        onFocus={onFocus}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        onPointerEnter={onPointerEnter}
-        onPointerLeave={onPointerLeave}
-      />
-      {feedback && <span className="invalid-feedback">{feedback}</span>}
+      <El.Textarea className={classes} children={value || children} {...rest} />
+      {_feedback && <span className="invalid-feedback">{_feedback}</span>}
     </React.Fragment>
   );
 
   return label ? <FormGroup label={label}>{contents}</FormGroup> : contents;
 }
-
-
 
 /** @component */
 export default FormTextarea;

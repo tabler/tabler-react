@@ -1,43 +1,16 @@
-import * as React from "react";
-import cn from "classnames";
+import React from "react";
 
-import { MouseEvents, FocusEvents, FormEvents, PointerEvents } from "../../";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props extends MouseEvents, FocusEvents, FormEvents, PointerEvents {
-  children?: React.ReactNode;
-  className?: string;
-}
+interface FormStaticTextProps extends ELProps<HTMLDivElement> {}
 
-function FormStaticText({
-  className,
-  children,
-  onChange,
-  onBlur,
-  onFocus,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
-}: Props) {
-  const classes = cn("form-control-plaintext", className);
+function FormStaticText({ children, ...rest }: FormStaticTextProps) {
   return (
-    <div
-      className={classes}
-      onChange={onChange}
-      onBlur={onBlur}
-      onClick={onClick}
-      onFocus={onFocus}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      onPointerEnter={onPointerEnter}
-      onPointerLeave={onPointerLeave}
-    >
+    <El.Div classNames="form-control-plaintext" {...rest}>
       {children}
-    </div>
+    </El.Div>
   );
 }
-
-
 
 export default FormStaticText;

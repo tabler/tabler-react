@@ -1,14 +1,18 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface FormInputGroupAppendProps
+  extends TablerComponent,
+    HTMLAttributes<HTMLSpanElement> {}
 
-function FormInputGroupAppend({ className, children }: Props) {
+function FormInputGroupAppend({
+  className,
+  children,
+}: FormInputGroupAppendProps) {
   const classes = cn("input-group-append", className);
-  return <span className={classes}>{children}</span>;
+  return <El.Span className={classes}>{children}</El.Span>;
 }
 
 export default FormInputGroupAppend;

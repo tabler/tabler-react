@@ -1,51 +1,37 @@
-import * as React from "react";
-import cn from "classnames";
-import { FormEvents, FocusEvents, MouseEvents, PointerEvents } from "../../";
+import React from "react";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-interface Props extends FormEvents, FocusEvents, MouseEvents, PointerEvents {
-  children: React.ReactElement[];
-  className?: string;
+export interface FormSelectGroupProps
+  extends TablerComponent,
+    ELProps<HTMLDivElement> {
   pills?: boolean;
   canSelectMultiple?: boolean;
 }
 
 function FormSelectGroup({
-  className,
   children,
   pills,
   canSelectMultiple,
-  onChange,
-  onFocus,
-  onBlur,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
-}: Props) {
-  const classes = cn(
-    { selectgroup: true, "w-100": true, "selectgroup-pills": pills },
-    className
-  );
+  ...rest
+}: FormSelectGroupProps) {
+  const classNames = {
+    selectgroup: true,
+    "w-100": true,
+    "selectgroup-pills": pills,
+  };
   return (
-    <div
-      className={classes}
-      onChange={onChange}
-      onClick={onClick}
-      onFocus={onFocus}
-      onBlur={onBlur}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      onPointerEnter={onPointerEnter}
-      onPointerLeave={onPointerLeave}
-    >
-      {canSelectMultiple
-        ? children.map(itm => React.cloneElement(itm, { type: "checkbox" }))
+    <El.Div classNames={classNames} {...rest}>
+      {canSelectMultiple && children
+        ? React.Children.map(children, itm =>
+            React.isValidElement(itm)
+              ? React.cloneElement(itm, { type: "checkbox" })
+              : itm
+          )
         : children}
-    </div>
+    </El.Div>
   );
 }
-
-
 
 export default FormSelectGroup;

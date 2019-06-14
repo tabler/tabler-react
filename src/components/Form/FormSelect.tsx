@@ -2,7 +2,6 @@ import React, { SelectHTMLAttributes } from "react";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
 
-import { FocusEvents, FormEvents, MouseEvents, PointerEvents } from "../../";
 import El from "../El/El";
 
 export interface FormSelectProps

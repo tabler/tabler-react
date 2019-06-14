@@ -1,75 +1,24 @@
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
-import FormInput from "./FormInput";
+import FormInput, { FormInputProps } from "./FormInput";
 
-import {
-  MouseEvents,
-  PointerEvents,
-  FormEvents,
-  FocusEvents,
-} from "../../types";
-
-interface Props extends MouseEvents, PointerEvents, FormEvents, FocusEvents {
-  className?: string;
+export interface FormRadioProps extends FormInputProps {
   /**
    * Wrap the checkbox with a label
    */
   label?: string;
-  value?: string | number;
-  name?: string;
-  checked?: boolean;
-  disabled?: boolean;
-  readOnly?: boolean;
   isInline?: boolean;
 }
 
-function FormRadio({
-  className,
-  label,
-  value,
-  name,
-  checked,
-  disabled,
-  readOnly,
-  onChange,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
-  onBlur,
-  onFocus,
-  onClick,
-  isInline,
-}: Props) {
+function FormRadio({ className, label, isInline, ...rest }: FormRadioProps) {
   const classes = cn(
     "custom-control custom-radio",
     { "custom-control-inline": isInline },
     className
   );
 
-  const events = {
-    onChange: onChange,
-    onMouseEnter: onMouseEnter,
-    onMouseLeave: onMouseLeave,
-    onPointerEnter: onPointerEnter,
-    onPointerLeave: onPointerLeave,
-    onBlur: onBlur,
-    onFocus: onFocus,
-    onClick: onClick,
-  };
-
   const inputComponent = (
-    <FormInput
-      {...events}
-      type="radio"
-      name={name}
-      value={value}
-      checked={checked}
-      className={classes}
-      disabled={disabled}
-      readOnly={readOnly}
-      onChange={onChange}
-    />
+    <FormInput type="radio" className={classes} {...rest} />
   );
 
   return label ? (
@@ -81,7 +30,5 @@ function FormRadio({
     inputComponent
   );
 }
-
-
 
 export default FormRadio;

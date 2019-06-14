@@ -1,14 +1,10 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import Icon from "../Icon";
-import { FormEvents, FocusEvents, MouseEvents, PointerEvents } from "../../";
 
-interface Props extends FormEvents, FocusEvents, MouseEvents, PointerEvents {
-  className?: string;
+export interface FormSelectGroupItemProps
+  extends HTMLAttributes<HTMLInputElement> {
   label?: string;
-  value?: string | number;
-  name: string;
-  checked?: boolean;
   icon?: string;
   type?: "radio" | "checkbox";
 }
@@ -16,65 +12,26 @@ interface Props extends FormEvents, FocusEvents, MouseEvents, PointerEvents {
 function FormSelectGroupItem({
   className,
   label,
-  name,
-  value,
-  checked,
   icon,
   type,
-  onChange,
-  onFocus,
-  onBlur,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
-}: Props) {
+  ...rest
+}: FormSelectGroupItemProps) {
   const classes = cn({ "selectgroup-item": true }, className);
   const btnClasses = cn("selectgroup-button", {
     "selectgroup-button-icon": icon,
   });
   const outputLabel = icon ? <Icon name={icon} /> : label;
+
   return (
     <label className={classes}>
       {type === "checkbox" ? (
-        <input
-          type="checkbox"
-          name={name}
-          value={value}
-          className="selectgroup-input"
-          checked={checked}
-          onChange={onChange}
-          onClick={onClick}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          onPointerEnter={onPointerEnter}
-          onPointerLeave={onPointerLeave}
-        />
+        <input type="checkbox" className="selectgroup-input" {...rest} />
       ) : (
-        <input
-          type="radio"
-          name={name}
-          value={value}
-          className="selectgroup-input"
-          checked={checked}
-          onChange={onChange}
-          onClick={onClick}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          onPointerEnter={onPointerEnter}
-          onPointerLeave={onPointerLeave}
-        />
+        <input type="radio" className="selectgroup-input" {...rest} />
       )}
       <span className={btnClasses}>{outputLabel}</span>
     </label>
   );
 }
-
-
 
 export default FormSelectGroupItem;

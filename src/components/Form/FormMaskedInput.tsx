@@ -1,30 +1,32 @@
 import * as React from "react";
 import cn from "classnames";
-import MaskedInput from "react-text-mask";
+import MaskedInput, { MaskedInputProps } from "react-text-mask";
+import getUtilityPropsClasses from "../../helpers/utilityPropsToClassNames";
+import { TablerComponent } from "../../types";
 
-import { FormEvents, FocusEvents, MouseEvents, PointerEvents } from "../../";
-
-interface Props extends FormEvents, FocusEvents, MouseEvents, PointerEvents {
-  mask: Array<string | RegExp>;
-  className?: string;
-  placeholder?: string;
-  guide?: boolean;
-  id?: string;
-  value?: string;
+interface Props extends MaskedInputProps, TablerComponent {
   valid?: boolean;
   tick?: boolean;
   invalid?: boolean;
   cross?: boolean;
   feedback?: string;
-  placeholderChar?: string;
 }
 
 /**
  * A masked input field using react-text-mask
  */
-function FormMaskedInput(props: Props) {
-  const { valid, tick, invalid, cross, feedback } = props;
+function FormMaskedInput({
+  valid,
+  tick,
+  invalid,
+  cross,
+  feedback,
+  className,
+  ...rest
+}: Props) {
+  const utilityClasses = getUtilityPropsClasses(rest);
   const classes = cn(
+    utilityClasses,
     {
       "form-control": true,
       "is-valid": valid,
@@ -32,12 +34,12 @@ function FormMaskedInput(props: Props) {
       "is-invalid": invalid,
       "state-invalid": cross,
     },
-    props.className
+    className
   );
 
   return (
     <React.Fragment>
-      <MaskedInput className={classes} {...props} />
+      <MaskedInput className={classes} {...rest} />
       {feedback && (invalid || cross) && (
         <span className="invalid-feedback">{feedback}</span>
       )}

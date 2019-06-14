@@ -1,16 +1,23 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+interface FormInputGroupTextProps
+  extends TablerComponent,
+    HTMLAttributes<HTMLSpanElement> {}
 
-function FormInputGroupText({ className, children }: Props) {
+function FormInputGroupText({
+  className,
+  children,
+  ...rest
+}: FormInputGroupTextProps) {
   const classes = cn("input-group-text", className);
-  return <span className={classes}>{children}</span>;
+  return (
+    <El.Span className={classes} {...rest}>
+      {children}
+    </El.Span>
+  );
 }
-
-
 
 export default FormInputGroupText;

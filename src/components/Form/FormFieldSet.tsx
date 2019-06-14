@@ -1,14 +1,19 @@
-import * as React from "react";
+import React, { FieldsetHTMLAttributes } from "react";
 import cn from "classnames";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface FormFieldSetProps
+  extends TablerComponent,
+    FieldsetHTMLAttributes<HTMLFieldSetElement> {}
 
-function FormFieldSet({ className, children }: Props) {
+function FormFieldSet({ className, children, ...rest }: FormFieldSetProps) {
   const classes = cn("form-fieldset", className);
-  return <fieldset className={classes}>{children}</fieldset>;
+  return (
+    <El.Fieldset className={classes} {...rest}>
+      {children}
+    </El.Fieldset>
+  );
 }
 
 export default FormFieldSet;

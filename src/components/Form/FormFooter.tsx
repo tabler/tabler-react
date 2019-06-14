@@ -1,16 +1,19 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+interface FormFooterProps
+  extends TablerComponent,
+    HTMLAttributes<HTMLDivElement> {}
+
+function FormFooter({ className, children, ...rest }: FormFooterProps) {
+  const classes = cn("form-footer", className);
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
-
-function FormFooter(props: Props) {
-  const classes = cn("form-footer", props.className);
-  return <div className={classes}>{props.children}</div>;
-}
-
-
 
 export default FormFooter;

@@ -1,10 +1,12 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import FormLabel from "./FormLabel";
+import { TablerComponent } from "../../types";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface FormGroupProps
+  extends TablerComponent,
+    HTMLAttributes<HTMLDivElement> {
   label?: React.ReactNode;
   isRequired?: boolean;
   /**
@@ -13,10 +15,16 @@ interface Props {
   inputProps?: any;
 }
 
-function FormGroup({ className, children, label, isRequired }: Props) {
+function FormGroup({
+  className,
+  children,
+  label,
+  isRequired,
+  ...rest
+}: FormGroupProps) {
   const classes = cn("form-group", className);
   return (
-    <div className={classes}>
+    <El.Div className={classes} {...rest}>
       {!label ? null : typeof label === "string" ? (
         <FormLabel>
           {label}
@@ -26,10 +34,8 @@ function FormGroup({ className, children, label, isRequired }: Props) {
         label
       )}
       {children}
-    </div>
+    </El.Div>
   );
 }
-
-
 
 export default FormGroup;

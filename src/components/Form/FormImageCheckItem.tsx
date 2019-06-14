@@ -1,56 +1,42 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import Grid from "../Grid";
-import { MouseEvents, PointerEvents, FocusEvents } from "../../";
+import { GridColProps } from "../Grid/GridCol";
 
-interface Props extends MouseEvents, PointerEvents, FocusEvents {
-  className?: string;
+export interface FormImageCheckItemProps
+  extends HTMLAttributes<HTMLInputElement> {
   value: string | number;
   imageURL: string;
-  col?: {
-    width?: number;
-    sm?: number;
-    md?: number;
-    lg?: number;
-  };
+  col?: GridColProps;
+  imgProps?: HTMLAttributes<HTMLImageElement>;
 }
 
 function FormImageCheckItem({
   className,
-  col: { width = 6, sm = 4, md = 0, lg = 0 } = {},
+  col,
   imageURL,
-  value,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
-  onFocus,
-  onBlur,
-}: Props) {
+  imgProps,
+  ...rest
+}: FormImageCheckItemProps) {
   return (
-    <Grid.Col width={width} sm={sm} md={md} lg={lg}>
+    <Grid.Col className={className} width={6} sm={4} {...col}>
       <label className="imagecheck mb-4">
         <input
           name="imagecheck"
           type="checkbox"
-          value={value}
           className="imagecheck-input"
-          onClick={onClick}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          onPointerEnter={onPointerEnter}
-          onPointerLeave={onPointerLeave}
-          onFocus={onFocus}
-          onBlur={onBlur}
+          {...rest}
         />
         <figure className="imagecheck-figure">
-          <img src={imageURL} alt="Select" className="imagecheck-image" />
+          <img
+            src={imageURL}
+            alt="Select"
+            className="imagecheck-image"
+            {...imgProps}
+          />
         </figure>
       </label>
     </Grid.Col>
   );
 }
-
-
 
 export default FormImageCheckItem;
