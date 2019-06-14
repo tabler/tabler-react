@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 import FormSelect, { FormSelectProps } from "./FormSelect";
 import FormInputGroup from "./FormInputGroup";
+import El from "../El/El";
+import { TablerComponent } from "../../types";
 
-export interface FormDatePickerProps
-  extends Pick<FormSelectProps, Exclude<keyof FormSelectProps, "onChange">> {
+export interface FormDatePickerProps extends TablerComponent {
   defaultDate: Date;
   minYear: number;
   maxYear: number;
   format: string;
   monthLabels: Array<string>;
   onChange?: (value: Date) => void;
+  dayProps?: FormSelectProps;
+  monthProps?: FormSelectProps;
+  yearProps?: FormSelectProps;
 }
 
 type ChangeTypes = "mm" | "yyyy" | "dd";
 
 type DateComponents = { [Key in ChangeTypes]: React.ReactNode };
 
+/**
+ * A simple date picker using 3 FormSelect's.
+ */
 const FormDatePicker = function({
   onChange,
   monthLabels,
@@ -23,6 +30,10 @@ const FormDatePicker = function({
   maxYear,
   format,
   className,
+  dayProps,
+  monthProps,
+  yearProps,
+  ...rest
 }: FormDatePickerProps) {
   const [currentDate, setCurrentDate] = useState<Date>(new Date(Date.now()));
 
@@ -59,7 +70,7 @@ const FormDatePicker = function({
       _handleOnChange("mm", Number(e.target.value));
 
     return (
-      <FormSelect onChange={onChangeMonths}>
+      <FormSelect onChange={onChangeMonths} {...monthProps}>
         {monthLabels.map((name, index) => (
           <option
             key={index}
@@ -87,7 +98,7 @@ const FormDatePicker = function({
       _handleOnChange("dd", Number(e.target.value));
 
     return (
-      <FormSelect onChange={onChangeDays}>
+      <FormSelect onChange={onChangeDays} {...dayProps}>
         {daysRange.map(day => (
           <option key={day} value={day} selected={currentDay === day}>
             {day}
@@ -106,7 +117,7 @@ const FormDatePicker = function({
       _handleOnChange("yyyy", Number(e.target.value));
 
     return (
-      <FormSelect onChange={onChangeYears}>
+      <FormSelect onChange={onChangeYears} {...yearProps}>
         {yearsRange.map(year => (
           <option key={year} value={year} selected={currentYear === year}>
             {year}
@@ -124,13 +135,13 @@ const FormDatePicker = function({
   };
 
   return (
-    <div className={className}>
+    <El.Div className={className} {...rest}>
       <FormInputGroup>
         {formatSplit.map(
           (type: string): React.ReactNode => dateComponents[type as ChangeTypes]
         )}
       </FormInputGroup>
-    </div>
+    </El.Div>
   );
 };
 
