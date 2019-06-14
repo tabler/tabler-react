@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FormSelect, { FormSelectProps } from "./FormSelect";
 import FormInputGroup from "./FormInputGroup";
 import El from "../El/El";
@@ -14,6 +14,7 @@ export interface FormDatePickerProps extends TablerComponent {
   dayProps?: FormSelectProps;
   monthProps?: FormSelectProps;
   yearProps?: FormSelectProps;
+  value?: Date;
 }
 
 type ChangeTypes = "mm" | "yyyy" | "dd";
@@ -33,13 +34,22 @@ const FormDatePicker = function({
   dayProps,
   monthProps,
   yearProps,
+  value,
   ...rest
 }: FormDatePickerProps) {
-  const [currentDate, setCurrentDate] = useState<Date>(new Date(Date.now()));
+  const [currentDate, setCurrentDate] = useState<Date | null | undefined>(
+    typeof value === "undefined" ? new Date(Date.now()) : value
+  );
+
+  useEffect(() => {
+    if (value && currentDate !== value) {
+      setCurrentDate(value);
+    }
+  }, [value]);
 
   // Handle date changes
   const _handleOnChange = (type: ChangeTypes, value: number): void => {
-    const newDate: Date = new Date(currentDate);
+    const newDate: Date = new Date(currentDate || Date.now());
 
     // Change month
     if (type === "mm") {
@@ -71,11 +81,14 @@ const FormDatePicker = function({
 
     return (
       <FormSelect onChange={onChangeMonths} {...monthProps}>
+        <option value="" selected={!currentDate} />
         {monthLabels.map((name, index) => (
           <option
             key={index}
             value={index}
-            selected={currentDate.getUTCMonth() === index}
+            selected={
+              currentDate && currentDate.getUTCMonth() === index ? true : false
+            }
           >
             {name}
           </option>
@@ -86,19 +99,22 @@ const FormDatePicker = function({
 
   // Renders the days select
   const _renderDays = () => {
-    const currentMonthDays = new Date(
-      currentDate.getUTCFullYear(),
-      currentDate.getUTCMonth() + 1,
-      0
-    ).getDate();
-    const daysRange = _range(1, currentMonthDays);
-    const currentDay = currentDate.getUTCDate();
+    const currentMonthDays =
+      currentDate &&
+      new Date(
+        currentDate.getUTCFullYear(),
+        currentDate.getUTCMonth() + 1,
+        0
+      ).getDate();
+    const daysRange = currentMonthDays ? _range(1, currentMonthDays) : [];
+    const currentDay = currentDate && currentDate.getUTCDate();
 
     const onChangeDays = (e: React.ChangeEvent<HTMLSelectElement>) =>
       _handleOnChange("dd", Number(e.target.value));
 
     return (
       <FormSelect onChange={onChangeDays} {...dayProps}>
+        <option value="" selected={!currentDate} />
         {daysRange.map(day => (
           <option key={day} value={day} selected={currentDay === day}>
             {day}
@@ -111,13 +127,14 @@ const FormDatePicker = function({
   // renderes the years select
   const _renderYears = () => {
     const yearsRange = _range(minYear, maxYear).reverse();
-    const currentYear = currentDate.getUTCFullYear();
+    const currentYear = currentDate && currentDate.getUTCFullYear();
 
     const onChangeYears = (e: React.ChangeEvent<HTMLSelectElement>) =>
       _handleOnChange("yyyy", Number(e.target.value));
 
     return (
       <FormSelect onChange={onChangeYears} {...yearProps}>
+        <option value="" selected={!currentDate} />
         {yearsRange.map(year => (
           <option key={year} value={year} selected={currentYear === year}>
             {year}
