@@ -9,6 +9,8 @@ import {
   Button,
   RouterContextProvider,
 } from "tabler-react";
+import { NavSubItemProps } from "components/Nav/NavSubItem";
+import { NavItemProps } from "components/Nav/NavItem";
 
 type Props = {
   children: React.ReactNode;
@@ -18,30 +20,12 @@ type State = {
   notificationsObjects: any[];
 };
 
-type subNavItem = {
-  value: string;
-  to?: string;
-  icon?: string;
-  LinkComponent?: React.ElementType;
-  useExact?: boolean;
-};
-
-type navItem = {
-  value: string;
-  to?: string;
-  icon?: string;
-  active?: boolean;
-  LinkComponent?: React.ElementType;
-  subItems?: Array<subNavItem>;
-  useExact?: boolean;
-};
-
 const withRouterNavLink = (to: string) =>
   withRouter(({ staticContext, ...props }: any) => (
     <NavLink {...props} to={to} />
   ));
 
-const navBarItems: Array<navItem> = [
+const navBarItems: Array<NavItemProps> = [
   {
     value: "Home",
     to: "/",
@@ -52,7 +36,7 @@ const navBarItems: Array<navItem> = [
   {
     value: "Interface",
     icon: "box",
-    subItems: [
+    subItemsObjects: [
       {
         value: "Cards Design",
         to: "/cards",
@@ -73,7 +57,7 @@ const navBarItems: Array<navItem> = [
   {
     value: "Components",
     icon: "calendar",
-    subItems: [
+    subItemsObjects: [
       {
         value: "Maps",
         to: "/maps",
@@ -99,7 +83,7 @@ const navBarItems: Array<navItem> = [
   {
     value: "Pages",
     icon: "file",
-    subItems: [
+    subItemsObjects: [
       {
         value: "Profile",
         to: "/profile",

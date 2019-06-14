@@ -26,7 +26,7 @@ const navBarItems = [
   {
     value: "Interface",
     icon: "box",
-    subItems: [
+    subItemsObjects: [
       {
         value: "Cards Design",
         to: "/cards",
