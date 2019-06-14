@@ -4,12 +4,17 @@ import getUtilityPropsClasses, {
   UtilityProps,
 } from "./utilityPropsToClassNames";
 import capitalize from "./capitalize";
+import { ClassValue } from "classnames/types";
 
-export interface HTMLProps<T extends HTMLElement>
+export interface ELProps<T extends HTMLOrSVGElement>
   extends HTMLAttributes<T>,
-    UtilityProps {}
+    UtilityProps {
+  classNames?: ClassValue;
+}
 
-export const makeElement = function<T extends HTMLElement>(element: string) {
+export const makeElement = function<T extends HTMLOrSVGElement>(
+  element: string
+) {
   const Component = forwardRef(function(
     {
       d,
@@ -28,8 +33,9 @@ export const makeElement = function<T extends HTMLElement>(element: string) {
       px,
       py,
       className,
+      classNames,
       ...props
-    }: HTMLProps<T>,
+    }: ELProps<T>,
     ref: React.Ref<T>
   ) {
     const utilityClasses = getUtilityPropsClasses({
@@ -49,7 +55,7 @@ export const makeElement = function<T extends HTMLElement>(element: string) {
       px,
       py,
     });
-    const _className = cn(utilityClasses, className);
+    const _className = cn(utilityClasses, classNames, className);
     return React.createElement(element, {
       className: _className,
       ref,

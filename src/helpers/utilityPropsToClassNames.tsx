@@ -92,7 +92,7 @@ const utilityProps: utilityyPropKeys[] = [
   "py",
 ];
 
-export const getUtilityPropsClasses = function(props: UtilityProps) {
+export const getUtilityPropsClasses = function(props: { [key: string]: any }) {
   const utilityPropsClasses = utilityProps.reduce(
     (acc, cur) => {
       if (props[cur]) {
