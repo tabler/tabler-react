@@ -1,9 +1,8 @@
-import React, { useState, CSSProperties } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 import Avatar from "../Avatar";
 import Button from "../Button";
-import AlertLink from "./AlertLink";
 
 import { TablerComponent, MouseEvents, PointerEvents } from "../../";
 
