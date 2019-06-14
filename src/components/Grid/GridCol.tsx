@@ -1,9 +1,13 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+import El from "../El/El";
+import { UtilityProps } from "../../helpers/utilityPropsToClassNames";
+import { TablerComponent } from "../../types";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+interface Props
+  extends HTMLAttributes<HTMLDivElement>,
+    TablerComponent,
+    UtilityProps {
   width?: number;
   xs?: number;
   xsAuto?: boolean;
@@ -59,6 +63,7 @@ function GridCol({
   orderLg,
   orderXl,
   ignoreCol = false,
+  ...props
 }: Props) {
   const classes = cn(
     {
@@ -90,7 +95,11 @@ function GridCol({
     },
     className
   );
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...props}>
+      {children}
+    </El.Div>
+  );
 }
 
 /** @component */

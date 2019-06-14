@@ -1,9 +1,13 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
+import El from "../El/El";
+import { UtilityProps } from "../../helpers/utilityPropsToClassNames";
+import { TablerComponent } from "../../types";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface GridRowProps
+  extends HTMLAttributes<HTMLDivElement>,
+    TablerComponent,
+    UtilityProps {
   cards?: boolean;
   deck?: boolean;
   gutters?: "xs" | "sm" | "md" | "lg";
@@ -19,7 +23,8 @@ function GridRow({
   gutters,
   alignItems = "",
   justifyContent = "",
-}: Props) {
+  ...props
+}: GridRowProps) {
   const classes: string = cn(
     `row`,
     {
@@ -32,10 +37,12 @@ function GridRow({
     },
     className
   );
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...props}>
+      {children}
+    </El.Div>
+  );
 }
-
-
 
 /** @component */
 export default GridRow;
