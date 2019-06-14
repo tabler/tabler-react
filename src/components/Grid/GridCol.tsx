@@ -4,7 +4,7 @@ import El from "../El/El";
 import { UtilityProps } from "../../helpers/utilityPropsToClassNames";
 import { TablerComponent } from "../../types";
 
-interface Props
+export interface GridColProps
   extends HTMLAttributes<HTMLDivElement>,
     TablerComponent,
     UtilityProps {
@@ -64,7 +64,7 @@ function GridCol({
   orderXl,
   ignoreCol = false,
   ...props
-}: Props) {
+}: GridColProps) {
   const classes = cn(
     {
       col: !ignoreCol,
