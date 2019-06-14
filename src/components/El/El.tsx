@@ -28,6 +28,11 @@ const Input = makeElement<HTMLInputElement>("input");
 const Textarea = makeElement<HTMLTextAreaElement>("textarea");
 const Select = makeElement<HTMLSelectElement>("select");
 const Option = makeElement<HTMLOptionElement>("option");
+const Fieldset = makeElement<HTMLFieldSetElement>("fieldset");
+const Label = makeElement<HTMLLabelElement>("label");
+
+const Iframe = makeElement<HTMLIFrameElement>("iframe");
+const Svg = makeElement<SVGElement>("svg");
 
 export const El = {
   Div,
@@ -53,6 +58,10 @@ export const El = {
   Textarea,
   Select,
   Option,
+  Fieldset,
+  Label,
+  Iframe,
+  Svg,
 };
 
 export default El;
