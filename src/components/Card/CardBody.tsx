@@ -1,12 +1,11 @@
 import * as React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
 import El from "../El/El";
-import { UtilityProps } from "../../helpers/utilityPropsToClassNames";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-export interface Props extends TablerComponent, UtilityProps {}
+export interface CardBodyProps extends ELProps<HTMLDivElement> {}
 
-function CardBody({ className, children, ...rest }: Props) {
+function CardBody({ className, children, ...rest }: CardBodyProps) {
   const _className = cn("card-body", className);
   return (
     <El.Div className={_className} {...rest}>

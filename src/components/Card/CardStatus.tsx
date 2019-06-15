@@ -1,14 +1,21 @@
 import * as React from "react";
 import cn from "classnames";
+import { colors } from "../../colors";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-  color: string;
+export interface CardStatusProps extends ELProps<HTMLDivElement> {
+  color: colors;
   side?: boolean;
 }
 
-function CardStatus({ className, children, color, side }: Props) {
+function CardStatus({
+  className,
+  children,
+  color,
+  side,
+  ...rest
+}: CardStatusProps) {
   const classes = cn(
     {
       "card-status": true,
@@ -17,7 +24,11 @@ function CardStatus({ className, children, color, side }: Props) {
     },
     className
   );
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
 
 export default CardStatus;

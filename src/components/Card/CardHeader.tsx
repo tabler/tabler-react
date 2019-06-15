@@ -1,17 +1,22 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface CardHeaderProps extends ELProps<HTMLDivElement> {
   backgroundURL?: string;
 }
 
-function CardHeader({ className, children, backgroundURL = "" }: Props) {
+function CardHeader({
+  className,
+  children,
+  backgroundURL = "",
+  ...rest
+}: CardHeaderProps) {
   const classes = cn("card-header", className);
 
   return (
-    <div
+    <El.Div
       className={classes}
       style={
         backgroundURL
@@ -20,12 +25,11 @@ function CardHeader({ className, children, backgroundURL = "" }: Props) {
             })
           : null
       }
+      {...rest}
     >
       {children}
-    </div>
+    </El.Div>
   );
 }
-
-
 
 export default CardHeader;

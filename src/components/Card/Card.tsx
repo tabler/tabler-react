@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 
 import cn from "classnames";
 import CardHeader from "./CardHeader";
@@ -10,12 +10,17 @@ import CardStatus from "./CardStatus";
 import CardAlert from "./CardAlert";
 import CardFooter from "./CardFooter";
 import CardMap from "./CardMap";
+import { colors } from "../../colors";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface CardProps extends ELProps<HTMLDivElement> {
   title?: string;
   body?: React.ReactNode;
+  as?: React.ElementType;
+  /**
+   * @deprecated use 'as'
+   */
   RootComponent?: React.ElementType;
   options?: React.ReactNode;
   isCollapsible?: boolean;
@@ -23,143 +28,127 @@ interface Props {
   isClosable?: boolean;
   isClosed?: boolean;
   isFullscreenable?: boolean;
-  statusColor?: string;
+  statusColor?: colors;
   statusSide?: boolean;
   alert?: React.ReactNode;
-  alertColor?: string;
+  alertColor?: colors;
   footer?: string;
   aside?: boolean;
 }
 
-interface State {
-  isClosed: boolean;
-  isCollapsed: boolean;
-  isFullscreen: boolean;
-}
+const Card = function({
+  className,
+  children,
+  as = El.Div,
+  RootComponent,
+  title,
+  body,
+  options,
+  isCollapsible,
+  isClosable,
+  isFullscreenable,
+  aside,
+  statusColor,
+  statusSide,
+  alert,
+  alertColor,
+  footer,
+  isClosed,
+  isCollapsed,
+  ...rest
+}: CardProps) {
+  const [_isClosed, setIsClosed] = useState(isClosed || false);
+  const [_isCollapsed, setIsCollapsed] = useState(isCollapsed || false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
-class Card extends React.PureComponent<Props, State> {
-  state = {
-    isClosed: this.props.isClosed || false,
-    isCollapsed: this.props.isCollapsed || false,
-    isFullscreen: false,
+  const handleCloseOnClick = (): void => {
+    setIsClosed(s => !s);
   };
 
-  static Header = CardHeader;
-  static Body = CardBody;
-  static Title = CardTitle;
-  static Options = CardOptions;
-  static OptionsItem = CardOptionsItem;
-  static Status = CardStatus;
-  static Alert = CardAlert;
-  static Footer = CardFooter;
-  static Map = CardMap;
-
-  handleCloseOnClick = (): void => {
-    this.setState(s => ({
-      isClosed: !s.isClosed,
-    }));
+  const handleCollapseOnClick = (): void => {
+    setIsCollapsed(s => !s);
   };
 
-  handleCollapseOnClick = (): void => {
-    this.setState(s => ({
-      isCollapsed: !s.isCollapsed,
-    }));
+  const handleFullscreenOnClick = (): void => {
+    setIsFullscreen(s => !s);
   };
 
-  handleFullscreenOnClick = (): void => {
-    this.setState(s => ({
-      isFullscreen: !s.isFullscreen,
-    }));
-  };
-
-  render() {
-    const {
-      className,
-      children,
-      RootComponent,
-      title,
-      body,
-      options,
-      isCollapsible,
-      isClosable,
-      isFullscreenable,
-      aside,
-      statusColor,
-      statusSide,
-      alert,
-      alertColor,
-      footer,
-    } = this.props;
-    const { isClosed, isCollapsed, isFullscreen } = this.state;
-    if (isClosed) {
-      return null;
-    }
-    const classes = cn(
-      {
-        card: true,
-        aside: aside,
-        "card-collapsed": isCollapsed,
-        "card-fullscreen": isFullscreen,
-      },
-      className
-    );
-    const Component = RootComponent || "div";
-
-    const card_options = (options || isCollapsible || isClosable) && (
-      <Card.Options>
-        {options}
-        {isCollapsible && (
-          <Card.OptionsItem
-            onClick={this.handleCollapseOnClick}
-            type="collapse"
-          />
-        )}
-        {isFullscreenable && (
-          <Card.OptionsItem
-            type="fullscreen"
-            onClick={this.handleFullscreenOnClick}
-          />
-        )}
-        {isClosable && (
-          <Card.OptionsItem type="close" onClick={this.handleCloseOnClick} />
-        )}
-      </Card.Options>
-    );
-
-    const card_status = statusColor && (
-      <Card.Status color={statusColor} side={statusSide} />
-    );
-
-    const card_alert = alert && alertColor && (
-      <Card.Alert color={alertColor}>{alert}</Card.Alert>
-    );
-
-    const card_header = title && (
-      <Card.Header>
-        <Card.Title>{title}</Card.Title>
-        {card_options}
-      </Card.Header>
-    );
-
-    const card_body = body && <Card.Body>{body}</Card.Body>;
-
-    const card_footer = footer && <Card.Footer>{footer}</Card.Footer>;
-
-    if (card_header !== null || card_body !== null) {
-      return (
-        <Component className={classes}>
-          {card_status}
-          {card_header}
-          {card_alert}
-          {card_body || children}
-          {card_footer}
-        </Component>
-      );
-    } else {
-      return <Component className={classes}>{children}</Component>;
-    }
+  if (_isClosed) {
+    return null;
   }
-}
+  const classes = cn(
+    {
+      card: true,
+      aside: aside,
+      "card-collapsed": _isCollapsed,
+      "card-fullscreen": isFullscreen,
+    },
+    className
+  );
+  const Component = RootComponent || as;
+
+  const card_options = (options || isCollapsible || isClosable) && (
+    <CardOptions>
+      {options}
+      {isCollapsible && (
+        <CardOptionsItem onClick={handleCollapseOnClick} type="collapse" />
+      )}
+      {isFullscreenable && (
+        <CardOptionsItem type="fullscreen" onClick={handleFullscreenOnClick} />
+      )}
+      {isClosable && (
+        <CardOptionsItem type="close" onClick={handleCloseOnClick} />
+      )}
+    </CardOptions>
+  );
+
+  const card_status = statusColor && (
+    <CardStatus color={statusColor} side={statusSide} />
+  );
+
+  const card_alert = alert && alertColor && (
+    <CardAlert color={alertColor}>{alert}</CardAlert>
+  );
+
+  const card_header = title && (
+    <CardHeader>
+      <CardTitle>{title}</CardTitle>
+      {card_options}
+    </CardHeader>
+  );
+
+  const card_body = body && <CardBody>{body}</CardBody>;
+
+  const card_footer = footer && <CardFooter>{footer}</CardFooter>;
+
+  if (card_header !== null || card_body !== null) {
+    return (
+      <Component className={classes}>
+        {card_status}
+        {card_header}
+        {card_alert}
+        {card_body || children}
+        {card_footer}
+      </Component>
+    );
+  }
+
+  return (
+    <Component className={classes} {...rest}>
+      {children}
+    </Component>
+  );
+};
+
+// static Header = CardHeader;
+//   static Body = CardBody;
+//   static Title = CardTitle;
+//   static Options = CardOptions;
+//   static OptionsItem = CardOptionsItem;
+//   static Status = CardStatus;
+//   static Alert = CardAlert;
+//   static Footer = CardFooter;
+//   static Map = CardMap;
 
 /** @component */
 export default Card;

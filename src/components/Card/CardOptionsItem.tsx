@@ -1,16 +1,21 @@
 import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface CardOptionsItemProps extends ELProps<HTMLAnchorElement> {
   icon?: string;
   type?: "collapse" | "close" | "fullscreen";
-  onClick?: () => any;
 }
 
-function CardOptionsItem({ className, children, icon, type, onClick }: Props) {
+function CardOptionsItem({
+  className,
+  children,
+  icon,
+  type,
+  ...rest
+}: CardOptionsItemProps) {
   const classes = cn(
     {
       "card-options-collapse": type === "collapse",
@@ -50,12 +55,10 @@ function CardOptionsItem({ className, children, icon, type, onClick }: Props) {
   })();
 
   return (
-    <a className={classes} data-toggle={dataToggle} onClick={onClick}>
+    <El.A className={classes} data-toggle={dataToggle} {...rest}>
       <Icon name={iconName} />
-    </a>
+    </El.A>
   );
 }
-
-
 
 export default CardOptionsItem;

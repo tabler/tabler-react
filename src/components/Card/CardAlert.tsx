@@ -1,17 +1,20 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import { colors } from "../../colors";
+import El from "../El/El";
 
-interface Props {
-  children?: any;
-  className?: string;
-  color: string;
+export interface CardAlertProps extends ELProps<HTMLDivElement> {
+  color: colors;
 }
 
-function CardAlert({ className, children, color }: Props) {
+function CardAlert({ className, children, color, ...rest }: CardAlertProps) {
   const classes = cn(`card-alert alert alert-${color} mb-0`, className);
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
-
-
 
 export default CardAlert;

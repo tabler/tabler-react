@@ -1,28 +1,27 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface CardMapProps extends ELProps<HTMLDivElement> {
   placeholder?: string;
 }
 
-function CardMap({ className, children, placeholder }: Props) {
+function CardMap({ className, children, placeholder, ...rest }: CardMapProps) {
   const classes = cn(
     "card-map",
     { "card-map-placeholder": placeholder },
     className
   );
   return (
-    <div
+    <El.Div
       className={classes}
       style={placeholder ? { backgroundImage: `url(${placeholder})` } : {}}
+      {...rest}
     >
       {children}
-    </div>
+    </El.Div>
   );
 }
-
-
 
 export default CardMap;
