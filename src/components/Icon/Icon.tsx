@@ -1,10 +1,7 @@
-import * as React from "react";
+import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 
-import { MouseEvents, PointerEvents, FocusEvents } from "../../";
-
-interface Props extends MouseEvents, PointerEvents, FocusEvents {
-  className?: string;
+interface IconProps extends HTMLAttributes<HTMLElement> {
   /**
    * Should this icon be rendered within an <a> tag
    */
@@ -40,14 +37,8 @@ function Icon({
   isAriaHidden,
   payment,
   flag,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
-  onFocus,
-  onBlur,
-}: Props) {
+  ...rest
+}: IconProps) {
   const prefix = (payment && "payment") || (flag && "flag") || prefixFromProps;
   const classes = cn(
     "icon",
@@ -63,26 +54,14 @@ function Icon({
       }
     : null;
 
-  const eventProps = {
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    onFocus,
-    onBlur,
-  };
-
   return !link ? (
-    <i className={classes} {...eventProps} />
+    <i className={classes} {...rest} />
   ) : (
-    <a className="icon" {...extraProps} {...eventProps}>
+    <a className="icon" {...extraProps} {...rest}>
       <i className={classes} />
     </a>
   );
 }
-
-
 
 /** @component */
 export default Icon;
