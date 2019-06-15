@@ -33,7 +33,7 @@ function Notification({ avatarURL, message, time, unread }: Props) {
       <div>
         {message}
         {time && (
-          <Text color="muted" size="small">
+          <Text color="gray" size="small">
             {time}
           </Text>
         )}
