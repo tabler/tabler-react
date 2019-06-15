@@ -1,28 +1,34 @@
 import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import { colors } from "../../colors";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+interface StampProps extends ELProps<HTMLSpanElement> {
   size?: "sm" | "md";
   icon?: string;
-  color?: string;
-};
+  color?: colors;
+}
 
-function Stamp({ children, className, size = "md", icon, color = "" }: Props) {
+function Stamp({
+  children,
+  className,
+  size = "md",
+  icon,
+  color,
+  ...rest
+}: StampProps) {
   const classes = cn(
     { stamp: true, [`stamp-${size}`]: size, [`bg-${color}`]: color },
     className
   );
   return (
-    <span className={classes}>
+    <El.Span className={classes} {...rest}>
       {icon && <Icon name={icon} />}
       {children}
-    </span>
+    </El.Span>
   );
 }
-
-
 
 export default Stamp;
