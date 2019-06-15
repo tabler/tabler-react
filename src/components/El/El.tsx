@@ -10,7 +10,7 @@ const Footer = makeElement<HTMLDivElement>("footer");
 
 const A = makeElement<HTMLAnchorElement>("a");
 const Button = makeElement<HTMLButtonElement>("button");
-const P = makeElement<HTMLParagraphElement>("a");
+const P = makeElement<HTMLParagraphElement>("p");
 
 const Ul = makeElement<HTMLUListElement>("ul");
 const Li = makeElement<HTMLLIElement>("li");
@@ -33,6 +33,17 @@ const Label = makeElement<HTMLLabelElement>("label");
 
 const Iframe = makeElement<HTMLIFrameElement>("iframe");
 const Svg = makeElement<SVGElement>("svg");
+
+const Small = makeElement<HTMLDivElement>("small");
+
+const Table = makeElement<HTMLTableElement>("table");
+const Thead = makeElement<HTMLTableSectionElement>("thead");
+const Tbody = makeElement<HTMLTableSectionElement>("tbody");
+const Tfoot = makeElement<HTMLTableSectionElement>("tfoot");
+const Col = makeElement<HTMLTableColElement>("col");
+const Tr = makeElement<HTMLTableRowElement>("tr");
+const Td = makeElement<HTMLTableCellElement>("td");
+const Th = makeElement<HTMLTableHeaderCellElement>("th");
 
 export const El = {
   Div,
@@ -62,6 +73,15 @@ export const El = {
   Label,
   Iframe,
   Svg,
+  Small,
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Col,
+  Tr,
+  Td,
+  Th,
 };
 
 export default El;
