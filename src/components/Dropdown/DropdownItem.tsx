@@ -4,8 +4,10 @@ import Icon from "../Icon";
 import Badge from "../Badge";
 import { colors } from "../../colors";
 import { TablerComponent } from "../../types";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-export interface DropdownItemProps extends TablerComponent {
+export interface DropdownItemProps extends ELProps<HTMLAnchorElement> {
   /**
    * Display an Icon to the left of DropdownItem content
    */
@@ -23,23 +25,11 @@ export interface DropdownItemProps extends TablerComponent {
    */
   badgeType?: colors;
   /**
-   * Where the user should be taken on click.
-   * By default this will be passed as the 'href' prop to the <a> tag,
-   * but to the RootComponent it will be a 'to' prop instead
-   */
-  to?: string;
-  /**
    * A component to be used instead of an <a> tag
+   * @deprecated use 'as'
    */
   RootComponent?: React.ElementType;
-  /**
-   * onClick handler
-   */
-  onClick?: (event: React.MouseEvent<any>) => any;
-  /**
-   * Whether or not to pass "exact" property to underlying NavLink component
-   */
-  useExact?: boolean;
+  as?: React.ElementType;
 }
 
 /**
@@ -52,14 +42,15 @@ function DropdownItem({
   children,
   badge,
   badgeType,
-  to,
+  as = El.A,
   RootComponent,
-  onClick,
-  useExact,
+  ...rest
 }: DropdownItemProps) {
   const classes = cn({ "dropdown-item": true }, className);
-  const childrenForAll = (
-    <React.Fragment>
+  const Component = RootComponent || as;
+
+  return (
+    <Component className={classes} {...rest}>
       {badge && (
         <span className="float-right">
           <Badge color={badgeType}>{badge}</Badge>
@@ -72,21 +63,7 @@ function DropdownItem({
       )}
       {value}
       {children}
-    </React.Fragment>
-  );
-  return RootComponent ? (
-    <RootComponent
-      className={classes}
-      to={to}
-      onClick={onClick}
-      exact={useExact}
-    >
-      {childrenForAll}
-    </RootComponent>
-  ) : (
-    <a className={classes} href={to} onClick={onClick}>
-      {childrenForAll}
-    </a>
+    </Component>
   );
 }
 

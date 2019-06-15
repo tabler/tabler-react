@@ -1,13 +1,13 @@
-// @flow
-
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
 import { Popper } from "react-popper";
 
 import { PopperChildrenProps } from "react-popper";
 import DropdownContext from "./DropdownContext";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-export interface Props {
+export interface DropdownMenuProps extends ELProps<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   position?: any;
@@ -36,8 +36,9 @@ function DropdownMenu({
   position = "bottom",
   arrow,
   arrowPosition = "left",
-  rootRef,
-}: Props) {
+  style: _style,
+  ...rest
+}: DropdownMenuProps) {
   const [isOpen] = React.useContext(DropdownContext);
   const classes = cn(
     {
@@ -53,14 +54,15 @@ function DropdownMenu({
       {({ ref, style, placement }: PopperChildrenProps) => {
         return (
           isOpen && (
-            <div
+            <El.Div
               className={classes}
               data-placement={placement}
-              style={style}
+              style={{ ..._style, ...style }}
               ref={ref}
+              {...rest}
             >
               {children}
-            </div>
+            </El.Div>
           )
         );
       }}

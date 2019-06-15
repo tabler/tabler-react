@@ -3,20 +3,23 @@ import { Manager } from "react-popper";
 import cn from "classnames";
 import DropdownTrigger from "./DropdownTrigger";
 import DropdownMenu from "./DropdownMenu";
-import DropdownItem from "./DropdownItem";
-import DropdownItemDivider from "./DropdownItemDivider";
+import DropdownItem, { DropdownItemProps } from "./DropdownItem";
+import DropdownItemDivider, {
+  DropdownItemDividerProps,
+} from "./DropdownItemDivider";
 
 import ClickOutside from "../../helpers/ClickOutside";
 import withDropdownProvider from "./withDropdownProvider";
 import DropdownContext from "./DropdownContext";
 import { colors } from "../../colors";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
 interface TriggerElement {
   onClick: (e: React.MouseEvent) => any;
 }
-export interface DefaultProps {
-  children?: React.ReactNode;
-  className?: string;
+
+export interface DefaultProps extends ELProps<HTMLDivElement> {
   /**
    * This dropdown should only be displayed on desktop
    */
@@ -86,19 +89,12 @@ export interface DefaultProps {
    * itemsObjects[x].RootComponent takes priority
    */
   itemsRootComponent?: React.ElementType;
-  style?: CSSProperties;
 }
 
-export type itemObject = {
-  icon?: string;
-  badge?: string;
-  badgeType?: colors;
-  value?: string;
+export interface itemObject extends DropdownItemProps {
   isDivider?: boolean;
-  to?: string;
-  RootComponent?: React.ElementType;
-  onClick?: (event: React.MouseEvent) => any;
-};
+  dividerProps?: DropdownItemDividerProps;
+}
 type Props = DefaultProps;
 
 const Dropdown = function({
@@ -123,6 +119,7 @@ const Dropdown = function({
   arrowPosition,
   dropdownMenuClassName,
   style,
+  ...rest
 }: Props) {
   const [isOpen, setIsOpen] = useContext(DropdownContext);
 
@@ -141,7 +138,7 @@ const Dropdown = function({
       dropdown: true,
       "d-none": desktopOnly,
       "d-md-flex": desktopOnly || flex === "md",
-      [`d-{flex}-flex`]:
+      [`d-${flex}-flex`]:
         (typeof flex !== "boolean" &&
           ["xs", "sm", "lg", "xl"].includes(flex)) ||
         flex,
@@ -177,19 +174,20 @@ const Dropdown = function({
     items ||
     (() => {
       if (itemsObject) {
-        return itemsObject.map(({ RootComponent, onClick, ...item }, i) =>
-          item.isDivider ? (
-            <DropdownItemDivider key={i} />
-          ) : (
-            <DropdownItem
-              key={i}
-              RootComponent={RootComponent || itemsRootComponent}
-              onClick={(e: React.MouseEvent<any>) =>
-                _handleItemClick(e, onClick)
-              }
-              {...item}
-            />
-          )
+        return itemsObject.map(
+          ({ as, onClick, isDivider, dividerProps, ...item }, i) =>
+            isDivider ? (
+              <DropdownItemDivider key={i} {...dividerProps} />
+            ) : (
+              <DropdownItem
+                key={i}
+                as={as || itemsRootComponent}
+                onClick={(e: React.MouseEvent<any>) =>
+                  _handleItemClick(e, onClick)
+                }
+                {...item}
+              />
+            )
         );
       }
       return null;
@@ -216,16 +214,14 @@ const Dropdown = function({
     <Manager>
       <ClickOutside onOutsideClick={() => setIsOpen(false)}>
         {({ setElementRef }: any) => (
-          <div className={classes} ref={setElementRef} style={style}>
+          <El.Div className={classes} ref={setElementRef} {...rest}>
             {_trigger}
             {menu || children}
-          </div>
+          </El.Div>
         )}
       </ClickOutside>
     </Manager>
   );
 };
-
-
 
 export default withDropdownProvider(Dropdown);

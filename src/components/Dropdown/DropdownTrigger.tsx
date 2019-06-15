@@ -8,10 +8,10 @@ import Icon from "../Icon";
 import { Reference } from "react-popper";
 import { ReferenceChildrenProps } from "react-popper";
 import DropdownContext from "./DropdownContext";
+import { ButtonProps } from "../Button/Button";
+import { colors } from "../../colors";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface DropdownTriggerProps extends ButtonProps {
   /**
    * Display an arrow alongside the trigger content
    */
@@ -22,12 +22,13 @@ interface Props {
   value?: string;
   /**
    * Render the trigger as an <a> tag or a Button
+   * @deprecated dropdowns should not be links
    */
   type?: "link" | "button";
   /**
    * The background color for a Button trigger
    */
-  color?: string;
+  color?: colors;
   /**
    * An Icon displayed to the left of the trigger content
    */
@@ -45,7 +46,6 @@ interface Props {
    * @deprecated use context
    */
   onClick?: (e: React.MouseEvent) => void;
-  rootRef?: (el: HTMLElement) => void;
 }
 
 /**
@@ -56,13 +56,12 @@ function DropdownTrigger({
   toggle = true,
   value,
   children,
-  type = "link",
   icon,
   color,
   isNavLink,
   isOption,
-  rootRef,
-}: Props) {
+  ...rest
+}: DropdownTriggerProps) {
   const [isOpen, setIsOpen] = React.useContext(DropdownContext);
 
   const classes = cn(
@@ -82,15 +81,7 @@ function DropdownTrigger({
     </React.Fragment>
   );
 
-  return type === "link" ? (
-    <Reference>
-      {({ ref }: ReferenceChildrenProps) => (
-        <a className={classes} onClick={() => setIsOpen(!isOpen)} ref={ref}>
-          {childrenFragment}
-        </a>
-      )}
-    </Reference>
-  ) : (
+  return (
     <Reference>
       {({ ref }: ReferenceChildrenProps) => (
         <Button
@@ -100,6 +91,7 @@ function DropdownTrigger({
           isOption={isOption}
           onClick={() => setIsOpen(!isOpen)}
           rootRef={ref}
+          {...rest}
         >
           {childrenFragment}
         </Button>

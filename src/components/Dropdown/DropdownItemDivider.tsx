@@ -1,18 +1,18 @@
-// @flow
+import React from "react";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-import * as React from "react";
-
-interface Props {
-  children?: React.ReactNode;
-}
+export interface DropdownItemDividerProps extends ELProps<HTMLDivElement> {}
 
 /**
  * Used to seperate items within a Dropdown with a horizontal line
  */
-function DropdownItemDivider(props: Props) {
-  return <div className="dropdown-divider">{props.children}</div>;
+function DropdownItemDivider({ children, ...rest }: DropdownItemDividerProps) {
+  return (
+    <El.Div className="dropdown-divider" {...rest}>
+      {children}
+    </El.Div>
+  );
 }
-
-
 
 export default DropdownItemDivider;
