@@ -1,16 +1,17 @@
-import * as React from "react";
-import cn from "classnames";
+import React from "react";
 
 import "./Container.css";
+import { ELProps } from "../helpers/makeHtmlElement";
+import El from "./El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-};
+export interface ContainerProps extends ELProps<HTMLDivElement> {}
 
-function Container({ className, children }: Props) {
-  const classes = cn("container", className);
-  return <div className={classes}>{children}</div>;
+function Container({ children, ...rest }: ContainerProps) {
+  return (
+    <El.Div classNames="container" {...rest}>
+      {children}
+    </El.Div>
+  );
 }
 
 export default Container;
