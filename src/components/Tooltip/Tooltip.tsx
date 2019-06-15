@@ -1,10 +1,10 @@
-import * as React from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import { Manager, Reference, Popper } from "react-popper";
 import { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
 import "./Tooltip.css";
 
-type Props = {
+export interface TooltipProps {
   /**
    * The reference element which the Tooltip will be based on.
    */
@@ -22,74 +22,71 @@ type Props = {
    */
   placement?: any;
   type?: "link";
-};
-
-type State = {
-  isShown: boolean;
-};
-
-class Tooltip extends React.Component<Props, State> {
-  state = { isShown: false };
-
-  _handleTriggerOnMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-    this.setState({ isShown: true });
-  };
-
-  _handleTriggerOnMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-    this.setState({ isShown: false });
-  };
-
-  render() {
-    const { className, children, placement, content } = this.props;
-
-    const classes = cn(
-      "tooltip",
-      placement && "bs-tooltip-" + placement,
-      "show",
-      className
-    );
-
-    const arrowClasses = cn(
-      "arrow",
-      placement === "top" || placement === "bottom"
-        ? "tbr-arrow-vertical"
-        : "tbr-arrow-horizontal"
-    );
-
-    return (
-      <Manager>
-        <Reference>
-          {({ ref }: ReferenceChildrenProps) =>
-            typeof children !== "undefined" &&
-            React.cloneElement(children, {
-              ref: ref,
-              onMouseEnter: this._handleTriggerOnMouseEnter,
-              onMouseLeave: this._handleTriggerOnMouseLeave,
-            })
-          }
-        </Reference>
-        {this.state.isShown && (
-          <Popper placement={placement}>
-            {({ ref, style, placement }: PopperChildrenProps) => {
-              return (
-                <div
-                  className={classes}
-                  data-placement={placement}
-                  style={style}
-                  ref={ref}
-                >
-                  <div className={arrowClasses} />
-                  <div className="tooltip-inner">{content}</div>
-                </div>
-              );
-            }}
-          </Popper>
-        )}
-      </Manager>
-    );
-  }
 }
+
+const Tooltip = function({
+  className,
+  children,
+  placement,
+  content,
+}: TooltipProps) {
+  const [isShown, setIsShown] = useState(false);
+
+  const _handleTriggerOnMouseEnter = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    setIsShown(true);
+  };
+
+  const _handleTriggerOnMouseLeave = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    setIsShown(false);
+  };
+
+  const classes = cn(
+    "tooltip",
+    placement && "bs-tooltip-" + placement,
+    "show",
+    className
+  );
+
+  const arrowClasses = cn(
+    "arrow",
+    placement === "top" || placement === "bottom"
+      ? "tbr-arrow-vertical"
+      : "tbr-arrow-horizontal"
+  );
+
+  return (
+    <Manager>
+      <Reference>
+        {({ ref }: ReferenceChildrenProps) =>
+          typeof children !== "undefined" &&
+          React.cloneElement(children, {
+            ref: ref,
+            onMouseEnter: _handleTriggerOnMouseEnter,
+            onMouseLeave: _handleTriggerOnMouseLeave,
+          })
+        }
+      </Reference>
+      {isShown && (
+        <Popper placement={placement}>
+          {({ ref, style, placement }: PopperChildrenProps) => {
+            return (
+              <div
+                className={classes}
+                data-placement={placement}
+                style={style}
+                ref={ref}
+              >
+                <div className={arrowClasses} />
+                <div className="tooltip-inner">{content}</div>
+              </div>
+            );
+          }}
+        </Popper>
+      )}
+    </Manager>
+  );
+};
 
 export default Tooltip;
