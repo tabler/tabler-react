@@ -1,27 +1,21 @@
 import React from "react";
 import Header, { HeaderProps } from "./Header";
 
-export interface H2Props extends HeaderProps {}
+export interface H2Props extends HeaderProps<HTMLHeadingElement> {}
 
 /**
  * A Header component rendered as a h2 HTML element with a margin below
  */
 function H2({
   children,
-  RootComponent = "h2",
+  as = "h2",
   mt = 0,
   mb = 4,
   size = 2,
   ...props
 }: H2Props) {
   return (
-    <Header
-      RootComponent={RootComponent}
-      size={size}
-      mt={mt}
-      mb={mb}
-      {...props}
-    >
+    <Header as={as} size={size} mt={mt} mb={mb} {...props}>
       {children}
     </Header>
   );

@@ -1,14 +1,17 @@
 import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 import { TablerComponent } from "../../types";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-export interface HeaderProps
-  extends HTMLAttributes<HTMLHeadingElement>,
-    TablerComponent {
+export interface HeaderProps<AS extends HTMLElement = HTMLDivElement>
+  extends ELProps<AS> {
   /**
    * A component to use instead of a <div> as the root component
+   * @deprecated use 'as'
    */
   RootComponent?: React.ElementType;
+  as?: React.ElementType;
   /**
    * The size of the header
    */
@@ -19,15 +22,16 @@ export interface HeaderProps
  * A header
  * By default renders a div not a <hX> tag and has no additional spacing classes applied
  */
-function Header({
+function Header<AS extends HTMLElement = HTMLDivElement>({
+  as = El.Div,
   RootComponent,
   className,
   children,
   size = 1,
   ...props
-}: HeaderProps) {
+}: HeaderProps<AS>) {
   const classes = cn(`h${size}`, className);
-  const Component = RootComponent || "div";
+  const Component = RootComponent || as;
   return (
     <Component className={classes} {...props}>
       {children}
