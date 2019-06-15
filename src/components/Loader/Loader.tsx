@@ -1,16 +1,17 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
-}
+export interface LoaderProps extends ELProps<HTMLDivElement> {}
 
-function Loader({ className, children }: Props) {
+function Loader({ className, children, ...rest }: LoaderProps) {
   const classes = cn({ loader: true }, className);
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
-
-
 
 export default Loader;
