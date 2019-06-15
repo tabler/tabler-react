@@ -355,7 +355,7 @@ function Home() {
               color="blue"
               icon="dollar-sign"
               header={
-                <a href="#">
+                <a href="#sales">
                   132 <small>Sales</small>
                 </a>
               }
@@ -367,7 +367,7 @@ function Home() {
               color="green"
               icon="shopping-cart"
               header={
-                <a href="#">
+                <a href="#orders">
                   78 <small>Orders</small>
                 </a>
               }
@@ -379,7 +379,7 @@ function Home() {
               color="red"
               icon="users"
               header={
-                <a href="#">
+                <a href="#members">
                   1,352 <small>Members</small>
                 </a>
               }
@@ -391,7 +391,7 @@ function Home() {
               color="yellow"
               icon="message-square"
               header={
-                <a href="#">
+                <a href="#comments">
                   132 <small>Comments</small>
                 </a>
               }
@@ -551,7 +551,7 @@ function Home() {
                       </Grid.Col>
                       <Grid.Col>
                         <div>
-                          <a className="text-inherit" href="#">
+                          <a className="text-inherit" href="#amanda">
                             Amanda Hunt
                           </a>
                         </div>

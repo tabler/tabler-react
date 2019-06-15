@@ -9,7 +9,6 @@ import {
   Button,
   RouterContextProvider,
 } from "tabler-react";
-import { NavSubItemProps } from "components/Nav/NavSubItem";
 import { NavItemProps } from "components/Nav/NavItem";
 
 type Props = {
@@ -275,28 +274,28 @@ class SiteWrapper extends React.Component<Props, State> {
         routerContextComponentType={withRouter(RouterContextProvider as any)}
         footerProps={{
           links: [
-            <a href="#" key="1">
+            <a href="#1" key="1">
               First Link
             </a>,
-            <a href="#" key="2">
+            <a href="#2" key="2">
               Second Link
             </a>,
-            <a href="#" key="3">
+            <a href="#3" key="3">
               Third Link
             </a>,
-            <a href="#" key="4">
+            <a href="#4" key="4">
               Fourth Link
             </a>,
-            <a href="#" key="5">
+            <a href="#5" key="5">
               Five Link
             </a>,
-            <a href="#" key="6">
+            <a href="#6" key="6">
               Sixth Link
             </a>,
-            <a href="#" key="7">
+            <a href="#7" key="7">
               Seventh Link
             </a>,
-            <a href="#" key="8">
+            <a href="#8" key="8">
               Eigth Link
             </a>,
           ],

@@ -215,7 +215,7 @@ function FormElements() {
                             accurately.
                           </p>
                           <p className="mb-0">
-                            <a href="#">USP ZIP codes lookup tools</a>
+                            <a href="#help">USP ZIP codes lookup tools</a>
                           </p>
                         </React.Fragment>
                       }
