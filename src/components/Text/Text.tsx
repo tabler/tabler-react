@@ -1,5 +1,8 @@
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import { colors } from "../../colors";
+import El from "../El/El";
 
 interface AlignProps {
   align?: "left" | "center" | "right" | "justify";
@@ -31,31 +34,54 @@ interface LeadingProps {
   leadingLoose?: boolean;
 }
 
-export interface TextProps
-  extends AlignProps,
+export interface TextProps<AS extends HTMLElement = HTMLDivElement>
+  extends ELProps<AS>,
+    AlignProps,
     TransformProps,
     TrackingProps,
     LeadingProps {
-  children?: React.ReactNode;
-  className?: string;
+  as?: React.ElementType;
+  /**
+   * @deprecated use 'as'
+   */
   RootComponent?: React.ElementType;
-  color?: string;
+  color?: colors;
   size?: string;
   wrap?: boolean;
   muted?: boolean;
 }
 
-const Text = ({
+const Text = function<AS extends HTMLElement = HTMLDivElement>({
   className,
   children,
   RootComponent,
-  color = "",
+  as = El.Div,
+  color,
   size = "",
   wrap,
   muted,
-  ...props
-}: TextProps) => {
-  const { align: alignFromProps, left, center, right, justify } = props;
+  align: alignFromProps,
+  left,
+  center,
+  right,
+  justify,
+  transform: transformFromProps,
+  lowercase,
+  uppercase,
+  capitalize,
+  tracking: trackingFromProps,
+  trackingTight,
+  trackingNormal,
+  trackingWide,
+  leading: leadingFromProps,
+  leadingNone,
+  leadingTight,
+  leadingNormal,
+  leadingLoose,
+  ...rest
+}: TextProps<AS>) {
+  const Component = RootComponent || as;
+
   const align =
     alignFromProps ||
     (left && "left") ||
@@ -64,12 +90,6 @@ const Text = ({
     (justify && "justify") ||
     "";
 
-  const {
-    transform: transformFromProps,
-    lowercase,
-    uppercase,
-    capitalize,
-  } = props;
   const transform =
     transformFromProps ||
     (lowercase && "lowercase") ||
@@ -77,12 +97,6 @@ const Text = ({
     (capitalize && "capitalize") ||
     "";
 
-  const {
-    tracking: trackingFromProps,
-    trackingTight,
-    trackingNormal,
-    trackingWide,
-  } = props;
   const tracking =
     trackingFromProps ||
     (trackingTight && "tight") ||
@@ -90,13 +104,6 @@ const Text = ({
     (trackingWide && "wide") ||
     "";
 
-  const {
-    leading: leadingFromProps,
-    leadingNone,
-    leadingTight,
-    leadingNormal,
-    leadingLoose,
-  } = props;
   const leading =
     leadingFromProps ||
     (leadingNone && "none") ||
@@ -118,15 +125,13 @@ const Text = ({
     },
     className
   );
-  const Component = RootComponent || "div";
+
   return (
-    <Component className={classes} {...props}>
+    <Component className={classes} {...rest}>
       {children}
     </Component>
   );
 };
-
-
 
 /** @component */
 export default Text;

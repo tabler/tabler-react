@@ -1,29 +1,14 @@
 import * as React from "react";
-import Text from "./Text";
+import Text, { TextProps } from "./Text";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-  color?: string;
-  wrap?: boolean;
-  muted?: boolean;
-};
+export interface TextSmallProps extends TextProps {}
 
-const TextSmall = ({ className, children, color = "", wrap, muted }: Props) => {
+const TextSmall = ({ children, ...rest }: TextSmallProps) => {
   return (
-    <Text
-      RootComponent="small"
-      color={color}
-      size="sm"
-      wrap={wrap}
-      className={className}
-      muted={muted}
-    >
+    <Text as="small" size="sm" {...rest}>
       {children}
     </Text>
   );
 };
-
-
 
 export default TextSmall;
