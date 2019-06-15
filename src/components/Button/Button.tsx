@@ -1,11 +1,19 @@
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 
-import { MouseEvents, PointerEvents } from "../../types";
 import { RefHandler } from "react-popper";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import { colors } from "../../colors";
 
-interface PropsForAll extends MouseEvents, PointerEvents {
+export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
+  extends ELProps<AS> {
+  as?: React.ElementType;
+  /**
+   * @deprecated use 'as'
+   */
+  RootComponent?: React.ElementType;
   size?: "sm" | "lg";
   outline?: boolean;
   link?: boolean;
@@ -13,7 +21,7 @@ interface PropsForAll extends MouseEvents, PointerEvents {
   className?: string;
   children?: React.ReactNode;
   disabled?: boolean;
-  color?: string;
+  color?: colors;
   square?: boolean;
   pill?: boolean;
   icon?: string;
@@ -26,53 +34,26 @@ interface PropsForAll extends MouseEvents, PointerEvents {
   rootRef?: RefHandler;
 }
 
-export interface DefaultButtonComponent extends PropsForAll {
-  RootComponent?: "button";
-  type?: "button" | "submit" | "reset";
-  value?: string;
-}
-
-interface BtnAComponent extends PropsForAll {
-  RootComponent: "a";
-  href?: string;
-  target?: string;
-}
-
-interface BtnInputComponent extends PropsForAll {
-  RootComponent: "input";
-  type?: "button" | "submit" | "reset";
-  value?: string;
-}
-
-export type Props = DefaultButtonComponent | BtnAComponent | BtnInputComponent;
-
-const Button = (props: Props) => {
-  const {
-    size = "",
-    outline,
-    link,
-    block,
-    className,
-    children,
-    disabled,
-    color = "",
-    square,
-    pill,
-    icon,
-    social = "",
-    loading,
-    tabIndex,
-    isDropdownToggle,
-    isOption,
-    rootRef,
-    to,
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-  } = props;
-
+const Button = function<AS extends HTMLElement = HTMLButtonElement>({
+  size,
+  outline,
+  link,
+  block,
+  className,
+  children,
+  color,
+  square,
+  pill,
+  icon,
+  social = "",
+  loading,
+  isDropdownToggle,
+  isOption,
+  rootRef,
+  RootComponent,
+  as = El.Button,
+  ...rest
+}: ButtonProps<AS>) {
   const classes = cn(
     {
       btn: true,
@@ -80,7 +61,7 @@ const Button = (props: Props) => {
       [`btn-block`]: block,
       [`btn-outline-${color}`]: outline && !!color,
       [`btn-link`]: link,
-      disabled: disabled,
+      disabled: rest.disabled,
       [`btn-${color}`]: !!color && !outline,
       [`btn-${social}`]: !!social,
       "btn-square": square,
@@ -93,16 +74,7 @@ const Button = (props: Props) => {
     className
   );
 
-  const propsForAll = {
-    className: classes,
-    disabled: disabled,
-    onClick: onClick,
-    onMouseEnter: onMouseEnter,
-    onMouseLeave: onMouseLeave,
-    onPointerEnter: onPointerEnter,
-    onPointerLeave: onPointerLeave,
-    tabIndex: tabIndex,
-  };
+  const Component = RootComponent || as;
 
   const childrenForAll = (
     <React.Fragment>
@@ -115,33 +87,11 @@ const Button = (props: Props) => {
     </React.Fragment>
   );
 
-  if (!props.RootComponent || props.RootComponent === "button") {
-    const { type, value } = props;
-    return (
-      <button {...propsForAll} type={type} value={value} ref={rootRef}>
-        {childrenForAll}
-      </button>
-    );
-  } else if (props.RootComponent === "input") {
-    const { type, value } = props;
-    return <input {...propsForAll} type={type} value={value} ref={rootRef} />;
-  } else if (props.RootComponent === "a") {
-    const { href, target } = props;
-    return (
-      <a {...propsForAll} href={href} target={target} ref={rootRef}>
-        {childrenForAll}
-      </a>
-    );
-  } else {
-    const Component = props.RootComponent as any;
-    return (
-      <Component {...propsForAll} to={to}>
-        {childrenForAll}
-      </Component>
-    );
-  }
+  return (
+    <Component className={classes} ref={rootRef} {...rest}>
+      {childrenForAll}
+    </Component>
+  );
 };
-
-
 
 export default Button;

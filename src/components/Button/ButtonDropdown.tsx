@@ -1,65 +1,49 @@
-import * as React from "react";
-import Button, { DefaultButtonComponent } from "./Button";
+import React, { useState } from "react";
+import Button, { ButtonProps } from "./Button";
 import { Manager, Reference } from "react-popper";
-import DropdownMenu, {
-  Props as DropdownMenuProps,
-} from "../Dropdown/DropdownMenu";
+import DropdownMenu, { DropdownMenuProps } from "../Dropdown/DropdownMenu";
 
 import { ReferenceChildrenProps } from "react-popper";
 
-interface Props extends DefaultButtonComponent {
-  value?: string;
-  children?: React.ReactNode;
+export interface ButtonDropdownProps extends ButtonProps {
   dropdownProps?: DropdownMenuProps;
+  value?: string;
 }
 
-type State = {
-  isOpen: boolean;
-};
+const ButtonDropdown = function({
+  children,
+  value,
+  dropdownProps,
+  ...buttonProps
+}: ButtonDropdownProps) {
+  const [isOpen, setIsOpen] = useState(false);
 
-class ButtonDropdown extends React.Component<Props, State> {
-  state = { isOpen: false };
-
-  _handleButtonOnClick = (e: React.MouseEvent<HTMLElement>) => {
+  const _handleButtonOnClick = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    this.setState(s => ({ isOpen: !s.isOpen }));
+    setIsOpen(s => !s);
   };
 
-  render() {
-    const { children, value, dropdownProps, ...buttonProps } = this.props;
-
-    const propsForDropdownMenu: DropdownMenuProps = dropdownProps
-      ? Object.assign(dropdownProps, { show: this.state.isOpen })
-      : {
-          show: this.state.isOpen,
-        };
-
-    const dropdownMenu = React.createElement(
-      DropdownMenu,
-      propsForDropdownMenu,
-      children
-    );
-
-    return (
-      <Manager>
-        <Reference>
-          {({ ref }: ReferenceChildrenProps) => {
-            const propsForButton = Object.assign(
-              {
-                onClick: this._handleButtonOnClick,
-                rootRef: ref,
-                isDropdownToggle: true,
-              },
-              buttonProps
-            );
-            const button = React.createElement(Button, propsForButton, value);
-            return button;
-          }}
-        </Reference>
-        {dropdownMenu}
-      </Manager>
-    );
-  }
-}
+  return (
+    <Manager>
+      <Reference>
+        {({ ref }: ReferenceChildrenProps) => {
+          return (
+            <Button
+              onClick={_handleButtonOnClick}
+              rootRef={ref}
+              isDropdownToggle={true}
+              {...buttonProps}
+            >
+              {value}
+            </Button>
+          );
+        }}
+      </Reference>
+      <DropdownMenu show={isOpen} {...dropdownProps}>
+        {children}
+      </DropdownMenu>
+    </Manager>
+  );
+};
 
 export default ButtonDropdown;

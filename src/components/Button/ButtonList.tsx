@@ -1,21 +1,26 @@
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface ButtonListProps extends ELProps<HTMLDivElement> {
   align?: "" | "left" | "center" | "right";
 }
 
-function ButtonList({ className, children, align = "", ...props }: Props) {
+function ButtonList({
+  className,
+  children,
+  align = "",
+  ...props
+}: ButtonListProps) {
   const classes = cn(
     { "btn-list": true, [`text-${align}`]: !!align },
     className
   );
   return (
-    <div className={classes} {...props}>
+    <El.Div className={classes} {...props}>
       {children}
-    </div>
+    </El.Div>
   );
 }
 
