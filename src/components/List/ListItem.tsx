@@ -1,17 +1,19 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+interface ListItemProps extends ELProps<HTMLLIElement> {
   inline?: boolean;
 }
 
-function ListItem({ className, children, inline }: Props) {
+function ListItem({ className, children, inline, ...rest }: ListItemProps) {
   const classes = cn({ "list-inline-item": inline }, className);
-  return <li className={classes}>{children}</li>;
+  return (
+    <El.Li className={classes} {...rest}>
+      {children}
+    </El.Li>
+  );
 }
-
-
 
 export default ListItem;

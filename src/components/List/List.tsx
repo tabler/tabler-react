@@ -4,16 +4,23 @@ import cn from "classnames";
 import ListItem from "./ListItem";
 import ListGroup from "./ListGroup";
 import ListGroupItem from "./ListGroupItem";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-interface Props {
-  children?: React.ReactNode;
-  className?: string;
+export interface ListProps extends ELProps<HTMLUListElement> {
   unstyled?: boolean;
   seperated?: boolean;
   inline?: boolean;
 }
 
-function List({ className, children, unstyled, seperated, inline }: Props) {
+function List({
+  className,
+  children,
+  unstyled,
+  seperated,
+  inline,
+  ...rest
+}: ListProps) {
   const classes = cn(
     {
       list: !unstyled,
@@ -23,7 +30,11 @@ function List({ className, children, unstyled, seperated, inline }: Props) {
     },
     className
   );
-  return <ul className={classes}>{children}</ul>;
+  return (
+    <El.Ul className={classes} {...rest}>
+      {children}
+    </El.Ul>
+  );
 }
 
 List.Item = ListItem;
