@@ -1,13 +1,18 @@
 import * as React from "react";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-};
+export interface TimelineItemDescriptionProps extends ELProps<HTMLDivElement> {}
 
-function TimelineItemDescription({ children }: Props) {
-  return <small className="d-block text-muted">{children}</small>;
+function TimelineItemDescription({
+  children,
+  ...rest
+}: TimelineItemDescriptionProps) {
+  return (
+    <El.Small classNames="d-block text-muted" {...rest}>
+      {children}
+    </El.Small>
+  );
 }
-
-
 
 export default TimelineItemDescription;

@@ -1,13 +1,18 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+export interface TimelineItemTimeProps extends ELProps<HTMLDivElement> {
   active?: boolean;
-};
+}
 
-function TimelineItemTime({ className, children, active }: Props) {
+function TimelineItemTime({
+  className,
+  children,
+  active,
+  ...rest
+}: TimelineItemTimeProps) {
   const classes = cn(
     {
       "timeline-time": true,
@@ -15,9 +20,11 @@ function TimelineItemTime({ className, children, active }: Props) {
     },
     className
   );
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
-
-
 
 export default TimelineItemTime;

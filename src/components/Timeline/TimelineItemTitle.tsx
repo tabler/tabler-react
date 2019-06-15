@@ -1,18 +1,16 @@
 import * as React from "react";
 
-type Props = {
+export interface TimelineItemTitleProps {
   children?: React.ReactNode;
   active?: boolean;
-};
-
-function TimelineItemTitle({ children, active }: Props): any {
-  if (children) {
-    return active ? <strong>{children}</strong> : children;
-  } else {
-    return null;
-  }
 }
 
-
+function TimelineItemTitle({ children, active }: TimelineItemTitleProps) {
+  return (
+    <React.Fragment>
+      {active ? <strong>{children}</strong> : children}
+    </React.Fragment>
+  );
+}
 
 export default TimelineItemTitle;

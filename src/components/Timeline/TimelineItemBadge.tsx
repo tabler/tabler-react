@@ -1,15 +1,19 @@
-// @flow
-
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import { colors } from "../../colors";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-  color?: string;
-};
+export interface TimelineItemBadgeProps extends ELProps<HTMLDivElement> {
+  color?: colors;
+}
 
-function TimelineItemBadge({ className, children, color = "" }: Props) {
+function TimelineItemBadge({
+  className,
+  children,
+  color,
+  ...rest
+}: TimelineItemBadgeProps) {
   const classes = cn(
     {
       "timeline-badge": true,
@@ -17,9 +21,11 @@ function TimelineItemBadge({ className, children, color = "" }: Props) {
     },
     className
   );
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
-
-
 
 export default TimelineItemBadge;

@@ -6,20 +6,23 @@ import TimelineItemTime from "./TimelineItemTime";
 import TimelineItemBadge from "./TimelineItemBadge";
 import TimelineItemTitle from "./TimelineItemTitle";
 import TimelineItemDescription from "./TimelineItemDescription";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-};
+export interface TimelineProps extends ELProps<HTMLUListElement> {}
 
-function Timeline({ className, children }: Props) {
+function Timeline({ className, children, ...rest }: TimelineProps) {
   const classes = cn(
     {
       timeline: true,
     },
     className
   );
-  return <ul className={classes}>{children}</ul>;
+  return (
+    <El.Ul className={classes} {...rest}>
+      {children}
+    </El.Ul>
+  );
 }
 
 Timeline.Item = TimelineItem;

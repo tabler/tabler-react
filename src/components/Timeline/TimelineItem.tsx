@@ -1,23 +1,22 @@
-// @flow
-
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
 
 import TimelineItemBadge from "./TimelineItemBadge";
 import TimelineItemTime from "./TimelineItemTime";
 import TimelineItemTitle from "./TimelineItemTitle";
 import TimelineItemDescription from "./TimelineItemDescription";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
+import { colors } from "../../colors";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+export interface TimelineItemProps extends ELProps<HTMLLIElement> {
   title?: string;
   description?: string;
   badge?: boolean;
-  badgeColor?: string;
+  badgeColor?: colors;
   time?: string;
   active?: boolean;
-};
+}
 
 function TimelineItem({
   className,
@@ -28,7 +27,8 @@ function TimelineItem({
   badgeColor,
   time,
   active,
-}: Props) {
+  ...rest
+}: TimelineItemProps) {
   const classes = cn(
     {
       "timeline-item": true,
@@ -53,15 +53,13 @@ function TimelineItem({
   );
 
   return (
-    <li className={classes}>
+    <El.Li className={classes} {...rest}>
       {(badge || badgeColor) && <TimelineItemBadge color={badgeColor} />}
       {active ? <div>{titleAndDescription}</div> : titleAndDescription}
       {children}
       {time && <TimelineItemTime active={active}>{time}</TimelineItemTime>}
-    </li>
+    </El.Li>
   );
 }
-
-
 
 export default TimelineItem;
