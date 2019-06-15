@@ -1,16 +1,20 @@
 import * as React from "react";
 import cn from "classnames";
 import ProgressBar from "./ProgressBar";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
+export interface ProgressProps extends ELProps<HTMLDivElement> {
   size?: string;
-};
+}
 
-function Progress({ className, children, size = "" }: Props) {
+function Progress({ className, children, size = "", ...rest }: ProgressProps) {
   const classes = cn(`progress`, { [`progress-${size}`]: !!size }, className);
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
 
 Progress.Bar = ProgressBar;
