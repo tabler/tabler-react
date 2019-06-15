@@ -1,23 +1,28 @@
 import * as React from "react";
 import cn from "classnames";
-import TableHeader from "./TableHeader";
+import TableHeader, { TableHeaderProps } from "./TableHeader";
 import TableBody from "./TableBody";
-import TableRow from "./TableRow";
-import TableCol from "./TableCol";
-import TableColHeader from "./TableColHeader";
+import TableRow, { TableRowProps } from "./TableRow";
+import TableCol, { TableColProps } from "./TableCol";
+import TableColHeader, { TableColHeaderProps } from "./TableColHeader";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-type BodyItem = {
+interface RowItem extends TableRowProps {
   key: string | number;
-  item: Array<{
-    content?: React.ReactNode;
-    className?: string;
-    alignContent?: "left" | "center" | "right";
-  }>;
-};
-
-type Props = {
-  children?: React.ReactNode;
+  item: BodyItem[];
+}
+interface BodyItem extends TableColProps {
+  content?: React.ReactNode;
   className?: string;
+  alignContent?: "left" | "center" | "right";
+}
+
+interface HeaderItem extends TableColHeaderProps {
+  content?: React.ReactNode;
+}
+
+export interface TableProps extends ELProps<HTMLTableElement> {
   /**
    * Should this Table be optimized to contain Cards
    */
@@ -33,9 +38,9 @@ type Props = {
   highlightRowOnHover?: boolean;
   hasOutline?: boolean;
   verticalAlign?: "center";
-  headerItems?: Array<{ content?: React.ReactNode; className?: string }>;
-  bodyItems?: Array<BodyItem>;
-};
+  headerItems?: HeaderItem[];
+  bodyItems?: Array<RowItem>;
+}
 
 function Table({
   className,
@@ -49,7 +54,7 @@ function Table({
   headerItems,
   bodyItems,
   ...props
-}: Props) {
+}: TableProps) {
   const classes = cn(
     "table",
     {
@@ -65,9 +70,9 @@ function Table({
   const header = headerItems && (
     <Table.Header>
       <Table.Row>
-        {headerItems.map((item, i) => (
-          <Table.ColHeader key={i} className={item.className}>
-            {item.content}
+        {headerItems.map(({ content, ...item }, i) => (
+          <Table.ColHeader key={i} {...item}>
+            {content}
           </Table.ColHeader>
         ))}
       </Table.Row>
@@ -77,14 +82,10 @@ function Table({
   const body = bodyItems && (
     <Table.Body>
       {bodyItems.map((row, i) => (
-        <Table.Row key={row.key}>
-          {row.item.map((col, i) => (
-            <Table.Col
-              className={col.className}
-              alignContent={col.alignContent}
-              key={i}
-            >
-              {col.content}
+        <Table.Row key={row.key} {...row}>
+          {row.item.map(({ content, ...col }, i) => (
+            <Table.Col key={i} {...col}>
+              {content}
             </Table.Col>
           ))}
         </Table.Row>
@@ -93,10 +94,10 @@ function Table({
   );
 
   const table = (
-    <table className={classes} {...props}>
+    <El.Table className={classes} {...props}>
       {header}
       {body || children}
-    </table>
+    </El.Table>
   );
 
   return !responsive ? table : <div className="table-responsive">{table}</div>;

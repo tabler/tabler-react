@@ -1,20 +1,17 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-};
+export interface TableRowProps extends ELProps<HTMLTableRowElement> {}
 
-function TableRow({ className, children, ...props }: Props) {
+function TableRow({ className, children, ...props }: TableRowProps) {
   const classes = cn(className);
   return (
-    <tr className={classes} {...props}>
+    <El.Tr className={classes} {...props}>
       {children}
-    </tr>
+    </El.Tr>
   );
 }
-
-
 
 export default TableRow;

@@ -1,20 +1,17 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El/El";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-};
+export interface TableHeaderProps extends ELProps<HTMLTableSectionElement> {}
 
-function TableHeader({ className, children, ...props }: Props) {
+function TableHeader({ className, children, ...props }: TableHeaderProps) {
   const classes = cn(className);
   return (
-    <thead className={classes} {...props}>
+    <El.Thead className={classes} {...props}>
       {children}
-    </thead>
+    </El.Thead>
   );
 }
-
-
 
 export default TableHeader;
