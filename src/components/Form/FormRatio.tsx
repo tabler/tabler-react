@@ -1,10 +1,13 @@
-import React, { HTMLAttributes, useState } from "react";
+import React, { useState, ReactHTMLElement, HTMLProps } from "react";
 import cn from "classnames";
 import Grid from "../Grid";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import { HTMLPropsWithoutRef } from "../../types";
 
-import { TablerComponent } from "../../types";
-
-interface FormRatioProps extends HTMLAttributes<HTMLInputElement> {
+export interface FormRatioProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLInputElement> {
   value?: number | string;
   onChange?: (event: React.ChangeEvent<EventTarget>) => any;
 }
@@ -17,14 +20,16 @@ const FormRatio = function({
   ...rest
 }: FormRatioProps) {
   const [internalValue, setInternalValue] = useState<
-    string | string[] | undefined
+    string | string[] | number | undefined
   >(!onChange ? defaultValue : "0");
 
-  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): any => {
+  const handleOnChange = (
+    e: React.MouseEvent<HTMLInputElement>
+  ): any => {
     if (onChange) {
       onChange(e);
     } else {
-      const value = e.target.value;
+      const value = (e.target as HTMLInputElement).value;
       setInternalValue(value);
     }
   };
@@ -36,7 +41,7 @@ const FormRatio = function({
   return (
     <Grid.Row className={classes} alignItems="center">
       <Grid.Col>
-        <input
+        <El.Input
           type="range"
           className="form-control custom-range"
           onChange={handleOnChange}
@@ -46,7 +51,7 @@ const FormRatio = function({
         />
       </Grid.Col>
       <Grid.Col auto>
-        <input
+        <El.Input
           type="number"
           className="form-control w-8"
           value={_value}

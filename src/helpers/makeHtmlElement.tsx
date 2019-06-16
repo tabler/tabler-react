@@ -1,20 +1,26 @@
-import React, { HTMLAttributes, forwardRef } from "react";
+import React, {
+  forwardRef,
+  ReactHTMLElement,
+  HTMLProps,
+  ElementType,
+} from "react";
 import cn from "classnames";
 import getUtilityPropsClasses, {
   UtilityProps,
 } from "./utilityPropsToClassNames";
 import capitalize from "./capitalize";
 import { ClassValue } from "classnames/types";
+import { RefHandler } from "react-popper";
 
-export interface ELProps<T extends HTMLOrSVGElement>
-  extends HTMLAttributes<T>,
-    UtilityProps {
+export interface ELProps extends UtilityProps {
   classNames?: ClassValue;
 }
 
-export const makeElement = function<T extends HTMLOrSVGElement>(
-  element: string
-) {
+export interface ComponentProps<T = ReactHTMLElement<any>>
+  extends ELProps,
+    HTMLProps<T> {}
+
+export const makeElement = function<T extends Element>(element: ElementType) {
   const Component = forwardRef(function(
     {
       d,
@@ -35,8 +41,8 @@ export const makeElement = function<T extends HTMLOrSVGElement>(
       className,
       classNames,
       ...props
-    }: ELProps<T>,
-    ref: React.Ref<T>
+    }: ComponentProps<T>,
+    ref: React.Ref<T> | RefHandler
   ) {
     const utilityClasses = getUtilityPropsClasses({
       d,

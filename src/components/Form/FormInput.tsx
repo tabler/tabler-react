@@ -1,13 +1,13 @@
-import React, { InputHTMLAttributes, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import Icon from "../Icon";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 
 export interface FormInputProps
   extends TablerComponent,
-    InputHTMLAttributes<HTMLInputElement> {
+    HTMLPropsWithoutRef<HTMLInputElement> {
   /**
    * Wraps the input in Form.Group and adds a label
    */
@@ -40,7 +40,7 @@ export const FormInput = (
     feedback,
     ...rest
   }: FormInputProps,
-  ref: React.Ref<HTMLInputElement>
+  ref: React.Ref<any>
 ) => {
   const classes = cn(
     {

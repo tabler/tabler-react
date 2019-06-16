@@ -1,8 +1,11 @@
 import React from "react";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface DropdownItemDividerProps extends ELProps<HTMLDivElement> {}
+export interface DropdownItemDividerProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {}
 
 /**
  * Used to seperate items within a Dropdown with a horizontal line

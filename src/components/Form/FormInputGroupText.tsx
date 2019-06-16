@@ -1,11 +1,11 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 
 interface FormInputGroupTextProps
   extends TablerComponent,
-    HTMLAttributes<HTMLSpanElement> {}
+    HTMLPropsWithoutRef<HTMLSpanElement> {}
 
 function FormInputGroupText({
   className,

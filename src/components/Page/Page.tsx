@@ -1,9 +1,12 @@
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface PageProps extends ELProps<HTMLDivElement> {}
+export interface PageProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {}
 
 function Page({ className, children, ...rest }: PageProps) {
   const classes = cn("page d-flex h-auto min-h-screen", className);

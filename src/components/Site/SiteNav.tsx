@@ -5,7 +5,7 @@ import Container from "../Container";
 import Nav from "../Nav";
 import { NavItemProps } from "../Nav/NavItem";
 
-export type Props = {
+export interface SiteNavProps {
   children?: React.ReactNode;
   items?: React.ReactElement<NavItemProps>[];
   itemsObjects?: NavItemProps[];
@@ -22,7 +22,7 @@ export type Props = {
    */
   collapse?: boolean;
   routerContextComponentType?: React.ElementType;
-};
+}
 
 const SiteNav = ({
   children,
@@ -32,7 +32,7 @@ const SiteNav = ({
   rightColumnComponent,
   collapse = false,
   routerContextComponentType,
-}: Props) => {
+}: SiteNavProps) => {
   const classes = cn("navbar navbar-expand-md", { collapse: collapse });
   return (
     <header className={classes}>

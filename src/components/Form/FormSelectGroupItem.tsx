@@ -1,12 +1,16 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
+import { HTMLPropsWithoutRef, TablerComponent } from "../../types";
+import El from "../El/El";
 
 export interface FormSelectGroupItemProps
-  extends HTMLAttributes<HTMLInputElement> {
+  extends TablerComponent,
+    HTMLPropsWithoutRef<HTMLInputElement> {
   label?: string;
   icon?: string;
   type?: "radio" | "checkbox";
+  [key: string]: any;
 }
 
 function FormSelectGroupItem({
@@ -25,9 +29,9 @@ function FormSelectGroupItem({
   return (
     <label className={classes}>
       {type === "checkbox" ? (
-        <input type="checkbox" className="selectgroup-input" {...rest} />
+        <El.Input type="checkbox" className="selectgroup-input" {...rest} />
       ) : (
-        <input type="radio" className="selectgroup-input" {...rest} />
+        <El.Input type="radio" className="selectgroup-input" {...rest} />
       )}
       <span className={btnClasses}>{outputLabel}</span>
     </label>

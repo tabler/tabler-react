@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Ref, ReactHTMLElement } from "react";
 import cn from "classnames";
 import { Popper } from "react-popper";
 
@@ -6,8 +6,11 @@ import { PopperChildrenProps } from "react-popper";
 import DropdownContext from "./DropdownContext";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface DropdownMenuProps extends ELProps<HTMLDivElement> {
+export interface DropdownMenuProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   position?: any;
@@ -58,7 +61,7 @@ function DropdownMenu({
               className={classes}
               data-placement={placement}
               style={{ ..._style, ...style }}
-              ref={ref}
+              ref={ref as Ref<HTMLDivElement>}
               {...rest}
             >
               {children}

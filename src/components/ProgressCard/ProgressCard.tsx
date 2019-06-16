@@ -4,12 +4,13 @@ import cn from "classnames";
 import Card from "../Card";
 import Progress from "../Progress";
 import Header from "../Header";
+import { colors } from "../../colors";
 
 type Props = {
   className?: string;
   header?: React.ReactNode;
   content?: React.ReactNode;
-  progressColor?: string;
+  progressColor?: colors;
   progressWidth?: number;
 };
 
@@ -33,7 +34,5 @@ function ProgressCard({
     </Card>
   );
 }
-
-
 
 export default ProgressCard;

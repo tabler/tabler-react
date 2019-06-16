@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLProps } from "react";
 import cn from "classnames";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import { colors } from "../../colors";
@@ -35,7 +35,8 @@ interface LeadingProps {
 }
 
 export interface TextProps<AS extends HTMLElement = HTMLDivElement>
-  extends ELProps<AS>,
+  extends ELProps,
+    Omit<HTMLProps<AS>, "as" | "color" | "size" | "wrap">,
     AlignProps,
     TransformProps,
     TrackingProps,

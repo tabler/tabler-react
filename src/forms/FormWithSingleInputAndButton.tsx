@@ -3,7 +3,7 @@ import Form from "../components/Form";
 import Button from "../components/Button";
 import { FormProps } from "../components/Form/Form";
 import { FormInputProps } from "../components/Form/FormInput";
-import { Props as ButtonProps } from "../components/Button/Button";
+import { ButtonProps } from "../components/Button/Button";
 
 interface Props {
   formProps?: FormProps;

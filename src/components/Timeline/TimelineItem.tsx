@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HTMLProps, ReactHTMLElement } from "react";
 import cn from "classnames";
 
 import TimelineItemBadge from "./TimelineItemBadge";
@@ -8,8 +8,11 @@ import TimelineItemDescription from "./TimelineItemDescription";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
 import { colors } from "../../colors";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface TimelineItemProps extends ELProps<HTMLLIElement> {
+export interface TimelineItemProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLLIElement> {
   title?: string;
   description?: string;
   badge?: boolean;

@@ -2,8 +2,11 @@ import * as React from "react";
 import cn from "classnames";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface LoaderProps extends ELProps<HTMLDivElement> {}
+export interface LoaderProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {}
 
 function Loader({ className, children, ...rest }: LoaderProps) {
   const classes = cn({ loader: true }, className);

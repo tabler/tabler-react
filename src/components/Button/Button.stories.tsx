@@ -43,13 +43,7 @@ stories.add("Disabled", () => {
       <Button color="success" disabled RootComponent="a" href="#">
         Link
       </Button>
-      <Button
-        color="info"
-        disabled
-        RootComponent="input"
-        type="button"
-        value="Input"
-      />
+      <Button color="info" disabled as="input" type="button" value="Input" />
     </Button.List>
   );
 });
@@ -176,7 +170,7 @@ stories.add("Block Level", () => {
 stories.add("Icons", () => {
   return (
     <Button.List>
-      <Button color="dark" icon="upload">
+      <Button color="blue" icon="upload">
         Upload
       </Button>
       <Button icon="heart" color="warning">

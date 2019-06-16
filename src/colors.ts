@@ -140,6 +140,7 @@ export type colors =
   | "warning"
   | "info"
   | "primary"
-  | "secondary";
+  | "secondary"
+  | string;
 
 export default colors;

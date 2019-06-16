@@ -2,8 +2,11 @@ import * as React from "react";
 import cn from "classnames";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-interface ListItemProps extends ELProps<HTMLLIElement> {
+interface ListItemProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLLIElement> {
   inline?: boolean;
 }
 

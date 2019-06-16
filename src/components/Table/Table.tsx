@@ -1,28 +1,31 @@
-import * as React from "react";
+import React from "react";
 import cn from "classnames";
-import TableHeader, { TableHeaderProps } from "./TableHeader";
+import TableHeader from "./TableHeader";
 import TableBody from "./TableBody";
 import TableRow, { TableRowProps } from "./TableRow";
 import TableCol, { TableColProps } from "./TableCol";
 import TableColHeader, { TableColHeaderProps } from "./TableColHeader";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
 interface RowItem extends TableRowProps {
   key: string | number;
   item: BodyItem[];
 }
-interface BodyItem extends TableColProps {
+interface BodyItem extends Omit<TableColProps, "content"> {
   content?: React.ReactNode;
   className?: string;
   alignContent?: "left" | "center" | "right";
 }
 
-interface HeaderItem extends TableColHeaderProps {
+interface HeaderItem extends Omit<TableColHeaderProps, "content"> {
   content?: React.ReactNode;
 }
 
-export interface TableProps extends ELProps<HTMLTableElement> {
+export interface TableProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLTableElement> {
   /**
    * Should this Table be optimized to contain Cards
    */

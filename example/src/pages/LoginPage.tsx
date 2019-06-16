@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Formik } from "formik";
+import { Formik, FormikProps } from "formik";
 import { LoginPage as TablerLoginPage } from "tabler-react";
 
 type Props = {};

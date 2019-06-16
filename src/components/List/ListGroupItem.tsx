@@ -5,7 +5,9 @@ import Icon from "../Icon";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
 
-export interface ListGroupItemProps extends ELProps<HTMLAnchorElement> {
+export interface ListGroupItemProps
+  extends ELProps,
+    Omit<React.HTMLProps<HTMLAnchorElement>, "as" | "action"> {
   /**
    * @deprecated use 'as'
    */

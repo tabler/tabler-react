@@ -2,19 +2,20 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
     "jsx": "preserve",
-    "typeRoots": ["../dist/types"]
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "example/src",
+    "outFile": "example/src/tabler-react.d.ts",
+    "declarationMap": true,
+    "emitDeclarationOnly": true
   },
-  "include": ["src/**/*"]
+  "include": ["src/tabler-react.ts"]
 }

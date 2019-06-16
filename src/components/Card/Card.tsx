@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, HTMLProps } from "react";
 
 import cn from "classnames";
 import CardHeader from "./CardHeader";
@@ -14,7 +14,9 @@ import { colors } from "../../colors";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";
 
-export interface CardProps extends ELProps<HTMLDivElement> {
+export interface CardProps
+  extends ELProps,
+    Omit<HTMLProps<HTMLDivElement>, "as"> {
   title?: string;
   body?: React.ReactNode;
   as?: React.ElementType;

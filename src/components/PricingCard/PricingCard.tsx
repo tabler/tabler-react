@@ -1,6 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
-import Card from "../Card/Card";
+import Card from "../Card";
 
 import PricingCardCategory from "./PricingCardCategory";
 import PricingCardPrice from "./PricingCardPrice";

@@ -1,11 +1,12 @@
 import React from "react";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";
 
 export interface FormSelectGroupProps
   extends TablerComponent,
-    ELProps<HTMLDivElement> {
+    ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {
   pills?: boolean;
   canSelectMultiple?: boolean;
 }

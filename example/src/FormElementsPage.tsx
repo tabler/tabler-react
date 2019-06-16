@@ -263,7 +263,7 @@ function FormElements() {
             </ComponentDemo>
             <ComponentDemo>
               <Form.Group label="Ratios">
-                <Form.Ratio step={5} min={0} max={50} defaultValue={15} />
+                <Form.Ratio step={5} min={0} max={50} defaultValue={"15"} />
               </Form.Group>
             </ComponentDemo>
             <ComponentDemo>

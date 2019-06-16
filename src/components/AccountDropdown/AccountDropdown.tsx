@@ -15,7 +15,7 @@ type defaultOptionType =
 
 type optionsType = Array<defaultOptionType | itemObject>;
 
-type defaultOptionsType = { [K in defaultOptionType]: itemObject };
+type defaultOptionsType = { [K in defaultOptionType]: Object | itemObject };
 
 export interface Props {
   avatarURL?: string;

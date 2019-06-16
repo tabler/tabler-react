@@ -9,8 +9,7 @@ import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./RegisterPage.strings";
 import { stringTypes } from "./RegisterPage.strings";
-
-import { FormEvents, FocusEvents } from "../../../types";
+import { HTMLElementProps } from "../../../types";
 
 type fieldTypes = {
   name?: string;
@@ -26,7 +25,9 @@ type touchedTypes = {
   terms?: boolean;
 };
 
-interface Props extends FormEvents, FocusEvents {
+interface Props
+  extends Omit<HTMLElementProps<HTMLFormElement>, "onChange" | "onBlur">,
+    Pick<HTMLElementProps<HTMLInputElement>, "onChange" | "onBlur"> {
   strings?: stringTypes;
   action?: string;
   method?: string;

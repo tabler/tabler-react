@@ -8,7 +8,7 @@ import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./LoginPage.strings";
 import { stringTypes } from "./LoginPage.strings";
-import { FormEvents, FocusEvents } from "../../../types";
+import { ReactHTMLElementProps, HTMLElementProps } from "../../../types";
 
 type fieldTypes = {
   email?: string;
@@ -20,7 +20,9 @@ type touchedTypes = {
   password?: boolean;
 };
 
-interface Props extends FormEvents, FocusEvents {
+interface Props
+  extends Omit<HTMLElementProps<HTMLFormElement>, "onChange" | "onBlur">,
+    Pick<HTMLElementProps<HTMLInputElement>, "onChange" | "onBlur"> {
   strings?: stringTypes;
   action?: string;
   method?: string;

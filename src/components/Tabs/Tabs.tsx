@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Props as TabProps } from "./Tab";
+import { TabProps } from "./Tab";
 import TabbedContainer from "./TabbedContainer";
 import TabbedHeader from "./TabbedHeader";
 

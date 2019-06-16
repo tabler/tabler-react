@@ -71,14 +71,12 @@ function StatsCard({
           />
         </Text>
         <Header className="m-0">{total}</Header>
-        <Text color="muted" className=" mb-4">
+        <Text color="gray" className=" mb-4">
           {label}
         </Text>
       </Card.Body>
     </Card>
   );
 }
-
-
 
 export default StatsCard;

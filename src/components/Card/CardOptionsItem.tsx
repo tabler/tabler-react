@@ -3,8 +3,11 @@ import cn from "classnames";
 import Icon from "../Icon";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface CardOptionsItemProps extends ELProps<HTMLAnchorElement> {
+export interface CardOptionsItemProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLAnchorElement> {
   icon?: string;
   type?: "collapse" | "close" | "fullscreen";
 }

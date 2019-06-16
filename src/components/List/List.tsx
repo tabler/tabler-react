@@ -6,8 +6,11 @@ import ListGroup from "./ListGroup";
 import ListGroupItem from "./ListGroupItem";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface ListProps extends ELProps<HTMLUListElement> {
+export interface ListProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLUListElement> {
   unstyled?: boolean;
   seperated?: boolean;
   inline?: boolean;

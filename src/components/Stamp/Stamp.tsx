@@ -4,8 +4,11 @@ import Icon from "../Icon";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import { colors } from "../../colors";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-interface StampProps extends ELProps<HTMLSpanElement> {
+interface StampProps
+  extends ELProps,
+    Omit<HTMLPropsWithoutRef<HTMLSpanElement>, "size"> {
   size?: "sm" | "md";
   icon?: string;
   color?: colors;

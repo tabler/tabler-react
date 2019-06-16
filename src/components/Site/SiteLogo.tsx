@@ -3,14 +3,14 @@ import cn from "classnames";
 import { TablerComponent } from "../../types";
 import { string } from "prop-types";
 
-export interface Props extends TablerComponent {
+export interface SiteLogoProps extends TablerComponent {
   href?: string;
   src?: string;
   srcSmall?: string;
   alt?: string;
 }
 
-const SiteLogo = ({ className, ...props }: Props) => {
+const SiteLogo = ({ className, ...props }: SiteLogoProps) => {
   const _className = cn("navbar-brand", className);
   return (
     <a className={_className} href={props.href} {...props}>
@@ -29,7 +29,5 @@ const SiteLogo = ({ className, ...props }: Props) => {
     </a>
   );
 };
-
-
 
 export default SiteLogo;

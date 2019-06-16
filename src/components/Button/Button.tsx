@@ -1,4 +1,10 @@
-import React from "react";
+import React, {
+  ButtonHTMLAttributes,
+  AnchorHTMLAttributes,
+  HTMLAttributes,
+  ReactHTMLElement,
+  HTMLProps,
+} from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 
@@ -6,9 +12,9 @@ import { RefHandler } from "react-popper";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import { colors } from "../../colors";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
-  extends ELProps<AS> {
+interface Props {
   as?: React.ElementType;
   /**
    * @deprecated use 'as'
@@ -18,8 +24,6 @@ export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
   outline?: boolean;
   link?: boolean;
   block?: boolean;
-  className?: string;
-  children?: React.ReactNode;
   disabled?: boolean;
   color?: colors;
   square?: boolean;
@@ -34,8 +38,15 @@ export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
   rootRef?: RefHandler;
 }
 
+export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
+  extends Props,
+    ELProps,
+    Omit<HTMLPropsWithoutRef<AS>, "as" | "color" | "size"> {}
+
 const Button = function<AS extends HTMLElement = HTMLButtonElement>({
   size,
+  onClick,
+  href,
   outline,
   link,
   block,

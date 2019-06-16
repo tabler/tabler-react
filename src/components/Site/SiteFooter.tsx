@@ -4,7 +4,7 @@ import Container from "../Container";
 import Grid from "../Grid";
 import List from "../List";
 
-export type Props = {
+export interface SiteFooterProps {
   /**
    * An array of the 8 links displayed in the first footer bar
    */
@@ -21,12 +21,12 @@ export type Props = {
    * The content of the very bottom nav space
    */
   nav?: React.ReactNode;
-};
+}
 
 /**
  * The footer of your website
  */
-const SiteFooter = ({ links, note, copyright, nav }: Props) => (
+const SiteFooter = ({ links, note, copyright, nav }: SiteFooterProps) => (
   <React.Fragment>
     {(links || note) && (
       <div className="footer">
@@ -87,7 +87,5 @@ const SiteFooter = ({ links, note, copyright, nav }: Props) => (
     )}
   </React.Fragment>
 );
-
-
 
 export default SiteFooter;

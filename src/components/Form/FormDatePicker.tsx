@@ -76,8 +76,8 @@ const FormDatePicker = function({
 
   // Renders the months select
   const _renderMonths = () => {
-    const onChangeMonths = (e: React.ChangeEvent<HTMLSelectElement>): void =>
-      _handleOnChange("mm", Number(e.target.value));
+    const onChangeMonths = (e: React.MouseEvent<HTMLSelectElement>): void =>
+      _handleOnChange("mm", Number((e.target as HTMLSelectElement).value));
 
     return (
       <FormSelect onChange={onChangeMonths} {...monthProps}>
@@ -109,8 +109,8 @@ const FormDatePicker = function({
     const daysRange = currentMonthDays ? _range(1, currentMonthDays) : [];
     const currentDay = currentDate && currentDate.getUTCDate();
 
-    const onChangeDays = (e: React.ChangeEvent<HTMLSelectElement>) =>
-      _handleOnChange("dd", Number(e.target.value));
+    const onChangeDays = (e: React.MouseEvent<HTMLSelectElement>) =>
+      _handleOnChange("dd", Number((e.target as HTMLSelectElement).value));
 
     return (
       <FormSelect onChange={onChangeDays} {...dayProps}>
@@ -129,8 +129,8 @@ const FormDatePicker = function({
     const yearsRange = _range(minYear, maxYear).reverse();
     const currentYear = currentDate && currentDate.getUTCFullYear();
 
-    const onChangeYears = (e: React.ChangeEvent<HTMLSelectElement>) =>
-      _handleOnChange("yyyy", Number(e.target.value));
+    const onChangeYears = (e: React.MouseEvent<HTMLSelectElement>) =>
+      _handleOnChange("yyyy", Number((e.target as HTMLSelectElement).value));
 
     return (
       <FormSelect onChange={onChangeYears} {...yearProps}>

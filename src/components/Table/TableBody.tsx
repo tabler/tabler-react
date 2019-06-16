@@ -2,8 +2,11 @@ import * as React from "react";
 import cn from "classnames";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface TableBodyProps extends ELProps<HTMLTableSectionElement> {
+export interface TableBodyProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLTableSectionElement> {
   children?: React.ReactNode;
   className?: string;
 }

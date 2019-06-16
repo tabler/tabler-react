@@ -1,11 +1,12 @@
-import React, { SelectHTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
 
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
 export interface FormSelectProps
-  extends SelectHTMLAttributes<HTMLSelectElement> {
+  extends HTMLPropsWithoutRef<HTMLSelectElement> {
   valid?: boolean;
   tick?: boolean;
   invalid?: boolean;

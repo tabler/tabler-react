@@ -3,14 +3,14 @@ import * as React from "react";
 import Form from "../components/Form";
 import Card from "../components/Card";
 import Button from "../components/Button";
+import { HTMLElementProps } from "../types";
 
-interface Props {
+interface Props extends HTMLElementProps<HTMLFormElement> {
   action?: string;
   children?: React.ReactNode;
   method?: string;
   title: string;
   buttonText: string;
-  onSubmit?: (e?: React.FormEvent) => any;
 }
 
 function FormCard({

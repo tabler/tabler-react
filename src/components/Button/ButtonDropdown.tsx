@@ -18,7 +18,7 @@ const ButtonDropdown = function({
 }: ButtonDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const _handleButtonOnClick = (e: React.MouseEvent<HTMLElement>) => {
+  const _handleButtonOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsOpen(s => !s);
   };

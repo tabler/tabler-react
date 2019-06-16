@@ -1,11 +1,12 @@
-import React, { HTMLAttributes } from "react";
+import React, { HTMLAttributes, HTMLProps } from "react";
 import cn from "classnames";
 import { TablerComponent } from "../../types";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
 
 export interface HeaderProps<AS extends HTMLElement = HTMLDivElement>
-  extends ELProps<AS> {
+  extends ELProps,
+    Omit<HTMLProps<AS>, "as"> {
   /**
    * A component to use instead of a <div> as the root component
    * @deprecated use 'as'

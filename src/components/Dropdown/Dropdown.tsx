@@ -14,12 +14,15 @@ import DropdownContext from "./DropdownContext";
 import { colors } from "../../colors";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
 interface TriggerElement {
   onClick: (e: React.MouseEvent) => any;
 }
 
-export interface DefaultProps extends ELProps<HTMLDivElement> {
+export interface DropdownProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {
   /**
    * This dropdown should only be displayed on desktop
    */
@@ -45,10 +48,6 @@ export interface DefaultProps extends ELProps<HTMLDivElement> {
    * Is this Dropdown being used as a Nav Link?
    */
   isNavLink?: boolean;
-  /**
-   * Should the trigger render a link or a buttton
-   */
-  type?: "link" | "button";
   /**
    * An Icon to be displayed within the trigger
    */
@@ -91,11 +90,11 @@ export interface DefaultProps extends ELProps<HTMLDivElement> {
   itemsRootComponent?: React.ElementType;
 }
 
-export interface itemObject extends DropdownItemProps {
+export interface itemObject extends Object, DropdownItemProps {
   isDivider?: boolean;
   dividerProps?: DropdownItemDividerProps;
+  [key: string]: any;
 }
-type Props = DefaultProps;
 
 const Dropdown = function({
   className,
@@ -108,7 +107,6 @@ const Dropdown = function({
   icon,
   triggerContent,
   isNavLink,
-  type,
   triggerClassName,
   color,
   toggle,
@@ -120,7 +118,7 @@ const Dropdown = function({
   dropdownMenuClassName,
   style,
   ...rest
-}: Props) {
+}: DropdownProps) {
   const [isOpen, setIsOpen] = useContext(DropdownContext);
 
   const _handleItemClick = (
@@ -157,7 +155,6 @@ const Dropdown = function({
           <DropdownTrigger
             isNavLink={isNavLink}
             icon={icon}
-            type={type}
             className={triggerClassName}
             isOption={isOption}
             color={color}

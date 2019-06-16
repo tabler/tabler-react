@@ -5,12 +5,13 @@ import Card from "../Card";
 import Text from "../Text";
 import Header from "../Header";
 import Stamp from "../Stamp";
+import { colors } from "../../colors";
 
 type Props = {
   children?: React.ReactNode;
   className?: string;
   icon?: string;
-  color?: string;
+  color?: colors;
   header?: React.ReactNode;
   footer?: React.ReactNode;
 };
@@ -19,7 +20,7 @@ function StampCard({
   children,
   className,
   icon,
-  color = "",
+  color,
   header,
   footer,
 }: Props) {
@@ -41,7 +42,5 @@ function StampCard({
     </Card>
   );
 }
-
-
 
 export default StampCard;

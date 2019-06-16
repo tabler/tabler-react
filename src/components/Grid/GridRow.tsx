@@ -1,11 +1,11 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
 import El from "../El/El";
 import { UtilityProps } from "../../helpers/utilityPropsToClassNames";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 
 export interface GridRowProps
-  extends HTMLAttributes<HTMLDivElement>,
+  extends HTMLPropsWithoutRef<HTMLDivElement>,
     TablerComponent,
     UtilityProps {
   cards?: boolean;

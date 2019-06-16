@@ -9,7 +9,7 @@ import { Props as NotificationTrayProps } from "../Notification/NotificationTray
 import { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown";
 import Nav from "../Nav";
 
-export type Props = {
+export interface SiteHeaderProps {
   children?: React.ReactNode;
   /**
    * header alignment
@@ -37,7 +37,7 @@ export type Props = {
    * Handle toggling/collapsing of the mobile menu when the collapse icon is clicked
    */
   onMenuToggleClick?: () => void;
-};
+}
 
 /**
  * The very top header bar of your website, containing the logo and some optional
@@ -53,7 +53,7 @@ const SiteHeader = ({
   accountDropdown: accountDropdownFromProps,
   navItems,
   onMenuToggleClick,
-}: Props) => {
+}: SiteHeaderProps) => {
   const notificationsTray =
     notificationsTrayFromProps &&
     React.createElement(Notification.Tray, notificationsTrayFromProps);
@@ -91,7 +91,5 @@ const SiteHeader = ({
     </header>
   );
 };
-
-
 
 export default SiteHeader;

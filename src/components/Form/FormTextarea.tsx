@@ -1,11 +1,12 @@
-import React, { TextareaHTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
 
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
 export interface FormTextareaProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  extends HTMLPropsWithoutRef<HTMLTextAreaElement> {
   valid?: boolean;
   tick?: boolean;
   invalid?: boolean;

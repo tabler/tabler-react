@@ -14,7 +14,9 @@ export type Props = {
 };
 
 function DefaultErrorPage(props: Props) {
-  const _onBackClick = (event: React.MouseEvent): boolean => {
+  const _onBackClick: React.MouseEventHandler<HTMLElement> = (
+    event
+  ): boolean => {
     window.history.back();
     event.preventDefault();
     return true;
@@ -36,7 +38,7 @@ function DefaultErrorPage(props: Props) {
             {details}
           </Header.H4>
         )}
-        <Button onClick={_onBackClick} className="btn-primary">
+        <Button onClick={_onBackClick} className="btn-primary" href="">
           <Icon className="mr-2" name="arrow-left" />
           {action}
         </Button>

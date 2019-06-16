@@ -22,9 +22,10 @@ CompoundNav.Link = NavLink;
 CompoundNav.Submenu = NavSubmenu;
 CompoundNav.SubmenuItem = NavSubmenuItem;
 
+export * from "./NavItem";
 export {
   CompoundNav as default,
-  Nav,
+  CompoundNav as Nav,
   NavSubItem,
   NavLink,
   NavSubmenu,

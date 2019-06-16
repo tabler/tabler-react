@@ -1,10 +1,13 @@
 import * as React from "react";
-import { Props as TabProps } from "./Tab";
+import { TabProps } from "./Tab";
 import Nav from "../Nav";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface TabbedHeaderProps extends ELProps<HTMLUListElement> {
+export interface TabbedHeaderProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLUListElement> {
   children: React.ReactElement<TabProps>[] | React.ReactElement<TabProps>;
   selectedTitle: string;
   stateCallback: (selectedTitle: string) => void;

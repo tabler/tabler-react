@@ -4,13 +4,14 @@ import cn from "classnames";
 import List from "../List";
 import Button from "../Button";
 import Icon from "../Icon";
+import { colors } from "../../colors";
 
 type itemObject = {
   name: string;
   label?: string;
   to?: string;
   tooltip?: string;
-  color?: string;
+  color?: colors;
 };
 
 type Props = {
@@ -69,7 +70,5 @@ function SocialNetworksList(props: Props) {
     </List>
   );
 }
-
-
 
 export default SocialNetworksList;

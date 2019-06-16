@@ -1,11 +1,11 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 
 export interface FormHelpProps
   extends TablerComponent,
-    HTMLAttributes<HTMLSpanElement> {
+    HTMLPropsWithoutRef<HTMLSpanElement> {
   position?: "top" | "bottom";
   message?: React.ReactNode;
 }

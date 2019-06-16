@@ -1,11 +1,11 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 
 interface FormFooterProps
   extends TablerComponent,
-    HTMLAttributes<HTMLDivElement> {}
+    HTMLPropsWithoutRef<HTMLDivElement> {}
 
 function FormFooter({ className, children, ...rest }: FormFooterProps) {
   const classes = cn("form-footer", className);

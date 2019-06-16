@@ -5,25 +5,23 @@ import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import SiteNav from "./SiteNav";
 
-import { Props as SiteHeaderProps } from "./SiteHeader";
-import { Props as SiteNavProps } from "./SiteNav";
-import { Props as SiteFooterProps } from "./SiteFooter";
+import { SiteHeaderProps } from "./SiteHeader";
+import { SiteNavProps } from "./SiteNav";
+import { SiteFooterProps } from "./SiteFooter";
 
-type Props = {
+interface SiteWrapperProps {
   headerProps: SiteHeaderProps;
   navProps: SiteNavProps;
   footerProps: SiteFooterProps;
   children: React.ReactNode;
   routerContextComponentType?: React.ElementType;
-};
+}
 
 type State = {
   collapseMobileMenu: boolean;
 };
 
-class SiteWrapper extends React.PureComponent<Props, State> {
-  
-
+class SiteWrapper extends React.PureComponent<SiteWrapperProps, State> {
   state = {
     collapseMobileMenu: false,
   };
@@ -39,7 +37,7 @@ class SiteWrapper extends React.PureComponent<Props, State> {
       footerProps,
       children,
       routerContextComponentType,
-    }: Props = this.props;
+    }: SiteWrapperProps = this.props;
 
     const headerPropsWithToggleClick = {
       ...headerProps,

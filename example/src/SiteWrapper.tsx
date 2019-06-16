@@ -8,8 +8,8 @@ import {
   List,
   Button,
   RouterContextProvider,
+  NavItemProps,
 } from "tabler-react";
-import { NavItemProps } from "components/Nav/NavItem";
 
 type Props = {
   children: React.ReactNode;

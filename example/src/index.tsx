@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./index.css";
-import "./c3jscustom.css";
+import "c3/c3.css";
 
 import App from "./App";
 

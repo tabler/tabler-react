@@ -10,6 +10,7 @@ export interface NavSubItemProps extends TablerComponent, DropdownItemProps {
    * @deprecated use children
    */
   value?: string;
+  [key: string]: any;
 }
 
 function NavSubItem({

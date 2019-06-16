@@ -1,11 +1,11 @@
-import React, { FieldsetHTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 
 export interface FormFieldSetProps
   extends TablerComponent,
-    FieldsetHTMLAttributes<HTMLFieldSetElement> {}
+    HTMLPropsWithoutRef<HTMLFieldSetElement> {}
 
 function FormFieldSet({ className, children, ...rest }: FormFieldSetProps) {
   const classes = cn("form-fieldset", className);

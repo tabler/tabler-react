@@ -1,4 +1,5 @@
 import makeElement from "../../helpers/makeHtmlElement";
+import { ReactHTMLElement, ReactSVGElement } from "react";
 
 const Div = makeElement<HTMLDivElement>("div");
 const Span = makeElement<HTMLDivElement>("span");

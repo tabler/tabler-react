@@ -1,12 +1,10 @@
-import React, { InputHTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
-import FormInput from "./FormInput";
+import FormInput, { FormInputProps } from "./FormInput";
 
 import { TablerComponent } from "../../types";
 
-export interface Props
-  extends TablerComponent,
-    InputHTMLAttributes<HTMLInputElement> {
+export interface Props extends TablerComponent, FormInputProps {
   /**
    * Wrap the checkbox with a label
    */

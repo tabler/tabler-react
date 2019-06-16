@@ -21,11 +21,6 @@ export interface DropdownTriggerProps extends ButtonProps {
    */
   value?: string;
   /**
-   * Render the trigger as an <a> tag or a Button
-   * @deprecated dropdowns should not be links
-   */
-  type?: "link" | "button";
-  /**
    * The background color for a Button trigger
    */
   color?: colors;
@@ -41,11 +36,6 @@ export interface DropdownTriggerProps extends ButtonProps {
    * Is this trigger beind used as a Card.Header option
    */
   isOption?: boolean;
-  /**
-   * Handle the onClick of this trigger
-   * @deprecated use context
-   */
-  onClick?: (e: React.MouseEvent) => void;
 }
 
 /**

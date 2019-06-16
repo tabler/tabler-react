@@ -12,7 +12,7 @@
   "scripts": {
     "test": "CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "build": "yarn run copytablercsstodist && rollup -c && tsc --project tsconfig.dist.json",
+    "build": "yarn run copytablercsstodist && rollup -c && tsc --project tsconfig.dist.json && tsc --project tsconfig.example.json",
     "start": "yarn run copytablercsstodist && rollup -c -w",
     "prepare": "yarn run build && yarn run copytablercsstodist",
     "predeploy": "cd example && yarn install && yarn run build",
@@ -29,7 +29,9 @@
     "startagain": "shx rm -rf dist node_modules example/node_modules yarn.lock example/yarn.lock && yarn install && cd example && yarn install && cd .. && yarn build",
     "semantic-release": "semantic-release  --no-ci",
     "storybook": "start-storybook -s ./example/public -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "ts-lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "start-tsc": "tsc --project tsconfig.example.json --watch"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"

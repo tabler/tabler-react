@@ -3,8 +3,11 @@ import cn from "classnames";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import { colors } from "../../colors";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface CardAlertProps extends ELProps<HTMLDivElement> {
+export interface CardAlertProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {
   color: colors;
 }
 

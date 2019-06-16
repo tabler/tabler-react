@@ -3,8 +3,11 @@ import cn from "classnames";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import { colors } from "../../colors";
 import El from "../El/El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface ProgressBarProps extends ELProps<HTMLDivElement> {
+export interface ProgressBarProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {
   color?: colors;
   width?: number;
 }

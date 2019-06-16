@@ -7,7 +7,9 @@ import { TablerComponent } from "../../types";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";
 
-export interface DropdownItemProps extends ELProps<HTMLAnchorElement> {
+export interface DropdownItemProps
+  extends ELProps,
+    Omit<React.HTMLProps<React.ReactHTMLElement<HTMLAnchorElement>>, "as"> {
   /**
    * Display an Icon to the left of DropdownItem content
    */

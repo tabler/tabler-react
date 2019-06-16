@@ -1,10 +1,12 @@
-import React, { LabelHTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
 
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 
-interface Props extends TablerComponent, LabelHTMLAttributes<HTMLLabelElement> {
+interface Props
+  extends TablerComponent,
+    HTMLPropsWithoutRef<HTMLLabelElement> {
   aside?: string;
 }
 

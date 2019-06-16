@@ -58,12 +58,13 @@ export interface NavItemProps extends TablerComponent {
    * Whether or not to pass "exact" property to underlying NavLink component
    */
   useExact?: boolean;
+  [key: string]: any;
 }
 
 /**
  * A NavItem with react-popper powered subIems Dropdowns
  */
-const NavItem = function({
+export const NavItem = function({
   children,
   LinkComponent,
   value,
