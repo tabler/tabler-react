@@ -1,9 +1,18 @@
 const path = require("path");
+const ariaAttributes = require("aria-attributes");
 
 module.exports = {
   components: "src/**/*.{tsx,ts,js}",
   ignore: ["**/*.stories.*", "**/Code/*", "**/index.ts"],
-  propsParser: require("react-docgen-typescript").withDefaultConfig().parse,
+  propsParser: require("react-docgen-typescript").withCustomConfig(
+    "./tsconfig.json",
+    {
+      propFilter: {
+        // skipPropsWithoutDoc: true,
+        skipPropsWithName: ariaAttributes,
+      },
+    }
+  ).parse,
   webpackConfig: {
     resolve: {
       extensions: [".ts", ".tsx", ".js", ".json"],
