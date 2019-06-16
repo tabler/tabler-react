@@ -2,55 +2,72 @@ import React, { useState } from "react";
 import cn from "classnames";
 import BadgeAddOn from "./BadgeAddOn";
 
-import {
-  MouseEvents,
-  PointerEvents,
-  FocusEvents,
-  TablerComponent,
-} from "../../types";
+import { HTMLPropsWithoutRef } from "../../types";
 import { colors, softColors } from "../../colors";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-interface PropsForAll
-  extends TablerComponent,
-    MouseEvents,
-    PointerEvents,
-    FocusEvents {
+export interface BadgeProps
+  extends ELProps,
+    Omit<HTMLPropsWithoutRef<HTMLSpanElement>, "as"> {
+  /**
+   * Rounded corners
+   */
   rounded?: boolean;
+  /**
+   * Background color
+   */
   color?: colors;
+  /**
+   * URL to an image/avatar to display inside
+   */
   avatar?: string;
+  /**
+   * Add a X to remove the tag
+   */
   remove?: boolean;
+  /**
+   * When the remove X is clicked
+   */
   onRemoveClick?: React.MouseEventHandler;
+  /**
+   * Append something to the inside of the badge
+   */
   addOn?: React.ReactNode;
+  /**
+   * The addon icon
+   */
   addOnIcon?: string;
+  /**
+   * The addon background color
+   */
   addOnColor?: string;
+  /**
+   * When the addon is clicked
+   */
   onAddOnClick?: React.MouseEventHandler;
+  /**
+   * @deprecated use 'as'
+   */
   link?: true;
-  href?: string;
   /**
    * @deprecated use 'as'
    */
   RootComponent?: React.ElementType;
-  to?: string;
+  /**
+   * Text color
+   */
   textColor?: colors;
+  /**
+   * Rounded corners
+   */
   pill?: boolean;
+  /**
+   * Render this component as something else
+   */
   as?: React.ElementType;
 }
 
-interface DefaultProps extends PropsForAll {}
-
-interface LinkComponentProps extends PropsForAll {
-  link: true;
-  href: string;
-}
-
-interface ReactRouterProps extends PropsForAll {
-  RootComponent: React.ElementType;
-  to: string;
-}
-
-export type Props = DefaultProps | LinkComponentProps | ReactRouterProps;
-
-const Badge = function({
+export const Badge = function({
   children,
   className,
   rounded,
@@ -65,12 +82,11 @@ const Badge = function({
   RootComponent,
   link,
   href,
-  as,
+  as = "span",
   textColor = "white",
   pill,
-  to,
   ...rest
-}: Props) {
+}: BadgeProps) {
   const [isDeleted, setIsDeleted] = useState(false);
   const handleOnRemoveClick = (): void => {
     setIsDeleted(true);
@@ -113,27 +129,11 @@ const Badge = function({
     </React.Fragment>
   );
 
-  const Component = as || RootComponent;
-  if (Component) {
-    return (
-      <Component className={classes} to={to} {...rest}>
-        {childrenForAll}
-      </Component>
-    );
-  }
-
-  if (link) {
-    return (
-      <a className={classes} href={href} {...rest}>
-        {childrenForAll}
-      </a>
-    );
-  }
-
+  const Component = RootComponent || as;
   return (
-    <span className={classes} {...rest}>
+    <Component className={classes} {...rest}>
       {childrenForAll}
-    </span>
+    </Component>
   );
 };
 

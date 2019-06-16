@@ -23,7 +23,7 @@ type displayTypes =
   | "flex"
   | "inline-flex";
 
-type displayPropBreakPoints = {
+type DisplayPropBreakPoints = {
   xs?: displayTypes;
   sm?: displayTypes;
   md?: displayTypes;
@@ -31,10 +31,23 @@ type displayPropBreakPoints = {
   xl?: displayTypes;
 };
 
-type displayPropValue = displayTypes | displayPropBreakPoints;
+type displayProps = displayTypes | DisplayPropBreakPoints;
 
 export interface UtilityProps {
-  d?: displayPropValue;
+  /**
+   * Display prop
+   */
+  d?:
+    | "none"
+    | "inline"
+    | "inline-block"
+    | "block"
+    | "table"
+    | "table-cell"
+    | "table-row"
+    | "flex"
+    | "inline-flex"
+    | DisplayPropBreakPoints;
   m?: spacePropValue;
   mt?: spacePropValue;
   mb?: spacePropValue;
@@ -53,10 +66,7 @@ export interface UtilityProps {
 
 type utilityyPropKeys = keyof UtilityProps;
 
-function parseValue(
-  property: string,
-  value?: spacePropValue | displayPropValue
-) {
+function parseValue(property: string, value?: spacePropValue | displayProps) {
   if (!value) {
     return undefined;
   }

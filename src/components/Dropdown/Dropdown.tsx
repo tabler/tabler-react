@@ -16,10 +16,6 @@ import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
-interface TriggerElement {
-  onClick: (e: React.MouseEvent) => any;
-}
-
 export interface DropdownProps
   extends ELProps,
     HTMLPropsWithoutRef<HTMLDivElement> {

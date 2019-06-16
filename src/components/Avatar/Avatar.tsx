@@ -12,6 +12,9 @@ export interface Props extends TablerComponent, MouseEvents, PointerEvents {
    * The URL of the image to be displayed
    */
   imageURL?: string;
+  /**
+   * Size
+   */
   size?: "sm" | "md" | "lg" | "xl" | "xxl";
   /**
    * Display a colored status dot with the avatar
@@ -34,7 +37,7 @@ export interface Props extends TablerComponent, MouseEvents, PointerEvents {
 /**
  * Renders a single circular avatar
  */
-function Avatar({
+export function Avatar({
   className,
   children,
   imageURL,

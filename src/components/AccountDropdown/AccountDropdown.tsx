@@ -2,7 +2,7 @@ import * as React from "react";
 import Dropdown from "../Dropdown";
 import Avatar from "../Avatar";
 
-import { itemObject } from "../Dropdown/Dropdown";
+import { itemObject, DropdownProps } from "../Dropdown/Dropdown";
 
 type defaultOptionType =
   | "profile"
@@ -17,9 +17,18 @@ type optionsType = Array<defaultOptionType | itemObject>;
 
 type defaultOptionsType = { [K in defaultOptionType]: Object | itemObject };
 
-export interface Props {
+export interface Props extends DropdownProps {
+  /**
+   * URl of the avatar image
+   */
   avatarURL?: string;
+  /**
+   * The account name to be displayed
+   */
   name?: string;
+  /**
+   * The account description
+   */
   description?: string;
   /**
    * An array of the option items within the Dropdown
@@ -48,12 +57,13 @@ const itemsFromDefaultOptions = (options: optionsType) =>
 /**
  * A component for fast creation of an account centric dropdown
  */
-function AccountDropdown({
+export function AccountDropdown({
   avatarURL,
   name,
   description,
   options = [],
   optionsRootComponent,
+  ...rest
 }: Props) {
   const itemsObjects = itemsFromDefaultOptions(options);
 
@@ -79,6 +89,7 @@ function AccountDropdown({
       toggle={false}
       itemsObject={itemsObjects}
       itemsRootComponent={optionsRootComponent}
+      {...rest}
     />
   );
 }

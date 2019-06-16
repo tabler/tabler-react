@@ -1,22 +1,23 @@
 import * as React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
+import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-interface Props extends TablerComponent {
-  href?: string;
-}
+export interface AlertLinkProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLAnchorElement> {}
 
 /**
- * Renders a link that stands out more within Alerts
+ * Renders an anchor that stands out more within Alerts
  */
-function AlertLink({ children, className, href }: Props) {
+export function AlertLink({ children, className, ...rest }: AlertLinkProps) {
   const classes = cn(`alert-link`, className);
   return (
-    <a className={classes} href={href}>
+    <El.A className={classes} {...rest}>
       {children}
-    </a>
+    </El.A>
   );
 }
- 
 
 export default AlertLink;

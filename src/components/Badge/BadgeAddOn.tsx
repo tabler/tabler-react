@@ -2,59 +2,50 @@ import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 
-import { MouseEvents, PointerEvents, FocusEvents } from "../../types";
+import { HTMLPropsWithoutRef } from "../../types";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import { colors } from "../../colors";
 
-interface PropsForAll extends MouseEvents, PointerEvents, FocusEvents {
+export interface BadgeAddOnProps
+  extends ELProps,
+    Omit<HTMLPropsWithoutRef<HTMLSpanElement>, "as"> {
   children?: React.ReactNode;
   className?: string;
+  /**
+   * Display an icon of this name
+   */
   icon?: string;
-  color?: string;
-  link?: true;
-  href?: string;
+  /**
+   * Background color
+   */
+  color?: colors;
+  /**
+   * @deprecated use 'as'
+   */
+  link?: boolean;
+  /**
+   * @deprecated use 'as'
+   */
   RootComponent?: React.ElementType;
-  to?: string;
+  /**
+   * Render component as something else
+   */
+  as?: React.ElementType;
 }
 
-interface DefaultProps extends PropsForAll {}
-
-interface PropsForLink extends PropsForAll {
-  link: true;
-  href?: string;
-}
-
-interface PropsForReactRouter extends PropsForAll {
-  RootComponent: React.ElementType;
-  to: string;
-}
-
-export type Props = DefaultProps | PropsForLink | PropsForReactRouter;
-
-export function BadgeAddOn(props: Props) {
-  const {
-    children,
-    className,
-    icon,
-    color = "",
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    onFocus,
-    onBlur,
-  } = props;
-
-  const classes = cn("Badge-addon", { [`Badge-${color}`]: color }, className);
-
-  const eventProps = {
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    onPointerEnter,
-    onPointerLeave,
-    onFocus,
-    onBlur,
-  };
+/**
+ * Appended something to the inside of the badge
+ */
+export function BadgeAddOn({
+  children,
+  className,
+  icon,
+  color,
+  as = "span",
+  RootComponent,
+  ...rest
+}: BadgeAddOnProps) {
+  const classes = cn("badge-addon", { [`badge-${color}`]: color }, className);
 
   const childrenForAll = (
     <React.Fragment>
@@ -63,28 +54,12 @@ export function BadgeAddOn(props: Props) {
     </React.Fragment>
   );
 
-  if (props.link) {
-    const { href } = props;
-    return (
-      <a className={classes} href={href} {...eventProps}>
-        {childrenForAll}
-      </a>
-    );
-  }
-
-  if (props.RootComponent) {
-    const { RootComponent: Component, to } = props;
-    return (
-      <Component to={to} {...eventProps}>
-        {childrenForAll}
-      </Component>
-    );
-  }
+  const Component = RootComponent || as;
 
   return (
-    <span className={classes} {...eventProps}>
+    <Component className={classes} {...rest}>
       {childrenForAll}
-    </span>
+    </Component>
   );
 }
 

@@ -6,19 +6,18 @@ import Button from "../Button";
 
 import { TablerComponent, MouseEvents, PointerEvents } from "../../";
 
-type AlertType =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "info"
-  | "warning"
-  | "danger";
-
-export interface Props extends TablerComponent, MouseEvents, PointerEvents {
+export interface AlertType {
   /**
    * The type of this Alert, changes it's color
    */
-  type: AlertType;
+  type: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
+}
+
+export interface Props
+  extends AlertType,
+    TablerComponent,
+    MouseEvents,
+    PointerEvents {
   /**
    * An Icon to be displayed on the right hand side of the Alert
    */
@@ -41,7 +40,7 @@ export interface Props extends TablerComponent, MouseEvents, PointerEvents {
   onDismissClick?: () => void;
 }
 
-const Alert = function({
+export const Alert = function({
   className,
   style,
   children,

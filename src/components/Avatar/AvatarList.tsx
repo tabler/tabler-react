@@ -1,7 +1,7 @@
 import * as React from "react";
 import cn from "classnames";
 
-interface Props {
+export interface AvatarListProps {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -13,7 +13,7 @@ interface Props {
 /**
  * Renders a group of Icons
  */
-function AvatarList({ className, children, stacked }: Props) {
+export function AvatarList({ className, children, stacked }: AvatarListProps) {
   const classes = cn(
     {
       "avatar-list": true,
