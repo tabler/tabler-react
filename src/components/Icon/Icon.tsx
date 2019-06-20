@@ -23,6 +23,10 @@ interface IconProps extends HTMLAttributes<HTMLElement> {
    * Use the built-in flag icon set
    */
   flag?: boolean;
+  /**
+   * A thinner version of the icon
+   */
+  thin?: boolean;
 }
 
 /**
@@ -37,6 +41,7 @@ function Icon({
   isAriaHidden,
   payment,
   flag,
+  thin,
   ...rest
 }: IconProps) {
   const prefix = (payment && "payment") || (flag && "flag") || prefixFromProps;
@@ -45,6 +50,7 @@ function Icon({
     {
       [prefix]: true,
       [`${prefix}-${name}`]: true,
+      "icon-thin": thin,
     },
     className
   );
