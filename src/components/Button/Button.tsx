@@ -1,10 +1,4 @@
-import React, {
-  ButtonHTMLAttributes,
-  AnchorHTMLAttributes,
-  HTMLAttributes,
-  ReactHTMLElement,
-  HTMLProps,
-} from "react";
+import React, { forwardRef } from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 
@@ -43,28 +37,28 @@ export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
     ELProps,
     Omit<HTMLPropsWithoutRef<AS>, "as" | "color" | "size"> {}
 
-const Button = function<AS extends HTMLElement = HTMLButtonElement>({
-  size,
-  onClick,
-  href,
-  outline,
-  link,
-  block,
-  className,
-  children,
-  color,
-  square,
-  pill,
-  icon,
-  social = "",
-  loading,
-  isDropdownToggle,
-  isOption,
-  rootRef,
-  RootComponent,
-  as = El.Button,
-  ...rest
-}: ButtonProps<AS>) {
+const Button = function<AS extends HTMLElement = HTMLButtonElement>(
+  {
+    size,
+    outline,
+    link,
+    block,
+    className,
+    children,
+    color,
+    square,
+    pill,
+    icon,
+    social = "",
+    loading,
+    isDropdownToggle,
+    isOption,
+    RootComponent,
+    as = El.Button,
+    ...rest
+  }: ButtonProps<AS>,
+  ref: React.Ref<AS>
+) {
   const classes = cn(
     {
       btn: true,
@@ -99,10 +93,10 @@ const Button = function<AS extends HTMLElement = HTMLButtonElement>({
   );
 
   return (
-    <Component className={classes} ref={rootRef} {...rest}>
+    <Component className={classes} ref={ref} {...rest}>
       {childrenForAll}
     </Component>
   );
 };
 
-export default Button;
+export default forwardRef(Button);
