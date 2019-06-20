@@ -1,6 +1,7 @@
 import * as React from "react";
 import Notification, { Props as NotificationProps } from "./Notification";
 import Dropdown from "../Dropdown";
+import { Nav } from "../Nav";
 
 export interface Props {
   /**
@@ -29,6 +30,7 @@ function NotificationTray(props: Props) {
   const notifications = children && React.Children.toArray(children);
   return (
     <Dropdown
+      triggerAs={Nav.Link}
       triggerContent={unread && <span className="nav-unread" />}
       toggle={false}
       icon="bell"
