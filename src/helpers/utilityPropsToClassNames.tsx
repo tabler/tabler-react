@@ -62,9 +62,10 @@ export interface UtilityProps {
   pr?: spacePropValue;
   px?: spacePropValue;
   py?: spacePropValue;
+  textTransform?: "lowercase" | "uppercase" | "capitalize";
 }
 
-type utilityyPropKeys = keyof UtilityProps;
+type utilityPropKeys = keyof UtilityProps;
 
 function parseValue(property: string, value?: spacePropValue | displayProps) {
   if (!value) {
@@ -84,7 +85,25 @@ function parseValue(property: string, value?: spacePropValue | displayProps) {
   return classes;
 }
 
-const utilityProps: utilityyPropKeys[] = [
+const utilityBrekapointPropsKeys: utilityPropKeys[] = [
+  "d",
+  "m",
+  "mt",
+  "mb",
+  "ml",
+  "mr",
+  "mx",
+  "my",
+  "p",
+  "pt",
+  "pb",
+  "pl",
+  "pr",
+  "px",
+  "py",
+];
+
+export const utilityPropsKeys: utilityPropKeys[] = [
   "d",
   "m",
   "mt",
@@ -103,7 +122,7 @@ const utilityProps: utilityyPropKeys[] = [
 ];
 
 export const getUtilityPropsClasses = function(props: { [key: string]: any }) {
-  const utilityPropsClasses = utilityProps.reduce(
+  const utilityBreakpointPropsClasses = utilityBrekapointPropsKeys.reduce(
     (acc, cur) => {
       if (props[cur]) {
         acc.push(parseValue(cur, props[cur]));
@@ -112,7 +131,18 @@ export const getUtilityPropsClasses = function(props: { [key: string]: any }) {
     },
     [] as ClassValue[]
   );
-  return utilityPropsClasses;
+
+  const utilityPropsClasses = utilityPropsKeys.reduce(
+    (acc, cur) => {
+      if (props[cur]) {
+        acc.push(parseValue(cur, props[cur]));
+      }
+      return acc;
+    },
+    [] as ClassValue[]
+  );
+
+  return utilityBreakpointPropsClasses;
 };
 
 export default getUtilityPropsClasses;
