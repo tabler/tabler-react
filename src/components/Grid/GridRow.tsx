@@ -28,7 +28,6 @@ function GridRow({
   const classes: string = cn(
     `row`,
     {
-      row: true,
       "row-cards": cards,
       "row-deck": deck,
       [`gutters-${gutters}`]: gutters,
