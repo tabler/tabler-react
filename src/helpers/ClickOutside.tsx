@@ -1,9 +1,33 @@
-import * as React from "react";
+import React, { useRef, useEffect } from "react";
 
 interface Props {
   children: (v: { setElementRef: (el: HTMLElement) => any }) => React.ReactNode;
   onOutsideClick: () => void;
 }
+
+export const useClickOutside = function(onOutsideClick: Function) {
+  const elementRef = useRef<undefined | HTMLElement>();
+
+  const handleOutsideOnClick: React.EventHandler<any> = ({ target }) => {
+    if (isOutsideClick(target)) {
+      onOutsideClick();
+    }
+  };
+
+  const isOutsideClick = (target: HTMLElement) =>
+    elementRef.current &&
+    target instanceof Node &&
+    !elementRef.current.contains(target);
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideOnClick, false);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideOnClick, false);
+    };
+  });
+
+  return elementRef;
+};
 
 /**
  * A helper to help you do something when a user clicks outside of a component
