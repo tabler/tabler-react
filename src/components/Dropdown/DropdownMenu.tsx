@@ -10,7 +10,7 @@ import { HTMLPropsWithoutRef } from "../../types";
 
 export interface DropdownMenuProps
   extends ELProps,
-    HTMLPropsWithoutRef<HTMLDivElement> {
+    Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
   children?: React.ReactNode;
   className?: string;
   position?: any;
@@ -40,15 +40,18 @@ function DropdownMenu({
   arrow,
   arrowPosition = "left",
   style: _style,
+  show,
   ...rest
 }: DropdownMenuProps) {
   const [isOpen] = React.useContext(DropdownContext);
+
+  const _isOpen = show || isOpen;
   const classes = cn(
     {
       "dropdown-menu": true,
       [`dropdown-menu-${arrowPosition}`]: arrowPosition,
       [`dropdown-menu-arrow`]: arrow,
-      show: isOpen,
+      show: _isOpen,
     },
     className
   );
@@ -56,12 +59,12 @@ function DropdownMenu({
     <Popper placement={position} eventsEnabled={true} positionFixed={false}>
       {({ ref, style, placement }: PopperChildrenProps) => {
         return (
-          isOpen && (
+          _isOpen && (
             <El.Div
               className={classes}
               data-placement={placement}
               style={{ ..._style, ...style }}
-              ref={ref as Ref<HTMLDivElement>}
+              ref={ref}
               {...rest}
             >
               {children}

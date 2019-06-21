@@ -1,14 +1,14 @@
 import React, { useContext, CSSProperties } from "react";
 import { Manager } from "react-popper";
 import cn from "classnames";
-import DropdownTrigger from "./DropdownTrigger";
+import DropdownTrigger, { DropdownTriggerProps } from "./DropdownTrigger";
 import DropdownMenu from "./DropdownMenu";
 import DropdownItem, { DropdownItemProps } from "./DropdownItem";
 import DropdownItemDivider, {
   DropdownItemDividerProps,
 } from "./DropdownItemDivider";
 
-import ClickOutside from "../../helpers/ClickOutside";
+import ClickOutside, { useClickOutside } from "../../helpers/ClickOutside";
 import withDropdownProvider from "./withDropdownProvider";
 import DropdownContext from "./DropdownContext";
 import { colors } from "../../colors";
@@ -18,7 +18,7 @@ import { HTMLPropsWithoutRef } from "../../types";
 
 export interface DropdownProps
   extends ELProps,
-    HTMLPropsWithoutRef<HTMLDivElement> {
+    Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
   /**
    * This dropdown should only be displayed on desktop
    */
@@ -53,6 +53,10 @@ export interface DropdownProps
    */
   triggerContent?: React.ReactNode;
   /**
+   * Component to render the trigger as
+   */
+  triggerAs?: React.ElementType<DropdownTriggerProps>;
+  /**
    * The triggers background color
    */
   color?: colors;
@@ -84,9 +88,10 @@ export interface DropdownProps
    * itemsObjects[x].RootComponent takes priority
    */
   itemsRootComponent?: React.ElementType;
+  triggerProps?: DropdownTriggerProps;
 }
 
-export interface itemObject extends Object, DropdownItemProps {
+export interface itemObject extends DropdownItemProps {
   isDivider?: boolean;
   dividerProps?: DropdownItemDividerProps;
   [key: string]: any;
@@ -102,6 +107,7 @@ const Dropdown = function({
   trigger,
   icon,
   triggerContent,
+  triggerAs,
   isNavLink,
   triggerClassName,
   color,
@@ -113,6 +119,7 @@ const Dropdown = function({
   arrowPosition,
   dropdownMenuClassName,
   style,
+  triggerProps,
   ...rest
 }: DropdownProps) {
   const [isOpen, setIsOpen] = useContext(DropdownContext);
@@ -155,6 +162,8 @@ const Dropdown = function({
             isOption={isOption}
             color={color}
             toggle={toggle}
+            as={triggerAs}
+            {...triggerProps}
           >
             {triggerContent}
           </DropdownTrigger>
@@ -203,16 +212,14 @@ const Dropdown = function({
     return null;
   })();
 
+  const outsideRef = useClickOutside(() => setIsOpen(false));
+
   return (
     <Manager>
-      <ClickOutside onOutsideClick={() => setIsOpen(false)}>
-        {({ setElementRef }: any) => (
-          <El.Div className={classes} ref={setElementRef} {...rest}>
-            {_trigger}
-            {menu || children}
-          </El.Div>
-        )}
-      </ClickOutside>
+      <El.Div className={classes} ref={outsideRef} {...rest}>
+        {_trigger}
+        {menu || children}
+      </El.Div>
     </Manager>
   );
 };

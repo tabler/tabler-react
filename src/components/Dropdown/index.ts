@@ -12,6 +12,8 @@ const CompoundDropdown = Dropdown as typeof Dropdown & {
   ItemDivider: typeof DropdownItemDivider;
 };
 
+CompoundDropdown.displayName = "Dropdown";
+
 CompoundDropdown.Trigger = DropdownTrigger;
 CompoundDropdown.Menu = DropdownMenu;
 CompoundDropdown.Item = DropdownItem;

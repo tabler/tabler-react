@@ -10,7 +10,10 @@ export interface DropdownItemDividerProps
 /**
  * Used to seperate items within a Dropdown with a horizontal line
  */
-function DropdownItemDivider({ children, ...rest }: DropdownItemDividerProps) {
+export function DropdownItemDivider({
+  children,
+  ...rest
+}: DropdownItemDividerProps) {
   return (
     <El.Div className="dropdown-divider" {...rest}>
       {children}

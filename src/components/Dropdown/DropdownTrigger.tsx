@@ -10,8 +10,10 @@ import { ReferenceChildrenProps } from "react-popper";
 import DropdownContext from "./DropdownContext";
 import { ButtonProps } from "../Button/Button";
 import { colors } from "../../colors";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-export interface DropdownTriggerProps extends ButtonProps {
+export interface DropdownTriggerProps extends ELProps {
   /**
    * Display an arrow alongside the trigger content
    */
@@ -50,12 +52,17 @@ function DropdownTrigger({
   color,
   isNavLink,
   isOption,
+  as: Component = El.Button,
   ...rest
 }: DropdownTriggerProps) {
   const [isOpen, setIsOpen] = React.useContext(DropdownContext);
 
   const classes = cn(
-    { "dropdown-toggle": toggle, "nav-link": isNavLink },
+    {
+      "dropdown-toggle": toggle,
+      "nav-link": isNavLink,
+      "btn-option": isOption,
+    },
     className
   );
 
@@ -74,17 +81,16 @@ function DropdownTrigger({
   return (
     <Reference>
       {({ ref }: ReferenceChildrenProps) => (
-        <Button
+        <Component
           className={classes}
-          color={color}
-          isDropdownToggle
-          isOption={isOption}
-          onClick={() => setIsOpen(!isOpen)}
-          rootRef={ref}
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
+          ref={ref}
           {...rest}
         >
           {childrenFragment}
-        </Button>
+        </Component>
       )}
     </Reference>
   );

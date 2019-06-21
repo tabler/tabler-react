@@ -1,8 +1,9 @@
-import * as React from "react";
+import React from "react";
 import Dropdown from "../Dropdown";
 import Avatar from "../Avatar";
 
 import { itemObject, DropdownProps } from "../Dropdown/Dropdown";
+import Nav from "../Nav";
 
 type defaultOptionType =
   | "profile"
@@ -69,16 +70,17 @@ export function AccountDropdown({
 
   return (
     <Dropdown
-      triggerClassName="pr-0 leading-none"
+      as={Nav.Item}
+      link={false}
+      triggerClassName="d-flex align-items-center py-0 px-lg-0 px-2 text-color ml-2"
+      triggerAs={Nav.Link}
       triggerContent={
         <React.Fragment>
-          <span className="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color ml-2">
-            {avatarURL && <Avatar imageURL={avatarURL} />}
-            <span className="ml-2 d-none d-lg-block leading-none">
-              <span>{name}</span>
-              <span className="text-muted d-block mt-1 text-h6">
-                {description}
-              </span>
+          {avatarURL && <Avatar imageURL={avatarURL} />}
+          <span className="ml-2 d-none d-lg-block leading-none">
+            <span>{name}</span>
+            <span className="text-muted d-block mt-1 text-h6">
+              {description}
             </span>
           </span>
         </React.Fragment>

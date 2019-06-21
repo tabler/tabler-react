@@ -3,7 +3,6 @@ import cn from "classnames";
 import Icon from "../Icon";
 import Badge from "../Badge";
 import { colors } from "../../colors";
-import { TablerComponent } from "../../types";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";
 
