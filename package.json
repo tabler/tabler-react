@@ -110,7 +110,7 @@
     "sass-loader": "^7.1.0",
     "semantic-release": "^15.13.12",
     "shx": "^0.3.2",
-    "tabler": "tabler/tabler#tabler-v1",
+    "tabler": "tabler/tabler#cecfb973fb22b02bdc9bbd36fb8b262c86510479",
     "tslint": "^5.17.0",
     "tslint-react": "^4.0.0",
     "typescript": "^3.5.1",
