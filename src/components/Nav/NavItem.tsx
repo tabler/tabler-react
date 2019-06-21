@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, forwardRef } from "react";
 import cn from "classnames";
 import NavSubItem, { NavSubItemProps } from "./NavSubItem";
 import NavLink, { NavLinkProps } from "./NavLink";
 import Dropdown from "../Dropdown";
-import ClickOutside from "../../helpers/ClickOutside";
+import ClickOutside, { useClickOutside } from "../../helpers/ClickOutside";
 
 import { Manager, Reference } from "react-popper";
 import { ReferenceChildrenProps } from "react-popper";
@@ -58,33 +58,41 @@ export interface NavItemProps extends TablerComponent {
    * Whether or not to pass "exact" property to underlying NavLink component
    */
   useExact?: boolean;
+  /**
+   * Will wrap children in a NavLink
+   */
+  link?: boolean;
   [key: string]: any;
 }
 
 /**
  * A NavItem with react-popper powered subIems Dropdowns
  */
-export const NavItem = function({
-  children,
-  LinkComponent,
-  value,
-  className,
-  href,
-  to,
-  type,
-  icon,
-  hasSubNav: forcedHasSubNav,
-  active,
-  subItems,
-  subItemsObjects,
-  useExact,
-  position = "bottom-start",
-  onClick,
-  as = El.Li,
-  linkAs,
-  linkProps,
-  ...props
-}: NavItemProps) {
+export const NavItem = function(
+  {
+    children,
+    LinkComponent,
+    value,
+    className,
+    href,
+    to,
+    type,
+    icon,
+    hasSubNav: forcedHasSubNav,
+    active,
+    subItems,
+    subItemsObjects,
+    useExact,
+    position = "bottom-start",
+    onClick,
+    as = El.Li,
+    linkAs,
+    linkProps,
+    link = true,
+    ...props
+  }: NavItemProps,
+  ref: React.Ref<any>
+) {
   const [isOpen, setIsOpen] = useContext(DropdownContext);
 
   const Component = type || as;
@@ -95,7 +103,6 @@ export const NavItem = function({
     to,
     icon,
     active,
-    useExact,
   };
 
   const _handleOnClick = (): void => {
@@ -107,7 +114,7 @@ export const NavItem = function({
 
   const hasSubNav = forcedHasSubNav || !!subItems || !!subItemsObjects;
 
-  const navLink =
+  const navLink = link ? (
     (typeof children === "string" || value) && hasSubNav ? (
       <Reference>
         {({ ref }: ReferenceChildrenProps) => (
@@ -120,7 +127,8 @@ export const NavItem = function({
       <NavLink as={_linkAs} {..._linkProps}>
         {!hasSubNav && typeof children === "string" ? children : value}
       </NavLink>
-    );
+    )
+  ) : null;
 
   const childrenForAll = (
     <React.Fragment>
@@ -145,31 +153,36 @@ export const NavItem = function({
     className
   );
 
+  const outsideRef = useClickOutside(() => {
+    setIsOpen(false);
+  });
+
   if (hasSubNav) {
     return (
       <Manager>
-        <ClickOutside onOutsideClick={() => setIsOpen(false)}>
-          {({ setElementRef }: any) => (
-            <Component
-              className={wrapperClasses}
-              onClick={_handleOnClick}
-              ref={setElementRef}
-              {...props}
-            >
-              {childrenForAll}
-            </Component>
-          )}
-        </ClickOutside>
+        <Component
+          className={wrapperClasses}
+          onClick={_handleOnClick}
+          ref={outsideRef}
+          {...props}
+        >
+          {childrenForAll}
+        </Component>
       </Manager>
     );
   }
 
   return (
-    <Component className={wrapperClasses} onClick={_handleOnClick} {...props}>
+    <Component
+      className={wrapperClasses}
+      onClick={_handleOnClick}
+      ref={ref}
+      {...props}
+    >
       {childrenForAll}
     </Component>
   );
 };
 
 /** @component */
-export default withDropdownProvider(NavItem);
+export default withDropdownProvider(forwardRef(NavItem));

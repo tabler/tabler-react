@@ -1,24 +1,30 @@
 // @flow
 
-import Nav from "./Nav";
+import Nav, { NavProps } from "./Nav";
 
-import NavItem from "./NavItem";
-import NavLink from "./NavLink";
-import NavSubItem from "./NavSubItem";
-import NavSubmenu from "./NavSubmenu";
-import NavSubmenuItem from "./NavSubmenuItem";
+import NavItem, { NavItemProps } from "./NavItem";
+import NavLink, { NavLinkProps } from "./NavLink";
+import NavSubItem, { NavSubItemProps } from "./NavSubItem";
+import NavSubmenu, { NavSubmenuProps } from "./NavSubmenu";
+import NavSubmenuItem, { NavSubmenuItemProps } from "./NavSubmenuItem";
+import NavLinkTitle, { NavLinkTitleProps } from "./NavLinkTitle";
+import { ReactElement, ReactType, ElementType } from "react";
 
 const CompoundNav = Nav as typeof Nav & {
   Item: typeof NavItem;
   SubItem: typeof NavSubItem;
   Link: typeof NavLink;
+  LinkTitle: typeof NavLinkTitle;
   Submenu: typeof NavSubmenu;
   SubmenuItem: typeof NavSubmenuItem;
 };
 
+(CompoundNav as React.FunctionComponent).displayName = "Nav";
+
 CompoundNav.Item = NavItem;
 CompoundNav.SubItem = NavSubItem;
 CompoundNav.Link = NavLink;
+CompoundNav.LinkTitle = NavLinkTitle;
 CompoundNav.Submenu = NavSubmenu;
 CompoundNav.SubmenuItem = NavSubmenuItem;
 
@@ -28,6 +34,7 @@ export {
   CompoundNav as Nav,
   NavSubItem,
   NavLink,
+  NavLinkTitle,
   NavSubmenu,
   NavSubmenuItem,
 };

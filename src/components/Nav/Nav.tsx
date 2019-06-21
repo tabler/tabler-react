@@ -14,6 +14,7 @@ export interface NavProps extends TablerComponent {
   items?: React.ReactElement<NavItemProps> | React.ReactElement<NavItemProps>[];
   itemsObjects?: Array<NavItemProps>;
   routerContextComponentType?: any;
+  isMenu?: boolean;
 }
 
 const Nav = function({
@@ -24,6 +25,7 @@ const Nav = function({
   items,
   itemsObjects,
   routerContextComponentType,
+  isMenu,
   ...rest
 }: NavProps) {
   const [pathName, setPathName] = useState("");
@@ -68,7 +70,7 @@ const Nav = function({
   };
 
   const classes = cn(
-    { nav: true, "navbar-menu": true, "nav-tabs": tabbed },
+    { nav: true, "navbar-menu": isMenu, "nav-tabs": tabbed },
     className
   );
 
@@ -85,13 +87,12 @@ const Nav = function({
   const _items =
     items ||
     (itemsObjects &&
-      itemsObjects.map(({ subItems, active, ...rest }, i) => (
+      itemsObjects.map(({ subItems, active, ...restItemProps }, i) => (
         <NavItem
           key={i}
           hasSubNav={!!subItems}
           subItemsObjects={subItems}
-          active={computeActive(active, rest.to, subItems)}
-          {...rest}
+          {...restItemProps}
         />
       )));
   const _children = _items || children;

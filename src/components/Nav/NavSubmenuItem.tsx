@@ -9,6 +9,7 @@ export interface NavSubmenuItemProps extends TablerComponent {
   RootComponent?: React.ElementType;
   active?: boolean;
   icon?: string;
+  [key: string]: any;
 }
 
 function NavSubmenuItem({
