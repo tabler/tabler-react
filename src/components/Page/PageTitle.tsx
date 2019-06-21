@@ -1,16 +1,17 @@
 import * as React from "react";
 import cn from "classnames";
+import El from "../El/El";
+import { ELProps } from "../../helpers/makeHtmlElement";
 
-type Props = {
-  children?: React.ReactNode;
-  className?: string;
-};
+interface PageTitleProps extends ELProps {}
 
-function PageTitle({ className, children }: Props) {
-  const classes = cn("page-title", className);
-  return <h1 className={classes}>{children}</h1>;
+function PageTitle({ className, children, ...rest }: PageTitleProps) {
+  const classes = cn("page-title-box", className);
+  return (
+    <El.Div className={classes} {...rest}>
+      <El.H1 className="page-title">{children}</El.H1>
+    </El.Div>
+  );
 }
-
-
 
 export default PageTitle;
