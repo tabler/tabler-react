@@ -46,7 +46,9 @@
   },
   "devDependencies": {
     "@types/c3": "^0.7.0",
+    "apexcharts": "^3.8.0",
     "customize-cra": "^0.2.13",
+    "react-apexcharts": "^1.3.3",
     "react-app-rewired": "^2.1.3"
   }
 }
