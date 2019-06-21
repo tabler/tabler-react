@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink as ReactRouterNavLink, withRouter } from "react-router-dom";
 
 import {
   Site,
@@ -7,6 +7,7 @@ import {
   Grid,
   List,
   Button,
+  Form,
   RouterContextProvider,
   NavItemProps,
 } from "tabler-react";
@@ -19,144 +20,142 @@ type State = {
   notificationsObjects: any[];
 };
 
-const withRouterNavLink = (to: string) =>
-  withRouter(({ staticContext, ...props }: any) => (
-    <NavLink {...props} to={to} />
-  ));
-
 const navBarItems: Array<NavItemProps> = [
   {
     value: "Home",
     to: "/",
     icon: "home",
-    LinkComponent: withRouterNavLink("/"),
-    useExact: true,
+    linkAs: ReactRouterNavLink,
+    linkProps: { exact: true },
   },
   {
     value: "Interface",
     icon: "box",
+    href: "#interface",
     subItemsObjects: [
       {
         value: "Cards Design",
         to: "/cards",
-        LinkComponent: withRouterNavLink("/cards"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Charts",
         to: "/charts",
-        LinkComponent: withRouterNavLink("/charts"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Pricing Cards",
         to: "/pricing-cards",
-        LinkComponent: withRouterNavLink("/pricing-cards"),
+        linkAs: ReactRouterNavLink,
       },
     ],
   },
   {
     value: "Components",
     icon: "calendar",
+    href: "#components",
     subItemsObjects: [
       {
         value: "Maps",
         to: "/maps",
-        LinkComponent: withRouterNavLink("/maps"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Icons",
         to: "/icons",
-        LinkComponent: withRouterNavLink("/icons"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Store",
         to: "/store",
-        LinkComponent: withRouterNavLink("/store"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Blog",
         to: "/blog",
-        LinkComponent: withRouterNavLink("/blog"),
+        linkAs: ReactRouterNavLink,
       },
     ],
   },
   {
     value: "Pages",
     icon: "file",
+    href: "#pages",
     subItemsObjects: [
       {
         value: "Profile",
         to: "/profile",
-        LinkComponent: withRouterNavLink("/profile"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Login",
         to: "/login",
-        LinkComponent: withRouterNavLink("/login"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Register",
         to: "/register",
-        LinkComponent: withRouterNavLink("/register"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Forgot password",
         to: "/forgot-password",
-        LinkComponent: withRouterNavLink("/forgot-password"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "400 error",
         to: "/400",
-        LinkComponent: withRouterNavLink("/400"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "401 error",
         to: "/401",
-        LinkComponent: withRouterNavLink("/401"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "403 error",
         to: "/403",
-        LinkComponent: withRouterNavLink("/403"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "404 error",
         to: "/404",
-        LinkComponent: withRouterNavLink("/404"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "500 error",
         to: "/500",
-        LinkComponent: withRouterNavLink("/500"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "503 error",
         to: "/503",
-        LinkComponent: withRouterNavLink("/503"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Email",
         to: "/email",
-        LinkComponent: withRouterNavLink("/email"),
+        linkAs: ReactRouterNavLink,
       },
       {
         value: "Empty page",
         to: "/empty-page",
-        LinkComponent: withRouterNavLink("/empty-page"),
+        linkAs: ReactRouterNavLink,
       },
-      { value: "RTL", to: "/rtl", LinkComponent: withRouterNavLink("/rtl") },
+      { value: "RTL", to: "/rtl", linkAs: ReactRouterNavLink },
     ],
   },
   {
     value: "Forms",
     to: "/form-elements",
     icon: "check-square",
-    LinkComponent: withRouterNavLink("/form-elements"),
+    linkAs: ReactRouterNavLink,
   },
   {
     value: "Gallery",
     to: "/gallery",
     icon: "image",
-    LinkComponent: withRouterNavLink("/gallery"),
+    linkAs: ReactRouterNavLink,
   },
   {
     icon: "file-text",
@@ -233,7 +232,7 @@ class SiteWrapper extends React.Component<Props, State> {
           alt: "Tabler React",
           imageURL: "./demo/brand/tabler.svg",
           navItems: (
-            <Nav.Item type="div" className="d-none d-md-flex">
+            <Nav.Item link={false} className="d-none d-md-flex">
               <Button
                 href="https://github.com/tabler/tabler-react"
                 target="_blank"
@@ -246,29 +245,38 @@ class SiteWrapper extends React.Component<Props, State> {
               </Button>
             </Nav.Item>
           ),
-          notificationsTray: {
-            notificationsObjects,
-            markAllAsRead: () =>
-              this.setState(
-                () => ({
-                  notificationsObjects: this.state.notificationsObjects.map(
-                    v => ({ ...v, unread: false })
-                  ),
-                }),
-                () =>
-                  setTimeout(
-                    () =>
-                      this.setState({
-                        notificationsObjects: this.state.notificationsObjects.map(
-                          v => ({ ...v, unread: true })
-                        ),
-                      }),
-                    5000
-                  )
-              ),
-            unread: unreadCount,
-          },
+          // notificationsTray: {
+          //   notificationsObjects,
+          //   markAllAsRead: () =>
+          //     this.setState(
+          //       () => ({
+          //         notificationsObjects: this.state.notificationsObjects.map(
+          //           v => ({ ...v, unread: false })
+          //         ),
+          //       }),
+          //       () =>
+          //         setTimeout(
+          //           () =>
+          //             this.setState({
+          //               notificationsObjects: this.state.notificationsObjects.map(
+          //                 v => ({ ...v, unread: true })
+          //               ),
+          //             }),
+          //           5000
+          //         )
+          //     ),
+          //   unread: unreadCount,
+          // },
           accountDropdown: accountDropdownProps,
+          searchBar: (
+            <Form.Input
+              icon="search"
+              position="prepend"
+              placeholder="Search"
+              tabIndex={-1}
+              light
+            />
+          ),
         }}
         navProps={{ itemsObjects: navBarItems }}
         routerContextComponentType={withRouter(RouterContextProvider as any)}
