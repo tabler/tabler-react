@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import Container from "../Container";
 import SiteLogo from "./SiteLogo";
@@ -8,6 +8,8 @@ import AccountDropdown from "../AccountDropdown";
 import { Props as NotificationTrayProps } from "../Notification/NotificationTray";
 import { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown";
 import Nav from "../Nav";
+import El from "../El/El";
+import Form from "../Form";
 
 export interface SiteHeaderProps {
   children?: React.ReactNode;
@@ -37,6 +39,7 @@ export interface SiteHeaderProps {
    * Handle toggling/collapsing of the mobile menu when the collapse icon is clicked
    */
   onMenuToggleClick?: () => void;
+  searchBar?: React.ReactNode;
 }
 
 /**
@@ -53,15 +56,8 @@ const SiteHeader = ({
   accountDropdown: accountDropdownFromProps,
   navItems,
   onMenuToggleClick,
+  searchBar,
 }: SiteHeaderProps) => {
-  const notificationsTray =
-    notificationsTrayFromProps &&
-    React.createElement(Notification.Tray, notificationsTrayFromProps);
-
-  const accountDropdown =
-    accountDropdownFromProps &&
-    React.createElement(AccountDropdown, accountDropdownFromProps);
-
   return (
     <header className="navbar navbar-expand-md">
       <Container className={align}>
@@ -76,14 +72,29 @@ const SiteHeader = ({
               alt={alt}
               src={imageURL}
             />
-            <Nav className="align-items-center order-1 order-lg-2">
+            {searchBar && (
+              <El.Div
+                ml={{ xs: 0, md: 8 }}
+                mr="auto"
+                d={{ xs: "none", lg: "block" }}
+                className="w-auto flex-fill max-w-md"
+              >
+                {searchBar}
+              </El.Div>
+            )}
+            <Nav
+              isMenu={true}
+              className="align-items-center order-1 order-lg-2"
+            >
               {navItems}
               {notificationsTrayFromProps && (
-                <Nav.Item className="d-none d-md-flex">
+                <Nav.Item link={false} className="d-none d-md-flex">
                   <Notification.Tray {...notificationsTrayFromProps} />
                 </Nav.Item>
               )}
-              {accountDropdown}
+              {accountDropdownFromProps && (
+                <AccountDropdown {...accountDropdownFromProps} />
+              )}
             </Nav>
           </React.Fragment>
         )}
