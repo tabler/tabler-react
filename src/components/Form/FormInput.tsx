@@ -20,6 +20,10 @@ export interface FormInputProps
   cross?: boolean;
   feedback?: string;
   error?: string;
+  /**
+   * a lighter, more subtle input
+   */
+  light?: boolean;
 }
 
 /**
@@ -38,6 +42,7 @@ export const FormInput = (
     label,
     type = "text",
     feedback,
+    light,
     ...rest
   }: FormInputProps,
   ref: React.Ref<any>
@@ -45,6 +50,7 @@ export const FormInput = (
   const classes = cn(
     {
       "form-control": type !== "checkbox" && type !== "radio",
+      "form-control-light": light,
       "custom-control-input": type === "checkbox" || type === "radio",
       "is-valid": valid,
       "state-valid": tick,
