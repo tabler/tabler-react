@@ -1,6 +1,4 @@
-import { ElementType } from "react";
-
-export const capitalize = (str: ElementType) =>
+export const capitalize = (str: any) =>
   String(str)
     .charAt(0)
     .toUpperCase() + String(str).slice(1);
