@@ -57,9 +57,9 @@ class SiteWrapper extends React.PureComponent<SiteWrapperProps, State> {
         <Page.Main>
           {header}
           {nav}
-          <Page.Content>{children}</Page.Content>
+          {children}
         </Page.Main>
-        {footer}
+        {/* {footer} */}
       </Page>
     );
   }
