@@ -31,7 +31,8 @@
     "storybook": "start-storybook -s ./example/public -p 6006",
     "build-storybook": "build-storybook",
     "ts-lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
-    "start-tsc": "tsc --project tsconfig.example.json --watch"
+    "start-tsc": "tsc --project tsconfig.example.json --watch",
+    "copytypes": "tsc --project tsconfig.example.json"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
