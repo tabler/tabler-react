@@ -1,5 +1,3 @@
-// @flow
-
 import * as React from "react";
 
 type Props = {
@@ -8,12 +6,10 @@ type Props = {
 
 function PageMain({ children }: Props) {
   return (
-    <div className="page-main main-content flex-fill d-flex flex-column max-w-full">
+    <div className="page-main flex-fill d-flex flex-column max-w-full">
       {children}
     </div>
   );
 }
-
-
 
 export default PageMain;
