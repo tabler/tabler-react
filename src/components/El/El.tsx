@@ -1,5 +1,4 @@
 import makeElement from "../../helpers/makeHtmlElement";
-import { ReactHTMLElement, ReactSVGElement } from "react";
 
 const Div = makeElement<HTMLDivElement>("div");
 const Span = makeElement<HTMLDivElement>("span");
@@ -33,7 +32,7 @@ const Fieldset = makeElement<HTMLFieldSetElement>("fieldset");
 const Label = makeElement<HTMLLabelElement>("label");
 
 const Iframe = makeElement<HTMLIFrameElement>("iframe");
-const Svg = makeElement<SVGElement>("svg");
+// const Svg = makeElement<SVGElement>("svg");
 
 const Small = makeElement<HTMLDivElement>("small");
 
@@ -73,7 +72,7 @@ export const El = {
   Fieldset,
   Label,
   Iframe,
-  Svg,
+  // Svg,
   Small,
   Table,
   Thead,
