@@ -40,8 +40,7 @@ const SiteNav = ({
         {children || (
           <React.Fragment>
             <Nav
-              tabbed
-              className="border-0 flex-column flex-lg-row"
+              className="navbar-nav"
               items={items}
               itemsObjects={itemsObjects}
               routerContextComponentType={routerContextComponentType}
