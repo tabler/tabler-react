@@ -6,17 +6,13 @@ import { HTMLPropsWithoutRef } from "../../types";
 
 export interface PageProps
   extends ELProps,
-    HTMLPropsWithoutRef<HTMLDivElement> {}
+    Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {}
 
 function Page({ className, children, ...rest }: PageProps) {
   const classes = cn("page d-flex h-auto min-h-screen", className);
   return (
     <El.Div className={classes} {...rest}>
-      <div className="d-flex flex-fill">
-        <div className="main-content flex-fill d-flex flex-column max-w-full">
-          {children}
-        </div>
-      </div>
+      <div className="d-flex flex-fill">{children}</div>
     </El.Div>
   );
 }
