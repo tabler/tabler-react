@@ -31,6 +31,7 @@ export { default as PricingCard } from "./PricingCard";
 export { default as Profile } from "./Profile";
 export { default as Progress } from "./Progress";
 export { default as ProgressCard } from "./ProgressCard";
+export { default as Ribbon } from "./Ribbon";
 export { default as Site } from "./Site";
 export { default as SocialNetworksList } from "./SocialNetworksList";
 export { default as Stamp } from "./Stamp";
