@@ -68,7 +68,7 @@ export interface UtilityProps {
 type utilityPropKeys = keyof UtilityProps;
 
 function parseValue(property: string, value?: spacePropValue | displayProps) {
-  if (!value) {
+  if (typeof value === "undefined") {
     return undefined;
   }
   if (typeof value === "number" || typeof value === "string") {
@@ -124,7 +124,7 @@ export const utilityPropsKeys: utilityPropKeys[] = [
 export const getUtilityPropsClasses = function(props: { [key: string]: any }) {
   const utilityBreakpointPropsClasses = utilityBrekapointPropsKeys.reduce(
     (acc, cur) => {
-      if (props[cur]) {
+      if (typeof props[cur] !== "undefined") {
         acc.push(parseValue(cur, props[cur]));
       }
       return acc;
