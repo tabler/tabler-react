@@ -27,6 +27,7 @@ interface Props
   values?: fieldTypes;
   errors?: fieldTypes;
   touched?: touchedTypes;
+  logoUrl?: string;
 }
 
 /**
@@ -43,10 +44,11 @@ function ForgotPasswordPage(props: Props) {
     values,
     strings = {} as stringTypes,
     errors,
+    logoUrl,
   } = props;
 
   return (
-    <StandaloneFormPage imageURL={"./demo/logo.svg"}>
+    <StandaloneFormPage imageURL={logoUrl}>
       <FormCard
         buttonText={strings.buttonText || defaultStrings.buttonText}
         title={strings.title || defaultStrings.title}
