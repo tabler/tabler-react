@@ -1,12 +1,16 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useImperativeHandle } from "react";
 
 interface Props {
   children: (v: { setElementRef: (el: HTMLElement) => any }) => React.ReactNode;
   onOutsideClick: () => void;
 }
 
-export const useClickOutside = function(onOutsideClick: Function) {
+export const useClickOutside = function(
+  onOutsideClick: Function,
+  ref?: React.Ref<any>
+) {
   const elementRef = useRef<null | HTMLElement>(null);
+  useImperativeHandle(ref, () => elementRef.current);
 
   const handleOutsideOnClick: React.EventHandler<any> = ({ target }) => {
     if (isOutsideClick(target)) {

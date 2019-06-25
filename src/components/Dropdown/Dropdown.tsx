@@ -1,4 +1,4 @@
-import React, { useContext, CSSProperties } from "react";
+import React, { useContext, CSSProperties, forwardRef } from "react";
 import { Manager } from "react-popper";
 import cn from "classnames";
 import DropdownTrigger, { DropdownTriggerProps } from "./DropdownTrigger";
@@ -97,31 +97,34 @@ export interface itemObject extends DropdownItemProps {
   [key: string]: any;
 }
 
-const Dropdown = function({
-  className,
-  children,
-  desktopOnly,
-  isOption,
-  flex = false,
-  items,
-  trigger,
-  icon,
-  triggerContent,
-  triggerAs,
-  isNavLink,
-  triggerClassName,
-  color,
-  toggle,
-  itemsObject,
-  itemsRootComponent,
-  position,
-  arrow,
-  arrowPosition,
-  dropdownMenuClassName,
-  style,
-  triggerProps,
-  ...rest
-}: DropdownProps) {
+const Dropdown = forwardRef(function(
+  {
+    className,
+    children,
+    desktopOnly,
+    isOption,
+    flex = false,
+    items,
+    trigger,
+    icon,
+    triggerContent,
+    triggerAs,
+    isNavLink,
+    triggerClassName,
+    color,
+    toggle,
+    itemsObject,
+    itemsRootComponent,
+    position,
+    arrow,
+    arrowPosition,
+    dropdownMenuClassName,
+    style,
+    triggerProps,
+    ...rest
+  }: DropdownProps,
+  ref
+) {
   const [isOpen, setIsOpen] = useContext(DropdownContext);
 
   const _handleItemClick = (
@@ -212,16 +215,16 @@ const Dropdown = function({
     return null;
   })();
 
-  const outsideRef = useClickOutside(() => setIsOpen(false));
+  const _ref = useClickOutside(() => setIsOpen(false), ref);
 
   return (
     <Manager>
-      <El.Div className={classes} ref={outsideRef} {...rest}>
+      <El.Div className={classes} ref={_ref} {...rest}>
         {_trigger}
         {menu || children}
       </El.Div>
     </Manager>
   );
-};
+});
 
 export default withDropdownProvider(Dropdown);
