@@ -24,14 +24,14 @@ function StampCard({
   header,
   footer,
 }: Props) {
-  const classes = cn("p-3", className);
+  const classes = cn(className);
   return (
     <Card className={classes}>
-      <div className="d-flex align-items-center">
-        <Stamp color={color} icon={icon} className="mr-3" />
+      <div className="p-3 d-flex align-items-center">
+        <Stamp color={color} icon={icon} mr={3} />
         <div>
           {header && (
-            <Header size={4} className="m-0">
+            <Header size={3} m={0}>
               {header}
             </Header>
           )}
