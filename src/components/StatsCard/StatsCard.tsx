@@ -5,13 +5,18 @@ import Card from "../Card";
 import Text from "../Text";
 import Header from "../Header";
 import Icon from "../Icon";
+import El from "../El/El";
+import Progress from "../Progress";
+import { colors } from "../../colors";
 
-type Props = {
+export interface StatsCardProps {
+  children?: React.ReactNode;
   className?: string;
   /**
    * The % amount by which your total has increased
    */
   movement: number;
+  movementLabel?: string;
   /**
    * The main number displayed within the Card
    */
@@ -23,27 +28,103 @@ type Props = {
   /**
    * The layout to render
    */
-  layout?: 1 | 2;
+  layout?: 1 | 2 | 3 | 4;
   /**
    * A Chart to be included at the bottom of layout 2
    */
   chart?: React.ReactNode;
-};
+  progressColor?: colors;
+  progressWidth?: number;
+  chartWrapperRef?: React.Ref<any>;
+  actions?: React.ReactNode;
+}
 
 /**
- * Used for dispaying an individual statistic/number with 2 potential layouts
+ * Used for dispaying an individual statistic/number with different potential layouts
  */
 function StatsCard({
+  children,
   className,
   movement,
+  movementLabel,
   total,
   label,
   layout = 1,
   chart,
-}: Props) {
+  progressWidth,
+  progressColor = "primary",
+  actions,
+}: StatsCardProps) {
   const classes = cn(className);
   const movementString = `${movement > 0 ? "+" : ""}${movement}%`;
   const movementColor = !movement ? "yellow" : movement > 0 ? "green" : "red";
+
+  if (layout === 3 || layout === 4) {
+    return (
+      <Card className={classes}>
+        <Card.Body>
+          <El.Div d="flex">
+            <div>{label}</div>
+            {actions && <El.Div ml="auto">{actions}</El.Div>}
+          </El.Div>
+          <El.Div
+            d="flex"
+            mb={layout === 3 ? 3 : 0}
+            className="align-items-baseline"
+          >
+            <Header mb={0} mr={2}>
+              {total}
+            </Header>
+            {layout === 4 && (
+              <El.Div mr="auto" className={`text-${movementColor}`}>
+                {movementString}{" "}
+                <Icon
+                  name={
+                    !movement
+                      ? "minus"
+                      : movement > 0
+                      ? "trending-up"
+                      : "trending-down"
+                  }
+                  thin
+                />
+              </El.Div>
+            )}
+          </El.Div>
+
+          {layout === 3 && (
+            <React.Fragment>
+              <El.Div d="flex" mb={2}>
+                <div>{movementLabel}</div>
+                <El.Div ml="auto" className={`text-${movementColor}`}>
+                  {movementString}{" "}
+                  <Icon
+                    name={
+                      !movement
+                        ? "minus"
+                        : movement > 0
+                        ? "trending-up"
+                        : "trending-down"
+                    }
+                    thin
+                  />
+                </El.Div>
+              </El.Div>
+
+              {typeof progressWidth !== "undefined" && (
+                <Progress size="sm">
+                  <Progress.Bar color={progressColor} width={progressWidth} />
+                </Progress>
+              )}
+            </React.Fragment>
+          )}
+          {children}
+        </Card.Body>
+        {chart && <div className="card-chart">{chart}</div>}
+      </Card>
+    );
+  }
+
   if (layout === 2) {
     return (
       <Card className={classes}>
