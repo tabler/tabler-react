@@ -1,4 +1,5 @@
-import * as React from "react";
+import React, { useRef } from "react";
+import Chart from "react-apexcharts";
 
 import {
   Page,
@@ -17,17 +18,75 @@ import {
   StatsCard,
   ProgressCard,
   Badge,
+  El,
 } from "tabler-react";
 
 import C3Chart from "./C3Chart";
 
 import SiteWrapper from "./SiteWrapper";
+import {
+  cardChart1Data,
+  chartActiveUsersData,
+  chartActiveUsers2Data,
+  chartTemperatureData,
+  chartPieData,
+  chartDonutData,
+} from "./data/charts";
+import TimeframeDropdown from "./components/TimeframeDropdown";
 
 function Home() {
   return (
     <SiteWrapper>
       <Page.Content title="Dashboard">
-        <Grid.Row cards={true}>
+        <Grid.Row cards>
+          <Grid.Col sm={6} lg={3}>
+            <StatsCard
+              layout={3}
+              progressWidth={80}
+              progressColor="blue"
+              movement={6}
+              movementLabel="Conversion Rate"
+              total="43"
+              label="New Tickets"
+              actions={<TimeframeDropdown />}
+            />
+          </Grid.Col>
+          <Grid.Col sm={6} lg={3}>
+            <StatsCard
+              layout={4}
+              movement={-3}
+              total="17"
+              label="Closed Today"
+              actions={<TimeframeDropdown />}
+              chart={<Chart {...cardChart1Data} />}
+            />
+          </Grid.Col>
+          <Grid.Col sm={6} lg={3}>
+            <StatsCard
+              layout={4}
+              movement={9}
+              total="7"
+              label="New Replies"
+              actions={<TimeframeDropdown />}
+            >
+              <El.Div mt={3} className="chart-sm">
+                <Chart {...chartActiveUsersData} />
+              </El.Div>
+            </StatsCard>
+          </Grid.Col>
+          <Grid.Col sm={6} lg={3}>
+            <StatsCard
+              layout={4}
+              movement={3}
+              total="27.3k"
+              label="Followers"
+              actions={<TimeframeDropdown />}
+            >
+              <El.Div mt={3} className="chart-sm">
+                <Chart {...chartActiveUsers2Data} />
+              </El.Div>
+            </StatsCard>
+          </Grid.Col>
           <Grid.Col width={6} sm={4} lg={2}>
             <StatsCard layout={1} movement={6} total="43" label="New Tickets" />
           </Grid.Col>
@@ -61,294 +120,18 @@ function Home() {
           <Grid.Col width={6} sm={4} lg={2}>
             <StatsCard layout={1} movement={-1} total="621" label="Products" />
           </Grid.Col>
-          <Grid.Col lg={6}>
-            <Card>
-              <Card.Header>
-                <Card.Title>Development Activity</Card.Title>
-              </Card.Header>
-              <C3Chart
-                style={{ height: "200px" }}
-                data={{
-                  columns: [
-                    // each columns data
-                    [
-                      "data1",
-                      0,
-                      5,
-                      1,
-                      2,
-                      7,
-                      5,
-                      6,
-                      8,
-                      24,
-                      7,
-                      12,
-                      5,
-                      6,
-                      3,
-                      2,
-                      2,
-                      6,
-                      30,
-                      10,
-                      10,
-                      15,
-                      14,
-                      47,
-                      65,
-                      55,
-                    ],
-                  ],
-                  type: "area", // default type of chart
-                  groups: [["data1", "data2", "data3"]],
-                  colors: {
-                    data1: colors["blue"],
-                  },
-                  names: {
-                    // name of each serie
-                    data1: "Purchases",
-                  },
-                }}
-                axis={{
-                  y: {
-                    padding: {
-                      bottom: 0,
-                    },
-                    show: false,
-                    tick: {
-                      outer: false,
-                    },
-                  },
-                  x: {
-                    padding: {
-                      left: 0,
-                      right: 0,
-                    },
-                    show: false,
-                  },
-                }}
-                legend={{
-                  position: "inset",
-                  padding: 0,
-                  inset: {
-                    anchor: "top-left",
-                    x: 20,
-                    y: 8,
-                    step: 10,
-                  },
-                }}
-                tooltip={{
-                  format: {
-                    title: function(x: any) {
-                      return "";
-                    },
-                  },
-                }}
-                padding={{
-                  bottom: 0,
-                  left: -1,
-                  right: -1,
-                }}
-                point={{
-                  show: false,
-                }}
-              />
-              <Table
-                cards={true}
-                striped={true}
-                responsive={true}
-                className="table-vcenter"
-              >
-                <Table.Header>
-                  <Table.Row>
-                    <Table.ColHeader colSpan={2}>User</Table.ColHeader>
-                    <Table.ColHeader>Commit</Table.ColHeader>
-                    <Table.ColHeader>Date</Table.ColHeader>
-                    <Table.ColHeader />
-                  </Table.Row>
-                </Table.Header>
-                <Table.Body>
-                  <Table.Row>
-                    <Table.Col className="w-1">
-                      <Avatar imageURL="./demo/faces/male/9.jpg" />
-                    </Table.Col>
-                    <Table.Col>Ronald Bradley</Table.Col>
-                    <Table.Col>Initial commit</Table.Col>
-                    <Table.Col className="text-nowrap">May 6, 2018</Table.Col>
-                    <Table.Col className="w-1">
-                      <Icon link={true} name="trash" />
-                    </Table.Col>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Col>
-                      <Avatar>BM</Avatar>
-                    </Table.Col>
-                    <Table.Col>Russell Gibson</Table.Col>
-                    <Table.Col>Main structure</Table.Col>
-                    <Table.Col className="text-nowrap">
-                      April 22, 2018
-                    </Table.Col>
-                    <Table.Col>
-                      <Icon link={true} name="trash" />
-                    </Table.Col>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Col>
-                      <Avatar imageURL="./demo/faces/female/1.jpg" />
-                    </Table.Col>
-                    <Table.Col>Beverly Armstrong</Table.Col>
-                    <Table.Col>Left sidebar adjustments</Table.Col>
-                    <Table.Col className="text-nowrap">
-                      April 15, 2018
-                    </Table.Col>
-                    <Table.Col>
-                      <Icon link={true} name="trash" />
-                    </Table.Col>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Col>
-                      <Avatar imageURL="./demo/faces/male/4.jpg" />
-                    </Table.Col>
-                    <Table.Col>Bobby Knight</Table.Col>
-                    <Table.Col>Topbar dropdown style</Table.Col>
-                    <Table.Col className="text-nowrap">April 8, 2018</Table.Col>
-                    <Table.Col>
-                      <Icon link={true} name="trash" />
-                    </Table.Col>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Col>
-                      <Avatar imageURL="./demo/faces/female/11.jpg" />
-                    </Table.Col>
-                    <Table.Col>Sharon Wells</Table.Col>
-                    <Table.Col>Fixes #625</Table.Col>
-                    <Table.Col className="text-nowrap">April 9, 2018</Table.Col>
-                    <Table.Col>
-                      <Icon link={true} name="trash" />
-                    </Table.Col>
-                  </Table.Row>
-                </Table.Body>
-              </Table>
+          <Grid.Col sm={4}>
+            <Card title="A" body={<Chart {...chartTemperatureData} />} />
+          </Grid.Col>
+          <Grid.Col sm={4}>
+            <Card title="B">
+              <Card.Body>
+                <Chart {...chartDonutData} />
+              </Card.Body>
             </Card>
           </Grid.Col>
-          <Grid.Col md={6}>
-            <Alert type="primary">
-              <Alert.Link
-                href={
-                  process.env.NODE_ENV === "production"
-                    ? "https://tabler-react.com/documentation"
-                    : "/documentation"
-                }
-              >
-                Read our documentation
-              </Alert.Link>{" "}
-              with code samples.
-            </Alert>
-            <Grid.Row>
-              <Grid.Col sm={6}>
-                <Card>
-                  <Card.Header>
-                    <Card.Title>Chart title</Card.Title>
-                  </Card.Header>
-                  <Card.Body>
-                    <C3Chart
-                      style={{ height: "250px" }}
-                      data={{
-                        columns: [
-                          // each columns data
-                          ["data1", 63],
-                          ["data2", 37],
-                        ],
-                        type: "donut", // default type of chart
-                        colors: {
-                          data1: colors["green"],
-                          data2: colors["green-light"],
-                        },
-                        names: {
-                          // name of each serie
-                          data1: "Maximum",
-                          data2: "Minimum",
-                        },
-                      }}
-                      legend={{
-                        show: false, //hide legend
-                      }}
-                      padding={{
-                        bottom: 0,
-                        top: 0,
-                      }}
-                    />
-                  </Card.Body>
-                </Card>
-              </Grid.Col>
-              <Grid.Col sm={6}>
-                <Card>
-                  <Card.Header>
-                    <Card.Title>Chart title</Card.Title>
-                  </Card.Header>
-                  <Card.Body>
-                    <C3Chart
-                      style={{ height: "250px" }}
-                      data={{
-                        columns: [
-                          // each columns data
-                          ["data1", 63],
-                          ["data2", 44],
-                          ["data3", 12],
-                          ["data4", 14],
-                        ],
-                        type: "pie", // default type of chart
-                        colors: {
-                          data1: colors["blue-darker"],
-                          data2: colors["blue"],
-                          data3: colors["blue-light"],
-                          data4: colors["blue-lighter"],
-                        },
-                        names: {
-                          // name of each serie
-                          data1: "A",
-                          data2: "B",
-                          data3: "C",
-                          data4: "D",
-                        },
-                      }}
-                      legend={{
-                        show: false, //hide legend
-                      }}
-                      padding={{
-                        bottom: 0,
-                        top: 0,
-                      }}
-                    />
-                  </Card.Body>
-                </Card>
-              </Grid.Col>
-              <Grid.Col sm={6}>
-                <ProgressCard
-                  header="New feedback"
-                  content="62"
-                  progressColor="red"
-                  progressWidth={28}
-                />
-              </Grid.Col>
-              <Grid.Col sm={6}>
-                <ProgressCard
-                  header="Today profit"
-                  content="$652"
-                  progressColor="green"
-                  progressWidth={84}
-                />
-              </Grid.Col>
-              <Grid.Col sm={6}>
-                <ProgressCard
-                  header="Users online"
-                  content="76"
-                  progressColor="yellow"
-                  progressWidth={34}
-                />
-              </Grid.Col>
-            </Grid.Row>
+          <Grid.Col sm={4}>
+            <Card title="C" body={<Chart {...chartPieData} />} />
           </Grid.Col>
           <Grid.Col sm={6} lg={3}>
             <StampCard
@@ -396,6 +179,126 @@ function Home() {
                 </a>
               }
               footer={"16 waiting"}
+            />
+          </Grid.Col>
+
+          <Grid.Col width={12}>
+            <Card title="Invoices">
+              <Table
+                responsive
+                className="card-table table-vcenter text-nowrap"
+                headerItems={[
+                  { content: "No.", className: "w-1" },
+                  { content: "Invoice Subject" },
+                  { content: "Client" },
+                  { content: "VAT No." },
+                  { content: "Created" },
+                  { content: "Status" },
+                  { content: "Price" },
+                  { content: null },
+                ]}
+                bodyItems={[
+                  {
+                    key: "1",
+                    item: [
+                      {
+                        content: (
+                          <Text RootComponent="span" muted>
+                            001401
+                          </Text>
+                        ),
+                      },
+                      {
+                        content: (
+                          <a href="invoice.html" className="text-inherit">
+                            Design Works
+                          </a>
+                        ),
+                      },
+                      {
+                        content: (
+                          <React.Fragment>
+                            <Icon name="gb" flag /> Carlson Limited
+                          </React.Fragment>
+                        ),
+                      },
+                      { content: "87956621" },
+                      { content: "15 Dec 2017" },
+                      {
+                        content: (
+                          <React.Fragment>
+                            <span className="status-icon bg-success" /> Paid
+                          </React.Fragment>
+                        ),
+                      },
+                      { content: "$887" },
+                      {
+                        alignContent: "right",
+                        content: (
+                          <React.Fragment>
+                            <Button
+                              size="sm"
+                              color="secondary"
+                              as={El.A}
+                              href="javascript:void(0)"
+                              mr={1}
+                            >
+                              Manage
+                            </Button>
+                            <Dropdown
+                              as="span"
+                              toggle={false}
+                              triggerAs={Button}
+                              triggerContent="Actions"
+                              color="secondary"
+                              triggerProps={{
+                                color: "secondary",
+                                size: "sm",
+                                isDropdownToggle: true,
+                              }}
+                              itemsObject={[{ value: "Action" }]}
+                              position="bottom-end"
+                            />
+                          </React.Fragment>
+                        ),
+                      },
+                    ],
+                  },
+                ]}
+              />
+            </Card>
+          </Grid.Col>
+
+          <Grid.Col sm={3}>
+            <ProgressCard
+              header="New feedback"
+              content="62"
+              progressColor="red"
+              progressWidth={28}
+            />
+          </Grid.Col>
+          <Grid.Col sm={3}>
+            <ProgressCard
+              header="Today profit"
+              content="$652"
+              progressColor="green"
+              progressWidth={84}
+            />
+          </Grid.Col>
+          <Grid.Col sm={3}>
+            <ProgressCard
+              header="Users online"
+              content="76"
+              progressColor="yellow"
+              progressWidth={34}
+            />
+          </Grid.Col>
+          <Grid.Col sm={3}>
+            <ProgressCard
+              header="Users online"
+              content="76"
+              progressColor="yellow"
+              progressWidth={34}
             />
           </Grid.Col>
         </Grid.Row>
@@ -471,12 +374,8 @@ function Home() {
                     <Table.Col alignContent="center">42%</Table.Col>
                     <Table.Col alignContent="center">
                       <Dropdown
-                        trigger={
-                          <Dropdown.Trigger
-                            icon="more-vertical"
-                            toggle={false}
-                          />
-                        }
+                        icon="more-vertical"
+                        toggle={false}
                         position="right"
                         items={
                           <React.Fragment>
@@ -561,12 +460,8 @@ function Home() {
                       </Grid.Col>
                       <Grid.Col auto>
                         <Dropdown
-                          trigger={
-                            <Dropdown.Trigger
-                              icon="more-vertical"
-                              toggle={false}
-                            />
-                          }
+                          icon="more-vertical"
+                          toggle={false}
                           position="right"
                           items={
                             <React.Fragment>
@@ -845,77 +740,6 @@ function Home() {
                 />
               </Grid.Col>
             </Grid.Row>
-          </Grid.Col>
-          <Grid.Col width={12}>
-            <Card title="Invoices">
-              <Table
-                responsive
-                className="card-table table-vcenter text-nowrap"
-                headerItems={[
-                  { content: "No.", className: "w-1" },
-                  { content: "Invoice Subject" },
-                  { content: "Client" },
-                  { content: "VAT No." },
-                  { content: "Created" },
-                  { content: "Status" },
-                  { content: "Price" },
-                  { content: null },
-                  { content: null },
-                ]}
-                bodyItems={[
-                  {
-                    key: "1",
-                    item: [
-                      {
-                        content: (
-                          <Text RootComponent="span" muted>
-                            001401
-                          </Text>
-                        ),
-                      },
-                      {
-                        content: (
-                          <a href="invoice.html" className="text-inherit">
-                            Design Works
-                          </a>
-                        ),
-                      },
-                      { content: "Carlson Limited" },
-                      { content: "87956621" },
-                      { content: "15 Dec 2017" },
-                      {
-                        content: (
-                          <React.Fragment>
-                            <span className="status-icon bg-success" /> Paid
-                          </React.Fragment>
-                        ),
-                      },
-                      { content: "$887" },
-                      {
-                        alignContent: "right",
-                        content: (
-                          <React.Fragment>
-                            <Button size="sm" color="secondary">
-                              Manage
-                            </Button>
-                            <div className="dropdown">
-                              <Button
-                                color="secondary"
-                                size="sm"
-                                isDropdownToggle
-                              >
-                                Actions
-                              </Button>
-                            </div>
-                          </React.Fragment>
-                        ),
-                      },
-                      { content: <Icon link name="edit" /> },
-                    ],
-                  },
-                ]}
-              />
-            </Card>
           </Grid.Col>
         </Grid.Row>
       </Page.Content>
