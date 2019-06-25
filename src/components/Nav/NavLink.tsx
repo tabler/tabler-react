@@ -18,10 +18,11 @@ export interface NavLinkProps extends TablerComponent {
   rootRef?: any;
   useExact?: boolean;
   title?: React.ReactNode;
+  collapsed?: boolean;
   [key: string]: any;
 }
 
-function NavLink(
+export function NavLink(
   {
     children,
     className,
@@ -32,11 +33,15 @@ function NavLink(
     hasSubNav,
     rootRef,
     title,
+    collapsed,
     ...props
   }: NavLinkProps,
   ref: React.Ref<any>
 ) {
-  const classes = cn({ "nav-link": true, active: active }, className);
+  const classes = cn(
+    { "nav-link": true, active: active, collapsed },
+    className
+  );
 
   const Component = RootComponent || as;
 
@@ -53,5 +58,4 @@ function NavLink(
   );
 }
 
-/** @component */
 export default forwardRef(NavLink);
