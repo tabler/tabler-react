@@ -8,10 +8,7 @@ import El from "../El/El";
 export interface NavProps extends TablerComponent {
   as?: React.ElementType;
   tabbed?: boolean;
-  /**
-   * @deprecated use children instead
-   */
-  items?: React.ReactElement<NavItemProps> | React.ReactElement<NavItemProps>[];
+  items?: React.ReactNode;
   itemsObjects?: Array<NavItemProps>;
   routerContextComponentType?: any;
   isMenu?: boolean;
@@ -32,41 +29,6 @@ const Nav = function({
 
   const routerCallback = (location: { pathname: string }): any => {
     setPathName(location.pathname);
-  };
-
-  const computeActive = (
-    initialValue?: boolean,
-    to?: string,
-    subItems?: Array<NavSubItemProps> | any
-  ): boolean => {
-    if (
-      initialValue !== null &&
-      initialValue !== undefined &&
-      initialValue === true
-    ) {
-      return true;
-    }
-
-    if (to !== null && to !== undefined && to === pathName) {
-      return true;
-    }
-
-    if (
-      subItems !== null &&
-      subItems !== undefined &&
-      Array.isArray(subItems)
-    ) {
-      if (
-        subItems.find(
-          item =>
-            item.to !== null && item.to !== undefined && item.to === pathName
-        )
-      ) {
-        return true;
-      }
-    }
-
-    return false;
   };
 
   const classes = cn(
