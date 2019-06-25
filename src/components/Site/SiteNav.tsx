@@ -7,7 +7,7 @@ import { NavItemProps } from "../Nav/NavItem";
 
 export interface SiteNavProps {
   children?: React.ReactNode;
-  items?: React.ReactElement<NavItemProps>[];
+  items?: React.ReactNode;
   itemsObjects?: NavItemProps[];
   /**
    * Display a search form to the right of the nav items
