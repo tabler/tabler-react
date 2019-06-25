@@ -23,7 +23,12 @@ function Stamp({
   ...rest
 }: StampProps) {
   const classes = cn(
-    { stamp: true, [`stamp-${size}`]: size, [`bg-${color}`]: color },
+    {
+      stamp: true,
+      [`stamp-${size}`]: size,
+      [`bg-${color}`]: color,
+      "text-white": true,
+    },
     className
   );
   return (
