@@ -6,7 +6,7 @@ interface Props {
 }
 
 export const useClickOutside = function(onOutsideClick: Function) {
-  const elementRef = useRef<undefined | HTMLElement>();
+  const elementRef = useRef<null | HTMLElement>(null);
 
   const handleOutsideOnClick: React.EventHandler<any> = ({ target }) => {
     if (isOutsideClick(target)) {
