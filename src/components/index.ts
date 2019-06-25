@@ -15,6 +15,7 @@ export { default as ContactCard } from "./ContactCard";
 export { default as Container } from "./Container";
 export { default as Dimmer } from "./Dimmer";
 export { default as Dropdown } from "./Dropdown";
+export { El } from "./El";
 export { default as Form } from "./Form";
 export { default as GalleryCard } from "./GalleryCard";
 export { default as Grid } from "./Grid";
