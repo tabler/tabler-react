@@ -49,7 +49,6 @@ function DropdownTrigger({
   value,
   children,
   icon,
-  color,
   isNavLink,
   isOption,
   as: Component = El.Button,
