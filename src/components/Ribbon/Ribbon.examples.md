@@ -1,6 +1,12 @@
 ```jsx
 import { Ribbon } from "tabler-react";
 
+<Ribbon color="blue" icon="star" />;
+```
+
+```jsx
+import { Ribbon } from "tabler-react";
+
 <Ribbon color="green">-50%</Ribbon>;
 ```
 

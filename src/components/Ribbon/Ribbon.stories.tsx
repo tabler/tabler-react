@@ -21,6 +21,10 @@ stories.add(
   }
 );
 
+stories.add("Icon", () => {
+  return <Ribbon color="orange" icon="star" />;
+});
+
 stories.add("Bookmark", () => {
   return (
     <Ribbon color="orange" bookmark>
