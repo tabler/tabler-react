@@ -64,7 +64,7 @@ export interface NavItemProps extends TablerComponent {
 export const NavItem: React.RefForwardingComponent<
   any,
   NavItemProps
-> = forwardRef<any, NavItemProps>(function(
+> = forwardRef(function(
   {
     children,
     LinkComponent,
