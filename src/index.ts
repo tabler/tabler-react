@@ -2,6 +2,7 @@ import "./tabler.scss";
 
 export * from "./types";
 export * from "./components";
+export * from "./colors";
 
 export { NotificationProps } from "./components";
 
