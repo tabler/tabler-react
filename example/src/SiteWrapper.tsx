@@ -245,28 +245,28 @@ class SiteWrapper extends React.Component<Props, State> {
               </Button>
             </Nav.Item>
           ),
-          // notificationsTray: {
-          //   notificationsObjects,
-          //   markAllAsRead: () =>
-          //     this.setState(
-          //       () => ({
-          //         notificationsObjects: this.state.notificationsObjects.map(
-          //           v => ({ ...v, unread: false })
-          //         ),
-          //       }),
-          //       () =>
-          //         setTimeout(
-          //           () =>
-          //             this.setState({
-          //               notificationsObjects: this.state.notificationsObjects.map(
-          //                 v => ({ ...v, unread: true })
-          //               ),
-          //             }),
-          //           5000
-          //         )
-          //     ),
-          //   unread: unreadCount,
-          // },
+          notificationsTray: {
+            notificationsObjects,
+            markAllAsRead: () =>
+              this.setState(
+                () => ({
+                  notificationsObjects: this.state.notificationsObjects.map(
+                    v => ({ ...v, unread: false })
+                  ),
+                }),
+                () =>
+                  setTimeout(
+                    () =>
+                      this.setState({
+                        notificationsObjects: this.state.notificationsObjects.map(
+                          v => ({ ...v, unread: true })
+                        ),
+                      }),
+                    5000
+                  )
+              ),
+            unread: unreadCount,
+          },
           accountDropdown: accountDropdownProps,
           searchBar: (
             <Form.Input

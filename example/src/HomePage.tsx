@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Chart from "react-apexcharts";
 
 import {
@@ -9,9 +9,7 @@ import {
   Card,
   Text,
   Table,
-  Alert,
   Progress,
-  colors,
   Dropdown,
   Button,
   StampCard,
@@ -240,7 +238,6 @@ function Home() {
                               size="sm"
                               color="secondary"
                               as={El.A}
-                              href="javascript:void(0)"
                               mr={1}
                             >
                               Manage
