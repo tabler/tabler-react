@@ -8,12 +8,12 @@ export interface TimelineItemDescriptionProps
     HTMLPropsWithoutRef<HTMLDivElement> {}
 
 const TimelineItemDescription = React.forwardRef(
-  function TimelineItemDescription({
-    children,
-    ...rest
-  }: TimelineItemDescriptionProps) {
+  function TimelineItemDescription(
+    { children, ...rest }: TimelineItemDescriptionProps,
+    ref
+  ) {
     return (
-      <El.Small classNames="d-block text-muted" {...rest}>
+      <El.Small classNames="d-block text-muted" ref={ref} {...rest}>
         {children}
       </El.Small>
     );

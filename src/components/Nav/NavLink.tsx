@@ -22,7 +22,7 @@ export interface NavLinkProps extends TablerComponent {
   [key: string]: any;
 }
 
-export function NavLink(
+export const NavLink = forwardRef(function(
   {
     children,
     className,
@@ -56,6 +56,6 @@ export function NavLink(
       {children}
     </Component>
   );
-}
+});
 
-export default forwardRef(NavLink);
+export default NavLink;

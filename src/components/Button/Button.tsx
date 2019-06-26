@@ -37,7 +37,7 @@ export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
     ELProps,
     Omit<HTMLPropsWithoutRef<AS>, "as" | "color" | "size"> {}
 
-const Button = function<AS extends HTMLElement = HTMLButtonElement>(
+const Button = forwardRef(function<AS extends HTMLElement = HTMLButtonElement>(
   {
     size,
     outline,
@@ -97,6 +97,6 @@ const Button = function<AS extends HTMLElement = HTMLButtonElement>(
       {childrenForAll}
     </Component>
   );
-};
+});
 
-export default forwardRef(Button);
+export default Button;

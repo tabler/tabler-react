@@ -29,70 +29,72 @@ export interface FormInputProps
 /**
  * A an input field
  */
-export const FormInput = (
-  {
-    className,
-    icon,
-    position = "prepend",
-    valid,
-    tick,
-    invalid,
-    cross,
-    error,
-    label,
-    type = "text",
-    feedback,
-    light,
-    ...rest
-  }: FormInputProps,
-  ref: React.Ref<any>
-) => {
-  const classes = cn(
+export const FormInput = forwardRef(
+  (
     {
-      "form-control": type !== "checkbox" && type !== "radio",
-      "form-control-light": light,
-      "custom-control-input": type === "checkbox" || type === "radio",
-      "is-valid": valid,
-      "state-valid": tick,
-      "is-invalid": invalid || !!error,
-      "state-invalid": cross || !!error,
-    },
-    className
-  );
+      className,
+      icon,
+      position = "prepend",
+      valid,
+      tick,
+      invalid,
+      cross,
+      error,
+      label,
+      type = "text",
+      feedback,
+      light,
+      ...rest
+    }: FormInputProps,
+    ref: React.Ref<any>
+  ) => {
+    const classes = cn(
+      {
+        "form-control": type !== "checkbox" && type !== "radio",
+        "form-control-light": light,
+        "custom-control-input": type === "checkbox" || type === "radio",
+        "is-valid": valid,
+        "state-valid": tick,
+        "is-invalid": invalid || !!error,
+        "state-invalid": cross || !!error,
+      },
+      className
+    );
 
-  const _feedback = error || feedback;
+    const _feedback = error || feedback;
 
-  const allInputProps = {
-    className: classes,
-    type,
-    ...rest,
-  };
+    const allInputProps = {
+      className: classes,
+      type,
+      ...rest,
+    };
 
-  const _children = !icon ? (
-    <React.Fragment>
-      <El.Input ref={ref} {...allInputProps} />
-      {_feedback && <span className="invalid-feedback">{_feedback}</span>}
-    </React.Fragment>
-  ) : (
-    <React.Fragment>
-      <div className="input-icon">
-        {position === "prepend" && (
-          <span className="input-icon-addon">
-            <Icon name={icon} />
-          </span>
-        )}
+    const _children = !icon ? (
+      <React.Fragment>
         <El.Input ref={ref} {...allInputProps} />
-        {position === "append" && (
-          <span className="input-icon-addon">
-            <Icon name={icon} />
-          </span>
-        )}
-      </div>
-      {_feedback && <span className="invalid-feedback">{_feedback}</span>}
-    </React.Fragment>
-  );
+        {_feedback && <span className="invalid-feedback">{_feedback}</span>}
+      </React.Fragment>
+    ) : (
+      <React.Fragment>
+        <div className="input-icon">
+          {position === "prepend" && (
+            <span className="input-icon-addon">
+              <Icon name={icon} />
+            </span>
+          )}
+          <El.Input ref={ref} {...allInputProps} />
+          {position === "append" && (
+            <span className="input-icon-addon">
+              <Icon name={icon} />
+            </span>
+          )}
+        </div>
+        {_feedback && <span className="invalid-feedback">{_feedback}</span>}
+      </React.Fragment>
+    );
 
-  return label ? <FormGroup label={label}>{_children}</FormGroup> : _children;
-};
+    return label ? <FormGroup label={label}>{_children}</FormGroup> : _children;
+  }
+);
 
-export default forwardRef(FormInput);
+export default FormInput;
