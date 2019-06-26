@@ -24,7 +24,6 @@ function FormTextarea({
   invalid,
   cross,
   error,
-  value,
   children,
   label,
   feedback,
@@ -42,9 +41,13 @@ function FormTextarea({
   );
   const _feedback = error || feedback;
 
+  if (children) {
+    rest.value = children;
+  }
+
   const contents = (
     <React.Fragment>
-      <El.Textarea className={classes} children={value || children} {...rest} />
+      <El.Textarea className={classes} {...rest} />
       {_feedback && <span className="invalid-feedback">{_feedback}</span>}
     </React.Fragment>
   );
