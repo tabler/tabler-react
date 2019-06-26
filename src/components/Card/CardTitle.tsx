@@ -8,10 +8,12 @@ export interface CardTitleProps extends HeaderProps {}
 function CardTitle({
   className,
   children,
-  as: Component = El.H3,
+  RootComponent,
+  as = El.H3,
   ...rest
 }: CardTitleProps) {
   const classes = cn("card-title", className);
+  const Component = RootComponent || as;
   return (
     <Component className={classes} {...rest}>
       {children}
