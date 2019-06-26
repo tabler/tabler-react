@@ -152,11 +152,11 @@ function StoreCardsPage() {
                     <Table.Col className="text-right">
                       <strong>$269</strong>
                     </Table.Col>
-                  </Table.Row>{" "}
+                  </Table.Row>
                   <Table.Row>
                     <Table.Col>
                       <img
-                        alt=""
+                        alt="Huawei Mate 10 Pro"
                         src="https://tabler.github.io/tabler/demo/products/huawei-mate.jpg"
                         className="h-8"
                       />
