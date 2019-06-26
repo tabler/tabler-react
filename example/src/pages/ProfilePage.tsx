@@ -67,7 +67,7 @@ function ProfilePage() {
                     </Grid.Row>
                     <Form.Group>
                       <Form.Label>Bio</Form.Label>
-                      <Form.Textarea rows={5}>
+                      <Form.Textarea rows={5} onChange={() => null}>
                         Big belly rude boy, million dollar hustler. Unemployed.
                       </Form.Textarea>
                     </Form.Group>
@@ -77,7 +77,11 @@ function ProfilePage() {
                     </Form.Group>
                     <Form.Group>
                       <Form.Label>Password</Form.Label>
-                      <Form.Input type="password" value="Password" />
+                      <Form.Input
+                        type="password"
+                        value="Password"
+                        onChange={() => null}
+                      />
                     </Form.Group>
                     <Form.Footer>
                       <Button color="primary" block>
@@ -152,6 +156,7 @@ function ProfilePage() {
                           disabled
                           placeholder="Company"
                           value="Creative Code Inc."
+                          onChange={() => null}
                         />
                       </Form.Group>
                     </Grid.Col>
@@ -162,6 +167,7 @@ function ProfilePage() {
                           type="text"
                           placeholder="Username"
                           value="michael23"
+                          onChange={() => null}
                         />
                       </Form.Group>
                     </Grid.Col>
@@ -178,6 +184,7 @@ function ProfilePage() {
                           type="text"
                           placeholder="First Name"
                           value="Chet"
+                          onChange={() => null}
                         />
                       </Form.Group>
                     </Grid.Col>
@@ -188,6 +195,7 @@ function ProfilePage() {
                           type="text"
                           placeholder="Last Name"
                           value="Faker"
+                          onChange={() => null}
                         />
                       </Form.Group>
                     </Grid.Col>
@@ -198,6 +206,7 @@ function ProfilePage() {
                           type="text"
                           placeholder="Home Address"
                           value="Melbourne, Australia"
+                          onChange={() => null}
                         />
                       </Form.Group>
                     </Grid.Col>
@@ -208,6 +217,7 @@ function ProfilePage() {
                           type="text"
                           placeholder="City"
                           value="Melbourne"
+                          onChange={() => null}
                         />
                       </Form.Group>
                     </Grid.Col>
@@ -230,6 +240,7 @@ function ProfilePage() {
                         <Form.Textarea
                           rows={5}
                           placeholder="Here can be your description"
+                          onChange={() => null}
                         >
                           Oh so, your weak rhyme You doubt I'll bother, reading
                           into it I'll probably won't, left to my own devices
