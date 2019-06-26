@@ -21,6 +21,10 @@ stories.add(
   }
 );
 
+stories.add("Position", () => {
+  return <Ribbon position="top-left" color="orange" icon="star" />;
+});
+
 stories.add("Icon", () => {
   return <Ribbon color="orange" icon="star" />;
 });

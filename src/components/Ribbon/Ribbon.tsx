@@ -9,6 +9,7 @@ interface Props extends ELProps {
   color?: colors;
   bookmark?: boolean;
   icon?: string;
+  position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
 }
 
 function Ribbon({
@@ -17,11 +18,19 @@ function Ribbon({
   color,
   icon,
   bookmark,
+  position,
   ...rest
 }: Props) {
   const _className = cn(
     "ribbon",
-    { [`bg-${color}`]: color, "ribbon-bookmark": bookmark },
+    {
+      [`bg-${color}`]: color,
+      "ribbon-bookmark": bookmark,
+      "ribbon-top": position && position.substr(0, 3) === "top",
+      "ribbon-bottom": position && position.substr(0, 6) === "bottom",
+      "ribbon-left": position && position.substr(-4) === "left",
+      "ribbon-right": position && position.substr(-5) === "right",
+    },
     className
   );
   return (
