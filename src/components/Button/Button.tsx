@@ -29,6 +29,9 @@ interface Props {
   isDropdownToggle?: boolean;
   to?: string;
   isOption?: boolean;
+  /**
+   * @depreacted use ref
+   */
   rootRef?: RefHandler;
 }
 
@@ -55,6 +58,7 @@ const Button = forwardRef(function<AS extends HTMLElement = HTMLButtonElement>(
     isOption,
     RootComponent,
     as = El.Button,
+    rootRef,
     ...rest
   }: ButtonProps<AS>,
   ref: React.Ref<AS>
@@ -93,7 +97,7 @@ const Button = forwardRef(function<AS extends HTMLElement = HTMLButtonElement>(
   );
 
   return (
-    <Component className={classes} ref={ref} {...rest}>
+    <Component className={classes} ref={rootRef || ref} {...rest}>
       {childrenForAll}
     </Component>
   );
