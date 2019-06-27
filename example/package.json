@@ -16,7 +16,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-simple-maps": "^0.12.1",
+    "react-simple-maps": "jonthomp/react-simple-maps#componentdidupdate",
     "react-syntax-highlighter": "^10.3.0",
     "refractor": "^2.9.0",
     "tabler-react": "link:..",
