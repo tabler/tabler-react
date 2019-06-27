@@ -12,17 +12,12 @@ import {
 
 import SiteWrapper from "../SiteWrapper";
 
-import GoogleMap from "../GoogleMap";
-
 import ReactSimpleMap from "../ReactSimpleMap";
 
 function MapCardsPage() {
   return (
     <SiteWrapper>
       <div className="my-3 my-md-5">
-        <Page.MapHeader>
-          <GoogleMap blackAndWhite />
-        </Page.MapHeader>
         <Container>
           <Grid.Row cards>
             <Grid.Col lg={4} md={6}>
