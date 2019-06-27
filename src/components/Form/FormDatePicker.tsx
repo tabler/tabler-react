@@ -35,17 +35,18 @@ const FormDatePicker = function({
   monthProps,
   yearProps,
   value,
+  defaultDate,
   ...rest
 }: FormDatePickerProps) {
   const [currentDate, setCurrentDate] = useState<Date | null | undefined>(
-    typeof value === "undefined" ? new Date(Date.now()) : value
+    typeof value !== undefined ? value : defaultDate || new Date(Date.now())
   );
 
   useEffect(() => {
     if (value && currentDate !== value) {
       setCurrentDate(value);
     }
-  }, [value]);
+  }, []);
 
   // Handle date changes
   const _handleOnChange = (type: ChangeTypes, value: number): void => {
@@ -64,7 +65,7 @@ const FormDatePicker = function({
     if (type === "yyyy") {
       newDate.setFullYear(value);
     }
-    setCurrentDate(currentDate);
+    setCurrentDate(newDate);
     if (onChange) {
       onChange(newDate);
     }
@@ -80,16 +81,15 @@ const FormDatePicker = function({
       _handleOnChange("mm", Number((e.target as HTMLSelectElement).value));
 
     return (
-      <FormSelect onChange={onChangeMonths} {...monthProps}>
-        <option value="" selected={!currentDate} />
+      <FormSelect
+        key="month"
+        value={currentDate ? currentDate.getUTCMonth() : ""}
+        onChange={onChangeMonths}
+        {...monthProps}
+      >
+        <option value="" />
         {monthLabels.map((name, index) => (
-          <option
-            key={index}
-            value={index}
-            selected={
-              currentDate && currentDate.getUTCMonth() === index ? true : false
-            }
-          >
+          <option key={index} value={index}>
             {name}
           </option>
         ))}
@@ -113,10 +113,15 @@ const FormDatePicker = function({
       _handleOnChange("dd", Number((e.target as HTMLSelectElement).value));
 
     return (
-      <FormSelect onChange={onChangeDays} {...dayProps}>
-        <option value="" selected={!currentDate} />
+      <FormSelect
+        key="dd"
+        value={currentDay || ""}
+        onChange={onChangeDays}
+        {...dayProps}
+      >
+        <option value="" />
         {daysRange.map(day => (
-          <option key={day} value={day} selected={currentDay === day}>
+          <option key={day} value={day}>
             {day}
           </option>
         ))}
@@ -133,10 +138,15 @@ const FormDatePicker = function({
       _handleOnChange("yyyy", Number((e.target as HTMLSelectElement).value));
 
     return (
-      <FormSelect onChange={onChangeYears} {...yearProps}>
-        <option value="" selected={!currentDate} />
+      <FormSelect
+        key="yy"
+        onChange={onChangeYears}
+        value={currentYear || ""}
+        {...yearProps}
+      >
+        <option value="" />
         {yearsRange.map(year => (
-          <option key={year} value={year} selected={currentYear === year}>
+          <option key={year} value={year}>
             {year}
           </option>
         ))}
