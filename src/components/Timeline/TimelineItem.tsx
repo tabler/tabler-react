@@ -32,12 +32,7 @@ function TimelineItem({
   active,
   ...rest
 }: TimelineItemProps) {
-  const classes = cn(
-    {
-      "timeline-item": true,
-    },
-    className
-  );
+  const classes = cn("timeline-item", {}, className);
 
   const titleString =
     titleFromProps || (typeof children === "string" && children);

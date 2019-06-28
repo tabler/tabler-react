@@ -18,7 +18,7 @@ const TimelineItemTime = ({
 }: TimelineItemTimeProps) => {
   const classes = cn(
     {
-      "timeline-time": true,
+      "list-timeline-time": true,
       "text-muted-black": active,
     },
     className

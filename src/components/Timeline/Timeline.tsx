@@ -1,24 +1,20 @@
 import React, { HTMLProps, ReactHTMLElement } from "react";
 import cn from "classnames";
 
-import TimelineItem from "./TimelineItem";
-import TimelineItemTime from "./TimelineItemTime";
-import TimelineItemBadge from "./TimelineItemBadge";
-import TimelineItemTitle from "./TimelineItemTitle";
-import TimelineItemDescription from "./TimelineItemDescription";
 import { ELProps } from "../../helpers/makeHtmlElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface TimelineProps
   extends ELProps,
-    HTMLPropsWithoutRef<HTMLUListElement> {}
+    HTMLPropsWithoutRef<HTMLUListElement> {
+  simple?: boolean;
+}
 
-function Timeline({ className, children, ...rest }: TimelineProps) {
+function Timeline({ className, children, simple, ...rest }: TimelineProps) {
   const classes = cn(
-    {
-      timeline: true,
-    },
+    "list-timeline",
+    { "list-timeline-simple": simple },
     className
   );
   return (
@@ -27,11 +23,5 @@ function Timeline({ className, children, ...rest }: TimelineProps) {
     </El.Ul>
   );
 }
-
-Timeline.Item = TimelineItem;
-Timeline.ItemTime = TimelineItemTime;
-Timeline.ItemBadge = TimelineItemBadge;
-Timeline.ItemTitle = TimelineItemTitle;
-Timeline.ItemDescription = TimelineItemDescription;
 
 export default Timeline;

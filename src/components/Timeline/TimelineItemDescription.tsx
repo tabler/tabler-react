@@ -5,7 +5,7 @@ import { HTMLPropsWithoutRef } from "../../types";
 
 export interface TimelineItemDescriptionProps
   extends ELProps,
-    HTMLPropsWithoutRef<HTMLDivElement> {}
+    HTMLPropsWithoutRef<HTMLParagraphElement> {}
 
 const TimelineItemDescription = React.forwardRef(
   function TimelineItemDescription(
@@ -13,9 +13,9 @@ const TimelineItemDescription = React.forwardRef(
     ref
   ) {
     return (
-      <El.Small classNames="d-block text-muted" ref={ref} {...rest}>
+      <El.P classNames="text-muted" ref={ref} {...rest}>
         {children}
-      </El.Small>
+      </El.P>
     );
   }
 );

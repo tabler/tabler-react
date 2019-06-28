@@ -19,7 +19,7 @@ function TimelineItemBadge({
 }: TimelineItemBadgeProps) {
   const classes = cn(
     {
-      "timeline-badge": true,
+      "list-timeline-badge": true,
       [`bg-${color}`]: color,
     },
     className

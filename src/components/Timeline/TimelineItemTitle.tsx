@@ -1,15 +1,24 @@
-import * as React from "react";
+import React from "react";
+import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El";
 
-export interface TimelineItemTitleProps {
+export interface TimelineItemTitleProps extends ELProps {
   children?: React.ReactNode;
   active?: boolean;
 }
 
-function TimelineItemTitle({ children, active }: TimelineItemTitleProps) {
+function TimelineItemTitle({
+  children,
+  className,
+  active,
+  ...rest
+}: TimelineItemTitleProps) {
+  const _className = cn("list-timeline-title", {}, className);
   return (
-    <React.Fragment>
+    <El.P className={_className} {...rest}>
       {active ? <strong>{children}</strong> : children}
-    </React.Fragment>
+    </El.P>
   );
 }
 
