@@ -49,11 +49,12 @@ const Nav = function({
   const _items =
     items ||
     (itemsObjects &&
-      itemsObjects.map(({ subItems, active, ...restItemProps }, i) => (
+      itemsObjects.map(({ active, ...restItemProps }, i) => (
         <NavItem
           key={i}
-          hasSubNav={!!subItems}
-          subItemsObjects={subItems}
+          hasSubNav={
+            (restItemProps.subItems || restItemProps.subItemsObjects) === true
+          }
           {...restItemProps}
         />
       )));
@@ -62,7 +63,9 @@ const Nav = function({
   return (
     <React.Fragment>
       {element}
-      <Component className={classes}>{_children}</Component>
+      <Component className={classes} {...rest}>
+        {_children}
+      </Component>
     </React.Fragment>
   );
 };
