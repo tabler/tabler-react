@@ -1,7 +1,7 @@
 import React, { HTMLAttributes } from "react";
 import cn from "classnames";
 
-interface IconProps extends HTMLAttributes<HTMLElement> {
+export interface IconProps extends HTMLAttributes<HTMLElement> {
   /**
    * Should this icon be rendered within an <a> tag
    */
