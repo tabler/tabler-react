@@ -18,7 +18,7 @@ stories.add(
   "Example",
   () => {
     return (
-      <Tooltip content="Tooltip" placement="top">
+      <Tooltip content="Tooltip" placement="bottom">
         <Tag>Hover Me!</Tag>
       </Tooltip>
     );

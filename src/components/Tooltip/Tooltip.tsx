@@ -22,6 +22,7 @@ export interface TooltipProps {
    */
   placement?: any;
   type?: "link";
+  arrow?: boolean;
 }
 
 const Tooltip = function({
@@ -29,6 +30,7 @@ const Tooltip = function({
   children,
   placement,
   content,
+  arrow = true,
 }: TooltipProps) {
   const [isShown, setIsShown] = useState(false);
 
@@ -59,18 +61,29 @@ const Tooltip = function({
   return (
     <Manager>
       <Reference>
-        {({ ref }: ReferenceChildrenProps) =>
-          typeof children !== "undefined" &&
-          React.cloneElement(children, {
+        {({ ref }: ReferenceChildrenProps) => {
+          const referenceProps = {
             ref: ref,
             onMouseEnter: _handleTriggerOnMouseEnter,
             onMouseLeave: _handleTriggerOnMouseLeave,
-          })
-        }
+          };
+          return (
+            typeof children !== "undefined" &&
+            React.cloneElement(children, referenceProps)
+          );
+        }}
       </Reference>
       {isShown && (
-        <Popper placement={placement}>
-          {({ ref, style, placement }: PopperChildrenProps) => {
+        <Popper
+          placement={placement}
+          eventsEnabled={true}
+          positionFixed={false}
+        >
+          {({
+            ref,
+            style: { opacity, ...style },
+            placement,
+          }: PopperChildrenProps) => {
             return (
               <div
                 className={classes}
@@ -78,7 +91,7 @@ const Tooltip = function({
                 style={style}
                 ref={ref}
               >
-                <div className={arrowClasses} />
+                {arrow && <div className={arrowClasses} />}
                 <div className="tooltip-inner">{content}</div>
               </div>
             );
