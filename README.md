@@ -1,5 +1,11 @@
-# Update - June 2018: Version 2 alpha coming soon.
-Check out the latest progress and get involved on [this branch](https://github.com/tabler/tabler-react/tree/version-2), or add you thoughts and requests to [this issue](https://github.com/tabler/tabler-react/issues/458).
+# Update - June 2019: Version 2
+
+Alpha now available on NPM:
+
+`npm install tabler-react@alpha`
+`yarn add tabler-react@alpha`
+
+Check out the latest progress and get involved on [this branch](https://github.com/tabler/tabler-react/tree/version-2), or add your thoughts and requests to [this issue](https://github.com/tabler/tabler-react/issues/458).
 
 # Tabler React
 
