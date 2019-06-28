@@ -125,7 +125,7 @@ const Card = function({
 
   if (card_header !== null || card_body !== null) {
     return (
-      <Component className={classes}>
+      <Component className={classes} {...rest}>
         {card_status}
         {card_header}
         {card_alert}
