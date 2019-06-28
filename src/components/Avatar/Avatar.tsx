@@ -6,8 +6,10 @@ import AvatarList from "./AvatarList";
 import { MouseEvents, PointerEvents, TablerComponent } from "../../types";
 import { colors } from "../../colors";
 import Badge from "../Badge";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El";
 
-export interface Props extends TablerComponent, MouseEvents, PointerEvents {
+export interface Props extends ELProps, HTMLSpanElement {
   /**
    * The URL of the image to be displayed
    */
@@ -47,11 +49,7 @@ export function Avatar({
   placeholder,
   icon,
   color,
-  onClick,
-  onMouseEnter,
-  onMouseLeave,
-  onPointerEnter,
-  onPointerLeave,
+  ...rest
 }: Props) {
   const classes = cn(
     {
@@ -64,7 +62,7 @@ export function Avatar({
   const _icon = icon || placeholder ? "user" : null;
 
   return (
-    <span
+    <El.Span
       className={classes}
       style={
         imageURL
@@ -76,16 +74,12 @@ export function Avatar({
             )
           : style
       }
-      onClick={onClick}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      onPointerEnter={onPointerEnter}
-      onPointerLeave={onPointerLeave}
+      {...rest}
     >
       {_icon && <Icon name={_icon} />}
       {status && <Badge color={status} />}
       {children}
-    </span>
+    </El.Span>
   );
 }
 
