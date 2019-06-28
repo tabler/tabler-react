@@ -1,7 +1,12 @@
 import * as React from "react";
 import cn from "classnames";
+import { ELProps } from "../../helpers/makeHtmlElement";
+import El from "../El";
+import { HTMLPropsWithoutRef } from "../../types";
 
-export interface AvatarListProps {
+export interface AvatarListProps
+  extends ELProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -13,7 +18,12 @@ export interface AvatarListProps {
 /**
  * Renders a group of Icons
  */
-export function AvatarList({ className, children, stacked }: AvatarListProps) {
+export function AvatarList({
+  className,
+  children,
+  stacked,
+  ...rest
+}: AvatarListProps) {
   const classes = cn(
     {
       "avatar-list": true,
@@ -21,7 +31,11 @@ export function AvatarList({ className, children, stacked }: AvatarListProps) {
     },
     className
   );
-  return <div className={classes}>{children}</div>;
+  return (
+    <El.Div className={classes} {...rest}>
+      {children}
+    </El.Div>
+  );
 }
 
 export default AvatarList;
