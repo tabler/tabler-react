@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import cn from "classnames";
 import BadgeAddOn from "./BadgeAddOn";
 
@@ -67,26 +67,29 @@ export interface BadgeProps
   as?: React.ElementType;
 }
 
-export const Badge = function({
-  children,
-  className,
-  rounded,
-  color = "primary",
-  avatar,
-  remove,
-  addOn,
-  addOnIcon,
-  addOnColor,
-  onRemoveClick,
-  onAddOnClick,
-  RootComponent,
-  link,
-  href,
-  as = "span",
-  textColor = "white",
-  pill,
-  ...rest
-}: BadgeProps) {
+export const Badge = forwardRef(function(
+  {
+    children,
+    className,
+    rounded,
+    color = "primary",
+    avatar,
+    remove,
+    addOn,
+    addOnIcon,
+    addOnColor,
+    onRemoveClick,
+    onAddOnClick,
+    RootComponent,
+    link,
+    href,
+    as = "span",
+    textColor = "white",
+    pill,
+    ...rest
+  }: BadgeProps,
+  ref
+) {
   const [isDeleted, setIsDeleted] = useState(false);
   const handleOnRemoveClick = (): void => {
     setIsDeleted(true);
@@ -135,6 +138,6 @@ export const Badge = function({
       {childrenForAll}
     </Component>
   );
-};
+});
 
 export default Badge;
