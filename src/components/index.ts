@@ -37,6 +37,7 @@ export { default as SocialNetworksList } from "./SocialNetworksList";
 export { default as Stamp } from "./Stamp";
 export { default as StampCard } from "./StampCard";
 export { default as StatsCard } from "./StatsCard";
+export { default as Steps } from "./Steps";
 export { default as StoreCard } from "./StoreCard";
 export { default as TabbedCard } from "./TabbedCard";
 export { default as Table } from "./Table";
