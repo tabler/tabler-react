@@ -10,19 +10,23 @@ import { SiteNavProps } from "./SiteNav";
 import { SiteFooterProps } from "./SiteFooter";
 
 interface SiteWrapperProps {
+  header: React.ElementType;
   headerProps: SiteHeaderProps;
+  nav: React.ElementType;
   navProps: SiteNavProps;
+  footer: React.ElementType;
   footerProps: SiteFooterProps;
   children: React.ReactNode;
-  routerContextComponentType?: React.ElementType;
 }
 
 const SiteWrapper = function({
+  header: Header = SiteHeader,
   headerProps,
+  nav: Nav = SiteNav,
   navProps,
+  footer: Footer = SiteFooter,
   footerProps,
   children,
-  routerContextComponentType,
 }: SiteWrapperProps) {
   const [collapseMobileMenu, setCollapseMobileMenu] = useState(false);
 
@@ -30,28 +34,17 @@ const SiteWrapper = function({
     setCollapseMobileMenu(s => !s);
   };
 
-  const headerPropsWithToggleClick = {
-    ...headerProps,
-    onMenuToggleClick: handleCollapseMobileMenu,
-  };
-  const header = React.createElement(SiteHeader, headerPropsWithToggleClick);
-  const navPropsWithCollapse = {
-    ...navProps,
-    collapse: collapseMobileMenu,
-    routerContextComponentType: routerContextComponentType,
-  };
-  const nav = React.createElement(SiteNav, navPropsWithCollapse);
-  const footer = React.createElement(SiteFooter, footerProps);
+  const nav = <Nav collapse={collapseMobileMenu} {...navProps} />;
 
   return (
     <Page>
       {navProps.isSide && nav}
       <Page.Main>
-        {header}
+        <Header onMenuToggleClick={handleCollapseMobileMenu} {...headerProps} />
         {!navProps.isSide && nav}
         {children}
       </Page.Main>
-      {/* {footer} */}
+      {/* <Footer {...footerProps} /> */}
     </Page>
   );
 };
