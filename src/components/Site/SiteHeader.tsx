@@ -59,7 +59,7 @@ const SiteHeader = ({
   searchBar,
 }: SiteHeaderProps) => {
   return (
-    <header className="navbar navbar-expand-md">
+    <Nav.Bar expand="md" as="header">
       <Container className={align}>
         {children || (
           <React.Fragment>
@@ -99,7 +99,7 @@ const SiteHeader = ({
           </React.Fragment>
         )}
       </Container>
-    </header>
+    </Nav.Bar>
   );
 };
 
