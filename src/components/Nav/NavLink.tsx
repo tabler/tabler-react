@@ -19,6 +19,7 @@ export interface NavLinkProps extends TablerComponent {
   useExact?: boolean;
   title?: React.ReactNode;
   collapsed?: boolean;
+  isToggle?: boolean;
   [key: string]: any;
 }
 
@@ -34,19 +35,31 @@ export const NavLink = forwardRef(function(
     rootRef,
     title,
     collapsed,
+    isToggle,
     ...props
   }: NavLinkProps,
   ref: React.Ref<any>
 ) {
   const classes = cn(
-    { "nav-link": true, active: active, collapsed },
+    {
+      "nav-link": true,
+      active: active,
+      collapse: isToggle && collapsed,
+      show: isToggle && collapsed,
+    },
     className
   );
 
   const Component = RootComponent || as;
 
   return (
-    <Component className={classes} ref={rootRef || ref} {...props}>
+    <Component
+      className={classes}
+      ref={rootRef || ref}
+      data-toggle={isToggle ? "collapse" : undefined}
+      aria-expanded={isToggle ? !collapsed : undefined}
+      {...props}
+    >
       {icon && (
         <React.Fragment>
           <Icon name={icon} />{" "}
