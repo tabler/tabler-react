@@ -4,8 +4,12 @@ import cn from "classnames";
 import Container from "../Container";
 import Nav from "../Nav";
 import { NavItemProps } from "../Nav/NavItem";
-
-export interface SiteNavProps {
+import El from "../El";
+import { NavBarProps } from "../Nav/NavBar";
+import SiteLogo from "../Site/SiteLogo";
+import { string } from "prop-types";
+3;
+export interface SiteNavProps extends NavBarProps {
   children?: React.ReactNode;
   items?: React.ReactNode;
   itemsObjects?: NavItemProps[];
@@ -22,6 +26,7 @@ export interface SiteNavProps {
    */
   collapse?: boolean;
   routerContextComponentType?: React.ElementType;
+  logoURL?: string;
 }
 
 const SiteNav = ({
@@ -32,24 +37,42 @@ const SiteNav = ({
   rightColumnComponent,
   collapse = false,
   routerContextComponentType,
+  logoURL,
+  ...rest
 }: SiteNavProps) => {
-  const classes = cn("navbar navbar-expand-md", { collapse: collapse });
-  return (
-    <header className={classes}>
-      <Container>
-        {children || (
-          <React.Fragment>
-            <Nav
-              className="navbar-nav"
-              items={items}
-              itemsObjects={itemsObjects}
-              routerContextComponentType={routerContextComponentType}
-            />
-            {rightColumnComponent}
-          </React.Fragment>
+  const classes = cn({ collapse: collapse });
+
+  const _children = children || (
+    <React.Fragment>
+      <Nav
+        className="navbar-nav"
+        items={items}
+        itemsObjects={itemsObjects}
+        routerContextComponentType={routerContextComponentType}
+      />
+      {rightColumnComponent}
+    </React.Fragment>
+  );
+
+  if (rest.isSide) {
+    return (
+      <Nav.Bar expand="md" className={classes} {...rest}>
+        {logoURL && (
+          <El.Div p={3}>
+            <SiteLogo src={logoURL} />
+          </El.Div>
         )}
+        {_children}
+      </Nav.Bar>
+    );
+  }
+  return (
+    <Nav.Bar expand="md" className={classes} {...rest}>
+      <Container>
+        {logoURL && <SiteLogo src={logoURL} />}
+        {_children}
       </Container>
-    </header>
+    </Nav.Bar>
   );
 };
 
