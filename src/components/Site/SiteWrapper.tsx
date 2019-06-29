@@ -54,9 +54,10 @@ class SiteWrapper extends React.PureComponent<SiteWrapperProps, State> {
 
     return (
       <Page>
+        {navProps.isSide && nav}
         <Page.Main>
           {header}
-          {nav}
+          {!navProps.isSide && nav}
           {children}
         </Page.Main>
         {/* {footer} */}
