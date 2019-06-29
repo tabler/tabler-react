@@ -4,6 +4,7 @@ import NavItem, { NavItemProps } from "./NavItem";
 import { TablerComponent } from "../../types";
 import { NavSubItemProps } from "./NavSubItem";
 import El from "../El/El";
+import NavBarHeading from "./NavBarHeading";
 
 export interface NavProps extends TablerComponent {
   as?: React.ElementType;
@@ -12,6 +13,7 @@ export interface NavProps extends TablerComponent {
   itemsObjects?: Array<NavItemProps>;
   routerContextComponentType?: any;
   isMenu?: boolean;
+  heading?: string;
 }
 
 const Nav = function({
@@ -23,6 +25,7 @@ const Nav = function({
   itemsObjects,
   routerContextComponentType,
   isMenu,
+  heading,
   ...rest
 }: NavProps) {
   const [pathName, setPathName] = useState("");
@@ -63,6 +66,7 @@ const Nav = function({
   return (
     <React.Fragment>
       {element}
+      {heading && <NavBarHeading>{heading}</NavBarHeading>}
       <Component className={classes} {...rest}>
         {_children}
       </Component>
