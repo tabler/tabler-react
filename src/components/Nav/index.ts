@@ -7,6 +7,8 @@ import NavSubmenu from "./NavSubmenu";
 import NavSubmenuItem from "./NavSubmenuItem";
 import NavLinkTitle from "./NavLinkTitle";
 import NavSubNav from "./NavSubNav";
+import NavBar from "./NavBar";
+import NavBarHeading from "./NavBarHeading";
 
 const CompoundNav = Nav as typeof Nav & {
   Item: typeof NavItem;
@@ -16,6 +18,8 @@ const CompoundNav = Nav as typeof Nav & {
   Submenu: typeof NavSubmenu;
   SubmenuItem: typeof NavSubmenuItem;
   SubNav: typeof NavSubNav;
+  Bar: typeof NavBar;
+  BarHeading: typeof NavBarHeading;
 };
 
 (CompoundNav as React.FunctionComponent).displayName = "Nav";
@@ -27,6 +31,8 @@ CompoundNav.LinkTitle = NavLinkTitle;
 CompoundNav.Submenu = NavSubmenu;
 CompoundNav.SubmenuItem = NavSubmenuItem;
 CompoundNav.SubNav = NavSubNav;
+CompoundNav.Bar = NavBar;
+CompoundNav.BarHeading = NavBarHeading;
 
 // export * from "./NavItem";
 export {
@@ -39,4 +45,5 @@ export {
   NavSubmenu,
   NavSubmenuItem,
   NavSubNav,
+  NavBarHeading,
 };
