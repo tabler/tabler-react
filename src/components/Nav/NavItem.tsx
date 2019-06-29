@@ -119,6 +119,7 @@ export const NavItem: React.RefForwardingComponent<
       as={_linkAs}
       collapsed={(subNav || hasSubNav) && isOpen === false}
       onClick={_handleOnClick}
+      isToggle={subNav || hasSubNav}
       {..._linkProps}
     >
       {value || children}
