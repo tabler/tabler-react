@@ -42,14 +42,17 @@ const SiteNav = ({
 }: SiteNavProps) => {
   const classes = cn({ collapse: collapse });
 
-  const _children = children || (
+  const _children = (
     <React.Fragment>
-      <Nav
-        className="navbar-nav"
-        items={items}
-        itemsObjects={itemsObjects}
-        routerContextComponentType={routerContextComponentType}
-      />
+      {(items || itemsObjects) && (
+        <Nav
+          className="navbar-nav"
+          items={items}
+          itemsObjects={itemsObjects}
+          routerContextComponentType={routerContextComponentType}
+        />
+      )}
+      {children}
       {rightColumnComponent}
     </React.Fragment>
   );
