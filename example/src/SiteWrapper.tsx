@@ -5,27 +5,21 @@ import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import SiteNav from "./SiteNav";
 
-type Props = {
+interface Props {
   children: React.ReactNode;
-};
-
-type State = {
-  notificationsObjects: any[];
-};
-
-class SiteWrapper extends React.Component<Props, State> {
-  render() {
-    return (
-      <Site.Wrapper
-        header={SiteHeader}
-        nav={SiteNav}
-        navIsSide={true}
-        footer={SiteFooter}
-      >
-        {this.props.children}
-      </Site.Wrapper>
-    );
-  }
 }
+
+const SiteWrapper = function({ children }: Props) {
+  return (
+    <Site.Wrapper
+      header={SiteHeader}
+      nav={SiteNav}
+      navIsSide={true}
+      footer={SiteFooter}
+    >
+      {children}
+    </Site.Wrapper>
+  );
+};
 
 export default SiteWrapper;
