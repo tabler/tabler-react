@@ -9,6 +9,7 @@ export interface NavBarProps
     Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
   isDark?: boolean;
   isSide?: boolean;
+  side?: "left" | "right";
   expand?: "xs" | "sm" | "md" | "lg" | "xl";
 }
 
@@ -17,6 +18,7 @@ export function NavBar({
   className,
   isDark,
   isSide,
+  side = "left",
   expand,
   ...rest
 }: NavBarProps) {
@@ -25,6 +27,7 @@ export function NavBar({
     {
       "navbar-side": isSide,
       "navbar-dark": isDark,
+      "navbar-right": side === "right",
       [`navbar-expand-${expand}`]: expand,
     },
     className
