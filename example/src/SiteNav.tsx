@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
 
-import { Site, Nav } from "tabler-react";
+import { Site } from "tabler-react";
 
 const navBarItems = [
   {
