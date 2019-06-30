@@ -17,6 +17,7 @@ export interface SiteWrapperProps {
   footer?: React.ElementType;
   footerProps?: SiteFooterProps;
   children: React.ReactNode;
+  navIsSide?: boolean;
 }
 
 const SiteWrapper = function({
@@ -27,6 +28,7 @@ const SiteWrapper = function({
   footer: Footer = SiteFooter,
   footerProps = {},
   children,
+  navIsSide,
 }: SiteWrapperProps) {
   const [collapseMobileMenu, setCollapseMobileMenu] = useState(false);
 
@@ -36,12 +38,14 @@ const SiteWrapper = function({
 
   const nav = <Nav collapse={collapseMobileMenu} {...navProps} />;
 
+  const _isSide = navIsSide || navProps.isSide;
+
   return (
     <Page>
-      {navProps.isSide && nav}
+      {_isSide && nav}
       <Page.Main>
         <Header onMenuToggleClick={handleCollapseMobileMenu} {...headerProps} />
-        {!navProps.isSide && nav}
+        {!_isSide && nav}
         {children}
       </Page.Main>
       {/* <Footer {...footerProps} /> */}
