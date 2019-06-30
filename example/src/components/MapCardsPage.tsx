@@ -2,7 +2,6 @@ import * as React from "react";
 
 import {
   Container,
-  Page,
   Grid,
   Card,
   Stamp,
