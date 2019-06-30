@@ -35,7 +35,9 @@ const Nav = function({
   };
 
   const classes = cn(
-    { nav: true, "navbar-menu": isMenu, "nav-tabs": tabbed },
+    "nav",
+    "navbar-nav",
+    { "navbar-menu": isMenu, "nav-tabs": tabbed },
     className
   );
 
@@ -66,8 +68,8 @@ const Nav = function({
   return (
     <React.Fragment>
       {element}
-      {heading && <NavBarHeading>{heading}</NavBarHeading>}
       <Component className={classes} {...rest}>
+        {heading && <NavBarHeading>{heading}</NavBarHeading>}
         {_children}
       </Component>
     </React.Fragment>
