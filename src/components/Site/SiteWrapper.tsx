@@ -9,23 +9,23 @@ import { SiteHeaderProps } from "./SiteHeader";
 import { SiteNavProps } from "./SiteNav";
 import { SiteFooterProps } from "./SiteFooter";
 
-interface SiteWrapperProps {
-  header: React.ElementType;
-  headerProps: SiteHeaderProps;
-  nav: React.ElementType;
-  navProps: SiteNavProps;
-  footer: React.ElementType;
-  footerProps: SiteFooterProps;
+export interface SiteWrapperProps {
+  header?: React.ElementType;
+  headerProps?: SiteHeaderProps;
+  nav?: React.ElementType;
+  navProps?: SiteNavProps;
+  footer?: React.ElementType;
+  footerProps?: SiteFooterProps;
   children: React.ReactNode;
 }
 
 const SiteWrapper = function({
   header: Header = SiteHeader,
-  headerProps,
+  headerProps = {},
   nav: Nav = SiteNav,
-  navProps,
+  navProps = {},
   footer: Footer = SiteFooter,
-  footerProps,
+  footerProps = {},
   children,
 }: SiteWrapperProps) {
   const [collapseMobileMenu, setCollapseMobileMenu] = useState(false);
