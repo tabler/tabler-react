@@ -4,12 +4,12 @@ import { storiesOf } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 
 import Dropdown from ".";
-import examples from "./DropdownItem.examples.md";
+import examples from "./DropdownMenu.examples.md";
 
 // @ts-ignore
 React.Fragment = ({ children }) => children;
 
-const stories = storiesOf("Dropdown/DropdownItem", module);
+const stories = storiesOf("Dropdown/DropdownMenu", module);
 
 stories.addDecorator(withKnobs);
 
