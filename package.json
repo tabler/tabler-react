@@ -32,7 +32,8 @@
     "build-storybook": "build-storybook",
     "ts-lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "start-tsc": "tsc --project tsconfig.example.json --watch",
-    "copytypes": "tsc --project tsconfig.example.json"
+    "copytypes": "tsc --project tsconfig.example.json",
+    "snapshots:update": "react-scripts test --env=jsdom -u"
   },
   "lint-staged": {
     "src/**/*.js": "eslint --max-warnings=0"
@@ -60,6 +61,7 @@
     "@storybook/addon-knobs": "^5.1.3",
     "@storybook/addon-links": "^5.1.3",
     "@storybook/addon-notes": "^5.1.3",
+    "@storybook/addon-storyshots": "^5.1.9",
     "@storybook/addons": "^5.1.3",
     "@storybook/react": "^5.1.3",
     "@types/classnames": "^2.2.8",
@@ -68,10 +70,12 @@
     "@types/storybook__addon-actions": "^3.4.3",
     "@types/storybook__addon-knobs": "^5.0.1",
     "@types/storybook__addon-links": "^3.3.5",
+    "@types/storybook__addon-storyshots": "^4.0.1",
     "@types/storybook__react": "^4.0.2",
     "aria-attributes": "^1.3.1",
     "babel-eslint": "10.0.1",
     "babel-loader": "8.0.5",
+    "babel-plugin-macros": "^2.6.1",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.5",
     "commitizen": "^3.1.1",
@@ -99,7 +103,9 @@
     "react-scripts": "^3.0.0",
     "react-storybook-addon-props-combinations": "^1.1.0",
     "react-styleguidist": "^9.1.2",
+    "react-test-renderer": "^16.8.6",
     "react-text-mask": "^5.4.1",
+    "require-context.macro": "^1.0.4",
     "rollup": "^1.13.1",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-babel": "^4.3.2",

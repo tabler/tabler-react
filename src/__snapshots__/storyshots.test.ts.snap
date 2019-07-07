@@ -1,0 +1,5972 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Alert/Alert Basic 1`] = `
+<div
+  className="alert alert-primary"
+  role="alert"
+>
+  <strong>
+    Work in progress!
+  </strong>
+   More detailed documentation is coming soon.
+</div>
+`;
+
+exports[`Storyshots Alert/Alert Dismissable 1`] = `
+<div
+  className="alert alert-warning alert-dismissible"
+  role="alert"
+>
+  <button
+    className="btn btn-icon close"
+    onClick={[Function]}
+  />
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</div>
+`;
+
+exports[`Storyshots Alert/Alert Types 1`] = `
+Array [
+  <div
+    className="alert alert-primary"
+    role="alert"
+  >
+    This is a 
+    <strong>
+      primary
+    </strong>
+     alert—check it out!
+  </div>,
+  <div
+    className="alert alert-secondary"
+    role="alert"
+  >
+    This is a 
+    <strong>
+      secondary
+    </strong>
+     alert—check it out!
+  </div>,
+  <div
+    className="alert alert-success"
+    role="alert"
+  >
+    This is a 
+    <strong>
+      success
+    </strong>
+     alert—check it out!
+  </div>,
+  <div
+    className="alert alert-info"
+    role="alert"
+  >
+    This is a 
+    <strong>
+      info
+    </strong>
+     alert—check it out!
+  </div>,
+  <div
+    className="alert alert-warning"
+    role="alert"
+  >
+    This is a 
+    <strong>
+      warning
+    </strong>
+     alert—check it out!
+  </div>,
+  <div
+    className="alert alert-danger"
+    role="alert"
+  >
+    This is a 
+    <strong>
+      danger
+    </strong>
+     alert—check it out!
+  </div>,
+]
+`;
+
+exports[`Storyshots Alert/Alert With Avatar 1`] = `
+<div
+  className="alert alert-primary alert-avatar"
+  role="alert"
+>
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(./demo/faces/male/4.jpg)",
+      }
+    }
+  />
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</div>
+`;
+
+exports[`Storyshots Alert/Alert With Buttons 1`] = `
+<div
+  className="alert alert-primary alert-dismissible"
+  role="alert"
+>
+  <button
+    className="btn btn-icon close"
+    onClick={[Function]}
+  />
+  <h4
+    className="h4"
+    mb={4}
+    mt={0}
+  >
+    Some Message
+  </h4>
+  <p>
+    Lorem ipsum Minim ad pariatur eiusmod ea ut nulla aliqua est quis id dolore minim voluptate.
+  </p>
+  <div
+    className="btn-list"
+  >
+    <button
+      className="btn btn-success"
+    >
+      Okay
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      No, thanks
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Alert/Alert With Icons 1`] = `
+Array [
+  <div
+    className="alert alert-primary alert-icon"
+    role="alert"
+  >
+    <i
+      className="icon fe fe-bell mr-2"
+    />
+    You have done 5 actions.
+  </div>,
+  <div
+    className="alert alert-success alert-icon"
+    role="alert"
+  >
+    <i
+      className="icon fe fe-check mr-2"
+    />
+    The page has been added.
+  </div>,
+  <div
+    className="alert alert-danger alert-icon"
+    role="alert"
+  >
+    <i
+      className="icon fe fe-alert-triangle mr-2"
+    />
+    The daily report has failed. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </div>,
+]
+`;
+
+exports[`Storyshots Alert/Alert With extra space 1`] = `
+Array [
+  <span>
+    Content Above
+  </span>,
+  <div
+    className="alert alert-primary mt-5 mb-6"
+    role="alert"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  </div>,
+  <span>
+    Content Below
+  </span>,
+]
+`;
+
+exports[`Storyshots Alert/AlertLink Basic 1`] = `
+<a
+  className="alert-link"
+>
+  An Alert.Link
+</a>
+`;
+
+exports[`Storyshots Alert/AlertLink Example 1`] = `
+<div
+  className="alert alert-success mt-5 mb-6"
+  role="alert"
+>
+  <a>
+    A normal link
+  </a>
+   
+  <a
+    className="alert-link"
+  >
+    An Alert.Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Avatar/Avatar As Icon 1`] = `
+<span
+  className="avatar"
+>
+  <i
+    className="icon fe fe-user"
+  />
+</span>
+`;
+
+exports[`Storyshots Avatar/Avatar Basic 1`] = `
+<span
+  className="avatar"
+  style={
+    Object {
+      "backgroundImage": "url(./demo/faces/male/21.jpg)",
+    }
+  }
+/>
+`;
+
+exports[`Storyshots Avatar/Avatar Placeholder 1`] = `
+<div
+  className="avatar-list"
+>
+  <span
+    className="avatar"
+  >
+    RB
+  </span>
+  <span
+    className="avatar"
+  >
+    KH
+  </span>
+  <span
+    className="avatar"
+  >
+    BK
+  </span>
+  <span
+    className="avatar"
+  >
+    <i
+      className="icon fe fe-user"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Avatar/Avatar Placeholder Colour 1`] = `
+<div
+  className="avatar-list"
+>
+  <span
+    className="avatar bg-blue"
+  >
+    NG
+  </span>
+  <span
+    className="avatar bg-azure"
+  >
+    AM
+  </span>
+  <span
+    className="avatar bg-indigo"
+  >
+    RB
+  </span>
+  <span
+    className="avatar bg-purple"
+  >
+    PR
+  </span>
+  <span
+    className="avatar bg-pink"
+  >
+    WH
+  </span>
+  <span
+    className="avatar bg-red"
+  >
+    MR
+  </span>
+  <span
+    className="avatar bg-orange"
+  >
+    DB
+  </span>
+  <span
+    className="avatar bg-yellow"
+  >
+    PP
+  </span>
+  <span
+    className="avatar bg-lime"
+  >
+    JR
+  </span>
+  <span
+    className="avatar bg-green"
+  >
+    RB
+  </span>
+  <span
+    className="avatar bg-teal"
+  >
+    KH
+  </span>
+  <span
+    className="avatar bg-cyan"
+  >
+    BK
+  </span>
+  <span
+    className="avatar bg-gray"
+  >
+    CA
+  </span>
+  <span
+    className="avatar bg-gray-dark"
+  >
+    CW
+  </span>
+</div>
+`;
+
+exports[`Storyshots Avatar/Avatar Size 1`] = `
+<div
+  className="avatar-list"
+>
+  <span
+    className="avatar avatar-sm"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/9.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/female/8.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar avatar-md"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/4.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar avatar-lg"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/35.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar avatar-xl"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/female/29.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar avatar-xxl"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/2.jpg)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Avatar/Avatar Status Indicator 1`] = `
+<div
+  className="avatar-list"
+>
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/9.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/female/8.jpg)",
+      }
+    }
+  >
+    <span
+      className="badge expanded bg-gray text-white"
+    />
+  </span>
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/4.jpg)",
+      }
+    }
+  >
+    <span
+      className="badge expanded bg-red text-white"
+    />
+  </span>
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/35.jpg)",
+      }
+    }
+  >
+    <span
+      className="badge expanded bg-yellow text-white"
+    />
+  </span>
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/female/29.jpg)",
+      }
+    }
+  >
+    <span
+      className="badge expanded bg-success text-white"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Avatar/AvatarList Basic 1`] = `
+<div
+  className="avatar-list"
+>
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/9.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/female/8.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/4.jpg)",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Avatar/AvatarList Stacked List 1`] = `
+<div
+  className="avatar-list avatar-list-stacked"
+>
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/9.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/female/8.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar"
+    style={
+      Object {
+        "backgroundImage": "url(/demo/faces/male/4.jpg)",
+      }
+    }
+  />
+  <span
+    className="avatar"
+  >
+    +8
+  </span>
+</div>
+`;
+
+exports[`Storyshots Badge/Badge Empty Badges 1`] = `
+Array [
+  <span
+    className="badge expanded bg-blue text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-azure text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-indigo text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-purple text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-pink text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-red text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-orange text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-yellow text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-lime text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-green text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-teal text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-cyan text-white m-1"
+  />,
+  <span
+    className="badge expanded bg-gray text-white m-1"
+  />,
+]
+`;
+
+exports[`Storyshots Badge/Badge Example 1`] = `
+Array [
+  <span
+    className="badge expanded bg-primary text-white mr-1"
+  >
+    primary
+  </span>,
+  <span
+    className="badge expanded bg-secondary text-white mr-1"
+  >
+    secondary
+  </span>,
+  <span
+    className="badge expanded bg-info text-white mr-1"
+  >
+    info
+  </span>,
+  <span
+    className="badge expanded bg-warning text-white mr-1"
+  >
+    warning
+  </span>,
+  <span
+    className="badge expanded bg-success text-white mr-1"
+  >
+    success
+  </span>,
+  <span
+    className="badge expanded bg-danger text-white mr-1"
+  >
+    danger
+  </span>,
+]
+`;
+
+exports[`Storyshots Badge/Badge Pills 1`] = `
+Array [
+  <span
+    className="badge expanded badge-pill bg-primary text-white m-1"
+  >
+    primary
+  </span>,
+  <span
+    className="badge expanded badge-pill bg-secondary text-white m-1"
+  >
+    secondary
+  </span>,
+  <span
+    className="badge expanded badge-pill bg-info text-white m-1"
+  >
+    info
+  </span>,
+  <span
+    className="badge expanded badge-pill bg-warning text-white m-1"
+  >
+    warning
+  </span>,
+  <span
+    className="badge expanded badge-pill bg-success text-white m-1"
+  >
+    success
+  </span>,
+  <span
+    className="badge expanded badge-pill bg-danger text-white m-1"
+  >
+    danger
+  </span>,
+]
+`;
+
+exports[`Storyshots Badge/Badge Soft 1`] = `
+Array [
+  <span
+    className="badge expanded bg-blue-lt m-1"
+  >
+    blue-lt
+  </span>,
+  <span
+    className="badge expanded bg-azure-lt m-1"
+  >
+    azure-lt
+  </span>,
+  <span
+    className="badge expanded bg-indigo-lt m-1"
+  >
+    indigo-lt
+  </span>,
+  <span
+    className="badge expanded bg-purple-lt m-1"
+  >
+    purple-lt
+  </span>,
+  <span
+    className="badge expanded bg-pink-lt m-1"
+  >
+    pink-lt
+  </span>,
+  <span
+    className="badge expanded bg-red-lt m-1"
+  >
+    red-lt
+  </span>,
+  <span
+    className="badge expanded bg-orange-lt m-1"
+  >
+    orange-lt
+  </span>,
+  <span
+    className="badge expanded bg-yellow-lt m-1"
+  >
+    yellow-lt
+  </span>,
+  <span
+    className="badge expanded bg-lime-lt m-1"
+  >
+    lime-lt
+  </span>,
+  <span
+    className="badge expanded bg-green-lt m-1"
+  >
+    green-lt
+  </span>,
+  <span
+    className="badge expanded bg-teal-lt m-1"
+  >
+    teal-lt
+  </span>,
+  <span
+    className="badge expanded bg-cyan-lt m-1"
+  >
+    cyan-lt
+  </span>,
+  <span
+    className="badge expanded bg-gray-lt m-1"
+  >
+    gray-lt
+  </span>,
+  <span
+    className="badge expanded bg-dark-lt m-1"
+  >
+    dark-lt
+  </span>,
+]
+`;
+
+exports[`Storyshots Badge/BadgeAddOn Example 1`] = `
+<div
+  className="Badges"
+>
+  <span
+    className="badge expanded bg-primary text-white"
+  >
+    A User
+    <span
+      className="badge-addon"
+    >
+      <i
+        className="icon fe fe-user"
+      />
+    </span>
+  </span>
+  <span
+    className="badge expanded bg-danger text-white"
+  >
+    NPM
+    <span
+      className="badge-addon"
+    >
+      <i
+        className="icon fe fe-activity"
+      />
+    </span>
+  </span>
+  <span
+    className="badge expanded bg-primary text-white"
+  >
+    tests
+    <span
+      className="badge-addon badge-success"
+    >
+      passing
+    </span>
+  </span>
+  <span
+    className="badge expanded bg-blue text-white"
+  >
+    CSS gzip size
+    <span
+      className="badge-addon badge-warning"
+    >
+      1kb
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Badge/BadgeList Example 1`] = `
+<div
+  className="Badges"
+>
+  <span
+    className="badge expanded bg-primary text-white"
+  >
+    First Badge
+  </span>
+  <span
+    className="badge expanded bg-primary text-white"
+  >
+    Second Badge
+  </span>
+  <span
+    className="badge expanded bg-primary text-white"
+  >
+    Third Badge
+  </span>
+</div>
+`;
+
+exports[`Storyshots Breadcrumb/Breadcrumb Example 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li
+    className="breadcrumb-item"
+  >
+    Home
+  </li>
+  <li
+    className="breadcrumb-item"
+  >
+    Library
+  </li>
+  <li
+    className="breadcrumb-item active"
+  >
+    Data
+  </li>
+</ol>
+`;
+
+exports[`Storyshots Breadcrumb/Breadcrumb Variations: Arrows 1`] = `
+<ol
+  className="breadcrumb breadcrumb-arrows"
+>
+  <li
+    className="breadcrumb-item"
+  >
+    Home
+  </li>
+  <li
+    className="breadcrumb-item"
+  >
+    Library
+  </li>
+  <li
+    className="breadcrumb-item active"
+  >
+    Data
+  </li>
+</ol>
+`;
+
+exports[`Storyshots Breadcrumb/Breadcrumb Variations: Dots 1`] = `
+<ol
+  className="breadcrumb breadcrumb-dots"
+>
+  <li
+    className="breadcrumb-item"
+  >
+    Home
+  </li>
+  <li
+    className="breadcrumb-item"
+  >
+    Library
+  </li>
+  <li
+    className="breadcrumb-item active"
+  >
+    Data
+  </li>
+</ol>
+`;
+
+exports[`Storyshots Breadcrumb/BreadcrumbItem Example 1`] = `
+<li
+  className="breadcrumb-item"
+>
+  A Breadcrumb.Item
+</li>
+`;
+
+exports[`Storyshots Button/Button Block Level 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-block btn-primary"
+  >
+    Block level button
+  </button>
+  <button
+    className="btn btn-block btn-secondary"
+  >
+    Block level button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Colours 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-blue"
+  >
+    Blue
+  </button>
+  <button
+    className="btn btn-azure"
+  >
+    Azure
+  </button>
+  <button
+    className="btn btn-indigo"
+  >
+    Indigo
+  </button>
+  <button
+    className="btn btn-purple"
+  >
+    Purple
+  </button>
+  <button
+    className="btn btn-pink"
+  >
+    Pink
+  </button>
+  <button
+    className="btn btn-red"
+  >
+    Red
+  </button>
+  <button
+    className="btn btn-orange"
+  >
+    Orange
+  </button>
+  <button
+    className="btn btn-yellow"
+  >
+    Yellow
+  </button>
+  <button
+    className="btn btn-lime"
+  >
+    Lime
+  </button>
+  <button
+    className="btn btn-green"
+  >
+    Green
+  </button>
+  <button
+    className="btn btn-teal"
+  >
+    Teal
+  </button>
+  <button
+    className="btn btn-cyan"
+  >
+    Cyan
+  </button>
+  <button
+    className="btn btn-gray"
+  >
+    Gray
+  </button>
+  <button
+    className="btn btn-gray-dark"
+  >
+    Dark gray
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Disabled 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn disabled btn-primary"
+    disabled={true}
+  >
+    Button
+  </button>
+  <a
+    className="btn disabled btn-success"
+    disabled={true}
+    href="#"
+  >
+    Link
+  </a>
+  <input
+    className="btn disabled btn-info btn-icon"
+    disabled={true}
+    type="button"
+    value="Input"
+  />
+</div>
+`;
+
+exports[`Storyshots Button/Button Example 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-primary"
+  >
+    Button
+  </button>
+  <a
+    className="btn btn-primary"
+    href="#"
+  >
+    Link
+  </a>
+</div>
+`;
+
+exports[`Storyshots Button/Button Icons 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-blue"
+  >
+    <i
+      className="icon fe fe-upload mr-2"
+    />
+    Upload
+  </button>
+  <button
+    className="btn btn-warning"
+  >
+    <i
+      className="icon fe fe-heart mr-2"
+    />
+    I Like
+  </button>
+  <button
+    className="btn btn-success"
+  >
+    <i
+      className="icon fe fe-check mr-2"
+    />
+    I agree
+  </button>
+  <button
+    className="btn btn-outline-primary"
+  >
+    <i
+      className="icon fe fe-plus mr-2"
+    />
+    More
+  </button>
+  <button
+    className="btn btn-danger"
+  >
+    <i
+      className="icon fe fe-link mr-2"
+    />
+    Link
+  </button>
+  <button
+    className="btn btn-info"
+  >
+    <i
+      className="icon fe fe-message-circle mr-2"
+    />
+    Comment
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Link Button 1`] = `
+<button
+  className="btn btn-link"
+>
+  Link
+</button>
+`;
+
+exports[`Storyshots Button/Button Loading 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-primary btn-loading"
+  >
+    Button text
+  </button>
+  <button
+    className="btn btn-success btn-icon btn-loading"
+  >
+    <i
+      className="icon fe fe-check"
+    />
+  </button>
+  <button
+    className="btn btn-sm btn-warning btn-loading"
+  >
+    Button text
+  </button>
+  <button
+    className="btn btn-lg btn-danger btn-loading"
+  >
+    Button text
+  </button>
+  <button
+    className="btn btn-block btn-secondary btn-loading"
+  >
+    Button text
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Outline 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-outline-primary"
+  >
+    color='primary'
+  </button>
+  <button
+    className="btn btn-outline-secondary"
+  >
+    color='secondary'
+  </button>
+  <button
+    className="btn btn-outline-success"
+  >
+    color='success'
+  </button>
+  <button
+    className="btn btn-outline-info"
+  >
+    color='info'
+  </button>
+  <button
+    className="btn btn-outline-warning"
+  >
+    color='warning'
+  </button>
+  <button
+    className="btn btn-outline-danger"
+  >
+    color='danger'
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Pills 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-primary btn-pill"
+  >
+    color='primary'
+  </button>
+  <button
+    className="btn btn-secondary btn-pill"
+  >
+    color='secondary'
+  </button>
+  <button
+    className="btn btn-success btn-pill"
+  >
+    color='success'
+  </button>
+  <button
+    className="btn btn-info btn-pill"
+  >
+    color='info'
+  </button>
+  <button
+    className="btn btn-warning btn-pill"
+  >
+    color='warning'
+  </button>
+  <button
+    className="btn btn-danger btn-pill"
+  >
+    color='danger'
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Size 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-sm"
+  >
+    Small
+  </button>
+  <button
+    className="btn"
+  >
+    Default
+  </button>
+  <button
+    className="btn btn-lg"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Social 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-facebook"
+  >
+    <i
+      className="icon fa fa-facebook mr-2"
+    />
+    Facebook
+  </button>
+  <button
+    className="btn btn-twitter"
+  >
+    <i
+      className="icon fa fa-twitter mr-2"
+    />
+    Twitter
+  </button>
+  <button
+    className="btn btn-google"
+  >
+    <i
+      className="icon fa fa-google mr-2"
+    />
+    Google
+  </button>
+  <button
+    className="btn btn-youtube"
+  >
+    <i
+      className="icon fa fa-youtube mr-2"
+    />
+    Youtube
+  </button>
+  <button
+    className="btn btn-vimeo"
+  >
+    <i
+      className="icon fa fa-vimeo mr-2"
+    />
+    Vimeo
+  </button>
+  <button
+    className="btn btn-dribbble"
+  >
+    <i
+      className="icon fa fa-dribbble mr-2"
+    />
+    Dribbble
+  </button>
+  <button
+    className="btn btn-github"
+  >
+    <i
+      className="icon fa fa-github mr-2"
+    />
+    Github
+  </button>
+  <button
+    className="btn btn-instagram"
+  >
+    <i
+      className="icon fa fa-instagram mr-2"
+    />
+    Instagram
+  </button>
+  <button
+    className="btn btn-pinterest"
+  >
+    <i
+      className="icon fa fa-pinterest mr-2"
+    />
+    Pinterest
+  </button>
+  <button
+    className="btn btn-vk"
+  >
+    <i
+      className="icon fa fa-vk mr-2"
+    />
+    VKontakte
+  </button>
+  <button
+    className="btn btn-rss"
+  >
+    <i
+      className="icon fa fa-rss mr-2"
+    />
+    RSS
+  </button>
+  <button
+    className="btn btn-flickr"
+  >
+    <i
+      className="icon fa fa-flickr mr-2"
+    />
+    Flickr
+  </button>
+  <button
+    className="btn btn-bitbucket"
+  >
+    <i
+      className="icon fa fa-bitbucket mr-2"
+    />
+    Bitbucket
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/Button Square 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-primary btn-square"
+  >
+    color='primary'
+  </button>
+  <button
+    className="btn btn-secondary btn-square"
+  >
+    color='secondary'
+  </button>
+  <button
+    className="btn btn-success btn-square"
+  >
+    color='success'
+  </button>
+  <button
+    className="btn btn-info btn-square"
+  >
+    color='info'
+  </button>
+  <button
+    className="btn btn-warning btn-square"
+  >
+    color='warning'
+  </button>
+  <button
+    className="btn btn-danger btn-square"
+  >
+    color='danger'
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/ButtonDropdown Example 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="dropdown"
+    type="button"
+  >
+    <button
+      className="dropdown-toggle"
+      color="secondary"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-calendar"
+      />
+       
+    </button>
+  </div>
+  <div
+    className="dropdown"
+    value="Show Calendar"
+  >
+    <button
+      className="dropdown-toggle"
+      color="secondary"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-calendar"
+      />
+       
+    </button>
+  </div>
+  <div
+    className="dropdown"
+    value="Show Calendar"
+  >
+    <button
+      className="dropdown-toggle"
+      color="primary"
+      onClick={[Function]}
+    />
+  </div>
+  <button
+    className="btn dropdown-toggle"
+    onClick={[Function]}
+  >
+    A Button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/ButtonList Alignment 1`] = `
+Array [
+  <div
+    className="btn-list text-center"
+  >
+    <button
+      className="btn btn-primary"
+    >
+      Align
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Center
+    </button>
+  </div>,
+  <div
+    className="btn-list text-right"
+  >
+    <button
+      className="btn btn-primary"
+    >
+      Align
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Right
+    </button>
+  </div>,
+]
+`;
+
+exports[`Storyshots Button/ButtonList Example 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-success"
+  >
+    Save changes
+  </button>
+  <button
+    className="btn btn-secondary"
+  >
+    Save and continue
+  </button>
+  <button
+    className="btn btn-danger"
+  >
+    Cancel
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button/ButtonList Wrapping 1`] = `
+<div
+  style={
+    Object {
+      "width": 300,
+    }
+  }
+>
+  <div
+    className="btn-list"
+  >
+    <button
+      className="btn btn-secondary"
+    >
+      One
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Two
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Three
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Four
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Five
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Six
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Seven
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Eight
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Nine
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Ten
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Eleven
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Twelve
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Thirteen
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Fourteen
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Fifteen
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Sixteen
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Seventeen
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Eighteen
+    </button>
+    <button
+      className="btn btn-secondary"
+    >
+      Nineteen
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/BlogCard Example 1`] = `
+<div
+  className="card"
+>
+  <a
+    href="http://www.example.com"
+  >
+    <img
+      alt="Penguin"
+      className="card-img-top"
+      src="https://tabler.github.io/tabler/demo/photos/david-klaasen-54203-500.jpg"
+    />
+  </a>
+  <div
+    className="card-body d-flex flex-column"
+  >
+    <h4>
+      <a
+        href="http://www.example.com"
+      >
+        And this isn't my nose. This is a false one.
+      </a>
+    </h4>
+    <div
+      className="text-muted"
+    >
+      Look, my liege! The Knights Who Say Ni demand a sacrifice! …Are you suggesting that coconuts migr...
+    </div>
+    <div
+      className="d-flex align-items-center pt-5 mt-auto"
+    >
+      <div
+        className="avatar avatar-md mr-3"
+        style={
+          Object {
+            "backgroundImage": "url(https://tabler.github.io/tabler/demo/faces/female/18.jpg",
+          }
+        }
+      />
+      <div>
+        <a
+          className="text-default"
+          href="/profile.html"
+        >
+          Rose Bradley
+        </a>
+        <small
+          className="d-block text-muted"
+        >
+          3 days ago
+        </small>
+      </div>
+      <div
+        className="ml-auto text-muted"
+      >
+        <a
+          className="icon d-none d-md-inline-block ml-3"
+          href="#"
+        >
+          <i
+            className="icon fe fe-heart"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/Card Advanced 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-header"
+    style={null}
+  >
+    <h3
+      className="card-title"
+    >
+      Card title
+    </h3>
+    <div
+      className="card-options"
+    >
+      <button
+        className="btn btn-sm btn-primary"
+      >
+        Action 1
+      </button>
+      <button
+        className="btn btn-sm btn-secondary ml-2"
+      >
+        Action 2
+      </button>
+    </div>
+  </div>
+  <div
+    className="card-body"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem. A consequuntur, deserunt eaque error nulla temporibus!
+  </div>
+  <div
+    className="card-footer"
+  >
+    This is standard card footer
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/Card Example 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-header"
+    style={null}
+  >
+    <h3
+      className="card-title"
+    >
+      Card title
+    </h3>
+  </div>
+  <div
+    className="card-body"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+          deleniti fugit incidunt, iste, itaque minima neque pariatur
+          perferendis sed suscipit velit vitae voluptatem. A consequuntur,
+          deserunt eaque error nulla temporibus!
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/Card Row Deck 1`] = `
+<div
+  className="row row-cards row-deck"
+>
+  <div
+    className="col col-md-4"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        Short content
+      </div>
+    </div>
+  </div>
+  <div
+    className="col col-md-4"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        Extra long content of card. Lorem ipsum dolor sit amet,
+              consetetur sadipscing elitr
+      </div>
+    </div>
+  </div>
+  <div
+    className="col col-md-4"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-body"
+      >
+        Short content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/Card With Loader 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-header"
+    style={null}
+  >
+    <h3
+      className="card-title"
+    >
+      Card with loader
+    </h3>
+    <div
+      className="card-options"
+    >
+      <a
+        className="card-options-collapse"
+        data-toggle="card-collapse"
+        onClick={[Function]}
+      >
+        <i
+          className="icon fe fe-chevron-up"
+        />
+      </a>
+      <a
+        className="card-options-remove"
+        data-toggle="card-remove"
+        onClick={[Function]}
+      >
+        <i
+          className="icon fe fe-x"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    className="card-body"
+  >
+    <div
+      className="dimmer active"
+    >
+      <div
+        className="loader"
+      />
+      <div
+        className="dimmer-content"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem. A consequuntur, deserunt eaque error nulla temporibus!
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/CardStatus Example 1`] = `
+<div
+  className="row row-cards row-deck"
+>
+  <div
+    className="col col-md-6"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-status bg-purple"
+      />
+      <div
+        className="card-header"
+        style={null}
+      >
+        <h3
+          className="card-title"
+        >
+          Card status
+        </h3>
+      </div>
+      <div
+        className="card-body"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur
+              perferendis sed suscipit velit vitae voluptatem. A consequuntur,
+              deserunt eaque error nulla temporibus!
+      </div>
+    </div>
+  </div>
+  <div
+    className="col col-md-6"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="card-status bg-blue card-status-left"
+      />
+      <div
+        className="card-header"
+        style={null}
+      >
+        <h3
+          className="card-title"
+        >
+          Card status left side
+        </h3>
+      </div>
+      <div
+        className="card-body"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam deleniti fugit incidunt, iste, itaque minima neque pariatur perferendis sed suscipit velit vitae voluptatem. A consequuntur, deserunt eaque error nulla temporibus!
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/StampCard Example 1`] = `
+Array [
+  <div
+    className="card"
+  >
+    <div
+      className="p-3 d-flex align-items-center"
+    >
+      <span
+        className="mr-3 stamp stamp-md bg-yellow text-white"
+      />
+      <div>
+        <div
+          className="m-0 h3"
+        >
+          Headline
+        </div>
+        <small
+          className="sm text-muted"
+        >
+          Something Else
+        </small>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="card"
+  >
+    <div
+      className="p-3 d-flex align-items-center"
+    >
+      <span
+        className="mr-3 stamp stamp-md bg-green text-white"
+      >
+        <i
+          className="icon fe fe-check"
+        />
+      </span>
+      <div>
+        Success!
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Card/StatsCard Layout 1 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body p-3 text-center"
+  >
+    <div
+      className="text-red text-right"
+    >
+      -3%
+      <i
+        className="icon fe fe-chevron-down"
+      />
+    </div>
+    <div
+      className="h1 m-0"
+    >
+      17
+    </div>
+    <div
+      className="text-gray  mb-4"
+    >
+      Closed Today
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/StatsCard Layout 2 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-value float-right text-green"
+    >
+      +5%
+    </div>
+    <h3
+      className="h3 mb-1"
+      mb={4}
+      mt={0}
+    >
+      423
+    </h3>
+    <div
+      className="text-muted"
+    >
+      Users online
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/StoreCard Example 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="mb-4 text-center"
+    >
+      <img
+        alt="iPhone"
+        src="https://tabler.github.io/tabler/demo/products/apple-iphone7-special.jpg"
+      />
+    </div>
+    <h3
+      className="card-title"
+    >
+      
+    </h3>
+    <div
+      className="card-subtitle"
+    >
+      
+    </div>
+    <div
+      className="mt-5 d-flex align-items-center"
+    >
+      <div
+        className="product-price"
+      >
+        <strong>
+          
+        </strong>
+      </div>
+      <div
+        className="ml-auto"
+      >
+        <button
+          className="btn btn-primary"
+        >
+          <i
+            className="icon fe fe-plus"
+          />
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card/TabbedCard Example 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-header"
+    style={null}
+  >
+    <ul
+      className="nav nav-tabs Tab_header_tabs"
+    >
+      <li
+        className="nav-item"
+      >
+        <a
+          className="nav-link active"
+          onClick={[Function]}
+        >
+          Hello
+        </a>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          onClick={[Function]}
+        >
+          Goodbye
+        </a>
+      </li>
+      <li
+        className="nav-item"
+      >
+        <a
+          className="nav-link"
+          onClick={[Function]}
+        >
+          Complex
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="card-body"
+  >
+    Hello World
+  </div>
+</div>
+`;
+
+exports[`Storyshots Divider/Divider Example 1`] = `
+<h6
+  className="divider"
+>
+  OR
+</h6>
+`;
+
+exports[`Storyshots Dropdown/AccountDropdown Example 1`] = `
+<li
+  className="nav-item dropdown"
+>
+  <a
+    className="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color ml-2"
+    onClick={[Function]}
+  >
+    <span
+      className="avatar"
+      style={
+        Object {
+          "backgroundImage": "url(./demo/faces/female/25.jpg)",
+        }
+      }
+    />
+    <span
+      className="ml-2 d-none d-lg-block leading-none"
+    >
+      <span>
+        Jane Pearson
+      </span>
+      <span
+        className="text-muted d-block mt-1 text-h6"
+      >
+        Administrator
+      </span>
+    </span>
+  </a>
+</li>
+`;
+
+exports[`Storyshots Dropdown/Dropdown Example 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/Dropdown Items as Objects 1`] = `
+<div
+  className="dropdown"
+  type="button"
+>
+  <button
+    className="dropdown-toggle"
+    color="primary"
+    onClick={[Function]}
+  >
+    <i
+      className="icon fe fe-globe"
+    />
+     
+    Item Icons and Badges
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/Dropdown Variations 1`] = `
+<div
+  className="dropdown"
+  type="button"
+>
+  <button
+    className=""
+    color="primary"
+    onClick={[Function]}
+  >
+    <i
+      className="icon fe fe-globe"
+    />
+     
+    Button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/DropdownItem Basic 1`] = `
+<a
+  className="dropdown-item"
+>
+  <span
+    className="float-right"
+  >
+    <span
+      className="badge expanded bg-success text-white"
+    >
+      New !
+    </span>
+  </span>
+  Notifications
+</a>
+`;
+
+exports[`Storyshots Dropdown/DropdownItem Example 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/DropdownMenu Example 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/DropdownMenu Using items prop 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/DropdownMenu Using itemsObject prop 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/DropdownTrigger Example 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/DropdownTrigger Trigger content prop 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots Dropdown/DropdownTrigger Trigger prop 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    className="dropdown-toggle"
+    onClick={[Function]}
+  >
+    Menu
+  </button>
+</div>
+`;
+
+exports[`Storyshots El/El Example 1`] = `
+<div
+  className=""
+>
+  Hello World
+</div>
+`;
+
+exports[`Storyshots Form/Form Example 1`] = `
+<form
+  className=""
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      Username
+    </label>
+    <input
+      className="form-control"
+      name="username"
+      placeholder="Enter Username"
+      type="text"
+    />
+  </div>
+  <button
+    className="btn"
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;
+
+exports[`Storyshots Form/FormColorCheck Example 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+  >
+    Color input
+  </label>
+  <div
+    className="row gutters-xs"
+  >
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="azure"
+        />
+        <span
+          className="colorinput-color bg-azure"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="indigo"
+        />
+        <span
+          className="colorinput-color bg-indigo"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="purple"
+        />
+        <span
+          className="colorinput-color bg-purple"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="pink"
+        />
+        <span
+          className="colorinput-color bg-pink"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="red"
+        />
+        <span
+          className="colorinput-color bg-red"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="orange"
+        />
+        <span
+          className="colorinput-color bg-orange"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="yellow"
+        />
+        <span
+          className="colorinput-color bg-yellow"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="lime"
+        />
+        <span
+          className="colorinput-color bg-lime"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="green"
+        />
+        <span
+          className="colorinput-color bg-green"
+        />
+      </label>
+    </div>
+    <div
+      className="col col-auto"
+    >
+      <label
+        className="colorinput"
+      >
+        <input
+          className="colorinput-input"
+          type="checkbox"
+          value="teal"
+        />
+        <span
+          className="colorinput-color bg-teal"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form/FormDatePicker Example 1`] = `
+<div
+  className=""
+>
+  <div
+    className="input-group"
+  >
+    <select
+      className="form-control custom-select"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      />
+      <option
+        value={0}
+      >
+        January
+      </option>
+      <option
+        value={1}
+      >
+        February
+      </option>
+      <option
+        value={2}
+      >
+        March
+      </option>
+      <option
+        value={3}
+      >
+        April
+      </option>
+      <option
+        value={4}
+      >
+        May
+      </option>
+      <option
+        value={5}
+      >
+        June
+      </option>
+      <option
+        value={6}
+      >
+        July
+      </option>
+      <option
+        value={7}
+      >
+        August
+      </option>
+      <option
+        value={8}
+      >
+        September
+      </option>
+      <option
+        value={9}
+      >
+        October
+      </option>
+      <option
+        value={10}
+      >
+        November
+      </option>
+      <option
+        value={11}
+      >
+        December
+      </option>
+    </select>
+    <select
+      className="form-control custom-select"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      />
+    </select>
+    <select
+      className="form-control custom-select"
+      onChange={[Function]}
+      value=""
+    >
+      <option
+        value=""
+      />
+      <option
+        value={2019}
+      >
+        2019
+      </option>
+      <option
+        value={2018}
+      >
+        2018
+      </option>
+      <option
+        value={2017}
+      >
+        2017
+      </option>
+      <option
+        value={2016}
+      >
+        2016
+      </option>
+      <option
+        value={2015}
+      >
+        2015
+      </option>
+      <option
+        value={2014}
+      >
+        2014
+      </option>
+      <option
+        value={2013}
+      >
+        2013
+      </option>
+      <option
+        value={2012}
+      >
+        2012
+      </option>
+      <option
+        value={2011}
+      >
+        2011
+      </option>
+      <option
+        value={2010}
+      >
+        2010
+      </option>
+      <option
+        value={2009}
+      >
+        2009
+      </option>
+      <option
+        value={2008}
+      >
+        2008
+      </option>
+      <option
+        value={2007}
+      >
+        2007
+      </option>
+      <option
+        value={2006}
+      >
+        2006
+      </option>
+      <option
+        value={2005}
+      >
+        2005
+      </option>
+      <option
+        value={2004}
+      >
+        2004
+      </option>
+      <option
+        value={2003}
+      >
+        2003
+      </option>
+      <option
+        value={2002}
+      >
+        2002
+      </option>
+      <option
+        value={2001}
+      >
+        2001
+      </option>
+      <option
+        value={2000}
+      >
+        2000
+      </option>
+      <option
+        value={1999}
+      >
+        1999
+      </option>
+      <option
+        value={1998}
+      >
+        1998
+      </option>
+      <option
+        value={1997}
+      >
+        1997
+      </option>
+      <option
+        value={1996}
+      >
+        1996
+      </option>
+      <option
+        value={1995}
+      >
+        1995
+      </option>
+      <option
+        value={1994}
+      >
+        1994
+      </option>
+      <option
+        value={1993}
+      >
+        1993
+      </option>
+      <option
+        value={1992}
+      >
+        1992
+      </option>
+      <option
+        value={1991}
+      >
+        1991
+      </option>
+      <option
+        value={1990}
+      >
+        1990
+      </option>
+      <option
+        value={1989}
+      >
+        1989
+      </option>
+      <option
+        value={1988}
+      >
+        1988
+      </option>
+      <option
+        value={1987}
+      >
+        1987
+      </option>
+      <option
+        value={1986}
+      >
+        1986
+      </option>
+      <option
+        value={1985}
+      >
+        1985
+      </option>
+      <option
+        value={1984}
+      >
+        1984
+      </option>
+      <option
+        value={1983}
+      >
+        1983
+      </option>
+      <option
+        value={1982}
+      >
+        1982
+      </option>
+      <option
+        value={1981}
+      >
+        1981
+      </option>
+      <option
+        value={1980}
+      >
+        1980
+      </option>
+      <option
+        value={1979}
+      >
+        1979
+      </option>
+      <option
+        value={1978}
+      >
+        1978
+      </option>
+      <option
+        value={1977}
+      >
+        1977
+      </option>
+      <option
+        value={1976}
+      >
+        1976
+      </option>
+      <option
+        value={1975}
+      >
+        1975
+      </option>
+      <option
+        value={1974}
+      >
+        1974
+      </option>
+      <option
+        value={1973}
+      >
+        1973
+      </option>
+      <option
+        value={1972}
+      >
+        1972
+      </option>
+      <option
+        value={1971}
+      >
+        1971
+      </option>
+      <option
+        value={1970}
+      >
+        1970
+      </option>
+      <option
+        value={1969}
+      >
+        1969
+      </option>
+      <option
+        value={1968}
+      >
+        1968
+      </option>
+      <option
+        value={1967}
+      >
+        1967
+      </option>
+      <option
+        value={1966}
+      >
+        1966
+      </option>
+      <option
+        value={1965}
+      >
+        1965
+      </option>
+      <option
+        value={1964}
+      >
+        1964
+      </option>
+      <option
+        value={1963}
+      >
+        1963
+      </option>
+      <option
+        value={1962}
+      >
+        1962
+      </option>
+      <option
+        value={1961}
+      >
+        1961
+      </option>
+      <option
+        value={1960}
+      >
+        1960
+      </option>
+      <option
+        value={1959}
+      >
+        1959
+      </option>
+      <option
+        value={1958}
+      >
+        1958
+      </option>
+      <option
+        value={1957}
+      >
+        1957
+      </option>
+      <option
+        value={1956}
+      >
+        1956
+      </option>
+      <option
+        value={1955}
+      >
+        1955
+      </option>
+      <option
+        value={1954}
+      >
+        1954
+      </option>
+      <option
+        value={1953}
+      >
+        1953
+      </option>
+      <option
+        value={1952}
+      >
+        1952
+      </option>
+      <option
+        value={1951}
+      >
+        1951
+      </option>
+      <option
+        value={1950}
+      >
+        1950
+      </option>
+      <option
+        value={1949}
+      >
+        1949
+      </option>
+      <option
+        value={1948}
+      >
+        1948
+      </option>
+      <option
+        value={1947}
+      >
+        1947
+      </option>
+      <option
+        value={1946}
+      >
+        1946
+      </option>
+      <option
+        value={1945}
+      >
+        1945
+      </option>
+      <option
+        value={1944}
+      >
+        1944
+      </option>
+      <option
+        value={1943}
+      >
+        1943
+      </option>
+      <option
+        value={1942}
+      >
+        1942
+      </option>
+      <option
+        value={1941}
+      >
+        1941
+      </option>
+      <option
+        value={1940}
+      >
+        1940
+      </option>
+      <option
+        value={1939}
+      >
+        1939
+      </option>
+      <option
+        value={1938}
+      >
+        1938
+      </option>
+      <option
+        value={1937}
+      >
+        1937
+      </option>
+      <option
+        value={1936}
+      >
+        1936
+      </option>
+      <option
+        value={1935}
+      >
+        1935
+      </option>
+      <option
+        value={1934}
+      >
+        1934
+      </option>
+      <option
+        value={1933}
+      >
+        1933
+      </option>
+      <option
+        value={1932}
+      >
+        1932
+      </option>
+      <option
+        value={1931}
+      >
+        1931
+      </option>
+      <option
+        value={1930}
+      >
+        1930
+      </option>
+      <option
+        value={1929}
+      >
+        1929
+      </option>
+      <option
+        value={1928}
+      >
+        1928
+      </option>
+      <option
+        value={1927}
+      >
+        1927
+      </option>
+      <option
+        value={1926}
+      >
+        1926
+      </option>
+      <option
+        value={1925}
+      >
+        1925
+      </option>
+      <option
+        value={1924}
+      >
+        1924
+      </option>
+      <option
+        value={1923}
+      >
+        1923
+      </option>
+      <option
+        value={1922}
+      >
+        1922
+      </option>
+      <option
+        value={1921}
+      >
+        1921
+      </option>
+      <option
+        value={1920}
+      >
+        1920
+      </option>
+      <option
+        value={1919}
+      >
+        1919
+      </option>
+      <option
+        value={1918}
+      >
+        1918
+      </option>
+      <option
+        value={1917}
+      >
+        1917
+      </option>
+      <option
+        value={1916}
+      >
+        1916
+      </option>
+      <option
+        value={1915}
+      >
+        1915
+      </option>
+      <option
+        value={1914}
+      >
+        1914
+      </option>
+      <option
+        value={1913}
+      >
+        1913
+      </option>
+      <option
+        value={1912}
+      >
+        1912
+      </option>
+      <option
+        value={1911}
+      >
+        1911
+      </option>
+      <option
+        value={1910}
+      >
+        1910
+      </option>
+      <option
+        value={1909}
+      >
+        1909
+      </option>
+      <option
+        value={1908}
+      >
+        1908
+      </option>
+      <option
+        value={1907}
+      >
+        1907
+      </option>
+      <option
+        value={1906}
+      >
+        1906
+      </option>
+      <option
+        value={1905}
+      >
+        1905
+      </option>
+      <option
+        value={1904}
+      >
+        1904
+      </option>
+      <option
+        value={1903}
+      >
+        1903
+      </option>
+      <option
+        value={1902}
+      >
+        1902
+      </option>
+      <option
+        value={1901}
+      >
+        1901
+      </option>
+      <option
+        value={1900}
+      >
+        1900
+      </option>
+      <option
+        value={1899}
+      >
+        1899
+      </option>
+      <option
+        value={1898}
+      >
+        1898
+      </option>
+      <option
+        value={1897}
+      >
+        1897
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form/FormFieldSet Example 1`] = `
+<fieldset
+  className="form-fieldset"
+>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      Full name
+      <span
+        className="form-required"
+      >
+        *
+      </span>
+    </label>
+    <input
+      className="form-control"
+      name="example-text-input"
+      type="text"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      Company
+      <span
+        className="form-required"
+      >
+        *
+      </span>
+    </label>
+    <input
+      className="form-control"
+      name="example-text-input"
+      type="text"
+    />
+  </div>
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      Email
+      <span
+        className="form-required"
+      >
+        *
+      </span>
+    </label>
+    <input
+      className="form-control"
+      name="example-text-input"
+      type="text"
+    />
+  </div>
+  <div
+    className="form-group mb-0"
+  >
+    <label
+      className="form-label"
+    >
+      Phone number
+    </label>
+    <input
+      className="form-control"
+      name="example-text-input"
+      type="text"
+    />
+  </div>
+</fieldset>
+`;
+
+exports[`Storyshots Form/FormImageCheck Example 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+  >
+    Image input
+  </label>
+  <div
+    className="row gutters-sm"
+  >
+    <div
+      className="col col-6 col-sm-2"
+    >
+      <label
+        className="imagecheck mb-4"
+      >
+        <input
+          className="imagecheck-input"
+          name="imagecheck"
+          type="checkbox"
+          value="1"
+        />
+        <figure
+          className="imagecheck-figure"
+        >
+          <img
+            alt="Select"
+            className="imagecheck-image"
+            src="/demo/photos/nathan-anderson-316188-500.jpg"
+          />
+        </figure>
+      </label>
+    </div>
+    <div
+      className="col col-6 col-sm-2"
+    >
+      <label
+        className="imagecheck mb-4"
+      >
+        <input
+          className="imagecheck-input"
+          name="imagecheck"
+          type="checkbox"
+          value="2"
+        />
+        <figure
+          className="imagecheck-figure"
+        >
+          <img
+            alt="Select"
+            className="imagecheck-image"
+            src="/demo/photos/nathan-dumlao-287713-500.jpg"
+          />
+        </figure>
+      </label>
+    </div>
+    <div
+      className="col col-6 col-sm-2"
+    >
+      <label
+        className="imagecheck mb-4"
+      >
+        <input
+          className="imagecheck-input"
+          name="imagecheck"
+          type="checkbox"
+          value="3"
+        />
+        <figure
+          className="imagecheck-figure"
+        >
+          <img
+            alt="Select"
+            className="imagecheck-image"
+            src="/demo/photos/nicolas-picard-208276-500.jpg"
+          />
+        </figure>
+      </label>
+    </div>
+    <div
+      className="col col-6 col-sm-2"
+    >
+      <label
+        className="imagecheck mb-4"
+      >
+        <input
+          className="imagecheck-input"
+          name="imagecheck"
+          type="checkbox"
+          value="4"
+        />
+        <figure
+          className="imagecheck-figure"
+        >
+          <img
+            alt="Select"
+            className="imagecheck-image"
+            src="/demo/photos/oskar-vertetics-53043-500.jpg"
+          />
+        </figure>
+      </label>
+    </div>
+    <div
+      className="col col-6 col-sm-2"
+    >
+      <label
+        className="imagecheck mb-4"
+      >
+        <input
+          className="imagecheck-input"
+          name="imagecheck"
+          type="checkbox"
+          value="5"
+        />
+        <figure
+          className="imagecheck-figure"
+        >
+          <img
+            alt="Select"
+            className="imagecheck-image"
+            src="/demo/photos/priscilla-du-preez-181896-500.jpg"
+          />
+        </figure>
+      </label>
+    </div>
+    <div
+      className="col col-6 col-sm-2"
+    >
+      <label
+        className="imagecheck mb-4"
+      >
+        <input
+          className="imagecheck-input"
+          name="imagecheck"
+          type="checkbox"
+          value="6"
+        />
+        <figure
+          className="imagecheck-figure"
+        >
+          <img
+            alt="Select"
+            className="imagecheck-image"
+            src="/demo/photos/ricardo-gomez-angel-262359-500.jpg"
+          />
+        </figure>
+      </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form/FormInput Append Icon 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+  >
+    Input Icon
+  </label>
+  <div
+    className="input-icon"
+  >
+    <input
+      className="form-control"
+      placeholder="Search for..."
+      type="text"
+    />
+    <span
+      className="input-icon-addon"
+    >
+      <i
+        className="icon fe fe-search"
+      />
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form/FormInput Basic 1`] = `
+<input
+  className="form-control"
+  name="username"
+  placeholder="Username"
+  type="text"
+/>
+`;
+
+exports[`Storyshots Form/FormInput Labelled 1`] = `
+Array [
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      username
+    </label>
+    <input
+      className="form-control"
+      placeholder="Username"
+      type="text"
+    />
+  </div>,
+  <div
+    className="form-group"
+  >
+    <label
+      className="form-label"
+    >
+      Username
+    </label>
+    <input
+      className="form-control"
+      placeholder="Username"
+      type="text"
+    />
+  </div>,
+]
+`;
+
+exports[`Storyshots Form/FormInput Prepend Icon 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+  >
+    Input Icon
+  </label>
+  <div
+    className="input-icon"
+  >
+    <span
+      className="input-icon-addon"
+    >
+      <i
+        className="icon fe fe-user"
+      />
+    </span>
+    <input
+      className="form-control"
+      placeholder="Username"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Form/FormInputGroup Example 1`] = `
+<div
+  className="input-group"
+>
+  <input
+    className="form-control"
+    placeholder="Search for..."
+    type="text"
+  />
+  <span
+    className="input-group-append"
+  >
+    <a
+      className="btn btn-primary"
+      href="http://www.google.com"
+    >
+      Go!
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Form/FormInputGroup Input from props 1`] = `
+<div
+  className="input-group"
+>
+  <input
+    className="form-control"
+    placeholder="Search for..."
+    type="text"
+  />
+  <span
+    className="input-group-append"
+  >
+    <a
+      className="btn btn-primary"
+      href="http://www.google.com"
+    >
+      Go!
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Form/FormInputGroupAppend Example 1`] = `
+<div
+  className="input-group"
+>
+  <input
+    className="form-control"
+    placeholder="Search for..."
+    type="text"
+  />
+  <span
+    className="input-group-append"
+  >
+    <a
+      className="btn btn-primary"
+      href="http://www.google.com"
+    >
+      Go!
+    </a>
+  </span>
+</div>
+`;
+
+exports[`Storyshots Form/FormInputGroupPrepend Example 1`] = `
+<span
+  className="input-group-prepend"
+>
+  <input
+    className="form-control"
+    placeholder="Search for..."
+    type="text"
+  />
+  <span
+    className="input-group-prepend"
+  >
+    <a
+      className="btn btn-primary"
+      href="http://www.google.com"
+    >
+      Go!
+    </a>
+  </span>
+</span>
+`;
+
+exports[`Storyshots Form/FormMaskedInput Example 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+  >
+    Date
+  </label>
+  <input
+    className="form-control"
+    mask={
+      Array [
+        /\\\\d/,
+        /\\\\d/,
+        "/",
+        /\\\\d/,
+        /\\\\d/,
+        "/",
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+        /\\\\d/,
+      ]
+    }
+    placeholder="00/00/0000"
+  />
+</div>
+`;
+
+exports[`Storyshots Form/FormSwitchStack Example 1`] = `
+<div
+  className="form-group"
+>
+  <label
+    className="form-label"
+  >
+    Toggle switches
+  </label>
+  <div
+    className="custom-switches-stacked"
+  >
+    <label
+      className="custom-switch"
+    >
+      <input
+        className="custom-switch-input"
+        name="toggle"
+        type="radio"
+        value="option1"
+      />
+      <span
+        className="custom-switch-indicator"
+      />
+      <span
+        className="custom-switch-description"
+      >
+        Option 1
+      </span>
+    </label>
+    <label
+      className="custom-switch"
+    >
+      <input
+        className="custom-switch-input"
+        name="toggle"
+        type="radio"
+        value="option2"
+      />
+      <span
+        className="custom-switch-indicator"
+      />
+      <span
+        className="custom-switch-description"
+      >
+        Option 2
+      </span>
+    </label>
+    <label
+      className="custom-switch"
+    >
+      <input
+        className="custom-switch-input"
+        name="toggle"
+        type="radio"
+        value="option3"
+      />
+      <span
+        className="custom-switch-indicator"
+      />
+      <span
+        className="custom-switch-description"
+      >
+        Option 3
+      </span>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid/Grid Example 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col"
+  >
+    A
+  </div>
+  <div
+    className="col"
+  >
+    B
+  </div>
+  <div
+    className="col"
+  >
+    C
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid/GridCol Column Offset 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col col-6 offset-3"
+  >
+    2
+  </div>
+  <div
+    className="col col-md-6 offset-md-3"
+  >
+    4
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid/GridCol Column Width 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col col-2"
+  >
+    1
+  </div>
+  <div
+    className="col col-4"
+  >
+    2
+  </div>
+  <div
+    className="col col-6"
+  >
+    3
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid/GridCol Example 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col"
+  >
+    1
+  </div>
+  <div
+    className="col"
+  >
+    2
+  </div>
+  <div
+    className="col"
+  >
+    3
+  </div>
+  <div
+    className="col"
+  >
+    4
+  </div>
+  <div
+    className="col"
+  >
+    5
+  </div>
+  <div
+    className="col"
+  >
+    6
+  </div>
+  <div
+    className="col"
+  >
+    7
+  </div>
+  <div
+    className="col"
+  >
+    8
+  </div>
+  <div
+    className="col"
+  >
+    9
+  </div>
+  <div
+    className="col"
+  >
+    10
+  </div>
+  <div
+    className="col"
+  >
+    11
+  </div>
+  <div
+    className="col"
+  >
+    12
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid/GridCol Responsive column widths 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1"
+  >
+    1
+  </div>
+  <div
+    className="col col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1"
+  >
+    2
+  </div>
+  <div
+    className="col col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1"
+  >
+    3
+  </div>
+  <div
+    className="col col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1"
+  >
+    4
+  </div>
+  <div
+    className="col col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1"
+  >
+    5
+  </div>
+  <div
+    className="col col-xs-12 col-sm-6 col-md-4 col-lg-2 col-xl-1"
+  >
+    6
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid/GridRow Gutters 1`] = `
+Array [
+  <div
+    className="row gutters-xs"
+  >
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        A
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        B
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        C
+      </div>
+    </div>
+  </div>,
+  <div
+    className="row gutters-sm"
+  >
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        A
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        B
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        C
+      </div>
+    </div>
+  </div>,
+  <div
+    className="row gutters-md"
+  >
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        A
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        B
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        C
+      </div>
+    </div>
+  </div>,
+  <div
+    className="row gutters-lg"
+  >
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        A
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        B
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px grey solid",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        C
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Grid/GridRow Rows of Cards 1`] = `
+Array [
+  <div
+    className="row row-cards"
+  >
+    <div
+      className="col"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-header"
+          style={null}
+        >
+          <h3
+            className="card-title"
+          >
+            Title
+          </h3>
+        </div>
+        <div
+          className="card-body"
+        >
+          A
+        </div>
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-header"
+          style={null}
+        >
+          <h3
+            className="card-title"
+          >
+            Title
+          </h3>
+        </div>
+        <div
+          className="card-body"
+        >
+          orem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+        deleniti fugit incidunt.
+        </div>
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-header"
+          style={null}
+        >
+          <h3
+            className="card-title"
+          >
+            Title
+          </h3>
+        </div>
+        <div
+          className="card-body"
+        >
+          C
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="row row-cards row-deck"
+  >
+    <div
+      className="col"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-header"
+          style={null}
+        >
+          <h3
+            className="card-title"
+          >
+            Title
+          </h3>
+        </div>
+        <div
+          className="card-body"
+        >
+          A
+        </div>
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-header"
+          style={null}
+        >
+          <h3
+            className="card-title"
+          >
+            Title
+          </h3>
+        </div>
+        <div
+          className="card-body"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+          deleniti fugit incidunt.
+        </div>
+      </div>
+    </div>
+    <div
+      className="col"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="card-header"
+          style={null}
+        >
+          <h3
+            className="card-title"
+          >
+            Title
+          </h3>
+        </div>
+        <div
+          className="card-body"
+        >
+          C
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Header/H1 Example 1`] = `
+<h1
+  className="h1"
+  mb={4}
+  mt={0}
+>
+  This is an h1
+</h1>
+`;
+
+exports[`Storyshots Header/H2 Example 1`] = `
+<h2
+  className="h2"
+  mb={4}
+  mt={0}
+>
+  This is an h2
+</h2>
+`;
+
+exports[`Storyshots Header/H3 Example 1`] = `
+<h3
+  className="h3"
+  mb={4}
+  mt={0}
+>
+  This is an h3
+</h3>
+`;
+
+exports[`Storyshots Header/H4 Example 1`] = `
+<h4
+  className="h4"
+  mb={4}
+  mt={0}
+>
+  This is an h4
+</h4>
+`;
+
+exports[`Storyshots Header/H5 Example 1`] = `
+<h5
+  className="h5"
+  mb={4}
+  mt={0}
+>
+  This is an h5
+</h5>
+`;
+
+exports[`Storyshots Header/H6 Example 1`] = `
+<h6
+  className="h6"
+  mb={4}
+  mt={0}
+>
+  This is an h6
+</h6>
+`;
+
+exports[`Storyshots Header/Header Example 1`] = `
+<div
+  className="h1"
+>
+  A div sized like a h1
+</div>
+`;
+
+exports[`Storyshots Icon/Icon Example 1`] = `
+<i
+  className="icon fe fe-user"
+/>
+`;
+
+exports[`Storyshots Icon/Icon Flags 1`] = `
+<i
+  className="icon flag flag-gb"
+/>
+`;
+
+exports[`Storyshots Icon/Icon Payment 1`] = `
+<i
+  className="icon payment payment-visa"
+/>
+`;
+
+exports[`Storyshots List/List Example 1`] = `
+<ul
+  className="list"
+>
+  <li
+    className=""
+  >
+    An Item
+  </li>
+  <li
+    className=""
+  >
+    Another Item
+  </li>
+  <li
+    className=""
+  >
+    A third item
+  </li>
+</ul>
+`;
+
+exports[`Storyshots List/List Unstyled 1`] = `
+<ul
+  className="list-unstyled"
+>
+  <li
+    className=""
+  >
+    An Item
+  </li>
+  <li
+    className=""
+  >
+    Another Item
+  </li>
+  <li
+    className=""
+  >
+    A third item
+  </li>
+</ul>
+`;
+
+exports[`Storyshots List/ListGroup Example 1`] = `
+<div
+  className="list-group mb-0"
+>
+  <a
+    className="list-group-item"
+  >
+    An Item
+  </a>
+  <a
+    className="list-group-item"
+  >
+    Another Item
+  </a>
+  <a
+    className="list-group-item"
+  >
+    A third item
+  </a>
+</div>
+`;
+
+exports[`Storyshots List/ListGroupItem Example 1`] = `
+<div
+  className="list-group mb-0"
+>
+  <a
+    className="list-group-item list-group-item-action active"
+  >
+    Already Active
+  </a>
+  <a
+    className="list-group-item list-group-item-action"
+  >
+    Another Item
+  </a>
+  <a
+    className="list-group-item list-group-item-action"
+  >
+    <span
+      className="mr-3 icon"
+    >
+      <i
+        className="icon fe fe-globe"
+      />
+       
+    </span>
+    With an icon!
+  </a>
+</div>
+`;
+
+exports[`Storyshots Nav/Nav Example 1`] = `
+<ul
+  className="nav navbar-nav"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      aria-expanded={false}
+      className="nav-link collapse show"
+      data-toggle="collapse"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-globe"
+      />
+       
+      Page One
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      onClick={[Function]}
+      to="http://www.example.com"
+    >
+      Page Two
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      onClick={[Function]}
+    >
+      Page Three
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link active"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-user"
+      />
+       
+      Page Four
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Nav/Nav Items as Objects 1`] = `
+<ul
+  className="nav navbar-nav"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      aria-expanded={false}
+      className="nav-link collapse show"
+      data-toggle="collapse"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-globe"
+      />
+       
+      Page One
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      onClick={[Function]}
+      to="http://www.example.com"
+    >
+      Page Two
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      onClick={[Function]}
+    >
+      Page Three
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-user"
+      />
+       
+      Page Four
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Nav/Nav Items prop 1`] = `
+<ul
+  className="nav navbar-nav"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      aria-expanded={false}
+      className="nav-link collapse show"
+      data-toggle="collapse"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-globe"
+      />
+       
+      Page One
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      onClick={[Function]}
+      to="http://www.example.com"
+    >
+      Page Two
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      onClick={[Function]}
+    >
+      Page Three
+    </a>
+  </li>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link active"
+      onClick={[Function]}
+    >
+      <i
+        className="icon fe fe-user"
+      />
+       
+      Page Four
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Nav/NavItem Example 1`] = `
+<ul
+  className="nav navbar-nav"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      aria-expanded={false}
+      className="nav-link collapse show"
+      data-toggle="collapse"
+      onClick={[Function]}
+    >
+      Menu 1
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Nav/NavItem Sub-items from prop 1`] = `
+<ul
+  className="nav navbar-nav"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      aria-expanded={false}
+      className="nav-link collapse show"
+      data-toggle="collapse"
+      onClick={[Function]}
+    >
+      Menu 1
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Nav/NavItem Sub-items objects prop 1`] = `
+<ul
+  className="nav navbar-nav"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      aria-expanded={false}
+      className="nav-link collapse show"
+      data-toggle="collapse"
+      onClick={[Function]}
+    >
+      Menu 1
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Notification/Notification Example 1`] = `
+Array [
+  <span
+    className="avatar mr-3 align-self-center"
+    style={
+      Object {
+        "backgroundImage": "url(demo/faces/female/1.jpg)",
+      }
+    }
+  />,
+  <div>
+    <strong>
+      Alice
+    </strong>
+     started new task: Tabler UI design.
+    <div
+      className="text-gray small"
+    >
+      1 hour ago
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots Notification/NotificationTray Example 1`] = `
+<div
+  className="dropdown d-true-flex d-flex"
+>
+  <a
+    className="nav-link nav-link"
+    onClick={[Function]}
+  >
+    <i
+      className="icon fe fe-bell"
+    />
+     
+  </a>
+</div>
+`;
+
+exports[`Storyshots Notification/NotificationTray Unread Status 1`] = `
+<div
+  className="dropdown d-true-flex d-flex"
+>
+  <a
+    className="nav-link nav-link"
+    onClick={[Function]}
+  >
+    <i
+      className="icon fe fe-bell"
+    />
+     
+    <span
+      className="nav-unread"
+    />
+  </a>
+</div>
+`;
+
+exports[`Storyshots Page Templates/ForgotPasswordPage Example 1`] = `
+<div
+  className="page"
+>
+  <div
+    className="page-single"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col col-login mx-auto"
+        >
+          <div
+            className="text-center mb-6"
+          >
+            <img
+              alt="logo"
+              className="h-6"
+            />
+          </div>
+          <form
+            className="card"
+          >
+            <div
+              className="card-body p-6"
+            >
+              <div
+                className="card-title"
+              >
+                Forgot Password
+              </div>
+              <p
+                className="text-muted"
+              >
+                Enter your email address and your password will be reset and emailed to you.
+              </p>
+              <div
+                className="form-group"
+              >
+                <label
+                  className="form-label"
+                >
+                  Email Address
+                </label>
+                <input
+                  className="form-control"
+                  name="email"
+                  placeholder="Enter email"
+                  type="text"
+                />
+              </div>
+              <div
+                className="form-footer"
+              >
+                <button
+                  className="btn btn-block btn-primary"
+                  type="submit"
+                >
+                  Request Password Change
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Page Templates/LoginPage Example 1`] = `
+<div
+  className="page"
+>
+  <div
+    className="page-single"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col col-login mx-auto"
+        >
+          <div
+            className="text-center mb-6"
+          >
+            <img
+              alt="logo"
+              className="h-6"
+            />
+          </div>
+          <form
+            className="card"
+          >
+            <div
+              className="card-body p-6"
+            >
+              <div
+                className="card-title"
+              >
+                Login to your Account
+              </div>
+              <div
+                className="form-group"
+              >
+                <label
+                  className="form-label"
+                >
+                  Email Address
+                </label>
+                <input
+                  className="form-control"
+                  name="email"
+                  placeholder="Enter email"
+                  type="text"
+                />
+              </div>
+              <div
+                className="form-group"
+              >
+                <label
+                  className="form-label"
+                >
+                  Password
+                </label>
+                <input
+                  className="form-control"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                />
+              </div>
+              <div
+                className="form-footer"
+              >
+                <button
+                  className="btn btn-block btn-primary"
+                  type="submit"
+                >
+                  Login
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Page Templates/RegisterPage Example 1`] = `
+<div
+  className="page"
+>
+  <div
+    className="page-single"
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col col-login mx-auto"
+        >
+          <div
+            className="text-center mb-6"
+          >
+            <img
+              alt="logo"
+              className="h-6"
+            />
+          </div>
+          <form
+            className="card"
+          >
+            <div
+              className="card-body p-6"
+            >
+              <div
+                className="card-title"
+              >
+                Create New Account
+              </div>
+              <div
+                className="form-group"
+              >
+                <label
+                  className="form-label"
+                >
+                  Name
+                </label>
+                <input
+                  className="form-control"
+                  name="name"
+                  placeholder="Enter name"
+                  type="text"
+                />
+              </div>
+              <div
+                className="form-group"
+              >
+                <label
+                  className="form-label"
+                >
+                  Email Address
+                </label>
+                <input
+                  className="form-control"
+                  name="email"
+                  placeholder="Enter email"
+                  type="text"
+                />
+              </div>
+              <div
+                className="form-group"
+              >
+                <label
+                  className="form-label"
+                >
+                  Password
+                </label>
+                <input
+                  className="form-control"
+                  name="password"
+                  placeholder="Password"
+                  type="password"
+                />
+              </div>
+              <div
+                className="form-group"
+              >
+                <label
+                  className="custom-control custom-checkbox"
+                >
+                  <input
+                    className="custom-control-input custom-control custom-checkbox"
+                    name="terms"
+                    type="checkbox"
+                  />
+                  <span
+                    className="custom-control-label"
+                  >
+                    Agree to the terms and policy
+                  </span>
+                </label>
+              </div>
+              <div
+                className="form-footer"
+              >
+                <button
+                  className="btn btn-block btn-primary"
+                  type="submit"
+                >
+                  Create Account
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Ribbon/Ribbon Bookmark 1`] = `
+<div
+  className="ribbon bg-orange ribbon-bookmark"
+>
+  -50%
+</div>
+`;
+
+exports[`Storyshots Ribbon/Ribbon Example 1`] = `
+<div
+  className="ribbon bg-green"
+>
+  -50%
+</div>
+`;
+
+exports[`Storyshots Ribbon/Ribbon Icon 1`] = `
+<div
+  className="ribbon bg-orange"
+>
+  <i
+    className="icon fe fe-star"
+  />
+</div>
+`;
+
+exports[`Storyshots Ribbon/Ribbon Position 1`] = `
+<div
+  className="ribbon bg-orange ribbon-top ribbon-left"
+>
+  <i
+    className="icon fe fe-star"
+  />
+</div>
+`;
+
+exports[`Storyshots Site SiteFooter 1`] = `null`;
+
+exports[`Storyshots Site SiteHeader 1`] = `
+<header
+  className="navbar navbar-expand-md"
+>
+  <div
+    className="container"
+  >
+    <a
+      className="navbar-toggler"
+    >
+      <span
+        className="navbar-toggler-icon"
+      />
+    </a>
+    <a
+      className="navbar-brand text-inherit mr-md-3"
+    >
+      <img
+        className="d-none d-md-block navbar-brand-logo"
+      />
+    </a>
+    <ul
+      className="nav navbar-nav navbar-menu align-items-center order-1 order-lg-2"
+    />
+  </div>
+</header>
+`;
+
+exports[`Storyshots Site SiteLogo 1`] = `
+<a
+  className="navbar-brand"
+>
+  <img
+    className="d-none d-md-block navbar-brand-logo"
+  />
+</a>
+`;
+
+exports[`Storyshots Site SiteNav 1`] = `
+<nav
+  className="navbar navbar-expand-md"
+>
+  <div
+    className="container"
+  />
+</nav>
+`;
+
+exports[`Storyshots Site SiteWrapper 1`] = `
+<div
+  className="page d-flex h-auto min-h-screen"
+>
+  <div
+    className="d-flex flex-fill"
+  >
+    <div
+      className="page-main flex-fill d-flex flex-column max-w-full"
+    >
+      <header
+        className="navbar navbar-expand-md"
+      >
+        <div
+          className="container"
+        >
+          <a
+            className="navbar-toggler"
+            onClick={[Function]}
+          >
+            <span
+              className="navbar-toggler-icon"
+            />
+          </a>
+          <a
+            alt="Tabler React"
+            className="navbar-brand text-inherit mr-md-3"
+            href="/"
+            src="./demo/brand/tabler.svg"
+          >
+            <img
+              alt="Tabler React"
+              className="d-none d-md-block navbar-brand-logo"
+              src="./demo/brand/tabler.svg"
+            />
+          </a>
+          <ul
+            className="nav navbar-nav navbar-menu align-items-center order-1 order-lg-2"
+          >
+            <li
+              className="nav-item d-none d-md-flex"
+            >
+              <a
+                className="nav-link"
+                onClick={[Function]}
+              >
+                <a
+                  className="btn btn-sm btn-outline-primary"
+                  href="https://github.com/tabler/tabler-react"
+                  target="_blank"
+                >
+                  Source code
+                </a>
+              </a>
+            </li>
+            <li
+              className="nav-item dropdown"
+            >
+              <a
+                className="nav-link d-flex align-items-center py-0 px-lg-0 px-2 text-color ml-2"
+                onClick={[Function]}
+              >
+                <span
+                  className="avatar"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./demo/faces/female/25.jpg)",
+                    }
+                  }
+                />
+                <span
+                  className="ml-2 d-none d-lg-block leading-none"
+                >
+                  <span>
+                    Jane Pearson
+                  </span>
+                  <span
+                    className="text-muted d-block mt-1 text-h6"
+                  >
+                    Administrator
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <nav
+        className="navbar navbar-expand-md"
+      >
+        <div
+          className="container"
+        >
+          <ul
+            className="nav navbar-nav navbar-nav"
+          >
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                onClick={[Function]}
+                to="/"
+              >
+                <i
+                  className="icon fe fe-home"
+                />
+                 
+                Home
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                aria-expanded={false}
+                className="nav-link collapse show"
+                data-toggle="collapse"
+                onClick={[Function]}
+              >
+                <i
+                  className="icon fe fe-box"
+                />
+                 
+                Interface
+              </a>
+            </li>
+            <li
+              className="nav-item"
+            >
+              <a
+                className="nav-link"
+                onClick={[Function]}
+                to="/documentation"
+              >
+                <i
+                  className="icon fe fe-file-text"
+                />
+                 
+                Documentation
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      Empty
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SocialNetworksList/SocialNetworksList As Buttons 1`] = `
+<ul
+  className="list list-inline social-links"
+>
+  <li
+    className="list-inline-item"
+  >
+    <button
+      className="btn btn-sm btn-twitter"
+      to="http://www.twitter.com"
+    >
+      <i
+        className="icon fa fa-twitter mr-2"
+      />
+      Follow
+    </button>
+  </li>
+  <li
+    className="list-inline-item"
+  >
+    <button
+      className="btn btn-sm btn-blue btn-linkedin"
+      to="http://www.linkedin.com"
+    >
+      <i
+        className="icon fa fa-linkedin mr-2"
+      />
+      Connect
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots SocialNetworksList/SocialNetworksList Example 1`] = `
+<ul
+  className="list list-inline social-links"
+>
+  <li
+    className="list-inline-item"
+  >
+    <a
+      href="http://www.twitter.com"
+    >
+      <i
+        className="icon fe fe-twitter"
+      />
+    </a>
+  </li>
+  <li
+    className="list-inline-item"
+  >
+    <a
+      href="http://www.linkedin.com"
+    >
+      <i
+        className="icon fe fe-linkedin"
+      />
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Stamp/Stamp Example 1`] = `
+Array [
+  <span
+    className="stamp stamp-sm text-white mr-1"
+  >
+    A
+  </span>,
+  <span
+    className="stamp stamp-md text-white mr-1"
+  >
+    B
+  </span>,
+  <span
+    className="stamp stamp-md bg-primary text-white mr-1"
+  >
+    C
+  </span>,
+  <span
+    className="stamp stamp-md bg-orange text-white"
+  >
+    <i
+      className="icon fe fe-globe"
+    />
+  </span>,
+]
+`;
+
+exports[`Storyshots Steps/Steps Example 1`] = `
+<div
+  className="p-6 steps"
+>
+  <span
+    className="step-item"
+    href="#"
+  >
+    Step 1
+  </span>
+  <span
+    className="step-item"
+    href="#"
+  >
+    Step 2
+  </span>
+  <span
+    className="step-item active"
+    href="#"
+  >
+    Step 3
+  </span>
+  <span
+    className="step-item"
+    href="#"
+  >
+    Step 4
+  </span>
+</div>
+`;
+
+exports[`Storyshots Steps/Steps Tooltip 1`] = `
+<div
+  className="p-6 steps"
+>
+  <span
+    className="step-item"
+    href="#"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Step 1
+  </span>
+  <span
+    className="step-item"
+    href="#"
+  >
+    Step 2
+  </span>
+  <span
+    className="step-item active"
+    href="#"
+  >
+    Step 3
+  </span>
+  <span
+    className="step-item"
+    href="#"
+  >
+    Step 4
+  </span>
+</div>
+`;
+
+exports[`Storyshots Steps/Steps With Numbers 1`] = `
+<div
+  className="p-6 steps steps-counter"
+>
+  <span
+    className="step-item"
+    href="#"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    Step 1
+  </span>
+  <span
+    className="step-item"
+    href="#"
+  >
+    Step 2
+  </span>
+  <span
+    className="step-item active"
+    href="#"
+  >
+    Step 3
+  </span>
+  <span
+    className="step-item"
+    href="#"
+  >
+    Step 4
+  </span>
+</div>
+`;
+
+exports[`Storyshots Table/Table Example 1`] = `
+<table
+  className="table"
+>
+  <thead
+    className=""
+  >
+    <th
+      className=""
+    >
+      ID
+    </th>
+    <th
+      className=""
+    >
+      Name
+    </th>
+    <th
+      className=""
+    >
+      Action
+    </th>
+  </thead>
+  <tbody
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        1
+      </td>
+      <td
+        className=""
+      >
+        Jon
+      </td>
+      <td
+        className=""
+      >
+        <button
+          className="btn btn-primary"
+        >
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots Table/TableBody Example 1`] = `
+<table
+  className="table"
+>
+  <tbody
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        1
+      </td>
+      <td
+        className=""
+      >
+        Jon
+      </td>
+      <td
+        className=""
+      >
+        <button
+          className="btn btn-primary"
+        >
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots Table/TableBody bodyItems prop 1`] = `
+<table
+  className="table"
+>
+  <tbody
+    className=""
+  >
+    <tr
+      className=""
+      item={
+        Array [
+          Object {
+            "content": "1",
+          },
+          Object {
+            "content": "Jon",
+          },
+          Object {
+            "content": <ForwardRef
+              color="primary"
+            >
+              Edit
+            </ForwardRef>,
+          },
+        ]
+      }
+    >
+      <td
+        className=""
+      >
+        1
+      </td>
+      <td
+        className=""
+      >
+        Jon
+      </td>
+      <td
+        className=""
+      >
+        <button
+          className="btn btn-primary"
+        >
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots Table/TableHeader Example 1`] = `
+<table
+  className="table"
+>
+  <thead
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <th
+        className=""
+      >
+        ID
+      </th>
+      <th
+        className=""
+      >
+        Name
+      </th>
+      <th
+        className=""
+      >
+        Action
+      </th>
+    </tr>
+  </thead>
+</table>
+`;
+
+exports[`Storyshots Table/TableHeader headerItems prop 1`] = `
+<table
+  className="table"
+>
+  <thead
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <th
+        className=""
+      >
+        ID
+      </th>
+      <th
+        className=""
+      >
+        Name
+      </th>
+      <th
+        className=""
+      >
+        Action
+      </th>
+    </tr>
+  </thead>
+</table>
+`;
+
+exports[`Storyshots Tabs/Tabs Example 1`] = `
+Array [
+  <ul
+    className="nav nav-tabs Tab_header_tabs"
+  >
+    <li
+      className="nav-item"
+    >
+      <a
+        className="nav-link active"
+        onClick={[Function]}
+      >
+        Hello
+      </a>
+    </li>
+    <li
+      className="nav-item"
+    >
+      <a
+        className="nav-link"
+        onClick={[Function]}
+      >
+        Goodbye
+      </a>
+    </li>
+    <li
+      className="nav-item"
+    >
+      <a
+        className="nav-link"
+        onClick={[Function]}
+      >
+        Complex
+      </a>
+    </li>
+  </ul>,
+  <div
+    className="margin-bottom-24"
+  />,
+  "Hello World",
+]
+`;
+
+exports[`Storyshots Timeline Example 1`] = `
+<div
+  className="m-2 p-3 card"
+>
+  <ul
+    className="list-timeline"
+  >
+    <li
+      className="timeline-item"
+    >
+      <i
+        className="icon fe fe-twitter list-timeline-icon bg-twitter"
+      />
+      <div
+        className="list-timeline-content"
+      >
+        <div
+          className="list-timeline-time"
+        >
+          10 hrs ago
+        </div>
+        <p
+          className="list-timeline-title"
+        >
+          +1150 Followers
+        </p>
+        <p
+          className="text-muted"
+        >
+          You’re getting more and more followers, keep it up!
+        </p>
+      </div>
+    </li>
+    <li
+      className="timeline-item"
+    >
+      <i
+        className="icon fe fe-briefcase list-timeline-icon bg-red"
+      />
+      <div
+        className="list-timeline-content"
+      >
+        <div
+          className="list-timeline-time"
+        >
+          2 hrs ago
+        </div>
+        <p
+          className="list-timeline-title"
+        >
+          +3 New Products were added!
+        </p>
+        <p
+          className="text-muted"
+        >
+          Congratulations!
+        </p>
+      </div>
+    </li>
+    <li
+      className="timeline-item"
+    >
+      <i
+        className="icon fe fe-check list-timeline-icon bg-success"
+      />
+      <div
+        className="list-timeline-content"
+      >
+        <div
+          className="list-timeline-time"
+        >
+          1 day ago
+        </div>
+        <p
+          className="list-timeline-title"
+        >
+          Database backup completed!
+        </p>
+        <p
+          className="text-muted"
+        >
+          Download the 
+          <a
+            href="#"
+          >
+            latest backup
+          </a>
+          .
+        </p>
+      </div>
+    </li>
+    <li
+      className="timeline-item"
+    >
+      <i
+        className="icon fe fe-facebook list-timeline-icon bg-facebook"
+      />
+      <div
+        className="list-timeline-content"
+      >
+        <div
+          className="list-timeline-time"
+        >
+          1 day ago
+        </div>
+        <p
+          className="list-timeline-title"
+        >
+          +290 Page Likes
+        </p>
+        <p
+          className="text-muted"
+        >
+          This is great, keep it up!
+        </p>
+      </div>
+    </li>
+    <li
+      className="timeline-item"
+    >
+      <i
+        className="icon fe fe-user-plus list-timeline-icon bg-teal"
+      />
+      <div
+        className="list-timeline-content"
+      >
+        <div
+          className="list-timeline-time"
+        >
+          2 days ago
+        </div>
+        <p
+          className="list-timeline-title"
+        >
+          +3 Friend Requests
+        </p>
+        <div
+          className="mt-3 avatar-list"
+        >
+          <span
+            className="avatar avatar-sm"
+            style={
+              Object {
+                "backgroundImage": "url(/img/avatars/000m.jpg)",
+              }
+            }
+          >
+            <span
+              className="badge expanded bg-success text-white"
+            />
+          </span>
+          <span
+            className="avatar avatar-sm"
+            style={
+              Object {
+                "backgroundImage": "url(/img/avatars/001m.jpg)",
+              }
+            }
+          >
+            <span
+              className="badge expanded bg-success text-white"
+            />
+          </span>
+          <span
+            className="avatar avatar-sm"
+            style={
+              Object {
+                "backgroundImage": "url(/img/avatars/002m.jpg)",
+              }
+            }
+          >
+            <span
+              className="badge expanded bg-success text-white"
+            />
+          </span>
+        </div>
+      </div>
+    </li>
+    <li
+      className="timeline-item"
+    >
+      <i
+        className="icon fe fe-image list-timeline-icon bg-yellow"
+      />
+      <div
+        className="list-timeline-content"
+      >
+        <div
+          className="list-timeline-time"
+        >
+          3 days ago
+        </div>
+        <p
+          className="list-timeline-title"
+        >
+          +2 New photos
+        </p>
+        <div
+          className="mt-3"
+        >
+          <div
+            className="row row-xs"
+          >
+            <div
+              className="col col-xs-6"
+            >
+              <div
+                className="media rounded media-2x1"
+              >
+                <div
+                  className="media-content"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./img/photos/6d35d9a2bd6c63c2.jpg)",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="col col-xs-6"
+            >
+              <div
+                className="media rounded media-2x1"
+              >
+                <div
+                  className="media-content"
+                  style={
+                    Object {
+                      "backgroundImage": "url(./img/photos/6f6e2ef709fef97a.jpg)",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li
+      className="timeline-item"
+    >
+      <i
+        className="icon fe fe-settings list-timeline-icon"
+      />
+      <div
+        className="list-timeline-content"
+      >
+        <div
+          className="list-timeline-time"
+        >
+          2 weeks ago
+        </div>
+        <p
+          className="list-timeline-title"
+        >
+          System updated to v2.02
+        </p>
+        <p
+          className="text-muted"
+        >
+          Check the complete changelog at the
+           
+          <a
+            href="#"
+          >
+            activity page
+          </a>
+          .
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storyshots Toast/Toast Example 1`] = `
+<div
+  aria-atomic="true"
+  aria-live="assertive"
+  className="toast show"
+  role="alert"
+>
+  <div
+    className="toast-header"
+  >
+    <span
+      className="mr-2 avatar avatar-sm"
+      style={
+        Object {
+          "backgroundImage": "url(./img/avatars/002m.jpg)",
+        }
+      }
+    />
+    <strong
+      className="mr-auto"
+    >
+      Mallory Hulme
+    </strong>
+    <small>
+      11 mins ago
+    </small>
+    <button
+      aria-label="Close"
+      className="ml-2 btn close"
+      data-dismiss="toast"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+  <div
+    className="toast-body"
+  >
+    Hello, world! This is a toast message.
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip/Tooltip Example 1`] = `
+<span
+  className="badge expanded bg-primary text-white"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  Hover Me!
+</span>
+`;
