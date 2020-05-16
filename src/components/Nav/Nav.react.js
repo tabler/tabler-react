@@ -101,9 +101,13 @@ class Nav extends React.Component<Props, State> {
 
     let element: ?React.Element<*> = null;
     if (routerContextComponentType) {
-      const routerContextComponentFactory = React.createFactory(
+      
+      let createFactory = type => React.createElement.bind(null, type);
+
+      const routerContextComponentFactory = createFactory(
         routerContextComponentType
       );
+
       element = routerContextComponentFactory({
         callback: this.routerCallback,
       });
