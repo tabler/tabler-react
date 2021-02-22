@@ -50,7 +50,7 @@ For more examples and documentation see the [demo website](http://tabler-react.c
 
 ## Contributing
 
-[There are plenty of opputunities to get involved](https://github.com/tabler/tabler-react/issues). Pick an outstanding task, let us know what you are working on and fire away with any questions.
+[There are plenty of opportunities to get involved](https://github.com/tabler/tabler-react/issues). Pick an outstanding task, let us know what you are working on and fire away with any questions.
 
 The package is made up of 2 main folders:
 
