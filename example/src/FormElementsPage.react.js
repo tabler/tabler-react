@@ -216,7 +216,7 @@ function FormElements() {
                             extended ZIP+4 code to determine address more
                             accurately.
                           </p>
-                          <p class="mb-0">
+                          <p className="mb-0">
                             <a href="#">USP ZIP codes lookup tools</a>
                           </p>
                         </React.Fragment>
@@ -266,6 +266,17 @@ function FormElements() {
             <ComponentDemo>
               <Form.Group label="Ratios">
                 <Form.Ratio step={5} min={0} max={50} defaultValue={15} />
+              </Form.Group>
+            </ComponentDemo>
+            <ComponentDemo>
+              <Form.Group label="Number">
+                <Form.Input
+                  type="number"
+                  step=".01"
+                  min={0}
+                  max={50}
+                  defaultValue={15}
+                />
               </Form.Group>
             </ComponentDemo>
             <ComponentDemo>
