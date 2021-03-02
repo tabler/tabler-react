@@ -10,7 +10,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-c3js": "^0.1.20",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.4.2",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.0.3",
