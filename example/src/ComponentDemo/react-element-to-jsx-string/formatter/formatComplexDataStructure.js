@@ -30,7 +30,7 @@ function _interopRequireDefault(obj) {
 
 function noRefCheck() {}
 
-exports.default = function(value, inline, lvl, options) {
+exports.default = function (value, inline, lvl, options) {
   var normalizedValue = (0, _sortObject2.default)(value);
 
   var stringifiedValue = (0, _stringifyObject2.default)(normalizedValue, {

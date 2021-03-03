@@ -2,8 +2,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true,
 });
 
-exports.default = function(sortProps) {
-  return function(a, b) {
+exports.default = function (sortProps) {
+  return function (a, b) {
     if (a === b) {
       return 0;
     }

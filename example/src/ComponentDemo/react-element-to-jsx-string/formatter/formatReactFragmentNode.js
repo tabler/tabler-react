@@ -41,7 +41,7 @@ var hasNoChildren = function hasNoChildren(_ref2) {
   return childrens.length === 0;
 };
 
-exports.default = function(node, inline, lvl, options) {
+exports.default = function (node, inline, lvl, options) {
   var type = node.type,
     key = node.key,
     childrens = node.childrens;

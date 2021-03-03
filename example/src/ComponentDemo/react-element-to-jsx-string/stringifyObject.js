@@ -9,7 +9,7 @@ const isRegexp = input =>
   Object.prototype.toString.call(input) === "[object RegExp]";
 
 // https://github.com/sindresorhus/is-obj/blob/master/index.js
-const isObj = function(x) {
+const isObj = function (x) {
   var type = typeof x;
   return x !== null && (type === "object" || type === "function");
 };

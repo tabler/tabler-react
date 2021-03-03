@@ -2,7 +2,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true,
 });
 
-exports.default = function(props) {
+exports.default = function (props) {
   var children = props.children; // eslint-disable-line react/prop-types
 
   return _react2.default.createElement("div", null, children);

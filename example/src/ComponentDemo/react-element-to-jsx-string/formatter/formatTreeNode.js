@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) {
 
 var jsxStopChars = ["<", ">", "{", "}"];
 var shouldBeEscaped = function shouldBeEscaped(s) {
-  return jsxStopChars.some(function(jsxStopChar) {
+  return jsxStopChars.some(function (jsxStopChar) {
     return s.includes(jsxStopChar);
   });
 };
@@ -44,7 +44,7 @@ var preserveTrailingSpace = function preserveTrailingSpace(s) {
   return result;
 };
 
-exports.default = function(node, inline, lvl, options) {
+exports.default = function (node, inline, lvl, options) {
   if (node.type === "number") {
     return String(node.value);
   }

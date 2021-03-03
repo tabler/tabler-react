@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _tree = require("./../tree");
 
-exports.default = function(previousNodes, currentNode) {
+exports.default = function (previousNodes, currentNode) {
   var nodes = previousNodes.slice(
     0,
     previousNodes.length > 0 ? previousNodes.length - 1 : 0

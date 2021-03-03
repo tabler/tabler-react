@@ -2,7 +2,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true,
 });
 
-exports.default = function(times, tabStop) {
+exports.default = function (times, tabStop) {
   if (times === 0) {
     return "";
   }

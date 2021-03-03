@@ -14,7 +14,7 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-exports.default = function(
+exports.default = function (
   name,
   hasValue,
   value,

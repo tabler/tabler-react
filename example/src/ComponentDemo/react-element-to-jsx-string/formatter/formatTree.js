@@ -10,7 +10,7 @@ function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
 
-exports.default = function(node, options) {
+exports.default = function (node, options) {
   return (0, _formatTreeNode2.default)(node, false, 0, options);
 };
 //# sourceMappingURL=formatTree.js.map

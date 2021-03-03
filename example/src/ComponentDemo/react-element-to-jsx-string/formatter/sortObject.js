@@ -4,10 +4,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _typeof =
   typeof Symbol === "function" && typeof Symbol.iterator === "symbol"
-    ? function(obj) {
+    ? function (obj) {
         return typeof obj;
       }
-    : function(obj) {
+    : function (obj) {
         return obj &&
           typeof Symbol === "function" &&
           obj.constructor === Symbol &&
@@ -39,7 +39,7 @@ function sortObject(value) {
   // make a copy of object with key sorted
   return Object.keys(value)
     .sort()
-    .reduce(function(result, key) {
+    .reduce(function (result, key) {
       // eslint-disable-next-line no-param-reassign
       result[key] = sortObject(value[key]);
       return result;

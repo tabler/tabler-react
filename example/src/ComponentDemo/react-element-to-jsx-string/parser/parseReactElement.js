@@ -4,10 +4,10 @@ Object.defineProperty(exports, "__esModule", {
 
 var _typeof =
   typeof Symbol === "function" && typeof Symbol.iterator === "symbol"
-    ? function(obj) {
+    ? function (obj) {
         return typeof obj;
       }
-    : function(obj) {
+    : function (obj) {
         return obj &&
           typeof Symbol === "function" &&
           obj.constructor === Symbol &&
@@ -55,10 +55,10 @@ var filterProps = function filterProps(originalProps, cb) {
   var filteredProps = {};
 
   Object.keys(originalProps)
-    .filter(function(key) {
+    .filter(function (key) {
       return cb(originalProps[key], key);
     })
-    .forEach(function(key) {
+    .forEach(function (key) {
       return (filteredProps[key] = originalProps[key]);
     });
 
@@ -100,7 +100,7 @@ var parseReactElement = function parseReactElement(element, options) {
   var defaultProps = filterProps(element.type.defaultProps || {}, noChildren);
   var childrens = _react2.default.Children.toArray(element.props.children)
     .filter(onlyMeaningfulChildren)
-    .map(function(child) {
+    .map(function (child) {
       return parseReactElement(child, options);
     });
 

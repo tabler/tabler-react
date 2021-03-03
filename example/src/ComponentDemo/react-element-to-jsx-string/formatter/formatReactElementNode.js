@@ -40,7 +40,7 @@ var compensateMultilineStringElementIndentation = function compensateMultilineSt
   if (element.type === "string") {
     return formattedElement
       .split("\n")
-      .map(function(line, offset) {
+      .map(function (line, offset) {
         if (offset === 0) {
           return line;
         }
@@ -54,7 +54,7 @@ var compensateMultilineStringElementIndentation = function compensateMultilineSt
 };
 
 var formatOneChildren = function formatOneChildren(inline, lvl, options) {
-  return function(element) {
+  return function (element) {
     return compensateMultilineStringElementIndentation(
       element,
       (0, _formatTreeNode2.default)(element, inline, lvl, options),
@@ -69,7 +69,7 @@ var onlyPropsWithOriginalValue = function onlyPropsWithOriginalValue(
   defaultProps,
   props
 ) {
-  return function(propName) {
+  return function (propName) {
     var haveDefaultValue = Object.keys(defaultProps).includes(propName);
     return (
       !haveDefaultValue ||
@@ -117,7 +117,7 @@ var shouldRenderMultilineAttr = function shouldRenderMultilineAttr(
   );
 };
 
-exports.default = function(node, inline, lvl, options) {
+exports.default = function (node, inline, lvl, options) {
   var type = node.type,
     _node$displayName = node.displayName,
     displayName = _node$displayName === undefined ? "" : _node$displayName,
@@ -149,25 +149,25 @@ exports.default = function(node, inline, lvl, options) {
   var visibleAttributeNames = [];
 
   Object.keys(props)
-    .filter(function(propName) {
+    .filter(function (propName) {
       return filterProps.indexOf(propName) === -1;
     })
     .filter(onlyPropsWithOriginalValue(defaultProps, props))
-    .forEach(function(propName) {
+    .forEach(function (propName) {
       return visibleAttributeNames.push(propName);
     });
 
   Object.keys(defaultProps)
-    .filter(function(defaultPropName) {
+    .filter(function (defaultPropName) {
       return filterProps.indexOf(defaultPropName) === -1;
     })
-    .filter(function() {
+    .filter(function () {
       return showDefaultProps;
     })
-    .filter(function(defaultPropName) {
+    .filter(function (defaultPropName) {
       return !visibleAttributeNames.includes(defaultPropName);
     })
-    .forEach(function(defaultPropName) {
+    .forEach(function (defaultPropName) {
       return visibleAttributeNames.push(defaultPropName);
     });
 
@@ -175,7 +175,7 @@ exports.default = function(node, inline, lvl, options) {
     (0, _propNameSorter2.default)(sortProps)
   );
 
-  attributes.forEach(function(attributeName) {
+  attributes.forEach(function (attributeName) {
     var _formatProp = (0, _formatProp3.default)(
         attributeName,
         Object.keys(props).includes(attributeName),
