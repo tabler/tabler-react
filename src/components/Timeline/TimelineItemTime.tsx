@@ -1,11 +1,11 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface TimelineItemTimeProps
-  extends ELProps,
+  extends TablerComponentProps,
     HTMLPropsWithoutRef<HTMLDivElement> {
   active?: boolean;
 }

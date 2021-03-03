@@ -4,43 +4,41 @@ import Icon from "../Icon";
 
 import { RefHandler } from "react-popper";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import { colors } from "../../colors";
-import { HTMLPropsWithoutRef } from "../../types";
 
-interface Props {
-  as?: React.ElementType;
-  /**
-   * @deprecated use 'as'
-   */
-  RootComponent?: React.ElementType;
-  size?: "sm" | "lg";
-  outline?: boolean;
-  link?: boolean;
-  block?: boolean;
-  disabled?: boolean;
-  color?: colors;
-  square?: boolean;
-  pill?: boolean;
-  icon?: string;
-  social?: string;
-  loading?: boolean;
-  tabIndex?: number;
-  isDropdownToggle?: boolean;
-  to?: string;
-  isOption?: boolean;
-  /**
-   * @depreacted use ref
-   */
-  rootRef?: RefHandler;
-}
+export type ButtonProps<
+  As extends React.ElementType = "button"
+> = TablerComponentProps<
+  As,
+  {
+    /**
+     * @deprecated use 'as'
+     */
+    RootComponent?: React.ElementType;
+    size?: "sm" | "lg";
+    outline?: boolean;
+    link?: boolean;
+    block?: boolean;
+    disabled?: boolean;
+    color?: colors;
+    square?: boolean;
+    pill?: boolean;
+    icon?: string;
+    social?: string;
+    loading?: boolean;
+    tabIndex?: number;
+    isDropdownToggle?: boolean;
+    to?: string;
+    isOption?: boolean;
+    /**
+     * @depreacted use ref
+     */
+    rootRef?: RefHandler;
+  }
+>;
 
-export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement>
-  extends Props,
-    ELProps,
-    Omit<HTMLPropsWithoutRef<AS>, "as" | "color" | "size"> {}
-
-const Button = forwardRef(function<AS extends HTMLElement = HTMLButtonElement>(
+const Button = forwardRef(function <As extends React.ElementType = "button">(
   {
     size,
     outline,
@@ -57,11 +55,11 @@ const Button = forwardRef(function<AS extends HTMLElement = HTMLButtonElement>(
     isDropdownToggle,
     isOption,
     RootComponent,
-    as = El.Button,
+    as,
     rootRef,
     ...rest
-  }: ButtonProps<AS>,
-  ref: React.Ref<AS>
+  }: ButtonProps<As>,
+  ref: any
 ) {
   const classes = cn(
     {
@@ -83,7 +81,7 @@ const Button = forwardRef(function<AS extends HTMLElement = HTMLButtonElement>(
     className
   );
 
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || El.Button;
 
   const childrenForAll = (
     <React.Fragment>

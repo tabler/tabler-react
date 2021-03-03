@@ -1,27 +1,30 @@
 import * as React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentPropsWithoutRef } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
-export interface NavBarProps
-  extends ELProps,
-    Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
-  isDark?: boolean;
-  isSide?: boolean;
-  side?: "left" | "right";
-  expand?: "xs" | "sm" | "md" | "lg" | "xl";
-}
+export type NavBarProps<
+  As extends React.ElementType = typeof El.Nav
+> = TablerComponentPropsWithoutRef<
+  As,
+  {
+    isDark?: boolean;
+    isSide?: boolean;
+    side?: "left" | "right";
+    expand?: "xs" | "sm" | "md" | "lg" | "xl";
+  }
+>;
 
-export function NavBar({
+export function NavBar<As extends React.ElementType = typeof El.Nav>({
   children,
   className,
   isDark,
   isSide,
   side = "left",
   expand,
+  as,
   ...rest
-}: NavBarProps) {
+}: NavBarProps<As>) {
   const classes = cn(
     "navbar",
     {
@@ -32,10 +35,12 @@ export function NavBar({
     },
     className
   );
+
+  const Component = as || El.Nav;
   return (
-    <El.Nav className={classes} {...rest}>
+    <Component className={classes} {...rest}>
       {children}
-    </El.Nav>
+    </Component>
   );
 }
 

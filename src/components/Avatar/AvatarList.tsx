@@ -1,11 +1,11 @@
 import * as React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface AvatarListProps
-  extends ELProps,
+  extends TablerComponentProps,
     HTMLPropsWithoutRef<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;

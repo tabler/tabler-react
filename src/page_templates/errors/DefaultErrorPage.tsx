@@ -38,7 +38,7 @@ function DefaultErrorPage(props: Props) {
             {details}
           </Header.H4>
         )}
-        <Button onClick={_onBackClick} className="btn-primary" href="">
+        <Button onClick={_onBackClick} className="btn-primary">
           <Icon className="mr-2" name="arrow-left" />
           {action}
         </Button>

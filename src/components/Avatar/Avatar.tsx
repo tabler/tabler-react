@@ -3,15 +3,13 @@ import Icon from "../Icon";
 import cn from "classnames";
 import AvatarList from "./AvatarList";
 
-import { HTMLPropsWithoutRef } from "../../types";
 import { colors } from "../../colors";
 import Badge from "../Badge";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 
 export interface Props
-  extends ELProps,
-    Omit<HTMLPropsWithoutRef<HTMLSpanElement>, "placeholder" | "size"> {
+  extends Omit<TablerComponentProps<"span">, "placeholder" | "size"> {
   /**
    * The URL of the image to be displayed
    */

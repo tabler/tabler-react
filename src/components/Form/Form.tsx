@@ -1,15 +1,12 @@
 import React from "react";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-import { TablerComponent, HTMLElementProps } from "../../types";
 import El from "../El/El";
 
-export interface FormProps
-  extends TablerComponent,
-    Omit<HTMLElementProps<HTMLFormElement>, "as"> {
-  as?: React.ElementType;
-}
+export interface FormProps extends TablerComponentProps<"form"> {}
 
-function Form({ children, as: Component = El.Form, ...rest }: FormProps) {
+function Form({ children, as, ...rest }: FormProps) {
+  const Component = as || El.Form;
   return <Component {...rest}>{children}</Component>;
 }
 

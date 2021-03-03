@@ -1,19 +1,19 @@
 import React from "react";
 import cn from "classnames";
 import El from "../El/El";
-import { UtilityProps } from "../../helpers/utilityPropsToClassNames";
-import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
 export interface GridRowProps
-  extends HTMLPropsWithoutRef<HTMLDivElement>,
-    TablerComponent,
-    UtilityProps {
-  cards?: boolean;
-  deck?: boolean;
-  gutters?: "xs" | "sm" | "md" | "lg";
-  alignItems?: string;
-  justifyContent?: string;
-}
+  extends TablerComponentProps<
+    "div",
+    {
+      cards?: boolean;
+      deck?: boolean;
+      gutters?: "xs" | "sm" | "md" | "lg";
+      alignItems?: string;
+      justifyContent?: string;
+    }
+  > {}
 
 function GridRow({
   className,

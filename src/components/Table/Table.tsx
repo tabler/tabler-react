@@ -5,9 +5,8 @@ import TableBody from "./TableBody";
 import TableRow, { TableRowProps } from "./TableRow";
 import TableCol, { TableColProps } from "./TableCol";
 import TableColHeader, { TableColHeaderProps } from "./TableColHeader";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
 interface RowItem extends TableRowProps {
   key: string | number;
@@ -16,16 +15,37 @@ interface RowItem extends TableRowProps {
 interface BodyItem extends Omit<TableColProps, "content"> {
   content?: React.ReactNode;
   className?: string;
-  alignContent?: "left" | "center" | "right";
 }
 
 interface HeaderItem extends Omit<TableColHeaderProps, "content"> {
   content?: React.ReactNode;
 }
 
-export interface TableProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLTableElement> {
+export type TablerProps<
+  As extends React.ElementType = "table"
+> = TablerComponentProps<
+  As,
+  {
+    /**
+     * Should this Table be optimized to contain Cards
+     */
+    cards?: boolean;
+    /**
+     * Give the table striped rows
+     */
+    striped?: boolean;
+    /**
+     * Make the table responsive
+     */
+    responsive?: boolean;
+    highlightRowOnHover?: boolean;
+    hasOutline?: boolean;
+    verticalAlign?: "center";
+    headerItems?: HeaderItem[];
+    bodyItems?: Array<RowItem>;
+  }
+>;
+export interface TableProps extends TablerComponentProps {
   /**
    * Should this Table be optimized to contain Cards
    */

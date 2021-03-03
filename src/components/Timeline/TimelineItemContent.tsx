@@ -1,9 +1,9 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 
-export interface TimelineItemContentProps extends ELProps {
+export interface TimelineItemContentProps extends TablerComponentProps {
   children?: React.ReactNode;
 }
 

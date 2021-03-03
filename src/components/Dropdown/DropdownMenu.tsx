@@ -4,12 +4,12 @@ import { Popper } from "react-popper";
 
 import { PopperChildrenProps } from "react-popper";
 import DropdownContext from "./DropdownContext";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface DropdownMenuProps
-  extends ELProps,
+  extends TablerComponentProps,
     Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
   children?: React.ReactNode;
   className?: string;

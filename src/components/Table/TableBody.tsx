@@ -1,15 +1,11 @@
 import * as React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
-export interface TableBodyProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLTableSectionElement> {
-  children?: React.ReactNode;
-  className?: string;
-}
+export type TableBodyProps<
+  As extends React.ElementType = "table"
+> = TablerComponentProps<As>;
 
 function TableBody({ className, children, ...props }: TableBodyProps) {
   const classes = cn(className);

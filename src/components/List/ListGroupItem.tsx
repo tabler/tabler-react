@@ -2,28 +2,29 @@ import * as React from "react";
 import cn from "classnames";
 
 import Icon from "../Icon";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 
-export interface ListGroupItemProps
-  extends ELProps,
-    Omit<React.HTMLProps<HTMLAnchorElement>, "as" | "action"> {
-  /**
-   * @deprecated use 'as'
-   */
-  RootComponent?: React.ElementType;
-  as?: React.ElementType;
-  active?: boolean;
-  action?: boolean;
-  icon?: string;
-  to?: string;
-}
+export type ListGroupItemProps = TablerComponentProps<
+  "a",
+  {
+    /**
+     * @deprecated use 'as'
+     */
+    RootComponent?: React.ElementType;
+
+    active?: boolean;
+    action?: boolean;
+    icon?: string;
+    to?: string;
+  }
+>;
 
 function ListGroupItem({
   className,
   children,
   RootComponent,
-  as = El.A,
+  as,
   active,
   action,
   icon,
@@ -39,7 +40,7 @@ function ListGroupItem({
     },
     className
   );
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || El.A;
   return (
     <Component className={classes} {...rest}>
       {icon && (

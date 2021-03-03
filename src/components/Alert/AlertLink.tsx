@@ -1,12 +1,9 @@
 import * as React from "react";
 import cn from "classnames";
-import { HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface AlertLinkProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLAnchorElement> {}
+export interface AlertLinkProps extends TablerComponentProps<"a"> {}
 
 /**
  * Renders an anchor that stands out more within Alerts

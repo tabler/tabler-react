@@ -1,23 +1,26 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import NavItem, { NavItemProps } from "./NavItem";
-import { TablerComponent } from "../../types";
-import { NavSubItemProps } from "./NavSubItem";
 import El from "../El/El";
 import NavBarHeading from "./NavBarHeading";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface NavProps extends TablerComponent {
-  as?: React.ElementType;
-  tabbed?: boolean;
-  items?: React.ReactNode;
-  itemsObjects?: Array<NavItemProps>;
-  routerContextComponentType?: any;
-  isMenu?: boolean;
-  heading?: string;
-}
+export type NavProps<
+  As extends React.ElementType = "ul"
+> = TablerComponentProps<
+  As,
+  {
+    tabbed?: boolean;
+    items?: React.ReactNode;
+    itemsObjects?: Array<NavItemProps>;
+    routerContextComponentType?: any;
+    isMenu?: boolean;
+    heading?: string;
+  }
+>;
 
-const Nav = function({
-  as: Component = El.Ul,
+const Nav = function ({
+  as,
   className,
   children,
   tabbed = false,
@@ -28,7 +31,7 @@ const Nav = function({
   heading,
   ...rest
 }: NavProps) {
-  const [pathName, setPathName] = useState("");
+  const [, setPathName] = useState("");
 
   const routerCallback = (location: { pathname: string }): any => {
     setPathName(location.pathname);
@@ -64,6 +67,8 @@ const Nav = function({
         />
       )));
   const _children = _items || children;
+
+  const Component = as || El.Ul;
 
   return (
     <React.Fragment>

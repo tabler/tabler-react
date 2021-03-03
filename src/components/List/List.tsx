@@ -4,17 +4,17 @@ import cn from "classnames";
 import ListItem from "./ListItem";
 import ListGroup from "./ListGroup";
 import ListGroupItem from "./ListGroupItem";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
-export interface ListProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLUListElement> {
-  unstyled?: boolean;
-  seperated?: boolean;
-  inline?: boolean;
-}
+export type ListProps = TablerComponentProps<
+  "ul",
+  {
+    unstyled?: boolean;
+    seperated?: boolean;
+    inline?: boolean;
+  }
+>;
 
 function List({
   className,

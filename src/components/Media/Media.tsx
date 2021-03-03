@@ -1,10 +1,12 @@
 import React from "react";
 import cn from "classnames";
 import { HTMLPropsWithoutRef } from "../../types";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 
-interface Props extends ELProps, HTMLPropsWithoutRef<HTMLDivElement> {
+interface Props
+  extends TablerComponentProps,
+    HTMLPropsWithoutRef<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   rounded?: boolean;

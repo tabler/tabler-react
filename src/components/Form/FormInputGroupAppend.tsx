@@ -1,11 +1,10 @@
-import React, { HTMLAttributes } from "react";
+import React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 
 export interface FormInputGroupAppendProps
-  extends TablerComponent,
-    HTMLAttributes<HTMLSpanElement> {}
+  extends TablerComponentProps<"span"> {}
 
 function FormInputGroupAppend({
   className,

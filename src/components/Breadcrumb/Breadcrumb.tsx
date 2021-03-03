@@ -1,12 +1,9 @@
 import React from "react";
 import cn from "classnames";
-import { HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface BreadcrumbProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLOListElement> {
+export interface BreadcrumbProps extends TablerComponentProps<"ol"> {
   /**
    * Character to seperate the items with
    */

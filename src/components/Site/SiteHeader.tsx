@@ -9,7 +9,6 @@ import { Props as NotificationTrayProps } from "../Notification/NotificationTray
 import { Props as AccountDropdownProps } from "../AccountDropdown/AccountDropdown";
 import Nav from "../Nav";
 import El from "../El/El";
-import Form from "../Form";
 
 export interface SiteHeaderProps {
   children?: React.ReactNode;
@@ -63,7 +62,11 @@ const SiteHeader = ({
       <Container className={align}>
         {children || (
           <React.Fragment>
-            <a className="navbar-toggler" onClick={onMenuToggleClick}>
+            <a
+              href="#noop"
+              className="navbar-toggler"
+              onClick={onMenuToggleClick}
+            >
               <span className="navbar-toggler-icon" />
             </a>
             <SiteLogo
@@ -74,9 +77,11 @@ const SiteHeader = ({
             />
             {searchBar && (
               <El.Div
-                ml={{ xs: 0, md: 8 }}
-                mr="auto"
-                d={{ xs: "none", lg: "block" }}
+                msSm={0}
+                msMd={5}
+                me="auto"
+                dSm="none"
+                dLg="block"
                 className="w-auto flex-fill max-w-md"
               >
                 {searchBar}

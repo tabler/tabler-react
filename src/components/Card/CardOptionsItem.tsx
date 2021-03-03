@@ -1,13 +1,11 @@
 import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
-export interface CardOptionsItemProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLAnchorElement> {
+export interface CardOptionsItemProps extends TablerComponentProps<"a"> {
   icon?: string;
   type?: "collapse" | "close" | "fullscreen";
 }

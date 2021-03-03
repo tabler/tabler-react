@@ -3,14 +3,12 @@ import Button, { ButtonProps } from "./Button";
 import { Manager, Reference } from "react-popper";
 import DropdownMenu, { DropdownMenuProps } from "../Dropdown/DropdownMenu";
 
-import { ReferenceChildrenProps } from "react-popper";
-
-export interface ButtonDropdownProps extends ButtonProps {
+export type ButtonDropdownProps = ButtonProps & {
   dropdownProps?: DropdownMenuProps;
   value?: string;
-}
+};
 
-const ButtonDropdown = function({
+const ButtonDropdown = function ({
   children,
   value,
   dropdownProps,
@@ -26,11 +24,11 @@ const ButtonDropdown = function({
   return (
     <Manager>
       <Reference>
-        {({ ref }: ReferenceChildrenProps) => {
+        {({ ref }: any) => {
           return (
             <Button
               onClick={_handleButtonOnClick}
-              rootRef={ref}
+              rootRef={ref as any}
               isDropdownToggle={true}
               {...buttonProps}
             >

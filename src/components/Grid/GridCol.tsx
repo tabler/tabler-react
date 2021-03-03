@@ -1,39 +1,39 @@
 import React from "react";
 import cn from "classnames";
 import El from "../El/El";
-import { UtilityProps } from "../../helpers/utilityPropsToClassNames";
-import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
 export interface GridColProps
-  extends HTMLPropsWithoutRef<HTMLDivElement>,
-    TablerComponent,
-    UtilityProps {
-  width?: number;
-  xs?: number;
-  xsAuto?: boolean;
-  sm?: number;
-  smAuto?: boolean;
-  md?: number;
-  mdAuto?: boolean;
-  lg?: number;
-  lgAuto?: boolean;
-  xl?: number;
-  xlAuto?: boolean;
-  auto?: boolean;
-  offset?: number;
-  offsetXs?: number;
-  offsetSm?: number;
-  offsetMd?: number;
-  offsetLg?: number;
-  offsetXl?: number;
-  order?: number;
-  orderXs?: number;
-  orderSm?: number;
-  orderMd?: number;
-  orderLg?: number;
-  orderXl?: number;
-  ignoreCol?: boolean;
-}
+  extends TablerComponentProps<
+    "div",
+    {
+      width?: number;
+      xs?: number;
+      xsAuto?: boolean;
+      sm?: number;
+      smAuto?: boolean;
+      md?: number;
+      mdAuto?: boolean;
+      lg?: number;
+      lgAuto?: boolean;
+      xl?: number;
+      xlAuto?: boolean;
+      auto?: boolean;
+      offset?: number;
+      offsetXs?: number;
+      offsetSm?: number;
+      offsetMd?: number;
+      offsetLg?: number;
+      offsetXl?: number;
+      order?: number;
+      orderXs?: number;
+      orderSm?: number;
+      orderMd?: number;
+      orderLg?: number;
+      orderXl?: number;
+      ignoreCol?: boolean;
+    }
+  > {}
 
 function GridCol({
   className,

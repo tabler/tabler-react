@@ -1,67 +1,66 @@
 import React, { useContext, forwardRef, useState } from "react";
 import cn from "classnames";
 import NavLink, { NavLinkProps } from "./NavLink";
-import { useClickOutside } from "../../helpers/ClickOutside";
-import { TablerComponent } from "../../types";
+// import { useClickOutside } from "../../helpers/ClickOutside";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import NavSubNav from "./NavSubNav";
 import NavSubNavContext from "./NavSubNavContext";
 
-export interface NavItemProps extends TablerComponent {
-  as?: React.ElementType;
-  linkAs?: React.ElementType;
-  linkProps?: NavLinkProps;
-  value?: string;
-  /**
-   * @deprecated use 'linkAs'
-   */
-  LinkComponent?: React.ElementType;
-  /**
-   * @deprecated use 'linkProps'
-   */
-  href?: string;
-  /**
-   * @deprecated use 'linkProps'
-   */
-  to?: string;
-  /**
-   * @deprecated use 'linkProps'
-   */
-  icon?: string;
-  /**
-   * @deprecated use 'as'
-   */
-  type?: "li" | "div";
-  /**
-   * Make this item behave like it has a subNav even if you dont use subItems or subItemsObjects
-   */
-  hasSubNav?: boolean;
-  onClick?: () => void;
-  /**
-   * @deprecated use 'linkProps'
-   * Display this item in an active, or currently viewing, state
-   */
-  active?: boolean;
-  subItems?: React.ReactNode;
-  subItemsObjects?: Array<NavItemProps>;
-  /**
-   * Position of the subnav Dropdown
-   */
-  position?: any;
-  /**
-   * @deprecated use 'linkProps'
-   * Whether or not to pass "exact" property to underlying NavLink component
-   */
-  useExact?: boolean;
-  /**
-   * Will wrap children in a NavLink
-   */
-  link?: boolean;
-  subNav?: React.ReactNode;
-  [key: string]: any;
-}
+export type NavItemProps<
+  As extends React.ElementType = "li"
+> = TablerComponentProps<
+  As,
+  {
+    linkProps?: NavLinkProps;
+    value?: string;
+    /**
+     * @deprecated use 'linkAs'
+     */
+    LinkComponent?: React.ElementType;
+    /**
+     * @deprecated use 'linkProps'
+     */
+    href?: string;
+    /**
+     * @deprecated use 'linkProps'
+     */
+    to?: string;
+    /**
+     * @deprecated use 'linkProps'
+     */
+    icon?: string;
+    /**
+     * Make this item behave like it has a subNav even if you dont use subItems or subItemsObjects
+     */
+    hasSubNav?: boolean;
+    onClick?: () => void;
+    /**
+     * @deprecated use 'linkProps'
+     * Display this item in an active, or currently viewing, state
+     */
+    active?: boolean;
+    subItems?: React.ReactNode;
+    subItemsObjects?: Array<NavItemProps>;
+    /**
+     * Position of the subnav Dropdown
+     */
+    position?: any;
+    /**
+     * @deprecated use 'linkProps'
+     * Whether or not to pass "exact" property to underlying NavLink component
+     */
+    useExact?: boolean;
+    /**
+     * Will wrap children in a NavLink
+     */
+    link?: boolean;
+    subNav?: React.ReactNode;
+    [key: string]: any;
+  }
+>;
 
-export const NavItem = forwardRef(function (
+export const NavItem = forwardRef<HTMLLIElement, NavItemProps>(function (
   {
     children,
     LinkComponent,
@@ -78,14 +77,14 @@ export const NavItem = forwardRef(function (
     useExact,
     position = "bottom-start",
     onClick,
-    as = El.Li,
+    as,
     linkAs,
     linkProps,
     link = true,
     subNav,
     ...props
   }: NavItemProps,
-  ref: React.Ref<any>
+  ref
 ) {
   const [isOpen, setIsOpen] = useState(false);
   // context is used so that we only apply on click outside handler to the top level nav item
@@ -94,7 +93,7 @@ export const NavItem = forwardRef(function (
   const _isTopLevelSubNav =
     (subNav || hasSubNav) && topLevelSubNavContext === false;
 
-  const Component = type || as;
+  const Component = type || as || El.Li;
   const _linkAs = LinkComponent || linkAs;
   const _linkProps = {
     ...linkProps,
@@ -133,14 +132,14 @@ export const NavItem = forwardRef(function (
     className
   );
 
-  const _ref = _isTopLevelSubNav
-    ? useClickOutside(() => {
-        setIsOpen(false);
-      }, ref)
-    : ref;
+  // const _ref = useClickOutside(() => {
+  //   if (_isTopLevelSubNav) {
+  //     setIsOpen(false);
+  //   }
+  // }, ref);
 
   const _navItem = (
-    <Component className={wrapperClasses} ref={_ref} {...props}>
+    <Component className={wrapperClasses} ref={ref} {...props}>
       <React.Fragment>
         {navLink}
         {subNav && isOpen && <NavSubNav show={isOpen}>{subNav}</NavSubNav>}

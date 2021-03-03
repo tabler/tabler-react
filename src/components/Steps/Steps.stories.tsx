@@ -15,12 +15,10 @@ stories.add(
   () => {
     return (
       <Steps>
-        <Steps.Step href="#">Step 1</Steps.Step>
-        <Steps.Step href="#">Step 2</Steps.Step>
-        <Steps.Step href="#" active>
-          Step 3
-        </Steps.Step>
-        <Steps.Step href="#">Step 4</Steps.Step>
+        <Steps.Step>Step 1</Steps.Step>
+        <Steps.Step>Step 2</Steps.Step>
+        <Steps.Step active>Step 3</Steps.Step>
+        <Steps.Step>Step 4</Steps.Step>
       </Steps>
     );
   },
@@ -32,14 +30,10 @@ stories.add(
 stories.add("Tooltip", () => {
   return (
     <Steps>
-      <Steps.Step href="#" tooltip="Step 1">
-        Step 1
-      </Steps.Step>
-      <Steps.Step href="#">Step 2</Steps.Step>
-      <Steps.Step href="#" active>
-        Step 3
-      </Steps.Step>
-      <Steps.Step href="#">Step 4</Steps.Step>
+      <Steps.Step tooltip="Step 1">Step 1</Steps.Step>
+      <Steps.Step>Step 2</Steps.Step>
+      <Steps.Step active>Step 3</Steps.Step>
+      <Steps.Step>Step 4</Steps.Step>
     </Steps>
   );
 });
@@ -47,14 +41,10 @@ stories.add("Tooltip", () => {
 stories.add("With Numbers", () => {
   return (
     <Steps counter>
-      <Steps.Step href="#" tooltip="Step 1">
-        Step 1
-      </Steps.Step>
-      <Steps.Step href="#">Step 2</Steps.Step>
-      <Steps.Step href="#" active>
-        Step 3
-      </Steps.Step>
-      <Steps.Step href="#">Step 4</Steps.Step>
+      <Steps.Step tooltip="Step 1">Step 1</Steps.Step>
+      <Steps.Step>Step 2</Steps.Step>
+      <Steps.Step active>Step 3</Steps.Step>
+      <Steps.Step>Step 4</Steps.Step>
     </Steps>
   );
 });

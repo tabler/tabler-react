@@ -1,14 +1,14 @@
 import * as React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
-interface ListItemProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLLIElement> {
-  inline?: boolean;
-}
+type ListItemProps = TablerComponentProps<
+  "li",
+  {
+    inline?: boolean;
+  }
+>;
 
 function ListItem({ className, children, inline, ...rest }: ListItemProps) {
   const classes = cn({ "list-inline-item": inline }, className);

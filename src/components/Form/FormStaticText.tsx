@@ -1,11 +1,11 @@
 import React from "react";
 
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 interface FormStaticTextProps
-  extends ELProps,
+  extends TablerComponentProps,
     HTMLPropsWithoutRef<HTMLDivElement> {}
 
 function FormStaticText({ children, ...rest }: FormStaticTextProps) {

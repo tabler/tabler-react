@@ -4,7 +4,8 @@ import Icon from "../Icon";
 import Avatar from "../Avatar";
 import Button from "../Button";
 
-import { TablerComponent, MouseEvents, PointerEvents } from "../../";
+import { MouseEvents, PointerEvents } from "../../";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
 export interface AlertType {
   /**
@@ -13,11 +14,7 @@ export interface AlertType {
   type: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
 }
 
-export interface Props
-  extends AlertType,
-    TablerComponent,
-    MouseEvents,
-    PointerEvents {
+export interface Props extends AlertType, TablerComponentProps {
   /**
    * An Icon to be displayed on the right hand side of the Alert
    */
@@ -40,7 +37,7 @@ export interface Props
   onDismissClick?: () => void;
 }
 
-export const Alert = function({
+export const Alert = function ({
   className,
   style,
   children,

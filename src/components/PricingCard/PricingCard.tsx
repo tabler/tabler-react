@@ -7,9 +7,9 @@ import PricingCardPrice from "./PricingCardPrice";
 import PricingCardAttributeList from "./PricingCardAttributeList";
 import PricingCardAttributeItem from "./PricingCardAttributeItem";
 import PricingCardButton from "./PricingCardButton";
-import { TablerComponent } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-interface Props extends TablerComponent {
+interface Props extends TablerComponentProps {
   active?: boolean;
   category?: React.ReactNode;
 }

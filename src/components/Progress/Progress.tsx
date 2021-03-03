@@ -1,12 +1,12 @@
 import * as React from "react";
 import cn from "classnames";
 import ProgressBar from "./ProgressBar";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface ProgressProps
-  extends ELProps,
+  extends TablerComponentProps,
     Omit<HTMLPropsWithoutRef<HTMLDivElement>, "size"> {
   size?: string;
 }

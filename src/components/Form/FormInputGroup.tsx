@@ -3,11 +3,11 @@ import cn from "classnames";
 import FormInputGroupAppend from "./FormInputGroupAppend";
 import FormInputGroupPrepend from "./FormInputGroupPrepend";
 import FormInput, { FormInputProps } from "./FormInput";
-import { TablerComponent } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 
 interface FormInputGroupProps
-  extends TablerComponent,
+  extends TablerComponentProps,
     HTMLAttributes<HTMLDivElement> {
   append?: React.ReactNode;
   prepend?: React.ReactNode;
@@ -15,7 +15,7 @@ interface FormInputGroupProps
    * @deprecated use 'as'
    */
   RootComponent?: React.ElementType;
-  as?: React.ElementType;
+
   inputProps?: FormInputProps;
 }
 
@@ -24,7 +24,7 @@ function FormInputGroup({
   append,
   prepend,
   RootComponent,
-  as = El.Div,
+  as,
   inputProps,
   children,
   ...rest
@@ -35,7 +35,7 @@ function FormInputGroup({
     },
     className
   );
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || El.Div;
   const _children = inputProps ? <FormInput {...inputProps} /> : children;
 
   if (prepend === true) {

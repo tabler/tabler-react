@@ -1,11 +1,11 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 import { colors } from "../../colors";
 import Icon from "../Icon";
 
-interface Props extends ELProps {
+interface Props extends TablerComponentProps {
   color?: colors;
   bookmark?: boolean;
   icon?: string;

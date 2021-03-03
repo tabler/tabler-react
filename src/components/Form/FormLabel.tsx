@@ -1,14 +1,16 @@
 import React from "react";
 import cn from "classnames";
 
-import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
 interface Props
-  extends TablerComponent,
-    HTMLPropsWithoutRef<HTMLLabelElement> {
-  aside?: string;
-}
+  extends TablerComponentProps<
+    "label",
+    {
+      aside?: string;
+    }
+  > {}
 
 function FormLabel({ className, aside, children, ...rest }: Props) {
   const classes = cn("form-label", className);

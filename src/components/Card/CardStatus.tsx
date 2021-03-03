@@ -1,12 +1,12 @@
 import * as React from "react";
 import cn from "classnames";
 import { colors } from "../../colors";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface CardStatusProps
-  extends ELProps,
+  extends TablerComponentProps,
     HTMLPropsWithoutRef<HTMLDivElement> {
   color: colors;
   side?: boolean;

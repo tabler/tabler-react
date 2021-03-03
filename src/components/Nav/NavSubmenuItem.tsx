@@ -1,11 +1,10 @@
 import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
-import { TablerComponent } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 
-export interface NavSubmenuItemProps extends TablerComponent {
-  as?: React.ElementType;
+export interface NavSubmenuItemProps extends TablerComponentProps {
   RootComponent?: React.ElementType;
   active?: boolean;
   icon?: string;
@@ -14,7 +13,7 @@ export interface NavSubmenuItemProps extends TablerComponent {
 
 function NavSubmenuItem({
   className,
-  as = El.A,
+  as,
   RootComponent,
   icon,
   children,
@@ -22,7 +21,7 @@ function NavSubmenuItem({
   ...rest
 }: NavSubmenuItemProps) {
   const classes = cn({ "nav-item": true, active: active }, className);
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || El.A;
   return (
     <Component className={classes} {...rest}>
       {icon && (

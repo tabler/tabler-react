@@ -1,8 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-interface Props extends TablerComponent {}
+interface Props extends TablerComponentProps {}
 
 function PricingCardCategory({ className, children }: Props) {
   const classes = cn("card-category", className);

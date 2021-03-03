@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import cn from "classnames";
 import Grid from "../Grid";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
-import { HTMLPropsWithoutRef } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
 export interface FormRatioProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLInputElement> {
-  value?: number | string;
-  onChange?: (event: React.ChangeEvent<EventTarget>) => any;
-}
+  extends TablerComponentProps<
+    "input",
+    {
+      value?: number | string;
+      onChange?: (event: React.ChangeEvent<EventTarget>) => any;
+    }
+  > {}
 
 const FormRatio = function ({
   className,
@@ -23,7 +24,7 @@ const FormRatio = function ({
     string | readonly string[] | number | undefined
   >(!onChange ? defaultValue : "0");
 
-  const handleOnChange = (e: React.MouseEvent<HTMLInputElement>): any => {
+  const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>): any => {
     if (onChange) {
       onChange(e);
     } else {

@@ -9,11 +9,11 @@ function CardTitle({
   className,
   children,
   RootComponent,
-  as = El.H3,
+  as,
   ...rest
 }: CardTitleProps) {
   const classes = cn("card-title", className);
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || El.H3;
   return (
     <Component className={classes} {...rest}>
       {children}

@@ -1,17 +1,17 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 import ToastHeader, { ToastHeaderProps } from "./ToastHeader";
 import ToastBody from "./ToastBody";
 
-export interface ToastProps extends ELProps {
+export interface ToastProps extends TablerComponentProps {
   show?: boolean;
   header?: ToastHeaderProps;
   body?: React.ReactNode;
 }
 
-export const Toast = function({
+export const Toast = function ({
   children,
   className,
   show,

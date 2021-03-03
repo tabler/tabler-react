@@ -238,7 +238,7 @@ function Home() {
                               size="sm"
                               color="secondary"
                               as={El.A}
-                              mr={1}
+                              me={1}
                             >
                               Manage
                             </Button>
@@ -520,7 +520,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x: any) {
+                          title: function (x: any) {
                             return "";
                           },
                         },
@@ -582,7 +582,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x: any) {
+                          title: function (x: any) {
                             return "";
                           },
                         },
@@ -644,7 +644,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x: any) {
+                          title: function (x: any) {
                             return "";
                           },
                         },
@@ -706,7 +706,7 @@ function Home() {
                       }}
                       tooltip={{
                         format: {
-                          title: function(x: any) {
+                          title: function (x: any) {
                             return "";
                           },
                         },

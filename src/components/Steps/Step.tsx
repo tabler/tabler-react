@@ -1,17 +1,17 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 import { colors } from "../../colors";
 import Tooltip from "../Tooltip";
 
-export interface Props extends ELProps {
+export interface Props extends TablerComponentProps {
   color?: colors;
   active?: boolean;
   tooltip?: string;
 }
 
-export const Step = function({
+export const Step = function ({
   children,
   className,
   active,

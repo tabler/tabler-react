@@ -1,17 +1,19 @@
 import React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
-import { HTMLPropsWithoutRef, TablerComponent } from "../../types";
 import El from "../El/El";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
 export interface FormSelectGroupItemProps
-  extends TablerComponent,
-    HTMLPropsWithoutRef<HTMLInputElement> {
-  label?: string;
-  icon?: string;
-  type?: "radio" | "checkbox";
-  [key: string]: any;
-}
+  extends TablerComponentProps<
+    "input",
+    {
+      label?: string;
+      icon?: string;
+      type?: "radio" | "checkbox";
+      [key: string]: any;
+    }
+  > {}
 
 function FormSelectGroupItem({
   className,

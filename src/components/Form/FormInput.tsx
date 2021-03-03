@@ -2,34 +2,36 @@ import React, { forwardRef } from "react";
 import Icon from "../Icon";
 import cn from "classnames";
 import FormGroup from "./FormGroup";
-import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
 export interface FormInputProps
-  extends TablerComponent,
-    HTMLPropsWithoutRef<HTMLInputElement> {
-  /**
-   * Wraps the input in Form.Group and adds a label
-   */
-  label?: string;
-  icon?: string;
-  position?: "append" | "prepend";
-  valid?: boolean;
-  tick?: boolean;
-  invalid?: boolean;
-  cross?: boolean;
-  feedback?: string;
-  error?: string;
-  /**
-   * a lighter, more subtle input
-   */
-  light?: boolean;
-}
+  extends TablerComponentProps<
+    "input",
+    {
+      /**
+       * Wraps the input in Form.Group and adds a label
+       */
+      label?: string;
+      icon?: string;
+      position?: "append" | "prepend";
+      valid?: boolean;
+      tick?: boolean;
+      invalid?: boolean;
+      cross?: boolean;
+      feedback?: string;
+      error?: string;
+      /**
+       * a lighter, more subtle input
+       */
+      light?: boolean;
+    }
+  > {}
 
 /**
  * A an input field
  */
-export const FormInput = forwardRef(
+export const FormInput = forwardRef<HTMLInputElement, FormInputProps>(
   (
     {
       className,
@@ -45,8 +47,8 @@ export const FormInput = forwardRef(
       feedback,
       light,
       ...rest
-    }: FormInputProps,
-    ref: React.Ref<any>
+    },
+    ref
   ) => {
     const classes = cn(
       {

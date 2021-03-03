@@ -12,13 +12,10 @@ import { useClickOutside } from "../../helpers/ClickOutside";
 import withDropdownProvider from "./withDropdownProvider";
 import DropdownContext from "./DropdownContext";
 import { colors } from "../../colors";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
-export interface DropdownProps
-  extends ELProps,
-    Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
+export interface DropdownProps extends TablerComponentProps<"div"> {
   /**
    * This dropdown should only be displayed on desktop
    */
@@ -31,10 +28,6 @@ export interface DropdownProps
    * Is this Dropdown a Card option?
    */
   isOption?: boolean;
-  /**
-   * Add flex classes to the Dropdown
-   */
-  flex?: boolean | "xs" | "sm" | "md" | "lg" | "xl";
 
   /**
    * Any additional classNames for the trigger component
@@ -87,7 +80,7 @@ export interface DropdownProps
    * The default RootComponent for all itemsObjects.
    * itemsObjects[x].RootComponent takes priority
    */
-  itemsRootComponent?: React.ElementType;
+  itemsRootComponent?: React.ElementType<DropdownItemProps>;
   triggerProps?: DropdownTriggerProps;
 }
 
@@ -97,13 +90,12 @@ export interface itemObject extends DropdownItemProps {
   [key: string]: any;
 }
 
-const Dropdown = forwardRef(function (
+const Dropdown = forwardRef<HTMLDivElement, DropdownProps>(function (
   {
     className,
     children,
     desktopOnly,
     isOption,
-    flex = false,
     items,
     trigger,
     icon,
@@ -141,12 +133,7 @@ const Dropdown = forwardRef(function (
     {
       dropdown: true,
       "d-none": desktopOnly,
-      "d-md-flex": desktopOnly || flex === "md",
-      [`d-${flex}-flex`]:
-        (typeof flex !== "boolean" &&
-          ["xs", "sm", "lg", "xl"].includes(flex)) ||
-        flex,
-      "d-flex": flex === true,
+      "d-md-flex": desktopOnly,
       "card-options-dropdown": isOption,
       show: isOpen,
     },
@@ -186,7 +173,7 @@ const Dropdown = forwardRef(function (
             ) : (
               <DropdownItem
                 key={i}
-                as={as || itemsRootComponent}
+                as={as || itemsRootComponent || "a"}
                 onClick={(e: React.MouseEvent<any>) =>
                   _handleItemClick(e, onClick)
                 }
@@ -215,11 +202,11 @@ const Dropdown = forwardRef(function (
     return null;
   })();
 
-  const _ref = useClickOutside(() => setIsOpen(false), ref);
+  // const _ref = useClickOutside(() => setIsOpen(false), ref);
 
   return (
     <Manager>
-      <El.Div className={classes} ref={_ref} {...rest}>
+      <El.Div className={classes} ref={ref} {...rest}>
         {_trigger}
         {menu || children}
       </El.Div>

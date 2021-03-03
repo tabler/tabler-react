@@ -1,12 +1,12 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import { colors } from "../../colors";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface TimelineItemBadgeProps
-  extends ELProps,
+  extends TablerComponentProps,
     HTMLPropsWithoutRef<HTMLDivElement> {
   color?: colors;
 }

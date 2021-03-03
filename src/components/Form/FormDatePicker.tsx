@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import FormSelect, { FormSelectProps } from "./FormSelect";
 import FormInputGroup from "./FormInputGroup";
 import El from "../El/El";
-import { TablerComponent } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface FormDatePickerProps extends TablerComponent {
+export interface FormDatePickerProps
+  extends Omit<TablerComponentProps, "onChange"> {
   defaultDate: Date;
   minYear: number;
   maxYear: number;
@@ -120,7 +121,7 @@ const FormDatePicker = function ({
         {...dayProps}
       >
         <option value="" />
-        {daysRange.map((day) => (
+        {daysRange.map(day => (
           <option key={day} value={day}>
             {day}
           </option>
@@ -145,7 +146,7 @@ const FormDatePicker = function ({
         {...yearProps}
       >
         <option value="" />
-        {yearsRange.map((year) => (
+        {yearsRange.map(year => (
           <option key={year} value={year}>
             {year}
           </option>

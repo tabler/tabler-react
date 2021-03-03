@@ -1,11 +1,11 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface ButtonListProps
-  extends ELProps,
+  extends TablerComponentProps,
     Omit<HTMLPropsWithoutRef<HTMLDivElement>, "align"> {
   align?: "" | "left" | "center" | "right";
 }

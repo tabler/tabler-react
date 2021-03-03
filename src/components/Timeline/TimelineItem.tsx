@@ -1,18 +1,15 @@
-import React, { HTMLProps, ReactHTMLElement } from "react";
+import React from "react";
 import cn from "classnames";
 
 import TimelineItemBadge from "./TimelineItemBadge";
 import TimelineItemTime from "./TimelineItemTime";
 import TimelineItemTitle from "./TimelineItemTitle";
 import TimelineItemDescription from "./TimelineItemDescription";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { colors } from "../../colors";
-import { HTMLPropsWithoutRef } from "../../types";
 
-export interface TimelineItemProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLLIElement> {
+export interface TimelineItemProps extends TablerComponentProps<"li"> {
   title?: string;
   description?: string;
   badge?: boolean;

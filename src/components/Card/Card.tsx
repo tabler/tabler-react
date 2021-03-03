@@ -11,14 +11,12 @@ import CardAlert from "./CardAlert";
 import CardFooter from "./CardFooter";
 import { colors } from "../../colors";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface CardProps
-  extends ELProps,
-    Omit<HTMLProps<HTMLDivElement>, "as"> {
+export interface CardProps extends TablerComponentProps<"div"> {
   title?: string;
   body?: React.ReactNode;
-  as?: React.ElementType;
+
   /**
    * @deprecated use 'as'
    */
@@ -40,7 +38,7 @@ export interface CardProps
 const Card = function ({
   className,
   children,
-  as = El.Div,
+  as,
   RootComponent,
   title,
   body,
@@ -63,15 +61,15 @@ const Card = function ({
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleCloseOnClick = (): void => {
-    setIsClosed((s) => !s);
+    setIsClosed(s => !s);
   };
 
   const handleCollapseOnClick = (): void => {
-    setIsCollapsed((s) => !s);
+    setIsCollapsed(s => !s);
   };
 
   const handleFullscreenOnClick = (): void => {
-    setIsFullscreen((s) => !s);
+    setIsFullscreen(s => !s);
   };
 
   if (_isClosed) {
@@ -86,7 +84,7 @@ const Card = function ({
     },
     className
   );
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || El.Div;
 
   const card_options = (options || isCollapsible || isClosable) && (
     <CardOptions>

@@ -1,19 +1,18 @@
 import React from "react";
 import cn from "classnames";
-import { HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface NavSubNavProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLElement> {
-  as?: React.ElementType;
-  collapsed?: boolean;
-  show?: boolean;
-}
+export type NavSubNavProps = TablerComponentProps<
+  "div",
+  {
+    collapsed?: boolean;
+    show?: boolean;
+  }
+>;
 
 function NavSubNav({
-  as: Component = El.Div,
+  as,
   className,
   children,
   collapsed = true,
@@ -24,6 +23,7 @@ function NavSubNav({
     { "navbar-subnav": true, collapse: true, collapsed, show },
     className
   );
+  const Component = as || El.Div;
   return (
     <Component className={classes} {...rest}>
       <ul className="nav">{children}</ul>

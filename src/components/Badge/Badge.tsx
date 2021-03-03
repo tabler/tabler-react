@@ -2,13 +2,10 @@ import React, { useState, forwardRef } from "react";
 import cn from "classnames";
 import BadgeAddOn from "./BadgeAddOn";
 
-import { HTMLPropsWithoutRef } from "../../types";
 import { colors, softColors } from "../../colors";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface BadgeProps
-  extends ELProps,
-    Omit<HTMLPropsWithoutRef<HTMLSpanElement>, "as"> {
+export interface BadgeProps extends TablerComponentProps<"span"> {
   /**
    * Rounded corners
    */
@@ -64,7 +61,6 @@ export interface BadgeProps
   /**
    * Render this component as something else
    */
-  as?: React.ElementType;
 }
 
 export const Badge = forwardRef(function (
@@ -82,7 +78,6 @@ export const Badge = forwardRef(function (
     onAddOnClick,
     RootComponent,
     link,
-    href,
     as = "span",
     textColor = "white",
     pill,

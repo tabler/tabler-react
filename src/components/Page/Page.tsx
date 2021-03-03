@@ -1,11 +1,11 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface PageProps
-  extends ELProps,
+  extends TablerComponentProps,
     Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {}
 
 function Page({ className, children, ...rest }: PageProps) {

@@ -1,34 +1,38 @@
 import React, { forwardRef } from "react";
 import cn from "classnames";
 import Icon from "../Icon";
-import { TablerComponent } from "../../types";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import NavLinkTitle from "./NavLinkTitle";
 
-export interface NavLinkProps extends TablerComponent {
-  as?: React.ElementType;
-  /**
-   * @deprecated use 'as'
-   */
-  RootComponent?: React.ElementType;
-  active?: boolean;
-  icon?: string;
-  to?: string;
-  hasSubNav?: boolean;
-  rootRef?: any;
-  useExact?: boolean;
-  title?: React.ReactNode;
-  collapsed?: boolean;
-  isToggle?: boolean;
-  [key: string]: any;
-}
+export type NavLinkProps<
+  As extends React.ElementType = "a"
+> = TablerComponentProps<
+  As,
+  {
+    /**
+     * @deprecated use 'as'
+     */
+    RootComponent?: React.ElementType;
+    active?: boolean;
+    icon?: string;
+    to?: string;
+    hasSubNav?: boolean;
+    rootRef?: any;
+    useExact?: boolean;
+    title?: React.ReactNode;
+    collapsed?: boolean;
+    isToggle?: boolean;
+    [key: string]: any;
+  }
+>;
 
-export const NavLink = forwardRef(function(
+export const NavLink = forwardRef(function (
   {
     children,
     className,
     RootComponent,
-    as = El.A,
+    as,
     icon,
     active = false,
     hasSubNav,
@@ -50,7 +54,7 @@ export const NavLink = forwardRef(function(
     className
   );
 
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || El.A;
 
   return (
     <Component

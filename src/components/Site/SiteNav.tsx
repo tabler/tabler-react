@@ -7,8 +7,7 @@ import { NavItemProps } from "../Nav/NavItem";
 import El from "../El";
 import { NavBarProps } from "../Nav/NavBar";
 import SiteLogo from "../Site/SiteLogo";
-import { string } from "prop-types";
-3;
+
 export interface SiteNavProps extends NavBarProps {
   children?: React.ReactNode;
   items?: React.ReactNode;

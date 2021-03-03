@@ -1,13 +1,10 @@
-import React, { HTMLProps, ReactHTMLElement } from "react";
+import React from "react";
 import cn from "classnames";
 
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
-export interface TimelineProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLUListElement> {
+export interface TimelineProps extends TablerComponentProps<"ul"> {
   simple?: boolean;
 }
 

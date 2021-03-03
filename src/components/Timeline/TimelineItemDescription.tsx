@@ -1,10 +1,10 @@
 import * as React from "react";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface TimelineItemDescriptionProps
-  extends ELProps,
+  extends TablerComponentProps,
     HTMLPropsWithoutRef<HTMLParagraphElement> {}
 
 const TimelineItemDescription = React.forwardRef<any, any>(

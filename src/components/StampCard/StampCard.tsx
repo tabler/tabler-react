@@ -28,7 +28,7 @@ function StampCard({
   return (
     <Card className={classes}>
       <div className="p-3 d-flex align-items-center">
-        <Stamp color={color} icon={icon} mr={3} />
+        <Stamp color={color} icon={icon} me={3} />
         <div>
           {header && (
             <Header size={3} m={0}>

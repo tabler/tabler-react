@@ -1,9 +1,9 @@
 import * as React from "react";
 import cn from "classnames";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-interface PageTitleProps extends ELProps {}
+interface PageTitleProps extends TablerComponentProps {}
 
 function PageTitle({ className, children, ...rest }: PageTitleProps) {
   const classes = cn("page-title-box", className);

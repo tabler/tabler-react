@@ -1,10 +1,10 @@
 import React from "react";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
 export interface FormToggleStackProps
-  extends ELProps,
+  extends TablerComponentProps,
     HTMLPropsWithoutRef<HTMLDivElement> {}
 
 function FormToggleStack({ children, ...rest }: FormToggleStackProps) {

@@ -1,18 +1,19 @@
 import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import { colors } from "../../colors";
 import El from "../El/El";
 import { HTMLPropsWithoutRef } from "../../types";
 
-interface StampProps
-  extends ELProps,
-    Omit<HTMLPropsWithoutRef<HTMLSpanElement>, "size"> {
-  size?: "sm" | "md";
-  icon?: string;
-  color?: colors;
-}
+type StampProps = TablerComponentProps<
+  "span",
+  {
+    size?: "sm" | "md";
+    icon?: string;
+    color?: colors;
+  }
+>;
 
 function Stamp({
   children,

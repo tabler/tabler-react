@@ -1,12 +1,10 @@
 import React from "react";
 import cn from "classnames";
 import FormLabel from "./FormLabel";
-import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface FormGroupProps
-  extends TablerComponent,
-    Omit<HTMLPropsWithoutRef<HTMLDivElement>, "label"> {
+export interface FormGroupProps extends TablerComponentProps<"label"> {
   label?: React.ReactNode;
   isRequired?: boolean;
   /**

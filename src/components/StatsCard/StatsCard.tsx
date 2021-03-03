@@ -65,18 +65,18 @@ function StatsCard({
         <Card.Body>
           <El.Div d="flex">
             <div>{label}</div>
-            {actions && <El.Div ml="auto">{actions}</El.Div>}
+            {actions && <El.Div ms="auto">{actions}</El.Div>}
           </El.Div>
           <El.Div
             d="flex"
             mb={layout === 3 ? 3 : 0}
             className="align-items-baseline"
           >
-            <Header mb={0} mr={2}>
+            <Header mb={0} me={2}>
               {total}
             </Header>
             {layout === 4 && (
-              <El.Div mr="auto" className={`text-${movementColor}`}>
+              <El.Div me="auto" className={`text-${movementColor}`}>
                 {movementString}{" "}
                 <Icon
                   name={
@@ -96,7 +96,7 @@ function StatsCard({
             <React.Fragment>
               <El.Div d="flex" mb={2}>
                 <div>{movementLabel}</div>
-                <El.Div ml="auto" className={`text-${movementColor}`}>
+                <El.Div ms="auto" className={`text-${movementColor}`}>
                   {movementString}{" "}
                   <Icon
                     name={

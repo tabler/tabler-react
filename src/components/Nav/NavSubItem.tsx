@@ -1,10 +1,8 @@
 import * as React from "react";
 import Dropdown from "../Dropdown";
-import { TablerComponent } from "../../types";
 import { DropdownItemProps } from "../Dropdown/DropdownItem";
 
-export interface NavSubItemProps extends TablerComponent, DropdownItemProps {
-  as?: React.ElementType;
+export interface NavSubItemProps extends DropdownItemProps {
   LinkComponent?: React.ElementType;
   /**
    * @deprecated use children

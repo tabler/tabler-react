@@ -1,15 +1,15 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El";
 import { colors } from "../../colors";
 
-export interface Props extends ELProps {
+export interface Props extends TablerComponentProps {
   color?: colors;
   counter?: boolean;
 }
 
-export const Steps = function({
+export const Steps = function ({
   children,
   className,
   color,
@@ -25,7 +25,7 @@ export const Steps = function({
     className
   );
   return (
-    <El.Div p={6} className={_className} {...rest}>
+    <El.Div p={5} className={_className} {...rest}>
       {children}
     </El.Div>
   );

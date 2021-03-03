@@ -9,39 +9,44 @@ import { ReferenceChildrenProps } from "react-popper";
 import DropdownContext from "./DropdownContext";
 import { colors } from "../../colors";
 import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface DropdownTriggerProps extends ELProps {
-  /**
-   * Display an arrow alongside the trigger content
-   */
-  toggle?: boolean;
-  /**
-   * The value to be displayed within the trigger if children is not included
-   */
-  value?: string;
-  /**
-   * The background color for a Button trigger
-   */
-  color?: colors;
-  /**
-   * An Icon displayed to the left of the trigger content
-   */
-  icon?: string;
-  /**
-   * Is this trigger being used as a NavLink
-   */
-  isNavLink?: boolean;
-  /**
-   * Is this trigger beind used as a Card.Header option
-   */
-  isOption?: boolean;
-}
+export type DropdownTriggerProps<
+  As extends React.ElementType = "div"
+> = TablerComponentProps<
+  As,
+  {
+    /**
+     * Display an arrow alongside the trigger content
+     */
+    toggle?: boolean;
+    /**
+     * The value to be displayed within the trigger if children is not included
+     */
+    value?: string;
+    /**
+     * The background color for a Button trigger
+     */
+    color?: colors;
+    /**
+     * An Icon displayed to the left of the trigger content
+     */
+    icon?: string;
+    /**
+     * Is this trigger being used as a NavLink
+     */
+    isNavLink?: boolean;
+    /**
+     * Is this trigger beind used as a Card.Header option
+     */
+    isOption?: boolean;
+  }
+>;
 
 /**
  * Provides the trigger element for a Dropdown
  */
-function DropdownTrigger({
+function DropdownTrigger<As extends React.ElementType = typeof El.Button>({
   className,
   toggle = true,
   value,
@@ -49,11 +54,12 @@ function DropdownTrigger({
   icon,
   isNavLink,
   isOption,
-  as: Component = El.Button,
+  as,
   ...rest
-}: DropdownTriggerProps) {
+}: DropdownTriggerProps<As>) {
   const [isOpen, setIsOpen] = React.useContext(DropdownContext);
 
+  const Component = as || El.Button;
   const classes = cn(
     {
       "dropdown-toggle": toggle,

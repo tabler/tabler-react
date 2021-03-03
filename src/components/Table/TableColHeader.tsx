@@ -1,14 +1,9 @@
 import React from "react";
 import cn from "classnames";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
-import { HTMLPropsWithoutRef } from "../../types";
 
-export interface TableColHeaderProps
-  extends ELProps,
-    HTMLPropsWithoutRef<HTMLTableHeaderCellElement> {
-  alignContent?: "left" | "center" | "right";
-}
+export type TableColHeaderProps = TablerComponentProps<"th">;
 
 function TableColHeader({
   className,

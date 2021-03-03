@@ -1,25 +1,14 @@
-import React, { ReactElement, ElementType } from "react";
+import React from "react";
 import cn from "classnames";
-import { HTMLPropsWithoutRef } from "../../types";
-import El from "../El/El";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface DividerProps<T extends HTMLElement = HTMLHeadingElement>
-  extends ELProps,
-    Omit<HTMLPropsWithoutRef<T>, "as"> {
-  as?: ElementType;
-}
-
+export interface DividerProps extends TablerComponentProps {}
 /**
  * Divider
  */
-export function Divider<T extends HTMLElement = HTMLHeadingElement>({
-  children,
-  className,
-  as: Component = "h6",
-  ...rest
-}: DividerProps<T>) {
+export function Divider({ children, className, as, ...rest }: DividerProps) {
   const classes = cn("divider", className);
+  const Component = as || "h6";
   return (
     <Component className={classes} {...rest}>
       {children}

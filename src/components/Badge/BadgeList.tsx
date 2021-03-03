@@ -1,10 +1,9 @@
 import React from "react";
 import cn from "classnames";
-import { HTMLPropsWithoutRef } from "../../types";
-import { ELProps } from "../../helpers/makeHtmlElement";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 import El from "../El/El";
 
-export interface Props extends ELProps, HTMLPropsWithoutRef<HTMLSpanElement> {}
+export interface Props extends TablerComponentProps {}
 
 /**
  * Adds a space between its child Badges

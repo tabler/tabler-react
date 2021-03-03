@@ -1,9 +1,8 @@
 import * as React from "react";
 import cn from "classnames";
-import { TablerComponent } from "../../types";
-import { string } from "prop-types";
 
-export interface SiteLogoProps extends TablerComponent {
+export interface SiteLogoProps {
+  className?: string;
   href?: string;
   src?: string;
   srcSmall?: string;

@@ -2,13 +2,10 @@ import * as React from "react";
 import cn from "classnames";
 import Icon from "../Icon";
 
-import { HTMLPropsWithoutRef } from "../../types";
-import { ELProps } from "../../helpers/makeHtmlElement";
 import { colors } from "../../colors";
+import { TablerComponentProps } from "../../helpers/createTablerElement";
 
-export interface BadgeAddOnProps
-  extends ELProps,
-    Omit<HTMLPropsWithoutRef<HTMLSpanElement>, "as"> {
+export interface BadgeAddOnProps extends TablerComponentProps {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -30,7 +27,6 @@ export interface BadgeAddOnProps
   /**
    * Render component as something else
    */
-  as?: React.ElementType;
 }
 
 /**
@@ -41,7 +37,7 @@ export function BadgeAddOn({
   className,
   icon,
   color,
-  as = "span",
+  as,
   RootComponent,
   ...rest
 }: BadgeAddOnProps) {
@@ -54,7 +50,7 @@ export function BadgeAddOn({
     </React.Fragment>
   );
 
-  const Component = RootComponent || as;
+  const Component = RootComponent || as || "span";
 
   return (
     <Component className={classes} {...rest}>

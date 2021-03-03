@@ -80,7 +80,7 @@ stories.add("SiteWrapper", () => {
               target="_blank"
               outline
               size="sm"
-              RootComponent="a"
+              as="a"
               color="primary"
             >
               Source code
@@ -92,10 +92,10 @@ stories.add("SiteWrapper", () => {
       navProps={{ itemsObjects: navBarItems }}
       footerProps={{
         links: [
-          <a href="#" key="1">
+          <a href="#first" key="1">
             First Link
           </a>,
-          <a href="#" key="2">
+          <a href="#second" key="2">
             Second Link
           </a>,
         ],
@@ -122,7 +122,7 @@ stories.add("SiteWrapper", () => {
                 size="sm"
                 outline
                 color="primary"
-                RootComponent="a"
+                as="a"
               >
                 Source code
               </Button>
