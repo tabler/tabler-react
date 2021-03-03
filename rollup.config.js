@@ -33,7 +33,7 @@ export default {
     }),
     postcss({
       modules: false,
-      extract: "dist/Tabler.css",
+      extract: "Tabler.css",
     }),
     url(),
   ],
