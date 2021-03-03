@@ -1,49 +1,49 @@
-import makeElement from "../../helpers/makeHtmlElement";
+import { createTablerElement } from "../../helpers/createTablerElement";
 
-export const Div = makeElement<HTMLDivElement>("div");
-export const Span = makeElement<HTMLDivElement>("span");
+export const Div = createTablerElement("div");
+export const Span = createTablerElement("span");
 
-export const Header = makeElement<HTMLDivElement>("header");
-export const Section = makeElement<HTMLDivElement>("section");
-export const Nav = makeElement<HTMLDivElement>("nav");
-export const Footer = makeElement<HTMLDivElement>("footer");
+export const Header = createTablerElement("header");
+export const Section = createTablerElement("section");
+export const Nav = createTablerElement("nav");
+export const Footer = createTablerElement("footer");
 
-export const A = makeElement<HTMLAnchorElement>("a");
-export const Button = makeElement<HTMLButtonElement>("button");
-export const P = makeElement<HTMLParagraphElement>("p");
+export const A = createTablerElement("a");
+export const Button = createTablerElement("button");
+export const P = createTablerElement("p");
 
-export const Ul = makeElement<HTMLUListElement>("ul");
-export const Li = makeElement<HTMLLIElement>("li");
-export const Ol = makeElement<HTMLOListElement>("ol");
+export const Ul = createTablerElement("ul");
+export const Li = createTablerElement("li");
+export const Ol = createTablerElement("ol");
 
-export const H1 = makeElement<HTMLHeadingElement>("h1");
-export const H2 = makeElement<HTMLHeadingElement>("h2");
-export const H3 = makeElement<HTMLHeadingElement>("h3");
-export const H4 = makeElement<HTMLHeadingElement>("h4");
-export const H5 = makeElement<HTMLHeadingElement>("h5");
-export const H6 = makeElement<HTMLHeadingElement>("h6");
+export const H1 = createTablerElement("h1");
+export const H2 = createTablerElement("h2");
+export const H3 = createTablerElement("h3");
+export const H4 = createTablerElement("h4");
+export const H5 = createTablerElement("h5");
+export const H6 = createTablerElement("h6");
 
-export const Form = makeElement<HTMLFormElement>("form");
-export const Input = makeElement<HTMLInputElement>("input");
-export const Textarea = makeElement<HTMLTextAreaElement>("textarea");
-export const Select = makeElement<HTMLSelectElement>("select");
-export const Option = makeElement<HTMLOptionElement>("option");
-export const Fieldset = makeElement<HTMLFieldSetElement>("fieldset");
-export const Label = makeElement<HTMLLabelElement>("label");
+export const Form = createTablerElement("form");
+export const Input = createTablerElement("input");
+export const Textarea = createTablerElement("textarea");
+export const Select = createTablerElement("select");
+export const Option = createTablerElement("option");
+export const Fieldset = createTablerElement("fieldset");
+export const Label = createTablerElement("label");
 
-export const Iframe = makeElement<HTMLIFrameElement>("iframe");
-// const Svg = makeElement<SVGElement>("svg");
+export const Iframe = createTablerElement("iframe");
+// const Svg = createTablerElement<SVGElement>("svg");
 
-export const Small = makeElement<HTMLDivElement>("small");
+export const Small = createTablerElement("small");
 
-export const Table = makeElement<HTMLTableElement>("table");
-export const Thead = makeElement<HTMLTableSectionElement>("thead");
-export const Tbody = makeElement<HTMLTableSectionElement>("tbody");
-export const Tfoot = makeElement<HTMLTableSectionElement>("tfoot");
-export const Col = makeElement<HTMLTableColElement>("col");
-export const Tr = makeElement<HTMLTableRowElement>("tr");
-export const Td = makeElement<HTMLTableCellElement>("td");
-export const Th = makeElement<HTMLTableHeaderCellElement>("th");
+export const Table = createTablerElement("table");
+export const Thead = createTablerElement("thead");
+export const Tbody = createTablerElement("tbody");
+export const Tfoot = createTablerElement("tfoot");
+export const Col = createTablerElement("col");
+export const Tr = createTablerElement("tr");
+export const Td = createTablerElement("td");
+export const Th = createTablerElement("th");
 
 export const El = {
   Div,

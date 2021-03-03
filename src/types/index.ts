@@ -1,5 +1,6 @@
 export * from "./events";
 export * from "./TablerComponent";
+export * from "./utils";
 
 export interface ReactHTMLElementWithoutRef<T extends HTMLElement>
   extends Omit<React.HTMLProps<React.ReactHTMLElement<T>>, "ref"> {}

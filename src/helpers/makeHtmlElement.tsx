@@ -32,10 +32,10 @@ const splitProps = (props: { [key: string]: any }) =>
     [{}, {}] as { [key: string]: any }[]
   );
 
-export const makeElement = function<T extends HTMLElement>(
+export const makeElement = function <T extends HTMLElement>(
   element: ElementType
 ) {
-  const Component = forwardRef(function(
+  const Component = forwardRef(function (
     { className, classNames, as = element, ...props }: ComponentProps<T>,
     ref: React.Ref<any> | RefHandler
   ) {
