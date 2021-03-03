@@ -7,12 +7,12 @@ import C3Chart from "../C3Chart";
 import SiteWrapper from "../SiteWrapper";
 import { ChartConfiguration } from "c3";
 
-type cardsConfig = ChartConfiguration & { title?: string };
+type cardsConfig = ChartConfiguration;
 
 function ChartsPage() {
   const cards: cardsConfig[] = [
     {
-      title: "Employment Growth",
+      title: { text: "Employment Growth" },
       data: {
         columns: [
           // each columns data
@@ -42,7 +42,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Monthly Average Temperature",
+      title: { text: "Monthly Average Temperature" },
       data: {
         columns: [
           // each columns data
@@ -98,7 +98,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -125,7 +125,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -152,7 +152,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -180,7 +180,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Wind speed during 2 days",
+      title: { text: "Wind speed during 2 days" },
       data: {
         columns: [
           // each columns data
@@ -310,7 +310,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -338,7 +338,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -365,7 +365,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -392,7 +392,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -419,7 +419,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -447,7 +447,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -475,7 +475,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -502,7 +502,7 @@ function ChartsPage() {
       axis: {},
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -523,7 +523,7 @@ function ChartsPage() {
       axis: {},
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -550,7 +550,7 @@ function ChartsPage() {
       },
     },
     {
-      title: "Lorem ipsum",
+      title: { text: "Lorem ipsum" },
       data: {
         columns: [
           // each columns data
@@ -595,7 +595,7 @@ function ChartsPage() {
         <Grid.Row>
           {cards.map((chart, i) => (
             <Grid.Col key={i} md={6} xl={4}>
-              <Card title={chart.title}>
+              <Card title={chart?.title?.text}>
                 <Card.Body>
                   <C3Chart
                     data={chart.data}
