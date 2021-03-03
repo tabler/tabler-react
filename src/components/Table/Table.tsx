@@ -85,7 +85,7 @@ function Table({
   const body = bodyItems && (
     <Table.Body>
       {bodyItems.map((row, i) => (
-        <Table.Row key={row.key} {...row}>
+        <Table.Row {...row}>
           {row.item.map(({ content, ...col }, i) => (
             <Table.Col key={i} {...col}>
               {content}

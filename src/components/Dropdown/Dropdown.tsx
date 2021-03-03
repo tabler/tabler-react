@@ -1,4 +1,4 @@
-import React, { useContext, CSSProperties, forwardRef } from "react";
+import React, { useContext, forwardRef } from "react";
 import { Manager } from "react-popper";
 import cn from "classnames";
 import DropdownTrigger, { DropdownTriggerProps } from "./DropdownTrigger";
@@ -8,7 +8,7 @@ import DropdownItemDivider, {
   DropdownItemDividerProps,
 } from "./DropdownItemDivider";
 
-import ClickOutside, { useClickOutside } from "../../helpers/ClickOutside";
+import { useClickOutside } from "../../helpers/ClickOutside";
 import withDropdownProvider from "./withDropdownProvider";
 import DropdownContext from "./DropdownContext";
 import { colors } from "../../colors";
@@ -97,7 +97,7 @@ export interface itemObject extends DropdownItemProps {
   [key: string]: any;
 }
 
-const Dropdown = forwardRef(function(
+const Dropdown = forwardRef(function (
   {
     className,
     children,

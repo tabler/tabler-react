@@ -1,4 +1,4 @@
-import React, { Ref, ReactHTMLElement } from "react";
+import React from "react";
 import cn from "classnames";
 import { Popper } from "react-popper";
 
@@ -56,7 +56,7 @@ function DropdownMenu({
     className
   );
   return (
-    <Popper placement={position} eventsEnabled={true} positionFixed={false}>
+    <Popper placement={position}>
       {({ ref, style, placement }: PopperChildrenProps) => {
         return (
           _isOpen && (

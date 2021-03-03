@@ -2,13 +2,11 @@
 
 import * as React from "react";
 import cn from "classnames";
-import Button from "../Button";
 import Icon from "../Icon";
 
 import { Reference } from "react-popper";
 import { ReferenceChildrenProps } from "react-popper";
 import DropdownContext from "./DropdownContext";
-import { ButtonProps } from "../Button/Button";
 import { colors } from "../../colors";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";

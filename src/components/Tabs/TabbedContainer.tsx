@@ -9,7 +9,11 @@ interface Props {
 
 function TabbedContainer(props: Props) {
   const tabs = React.Children.toArray(props.children);
-  return <>{tabs.filter(tab => tab.props.title === props.selectedTitle)}</>;
+  return (
+    <>
+      {tabs.filter((tab) => (tab as any).props.title === props.selectedTitle)}
+    </>
+  );
 }
 
 /** @component */

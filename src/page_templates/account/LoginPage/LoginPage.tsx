@@ -8,7 +8,7 @@ import withTouchedErrors from "../../../helpers/withTouchedErrors";
 
 import defaultStrings from "./LoginPage.strings";
 import { stringTypes } from "./LoginPage.strings";
-import { ReactHTMLElementProps, HTMLElementProps } from "../../../types";
+import { HTMLElementProps } from "../../../types";
 
 type fieldTypes = {
   email?: string;
@@ -86,8 +86,8 @@ function LoginPage(props: Props) {
   );
 }
 
-const LoginPageWithTouchedErrors: React.ComponentType<
-  Props
-> = withTouchedErrors(["email", "password"])(LoginPage);
+const LoginPageWithTouchedErrors: React.ComponentType<Props> = withTouchedErrors(
+  ["email", "password"]
+)(LoginPage);
 
 export default LoginPageWithTouchedErrors;

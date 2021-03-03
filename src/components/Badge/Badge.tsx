@@ -67,7 +67,7 @@ export interface BadgeProps
   as?: React.ElementType;
 }
 
-export const Badge = forwardRef(function(
+export const Badge = forwardRef(function (
   {
     children,
     className,
@@ -134,7 +134,7 @@ export const Badge = forwardRef(function(
 
   const Component = RootComponent || as;
   return (
-    <Component className={classes} {...rest}>
+    <Component ref={ref} className={classes} {...rest}>
       {childrenForAll}
     </Component>
   );

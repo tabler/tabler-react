@@ -9,7 +9,6 @@ import CardOptionsItem from "./CardOptionsItem";
 import CardStatus from "./CardStatus";
 import CardAlert from "./CardAlert";
 import CardFooter from "./CardFooter";
-import CardMap from "./CardMap";
 import { colors } from "../../colors";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";
@@ -38,7 +37,7 @@ export interface CardProps
   aside?: boolean;
 }
 
-const Card = function({
+const Card = function ({
   className,
   children,
   as = El.Div,
@@ -64,15 +63,15 @@ const Card = function({
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handleCloseOnClick = (): void => {
-    setIsClosed(s => !s);
+    setIsClosed((s) => !s);
   };
 
   const handleCollapseOnClick = (): void => {
-    setIsCollapsed(s => !s);
+    setIsCollapsed((s) => !s);
   };
 
   const handleFullscreenOnClick = (): void => {
-    setIsFullscreen(s => !s);
+    setIsFullscreen((s) => !s);
   };
 
   if (_isClosed) {

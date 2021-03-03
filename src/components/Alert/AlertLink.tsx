@@ -1,6 +1,6 @@
 import * as React from "react";
 import cn from "classnames";
-import { TablerComponent, HTMLPropsWithoutRef } from "../../types";
+import { HTMLPropsWithoutRef } from "../../types";
 import El from "../El/El";
 import { ELProps } from "../../helpers/makeHtmlElement";
 

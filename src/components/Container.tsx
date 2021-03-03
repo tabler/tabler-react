@@ -1,6 +1,5 @@
 import React from "react";
 
-import "./Container.css";
 import { ELProps } from "../helpers/makeHtmlElement";
 import El from "./El/El";
 import { HTMLPropsWithoutRef } from "../types";

@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactChild } from "react";
+import React, { CSSProperties } from "react";
 import { UtilityProps } from "../helpers/utilityPropsToClassNames";
 
 /**

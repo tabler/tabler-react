@@ -22,11 +22,8 @@ interface Props {
 }
 
 function BlogCard({
-  children,
   title,
   description,
-  avatarUrl,
-  imgUrl,
   imgAlt,
   aside,
   authorName,

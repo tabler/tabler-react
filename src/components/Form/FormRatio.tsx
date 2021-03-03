@@ -1,4 +1,4 @@
-import React, { useState, ReactHTMLElement, HTMLProps } from "react";
+import React, { useState } from "react";
 import cn from "classnames";
 import Grid from "../Grid";
 import El from "../El/El";
@@ -12,7 +12,7 @@ export interface FormRatioProps
   onChange?: (event: React.ChangeEvent<EventTarget>) => any;
 }
 
-const FormRatio = function({
+const FormRatio = function ({
   className,
   onChange,
   defaultValue,
@@ -20,12 +20,10 @@ const FormRatio = function({
   ...rest
 }: FormRatioProps) {
   const [internalValue, setInternalValue] = useState<
-    string | string[] | number | undefined
+    string | readonly string[] | number | undefined
   >(!onChange ? defaultValue : "0");
 
-  const handleOnChange = (
-    e: React.MouseEvent<HTMLInputElement>
-  ): any => {
+  const handleOnChange = (e: React.MouseEvent<HTMLInputElement>): any => {
     if (onChange) {
       onChange(e);
     } else {

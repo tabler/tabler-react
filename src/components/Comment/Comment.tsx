@@ -16,15 +16,7 @@ interface Props {
   replies?: React.ReactNode;
 }
 
-function Comment({
-  className,
-  children,
-  avatarURL,
-  name,
-  date,
-  text,
-  replies,
-}: Props) {
+function Comment({ className, avatarURL, name, date, text, replies }: Props) {
   const classes = cn("py-5", className);
 
   return (

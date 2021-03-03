@@ -4,14 +4,12 @@ import { TabProps } from "./Tab";
 import TabbedContainer from "./TabbedContainer";
 import TabbedHeader from "./TabbedHeader";
 
-import "./Tabs.css";
-
 export interface TabsProps {
   initialTab: string;
   children: React.ReactElement<TabProps>[] | React.ReactElement<TabProps>;
 }
 
-const Tabs = function({ children, initialTab }: TabsProps) {
+const Tabs = function ({ children, initialTab }: TabsProps) {
   const [selectedTitle, setSelectedTitle] = useState(initialTab);
 
   return (

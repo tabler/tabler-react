@@ -24,7 +24,7 @@ export interface Props {
 /**
  * An individual Notification made up of an Avatar alongside some text and the time
  */
-function Notification({ avatarURL, message, time, unread }: Props) {
+function Notification({ avatarURL, message, time }: Props) {
   return (
     <React.Fragment>
       {avatarURL && (

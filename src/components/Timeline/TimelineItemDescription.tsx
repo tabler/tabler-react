@@ -7,7 +7,7 @@ export interface TimelineItemDescriptionProps
   extends ELProps,
     HTMLPropsWithoutRef<HTMLParagraphElement> {}
 
-const TimelineItemDescription = React.forwardRef(
+const TimelineItemDescription = React.forwardRef<any, any>(
   function TimelineItemDescription(
     { children, ...rest }: TimelineItemDescriptionProps,
     ref

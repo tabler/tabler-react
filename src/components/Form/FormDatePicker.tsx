@@ -24,7 +24,7 @@ type DateComponents = { [Key in ChangeTypes]: React.ReactNode };
 /**
  * A simple date picker using 3 FormSelect's.
  */
-const FormDatePicker = function({
+const FormDatePicker = function ({
   onChange,
   monthLabels,
   minYear,
@@ -73,7 +73,7 @@ const FormDatePicker = function({
 
   // Creates an array with numeric values from start to end
   const _range = (start: number, end: number): Array<number> =>
-    Array.from({ length: end + 1 - start }, (v, k) => k + start);
+    Array.from({ length: end + 1 - start }, (_, k) => k + start);
 
   // Renders the months select
   const _renderMonths = () => {
@@ -120,7 +120,7 @@ const FormDatePicker = function({
         {...dayProps}
       >
         <option value="" />
-        {daysRange.map(day => (
+        {daysRange.map((day) => (
           <option key={day} value={day}>
             {day}
           </option>
@@ -145,7 +145,7 @@ const FormDatePicker = function({
         {...yearProps}
       >
         <option value="" />
-        {yearsRange.map(year => (
+        {yearsRange.map((year) => (
           <option key={year} value={year}>
             {year}
           </option>

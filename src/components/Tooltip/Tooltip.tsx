@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import cn from "classnames";
 import { Manager, Reference, Popper } from "react-popper";
 import { PopperChildrenProps, ReferenceChildrenProps } from "react-popper";
-import "./Tooltip.css";
 
 export interface TooltipProps {
   /**
@@ -25,7 +24,7 @@ export interface TooltipProps {
   arrow?: boolean;
 }
 
-const Tooltip = function({
+const Tooltip = function ({
   className,
   children,
   placement,
@@ -74,11 +73,7 @@ const Tooltip = function({
         }}
       </Reference>
       {isShown && (
-        <Popper
-          placement={placement}
-          eventsEnabled={true}
-          positionFixed={false}
-        >
+        <Popper placement={placement}>
           {({
             ref,
             style: { opacity, ...style },

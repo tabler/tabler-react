@@ -561,81 +561,81 @@ declare module "helpers/makeHtmlElement" {
     }
     export interface ComponentProps<T extends HTMLElement> extends ELProps, Omit<HTMLPropsWithoutRef<T>, "as"> {
     }
-    export const makeElement: <T extends HTMLElement>(element: React.ElementType<any>) => React.ForwardRefExoticComponent<Pick<ComponentProps<T>, React.ReactText> & React.RefAttributes<any>>;
+    export const makeElement: <T extends HTMLElement>(element: ElementType) => React.ForwardRefExoticComponent<Pick<ComponentProps<T>, string | number> & React.RefAttributes<HTMLElement>>;
     export default makeElement;
 }
 declare module "components/El/El" {
-    export const Div: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Span: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Header: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Section: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Nav: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Footer: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const A: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLAnchorElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Button: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLButtonElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const P: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLParagraphElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Ul: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLUListElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Li: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLIElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Ol: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOListElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const H1: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const H2: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const H3: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const H4: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const H5: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const H6: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Form: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFormElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Input: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLInputElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Textarea: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTextAreaElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Select: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLSelectElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Option: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOptionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Fieldset: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFieldSetElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Label: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLabelElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Iframe: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLIFrameElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Small: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Table: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Thead: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Tbody: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Tfoot: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Col: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableColElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Tr: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableRowElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Td: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableCellElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-    export const Th: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableHeaderCellElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
+    export const Div: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Span: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Header: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Section: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Nav: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Footer: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const A: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLAnchorElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Button: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLButtonElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const P: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLParagraphElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Ul: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLUListElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Li: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLIElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Ol: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOListElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const H1: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const H2: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const H3: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const H4: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const H5: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const H6: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Form: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFormElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Input: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLInputElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Textarea: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTextAreaElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Select: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLSelectElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Option: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOptionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Fieldset: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFieldSetElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Label: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLabelElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Iframe: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLIFrameElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Small: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Table: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Thead: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Tbody: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Tfoot: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Col: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableColElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Tr: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableRowElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Td: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableCellElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+    export const Th: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableHeaderCellElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
     export const El: {
-        Div: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Span: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Header: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Section: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Nav: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Footer: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        A: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLAnchorElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Button: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLButtonElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        P: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLParagraphElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        H1: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        H2: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        H3: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        H4: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        H5: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        H6: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Ul: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLUListElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Li: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLIElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Ol: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOListElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Form: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFormElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Input: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLInputElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Textarea: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTextAreaElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Select: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLSelectElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Option: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOptionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Fieldset: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFieldSetElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Label: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLabelElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Iframe: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLIFrameElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Small: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Table: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Thead: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Tbody: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Tfoot: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Col: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableColElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Tr: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableRowElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Td: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableCellElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
-        Th: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableHeaderCellElement>, import("react").ReactText> & import("react").RefAttributes<any>>;
+        Div: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Span: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Header: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Section: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Nav: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Footer: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        A: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLAnchorElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Button: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLButtonElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        P: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLParagraphElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        H1: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        H2: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        H3: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        H4: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        H5: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        H6: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLHeadingElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Ul: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLUListElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Li: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLIElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Ol: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOListElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Form: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFormElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Input: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLInputElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Textarea: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTextAreaElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Select: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLSelectElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Option: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLOptionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Fieldset: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLFieldSetElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Label: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLLabelElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Iframe: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLIFrameElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Small: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLDivElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Table: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Thead: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Tbody: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Tfoot: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableSectionElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Col: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableColElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Tr: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableRowElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Td: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableCellElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
+        Th: import("react").ForwardRefExoticComponent<Pick<import("helpers/makeHtmlElement").ComponentProps<HTMLTableHeaderCellElement>, string | number> & import("react").RefAttributes<HTMLElement>>;
     };
     export default El;
 }
@@ -866,7 +866,7 @@ declare module "components/Badge/Badge" {
          */
         as?: React.ElementType;
     }
-    export const Badge: React.ForwardRefExoticComponent<Pick<BadgeProps, React.ReactText> & React.RefAttributes<unknown>>;
+    export const Badge: React.ForwardRefExoticComponent<Pick<BadgeProps, string | number> & React.RefAttributes<unknown>>;
     export default Badge;
 }
 declare module "components/Badge/BadgeList" {
@@ -884,9 +884,9 @@ declare module "components/Badge/index" {
     import Badge from "components/Badge/Badge";
     import BadgeAddOn from "components/Badge/BadgeAddOn";
     import BadgeList from "components/Badge/BadgeList";
-    const CompoundBadge: import("react").ForwardRefExoticComponent<Pick<import("components/Badge/Badge").BadgeProps, import("react").ReactText> & import("react").RefAttributes<unknown>> & {
+    const CompoundBadge: import("react").ForwardRefExoticComponent<Pick<import("components/Badge/Badge").BadgeProps, string | number> & import("react").RefAttributes<unknown>> & {
         AddOn: typeof BadgeAddOn;
-        List: ({ children, className, ...rest }: import("components/Badge/BadgeList").Props) => JSX.Element;
+        List: typeof BadgeList;
     };
     export { CompoundBadge as default, Badge, BadgeAddOn, BadgeList };
 }
@@ -924,11 +924,13 @@ declare module "components/Avatar/Avatar" {
     /**
      * Renders a single circular avatar
      */
-    declare function Avatar({ className, children, imageURL, style, size, status, placeholder, icon, color, ...rest }: Props): JSX.Element;
-    declare namespace Avatar {
+    export function Avatar({ className, children, imageURL, style, size, status, placeholder, icon, color, ...rest }: Props): JSX.Element;
+    /**
+     * Renders a single circular avatar
+     */
+    export namespace Avatar {
         var List: typeof AvatarList;
     }
-    export default Avatar;
     export default Avatar;
 }
 declare module "components/Avatar/index" {
@@ -991,7 +993,7 @@ declare module "components/Text/index" {
     import Text from "components/Text/Text";
     import TextSmall from "components/Text/TextSmall";
     const CompoundText: (<AS extends HTMLElement = HTMLDivElement>({ className, children, RootComponent, as, color, size, wrap, muted, align: alignFromProps, left, center, right, justify, transform: transformFromProps, lowercase, uppercase, capitalize, tracking: trackingFromProps, trackingTight, trackingNormal, trackingWide, leading: leadingFromProps, leadingNone, leadingTight, leadingNormal, leadingLoose, ...rest }: import("components/Text/Text").TextProps<AS>) => JSX.Element) & {
-        Small: ({ children, ...rest }: import("components/Text/TextSmall").TextSmallProps) => JSX.Element;
+        Small: typeof TextSmall;
     };
     export { CompoundText as default, Text, TextSmall };
 }
@@ -1018,108 +1020,13 @@ declare module "components/Notification/Notification" {
     /**
      * An individual Notification made up of an Avatar alongside some text and the time
      */
-    function Notification({ avatarURL, message, time, unread }: Props): JSX.Element;
+    function Notification({ avatarURL, message, time }: Props): JSX.Element;
     export default Notification;
-}
-declare module "components/Button/Button" {
-    import React from "react";
-    import { RefHandler } from "react-popper";
-    import { ELProps } from "helpers/makeHtmlElement";
-    import { colors } from "colors";
-    import { HTMLPropsWithoutRef } from "types/index";
-    interface Props {
-        as?: React.ElementType;
-        /**
-         * @deprecated use 'as'
-         */
-        RootComponent?: React.ElementType;
-        size?: "sm" | "lg";
-        outline?: boolean;
-        link?: boolean;
-        block?: boolean;
-        disabled?: boolean;
-        color?: colors;
-        square?: boolean;
-        pill?: boolean;
-        icon?: string;
-        social?: string;
-        loading?: boolean;
-        tabIndex?: number;
-        isDropdownToggle?: boolean;
-        to?: string;
-        isOption?: boolean;
-        /**
-         * @depreacted use ref
-         */
-        rootRef?: RefHandler;
-    }
-    export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement> extends Props, ELProps, Omit<HTMLPropsWithoutRef<AS>, "as" | "color" | "size"> {
-    }
-    const Button: React.ForwardRefExoticComponent<Pick<ButtonProps<HTMLElement>, React.ReactText> & React.RefAttributes<HTMLElement>>;
-    export default Button;
-}
-declare module "components/Button/ButtonList" {
-    import { ELProps } from "helpers/makeHtmlElement";
-    import { HTMLPropsWithoutRef } from "types/index";
-    export interface ButtonListProps extends ELProps, Omit<HTMLPropsWithoutRef<HTMLDivElement>, "align"> {
-        align?: "" | "left" | "center" | "right";
-    }
-    function ButtonList({ className, children, align, ...props }: ButtonListProps): JSX.Element;
-    export default ButtonList;
 }
 declare module "components/Dropdown/DropdownContext" {
     import React from "react";
     export const DropdownContext: React.Context<[boolean, Function]>;
     export default DropdownContext;
-}
-declare module "components/Dropdown/DropdownMenu" {
-    import React from "react";
-    import { ELProps } from "helpers/makeHtmlElement";
-    import { HTMLPropsWithoutRef } from "types/index";
-    export interface DropdownMenuProps extends ELProps, Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
-        children?: React.ReactNode;
-        className?: string;
-        position?: any;
-        /**
-         * Display an arrow pointing towards the trigger
-         */
-        arrow?: boolean;
-        /**
-         * The position of the arrow pointing towards the trigger
-         */
-        arrowPosition?: "left" | "right";
-        rootRef?: (el: HTMLElement) => void;
-        /**
-         * Show the DropdownMenu
-         * @deprecated use context
-         */
-        show?: boolean;
-    }
-    /**
-     * The wrapper element for a Dropdowns Items
-     */
-    function DropdownMenu({ className, children, position, arrow, arrowPosition, style: _style, show, ...rest }: DropdownMenuProps): JSX.Element;
-    export default DropdownMenu;
-}
-declare module "components/Button/ButtonDropdown" {
-    import { ButtonProps } from "components/Button/Button";
-    import { DropdownMenuProps } from "components/Dropdown/DropdownMenu";
-    export interface ButtonDropdownProps extends ButtonProps {
-        dropdownProps?: DropdownMenuProps;
-        value?: string;
-    }
-    const ButtonDropdown: ({ children, value, dropdownProps, ...buttonProps }: ButtonDropdownProps) => JSX.Element;
-    export default ButtonDropdown;
-}
-declare module "components/Button/index" {
-    import Button from "components/Button/Button";
-    import ButtonList from "components/Button/ButtonList";
-    import ButtonDropdown from "components/Button/ButtonDropdown";
-    const CompoundButton: import("react").ForwardRefExoticComponent<Pick<import("components/Button/Button").ButtonProps<HTMLElement>, import("react").ReactText> & import("react").RefAttributes<HTMLElement>> & {
-        List: typeof ButtonList;
-        Dropdown: ({ children, value, dropdownProps, ...buttonProps }: import("components/Button/ButtonDropdown").ButtonDropdownProps) => JSX.Element;
-    };
-    export { CompoundButton as default, Button, ButtonList, ButtonDropdown };
 }
 declare module "components/Dropdown/DropdownTrigger" {
     import { colors } from "colors";
@@ -1156,6 +1063,35 @@ declare module "components/Dropdown/DropdownTrigger" {
     function DropdownTrigger({ className, toggle, value, children, icon, isNavLink, isOption, as: Component, ...rest }: DropdownTriggerProps): JSX.Element;
     /** @component */
     export default DropdownTrigger;
+}
+declare module "components/Dropdown/DropdownMenu" {
+    import React from "react";
+    import { ELProps } from "helpers/makeHtmlElement";
+    import { HTMLPropsWithoutRef } from "types/index";
+    export interface DropdownMenuProps extends ELProps, Omit<HTMLPropsWithoutRef<HTMLDivElement>, "as"> {
+        children?: React.ReactNode;
+        className?: string;
+        position?: any;
+        /**
+         * Display an arrow pointing towards the trigger
+         */
+        arrow?: boolean;
+        /**
+         * The position of the arrow pointing towards the trigger
+         */
+        arrowPosition?: "left" | "right";
+        rootRef?: (el: HTMLElement) => void;
+        /**
+         * Show the DropdownMenu
+         * @deprecated use context
+         */
+        show?: boolean;
+    }
+    /**
+     * The wrapper element for a Dropdowns Items
+     */
+    function DropdownMenu({ className, children, position, arrow, arrowPosition, style: _style, show, ...rest }: DropdownMenuProps): JSX.Element;
+    export default DropdownMenu;
 }
 declare module "components/Dropdown/DropdownItem" {
     import * as React from "react";
@@ -1211,7 +1147,7 @@ declare module "helpers/ClickOutside" {
         }) => React.ReactNode;
         onOutsideClick: () => void;
     }
-    export const useClickOutside: (onOutsideClick: Function, ref?: ((instance: any) => void) | React.RefObject<any> | null | undefined) => React.MutableRefObject<HTMLElement | null>;
+    export const useClickOutside: (onOutsideClick: Function, ref?: React.Ref<any> | undefined) => React.MutableRefObject<HTMLElement | null>;
     /**
      * A helper to help you do something when a user clicks outside of a component
      */
@@ -1236,7 +1172,7 @@ declare module "components/Dropdown/DropdownProvider" {
 }
 declare module "components/Dropdown/withDropdownProvider" {
     import React from "react";
-    export const withDropdownProvider: (Component: React.ComponentType<{}>) => React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<any>>;
+    export const withDropdownProvider: (Component: React.ComponentType) => React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<any>>;
     export default withDropdownProvider;
 }
 declare module "components/Dropdown/Dropdown" {
@@ -1367,7 +1303,7 @@ declare module "components/Nav/NavLink" {
         isToggle?: boolean;
         [key: string]: any;
     }
-    export const NavLink: React.ForwardRefExoticComponent<Pick<NavLinkProps, React.ReactText> & React.RefAttributes<any>>;
+    export const NavLink: React.ForwardRefExoticComponent<Pick<NavLinkProps, string | number> & React.RefAttributes<any>>;
     export default NavLink;
 }
 declare module "components/Nav/NavSubNav" {
@@ -1444,7 +1380,7 @@ declare module "components/Nav/NavItem" {
         subNav?: React.ReactNode;
         [key: string]: any;
     }
-    export const NavItem: React.RefForwardingComponent<any, NavItemProps>;
+    export const NavItem: React.ForwardRefExoticComponent<Pick<NavItemProps, string | number> & React.RefAttributes<any>>;
     /** @component */
     export default NavItem;
 }
@@ -1564,9 +1500,9 @@ declare module "components/Nav/index" {
     import NavBar from "components/Nav/NavBar";
     import NavBarHeading from "components/Nav/NavBarHeading";
     const CompoundNav: (({ as: Component, className, children, tabbed, items, itemsObjects, routerContextComponentType, isMenu, heading, ...rest }: import("components/Nav/Nav").NavProps) => JSX.Element) & {
-        Item: import("react").RefForwardingComponent<any, import("components/Nav/NavItem").NavItemProps>;
+        Item: typeof NavItem;
         SubItem: typeof NavSubItem;
-        Link: import("react").ForwardRefExoticComponent<Pick<import("components/Nav/NavLink").NavLinkProps, import("react").ReactText> & import("react").RefAttributes<any>>;
+        Link: typeof NavLink;
         LinkTitle: typeof NavLinkTitle;
         Submenu: typeof NavSubmenu;
         SubmenuItem: typeof NavSubmenuItem;
@@ -1648,6 +1584,72 @@ declare module "components/AccountDropdown/AccountDropdown" {
 declare module "components/AccountDropdown/index" {
     import AccountDropdown from "components/AccountDropdown/AccountDropdown";
     export { AccountDropdown as default };
+}
+declare module "components/Button/Button" {
+    import React from "react";
+    import { RefHandler } from "react-popper";
+    import { ELProps } from "helpers/makeHtmlElement";
+    import { colors } from "colors";
+    import { HTMLPropsWithoutRef } from "types/index";
+    interface Props {
+        as?: React.ElementType;
+        /**
+         * @deprecated use 'as'
+         */
+        RootComponent?: React.ElementType;
+        size?: "sm" | "lg";
+        outline?: boolean;
+        link?: boolean;
+        block?: boolean;
+        disabled?: boolean;
+        color?: colors;
+        square?: boolean;
+        pill?: boolean;
+        icon?: string;
+        social?: string;
+        loading?: boolean;
+        tabIndex?: number;
+        isDropdownToggle?: boolean;
+        to?: string;
+        isOption?: boolean;
+        /**
+         * @depreacted use ref
+         */
+        rootRef?: RefHandler;
+    }
+    export interface ButtonProps<AS extends HTMLElement = HTMLButtonElement> extends Props, ELProps, Omit<HTMLPropsWithoutRef<AS>, "as" | "color" | "size"> {
+    }
+    const Button: React.ForwardRefExoticComponent<Pick<ButtonProps<HTMLElement>, string | number> & React.RefAttributes<HTMLElement>>;
+    export default Button;
+}
+declare module "components/Button/ButtonList" {
+    import { ELProps } from "helpers/makeHtmlElement";
+    import { HTMLPropsWithoutRef } from "types/index";
+    export interface ButtonListProps extends ELProps, Omit<HTMLPropsWithoutRef<HTMLDivElement>, "align"> {
+        align?: "" | "left" | "center" | "right";
+    }
+    function ButtonList({ className, children, align, ...props }: ButtonListProps): JSX.Element;
+    export default ButtonList;
+}
+declare module "components/Button/ButtonDropdown" {
+    import { ButtonProps } from "components/Button/Button";
+    import { DropdownMenuProps } from "components/Dropdown/DropdownMenu";
+    export interface ButtonDropdownProps extends ButtonProps {
+        dropdownProps?: DropdownMenuProps;
+        value?: string;
+    }
+    const ButtonDropdown: ({ children, value, dropdownProps, ...buttonProps }: ButtonDropdownProps) => JSX.Element;
+    export default ButtonDropdown;
+}
+declare module "components/Button/index" {
+    import Button from "components/Button/Button";
+    import ButtonList from "components/Button/ButtonList";
+    import ButtonDropdown from "components/Button/ButtonDropdown";
+    const CompoundButton: import("react").ForwardRefExoticComponent<Pick<import("components/Button/Button").ButtonProps<HTMLElement>, string | number> & import("react").RefAttributes<HTMLElement>> & {
+        List: typeof ButtonList;
+        Dropdown: typeof ButtonDropdown;
+    };
+    export { CompoundButton as default, Button, ButtonList, ButtonDropdown };
 }
 declare module "components/Alert/Alert" {
     import { TablerComponent, MouseEvents, PointerEvents } from "index";
@@ -1772,15 +1774,6 @@ declare module "components/Card/CardFooter" {
     function CardFooter({ className, children, ...rest }: CardFooterProps): JSX.Element;
     export default CardFooter;
 }
-declare module "components/Card/CardMap" {
-    import { ELProps } from "helpers/makeHtmlElement";
-    import { HTMLPropsWithoutRef } from "types/index";
-    export interface CardMapProps extends ELProps, HTMLPropsWithoutRef<HTMLDivElement> {
-        placeholder?: string;
-    }
-    function CardMap({ className, children, placeholder, ...rest }: CardMapProps): JSX.Element;
-    export default CardMap;
-}
 declare module "components/Card/Card" {
     import React, { HTMLProps } from "react";
     import { colors } from "colors";
@@ -1809,6 +1802,15 @@ declare module "components/Card/Card" {
     const Card: ({ className, children, as, RootComponent, title, body, options, isCollapsible, isClosable, isFullscreenable, aside, statusColor, statusSide, alert, alertColor, footer, isClosed, isCollapsed, ...rest }: CardProps) => JSX.Element | null;
     /** @component */
     export default Card;
+}
+declare module "components/Card/CardMap" {
+    import { ELProps } from "helpers/makeHtmlElement";
+    import { HTMLPropsWithoutRef } from "types/index";
+    export interface CardMapProps extends ELProps, HTMLPropsWithoutRef<HTMLDivElement> {
+        placeholder?: string;
+    }
+    function CardMap({ className, children, placeholder, ...rest }: CardMapProps): JSX.Element;
+    export default CardMap;
 }
 declare module "components/Card/index" {
     import CardBody from "components/Card/CardBody";
@@ -1853,7 +1855,7 @@ declare module "components/BlogCard/BlogCard" {
         postHref?: string;
         profileHref?: string;
     }
-    function BlogCard({ children, title, description, avatarUrl, imgUrl, imgAlt, aside, authorName, date, imgSrc, avatarImgSrc, iconName, iconHref, postHref, profileHref, }: Props): JSX.Element;
+    function BlogCard({ title, description, imgAlt, aside, authorName, date, imgSrc, avatarImgSrc, iconName, iconHref, postHref, profileHref, }: Props): JSX.Element;
     /** @component */
     export default BlogCard;
 }
@@ -2040,7 +2042,6 @@ declare module "components/SocialNetworksList/index" {
 }
 declare module "components/Tooltip/Tooltip" {
     import React from "react";
-    import "./Tooltip.css";
     export interface TooltipProps {
         /**
          * The reference element which the Tooltip will be based on.
@@ -2158,7 +2159,7 @@ declare module "components/Comment/Comment" {
         text?: string;
         replies?: React.ReactNode;
     }
-    function Comment({ className, children, avatarURL, name, date, text, replies, }: Props): JSX.Element;
+    function Comment({ className, avatarURL, name, date, text, replies }: Props): JSX.Element;
     namespace Comment {
         var List: typeof CommentList;
         var Reply: typeof CommentReply;
@@ -2595,7 +2596,7 @@ declare module "components/Form/index" {
     const CompoundForm: typeof Form & {
         Group: typeof FormGroup;
         Label: typeof FormLabel;
-        Input: import("react").ForwardRefExoticComponent<import("components/Form/FormInput").FormInputProps & import("react").RefAttributes<any>>;
+        Input: typeof FormInput;
         StaticText: typeof FormStaticText;
         Textarea: typeof FormTextarea;
         ImageCheck: typeof FormImageCheck;
@@ -2606,29 +2607,20 @@ declare module "components/Form/index" {
         Help: typeof FormHelp;
         Select: typeof FormSelect;
         Footer: typeof FormFooter;
-        Ratio: ({ className, onChange, defaultValue, value, ...rest }: import("components/Form/FormRatio").FormRatioProps) => JSX.Element;
+        Ratio: typeof FormRatio;
         FieldSet: typeof FormFieldSet;
         SelectGroup: typeof FormSelectGroup;
         SelectGroupItem: typeof FormSelectGroupItem;
         Radio: typeof FormRadio;
         Checkbox: typeof FormCheckbox;
-        FileInput: ({ onChange, className, label: labelFromProps, ...rest }: import("components/Form/FormFileInput").FormFileInputProps) => JSX.Element;
+        FileInput: typeof FormFileInput;
         SwitchStack: typeof FormSwitchStack;
         Switch: typeof FormSwitch;
         InputGroupAppend: typeof FormInputGroupAppend;
         InputGroupPrepend: typeof FormInputGroupPrepend;
         InputGroupText: typeof FormInputGroupText;
         MaskedInput: typeof FormMaskedInput;
-        DatePicker: {
-            ({ onChange, monthLabels, minYear, maxYear, format, className, dayProps, monthProps, yearProps, value, defaultDate, ...rest }: import("components/Form/FormDatePicker").FormDatePickerProps): JSX.Element;
-            defaultProps: {
-                monthLabels: string[];
-                minYear: number;
-                maxYear: number;
-                format: string;
-                defaultDate: Date;
-            };
-        };
+        DatePicker: typeof FormDatePicker;
     };
     export { CompoundForm as default, Form, FormGroup, FormLabel, FormInput, FormStaticText, FormTextarea, FormImageCheck, FormImageCheckItem, FormColorCheck, FormColorCheckItem, FormInputGroup, FormHelp, FormSelect, FormFooter, FormRatio, FormFieldSet, FormSelectGroup, FormSelectGroupItem, FormRadio, FormCheckbox, FormFileInput, FormSwitchStack, FormSwitch, FormInputGroupAppend, FormInputGroupPrepend, FormInputGroupText, FormMaskedInput, FormDatePicker, };
 }
@@ -2798,7 +2790,6 @@ declare module "components/ContactCard/index" {
     export { ContactCard as default };
 }
 declare module "components/Container" {
-    import "./Container.css";
     import { ELProps } from "helpers/makeHtmlElement";
     import { HTMLPropsWithoutRef } from "types/index";
     export interface ContainerProps extends ELProps, HTMLPropsWithoutRef<HTMLDivElement> {
@@ -3351,11 +3342,11 @@ declare module "components/Site/index" {
     import SiteLogo from "components/Site/SiteLogo";
     import SiteWrapper from "components/Site/SiteWrapper";
     const CompoundSite: typeof Site & {
-        Header: ({ children, href, align, imageURL, alt, notificationsTray: notificationsTrayFromProps, accountDropdown: accountDropdownFromProps, navItems, onMenuToggleClick, searchBar, }: import("components/Site/SiteHeader").SiteHeaderProps) => JSX.Element;
-        Footer: ({ links, note, copyright, nav }: import("components/Site/SiteFooter").SiteFooterProps) => JSX.Element;
-        Nav: ({ children, items, itemsObjects, withSearchForm, rightColumnComponent, collapse, routerContextComponentType, logoURL, ...rest }: import("components/Site/SiteNav").SiteNavProps) => JSX.Element;
-        Logo: ({ className, ...props }: import("components/Site/SiteLogo").SiteLogoProps) => JSX.Element;
-        Wrapper: ({ header: Header, headerProps, nav: Nav, navProps, footer: Footer, footerProps, children, navIsSide, }: import("components/Site/SiteWrapper").SiteWrapperProps) => JSX.Element;
+        Header: typeof SiteHeader;
+        Footer: typeof SiteFooter;
+        Nav: typeof SiteNav;
+        Logo: typeof SiteLogo;
+        Wrapper: typeof SiteWrapper;
     };
     export { CompoundSite as default, Site, SiteHeader, SiteFooter, SiteNav, SiteLogo, SiteWrapper, };
 }
@@ -3462,7 +3453,7 @@ declare module "components/Steps/index" {
     import Steps from "components/Steps/Steps";
     import Step from "components/Steps/Step";
     const CompoundSteps: (({ children, className, color, counter, ...rest }: import("components/Steps/Steps").Props) => JSX.Element) & {
-        Step: ({ children, className, active, tooltip, ...rest }: import("components/Steps/Step").Props) => JSX.Element;
+        Step: typeof Step;
     };
     export { CompoundSteps as default, Steps, Step };
 }
@@ -3523,7 +3514,6 @@ declare module "components/Tabs/TabbedHeader" {
 declare module "components/Tabs/Tabs" {
     import React from "react";
     import { TabProps } from "components/Tabs/Tab";
-    import "./Tabs.css";
     export interface TabsProps {
         initialTab: string;
         children: React.ReactElement<TabProps>[] | React.ReactElement<TabProps>;
@@ -3669,9 +3659,9 @@ declare module "components/Tag/index" {
     import Tag from "components/Badge/Badge";
     import TagAddOn from "components/Badge/BadgeAddOn";
     import TagList from "components/Badge/BadgeList";
-    const CompoundTag: import("react").ForwardRefExoticComponent<Pick<import("components/Badge/Badge").BadgeProps, import("react").ReactText> & import("react").RefAttributes<unknown>> & {
+    const CompoundTag: import("react").ForwardRefExoticComponent<Pick<import("components/Badge/Badge").BadgeProps, string | number> & import("react").RefAttributes<unknown>> & {
         AddOn: typeof TagAddOn;
-        List: ({ children, className, ...rest }: import("components/Badge/BadgeList").Props) => JSX.Element;
+        List: typeof TagList;
     };
     export { CompoundTag as default, Tag, TagAddOn, TagList };
 }
@@ -3719,7 +3709,7 @@ declare module "components/Timeline/TimelineItemDescription" {
     import { HTMLPropsWithoutRef } from "types/index";
     export interface TimelineItemDescriptionProps extends ELProps, HTMLPropsWithoutRef<HTMLParagraphElement> {
     }
-    const TimelineItemDescription: React.ForwardRefExoticComponent<Pick<TimelineItemDescriptionProps, React.ReactText> & React.RefAttributes<unknown>>;
+    const TimelineItemDescription: React.ForwardRefExoticComponent<Pick<any, string | number | symbol> & React.RefAttributes<any>>;
     export default TimelineItemDescription;
 }
 declare module "components/Timeline/TimelineItem" {
@@ -3762,14 +3752,16 @@ declare module "components/Timeline/index" {
     import Timeline from "components/Timeline/Timeline";
     import TimelineItemBadge from "components/Timeline/TimelineItemBadge";
     import TimelineItem from "components/Timeline/TimelineItem";
+    import TimelineItemDescription from "components/Timeline/TimelineItemDescription";
+    import TimelineItemTime from "components/Timeline/TimelineItemTime";
     import TimelineItemTitle from "components/Timeline/TimelineItemTitle";
     import TimelineItemContent from "components/Timeline/TimelineItemContent";
     import TimelineItemIcon from "components/Timeline/TimelineItemIcon";
     const CompoundTimeline: typeof Timeline & {
         Item: typeof TimelineItem;
         ItemBadge: typeof TimelineItemBadge;
-        ItemDescription: import("react").ForwardRefExoticComponent<Pick<import("components/Timeline/TimelineItemDescription").TimelineItemDescriptionProps, import("react").ReactText> & import("react").RefAttributes<unknown>>;
-        ItemTime: ({ className, children, active, ...rest }: import("components/Timeline/TimelineItemTime").TimelineItemTimeProps) => JSX.Element;
+        ItemDescription: typeof TimelineItemDescription;
+        ItemTime: typeof TimelineItemTime;
         ItemTitle: typeof TimelineItemTitle;
         ItemContent: typeof TimelineItemContent;
         ItemIcon: typeof TimelineItemIcon;
@@ -3813,8 +3805,8 @@ declare module "components/Toast/index" {
     import ToastHeader from "components/Toast/ToastHeader";
     import ToastBody from "components/Toast/ToastBody";
     const CompoundToast: (({ children, className, show, header, body, ...rest }: import("components/Toast/Toast").ToastProps) => JSX.Element) & {
-        Header: ({ children, className, avatar, title, timestamp, ...rest }: import("components/Toast/ToastHeader").ToastHeaderProps) => JSX.Element;
-        Body: ({ children, className, ...rest }: import("components/Toast/ToastBody").ToastBodyProps) => JSX.Element;
+        Header: typeof ToastHeader;
+        Body: typeof ToastBody;
     };
     export { CompoundToast as default, Toast, ToastHeader, ToastBody };
 }
@@ -4110,9 +4102,9 @@ declare module "index" {
     export * from "components/index";
     export * from "colors";
     export { NotificationProps } from "components/index";
-    export { default as RouterContextProvider, } from "helpers/RouterContextProvider";
-    export { default as StandaloneFormPage, } from "page_templates/StandaloneFormPage";
-    export { default as DefaultErrorPage, } from "page_templates/errors/DefaultErrorPage";
+    export { default as RouterContextProvider } from "helpers/RouterContextProvider";
+    export { default as StandaloneFormPage } from "page_templates/StandaloneFormPage";
+    export { default as DefaultErrorPage } from "page_templates/errors/DefaultErrorPage";
     export { default as Error400Page } from "page_templates/errors/Error400Page";
     export { default as Error401Page } from "page_templates/errors/Error401Page";
     export { default as Error403Page } from "page_templates/errors/Error403Page";
@@ -4125,7 +4117,7 @@ declare module "index" {
     export { default as colors } from "colors";
     export { default as LoginPage } from "page_templates/account/LoginPage/index";
     export { default as RegisterPage } from "page_templates/account/RegisterPage/index";
-    export { default as ForgotPasswordPage, } from "page_templates/account/ForgotPasswordPage/index";
+    export { default as ForgotPasswordPage } from "page_templates/account/ForgotPasswordPage/index";
 }
 declare module "tabler-react" {
     export * from "index";

@@ -22,7 +22,7 @@ function TabbedHeader({
   const tabs = React.Children.toArray(children);
   return (
     <El.Ul classNames="nav nav-tabs Tab_header_tabs" {...rest}>
-      {tabs.map(({ props: { title, ...tabRest } }, index) => {
+      {(tabs as any[]).map(({ props: { title, ...tabRest } }, index) => {
         return (
           <Nav.Item
             key={index}
