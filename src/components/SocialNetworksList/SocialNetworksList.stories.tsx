@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import SocialNetworksList from ".";
 import examples from "./SocialNetworksList.examples.md";
@@ -10,8 +9,6 @@ import examples from "./SocialNetworksList.examples.md";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("SocialNetworksList/SocialNetworksList", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

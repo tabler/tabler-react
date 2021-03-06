@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Nav from "./";
 import examples from "./NavItem.examples.md";
@@ -10,8 +9,6 @@ import examples from "./NavItem.examples.md";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Nav/NavItem", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

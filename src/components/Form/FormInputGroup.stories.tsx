@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Form from ".";
 import examples from "./FormInputGroup.examples.md";
@@ -11,8 +10,6 @@ import { Button } from "../Button";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Form/FormInputGroup", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

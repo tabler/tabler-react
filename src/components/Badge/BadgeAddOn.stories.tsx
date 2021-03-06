@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Badge from ".";
 import examples from "./BadgeAddOn.examples.md";
@@ -11,8 +10,6 @@ import Icon from "../Icon";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Badge/BadgeAddOn", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

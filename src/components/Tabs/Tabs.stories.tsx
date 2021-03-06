@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import { Tabs, Tab } from ".";
 import examples from "./Tabs.examples.md";
@@ -12,8 +11,6 @@ import Card from "../Card";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Tabs/Tabs", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

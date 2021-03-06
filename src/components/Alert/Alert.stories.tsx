@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Alert from ".";
 import examples from "./Alert.examples.md";
@@ -12,8 +11,6 @@ import { Button } from "..";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Alert/Alert", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Basic",

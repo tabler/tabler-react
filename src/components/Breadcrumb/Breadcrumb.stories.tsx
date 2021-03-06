@@ -1,7 +1,6 @@
 import React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Breadcrumb from "./";
 
@@ -9,8 +8,6 @@ import Breadcrumb from "./";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Breadcrumb/Breadcrumb", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add("Example", () => {
   return (

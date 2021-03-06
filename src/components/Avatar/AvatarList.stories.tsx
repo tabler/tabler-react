@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Avatar from ".";
 
@@ -9,8 +8,6 @@ import Avatar from ".";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Avatar/AvatarList", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add("Basic", () => {
   return (

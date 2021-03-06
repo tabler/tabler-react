@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Card from ".";
 import examples from "./CardStatus.examples.md";
@@ -11,8 +10,6 @@ import Grid from "../Grid";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Card/CardStatus", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

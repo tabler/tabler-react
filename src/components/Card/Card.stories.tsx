@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Card from ".";
 import examples from "./Card.examples.md";
@@ -13,8 +12,6 @@ import Dimmer from "../Dimmer";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Card/Card", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

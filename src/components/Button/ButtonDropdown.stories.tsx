@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import Button from ".";
 import examples from "./ButtonDropdown.examples.md";
@@ -11,8 +10,6 @@ import { Dropdown } from "..";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("Button/ButtonDropdown", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",

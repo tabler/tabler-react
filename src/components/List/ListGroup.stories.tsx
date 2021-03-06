@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
-import { withKnobs } from "@storybook/addon-knobs";
 
 import List from ".";
 import examples from "./ListGroup.examples.md";
@@ -10,8 +9,6 @@ import examples from "./ListGroup.examples.md";
 React.Fragment = ({ children }) => children;
 
 const stories = storiesOf("List/ListGroup", module);
-
-stories.addDecorator(withKnobs);
 
 stories.add(
   "Example",
