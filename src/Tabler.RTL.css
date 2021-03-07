@@ -10282,8 +10282,8 @@ body *:hover::-webkit-scrollbar-thumb {
 }
 
 a {
-  -webkit-text-decoration-skip: ink;
-  text-decoration-skip: ink;
+  -webkit-text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 h1 a,
