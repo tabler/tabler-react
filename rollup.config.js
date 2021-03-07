@@ -9,7 +9,7 @@ import pkg from "./package.json";
 
 const extensions = [".js", ".jsx", ".ts", ".tsx"];
 
-export default {
+const config = {
   input: "src/index.ts",
   output: [
     {
@@ -38,3 +38,5 @@ export default {
     url(),
   ],
 };
+
+export default config;

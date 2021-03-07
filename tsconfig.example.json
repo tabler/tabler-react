@@ -17,5 +17,6 @@
     "declarationMap": true,
     "emitDeclarationOnly": true
   },
-  "include": ["src/tabler-react.ts"]
+  "include": ["src/tabler-react.ts"],
+  "exclude": ["node_modules"]
 }

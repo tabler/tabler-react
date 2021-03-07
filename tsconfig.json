@@ -13,8 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "incremental": true
+    "jsx": "react",
+    "rootDir": "./src"
   },
-  "include": ["src", "stories"]
+  "include": ["src", "stories"],
+  "exclude": ["node_modules"]
 }
