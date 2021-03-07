@@ -23,9 +23,9 @@ import { Grid } from "tabler-react";
 import { Grid } from "tabler-react";
 
 <Grid.Row>
-  <Grid.Col width={2}>1</Grid.Col>
-  <Grid.Col width={4}>2</Grid.Col>
-  <Grid.Col width={6}>3</Grid.Col>
+  <Grid.Col col={2}>1</Grid.Col>
+  <Grid.Col col={4}>2</Grid.Col>
+  <Grid.Col col={6}>3</Grid.Col>
 </Grid.Row>;
 ```
 
@@ -35,22 +35,22 @@ import { Grid } from "tabler-react";
 import { Grid } from "tabler-react";
 
 <Grid.Row>
-  <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
+  <Grid.Col xxl={1} xl={2} lg={4} md={6} sm={12}>
     1
   </Grid.Col>
-  <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
+  <Grid.Col xxl={1} xl={2} lg={4} md={6} sm={12}>
     2
   </Grid.Col>
-  <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
+  <Grid.Col xxl={1} xl={2} lg={4} md={6} sm={12}>
     3
   </Grid.Col>
-  <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
+  <Grid.Col xxl={1} xl={2} lg={4} md={6} sm={12}>
     4
   </Grid.Col>
-  <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
+  <Grid.Col xxl={1} xl={2} lg={4} md={6} sm={12}>
     5
   </Grid.Col>
-  <Grid.Col xl={1} lg={2} md={4} sm={6} xs={12}>
+  <Grid.Col xxl={1} xl={2} lg={4} md={6} sm={12}>
     6
   </Grid.Col>
 </Grid.Row>;
@@ -62,7 +62,7 @@ import { Grid } from "tabler-react";
 import { Grid } from "tabler-react";
 
 <Grid.Row>
-  <Grid.Col width={6} offset={3}>
+  <Grid.Col col={6} offset={3}>
     2
   </Grid.Col>
   <Grid.Col md={6} offsetMd={3}>

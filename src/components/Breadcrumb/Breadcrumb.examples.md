@@ -11,7 +11,7 @@ import { Breadcrumb } from "tabler-react";
 ```jsx
 import { Breadcrumb } from "tabler-react";
 
-<Breadcrumb separator="dot">
+<Breadcrumb separator="dots">
   <Breadcrumb.Item>Home</Breadcrumb.Item>
   <Breadcrumb.Item>Library</Breadcrumb.Item>
   <Breadcrumb.Item active>Data</Breadcrumb.Item>
@@ -21,7 +21,7 @@ import { Breadcrumb } from "tabler-react";
 ```jsx
 import { Breadcrumb } from "tabler-react";
 
-<Breadcrumb separator="arrow">
+<Breadcrumb separator="arrows">
   <Breadcrumb.Item>Home</Breadcrumb.Item>
   <Breadcrumb.Item>Library</Breadcrumb.Item>
   <Breadcrumb.Item active>Data</Breadcrumb.Item>

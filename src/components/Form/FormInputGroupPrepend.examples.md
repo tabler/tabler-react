@@ -3,7 +3,7 @@ import { Button, Form } from "tabler-react";
 
 <Form.InputGroup>
   <Form.InputGroupPrepend>
-    <Button RootComponent="a" color="primary" href="http://www.google.com">
+    <Button as="a" color="primary" href="http://www.google.com">
       Go!
     </Button>
   </Form.InputGroupPrepend>

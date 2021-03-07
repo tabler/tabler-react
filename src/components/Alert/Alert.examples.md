@@ -74,10 +74,10 @@ import { Button, Header } from "tabler-react";
     minim voluptate.
   </p>
   <Button.List>
-    <Button color="success" RootComponent="button">
+    <Button color="success" as="button">
       Okay
     </Button>
-    <Button color="secondary" RootComponent="button">
+    <Button color="secondary" as="button">
       No, thanks
     </Button>
   </Button.List>

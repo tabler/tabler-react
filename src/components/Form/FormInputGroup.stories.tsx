@@ -17,11 +17,7 @@ stories.add(
     return (
       <Form.InputGroup
         append={
-          <Button
-            RootComponent="a"
-            color="primary"
-            href="http://www.google.com"
-          >
+          <Button as="a" color="primary" href="http://www.google.com">
             Go!
           </Button>
         }
@@ -40,7 +36,7 @@ stories.add("Input from props", () => {
     <Form.InputGroup
       inputProps={{ placeholder: "Search for..." }}
       append={
-        <Button RootComponent="a" color="primary" href="http://www.google.com">
+        <Button as="a" color="primary" href="http://www.google.com">
           Go!
         </Button>
       }

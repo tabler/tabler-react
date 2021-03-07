@@ -57,11 +57,11 @@ stories.add("Wrapping", () => {
 stories.add("Alignment", () => {
   return (
     <React.Fragment>
-      <Button.List align="center">
+      <Button.List textAlign="center">
         <Button color="primary">Align</Button>
         <Button color="secondary">Center</Button>
       </Button.List>
-      <Button.List align="right">
+      <Button.List textAlign="right">
         <Button color="primary">Align</Button>
         <Button color="secondary">Right</Button>
       </Button.List>

@@ -16,7 +16,7 @@ stories.add(
   () => {
     return (
       <React.Fragment>
-        <Grid.Row gutters="xs">
+        <Grid.Row g="sm">
           <Grid.Col>
             <div
               style={{
@@ -52,7 +52,7 @@ stories.add(
           </Grid.Col>
         </Grid.Row>
 
-        <Grid.Row gutters="sm">
+        <Grid.Row g="sm">
           <Grid.Col>
             <div
               style={{
@@ -87,7 +87,7 @@ stories.add(
             </div>
           </Grid.Col>
         </Grid.Row>
-        <Grid.Row gutters="md">
+        <Grid.Row g="md">
           <Grid.Col>
             <div
               style={{
@@ -122,7 +122,7 @@ stories.add(
             </div>
           </Grid.Col>
         </Grid.Row>
-        <Grid.Row gutters="lg">
+        <Grid.Row g="lg">
           <Grid.Col>
             <div
               style={{

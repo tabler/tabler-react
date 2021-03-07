@@ -21,7 +21,7 @@ stories.add("Example", () => {
 
 stories.add("Variations: Dots", () => {
   return (
-    <Breadcrumb separator="dot">
+    <Breadcrumb separator="dots">
       <Breadcrumb.Item>Home</Breadcrumb.Item>
       <Breadcrumb.Item>Library</Breadcrumb.Item>
       <Breadcrumb.Item active>Data</Breadcrumb.Item>
@@ -31,7 +31,7 @@ stories.add("Variations: Dots", () => {
 
 stories.add("Variations: Arrows", () => {
   return (
-    <Breadcrumb separator="arrow">
+    <Breadcrumb separator="arrows">
       <Breadcrumb.Item>Home</Breadcrumb.Item>
       <Breadcrumb.Item>Library</Breadcrumb.Item>
       <Breadcrumb.Item active>Data</Breadcrumb.Item>

@@ -16,7 +16,7 @@ stories.add(
     return (
       <Button.List>
         <Button color="primary">Button</Button>
-        <Button color="primary" RootComponent="a" href="#">
+        <Button color="primary" as="a" href="#">
           Link
         </Button>
       </Button.List>
@@ -37,7 +37,7 @@ stories.add("Disabled", () => {
       <Button color="primary" disabled>
         Button
       </Button>
-      <Button color="success" disabled RootComponent="a" href="#">
+      <Button color="success" disabled as="a" href="#">
         Link
       </Button>
       <Button color="info" disabled as="input" type="button" value="Input" />

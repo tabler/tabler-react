@@ -101,7 +101,7 @@ stories.add(
               <Timeline.ItemTitle>+2 New photos</Timeline.ItemTitle>
               <El.Div mt={3}>
                 <Grid.Row className="row-xs">
-                  <Grid.Col xs={6}>
+                  <Grid.Col sm={6}>
                     <Media rounded aspectRatio="2x1">
                       <Media.Content
                         style={{
@@ -111,7 +111,7 @@ stories.add(
                       />
                     </Media>
                   </Grid.Col>
-                  <Grid.Col xs={6}>
+                  <Grid.Col sm={6}>
                     <Media rounded aspectRatio="2x1">
                       <Media.Content
                         style={{

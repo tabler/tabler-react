@@ -42,7 +42,7 @@ stories.add("Types", () => {
       <Alert type="info">
         This is a <strong>info</strong> alert—check it out!
       </Alert>
-      <Alert type="warning">
+      <Alert type="warn">
         This is a <strong>warning</strong> alert—check it out!
       </Alert>
       <Alert type="danger">
@@ -72,7 +72,7 @@ stories.add("With Icons", () => {
 
 stories.add("Dismissable", () => {
   return (
-    <Alert type="warning" isDismissible>
+    <Alert type="warn" isDismissible>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     </Alert>
   );
@@ -97,10 +97,10 @@ stories.add("With Buttons", () => {
         dolore minim voluptate.
       </p>
       <Button.List>
-        <Button color="success" RootComponent="button">
+        <Button color="success" as="button">
           Okay
         </Button>
-        <Button color="secondary" RootComponent="button">
+        <Button color="secondary" as="button">
           No, thanks
         </Button>
       </Button.List>

@@ -5,7 +5,7 @@ By default a Button will render a `<button>`, you can change this with the RootC
 ```jsx
 <Button.List>
   <Button color="primary">Button</Button>
-  <Button color="primary" RootComponent="a" href="#">
+  <Button color="primary" as="a" href="#">
     Link
   </Button>
 </Button.List>
@@ -32,16 +32,10 @@ By default a Button will render a `<button>`, you can change this with the RootC
   <Button color="primary" disabled>
     Button
   </Button>
-  <Button color="success" disabled RootComponent="a" href="#">
+  <Button color="success" disabled as="a" href="#">
     Link
   </Button>
-  <Button
-    color="info"
-    disabled
-    RootComponent="input"
-    type="button"
-    value="Input"
-  />
+  <Button color="info" disabled as="input" type="button" value="Input" />
 </Button.List>
 ```
 

@@ -3,7 +3,7 @@
 ```jsx
 import { Grid } from 'tabler-react';
 
-<Grid.Row gutters="xs">
+<Grid.Row g="sm">
   <Grid.Col>
     <div
       style={{
@@ -33,7 +33,7 @@ import { Grid } from 'tabler-react';
   </Grid.Col>
 </Grid.Row>
 
-<Grid.Row gutters="sm">
+<Grid.Row g="sm">
   <Grid.Col>
     <div
       style={{
@@ -62,7 +62,7 @@ import { Grid } from 'tabler-react';
     >C</div>
   </Grid.Col>
 </Grid.Row>
-<Grid.Row gutters="md">
+<Grid.Row g="md">
   <Grid.Col>
     <div
       style={{
@@ -91,7 +91,7 @@ import { Grid } from 'tabler-react';
     >C</div>
   </Grid.Col>
 </Grid.Row>
-<Grid.Row gutters="lg">
+<Grid.Row g="lg">
   <Grid.Col>
     <div
       style={{
