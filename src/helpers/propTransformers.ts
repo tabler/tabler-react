@@ -92,7 +92,7 @@ const gutterBase = createBaseVariants(["g"], ["x", "y"]);
 const gutterTransformer = createPropNamesFromConfig({
   bases: gutterBase,
   postfixes: [],
-  values: [0, 1, 2, 3, 4, 5],
+  values: [0, 1, 2, 3, 4, 5, "sm", "md", "lg", "xl", "xxl"],
   options: {
     responsive: true,
   },
