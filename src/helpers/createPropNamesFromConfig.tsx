@@ -24,15 +24,6 @@ export type PropertyConfigOptions = {
   removePostfixFromClassName?: boolean;
 };
 
-// type PropertyProps<
-//   Base extends string,
-//   Postfix extends string,
-//   Value extends string | number,
-//   Options extends PropertyConfigOptions
-// > = {
-//   [K in `${Base}${CapitalCamel<Postfix>}`]?: IsResponsiveValue<Value, Options>;
-// };
-
 type IsResponsiveValue<Value, Options> = Options extends {
   responsive: true;
 }
@@ -57,84 +48,8 @@ export interface PropertyConfig<
   options: Options;
 }
 
-// interface PropertyObjectConfig<
-//   Base extends string = string,
-//   Properties = {
-//     [key: string]: { values: string | number; responsive?: boolean };
-//   },
-//   Options = PropertyConfigOptions
-// > {
-//   base: Base;
-//   properties: Properties;
-//   options: Options;
-// }
-
-// type PropertyObjectProps<Config extends PropertyObjectConfig> = {
-//   [K in `${Config["base"]}${CapitalCamel<
-//     keyof Config["properties"]
-//   >}`]?: Config["properties"][keyof Config["properties"]]["values"];
-// };
-
-// type PropertyPropsMaker<Base extends string, Postfix extends string> = {
-//   [K in `${Base}${CapitalCamel<Postfix>}`]?: IsResponsiveValue<
-//     Config,
-//     Config["options"]
-//   >;
-// };
-
-type IsResponsiveClassName<
-  Base extends string,
-  Value extends string | number,
-  Options
-> = Options extends {
-  responsive: true;
-}
-  ? `${Base}-${Value}` | `${Base}-${BreakpointModifiers}-${Value}`
-  : `${Base}-${Value}`;
-
-type IsResponsivePostfixedClassName<
-  Base extends string,
-  Postfix extends string,
-  Value extends string | number,
-  Options extends PropertyConfigOptions
-> = Options extends {
-  responsive: true;
-}
-  ? Options["removePostfixFromClassName"] extends true
-    ? `${Base}-${BreakpointModifiers}-${Value}`
-    :
-        | `${Base}-${BreakpointModifiers}-${Value}`
-        | `${Base}-${Postfix}-${BreakpointModifiers}-${Value}`
-  : Options["removePostfixFromClassName"] extends true
-  ? `${Base}-${Value}`
-  : `${Base}-${Value}` | `${Base}-${Postfix}-${Value}`;
-
 const capitalize = (str: string | any) =>
   typeof str === "string" ? str.charAt(0).toUpperCase() + str.slice(1) : str;
-
-// function createUseTablerComponent() {
-//   return;
-// }
-
-// interface SpacingObject {
-//   sm: SpacingValues;
-//   md: SpacingValues;
-//   lg: SpacingValues;
-//   xl: SpacingValues;
-//   xxl: SpacingValues;
-// }
-
-// const baseSpacingProperties: BaseSpacingTypes[] = ["p", "m"];
-// const spacingSides: SpacingSideModifiers[] = ["t", "b", "s", "e", "x", "y"];
-
-// const spacingSizes: SpacingBreakpointModifiers[] = [
-//   "sm",
-//   "md",
-//   "lg",
-//   "xl",
-//   "xxl",
-// ];
-// const spacingValues: SpacingValues[] = [0, 1, 2, 3, 4, 5, "auto"];
 
 export function createBaseVariants<Base extends string, Variant extends string>(
   base: Base[],
@@ -159,14 +74,62 @@ function buildClassName<
     className = `${className}-${breakpoint}`;
   }
   className = `${className}-${value}`;
-  return className as Postfix extends string
-    ? Breakpoint extends Omit<BreakpointModifiers, "zero">
-      ? `${Base}-${Postfix}-${Breakpoint}-${Value}`
-      : `${Base}-${Postfix}-${Value}`
-    : Breakpoint extends Omit<BreakpointModifiers, "zero">
-    ? `${Base}-${Breakpoint}-${Value}`
-    : `${Base}-${Value}`;
+  return className as Class_Name<Base, Postfix, Value, Breakpoint>;
 }
+
+type TranformedClassName<
+  Base extends string,
+  Postfix extends string | null,
+  Value extends string | number,
+  Options extends PropertyConfigOptions
+> = Postfix extends string
+  ? Options["responsive"] extends true
+    ? Options["removePostfixFromClassName"] extends true
+      ? `${Base}-${BreakpointModifiers}-${Value}`
+      :
+          | `${Base}-${BreakpointModifiers}-${Value}`
+          | `${Base}-${Postfix}-${BreakpointModifiers}-${Value}`
+    : Options["removePostfixFromClassName"] extends true
+    ? `${Base}-${Value}`
+    : `${Base}-${Value}` | `${Base}-${Postfix}-${Value}`
+  : Options["responsive"] extends true
+  ? `${Base}-${Value}` | `${Base}-${BreakpointModifiers}-${Value}`
+  : `${Base}-${Value}`;
+
+type BaseProps<
+  Base extends string,
+  Postfix extends string,
+  Value extends string | number,
+  Options extends PropertyConfigOptions
+> = {
+  [K in `${IsResponsiveBase<Base, Options>}`]: (
+    value: IsResponsiveValue<Value, Options>
+  ) => TranformedClassName<Base, Postfix, Value, Options>;
+};
+
+type BasePostfixProps<
+  Base extends string,
+  Postfix extends string,
+  Value extends string | number,
+  Options extends PropertyConfigOptions
+> = {
+  [K in `${IsResponsiveBase<`${Base}${Capitalize<Postfix>}`, Options>}`]: (
+    value: IsResponsiveValue<Value, Options>
+  ) => TranformedClassName<Base, Postfix, Value, Options>;
+};
+
+type Class_Name<
+  Base extends string,
+  Postfix extends string | null,
+  Value extends string | number,
+  Breakpoint extends BreakpointModifiers | "zero" | null
+> = Postfix extends string
+  ? Breakpoint extends Omit<BreakpointModifiers, "zero">
+    ? `${Base}-${Postfix}-${Breakpoint}-${Value}`
+    : `${Base}-${Postfix}-${Value}`
+  : Breakpoint extends Omit<BreakpointModifiers, "zero">
+  ? `${Base}-${Breakpoint}-${Value}`
+  : `${Base}-${Value}`;
 
 export function createPropNamesFromConfig<
   Base extends string,
@@ -259,33 +222,12 @@ export function createPropNamesFromConfig<
       ];
 
   return Object.fromEntries(names) as `${Postfix}` extends ""
-    ? {
-        [K in `${IsResponsiveBase<Base, Options>}`]: (
-          value: IsResponsiveValue<Value, Options>
-        ) => IsResponsiveClassName<Base, Value, Options>;
-      }
+    ? // if there are no prefixes its safe to say the base will be used
+      BaseProps<Base, Postfix, Value, Options>
     : Options extends {
         noBaseProps: true;
       }
-    ? {
-        [K in `${IsResponsiveBase<
-          `${Base}${Capitalize<Postfix>}`,
-          Options
-        >}`]: (
-          value: IsResponsiveValue<Value, Options>
-        ) => IsResponsivePostfixedClassName<Base, Postfix, Value, Options>;
-      }
-    : {
-        [K in `${IsResponsiveBase<Base, Options>}`]: (
-          value: IsResponsiveValue<Value, Options>
-        ) => IsResponsiveClassName<Base, Value, Options>;
-      } &
-        {
-          [K in `${IsResponsiveBase<
-            `${Base}${Capitalize<Postfix>}`,
-            Options
-          >}`]: (
-            value: IsResponsiveValue<Value, Options>
-          ) => IsResponsivePostfixedClassName<Base, Postfix, Value, Options>;
-        };
+    ? BasePostfixProps<Base, Postfix, Value, Options>
+    : BaseProps<Base, Postfix, Value, Options> &
+        BasePostfixProps<Base, Postfix, Value, Options>;
 }

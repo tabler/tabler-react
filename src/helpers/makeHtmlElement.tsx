@@ -1,4 +1,4 @@
-import React, { forwardRef, ElementType, HTMLProps } from "react";
+import React, { forwardRef, ElementType } from "react";
 import cn from "classnames";
 import getUtilityPropsClasses, {
   UtilityProps,

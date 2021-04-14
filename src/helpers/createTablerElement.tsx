@@ -3,6 +3,7 @@ import React, {
   useContext,
   WeakValidationMap,
   ValidationMap,
+  ElementType,
 } from "react";
 import classnames from "classnames";
 import { ClassValue } from "classnames/types";
@@ -10,21 +11,25 @@ import { ClassValue } from "classnames/types";
 import { GlobalClassNameProps, propTransformers } from "./propTransformers";
 import { ClassNamesContext } from "./ClassNamesContext";
 
-type TablerProps<As extends React.ElementType = React.ElementType> = {
+type TablerProps<As extends ElementType = "div"> = {
   as?: As;
   className?: string;
   classNames?: ClassValue;
 } & GlobalClassNameProps;
 
+// ComponentType<Props> | ElementType
+
+type TablerComponent = React.ReactElement<TablerProps>;
+
 export type TablerPropsWithChildren<
-  As extends React.ElementType = React.ElementType
+  As extends ElementType = "div"
 > = React.PropsWithChildren<TablerProps<As>>;
 
 export type TablerComponentPropsWithoutRef<
-  As extends React.ElementType = "div",
+  As extends ElementType = "div",
   Props = unknown
 > = Props &
-  Omit<React.ComponentProps<As>, keyof Props> &
+  Omit<React.ComponentPropsWithoutRef<As>, keyof Props> &
   TablerPropsWithChildren<As>;
 
 export type TablerComponentProps<
@@ -92,14 +97,16 @@ export interface TablerElementOptions<
   className?: string;
   component?: ComponentType<P>;
   classNames?: (props: P) => ClassValue;
-  modifyProps?: (props: Partial<P>) => Partial<P>;
+  modifyProps?: (
+    props: TablerComponentProps<As, PropsAndDefaultProps<P, D>>
+  ) => Partial<TablerComponentProps<As, PropsAndDefaultProps<P, D>>>;
   defaultProps?: Partial<TablerComponentProps<As, PropsAndDefaultProps<P, D>>>;
   displayName?: string;
   provideClassNames?: { [key: string]: string };
   /**
    * Unfiltered and unparsed props are passed to the Child
    */
-  child?: React.ComponentType<Partial<P>>;
+  child?: React.ComponentType<Partial<Omit<P, "as">>>;
 }
 
 type PropTransformers = typeof propTransformers;
@@ -141,6 +148,14 @@ export function createPropsParser<
   };
 }
 
+const transformerKeys = Object.keys(propTransformers);
+
+function removeTransformerProps<P = unknown>(props: P) {
+  return Object.fromEntries(
+    Object.entries(props).filter(([key]) => !transformerKeys.includes(key))
+  );
+}
+
 export function createTablerElement<
   As extends React.ElementType = "div",
   P = unknown
@@ -161,39 +176,40 @@ export function createTablerElement<
     className,
     classNames,
   });
-  const El = component || element || "div";
-  const TablerComponent = React.forwardRef(
-    ({ children, as, className = "", classNames = "", ...props }: any, ref) => {
-      const _classNameContext = useContext(ClassNamesContext);
+  const InitialComponent = component || element || "div";
+  const TablerComponent = React.forwardRef((props: any, ref) => {
+    const { children, className = "", as, style, ...rest } = props;
+    const _classNameContext = useContext(ClassNamesContext);
 
-      const _className = parseProps(
-        { ...props, children, className, classNames },
-        classnames(
-          _classNameContext[displayName || ""],
-          className.split(" ").map((c: string) => _classNameContext[c])
-        )
-      );
+    const _className = parseProps(
+      { className, ...rest },
+      classnames(
+        _classNameContext[displayName || ""],
+        className.split(" ").map((c: string) => _classNameContext[c])
+      )
+    );
 
-      const _props = modifyProps ? modifyProps(props) : props;
+    const _props = removeTransformerProps(
+      modifyProps ? modifyProps(rest) : rest
+    );
 
-      const Component = as || El;
+    const Component = _props.as || as || InitialComponent;
 
-      if (provideClassNames) {
-        return (
-          <ClassNamesContext.Provider value={provideClassNames}>
-            <Component ref={ref} className={_className} {..._props}>
-              {Child ? <Child {...props}>{children}</Child> : children}
-            </Component>
-          </ClassNamesContext.Provider>
-        );
-      }
+    if (provideClassNames) {
       return (
-        <Component ref={ref} className={_className} {..._props}>
-          {Child ? <Child {...props}>{children}</Child> : children}
-        </Component>
+        <ClassNamesContext.Provider value={provideClassNames}>
+          <Component ref={ref} className={_className} style={style} {..._props}>
+            {Child ? <Child {...rest}>{children}</Child> : children}
+          </Component>
+        </ClassNamesContext.Provider>
       );
     }
-  );
+    return (
+      <Component ref={ref} className={_className} {..._props}>
+        {Child ? <Child {...props}>{children}</Child> : children}
+      </Component>
+    );
+  });
   if (displayName) {
     TablerComponent.displayName = displayName;
   }
