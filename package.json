@@ -56,7 +56,7 @@
     "commitlint": "^8.0.0",
     "cz-conventional-changelog": "^2.1.0",
     "empty": "^0.10.1",
-    "eslint": "5.16.0",
+    "eslint": "5.12.0",
     "eslint-config-react-app": "^3.0.4",
     "eslint-plugin-flowtype": "^3.0.0",
     "eslint-plugin-import": "^2.6.0",
@@ -82,7 +82,7 @@
     "rollup-plugin-url": "2.2.1",
     "semantic-release": "^15.13.12",
     "shx": "^0.3.2",
-    "webpack": "4.19.1"
+    "webpack": "4.28.3"
   },
   "files": [
     "dist"
